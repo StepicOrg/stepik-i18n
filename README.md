@@ -1,6 +1,7 @@
 # Hello!
 
-This is [Stepik](https://stepik.org)'s UI translations in JSON format.  
+This is [Stepik](https://stepik.org)'s UI translations in JSON format.
+
 At this moment there are five locales:
 * [🇺🇸 English](https://github.com/StepicOrg/stepik-i18n/blob/master/en/translations.js)  (default, falls back here if translation is missing)
 * [🇷🇺 Russian](https://github.com/StepicOrg/stepik-i18n/blob/master/ru/translations.js)
@@ -17,4 +18,8 @@ Both minor fixes and major changes are welcome! You can even add a [new language
 
 All accepted changes here will be live on https://stepik.org within 2 weeks.
 
+### Plural Rules
 
+We use [Unicode CLDR Language Plural Rules](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html) notation.
+
+See [example for plural for English](https://github.com/StepicOrg/stepik-i18n/blob/master/en/translations.js#L7..L8) and [example for plural for Russian](https://github.com/StepicOrg/stepik-i18n/blob/master/ru/translations.js#L7..L10) for better understanding.
