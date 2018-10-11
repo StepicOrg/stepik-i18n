@@ -1,18 +1,18 @@
 export default {
     "activity_graph": {
         "steps": "задач вырашана",
-        "current_streak.one": "день без перерыва",
-        "current_streak.few": "дня без перерыва",
-        "current_streak.many": "дней без перерыва",
-        "current_streak.other": "дней без перерыва",
-        "longest_streak.one": "день без перерыва (макс.)",
-        "longest_streak.few": "дня без перерыва (макс.)",
-        "longest_streak.many": "дней без перерыва (макс.)",
-        "longest_streak.other": "дней без перерыва (макс.)",
-        "quiz_count.one": "задача решена",
-        "quiz_count.few": "задачи решено",
-        "quiz_count.many": "задач решено",
-        "quiz_count.other": "задач решено"
+        "current_streak.one": "дзень без перапынку",
+        "current_streak.few": "дні без перапынку",
+        "current_streak.many": "дзён без перапынку",
+        "current_streak.other": "дзён без перапынку",
+        "longest_streak.one": "дзень без перапынку (макс.)",
+        "longest_streak.few": "дні без перапынку (макс.)",
+        "longest_streak.many": "дзён без перапынку (макс.)",
+        "longest_streak.other": "дзён без перапынку (макс.)",
+        "quiz_count.one": "задача вырашана",
+        "quiz_count.few": "задачы вырашана",
+        "quiz_count.many": "задач вырашана",
+        "quiz_count.other": "задач вырашана"
     },
     "adaptive": {
         "nothing": "Нам больше нечего вам посоветовать, вы всё изучили. Поздравляем!",
