@@ -1,6 +1,6 @@
 export default {
     "activity_graph": {
-        "steps": "задач вырашана",
+        "steps": "задач ",
         "current_streak.one": "дзень без перапынку",
         "current_streak.few": "дні без перапынку",
         "current_streak.many": "дзён без перапынку",
