@@ -265,20 +265,20 @@ export default {
         "other": "{{count}} бала"
     },
     "common__out-of-points": {
-        "one": "{{count}} баллa",
-        "few": "{{count}} баллов",
-        "many": "{{count}} баллов",
-        "other": "{{count}} баллов"
+        "one": "{{count}} балa",
+        "few": "{{count}} балаў",
+        "many": "{{count}} балаў",
+        "other": "{{count}} балаў"
     },
     "common__points-received": {
-        "one": "получен",
-        "few": "получено",
-        "many": "получено",
-        "other": "получено"
+        "one": "атрыманы",
+        "few": "атрымана",
+        "many": "атрымана",
+        "other": "атрымана"
     },
     "common__steps": {
-        "one": "{{count}} шага",
-        "few": "{{count}} шагов",
+        "one": "{{count}} крокі",
+        "few": "{{count}} ш",
         "many": "{{count}} шагов",
         "other": "{{count}} шага"
     },
