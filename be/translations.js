@@ -198,7 +198,7 @@ export default {
     "comments__reply-tooltip": "Адказаць на гэты каментар",
     "comments__solutions-thread-permisison-error": "У вас няма доступу да дадзенага каментара. Вырашыце дадзеную задачу, каб атрымаць доступ да форуму рашэнняў",
     "comments__staff-badge": "Каманда Stepik",
-    "comments__staff-replied":", адказ выкладчыка",
+    "comments__staff-replied": ", адказ выкладчыка",
     "comments__submissions": "Рашэнні",
     "comments__submissions-tooltip": "Рашэнні аўтара каментара",
     "comments__submit-error": "Не атрымалася адправіць ваш каментар =(",
@@ -223,7 +223,7 @@ export default {
     "common__close": "Закрыць",
     "common__close-window": "Закрыць вакно",
     "common__cookies-warn": "Ваш браўзер не падтрымлівае cookies. Калі ласка, <a data-outward=true target=\" _blank\" href=\"https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml \" >уключыце </a> cookies у наладах вашага браўзэра.",
-"common__course": "Курс",
+    "common__course": "Курс",
     "common__course-logo": "Лагатып курсу",
     "common__catalog": "Каталог",
     "common__my-courses": "Мае курсы",
@@ -256,39 +256,39 @@ export default {
     "common__hour": "гадз",
     "common__notifications": "Апавяшчэнні",
     "common__platform-news": "Што новага",
-    "common__number-sign":" №",
+    "common__number-sign": " №",
     "common__off": "выкл.",
     "common__points": {
-    "one": "{{count}} бал",
+        "one": "{{count}} бал",
         "few": "{{count}} бала",
         "many": "{{count}} балаў",
         "other": "{{count}} бала"
-},
-"common__out-of-points": {
-    "one": "{{count}} баллa",
+    },
+    "common__out-of-points": {
+        "one": "{{count}} баллa",
         "few": "{{count}} баллов",
         "many": "{{count}} баллов",
         "other": "{{count}} баллов"
-},
-"common__points-received": {
-    "one": "получен",
+    },
+    "common__points-received": {
+        "one": "получен",
         "few": "получено",
         "many": "получено",
         "other": "получено"
-},
-"common__steps": {
-    "one": "{{count}} шага",
+    },
+    "common__steps": {
+        "one": "{{count}} шага",
         "few": "{{count}} шагов",
         "many": "{{count}} шагов",
         "other": "{{count}} шага"
-},
-"common__step-passed": {
-    "one": "пройден",
+    },
+    "common__step-passed": {
+        "one": "пройден",
         "few": "пройдено",
         "many": "пройдено",
         "other": "пройдено"
-},
-"common__print": "Печать",
+    },
+    "common__print": "Печать",
     "common__pricing": "Мои подписки",
     "common__problem": "Задача",
     "common__profile": "Профиль",
@@ -313,25 +313,25 @@ export default {
     "common__submit_file": "Отправить файл",
     "common__userpic": "Аватар пользователя",
     "common__symbols_left": {
-    "one": "остался {{count}} символ",
+        "one": "остался {{count}} символ",
         "few": "осталось {{count}} символа",
         "many": "осталось {{count}} символов",
         "other": "осталось {{count}} символa"
-},
-"common__symbols_overflow": {
-    "one": "Рекомендуемый размер превышен на {{count}} символ",
+    },
+    "common__symbols_overflow": {
+        "one": "Рекомендуемый размер превышен на {{count}} символ",
         "few": "Рекомендуемый размер превышен на {{count}} символа",
         "many": "Рекомендуемый размер превышен на {{count}} символов",
         "other": "Рекомендуемый размер превышен на {{count}} символa"
-},
-"common__time-warn": "Возможно, часовой пояс или время на вашем устройстве установлены неправильно. Проверьте ваши настройки часового пояса, даты и времени.",
+    },
+    "common__time-warn": "Возможно, часовой пояс или время на вашем устройстве установлены неправильно. Проверьте ваши настройки часового пояса, даты и времени.",
     "common__unauth-voting": "Чтобы голосовать необходимо зайти под своим аккаунтом.",
     "common__unsaved-warn": "Все несохранённые данные будут потеряны!",
     "common__unsaved-lesson-warn": "Вы не завершили добавление урока. Продолжить?",
     "common__woof-unverified-email": "Ваша почта не подтверждена! <a href=\"/edit-profile/email\">Подтвердить</a>",
     "common__woof-wrong": "Что-то пошло не так. Проверьте наличие интернета и попробуйте ещё раз.",
     "content_advices": {
-    "readiness": "Готовность курса",
+        "readiness": "Готовность курса",
         "readiness_progress": "Курс готов на <b>{{score}}/{{cost}}</b>",
         "course_summary": "Краткое описание заполнено и состоит не менее, чем из 100 символов",
         "course_sections": "В курсе есть не меньше 2 модулей",
@@ -345,11 +345,11 @@ export default {
         "quiz_correct_submissions": "Каждая задача решена верно хотя бы один раз",
         "not_complete": "сейчас: {{current}}",
         "action": {
-        "course_quizzes": "добавьте задачи в уроки со страницы <a href=\"{{url}}\">{{text}}</a>",
+            "course_quizzes": "добавьте задачи в уроки со страницы <a href=\"{{url}}\">{{text}}</a>",
             "other": "<a href=\"{{url}}\">{{text}}</a>"
-    },
-    "link-text": {
-        "course_summary": "редактировать информацию о курсе",
+        },
+        "link-text": {
+            "course_summary": "редактировать информацию о курсе",
             "course_sections": "редактировать содержание курса",
             "course_lessons": "редактировать содержание курса",
             "course_quizzes": "содержания",
@@ -359,21 +359,21 @@ export default {
             "empty_video_steps": "проверить в дашборде преподавателя",
             "step_default_texts": "проверить в дашборде преподавателя",
             "quiz_correct_submissions": "проверить в дашборде преподавателя"
-    },
-    "show_more": "Подробнее",
+        },
+        "show_more": "Подробнее",
         "show_less": "Свернуть"
-},
-"copy_link_to_clipboard": "Копировать ссылку",
-    "course": {
-    "readiness": {
-        "high_expl": "Курс полностью соответствует формальным рекомендациям Stepik",
-            "low_expl": "Скорее всего, курс находится в разработке"
     },
-    "private": "Приватный курс",
+    "copy_link_to_clipboard": "Копировать ссылку",
+    "course": {
+        "readiness": {
+            "high_expl": "Курс полностью соответствует формальным рекомендациям Stepik",
+            "low_expl": "Скорее всего, курс находится в разработке"
+        },
+        "private": "Приватный курс",
         "draft": "В разработке",
         "learners_count": "Количество записавшихся на курс",
         "info": {
-        "adaptive_note": "Этот курс адаптивный и будет подстраиваться под ваш уровень знаний",
+            "adaptive_note": "Этот курс адаптивный и будет подстраиваться под ваш уровень знаний",
             "adaptive_info_link": "Подробнее об адаптивных курсах",
             "description_header": "Описание курса",
             "instructors_header": "Преподаватели",
@@ -389,12 +389,12 @@ export default {
             "hours_to_complete": "Время прохождения курса",
             "repeat_intro_video": "Посмотреть еще раз",
             "hours_to_complete_text": {
-            "one": "{{count}} час",
+                "one": "{{count}} час",
                 "few": "{{count}} часа",
                 "many": "{{count}} часов",
                 "other": "{{count}} часа"
-        },
-        "lang": "Язык",
+            },
+            "lang": "Язык",
             "certificate": "Сертификат",
             "certificate_details": "Подробнее о сертификате",
             "certificate_is_issued": "Выдается",
@@ -406,16 +406,16 @@ export default {
             "share_text": "Поделиться в социальных сетях",
             "share_text_short": "Поделиться",
             "fill_empty": "Поле не заполнено. Пожалуйста, заполните его в редакторе курса."
-    },
-    "sections": {
-        "default_title": "Новый модуль"
-    },
-    "edit-btns": {
-        "info": "Редактировать информацию о курсе",
+        },
+        "sections": {
+            "default_title": "Новый модуль"
+        },
+        "edit-btns": {
+            "info": "Редактировать информацию о курсе",
             "syllabus": "Редактировать содержание"
-    }
-},
-"course-discussions__header": "Комментарии",
+        }
+    },
+    "course-discussions__header": "Комментарии",
     "course-edit__cancel": "Отмена",
     "course-edit__back": "Вернуться в курс",
     "course-edit__new-module": "Новый модуль",
@@ -502,31 +502,31 @@ export default {
     "course-permissions-edit__load-more": "Загрузить еще",
     "course-permissions-edit__bad-user-id": "Недействительный ID пользователя или email.",
     "course-new": {
-    "header": "Создание нового курса",
+        "header": "Создание нового курса",
         "explanation": "Обучение на Stepik является бесплатным для студентов. Размещение курсов также бесплатно, если они открыты для всех желающих. Созданные курсы и уроки распространяются по лицензии <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" class=\"course-new__cc-link\">Creative Commons 4.0</a>.",
         "help-center-link": "Подробнее о создании курсов",
         "title": "Название",
         "title-hint": "Не более 64 символов",
         "summary": "Краткое описание",
         "access": {
-        "label": "Доступ",
+            "label": "Доступ",
             "public": "Доступен для всех",
             "personal": "Доступен только автору на время создания",
             "private": "Доступен по приглашениям (приватный курс)",
             "private-courses-left": {
-            "one": "Вы можете создать еще {{count}} приватный курс.",
+                "one": "Вы можете создать еще {{count}} приватный курс.",
                 "few": "Вы можете создать еще {{count}} приватных курса.",
                 "many": "Вы можете создать еще {{count}} приватных курсов.",
                 "other": "Вы можете создать еще {{count}} приватных курса."
-        },
-        "private-hint": "Создание приватного курса — это платная услуга.",
+            },
+            "private-hint": "Создание приватного курса — это платная услуга.",
             "private-hint-price": "Расценки подписок"
-    },
-    "create": "Создать",
+        },
+        "create": "Создать",
         "cancel": "Отмена"
-},
-"klass-new": {
-    "header": "Создать класс",
+    },
+    "klass-new": {
+        "header": "Создать класс",
         "about": "Узнать о классах",
         "course": "В курсе",
         "course-hint": "Идентификатор курса",
@@ -535,9 +535,9 @@ export default {
         "description": "Описание класса",
         "create": "Создать",
         "cancel": "Отмена"
-},
-"klass": {
-    "index-subpage": "Информация о классе",
+    },
+    "klass": {
+        "index-subpage": "Информация о классе",
         "students-subpage": "Студенты класса",
         "assistants-subpage": "Преподаватели класса",
         "gradebook-subpage": "Оценки и решения",
@@ -562,9 +562,9 @@ export default {
         "add-assistant__placeholder": "",
         "add-assistant__success": "Преподаватель успешно добавлен",
         "add-assistant__error": "Не удалось добавить преподавателя"
-},
-"klasses": {
-    "header": "Классы",
+    },
+    "klasses": {
+        "header": "Классы",
         "empty-list": "У вас нет ни одного класса.",
         "iown": "Cозданные классы",
         "istudent": "Классы, где я студент",
@@ -573,9 +573,9 @@ export default {
         "is-access-restricted_other": "Доступ ограничен. Обратитесь с создателю класса.",
         "klass-plan-landing": "<a href=\"{{href}}\" target=\"_blank\">Подробнее об ограничениях в классах</a>",
         "klass-plan-support": "Свяжитесь с нами по адресу support@stepik.org для получения более подробной информации"
-},
-"klass-join": {
-    "header": "Поступить в класс",
+    },
+    "klass-join": {
+        "header": "Поступить в класс",
         "course": "Курс",
         "join": "Вступить",
         "cancel": "Отмена",
@@ -583,9 +583,9 @@ export default {
         "success": "Приглашение в класс успешно принято",
         "disclaimer-text": "Обратите внимание, ваши решения станут доступны преподавателю класса.",
         "is_joined": "Вы уже вступили в данный класс."
-},
-"klass-edit": {
-    "header": "Редактировать класс",
+    },
+    "klass-edit": {
+        "header": "Редактировать класс",
         "title": "Название",
         "title-hint": "Название класса",
         "description": "Описание класса",
@@ -597,8 +597,8 @@ export default {
         "deleted": "Класс удален",
         "error-on-save": "Что-то пошло не так. Не получилось сохранить изменения в классе.",
         "error-on-delete": "Что-то пошло не так. Не удалось удалить класс."
-},
-"class_download_grade_book": "Табель успеваемости",
+    },
+    "class_download_grade_book": "Табель успеваемости",
     "course-syll__begins": "Дата начала",
     "course-syll__ends": "Дата закрытия",
     "course-syll__scores": "ваш / макс балл",
@@ -697,7 +697,7 @@ export default {
     "course__scoreboard-link": "Скорборд",
     "course__syll-link": "Содержание",
     "course__reviews": {
-    "link": "Отзывы",
+        "link": "Отзывы",
         "create-review": "Оставить отзыв",
         "change-review": "Изменить свой отзыв",
         "show-profile": "Показать профиль пользователя",
@@ -716,25 +716,25 @@ export default {
         "on-success": "Ваш отзыв был сохранен. Спасибо!",
         "on-save-error": "Произошла ошибка во время сохранения. Ваш отзыв не был сохранен.",
         "lesson": {
-        "leave-review": "Опубликовать отзыв о курсе",
+            "leave-review": "Опубликовать отзыв о курсе",
             "also-can-leave-there-p1": "Опубликовать и отредактировать свой отзыв также можно на странице",
             "also-can-leave-there-p2": "Отзывов",
             "also-can-leave-there-p3": "о курсе"
-    },
-    "summary": {
-        "mean": "Средняя оценка:",
+        },
+        "summary": {
+            "mean": "Средняя оценка:",
             "count_reviews": "Всего отзывов:",
             "count_certificates": "Выдано сертификатов:",
             "count_learners": "Записалось на курс:",
             "no-reviews": "Пока недостаточно оценок, чтобы вывести среднюю."
-    },
-    "modal": {
-        "is_owned": "Спасибо за ваш отзыв! <br>Вы можете поделиться своим мнением с друзьями.",
+        },
+        "modal": {
+            "is_owned": "Спасибо за ваш отзыв! <br>Вы можете поделиться своим мнением с друзьями.",
             "other_user": "Поделитесь этим отзывом",
             "success_copy": "Ссылка на отзыв успешно скопирована"
-    }
-},
-"course_download_activity_basic": "Действия студентов",
+        }
+    },
+    "course_download_activity_basic": "Действия студентов",
     "course_download_activity_full": "Действия студентов (полный)",
     "course_download_cheating": "Жульничество",
     "course_download_comments": "Комментарии",
@@ -753,14 +753,14 @@ export default {
     "course_download_difficulty_discrimination": "Сложность и дискриминативность шагов",
     "course_download_not_finished_review_sessions": "Незавершённые сессии рецензирования",
     "course-grade-book": {
-    "all": "Показать всех студентов",
+        "all": "Показать всех студентов",
         "no": "Не найдено ни одного студента",
         "user": "Пользователь",
         "total": "Итог",
         "download-sign": "Вы можете скачать табель успеваемости на ",
         "reports": "странице отчета"
-},
-"copy_to_clipboard": "Скопировано!",
+    },
+    "copy_to_clipboard": "Скопировано!",
     "copy_to_clipboard__error": "Не удалось скопировать. Попробуйте еще раз!",
     "deadlines-editor__begin_date_source": "дата открытия модуля",
     "deadlines-editor__course-deadlines": "Дедлайны курса по умолчанию",
@@ -792,17 +792,17 @@ export default {
     "discussions__edit-disc-button": "Изменить комментарий",
     "edit-ui__video-uploading-warn": "Ваше видео все ещё загружается. Прервать загрузку?",
     "embed_auth": {
-    "popup_login": {
-        "sign_in": "Войдите в Stepik",
+        "popup_login": {
+            "sign_in": "Войдите в Stepik",
             "and_reload": "и перезагрузите эту страницу.",
             "reload": "Перезагрузить страницу"
-    },
-    "done": {
-        "greeting": "Вы вошли как {{user_name}}",
+        },
+        "done": {
+            "greeting": "Вы вошли как {{user_name}}",
             "continue": "продолжить учиться"
-    }
-},
-"error__bad_request": "Неправильный запрос",
+        }
+    },
+    "error__bad_request": "Неправильный запрос",
     "error__disclaimer": "Что-то ужасное произошло. Мы записали эту ошибку и скоро исправим. А пока попробуйте обновить страницу.",
     "error__home-link": "Попробуйте",
     "error__internal_server_error": "Что-то пошло не так :( <br><span>Видимо, у нас проблемы на сервере, или вы попали к нам на сайт в тот прекрасный момент, когда происходит обновление системы.</span>",
@@ -811,7 +811,7 @@ export default {
     "error__page_not_found": "Страница не найдена.<br><span>Страница была удалена или никогда не существовала</span>",
     "error__site_maintenance": "Сайт на техническом обслуживании",
     "errors": {
-    "inclusion": "is not included in the list",
+        "inclusion": "is not included in the list",
         "exclusion": "is reserved",
         "invalid": "is invalid",
         "confirmation": "не совпадает {{attribute}}",
@@ -820,24 +820,24 @@ export default {
         "blank": "не должно быть пустым",
         "present": "должно быть пустым",
         "tooLong": {
-        "few": "не более {{count}} символа",
+            "few": "не более {{count}} символа",
             "many": "не более {{count}} символов",
             "one": "не более {{count}} символ",
             "other": "не более {{count}} символа"
-    },
-    "tooShort": {
-        "few": "минимум {{count}} символа",
+        },
+        "tooShort": {
+            "few": "минимум {{count}} символа",
             "many": "минимум {{count}} символов",
             "one": "минимум {{count}} символ",
             "other": "минимум {{count}} символа"
-    },
-    "wrongLength": {
-        "few": "неверная длина (должна быть {{count}} символа)",
+        },
+        "wrongLength": {
+            "few": "неверная длина (должна быть {{count}} символа)",
             "many": "неверная длина (должна быть {{count}} символов)",
             "one": "неверная длина (должна быть {{count}} символ)",
             "other": "неверная длина (должна быть {{count}} символа)"
-    },
-    "notANumber": "должно быть числом",
+        },
+        "notANumber": "должно быть числом",
         "notAnInteger": "должно быть целым числом",
         "greaterThan": "должно быть больше {{count}}",
         "greaterThanOrEqualTo": "должно быть больше, либо равно {{count}}",
@@ -848,9 +848,9 @@ export default {
         "odd": "должно быть нечетным",
         "even": "должно быть четным",
         "stepik_date": "<b>{{a}}</b> позже чем <b>{{b}}</b>"
-},
-"exam": {
-    "proctor-waiting": "Ждем решения проктора.",
+    },
+    "exam": {
+        "proctor-waiting": "Ждем решения проктора.",
         "proctor-accepted": "Проктор одобрил ваш экзамен.",
         "proctor-rejected": "Проктор отклонил ваш экзамен. Вы получаете 0 баллов.",
         "proctor-comment": "Комментарий от проктора",
@@ -877,15 +877,15 @@ export default {
         "go-back": "К содержанию",
         "start-error": "Не получается начать экзамен. Попробуйте перезагрузить страницу",
         "label": "Экзамен"
-},
-"explore": {
-    "course-pack__trending-courses": "Популярные курсы",
+    },
+    "explore": {
+        "course-pack__trending-courses": "Популярные курсы",
         "course-pack__recommended-courses": "Наш робот рекомендует",
         "show-all": "Смотреть все",
         "search-placeholder": "Поиск по каталогу",
         "search-aria-label": "Очистить поле"
-},
-"footer__active-count-desc": "Уникальные зарегистрированные пользователи, активно сдающие задачи в последние 3 месяца",
+    },
+    "footer__active-count-desc": "Уникальные зарегистрированные пользователи, активно сдающие задачи в последние 3 месяца",
     "footer__active-count.few": "<strong>{{count}}</strong> активных учащихся",
     "footer__active-count.many": "<strong>{{count}}</strong> активных учащихся",
     "footer__active-count.one": "<strong>{{count}}</strong> активный учащийся",
@@ -909,10 +909,10 @@ export default {
     "footer__url-path": "https://welcome.stepik.org/ru/",
     "footer__about": "О нас",
     "history": {
-    "show-history": "Показать историю",
+        "show-history": "Показать историю",
         "hide-history": "Скрыть историю"
-},
-"index__registration-link": "Регистрация",
+    },
+    "index__registration-link": "Регистрация",
     "instr-review__student-first-step": "<strong>Этап 1 из 3</strong>. Чтобы получить баллы, <strong>сохраните</strong> и <strong>отправьте</strong> лучшее решение на рецензию преподавателю",
     "instr-review__student-second-step": "<strong>Этап 2 из 3</strong>. Решение отправлено на рецензию, <strong>ожидайте ответа</strong>",
     "instr-review__student-third-step": "<strong>Этап 3 из 3</strong>. Получена <a href=\"{{url}}\">рецензия</a> от преподавателя. Результат: <strong>{{result}}%</strong>",
@@ -941,41 +941,41 @@ export default {
     "instruction__teacher-comment": "Комментарий от преподавателя",
     "instruction__will_be_deleted": "Рецензирование будет удалено когда Вы сохраните урок.<br>Нажмите здесь если вы передумали удалять.",
     "instruction_urgent": {
-    "fail": "Не удалось завершить рецензирование, попробуйте позже",
+        "fail": "Не удалось завершить рецензирование, попробуйте позже",
         "success": "Рецензирование завершено",
         "btn": "Завершить досрочно",
         "btn_expl": "Оценка будет рассчитана на основе уже полученных рецензий",
         "finished_expl": {
-        "one": "Итог: {{percentage}}%. По инициативе преподавателя оценка была рассчитана на основе {{count}} рецензии {{date}}",
+            "one": "Итог: {{percentage}}%. По инициативе преподавателя оценка была рассчитана на основе {{count}} рецензии {{date}}",
             "few": "Итог: {{percentage}}%. По инициативе преподавателя оценка была рассчитана на основе {{count}} рецензий {{date}}",
             "many": "Итог: {{percentage}}%. По инициативе преподавателя оценка была рассчитана на основе {{count}} рецензий {{date}}",
             "other": "Итог: {{percentage}}%. По инициативе преподавателя оценка была рассчитана на основе {{count}} реценций {{date}}",
-    },
-    "note": {
-        "one": "Для автоматического завершения не хватает еще {{count}} рецензии.",
+        },
+        "note": {
+            "one": "Для автоматического завершения не хватает еще {{count}} рецензии.",
             "few": "Для автоматического завершения не хватает еще {{count}} рецензий.",
             "many": "Для автоматического завершения не хватает еще {{count}} рецензий.",
             "other": "Для автоматического завершения не хватает еще {{count}} реценций.",
+        },
     },
-},
-"instructor-dashboard": {
-    "info": "Наш робот рекомендует присмотреться к этим шагам. Возможно, там есть проблемы.",
+    "instructor-dashboard": {
+        "info": "Наш робот рекомендует присмотреться к этим шагам. Возможно, там есть проблемы.",
         "no-issues": {
-        "no_successes": "В этом курсе нет шагов с практическими заданиями",
+            "no_successes": "В этом курсе нет шагов с практическими заданиями",
             "error_video": "В этом курсе нет шагов с видео",
             "default": "В этом курсе проблем нет :)"
-    },
-    "kind": {
-        "correct_ratio": "Низкий процент успешных решений",
+        },
+        "kind": {
+            "correct_ratio": "Низкий процент успешных решений",
             "abuse_comment_votes": "Жалобы на комментарии",
             "pending_comments": "Комментарии без ответа",
             "reviews_outliers": "Необычные рецензии",
             "plagiarized_submissions": "Плагиат",
             "magic": "Магия",
             "discrimination": "Дискриминативность"
-    },
-    "step-stat": {
-        "quiz-error-tooltip": "В условии задачи есть ошибки - учащиеся в принципе не могут решить задачу.",
+        },
+        "step-stat": {
+            "quiz-error-tooltip": "В условии задачи есть ошибки - учащиеся в принципе не могут решить задачу.",
             "quiz-error": "Ошибка в условии!!!",
             "quiz-warning-tooltip": "В условии задачи есть замечания. Рекомендуется исправить задачу согласно замечаниям.",
             "quiz-warning": "Замечания в условии!",
@@ -989,68 +989,68 @@ export default {
             "abused-tooltip": "Количество негативных оценок комметариев этого шага.",
             "total-comments": "всего комментариев",
             "reviews": {
-            "one": "{{count}} необычная рецензия",
+                "one": "{{count}} необычная рецензия",
                 "few": "{{count}} необычных рецензии",
                 "many": "{{count}} необычных рецензий",
                 "other": "{{count}} необычных рецензий"
-        },
-        "reviews-tooltip": "Количество необычных рецензий к этому шагу.",
+            },
+            "reviews-tooltip": "Количество необычных рецензий к этому шагу.",
             "plagiarism": {
-            "one": "{{count}} плагиат в решениях",
+                "one": "{{count}} плагиат в решениях",
                 "few": "{{count}} плагиата в решениях",
                 "many": "{{count}} плагиатов в решениях",
                 "other": "{{count}} плагиатов в решениях"
-        },
-        "plagiarism-tooltip": "Количество решений, помеченных роботом как плагиат.",
+            },
+            "plagiarism-tooltip": "Количество решений, помеченных роботом как плагиат.",
             "discrimination": "дискриминативность",
             "discrimination-tooltip": "Дискриминативность показывает, кто лучше решает задание – лучшие или худшие учащиеся."
-    }
-},
-"invite_friends_subtitle": "Пригласите друзей учиться вместе на Stepik.",
+        }
+    },
+    "invite_friends_subtitle": "Пригласите друзей учиться вместе на Stepik.",
     "invite_friends_title": "За одной партой",
     "lesson": {
-    "toc-show": "Показать список уроков курса",
+        "toc-show": "Показать список уроков курса",
         "instructor": {
-        "edit-permissions": "Доступ к уроку"
-    },
-    "likes": {
-        "liked": "Вам понравился этот урок",
+            "edit-permissions": "Доступ к уроку"
+        },
+        "likes": {
+            "liked": "Вам понравился этот урок",
             "disliked": "Вам не понравился этот урок"
-    },
-    "updated": "Последнее обновление",
+        },
+        "updated": "Последнее обновление",
         "public": "Публичный",
         "private": "Приватный"
-},
-"lesson-actions": {
-    "actions": "Настройки урока",
+    },
+    "lesson-actions": {
+        "actions": "Настройки урока",
         "delete": "Удалить урок"
-},
-"lesson_attachments": {
-    "copy_link": "Скопировать ссылку",
+    },
+    "lesson_attachments": {
+        "copy_link": "Скопировать ссылку",
         "add_file": "+ Добавить файл",
         "header": "Файлы урока",
         "size_limit": "Ограничение на каждый файл: 25 МБ",
         "back": "Вернуться",
         "empty": "Вы пока не добавили ни одного файла к уроку",
         "confirm_del": "Вы уверены, что хотите удалить «{{file}}»?"
-},
-"lesson-edit": {
-    "tags": {
-        "required": "Необходимо знать",
+    },
+    "lesson-edit": {
+        "tags": {
+            "required": "Необходимо знать",
             "knowledge_tags": "Темы урока",
             "add_new": "Добавить тему",
             "placeholder": "Тема или Wikidata QID...",
             "docs": "Подробнее о темах в документации",
             "show_settings": "Показать настройки тем",
             "hide_settings": "Скрыть настройки тем"
-    },
-    "save": "Сохранить",
+        },
+        "save": "Сохранить",
         "save_and_continue": "Сохранить и продолжить",
         "cancel": "Отмена",
         "delete-step": "Этот шаг будет удалён после нажатия кнопки \"Сохранить\".<br>\n  Для отмены нажмите здесь."
-},
-"lesson-end": {
-    "to_syllabus": "перейти к расписанию",
+    },
+    "lesson-end": {
+        "to_syllabus": "перейти к расписанию",
         "to_syllabus-and-explore-next": "Перейти к расписанию для дальнейшего изучения курса.",
         "to_congrats_header_lesson": "Поздравляем! Вы закончили модуль",
         "you_are_leaving_exam_ended": "Поздравляем! Вы закончили экзамен",
@@ -1068,22 +1068,22 @@ export default {
         "you_can": "Вы можете",
         "or_enroll": "или записаться на",
         "other_courses": "другие курсы"
-},
-"lesson-new": {
-    "header": "Создание урока",
+    },
+    "lesson-new": {
+        "header": "Создание урока",
         "long-title": "Длинновато получилось. Вы можете создать урок, но его название будет урезано до 64 символов.",
         "fail": "При создании урока что-то пошло не так. Проверьте интернет соединение и сохраните ещё раз."
-},
-"lesson-print": {
-    "images": "Загрузка изображений: {{loaded}} из {{total}}",
+    },
+    "lesson-print": {
+        "images": "Загрузка изображений: {{loaded}} из {{total}}",
         "latex": "Рендеринг LaTeX"
-},
-"lesson__alone-warn": "Этот урок не найден ни в одном курсе.",
+    },
+    "lesson__alone-warn": "Этот урок не найден ни в одном курсе.",
     "lesson__attributes": {
-    "public": "Публичный",
+        "public": "Публичный",
         "comments": "Комментарии включены"
-},
-"lesson__autogenerated-step": "Все шаги урока были удалены. Этот шаг сгенерирован автоматически. Отредактируйте текст шага и сохраните урок.",
+    },
+    "lesson__autogenerated-step": "Все шаги урока были удалены. Этот шаг сгенерирован автоматически. Отредактируйте текст шага и сохраните урок.",
     "lesson__comments-disabled": "Преподаватель отключил комментарии для этого урока.",
     "lesson__created-by": "Урок от:",
     "lesson__delete-confirm": "Вы уверены, что хотите удалить этот урок?",
@@ -1116,10 +1116,10 @@ export default {
     "lesson_download_structure": "Структура урока",
     "lesson_download_submissions_full": "Решения студентов (полный)",
     "lesson_finder": {
-    "query_placeholder": "Быстрый поиск уроков (по названию или ID)",
+        "query_placeholder": "Быстрый поиск уроков (по названию или ID)",
         "not_found": "Ничего не найдено. Попробуйте искать по ID урока."
-},
-"lesson__adaptive_no_connection": "Не удалось отправить реакцию. Проверьте интернет соединение и попробуйте еще раз.",
+    },
+    "lesson__adaptive_no_connection": "Не удалось отправить реакцию. Проверьте интернет соединение и попробуйте еще раз.",
     "lesson__adaptive_recommendation_fail": "Не удалось получить рекоммендацию. Проверьте, залогинены ли вы.",
     "lesson__edit_saved": "Сохранено",
     "library__leaders": "Рейтинг пользователей",
@@ -1139,7 +1139,7 @@ export default {
     "license__received-thanks": "Мы выражаем благодарность JetBrains за предоставленную возможность для наших студентов, а также за поддержку и приверженность образованию.",
     "lesson__edit_cannot-save": "В некоторых шагах обнаружены проблемы, проверьте подсвеченные шаги.",
     "login": {
-    "title": "Войти",
+        "title": "Войти",
         "email": "E-mail",
         "password": "Пароль",
         "forgot_password": "Напомнить пароль",
@@ -1153,8 +1153,8 @@ export default {
         "is_password_reset": "На указанный email отправлено письмо с инструкциями по сбросу пароля. Если вы не получили его в течение нескольких минут, проверьте папку спам. Если письма нет, напишите нам: support@stepik.org",
         "social_signup_with_existing_email": "Указанный email привязан к другому аккаунту. Чтобы входить через эту социальную сеть, необходимо войти, используя email и пароль.",
         "google_signin": "Войти через Google"
-},
-"material__video-not-ready": "Видео ещё не было загружено или обработано.",
+    },
+    "material__video-not-ready": "Видео ещё не было загружено или обработано.",
     "notification__favorite": "избранное",
     "notification__muted": "скрыто",
     "notifications__empty-list": "Нет уведомлений",
@@ -1181,7 +1181,7 @@ export default {
     "notifications__unmark-one": "Отметить как непрочитанное",
     "notifications__unmute-tooltip": "Показывать аналогичные",
     "org": {
-    "courses_tab": "Курсы",
+        "courses_tab": "Курсы",
         "lessons_tab": "Уроки",
         "klasses_tab": "Классы",
         "mailing_tab": "Рассылки",
@@ -1202,12 +1202,12 @@ export default {
         "created_lessons_count.few": "{{count}} урока создано",
         "created_lessons_count.many": "{{count}} уроков создано",
         "created_lessons_count.other": "{{count}} урока создано"
-},
-"payments": {
-    "code": "Основы программирования",
+    },
+    "payments": {
+        "code": "Основы программирования",
         "data": "Анализ данных"
-},
-"peer-review__first-step": "<strong>Этап 1 из 4</strong>. Чтобы получить баллы, <strong>сохраните</strong> и <strong>отправьте</strong> лучшее решение на рецензию <strong>другим ученикам</strong>",
+    },
+    "peer-review__first-step": "<strong>Этап 1 из 4</strong>. Чтобы получить баллы, <strong>сохраните</strong> и <strong>отправьте</strong> лучшее решение на рецензию <strong>другим ученикам</strong>",
     "peer-review__fourth-step.few": "<strong>Этап 4 из 4</strong>. Получено <a href=\"{{url}}\">{{count}} рецензии</a>. Результат по медиане {{minimum}} рецензий: <strong>{{result}}%</strong>",
     "peer-review__fourth-step.many": "<strong>Этап 4 из 4</strong>. Получено <a href=\"{{url}}\">{{count}} рецензий</a>. Результат по медиане {{minimum}} рецензий: <strong>{{result}}%</strong>",
     "peer-review__fourth-step.one": "<strong>Этап 4 из 4</strong>. Получена <a href=\"{{url}}\">{{count}} рецензия</a>. Результат рецензирования: <strong>{{result}}%</strong>",
@@ -1226,52 +1226,52 @@ export default {
     "peer-review__to-give.one": "Осталось сделать <strong>{{count}} рецензию</strong>",
     "peer-review__to-give.other": "Осталось сделать <strong>{{count}} рецензий</strong>",
     "plans": {
-    "title": "Создавайте приватные онлайн-курсы",
+        "title": "Создавайте приватные онлайн-курсы",
         "sub_title": "Сейчас у вас тарифный план <strong>{{plan_name}}</strong>. В данном тарифном плане:",
         "max_private_courses": {
-        "one": "Вы можете создать {{count}} приватный курс с неограниченным числом учащихся.",
+            "one": "Вы можете создать {{count}} приватный курс с неограниченным числом учащихся.",
             "few": "Вы можете создать {{count}} приватных курса с неограниченным числом учащихся.",
             "many": "Вы можете создать {{count}} приватных курсов с неограниченным числом учащихся.",
             "other": "Вы можете создать {{count}} приватных курсов с неограниченным числом учащихся."
-    },
-    "max_public_courses": "Можно создавать неограниченное число открытых курсов.",
+        },
+        "max_public_courses": "Можно создавать неограниченное число открытых курсов.",
         "better_support": "Улучшенная техподдержка.",
         "other_plans": "Информация о других <a href=\"https://welcome.stepik.org/ru/pricing\">тарифных планах</a>.",
         "next_payment": "Следующий платеж {{price}} будет списан {{payment_date}}.",
         "connected_card": "Привязанная карта: ****{{card}}",
         "description": {
-        "one": "Подписка на {{count}} приватный курс",
+            "one": "Подписка на {{count}} приватный курс",
             "few": "Подписка на {{count}} приватных курса",
             "many": "Подписка на {{count}} приватных курсов",
             "other": "Подписка на {{count}} приватных курсов"
-    },
-    "discount_valid": "Ваша скидка заканчивается {{discount_end}}",
+        },
+        "discount_valid": "Ваша скидка заканчивается {{discount_end}}",
         "unsubscribe_description1": "Вы можете ",
         "unsubscribe_description2": " от текущего плана или посмотреть информацию о других <a href=\"https://welcome.stepik.org/ru/pricing\">тарифных планах</a>.",
         "ask_questions": "Если у вас есть вопросы, напишите нам на <a href=\"mailto:info@stepik.org\">info@stepik.org</a>.",
         "free": {
-        "name": "Free",
+            "name": "Free",
             "max_courses": "Нет возможности создавать приватные курсы.",
             "max_lesson_users": "Можно создавать неограниченное число открытых курсов.",
             "support": "Стандартная техподдержка.",
             "another_plans": "Для создания приватных курсов <a href='https://welcome.stepik.org/ru/pricing'>оформите подписку</a>."
-    },
-    "basic2016": {
-        "name": "Basic 2016",
+        },
+        "basic2016": {
+            "name": "Basic 2016",
             "amount": "999",
             "description": "Подписка на план Basic 2016"
-    },
-    "basic2017": {
-        "name": "Basic 2017",
+        },
+        "basic2017": {
+            "name": "Basic 2017",
             "amount": "9999",
             "description": "Подписка на план Basic 2017"
-    },
-    "plus2017": {
-        "name": "Plus 2017",
+        },
+        "plus2017": {
+            "name": "Plus 2017",
             "amount": "49999",
             "description": "Подписка на план Plus 2017"
-    },
-    "login_req": "Войдите, чтобы подписаться",
+        },
+        "login_req": "Войдите, чтобы подписаться",
         "loading": "В пороцессе...",
         "not_found": "Тарифный план не найден. Пожалуйста, обратитесь в службу поддержки - support@stepik.org за корректной ссылкой.",
         "subscribe": "Подписаться",
@@ -1279,18 +1279,18 @@ export default {
         "success": "Успешная подписка",
         "fail": "Не удалось подписаться",
         "card": {
-        "change": "изменить",
+            "change": "изменить",
             "description": "Привязать новую карту",
             "confirm": "Применить"
-    }
-},
-"plugins__show_more": {
-    "one": "+ еще {{count}} тип шага",
+        }
+    },
+    "plugins__show_more": {
+        "one": "+ еще {{count}} тип шага",
         "few": "+ еще {{count}} типа шага",
         "many": "+ еще {{count}} типов шага",
         "other": "+ еще {{count}} типов шага"
-},
-"platform-news__title": "Новости Stepik",
+    },
+    "platform-news__title": "Новости Stepik",
     "plugin__text": "Текст",
     "plugin__text-description": "Текст с форматированием, изображениями, формулами",
     "plugin__video": "Видео",
@@ -1346,8 +1346,8 @@ export default {
     "plugin__single-choice": "Тест",
     "plugin__single-choice-description": "Выберите один вариант из списка",
     "plugins": {
-    "string": {
-        "correct_answer": "Верный ответ",
+        "string": {
+            "correct_answer": "Верный ответ",
             "substring": "Сверка по фрагменту",
             "regexp": "Проверка по <a href=\"https://docs.python.org/3/howto/regex.html\">регулярному выражению</a>",
             "case": "Различать прописные и заглавные буквы",
@@ -1358,19 +1358,19 @@ export default {
             "input_type": "Тип ответа",
             "input_types_descr": "Как учащиеся могу прислать ответ: прямо в поле ввода в уроке или прикрепить файл c текстом ответа",
             "input_types": {
-            "text_only": "Только текст",
+                "text_only": "Только текст",
                 "file_only": "Только файл",
                 "text_or_file": "Текст или файл"
-        },
-        "optional-code": "Необязательный код с функциями <code>solve()</code> и <code>check(reply)</code>. Если вы укажете проверяющий код, все предыдущие настройки применяться не будут. Решения будут оцениваться на основании результата функции <code>check(reply)</code>.",
+            },
+            "optional-code": "Необязательный код с функциями <code>solve()</code> и <code>check(reply)</code>. Если вы укажете проверяющий код, все предыдущие настройки применяться не будут. Решения будут оцениваться на основании результата функции <code>check(reply)</code>.",
             "errors": {
-            "regex-malformed": "Некорректное регулярное выражение.",
+                "regex-malformed": "Некорректное регулярное выражение.",
                 "match-empty-string": "Фрагмент совпадает с пустой строкой",
                 "solve-check-failed": "Правильный ответ из функции 'solve' оценивается как {{score}} вместо 1 или True. Пожалуйста, проверьте ваши функции 'solve' и 'check'.\n{{hint}}"
-        }
-    },
-    "choice": {
-        "checkboxes": "Несколько правильных ответов",
+            }
+        },
+        "choice": {
+            "checkboxes": "Несколько правильных ответов",
             "any-correct": "Любой ответ верный",
             "do-not-randomize": "Не перемешивать ответы",
             "show-explanations": "Показать объяснения",
@@ -1386,28 +1386,28 @@ export default {
             "sample-size": "Размер выборки из вариантов ответа",
             "explanations-to-corresponding-options": "Пояснения будут показаны рядом с соответствующими вариантами ответа",
             "errors": {
-            "html-incorrect": "Некорректный HTML: {{html}}",
+                "html-incorrect": "Некорректный HTML: {{html}}",
                 "sample-size-small": "Размер выборки из вариантов ответа должен быть не меньше 1.",
                 "sample-size-big": "Размер выборки из вариантов ответа больше, чем количество вариантов ответа.",
                 "no-correct-options": "Не выбран правильный вариант ответа.",
                 "too-many-correct-options": "Выбрано больше одного правильного варианта ответа.",
                 "ambiguous-options": "Неоднозначные варианты ответа."
-        }
-    },
-    "number": {
-        "correct-answer": "Правильный ответ",
+            }
+        },
+        "number": {
+            "correct-answer": "Правильный ответ",
             "tolerated-error": "Допустимая погрешность",
             "add-remove-answer": "Добавить/Удалить правильный ответ",
             "add-option": "Добавить ещё один возможный вариант ответа",
             "delete-last-option": "Удалить возможный вариант ответа",
             "accepted-rule": "Любой из указанных вариантов ответа ± допустимая погрешность будет засчитан как правильный.",
             "errors": {
-            "answer-not-provided": "Должен быть указан хотя бы один правильный ответ.",
+                "answer-not-provided": "Должен быть указан хотя бы один правильный ответ.",
                 "tolerated-error-negative": "Допустимая погрешность должна быть неотрицательным числом."
-        }
-    },
-    "code": {
-        "enter-code": "Введите ваш проверяющий код на Python.",
+            }
+        },
+        "code": {
+            "enter-code": "Введите ваш проверяющий код на Python.",
             "download-archive-tests": "Скачать архив с последними сгенерированными тестами.",
             "download-tests": "Скачать тесты",
             "type-code": "Введите ваш код здесь...",
@@ -1423,16 +1423,16 @@ export default {
             "language": "Язык",
             "templates": "Шаблоны кода и допустимые языки. По умолчанию поле пустое.",
             "tabs": {
-            "test-cases": "Тестовые данные",
+                "test-cases": "Тестовые данные",
                 "languages": "Языки и шаблоны",
                 "advanced": "Расширенный редактор"
-        },
-        "run-all-tests": "Запускать решения на всех тестах",
+            },
+            "run-all-tests": "Запускать решения на всех тестах",
             "run-all-tests-title": "По умолчанию проверка решения прекращается на первом неудачном тесте. При выборе этой опции проверка решения не будет прерываться, если тест не пройден.",
             "score-all-tests": "Оценка зависит от количества пройденных тестов",
             "score-all-tests-title": "Оценка студента будет зависеть от количества пройденных тестов и вычисляться по формуле: (количество пройденных тестов / количество тестов) * балл за задание.",
             "errors": {
-            "number-sample-tests-negative": "Количество примеров тестов должно быть неотрицательным.",
+                "number-sample-tests-negative": "Количество примеров тестов должно быть неотрицательным.",
                 "time-limit-min": "Ограничение на время выполнения должно быть не меньше {{min}}.",
                 "time-limit-max": "Ограничение на время выполнения должно быть не больше {{max}}.",
                 "memory-limit-min": "Ограничение на используемую память должно быть не меньше {{min}}.",
@@ -1444,66 +1444,66 @@ export default {
                 "tests-too-large": "Общий размер сгенерированных тестов слишком велик (не должен превышать 64 MB).",
                 "test-format-wrong": "Формат теста неверный.",
                 "test-broken": "Тест сломан.\ndataset: {{dataset}}\nclue: {{clue}}\nreply: {{reply}}\nresult: {{result}}\nhint: {{hint}}"
-        },
-        "test-cases": {
-            "title": "Тест №{{num}}",
+            },
+            "test-cases": {
+                "title": "Тест №{{num}}",
                 "description": "Добавьте тесты, чтобы проверить правильность кода студента. Отправленное решение будет проверяться на каждом тесте. Если вы хотите создать тесты более сложным способом, используйте вкладку Расширенный редактор.",
                 "add-test-case": "Добавить тест"
-        },
-        "languages": {
-            "description": "Вы можете задать список допустимых языков в списке ниже. По умолчанию студенты могут отправлять свои решения на любом поддерживаемом языке.",
+            },
+            "languages": {
+                "description": "Вы можете задать список допустимых языков в списке ниже. По умолчанию студенты могут отправлять свои решения на любом поддерживаемом языке.",
                 "add-lang": "Также вы можете написать шаблон для любого языка, выбранного во вкладке Языки. Для этого добавьте :: перед идентификатором каждого языка (например, ::python3).",
                 "docs": "Узнайте больше про поддерживаемые языки и шаблоны по <a target_='_blank' href='{{href}}'>этой ссылке</a>."
-        },
-        "advanced": {
-            "description": "Вы можете создать собственную логику генерации тестов и проверки решений студентов.",
+            },
+            "advanced": {
+                "description": "Вы можете создать собственную логику генерации тестов и проверки решений студентов.",
                 "info": "Используйте функцию generate() для генерации тестов (они будут добавлены к тестам, объявленым во вкладке Тесты), solve() для написания эталонного решения задания, а также check() для оценки кода пользователя.<br>В конце сгенерированного в функции generate() dataset рекомендуется явно вставлять символ перевода строки \"\\n\".",
                 "docs": "Узнайте больше о расширенном редактировании задач на программирование <a target_='_blank' href='{{href}}'>по ссылке</a>."
-        }
-    },
-    "free-answer": {
-        "any-response-is-correct": "Любой ответ будет оценен как правильный.",
+            }
+        },
+        "free-answer": {
+            "any-response-is-correct": "Любой ответ будет оценен как правильный.",
             "enable-HTML": "Включить HTML и WYSIWYG редактор для ответов",
             "enable-tags": "Включить <b>текстовый редактор с форматированием</b> для ответов",
             "enable-attachments": "Разрешить файлы в ответах",
             "enable-attachments-for-response": "Включить <b>файлы</b> в ответах (дополнительно к тексту)"
-    },
-    "math": {
-        "correct-answer": "Правильный ответ (математическое выражение):",
+        },
+        "math": {
+            "correct-answer": "Правильный ответ (математическое выражение):",
             "numerical-test": "Численный тест на случайной точке z (дополнительные настройки):",
             "tolerated-error": "Допустимая абсолютная ошибка",
             "test-on-random": "Тестировать только на случайных целых числах",
             "int-only": "Только целые числа",
             "errors": {
-            "answer-empty": "Правильный ответ не может быть пустым.",
+                "answer-empty": "Правильный ответ не может быть пустым.",
                 "re-z-incorrect": "Некорректное Re z.",
                 "im-z-incorrect": "Некорректное Im z.",
                 "tolerated-error-incorrect": "Некорректная допустимая абсолютная ошибка.",
                 "parse-answer-failed": "Не удалось распознать правильный ответ."
-        }
-    },
-    "sorting": {
-        "items-below": "Пожалуйста, укажите элементы ниже. Студенты должны будут расположить их в том же порядке.<br>\n Не забудьте указать требуемый порядок (например, по возрастанию или убыванию) в описании задания выше.",
+            }
+        },
+        "sorting": {
+            "items-below": "Пожалуйста, укажите элементы ниже. Студенты должны будут расположить их в том же порядке.<br>\n Не забудьте указать требуемый порядок (например, по возрастанию или убыванию) в описании задания выше.",
             "errors": {
-            "options-empty": "Пустые элементы.",
+                "options-empty": "Пустые элементы.",
                 "options-ambiguous": "Неоднозначные элементы."
-        }
-    },
-    "matching": {
-        "specify-items": "Пожалуйста, укажите элементы. Студенты должны будут соотнести их по парам, как указано ниже:",
+            }
+        },
+        "matching": {
+            "specify-items": "Пожалуйста, укажите элементы. Студенты должны будут соотнести их по парам, как указано ниже:",
             "preserve-order": "Сохранить указанный выше порядок",
             "not-randomize": "Не перемешивать порядок первой колонки (вторая колонка перемешивается всегда)",
             "errors": {
-            "pairs-empty": "Пустые пары.",
+                "pairs-empty": "Пустые пары.",
                 "pairs-ambiguous": "Неоднозначные пары."
-        }
-    },
-    "puzzle": {
-        "upload-image": "Загрузить изображение",
+            }
+        },
+        "puzzle": {
+            "upload-image": "Загрузить изображение",
             "difficulty": "Сложность:"
-    },
-    "table": {
-        "add-row": "Добавить ряд",
+        },
+        "table": {
+            "add-row": "Добавить ряд",
             "delete-row": "Удалить последний ряд",
             "add-column": "Добавить новую колонку",
             "delete-column": "Удалить последнюю колонку",
@@ -1521,18 +1521,18 @@ export default {
             "make-poll": "Создать опрос",
             "any-is-correct": "Любой ответ верный",
             "errors": {
-            "multiple-answers-not-allowed": "В этом режиме не может быть несколько правильных ответов.",
+                "multiple-answers-not-allowed": "В этом режиме не может быть несколько правильных ответов.",
                 "row-no-answer": "Не указаны верные ответы для ряда '{{name}}'.",
                 "rows-name-collision": "У двух рядов одинаковое название '{{name}}'.",
                 "columns-name-collision": "У двух колонок одинаковое название '{{name}}'."
-        }
-    },
-    "lti-consumer": {
-        "add-custom-field": "Добавить custom field",
+            }
+        },
+        "lti-consumer": {
+            "add-custom-field": "Добавить custom field",
             "remove-custom-field": "Удалить custom field"
-    },
-    "linux": {
-        "virtual-machine-image": "Образ, который используется для создания новой виртуальной машины",
+        },
+        "linux": {
+            "virtual-machine-image": "Образ, который используется для создания новой виртуальной машины",
             "image": "Образ:",
             "memory-limit": "Ограничение на используемую память (MB):",
             "initialize-script": "Инициализировать виртуальную машину с помощью скрипта",
@@ -1541,7 +1541,7 @@ export default {
             "bootstrap-script-placeholder": "Введите ваш Bash скрипт здесь...",
             "test-scenario-placeholder": "Введите код вашего тестового сценария здесь...",
             "errors": {
-            "rootnroll-error": "Внутренняя ошибка: не удалось соединиться с облачным сервисом. Пожалуйста, попробуйте ещё раз.",
+                "rootnroll-error": "Внутренняя ошибка: не удалось соединиться с облачным сервисом. Пожалуйста, попробуйте ещё раз.",
                 "memory-limit-max": "Максимальное значение для ограничения на используемую память: {{max}} MB.",
                 "memory-limit-min": "Минимальное значение для ограничения на используемую память: {{min}} MB.",
                 "test-scenario-check-error": "Произошла внутренняя ошибка во время проверки тестового сценария: \n\n{{stdout}}{{stderr}}",
@@ -1551,21 +1551,21 @@ export default {
                 "bootstrap-timeout": "Не удалось инициализировать виртуальную машину: заняло слишком много времени.",
                 "bootstrap-failed": "Не удалось инициализировать виртуальную машину.\n\n{{stdout}}\n{{stderr}}",
                 "bootstrap-internal-error": "Внутренняя ошибка: не удалось инициализировать виртуальную машину: {{error}}. Пожалуйста, попробуйте ещё раз."
-        }
-    },
-    "chemical": {
-        "chemical-expression": "Химическое выражение (формула или уравнение):",
+            }
+        },
+        "chemical": {
+            "chemical-expression": "Химическое выражение (формула или уравнение):",
             "expression-template": "Шаблон выражения:",
             "use-tags": "Вы можете использовать <b>#</b> (обычные символы), <b>_</b> (нижний индекс), <b>^</b> (верхний индекс) и <b>-</b> (subsup).",
             "capital-first-letter": "Каждый химический элемент должен начинаться с заглавной буквы.",
             "match-case": "Регистр должен совпадать",
             "errors": {
-            "expression-invalid": "Некорректное химическое выражение.",
+                "expression-invalid": "Некорректное химическое выражение.",
                 "template-invalid": "Некорректный шаблон."
-        }
-    },
-    "fill-blanks": {
-        "select-prompt": "Выбрать:",
+            }
+        },
+        "fill-blanks": {
+            "select-prompt": "Выбрать:",
             "blank-type": "Тип пропуска:",
             "add-correct-options": "Добавить правильные ответы:",
             "add-options": "Добавить варианты ответа (отметьте правильные):",
@@ -1577,80 +1577,80 @@ export default {
             "text-input": "Ввод текста",
             "choice": "Выбор",
             "errors": {
-            "blanks-empty": "В задании должен быть хотя бы один пропуск.",
+                "blanks-empty": "В задании должен быть хотя бы один пропуск.",
                 "no-correct-options": "В каждом пропуске должен быть хотя бы один правильный ответ.",
                 "incorrect-html": "Некорректный html: {{html}}"
-        }
-    },
-    "random": {
-        "task": "Задание:",
+            }
+        },
+        "random": {
+            "task": "Задание:",
             "write-here": "Введите текст",
             "solve": "Решение",
             "tolerated-error": "Допустимая погрешность",
             "number-of-tasks": "Количество разных заданий:",
             "errors": {
-            "ranges-invalid": "Ошибка в диапазонах.",
+                "ranges-invalid": "Ошибка в диапазонах.",
                 "solve-expression-incorrect": "Ошибка в решении. Возможно одна или несколько переменных не объявлены."
-        }
-    },
-    "sql": {
-        "init-script": "Скрипт, инициализирующий SQL (необязательный)",
+            }
+        },
+        "sql": {
+            "init-script": "Скрипт, инициализирующий SQL (необязательный)",
             "solution-query": "Правильный SQL запрос",
             "check-code": "Проверяющий код",
             "type-sql": "Введите ваш SQL код здесь...",
             "type-code": "Введите ваш код здесь...",
             "errors": {
-            "init-sql-failed": "Не удалось запустить скрипт, инициализирующий SQL:\n{{error}}",
+                "init-sql-failed": "Не удалось запустить скрипт, инициализирующий SQL:\n{{error}}",
                 "challenge-broken": "Задание сломано. Пожалуйста, проверьте правильный запрос и проверяющий код.\n{{hint}}",
                 "db-container-start-failed": "Не удалось запустить контейнер с БД. Пожалуйста, попробуйте ещё раз."
-        }
-    },
-    "ext-grader": {
-        "problem-source": "Конфигурация задания (JSON):",
+            }
+        },
+        "ext-grader": {
+            "problem-source": "Конфигурация задания (JSON):",
             "syntax-error": "Синтаксическая ошибка в JSON",
             "errors": {
-            "queue-name-incorrect": "Значение 'queue_name' некорректно. Пожалуйста, напишите нам на support@stepik.org, чтобы мы могли создать новую очередь для вашего грейдера.",
+                "queue-name-incorrect": "Значение 'queue_name' некорректно. Пожалуйста, напишите нам на support@stepik.org, чтобы мы могли создать новую очередь для вашего грейдера.",
                 "filenames-not-unique": "Значения 'filename' в списке 'files' должны быть уникальными.",
                 "files-empty": "В списке 'files' должно быть хотя бы одно значение, если значение 'is_text_enabled' – 'false'."
-        }
-    },
-    "schulte": {
-        "table-size": "Размер таблицы:",
+            }
+        },
+        "schulte": {
+            "table-size": "Размер таблицы:",
             "show-grid": "Показывать сетку",
             "Schulte-Gorbov-table": "Таблица Шульте-Горбова",
             "randomize-font-size": "Случайный размер шрифта",
             "randomize-color": "Случайный цвет"
-    },
-    "manual-score": {
-        "files": {
-            "upload-date": "Время загрузки",
+        },
+        "manual-score": {
+            "files": {
+                "upload-date": "Время загрузки",
                 "status": "Состояние",
                 "process-date": "Время обработки",
                 "files": "Файлы",
                 "ok": "OK",
                 "processing": "обрабатывается..."
-        },
-        "upload": "Загрузить оценки",
+            },
+            "upload": "Загрузить оценки",
             "upload_done": "Оценки загружены",
             "upload_fail": "Не удалось загрузить оценки. Проверьте интернет соединение и попробуйте еще раз",
             "no-settings": "В этом шаге нет настроек.",
             "manual-score": "Баллы за это задание выставляет преподаватель.",
             "text": "Используя этот шаг, вы можете добавить произвольное количество баллов студентам.<br>\n Для этого сохраните шаг и загрузите CSV файл с оценками (из режима просмотра студентом).<br>\n Формат CSV файла:<br>\n <pre>\n   user_id,score,feedback\n   41,0, необязательный комментарий к решению студента 41\n   42,25,25% от максимального балла для студента 42\n   43,100,100% от максимального балла для студента 43\n </pre>\n % от максимального балла – процент от выставленного количества баллов за задание, должен быть от 0 до 100."
-    },
-    "dataset": {
-        "enable_time_limit": "Ограничить время одной попытки (5 минут)",
+        },
+        "dataset": {
+            "enable_time_limit": "Ограничить время одной попытки (5 минут)",
             "enter-code": "Введите ваш код ниже.",
             "enter-code-placeholder": "Введите ваш код здесь...",
             "errors": {
-            "solve-check-failed": "Правильный ответ из функции 'solve' оценивается как {{score}} вместо 1 или True. Пожалуйста, проверьте ваши функции 'solve' и 'check'.\n{{hint}}"
+                "solve-check-failed": "Правильный ответ из функции 'solve' оценивается как {{score}} вместо 1 или True. Пожалуйста, проверьте ваши функции 'solve' и 'check'.\n{{hint}}"
+            }
+        },
+        "utils": {
+            "parse-decimal-not-number": "Поле '{{field}}' должно быть числом."
         }
     },
-    "utils": {
-        "parse-decimal-not-number": "Поле '{{field}}' должно быть числом."
-    }
-},
-"profile": {
-    "knowledge-tooltip": "Вы получаете знания за прохождение уроков. Учитываются только шаги с более чем 100 решениями.",
+    "profile": {
+        "knowledge-tooltip": "Вы получаете знания за прохождение уроков. Учитываются только шаги с более чем 100 решениями.",
         "reputation-tooltip": "Вы получаете репутацию, когда другие пользователи решают ваши уроки или положительно оценивают ваши комментарии. Учитываются только шаги с более чем 100 решениями.",
         "joined-date": "Присоединился",
         "courses-empty-list": "Курсы не найдены",
@@ -1682,16 +1682,16 @@ export default {
         "no_lessons": "Вы не создали ни одного урока",
         "no_lessons_link": "Форма создания урока",
         "courses_favorites": "Избранные"
-},
-"quiz": {
-    "passed_by": "Решило",
+    },
+    "quiz": {
+        "passed_by": "Решило",
         "correct_ratio": "Успешных решений",
         "score": "Вы получили",
         "score-max": "из",
         "cost": "Вы получите",
         "submit-failed": "Не получилось отправить ваше решение. Проверьте интернет соединение и попробуйте еще раз"
-},
-"quiz__again": "Решить снова",
+    },
+    "quiz__again": "Решить снова",
     "quiz__answer-received": "Ваше решение сохранено.",
     "quiz__attempt-loading-error": "Не получилось загрузить задачу, скорее всего, сервер перегружен. Попробуйте чуть позже.",
     "quiz__attempt-outdated": "Извините, задание было изменено авторами. Необходимо начать сначала. Баллы за прошлые решения сохранены.",
@@ -1701,7 +1701,7 @@ export default {
     "quiz__attempt-solutions": "Форум решений",
     "quiz__attempt-solutions-desc": ", где вы можете сравнить свое решение с другими или спросить совета.",
     "quiz__correct": {
-    "0": "Правильно.",
+        "0": "Правильно.",
         "1": "Правильно, молодец!",
         "2": "Всё правильно.",
         "3": "Верно.",
@@ -1715,8 +1715,8 @@ export default {
         "11": "Так точно!",
         "12": "Отлично!",
         "13": "Всё получилось!"
-},
-"quiz__correct-call-to-comment": "Вы решили сложную задачу, поздравляем! Вы можете <a href=\"#discussions\">помочь другим</a> учащимся в комментариях.",
+    },
+    "quiz__correct-call-to-comment": "Вы решили сложную задачу, поздравляем! Вы можете <a href=\"#discussions\">помочь другим</a> учащимся в комментариях.",
     "quiz__correct-ratio-tooltip": "Процент успешных решений (обновляется каждые 2 мин)",
     "quiz__download-dataset": "скачать набор данных",
     "quiz__download-dataset-last": "скачать последний набор данных",
@@ -1728,14 +1728,14 @@ export default {
     "quiz__p2p": "Рецензирование",
     "quiz__p2p-new": "Отправить это решение на рецензию",
     "quiz__partially-correct": {
-    "0": "Почти верно. Так держать!",
+        "0": "Почти верно. Так держать!",
         "1": "Вы близки к верному ответу! Попробуйте улучшить результат.",
         "2": "Ваш ответ почти верен. Попробуете улучшить результат?",
         "3": "Почти верно, отлично! Может быть, попробуете ещё?",
         "4": "Почти верно. Попробуйте получить полный балл!",
         "5": "Вы близки к верному ответу, так держать. Попробуете ещё?"
-},
-"quiz__passed-by-tooltip": "Количество успешных решений (обновляется каждые 2 мин)",
+    },
+    "quiz__passed-by-tooltip": "Количество успешных решений (обновляется каждые 2 мин)",
     "quiz__reset-prompt": "Вы уверены, что хотите начать задание с самого начала?",
     "quiz__restart": "Начать сначала (сброс)",
     "quiz__retry": "Попробовать снова",
@@ -1750,7 +1750,7 @@ export default {
     "quiz__timelimit": "Ограничение",
     "quiz__with-review": "с рецензированием",
     "quiz__wrong": {
-    "0": "Пока неправильно, попробуйте еще раз!",
+        "0": "Пока неправильно, попробуйте еще раз!",
         "0.if": "is_not_last_try",
 
         "1": "Неверный ответ. Ничего страшного, у вас все еще бесконечное количество попыток!",
@@ -1802,39 +1802,39 @@ export default {
 
         "16": "Неправильно. Крепкий орешек! Вы можете вернуться к нему позже и все равно получить полный балл!",
         "16.if": "no_discount,no_close_deadline"
-},
-"registration": {
-    "title": "Регистрация",
+    },
+    "registration": {
+        "title": "Регистрация",
         "full_name": "Имя и фамилия",
         "email": "E-mail",
         "password": "Пароль",
         "terms": "Правила",
         "and": "и",
         "privacy": "Конфиденциальность"
-},
-"reminders": {
-    "lesson-intro": "Вы в режиме повторения материала, прошлые решения скрыты.",
+    },
+    "reminders": {
+        "lesson-intro": "Вы в режиме повторения материала, прошлые решения скрыты.",
         "intro": "Наш робот рекомендует вам решить эти задачи ещё раз:",
         "link-to-list": "Перейти к напоминаниям",
         "cancel": "Вернуть мои решения",
         "nothing": "Робот не знает, что вам посоветовать перерешать"
-},
-"reports": {
-    "name": "Название отчёта",
+    },
+    "reports": {
+        "name": "Название отчёта",
         "status": "Статус",
         "time": "Время создания отчёта",
         "create": "Сформировать",
         "update": "Обновить",
         "loading": "В процессе...",
         "download": "Файлы"
-},
-"reset-password": {
-    "tab": "Сбросить пароль",
+    },
+    "reset-password": {
+        "tab": "Сбросить пароль",
         "title": "Забыли свой пароль?",
         "email": "E-mail",
         "desc": "Введите свой e-mail адрес, и мы отправим вам письмо со ссылкой для сброса пароля."
-},
-"review-detail__explanation": "Объяснение оценки",
+    },
+    "review-detail__explanation": "Объяснение оценки",
     "review-detail__explanation-placeholder": "Развернутое объяснение вашей оценки",
     "review-detail__extra-review-notice": "Вы уже отправили минимально необходимое количество рецензий. Эта рецензия дополнительная.",
     "review-detail__result": "Итог: {{percentage}}%. Оценка является медианой первых {{count}} рецензий",
@@ -1893,14 +1893,14 @@ export default {
     "search__no-results": "Ничего не найдено",
     "search__search": "Поиск",
     "search__info": {
-    "query": "Показаны результаты по запросу:",
+        "query": "Показаны результаты по запросу:",
         "query-original": "Искать вместо этого:",
         "alter": "Попробуйте популярные запросы"
-},
-"section-editor__begin-date": "Дата открытия",
+    },
+    "section-editor__begin-date": "Дата открытия",
     "section-editor__step-content": "Урок сгенерирован роботом ;)",
     "section_edit": {
-    "points": "Всего баллов",
+        "points": "Всего баллов",
         "settings": "Настройки модуля",
         "settings_changed": "(изменено)",
         "req_section": "Требуемый модуль для открытия текущего",
@@ -1914,26 +1914,26 @@ export default {
         "add_lesson_header": "Добавить урок в модуль «{{title}}»",
         "description": "Описание модуля",
         "grading_policy": {
-        "descr": "Как снижать баллы в зависимости от количества попыток решений",
+            "descr": "Как снижать баллы в зависимости от количества попыток решений",
             "no_discount": "Не снижать",
             "inverse": "Снижать по формуле 1/N",
             "first_one": "Ноль баллов начиная со второй попытки",
             "first_three": "Ноль баллов начиная с четвертой попытки"
-    }
-},
-"socket": {
-    "status-notok": "Есть проблемы с подключением к серверу"
-},
-"step-actions": {
-    "actions": "Настройки шага",
+        }
+    },
+    "socket": {
+        "status-notok": "Есть проблемы с подключением к серверу"
+    },
+    "step-actions": {
+        "actions": "Настройки шага",
         "add-review": "Добавить рецензию",
         "add-new-step": "Добавить новый шаг",
         "download": "Скачать шаг",
         "upload": "Импортировать шаг",
         "delete": "Удалить шаг"
-},
-"step-edit": {
-    "add-step": "+ Добавить шаг",
+    },
+    "step-edit": {
+        "add-step": "+ Добавить шаг",
         "unlock-solutions-forum-settings-title": "Обсуждение решений",
         "unlock-solutions-forum-settings-description": "Доступно после:",
         "unlock-solutions-forum-settings-note": "Note: Админы и преподаватели курса всегда имеют доступ к форуму решений",
@@ -1954,7 +1954,7 @@ export default {
         "optional-correct-submission-feedback": "Комментарий к верному ответу",
         "optional-wrong-submission-feedback": "Комментарий к неверному ответу",
         "more-about": {
-        "see": "Узнайте больше на странице с ",
+            "see": "Узнайте больше на странице с ",
             "choice": "документацией к тестовой задаче",
             "number": "документацией к численной задаче",
             "code": "документацией к задаче на программирование",
@@ -1968,29 +1968,29 @@ export default {
             "dataset": "документацией к задаче на обработку данных",
             "random-tasks": "документацией к задаче со случайной генерацией условия",
             "external-grader": "документацией к External grader"
-    }
-},
-"step__add-info": "Выберите тип шага",
+        }
+    },
+    "step__add-info": "Выберите тип шага",
     "step__from": "из",
     "step__next-tooltip": "Следующий шаг",
     "step__not-ready-warn": "Извините, эта задача ещё не готова.<br/>Статус задачи: \"{{status}}\".",
     "step__submissions-left": {
-    "one": "(осталось {{count}} попытка)",
+        "one": "(осталось {{count}} попытка)",
         "few": "(осталось {{count}} попытки)",
         "many": "(осталось {{count}} попыток)",
         "other": "(осталось {{count}} попыток)"
-},
-"step__submissions-no-left": "У вас не осталось попыток",
+    },
+    "step__submissions-no-left": "У вас не осталось попыток",
     "step__templates": {
-    "text": "Вы можете добавить в этот шаг текст, а также изображения, математические формулы, примеры кода и многое другое.",
+        "text": "Вы можете добавить в этот шаг текст, а также изображения, математические формулы, примеры кода и многое другое.",
         "choice": "Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Чему равняется 1004 разделить на 2?",
         "number": "Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Чему равняется среднее арифметическое первых 50 натуральных чисел?",
         "code": "Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Напишите программу, которая считает сумму двух чисел.",
         "default": "Вы можете изменить условие задания в этом поле и указать настройки ниже.",
         "video": "",
         "animation": ""
-},
-"step__not-found": "Шаг №{{position}} не был найден.",
+    },
+    "step__not-found": "Шаг №{{position}} не был найден.",
     "step_download_plagiarism": "Плагиат",
     "step_download_reviews": "Рецензии",
     "step_download_reviews_outliers": "Необычные рецензии",
@@ -2036,34 +2036,34 @@ export default {
     "subscriptions__unsubscribe-step-comments": "Отписаться от комментариев шага",
     "subscriptions__unsubscribe-tooltip": "никогда не получать оповещения",
     "user-subscribe": {
-    "subscribe": "Подписаться",
+        "subscribe": "Подписаться",
         "subscribed": "Вы подписаны",
         "unsubscribed": "Вы отписались",
         "followers": {
-        "one": "{{count}} подписчик",
+            "one": "{{count}} подписчик",
             "few": "{{count}} подписчика",
             "many": "{{count}} подписчиков",
             "other": "{{count}} подписчиков"
-    },
-    "has-followers": {
-        "one": "У вас {{count}} подписчик",
+        },
+        "has-followers": {
+            "one": "У вас {{count}} подписчик",
             "few": "У вас {{count}} подписчика",
             "many": "У вас {{count}} подписчиков",
             "other": "У вас {{count}} подписчиков"
-    },
-    "unsubscribe-confirm": "Вы действительно хотите отписаться?",
+        },
+        "unsubscribe-confirm": "Вы действительно хотите отписаться?",
         "subscribe-process": "Подписываем…",
         "unsubscribe-process": "Отписываем…"
-},
-"syllabus_edit": {
-    "page-subtitle": "Редактирование расписания",
+    },
+    "syllabus_edit": {
+        "page-subtitle": "Редактирование расписания",
         "course-settings": "Настройки курса",
         "saved_msg": "Курс успешно сохранен",
         "lesson_added": "Урок успешно добавлен в курс",
         "section_added": "Модуль успешно добавлен в курс",
         "zero_sections": "В курсе пока нет ни одного урока.<br>Создайте первый модуль, чтобы добавить уроки",
         "deadlines": {
-        "course_begin_date": "Начало курса",
+            "course_begin_date": "Начало курса",
             "course_soft_deadline": "Мягкий дедлайн",
             "course_hard_deadline": "Жесткий дедлайн",
             "course_end_date": "Конец курса",
@@ -2072,7 +2072,7 @@ export default {
             "section_hard_deadline": "Жесткий дедлайн",
             "section_end_date": "Конец модуля",
             "tooltip": {
-            "course_begin_date": "С этого момента всем студентам, записанным на курс, будут доступны все уроки, в том числе приватные.",
+                "course_begin_date": "С этого момента всем студентам, записанным на курс, будут доступны все уроки, в том числе приватные.",
                 "course_soft_deadline": "Начиная с этого момента, студенты будут получать меньше баллов за решение задач",
                 "course_hard_deadline": "Начиная с этого момента, студенты не будут получать баллы за решение задач",
                 "course_end_date": "В этот момент студенты лишатся доступа к приватным урокам. Оставьте это поле пустым, если не планируете скрывать уроки",
@@ -2080,66 +2080,66 @@ export default {
                 "section_soft_deadline": "Начиная с этого момента, студенты будут получать меньше баллов за решение задач",
                 "section_hard_deadline": "Начиная с этого момента, студенты не будут получать баллы за решение задач",
                 "section_end_date": "В этот момент студенты лишатся доступа к приватным урокам этого модуля. Оставьте это поле пустым, если не планируете скрывать уроки"
-        },
-        "policy": {
-            "descr": "Как начислять баллы",
+            },
+            "policy": {
+                "descr": "Как начислять баллы",
                 "null": "Как во всем курсе",
                 "no_deadlines": "Не учитывать дедлайны",
                 "halved": "Половина баллов",
                 "linear": "Баллы убывают линейно"
+            }
         }
-    }
-},
-"time": {
-    "seconds__short": "сек.",
+    },
+    "time": {
+        "seconds__short": "сек.",
         "minutes__short": "мин."
-},
-"toc__progress": {
-    "title": "прогресс по курсу",
+    },
+    "toc__progress": {
+        "title": "прогресс по курсу",
         "goal": {
-        "end_course": "До окончания курса осталось",
+            "end_course": "До окончания курса осталось",
             "best_result": "До идеального результата осталось",
             "certificate_distinction": "До сертификата с отличием осталось",
             "certificate_regular": "До сертификата осталось"
-    },
-    "remaining": {
-        "get": {
-            "one": "получить <span>{{count}}</span> балл",
+        },
+        "remaining": {
+            "get": {
+                "one": "получить <span>{{count}}</span> балл",
                 "few": "получить <span>{{count}}</span> балла",
                 "many": "получить <span>{{count}}</span> баллов",
                 "other": "получить <span>{{count}}</span> баллов"
-        },
-        "learn": {
-            "one": "учиться <span>{{count}}</span> час",
+            },
+            "learn": {
+                "one": "учиться <span>{{count}}</span> час",
                 "few": "учиться <span>{{count}}</span> часа",
                 "many": "учиться <span>{{count}}</span> часов",
                 "other": "учиться <span>{{count}}</span> часов"
+            }
         }
-    }
-},
-"topbar__create": {
-    "create": "Создать",
+    },
+    "topbar__create": {
+        "create": "Создать",
         "lesson": "Новый урок",
         "course": "Новый курс"
-},
-"unit_edit": {
-    "marked_delete": "Урок&nbsp;<strong>«{{title}}»</strong>&nbsp;будет удален из курса при сохранении",
+    },
+    "unit_edit": {
+        "marked_delete": "Урок&nbsp;<strong>«{{title}}»</strong>&nbsp;будет удален из курса при сохранении",
         "restore": "Восстановить",
         "new_lesson": "Создать урок",
         "add_existed": "Добавить ваш существующий урок",
         "title_placeholder": "Введите название нового урока и нажмите Enter."
-},
-"user__edit": {
-    "time": {
-        "5m": "5 минут",
+    },
+    "user__edit": {
+        "time": {
+            "5m": "5 минут",
             "30m": "30 минут",
             "1h": "1 час",
             "3h": "3 часа",
             "6h": "6 часов",
             "12h": "12 часов",
             "1d": "1 день"
-    },
-    "info": "Редактировать профиль",
+        },
+        "info": "Редактировать профиль",
         "email": "Изменить почту",
         "auth_social": "Вход через социальные сети",
         "social_links": "Ссылки на социальные сети",
@@ -2147,7 +2147,7 @@ export default {
         "change_password": "Изменить пароль",
         "set_password": "Установить пароль",
         "edit-email": {
-        "table-header": "Ваши почтовые адреса",
+            "table-header": "Ваши почтовые адреса",
             "make-primary": "Сделать основным",
             "remove": "Удалить",
             "primary": "Основной",
@@ -2155,9 +2155,9 @@ export default {
             "resend-verification": "Почта не подтверждена! Отправить код подтверждения.",
             "placeholder": "Новый адрес",
             "add_button": "Добавить почту"
-    },
-    "notifications": {
-        "menu-item": "Уведомления",
+        },
+        "notifications": {
+            "menu-item": "Уведомления",
             "header": "Настройки уведомлений",
             "your-email": "Ваша почта",
             "delay": "Интервал",
@@ -2172,14 +2172,14 @@ export default {
             "subscribed_for_marketing": "Получать маркетинговые письма Stepik",
             "subscribed_for_partners": "Получать новости партнеров Stepik",
             "course-updates": {
-            "label": "Обновления курса",
+                "label": "Обновления курса",
                 "description": "Преподаватель может отправлять вам новости о специальных мероприятиях, новых материалах или других событиях курса. Stepik будет отправлять регулярные уведомления, касающиеся вашего прогресса обучения, в том числе напоминая о дедлайнах и новых комментариях в курсе.",
                 "reminders": "Напоминания",
                 "announcements": "Новости",
                 "comments": "Комментарии"
-        }
-    },
-    "save": "Сохранить изменения",
+            }
+        },
+        "save": "Сохранить изменения",
         "edit_profile": "Редактирование профиля",
         "your_name": "Ваше имя",
         "your_last_name": "Фамилия",
@@ -2220,14 +2220,14 @@ export default {
         "woof__avatar-removed": "Ваш аватар бы успешно удалён.",
         "woof__avatar-changed": "Ваш аватар был изменён.",
         "woof__avatar-failed": "Из-за проблем с сетью аватар не был изменён. ;("
-},
-"user__knowledge-title": "Знания",
+    },
+    "user__knowledge-title": "Знания",
     "user__lock-course-title": "Этот курс доступен ограниченному кругу лиц",
     "user__lock-title": "Этот урок доступен ограниченному кругу лиц",
     "user__profile": "Профиль",
     "user__reputation-title": "Репутация",
     "video-editor": {
-    "error": "Во время загрузки видео ({{video_id}}){{filename}} произошла ошибка. Проверьте, что вы загрузили правильный файл.",
+        "error": "Во время загрузки видео ({{video_id}}){{filename}} произошла ошибка. Проверьте, что вы загрузили правильный файл.",
         "filename": " имя файла: <b>{{filename}}</b>",
         "help": "Вы можете загружать видео до 200 Мегабайт. Сжимайте большие файлы:<br><br>1. Используйте <tt>ffmpeg</tt> с кодеком <tt>H.264</tt>:<br><code>ffmpeg -i INITIAL_VIDEO.mp4 -codec:a copy -vcodec libx264 -preset slow -crf 25 COMPRESSED_VIDEO.mp4</code><br><br>2. Используйте <tt>Avidemux</tt> - бесплатный инструмент, доступен для всех платформ<br><br> Также посмотрите рекомендации <a href=\"https://vimeo.com/help/compression\" target=\"_blank\">Vimeo guidelines (English)</a>.",
         "link-placeholder": "Вставьте ссылку на видео файл (скорее всего оканчивается на .mp4)...",
@@ -2241,27 +2241,27 @@ export default {
         "upload-label": "Загрузить этот видео файл из интернета",
         "upload-video": "загрузить видео",
         "uploaded": "Видео ({{video_id}}){{filename}} обрабатывается и скоро будет загружено!<br>Вы можете покинуть страницу, но не забудьте сохранить изменения."
-},
-"video-player__no-flash": "Ваш браузер не поддерживает mp4<br>пожалуйста, установите flash player<br>или просто скачайте видео по ссылке ниже ⤓",
+    },
+    "video-player__no-flash": "Ваш браузер не поддерживает mp4<br>пожалуйста, установите flash player<br>или просто скачайте видео по ссылке ниже ⤓",
     "video-player__start-sign": "Начать просмотр",
     "video-player__next-step-warn_p1": "Следующий шаг",
     "video-player__next-step-warn_p2": "откроется автоматически",
     "video-player__next-step-cancel": "Остаться на этом шаге",
     "video__upload-failed": "Произошла ошибка при загрузке видео-файла. Пожалуйста, проверьте, что размер вашего файла не превышает 200 мегабайт.",
     "web-push": {
-    "ask-for-permission": " Включите напоминания и учитесь регулярно!",
+        "ask-for-permission": " Включите напоминания и учитесь регулярно!",
         "no": "Нет, спасибо",
         "yes": "Включить уведомления",
         "error_while_granting": "Что-то пошло не так, пуш уведомления выключены."
-},
-"woof__user_already_registered": "У вас уже есть аккаунт.",
+    },
+    "woof__user_already_registered": "У вас уже есть аккаунт.",
     "woof_label": {
-    "success": "Успешно",
+        "success": "Успешно",
         "alert": "Внимание",
         "warning": "Предупреждение",
         "info": "Информация"
-},
-"wysi__bold": "Жирный шрифт (Ctrl + B)",
+    },
+    "wysi__bold": "Жирный шрифт (Ctrl + B)",
     "wysi__create-link": "Вставить ссылку",
     "wysi__fore-color-black": "Чёрный",
     "wysi__fore-color-blue": "Синий",
