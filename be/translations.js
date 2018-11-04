@@ -17,13 +17,13 @@ export default {
     "adaptive": {
         "nothing": "Нам больш няма чаго вам параіць, вы ўсё вывучылі. Віншуем!",
         "not-enrolled": "Запішыцеся на курс, каб пачаць вучыцца.",
-        "next": "Наступны урок, які мы рэкамендуем",
+        "next": "Наступны рэкамендаваны ўрок",
         "too-hard": "Урок занадта складаны",
         "too-boring": "Урок занадта просты",
         "title": "Вы ў адаптыўным рэжыме",
         "edit": {
             "is_adaptive": "Курс з’яўляецца адаптатыўным",
-            "header": "Наладжванне адаптатыўнасці курсу",
+            "header": "Наладкі адаптатыўнасці курсу",
             "more_info": "Даведацца больш пра адаптатыўнасць"
         },
         "transition_reaction": {
@@ -671,7 +671,7 @@ export default {
     "course__instructor-attachments-link": "Файлы",
     "course__instructor-clone-course": "Кланаваць курс",
     "course__instructor-clone-module": "Кланаваць модуль",
-    "course__instructor-dashboard-link": "Панэль кіравання выкладчыка",
+    "course__instructor-dashboard-link": "Дашборд выкладчыка",
     "course__instructor-delete-course": "Выдаліць курс",
     "course__instructor-edit-adaptiveness": "Адаптыўнасць",
     "course__instructor-edit-certificates": "Cертыфікаты",
