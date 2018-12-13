@@ -1529,8 +1529,8 @@ export default {
             }
         },
         "lti-consumer": {
-            "add-custom-field": "Добавить custom field",
-            "remove-custom-field": "Удалить custom field"
+            "add-custom-field": "Дадаць custom field",
+            "remove-custom-field": "Выдаліць custom field"
         },
         "linux": {
             "virtual-machine-image": "Образ, который используется для создания новой виртуальной машины",
