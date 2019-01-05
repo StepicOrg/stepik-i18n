@@ -1743,8 +1743,8 @@ export default {
     "quiz__signup-link": "Увайдзіце, каб мы запомнілі вашыя поспехі",
     "quiz__start-button": "Націсніце, каб пачаць рашаць",
     "quiz__status-service": "Статус сэрвісу:",
-    "quiz__status-service _ _ down": "Сэрвіс зламаўся і можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.",
-    "quiz__status-service _ _ partially-up": "Сэрвіс можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.",
+    "quiz__status-service__down": "Сэрвіс зламаўся і можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.",
+    "quiz__status-service__partially-up": "Сэрвіс можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.",
     "quiz__step-cost": "Балы за крок:",
     "quiz__submissions-link": "Вашыя рашэнні",
     "quiz__time-over": "Час скончыўся!",
@@ -2024,7 +2024,7 @@ export default {
     "submissions__no-tips-left": "У вас не засталося падказак. Але заўтра з'явяцца!",
     "submissions__tips-server-error": "Памылка: (не атрымалася атрымаць падказку.",
     "submissions__title": "Рашэнне-крок {{step_position}}",
-    "submissions_ _ prev": "Папярэдняе рашэнне",
+    "submissions__prev": "Папярэдняе рашэнне",
     "submissions__next": "Наступнае рашэнне",
     "subscriptions__reset": "Скінуць падпіску",
     "subscriptions__reset-tooltip": "Атрымліваць толькі абвесткі па змоўчанні",
@@ -2092,10 +2092,10 @@ export default {
         }
     },
     "time": {
-        "seconds_ _ short": "сек.",
+        "seconds__short": "сек.",
         "minutes__short": "хв."
     },
-    "toc _ _ progress": {
+    "toc__progress": {
         "title": "Прагрэс па курсе",
         "goal": {
             "end_course": "Да заканчэння курса засталося",
@@ -2263,7 +2263,7 @@ export default {
         "info": "Інфармацыя"
     },
     "wysi__bold": "Тоўсты шрыфт (Ctrl + B)",
-    "wysi _ _ create-link": "Уставіць спасылку",
+    "wysi__create-link": "Уставіць спасылку",
     "wysi__fore-color-black": "Чорны",
     "wysi__fore-color-blue": "Сіні",
     "wysi__fore-color-green": "Зялёны",
@@ -2278,7 +2278,7 @@ export default {
     "wysi__insert-unordered-list": "Маркіраваны спіс",
     "wysi__italic": "Курсіў (Ctrl + I)",
     "wysi__justify-center": "Выраўняць па цэнтры",
-    "wysi_ _ justify-left": "Выраўняць улева",
-    "wysi_ _ justify-right": "Выраўняць управа",
+    "wysi__justify-left": "Выраўняць улева",
+    "wysi__justify-right": "Выраўняць управа",
     "wysi__upload": "Дадаць малюнак"
 };
