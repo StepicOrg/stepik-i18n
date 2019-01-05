@@ -1610,7 +1610,7 @@ export default {
             "problem-source": "Канфігурацыя задання (JSON):",
             "syntax-error": "Сінтаксічная памылка ў JSON",
             "errors": {
-                "queue-name-incorrect": Значэнне 'queue_name' некарэктна. Калі ласка, напішыце нам на support@stepik.org, каб мы маглі стварыць новую чаргу для вашага грэйдэра.",
+                "queue-name-incorrect": "Значэнне 'queue_name' некарэктна. Калі ласка, напішыце нам на support@stepik.org, каб мы маглі стварыць новую чаргу для вашага грэйдэра.",
                 "filenames-not-unique": "Значэнні 'filename' у спісе 'files' павінны быць унікальнымі.",
                 "files-empty": "У спісе 'files' павінна быць хаця б адно значэнне, калі значэнне 'is_text_enabled' – 'false'."
             }
@@ -1906,13 +1906,13 @@ export default {
         "settings_changed": "(зменена)",
         "req_section": "Патрабаваны модуль для адкрыцця бягучага",
         "no_req_section": "Не абраны",
-        "req_section_percent":«працэнт балаў у модулі&nbsp;<strong>«{{title}}»</strong>&nbsp; неабходны для адкрыцця бягучага",
+        "req_section_percent": "працэнт балаў у модулі&nbsp;<strong>«{{title}}»</strong>&nbsp; неабходны для адкрыцця бягучага",
         "is_exam": "Экзаменацыйны модуль",
         "exam_duration": "Працягласць экзамену",
         "save_warn": "Захавайце курс, каб змены ўступілі ў сілу",
         "back": "Вярнуцца",
-        "marked_delete": "Модуль" {{title}} " будзе выдалены пасля захавання курсу",
-        "add_lesson_header«:" Дадаць урок у модуль "{{title}}»",
+        "marked_delete": "Модуль «{{title}}» будзе выдалены пасля захавання курсу",
+        "add_lesson_header": "Дадаць урок у модуль «{{title}}»",
         "description": "Апісанне модуля",
         "grading_policy": {
             "descr": "Як зніжаць балы ў залежнасці ад колькасці спробаў рашэнняў",
@@ -2006,7 +2006,7 @@ export default {
     "submissions__date-column": "Калі",
     "submissions__desc": "Спачатку новыя",
     "submissions__empty-list": "Рашэнні не знойдзеныя",
-    "submissions__empty-list-query": "Рашэнні па запыце \" {{query}}\ " не знойдзеныя.",
+    "submissions__empty-list-query": "Рашэнні па запыце \"{{query}}\" не знойдзеныя.",
     "submissions__get-hint": "Узяць падказку!",
     "submissions__header": "Рашэнні",
     "submissions__reset-filter-btn": "Скінуць фільтры",
