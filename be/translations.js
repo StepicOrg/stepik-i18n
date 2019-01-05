@@ -2124,7 +2124,7 @@ export default {
         "course": "Новы курс"
     },
     "unit_edit": {
-        "marked_delete": "Урок&nbsp;<strong>«{{title}}"</strong>&nbsp; будзе выдалены з курсу пры захаванні",
+        "marked_delete": "Урок&nbsp;<strong>«{{title}}»</strong> будзе выдалены з курсу пры захаванні",
         "restore": "Аднавіць",
         "new_lesson": "Стварыць ўрок",
         "add_existed": "Дадаць ваш існуючы ўрок",
