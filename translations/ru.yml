@@ -1,0 +1,3343 @@
+---
+ARIA:
+  nav:
+    common: Общая навигация по сайту
+    course: Навигация по курсу
+    lesson: Навигация по уроку
+activity_graph:
+  current_streak: >-
+    {count, plural, other {дней без перерыва} many {дней без перерыва} few {дня без перерыва} =1
+    {день без перерыва}}
+  info: "Следующий день в 00:00 UTC"
+  longest_streak: >-
+    {count, plural, other {дней без перерыва (макс.)} many {дней без перерыва (макс.)} few {дня без
+    перерыва (макс.)} =1 {день без перерыва (макс.)}}
+  quiz_count: >-
+    {count, plural, other {задач решено} many {задач решено} few {задачи решено} =1 {задача
+    решена}}
+  steps: задач решено
+adaptive:
+  edit:
+    header: Настройки адаптивности курса
+    is_adaptive: Курс является адаптивным
+    more_info: Узнать больше про адаптивность
+  next: Следующий рекомендованный урок
+  not-enrolled: Запишитеcь на курс чтобы начать учиться.
+  nothing: "Нам больше нечего вам посоветовать, вы всё изучили. Поздравляем!"
+  title: Вы в адаптивном режиме
+  too-boring: Урок слишком простой
+  too-hard: Урок слишком сложный
+  transition_reaction:
+    "0": Анализируем ваш ответ
+    "1": Ищем следующую задачу
+    "2": Роботы ищут задачи
+    "3": Считаем что-то
+announcement-show:
+  statistic-label:
+    click_count: Кликнули по ссылкам
+    open_count: Открыли письмо
+    publish_count: Рассылок сделано
+    queue_count: Видят на странице
+    sent_count: Получили на почту
+  statistic-tooltip:
+    click_count: "Количество писем, в которых кликнули по ссылке"
+    open_count: Количество открытых писем
+    publish_count: Количество запусков анонса
+    queue_count: Количество писем в очереди отправки
+    sent_count: Количество отправленных писем
+  status-label:
+    aborted: Прервано
+    composing: Черновик
+    queued: Ожидание очереди
+    queueing: Добавление в очередь
+    scheduled: Отложено
+    sending: Рассылается
+    sent: Отправлено
+  status-tooltip:
+    aborted: Отправка писем остановлена.
+    composing: >-
+      Черновик. Эту новость можно редактировать. Новость ещё не отправлена. Ни один учащийся не
+      пострадал.
+    queued: Письма ждут в очереди отправки.
+    queueing: Письма добавляются в очередь отправки.
+    scheduled: Письма будут отправлены по таймеру. Вы можете отменить отправку новости.
+    sending: Письма отправляются.
+    sent: Эта новость была отправлена выбранным категориям учащихся.
+    will_end: " Рассылка закончится: "
+    will_start: " Рассылка начнется: "
+announcement__default-template: Стандартный шаблон
+attachments__list-attach-file:
+  "{count, plural, =0 {Прикрепить файл} other {Прикрепить файл (макс. #)}}"
+attachments__list-delete-attachment-tooltip: Удалить
+attachments__list-open-attachment-tooltip: Открыть
+attachments__list-title: Файлы
+attachments__list-too-big-file-warn: "Максимальный размер файла: {max_size}."
+autotransit_off: Автопереход выключен
+autotransit_on: Автопереход включен
+autotransit_turn_on: Включить автопереход
+autotransit_turn_on_expl: Включить автопереход после завершения видео
+breadcrumbs__certificate-edit: Сертификат
+breadcrumbs__course-edit: Редактирование
+breadcrumbs__course-grade-book: Оценки
+breadcrumbs__course-lti-edit: Интеграция по LTI
+breadcrumbs__course-permissions-edit: Настройки доступа к курсу
+breadcrumbs__course-reports: Отчёты
+breadcrumbs__course-statistics: Статистика
+breadcrumbs__course-syllabus: Расписание
+breadcrumbs__home: Главная
+breadcrumbs__instructor-dashboard: Дашборд преподавателя
+breadcrumbs__lesson: Урок
+breadcrumbs__lesson-edit: Редактирование
+breadcrumbs__lesson-reports: Отчёты
+breadcrumbs__notifications-my: Мои события
+breadcrumbs__notifications-new: Новые уведомления
+breadcrumbs__review: Рецензирование
+breadcrumbs__review-session: Рецензии
+breadcrumbs__submissions: Решения
+button__new-course: Создать курс
+button__new-lesson: Создать урок
+certificate-editor:
+  auto-issue-label: Выпускать автоматически
+  auto-issue-text:
+    both: >-
+      Сертификаты будут автоматически получать все учащиеся, набравшие <b>{regular}</b>;
+      сертификаты с отличием будут получать учащиеся, набравшие <b>{distinction}</b>.
+    distinction: >-
+      Сертификаты с отличием будут получать учащиеся, набравшие <b>{distinction}</b>.
+    regular: >-
+      Обычные сертификаты будут автоматически получать все учащиеся, набравшие <b>{regular}</b>.
+  download-distinction: Скачать сертификат с отличием
+  download-regular: Скачать обычный сертификат
+  header: Настройки сертификата
+  issue-button: Выпустить сертификаты
+  issue-disabled: Невозможно выпустить сертификаты до установки минимальных баллов.
+  issue-header: Выпуск сертификатов
+  issue-text-1: >-
+    <b>Внимание! Это важно.</b> Выпустить сертификаты вручную можно только после последнего
+    дедлайна, в вашем курсе после <b>{deadline}</b>.
+  issue-text-2:
+    both: >-
+      Обычные сертификаты получат учащиеся, набравшие <b>{regular}</b>, сертификаты с отличием
+      получат учащиеся, набравшие <b>{distinction}</b>.
+    distinction: "Сертификаты с отличием получат учащиеся, набравшие <b>{distinction}</b>."
+    regular: "Обычные сертификаты получат учащиеся, набравшие <b>{regular}</b>."
+  max-points: "Максимальный балл в вашем курсе:"
+  minimal-points-distinction: "Баллы необходимые для <b>сертификата c отличием</b>:"
+  minimal-points-regular: "Баллы необходимые для <b>обычного сертификата</b>:"
+  org-header: Логотип организации
+  org-label: "Изображение с прозрачностью (png), высота=150 px"
+  org-placeholder: Место для логотипа организации
+  show-distinction: Показать сертификат с отличием
+  show-regular: Показать обычный сертификат
+  signs-header: Подписи преподавателей
+  signs-label: "Изображение с прозрачностью (png), ширина=3000 px, высота=484 px"
+  signs-placeholder: Место для подписей преподавателей
+  upload-again: Загрузить заново
+  upload-file: Загрузить файл
+certificate-page:
+  edit:
+    confirm: >-
+      Вы уверены, что хотите изменить имя получателя сертификата с '{old_fullname}' на
+      '{new_fullname}'?
+    fail: Не удалось изменить имя получателя сертификата.
+    last-change: Внимание! После этого изменения вы больше не сможете поменять имя.
+    prompt: >-
+      {count, plural, =1 {Внимание! Изменить имя получателя сертификата можно только один раз.
+      Введите имя:} few {Внимание! Изменить имя получателя сертификата можно только # раза. Введите
+      имя:} many {Внимание! Изменить имя получателя сертификата можно только # раз. Введите имя:}
+      other {Внимание! Изменить имя получателя сертификата можно только # раз. Введите имя:}}
+    success: Имя получателя сертификата изменено.
+    title: Изменить имя получателя
+certificate-widget:
+  distinction: Сертификат с отличием
+  goto: Перейти к курсу
+  grade: >-
+    {count, plural, other {#% пройдено} many {#% пройдено} few {#% пройдено} =1 {#% пройден}}
+  hidden: Скрыт
+  hide: Скрыть
+  page_url: Открыть страницу сертификата
+  result:
+    students-count: >-
+      {count, plural, =1 {Результат лучше, чем у # учащегося курса} few {Результат лучше, чем у #
+      учащихся курса} many {Результат лучше, чем у # учащихся курса} other {Результат лучше, чем у
+      # учащихся курса}}
+  unhide: Показывать всем
+  visibility__settings-failed: Не удалось сохранить настройки приватности сертификата.
+  visibility__settings-success: Настройки приватности сертификата успешно сохранены.
+certificate__download: Скачать сертификат
+clipboard:
+  click-to-copy: Кликните чтобы скопировать
+  fail: Не удалось скопировать. Попробуйте еще раз!
+  success: Скопировано!
+comments__abuse: Не нравится
+comments__abuse-tooltip: отметить комментарий как не понравившийся
+comments__active-order: Самые обсуждаемые
+comments__all: Все комментарии пользователя
+comments__assistant-badge: Ассистент курса
+comments__auth-warn: Чтобы присоединиться к этому обсуждению вам нужно
+comments__by-date-order: Новые обсуждения
+comments__default-order: Самые популярные
+comments__delete: Удалить
+comments__delete-all: Удалить все комментарии
+comments__delete-all-confirm: Удалить все комментарии пользователя по курсу?
+comments__delete-error: Ошибка удаления комментария
+comments__delete-tooltip: удалить этот комментарий
+comments__deleted-by: Удалено
+comments__deleted-by-user: пользователем
+comments__discussion-link: ссылка на это обсуждение
+comments__edit: Редактировать
+comments__edit-tooltip: редактировать этот комментарий
+comments__edited: Изменен
+comments__empty: Нет комментариев
+comments__empty-disc-warn: Ваш комментарий пустой
+comments__gradebook: Оценки
+comments__gradebook-tooltip: оценки автора комментария за этот курс
+comments__leave: Оставить комментарий
+comments__leave-solution: Оставить решение
+comments__load: Показать обсуждения
+comments__load-replies: показать больше ответов
+comments__moderator-badge: Модератор курса
+comments__network-error: Что-то пошло не так. обновите страницу чтобы увидеть комментарии.
+comments__not-found: "Комментарий #{comment_id} удалён или никогда не существовал"
+comments__pin: Закрепить
+comments__pin-tooltip: показывать этот комментарий выше других
+comments__pinned: Закреплено
+comments__pinned-text: Комментарий закреплён
+comments__pinned-tooltip: этот комментарий закреплён (всегда показывается перед другими)
+comments__post-reply: Отправить ответ
+comments__recent-order: Свежие обновления
+comments__replies-hide: скрыть ответы
+comments__replies-show: >-
+  {count, plural, =1 {Посмотреть ответ} few {Посмотреть # ответа} many {Посмотреть # ответов} other
+  {Посмотреть # ответов}}
+comments__replies-toggle-tooltip: показать / скрыть ответы к комментарию
+comments__reply: Ответить
+comments__reply-link: ссылка на этот комментарий
+comments__reply-tooltip: ответить на этот комментарий
+comments__solutions-thread-permisison-error: >-
+  У вас нет доступа к данному комментарию. Решите данную задачу, чтобы получить доступ к форуму
+  решений
+comments__staff-badge: Команда Stepik
+comments__staff-replied: ответ преподавателя
+comments__submissions: Решения
+comments__submissions-tooltip: решения автора комментария
+comments__submit-error: Не получилось отправить ваш комментарий =(
+comments__teacher-badge: Команда курса
+comments__thread-default: >-
+  {count, plural, =1 {Комментарий} few {Комментария} many {Комментариев} other {Комментарии} =0
+  {Комментарии}}
+comments__thread-solutions: >-
+  {count, plural, =1 {Решение} few {Решения} many {Решений} other {Решения} =0 {Решения}}
+comments__unpin: Открепить
+comments__unpin-tooltip: показывать этот комментарий в обычном порядке (не перед другими)
+comments__without-submissions: "У вас нет решений, которые можно опубликовать"
+common:
+  end: окончание
+  pin: Закрепить
+  start: начало
+  unpin: Открепить
+common__activity: Активность
+common__back-link: Назад
+common__back-to-step-link: Назад к шагу
+common__catalog: Каталог
+common__certificate: Сертификат
+common__certificate-distinction: Сертификат с отличием
+common__certificate-recipient: Получатель
+common__challenge: Сложная задача
+common__close: Закрыть
+common__close-window: Закрыть окно
+common__collapse: Свернуть
+common__cookies-warn: >-
+  Ваш браузер не поддерживает cookies. Пожалуйста, <a target="_blank" rel="noopener noreferrer"
+  href="https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml">включите</a>
+  cookies в настройках вашего браузера.
+common__course: Курс
+common__course-logo: Логотип курса
+common__course-search-placeholder: Поиск по курсу…
+common__delete: Удалить
+common__delete-failed-warn: Не получилось удалить.
+common__download-video: Скачать видео
+common__edit: Редактировать
+common__error-loading: "[{resource_name}] Ошибка загрузки!"
+common__expand: Развернуть
+common__experimental: Экспериментально
+common__feedback: Показать полностью
+common__feedback-hide: Свернуть
+common__fixed: Отметить исправленным
+common__fullscreen: Полноэкранный режим
+common__hard-deadline: Жесткий дедлайн
+common__hour: ч
+common__input-length-warn: >-
+  {count, plural, other {минимум # символа} =1 {минимум # символ} many {минимум # символов} few
+  {минимум # символа}}
+common__knowledge: Знания
+common__learner: Учащийся
+common__lesson: Урок
+common__lesson-image: Картинка урока
+common__lessons: Уроки
+common__link: ссылка
+common__list-is-empty: Список пуст
+common__load-more-button: Загрузить ещё
+common__loading-text: загружаем...
+common__login: Войти
+common__logout: Выход
+common__logout-confirm: "Вы уверены, что хотите выйти?"
+common__min: мин
+common__my-courses: Мои курсы
+common__notifications: Уведомления
+common__number-sign: №
+common__off: выкл.
+common__out-of-points:
+  "{count, plural, =1 {# баллa} few {# баллов} many {# баллов} other {# баллов}}"
+common__platform-news: Что нового
+common__points: "{count, plural, =1 {# балл} few {# балла} many {# баллов} other {# балла}}"
+common__points-received:
+  "{count, plural, =1 {получен} few {получено} many {получено} other {получено}}"
+common__pricing: Мой тарифный план
+common__print: Печать
+common__problem: Задача
+common__profile: Профиль
+common__reload: Перезагрузить
+common__reports-expiration: Отчёты хранятся 7 дней
+common__reputation: Репутация
+common__save-button: Сохранить
+common__save-failed-warn: Сохранить не удалось.
+common__saving-text: сохраняем...
+common__search-placeholder: Поиск…
+common__self-voting: Вы не можете голосовать за свой контент
+common__settings: Настройки
+common__soft-deadline: Мягкий дедлайн
+common__statement: Условие
+common__step: Шаг
+common__step-passed:
+  "{count, plural, =1 {пройден} few {пройдено} many {пройдено} other {пройдено}}"
+common__steps: "{count, plural, =1 {# шага} few {# шагов} many {# шагов} other {# шага}}"
+common__submission: Решение
+common__submission-correct: верно
+common__submission-evaluation: в обработке
+common__submission-partially-correct: частично верно
+common__submission-settled: принято
+common__submission-wrong: неверно
+common__submit: Отправить
+common__submit_file: Отправить файл
+common__symbols_left: >-
+  {count, plural, =1 {остался # символ} few {осталось # символа} many {осталось # символов} other
+  {осталось # символa}}
+common__symbols_overflow: >-
+  {count, plural, =1 {Рекомендуемый размер превышен на # символ} few {Рекомендуемый размер превышен
+  на # символа} many {Рекомендуемый размер превышен на # символов} other {Рекомендуемый размер
+  превышен на # символa}}
+common__time-warn: >-
+  Возможно, часовой пояс или время на вашем устройстве установлены неправильно. Проверьте ваши
+  настройки часового пояса, даты и времени.
+common__unauth-voting: Чтобы голосовать необходимо зайти под своим аккаунтом.
+common__unsaved-warn: Все несохранённые данные будут потеряны!
+common__update: Обновить
+common__userpic: Аватар пользователя
+common__woof-unverified-email:
+  Ваша почта не подтверждена! <a href="/edit-profile/email">Подтвердить</a>
+common__woof-wrong: Что-то пошло не так. Проверьте наличие интернета и попробуйте ещё раз.
+content_advices:
+  action:
+    course_quizzes: 'добавьте задачи в уроки со страницы <a href="{url}">{text}</a>'
+    other: '<a href="{url}">{text}</a>'
+  course_cover: Загружена картинка курса
+  course_lessons: В курсе есть не меньше 10 уроков
+  course_quizzes: В курсе есть не меньше 10 задач
+  course_sections: В курсе есть не меньше 2 модулей
+  course_summary: "Краткое описание заполнено и состоит не менее, чем из 100 символов"
+  empty_video_steps: Все видео шаги в курсе содержат видео
+  link-text:
+    course_cover: редактировать информацию о курсе
+    course_lessons: редактировать содержание курса
+    course_quizzes: содержания
+    course_sections: редактировать содержание курса
+    course_summary: редактировать информацию о курсе
+    empty_video_steps: проверить в дашборде преподавателя
+    quiz_correct_submissions: проверить в дашборде преподавателя
+    section_lessons: редактировать содержание курса
+    section_titles: редактировать содержание курса
+    step_default_texts: проверить в дашборде преподавателя
+  not_complete: "сейчас: {current}"
+  quiz_correct_submissions: Каждая задача решена верно хотя бы один раз
+  readiness: Готовность курса
+  readiness_progress: "Курс готов на <b>{score}/{cost}</b>"
+  section_lessons: В каждом модуле есть хотя бы один урок
+  section_titles: Указаны названия модулей (не шаблонные)
+  show_less: Свернуть
+  show_more: Подробнее
+  step_default_texts: Тексты во всех шагах не шаблонные
+copy_link_to_clipboard: Копировать ссылку
+cost:
+  after: после
+  before: до
+  can-try-again: Но вы по-прежнему можете проверить себя
+  deadlines:
+    dont-delay: ", не тяните с решением"
+    hard: "Баллы не начисляются даже за верное решение, отправленное после"
+    soft-halved: >-
+      Только половина баллов начисляется за правильное решение, отправленное после
+    soft-linear: Баллов начисляется меньше с каждым днём после
+  discounting:
+    first_one: с <strong>первой</strong> попытки
+    first_one-desc: >-
+      Баллы не начисляются даже за верное решение, отправленное со второй попытки
+    first_one-zero: не с первой попытки
+    first_three: с <strong>трех</strong> попыток
+    first_three-desc: >-
+      Баллы не начисляются даже за верное решение, отправленное с четвертой попытки
+    first_three-zero: после третьей попытки
+    inverse: с этой попытки
+    inverse-desc: Баллов начисляется меньше с каждой следующей попыткой
+  fold: Свернуть
+  for-submission: за решение
+  get: "{count, plural, =1 {# балл} few {# балла} many {# баллов} other {# баллов}}"
+  max: Максимум
+  more: Подробнее
+  restriction-extra: >-
+    {count, plural, =1 {Решения не принимаются после # попытки} few {Решения не принимаются после #
+    попыток} many {Решения не принимаются после # попыток} other {Решения не принимаются после #
+    попыток}}
+  submissions-left: >-
+    {count, plural, =1 {Всего <strong>#</strong> попытка} few {Всего <strong>#</strong> попытки}
+    many {Всего <strong>#</strong> попыток} other {Всего <strong>#</strong> попыток}}
+course:
+  draft: В разработке
+  edit-btns:
+    info: Редактировать информацию
+    syllabus: Редактировать содержание
+  info:
+    adaptive_info_link: Подробнее об адаптивных курсах
+    adaptive_note: Этот курс адаптивный и будет подстраиваться под ваш уровень знаний
+    certificate: Сертификат
+    certificate_details: Подробнее о сертификате
+    certificate_distinction_cond_title: "С отличием: "
+    certificate_is_issued: Выдается
+    certificate_is_not_issued: Не выдается
+    certificate_regular_cond_title: "Условие получения сертификата: "
+    description_header: Описание курса
+    fill_empty: "Поле не заполнено. Пожалуйста, заполните его в редакторе курса."
+    hours_to_complete: Время прохождения курса
+    hours_to_complete_text:
+      "{count, plural, =1 {# час} few {# часа} many {# часов} other {# часа}}"
+    instructors_header: Преподаватели
+    lang: Язык
+    last_deadline: Последний дедлайн
+    repeat_intro_video: Посмотреть еще раз
+    requirements_header: Требования
+    reviews_header: Отзывы о курсе
+    reviews_link: Смотреть все отзывы
+    reviews_short_link: Все отзывы
+    selfpaced_note: >-
+      Курс доступен бесплатно. Все материалы доступны сейчас для свободного прохождения
+    share_text: Поделиться в социальных сетях
+    share_text_short: Поделиться
+    soon_note: "Курс доступен бесплатно. Материалы курса будут доступны {date}"
+    start_date: Дата начала
+    summary_header: Коротко о курсе
+    target_audience_header: Целевая аудитория
+    workload: Нагрузка
+  learners_count: Количество записавшихся на курс
+  private: Приватный курс
+  readiness:
+    high_expl: Курс соответствует формальным рекомендациям Stepik
+    low_expl: "Скорее всего, курс находится в разработке"
+  sections:
+    default_title: Новый модуль
+  tariffs:
+    badge:
+      enterprise: Enterprise
+      pro: PRO
+    caption:
+      basic: Базовый
+      enterprise: Enterprise
+      pro: PRO
+    paid-features:
+      deadlines: Дедлайны в курсе
+      exams: Экзамены
+      section-deadlines: Дедлайны в модуле
+      section-discounting-policy: Политики снижения баллов
+      section-required-section: Требуемый модуль
+      step-free-answer-attachments: Файлы в свободном ответе
+      step-instruction-type-instructor: Рецензирование преподавателем
+      step-quiz-admin: Задача на Linux
+      step-quiz-dataset: Задача на данные
+      step-quiz-external-grader: External grader
+      step-quiz-linux-code: Задача на программирование в Linux
+      step-quiz-lti-consumer: LTI consumer
+      step-quiz-manual-score: Оценка преподавателя
+      step-string-attachments: Файлы в текстовой задаче
+      step-submissions-restrictions: Ограничение на отправку решений
+    toast-help-link: >-
+      <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>Что это?</a>
+    toast-plug-button:
+      enterprise: Подключить Enterprise-функции
+      pro: Подключить PRO-функции
+    upgrade-course-modal:
+      activate: "Подключить {planTitle}"
+      dont-show-again: Больше не показывать это окно
+      ok: Понятно
+      text1: "Вы использовали {planTitle}-функциональность, замечательно!"
+      text2: >-
+        Чтобы вы могли опубликовать курс с такими настройками, переведите его в
+        {planTitle}-режим.<br><a href='https://welcome.stepik.org/ru/pricing'
+        target='_blank'>Узнать про тарифы</a>
+course-actions__button: Администрировать
+course-assessments:
+  empty: В курсе нет непроверенных решений
+  pending-reviews-badge: Ждут рецензий
+  submission-link: К решениям
+  tab-caption: Проверка решений
+  title: >-
+    {count, plural, =1 {# решение ждет рецензии} few {# решения ждут рецензий} many {# решений ждут
+    рецензий} other {# решений ждут рецензий}}
+course-edit__back: Вернуться в курс
+course-edit__cancel: Вернуться
+course-edit__new-module: Новый модуль
+course-edit__save: Сохранить
+course-filters:
+  categories: Категории
+  langs: Язык курса
+  tags: Предметы
+course-grade-book:
+  download-sign: "Скачайте табель на "
+  filter: "Поиск по ID, email, имени учащегося"
+  "no": Не найдено ни одного учащегося
+  not-available:
+    toast: >-
+      Табель успеваемости учащихся доступен только для <b>{planTitle}-курсов</b>.
+    tooltip: "Табель успеваемости учащихся доступен только для {planTitle}-курсов"
+  reports: странице отчета
+  title: Табель успеваемости курса
+  total: Итог
+  user: Пользователь
+course-grade-book-cell:
+  await-instructor: Ожидается оценка преподавателя
+  await-peer: Ожидается оценка учащихся
+  await-user: Учащийся не отрецензировал решения других учащихся
+  no-sent-review: Не отправлено на рецензию
+  no-submissions: Нет отправленных решений
+  success: "Есть верное решение, есть оценка"
+  wrong: Есть только неверные решения
+course-index__authors: >-
+  {count, plural, other {Создатели} =1 {Создатель} many {Создатели} few {Создатели}}
+course-index__cert: Сертификат
+course-index__ends: "Окончание:"
+course-index__enrolled-msg: Вы записаны!
+course-index__instructors: >-
+  {count, plural, other {Преподаватели} =1 {Преподаватель} many {Преподаватели} few
+  {Преподаватели}}
+course-index__lang: Язык
+course-index__starts: "Начало:"
+course-index__workload: Нагрузка
+course-info-edit__add: Добавить
+course-info-edit__author-placeholder: id создателя...
+course-info-edit__authors-403: Только админ курса может редактировать список создателей.
+course-info-edit__cover: "Загрузить новый логотип курса:<br>230 x 230"
+course-info-edit__instructor-placeholder: id преподавателя...
+course-info-edit__instructors-403: Только админ курса может редактировать список преподавателей.
+course-info-edit__remove-author: Удалить создателя
+course-info-edit__remove-instructor: Удалить преподавателя
+course-info-edit__upload-failed: >-
+  Загрузите правильное изображение. Файл, который вы загрузили, повреждён или не является
+  изображением.
+course-lti-edit__header: Настройки интеграции по LTI
+course-new:
+  access:
+    info: "После создания курс будет доступен только авторам, тариф Basic."
+    paid-course: "Этот курс платен для учащихся. Базовая цена:"
+  cancel: Отмена
+  create: Создать
+  explanation: >-
+    Открытые курсы и уроки распространяются по лицензии <a
+    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
+  header: Создание нового курса
+  help-center-link: Подробнее о создании курсов
+  teaching-landing:
+    features:
+      "0": "Редактор для создания курсов и тестов, их дальнейшее размещение"
+      "1": >-
+        <a href='https://support.stepik.org/hc/ru/articles/360000159673' target='_blank'>20+ типов
+        задач</a>, включая задания на программирование и данные
+      "2": Интеграция по Stepik API
+      "3": Автоматическая проверка решений и ручное выставление оценок
+      "4": Отчёты по успеваемости
+      "5": Форум для ответов на вопросы учащихся
+      extra: >-
+        Лучшим авторам мы оказываем методическую поддержку и помогаем со съёмкой видео в
+        <nobr>Санкт-Петербурге</nobr>.
+    features-header: "Делитесь знаниями, используя возможности платформы"
+    form:
+      submit: Создать курс
+      title-placeholder: Название курса
+    header: Начните преподавать со Stepik
+    navbar-link: Преподавание
+    new-class-content: >-
+      Создайте <a href='https://welcome.stepik.org/ru/class' target='_blank'>класс</a> и получите
+      доступ к оценкам и решениям ваших учащихся на курсе.
+    new-class-header: >-
+      Преподаёте и хотите использовать другие открытые курсы в работе? Ведёте несколько групп?
+    tips:
+      "0": >-
+        <b>Опубликуйте бесплатно открытый курс в нашем каталоге</b>, и его увидят сотни тысяч
+        студентов Stepik.
+      "1": >-
+        <b>Монетизируйте свои знания.</b> Создайте <a
+        href='https://welcome.stepik.org/ru/paid-courses' target='_blank'>платный курс</a>. Или
+        ограничьте доступ учащихся к материалам через <a
+        href='https://welcome.stepik.org/ru/pricing' target='_blank'>приватные курсы</a>.
+      "2": >-
+        <b>Обучайте своих сотрудников.</b> Используйте <a
+        href='https://welcome.stepik.org/ru/pricing' target='_blank'>приватные курсы</a> для
+        адаптации персонала, повышения квалификации или тестирования.
+      "3": >-
+        <b>Проведите соревнование или онлайн-олимпиаду</b>, как это уже сделали <a
+        href='https://stepik.org/users/6360382' target='_blank' rel='nofollow noreferrer'>Олимпиада
+        НТИ</a>, <a href='http://contest.bioinf.me/' target='_blank' rel='nofollow
+        noreferrer'>Bioinformatics Contest</a> и <a href='https://totaldict.ru/' target='_blank'
+        rel='nofollow noreferrer'>Тотальный Диктант</a>.
+  title: Название
+  title-hint: Не более 64 символов
+course-permissions-edit:
+  access-personal:
+    description: режим на время создания курса
+    label: Доступен только команде курса
+  access-public:
+    description: доступен всем
+    label: Публичный курс
+  can: может
+  group:
+    admins: администратор
+    assistants: ассистент
+    learners: учащийся
+    moderators: модератор
+    teachers: преподаватель
+    testers: тестирующий
+  group-header:
+    admins: Администраторы
+    assistants: Ассистенты
+    learners: Учащиеся
+    moderators: Модераторы
+    teachers: Преподаватели
+    testers: Тестирующие
+  group-right:
+    comments: оставлять комментарии
+    edit: "редактировать содержание уроков, добавлять и удалять их"
+    gradebook: просматривать решения и оценки учащихся
+    learn-dates: проходить обучение без учета дат открытия / закрытия
+    manage-users: >-
+      управлять преподавателями, ассистентами, модераторами, тестирующими и учащимися на этой
+      странице
+    peer-review: редактировать и одобрять рецензии на решения
+    pin: закреплять и удалять комментарии
+    solve-problems: решать задания
+    view: просматривать контент
+  invitations-error-add: Не удалось создать ссылку-приглашение
+  invitations-error-delete: Не удалось удалить ссылку-приглашение
+  invitations-title: Приглашения
+  label: ID пользователя или email
+  learners-limit: 1000 человек может обучаться на PRO-курсе.
+  link-doc: "Документация: Права доступа"
+  load-more: Загрузить еще
+  loading_member: загрузка..
+  lti-title: IMS LTI 1.1 Интеграция
+  members-email-error-add: "Не удалось выслать приглашение {email}"
+  members-email-success-add: "Приглашение {email} успешно выслано"
+  members-error-add: Не удалось добавить пользователя
+  members-error-already-exists: "{username} уже был добавлен"
+  members-error-delete: Не удалось удалить пользователя
+  members-success-add: Пользователь успешно добавлен
+  no-edit-label: Редактирование прав доступа запрещено.
+  personal-testers-note:
+    "Тестирующие не могут проходить курс, который доступен только команде курса."
+  save-access: Сохранить настройки доступа
+  tariff-help-link: >-
+    Подробнее <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>о тарифах</a>
+  tariff-info: "Управлять правами доступа можно только в <b>{plan}-курсах</b>."
+  title-prefix: Настройки доступа курса
+  user-is-admin: основной администратор
+course-promo:
+  about-course: О курсе
+  about-page-widget:
+    button: Посмотреть
+    text: >-
+      У этого курса есть промостраница, которую гости сайта видят до того, как на него поступить
+  certificate-section-header: Сертификат
+  course-content: Программа курса
+  course-content-aside-link: Программа курса
+  course-includes: "В курс входят:"
+  course-includes-aside:
+    challenges: >-
+      {count, plural, =1 {<b>#</b> интерактивная задача} few {<b>#</b> интерактивные задачи} many
+      {<b>#</b> интерактивных задач} other {<b>#</b> интерактивных задач}}
+    header: В курс входят
+    lessons: >-
+      {count, plural, =1 {<b>#</b> урок} few {<b>#</b> урока} many {<b>#</b> уроков} other
+      {<b>#</b> уроков}}
+    quizzes: >-
+      {count, plural, =1 {<b>#</b> тест} few {<b>#</b> теста} many {<b>#</b> тестов} other
+      {<b>#</b> тестов}}
+    video: >-
+      {count, plural, =1 {<b>#</b> час видео} few {<b>#</b> часа видео} many {<b>#</b> часов видео}
+      other {<b>#</b> часов видео}}
+  course-price: Сколько стоит обучение
+  demo: Демо-доступ
+  head-widgets:
+    adaptive:
+      caption: Адаптивный курс
+      help: Что это?
+      helpURL: "https://support.stepik.org/hc/ru/articles/360002316314-Адаптивные-курсы"
+    certificate: Сертификат Stepik
+    difficulty:
+      easy: Начальный уровень
+      hard: Продвинутый уровень
+      normal: Средний уровень
+  how-you-will-learn: Как проходит обучение
+  meet-instructors: Наши преподаватели
+  read-all-reviews: >-
+    {count, plural, =1 {Читать # отзыв} few {Читать все # отзыва} many {Читать все # отзывов} other
+    {Читать все # отзывов}}
+  reviews: >-
+    {count, plural, =1 {# отзыв} few {# отзыва} many {# отзывов} other {# отзывов}}
+  share-course: Расскажите о курсе друзьям
+  share-course-direct-link: "Прямая ссылка на курс:"
+  student-reviews: Отзывы прошедших курс
+  students: >-
+    {count, plural, =1 {# учащийся} few {# учащихся} many {# учащихся} other {# учащихся}}
+  what-you-will-get: Что вы получаете
+  what-you-will-learn: Чему вы научитесь
+  who-is-this-course-for: Для кого этот курс
+course-settings:
+  about-pro-link:
+    text: Подробнее о PRO-курсах
+    url: "https://welcome.stepik.org/ru/pricing"
+  cancel: Отменить
+  course-access:
+    enabled: Открыт для прохождения
+    not-enabled: Виден только команде курса
+    not-public: По приглашениям
+    public: Для всех
+    title: Видимость курса
+  course-type:
+    legacy-note: >-
+      Если вы используете расширенную функциональность, то после <time>1го июля 2020 года</time>
+      курс будет виден только авторам. Переведите курс в PRO-режим или настройте его в соответствии
+      с базовым тарифом, чтобы продолжить публикацию после 01.07.2020.
+    title: Тип курса
+  save: Применить изменения
+  save-error-woof: Не удалось сохранить курс.
+  save-success-woof: Сохранено.
+  title: Настройки курса
+course-settings__button: Редактировать
+course-syll__begins: Дата начала
+course-syll__compact-progress: процент пройденных шагов
+course-syll__ends: Дата закрытия
+course-syll__scores: ваш / макс балл
+course-syllabus__closed-yet: Этот модуль закрыт
+course-syllabus__required-module-message: >-
+  {count, plural, =1 {# балл в модуле {position} ({title})} few {# балла в модуле {position}
+  ({title})} many {# баллов в модуле {position} ({title})} other {# баллов в модуле {position}
+  ({title})}}
+course-syllabus__required-module-message-percent: "{percent}% баллов в модуле {position} ({title})"
+course-syllabus__required-module-message-title: "Условие открытия:"
+course__add-annon: Добавить новость
+course__add-to-archived-link: Переместить в архив
+course__add-to-favorites-link: Добавить в избранное
+course__added-to-archived-fail: "Не удалось переместить в архив, перезагрузите страницу."
+course__added-to-archived-success: >-
+  Курс отправлен в архив. Убрать из архива его можно с помощью стрелки на виджете курса.
+course__added-to-favorites-fail: "Не удалось добавить в избранное, перезагрузите страницу."
+course__added-to-favorites-success: >-
+  Курс добавлен в избранное. Удалить его можно с помощью стрелки на виджете курса.
+course__annon-delete: Удалить
+course__annon-delete-confirm: Удалить эту новость?
+course__annon-delete-done: Новость была удалена
+course__annon-delete-error: Не могу удалить эту новость
+course__annon-empty: В этом курсе пока что нет новостей
+course__annon-is-infinite-label: Рассылать эту новость вечно
+course__annon-is-scheduled-label: Установить дату отправки
+course__annon-max-score: Максимальный процент
+course__annon-min-score: Минимальный процент
+course__annon-on-enroll-label: Отправлять эту новость сразу после записи на курс
+course__annon-restrict-description: >-
+  Новость будет отправлена только учащимся с успеваемостью не меньше минимального процента и не
+  больше максимального. Учащиеся, набравшие в точности минимальный или максимальный процент, также
+  получат письмо.
+course__annon-restrict-score-label: Ограничить рассылку этой новости по успеваемости
+course__annon-save: Сохранить как черновик
+course__annon-send: Отправить
+course__annon-send-done: Отправка новости началась
+course__annon-send-done-is-scheduled:
+  "Рассылка новости запланирована. Первая рассылка произойдет {date}."
+course__annon-send-done-on-enroll: >-
+  Изменения сохранены. Все новые учащиеся получат письмо сразу после записи на курс.
+course__annon-send-error: Не могу отправить новость
+course__annon-send-is-scheduled: Запланировать отправку новости
+course__annon-send-on-enroll: Отправлять при записи
+course__annon-sent-confirm: >-
+  Пожалуйста, обратите внимание, что доставка учащимся может занять до 24 часов. Начать отправку
+  этой новости выбранным категориям учащихся?
+course__annon-sent-confirm-is-scheduled: "Вы уверены, что хотите запланировать отправку новости?"
+course__annon-sent-confirm-on-enroll:
+  "Вы уверены, что хотите отправлять это письмо всем новым учащимся?"
+course__annon-start-date: Дата отправки
+course__annon-stop: Перестать рассылать эту новость
+course__annon-stop-done: Рассылка остановлена.
+course__annon-stop-error: Что-то пошло не так. Рассылка не остановлена.
+course__annon-template-label: Шаблон письма
+course__annon-test: Отправить пример самому себе
+course__annon-test-done: Проверочное письмо успешно отправлено
+course__annon-test-error: Не могу отправить проверочное письмо
+course__annon-test-tooltip: Отправить эту новость только на ваш адрес
+course__annon-tmpl-subj: Новость
+course__annon-tmpl-text: "Здравствуйте, {%user_name%}!"
+course__anon-stop-warn: Остановить рассылку? Возобновление рассылки будет невозможно.
+course__buy: Купить
+course__buy-button: "Купить за {price}"
+course__buy-form:
+  add-email: Добавьте основной email
+  here: здесь
+  pay-button: Заплатить
+  pay-button-promo: "Заплатить с купоном: {promo}"
+  price-label: Стоимость
+  price-promo-desc: >-
+    (оригинальная цена, при покупке будет также активирован купон <strong>{promo}</strong>,
+    финальная сумма будет указана на странице оплаты)
+  primary-email-notice: >-
+    На этот адрес придет подтверждение оплаты. Изменить его можно в настройках профиля.
+  promo-label: Промокод
+  promo-placeholder: Вставьте промокод
+  register-button: Зарегистрируйтесь для оплаты
+  support-notice: >-
+    Если у вас возникли проблемы с оплатой, пишите на <a
+    href="mailto:support@stepik.org">support@stepik.org</a>.
+  title: 'Оплата доступа к курсу "{course}"'
+  user-agreement: >-
+    Оплачивая доступ к этому курсу, вы соглашаетесь с условиями <a
+    href="{terms_url}">пользовательского соглашения</a>.
+course__certificate:
+  is_auto_issued: >-
+    Поздравляем! Вы набрали достаточно баллов для получения сертификата. Сертификат появится в
+    вашем профиле в течение суток.
+  not_auto_issued: >-
+    Поздравляем! Вы набрали достаточно баллов для получения сертификата. Сертификат появится в
+    вашем профиле после окончания курса.
+  ok: ОК
+course__certificate-distinction: Сертификат с отличием
+course__certificate-link: Сертификат
+course__certificate-regular: Сертификат
+course__class-new: + Создать класс
+course__comments-link: Комментарии
+course__continue-empty-warning:
+  "Не получилось открыть первый урок, попробуйте выбрать другой в расписании."
+course__continue-exam-warning:
+  "Для того, чтобы перейти к следующему уроку, необходимо начать экзамен."
+course__continue-learn: Продолжить
+course__continue-tooltip: Продолжить обучение с последнего пройденного шага
+course__drop-confirm: "Вы уверены, что хотите бросить этот курс?"
+course__drop-fail: Не удалось бросить курс.
+course__drop-link: Покинуть
+course__drop-success: "Курс брошен, перезагрузите страницу."
+course__empty-warn-1: В курсе пока что нет ни одного урока.
+course__empty-warn-2: Он пуст =(
+course__empty-warn-add: Добавьте свой первый урок в редакторе содержания курса.
+course__free: Бесплатно
+course__info-link: Информация
+course__instructor-attachments-link: Файлы
+course__instructor-clone-course: Создать копию
+course__instructor-clone-module: Копировать модуль
+course__instructor-course-settings: Публикация
+course__instructor-dashboard-link: Дашборд
+course__instructor-delete-course: Удалить
+course__instructor-edit-adaptiveness: Адаптивность
+course__instructor-edit-certificates: Cертификаты
+course__instructor-edit-info: Описание
+course__instructor-edit-lti: Интеграция по LTI
+course__instructor-edit-permissions: Права доступа
+course__instructor-edit-syllabus: Содержание
+course__instructor-grade-book: Табель успеваемости
+course__instructor-reports: Отчёты
+course__instructor-statistics: Статистика
+course__join-button: Поступить на курс
+course__join-button_ab: Учиться
+course__join-fail: >-
+  Не получается поступить на курс (код ошибки: {status}). Попробуйте перезагрузить страницу.
+course__learn-now: Учиться можно сразу
+course__menu: Меню
+course__news-link: Новости
+course__remove-from-archived-link: Убрать из архива
+course__remove-from-favorites-link: Убрать из избранного
+course__removed-from-archived-fail: "Не удалось убрать из архива курсов, перезагрузите страницу."
+course__removed-from-archived-success: >-
+  Курс убран из архива курсов. Поместить его в архив можно из выпадающего меню на виджете курса.
+course__removed-from-favorites-fail: "Не удалось удалить из избранного, перезагрузите страницу."
+course__removed-from-favorites-success: >-
+  Курс удален из избранного. Вернуть его в избранное можно с помощью стрелки на виджете курса.
+course__reviews:
+  can-review: "Вы прошли больше {treshold}% курса, оставьте отзыв"
+  can-review-no: "Нет, спасибо"
+  can-review-yes: Оставить отзыв
+  cancel-edit: Отмена
+  cant-review: "Чтобы оставить отзыв, пройдите больше {treshold}% материалов"
+  change-review: Изменить свой отзыв
+  create-review: Оставить отзыв
+  delete-review: Удалить
+  give-us-feedback: "Пожалуйста, напишите отзыв"
+  lesson:
+    also-can-leave-there-p1: Опубликовать и отредактировать свой отзыв также можно на странице
+    also-can-leave-there-p2: Отзывов
+    also-can-leave-there-p3: о курсе
+    leave-review: Опубликовать отзыв о курсе
+  link: Отзывы
+  modal:
+    is_owned: Спасибо за ваш отзыв! <br>Вы можете поделиться своим мнением с друзьями.
+    other_user: Поделитесь этим отзывом
+    success_copy: Ссылка на отзыв успешно скопирована
+  no-reviews-yet: "К сожалению, ни одного отзыва об этом курсе пока нет. Но вы"
+  no-reviews-yet-be-first: можете быть первым.
+  no-reviews-yet-for-author: "К сожалению, ни одного отзыва о вашем курсе пока нет."
+  on-save-error: Произошла ошибка во время сохранения. Ваш отзыв не был сохранен.
+  on-success: Ваш отзыв был сохранен. Спасибо!
+  rate: "Ваша оценка курса:"
+  show-profile: Показать профиль пользователя
+  show_orig: Показать оригинал
+  summary:
+    count_certificates: "Выдано сертификатов:"
+    count_learners: "Записалось на курс:"
+    count_reviews: "Всего отзывов:"
+    mean: "Средняя оценка:"
+    no-reviews: "Пока недостаточно оценок, чтобы вывести среднюю."
+  user-rated-as: "Оценка:"
+course__scoreboard-link: Скорборд
+course__syll-link: Содержание
+course__try-free-button: Попробовать бесплатно
+course__unsaved-confirm-text:
+  "Вы отредактировали курс, но не сохранили его.<br>Сохранить изменения?"
+course__waiting-review: >-
+  {count, plural, =1 {# решение ждет рецензии} few {# решения ждут рецензий} many {# решений ждут
+  рецензий} other {# решений ждут рецензий}}
+course_cannot_buy-already: Доступ к курсу уже оплачен
+course_cannot_buy-button: Покупка недоступна
+course_cannot_buy-warn: "Невозможно оплатить доступ к курсу, напишите нам на support@stepik.org"
+course_finder:
+  query_placeholder: Быстрый поиск курсов (по названию или ID)
+course_payment_not_ready-warn: >-
+  Платеж не завершен, если у вас есть вопросы, обратитесь в саппорт support@stepik.org
+course_payment_success-msg: >-
+  Спасибо за покупку доступа к курсу, ваш платеж еще обрабатывается. Очень скоро мы запишем вас на
+  курс и вы сможете начать учиться. Если за сутки зачисление не произошло, напишите нам в
+  поддержку: support@stepik.org.
+course_payment_success-woof: Поздравляем! Вы успешно записаны на курс!
+deadlines-editor__advanced-settings: Расширенные настройки
+deadlines-editor__begin_date_source: дата открытия модуля
+deadlines-editor__course-deadlines: Дедлайны курса по умолчанию
+deadlines-editor__course-deadlines_tooltip: "Работают, если иное не указано в настройках модуля"
+deadlines-editor__course_begin_date_source: дата открытия курса
+deadlines-editor__course_begin_date_tooltip: >-
+  С этого момента всем учащимся, записанным на курс, будут доступны все уроки, в том числе
+  приватные.
+deadlines-editor__course_end_date_source: дата закрытия курса
+deadlines-editor__course_end_date_tooltip: >-
+  В этот момент учащиеся лишатся доступа к приватным урокам. Оставьте это поле пустым, если не
+  планируете скрывать уроки
+deadlines-editor__course_hard_deadline_source: жесткий дедлайн курса
+deadlines-editor__course_soft_deadline_source: мягкий дедлайн курса
+deadlines-editor__end_date_source: дата закрытия модуля
+deadlines-editor__grading_policy_tooltip: Способ начисления баллов после мягкого дедлайна.
+deadlines-editor__hard_deadline_source: жесткий дедлайн модуля
+deadlines-editor__hard_deadline_tooltip:
+  "Начиная с этого момента, учащиеся не будут получать баллы за решение задач"
+deadlines-editor__section_begin_date_tooltip: >-
+  С этого момента всем учащимся, записанным на курс, будут доступны все уроки, в том числе
+  приватные.
+deadlines-editor__section_end_date_tooltip: >-
+  В этот момент учащиеся лишатся доступа к приватным урокам. Оставьте это поле пустым, если не
+  планируете скрывать уроки
+deadlines-editor__soft_deadline_source: мягкий дедлайн модуля
+deadlines-editor__soft_deadline_tooltip: >-
+  Начиная с этого момента, учащиеся будут получать меньше баллов за решение задач
+discussions__delete-prompt: Удалить этот комментарий?
+discussions__edit-disc-button: Изменить комментарий
+discussions__none: Нет обсуждений. Начните первое.
+discussions__start-disc-button: Оставить комментарий
+edit-ui__video-uploading-warn: Ваше видео все ещё загружается. Прервать загрузку?
+email-invitations-list:
+  empty-list: Нет рассматриваемых приглашений
+  load-more: Загрузить еще ↓
+  remove: Удалить приглашение по почте
+  remove-confirm: Вы действительно хотите удалить приглашение по почте?
+embed_auth:
+  done:
+    continue: продолжить учиться
+    greeting: "Вы вошли как {user_name}"
+  popup_login:
+    and_reload: и перезагрузите эту страницу.
+    reload: Перезагрузить страницу
+    sign_in: Войдите в Stepik
+error-page:
+  "400":
+    message: ""
+    title: Неправильный запрос
+  "403":
+    message: >-
+      Проверьте адрес страницы. Если всё еще видите эту страницу, значит авторы страницы решили
+      закрыть к ней доступ.
+    message-guest: >-
+      Проверьте адрес страницы и <a href='{loginLink}'>войдите</a> в систему. Если всё еще видите
+      эту страницу, значит авторы страницы решили закрыть к ней доступ.
+    tip: Попробуйте перейти в <a href='/catalog'>каталог</a>.
+    title: Доступ к странице запрещен
+  "404":
+    message: Страница была удалена или никогда не существовала.
+    tip: Попробуйте перейти в <a href='/catalog'>каталог</a>.
+    title: Страница не найдена
+  "500":
+    message: >-
+      Видимо, у нас проблемы на сервере, или вы попали к нам на сайт в тот прекрасный момент, когда
+      происходит обновление системы.
+    title: "Что-то пошло не так :("
+  "503":
+    message: ""
+    title: Сайт на техническом обслуживании
+  default:
+    message: Мы её записали и скоро исправим. А пока попробуйте обновить страницу.
+    tip: >-
+      Попробуйте <a href='{url}' data-href-to-ignore>перезагрузить страницу</a> или <a
+      href='http://support.stepik.org' target='_blank'>напишите нам</a>.
+    title: "Ошибка на нашей стороне :("
+errors:
+  accepted: "{description} нужно подтвердить"
+  after: "{description} должно иметь значение после {after}"
+  before: "{description} должно иметь значение до {before}"
+  blank: "{description} не может быть пустым"
+  collection: "{description} не является списком"
+  confirmation: "{description} не совпадает со значением поля {on}"
+  date: "{description} не является датой"
+  description: Значение этого поля
+  email: "{description} не является корректным email"
+  empty: "{description} не может быть пустым"
+  equalTo: "{description} может иметь лишь значение, равное {is}"
+  even: "{description} может иметь лишь нечетное значение"
+  exclusion: "{description} имеет зарезервированное значение"
+  greaterThan: "{description} должно иметь значение большее {gt}"
+  greaterThanOrEqualTo: "{description} должно иметь значение большее или равное {gte}"
+  inclusion: "{description} имеет непредусмотренное значение"
+  invalid: "{description} имеет неверное значение"
+  lessThan: "{description} должно иметь значение меньшее {lt}"
+  lessThanOrEqualTo: "{description} должно иметь значение меньшее или равное {lte}"
+  notANumber: "{description} не является числом"
+  notAnInteger: "{description} не является целым числом"
+  odd: "{description} может иметь лишь четное значение"
+  onOrAfter: "{description} должно иметь значение после или равное {onOrAfter}"
+  onOrBefore: "{description} должно иметь значение до или равное {onOrBefore}"
+  otherThan: "{description} должно отличаться от {value}"
+  phone: "{description} не является корректным номером телефона"
+  positive: "{description} должно быть положительным числом"
+  present: "{description} нужно оставить пустым"
+  singular: "{description} не может быть списком"
+  tooLong: "{description} слишком большой длины (максимум символов: {max})"
+  tooShort: "{description} недостаточной длины (минимум символов: {min})"
+  url: "{description} не является корректным URL"
+  wrongDateFormat: "{description} должно соответствовать формату {format}"
+  wrongLength: "{description} неверной длины (должно быть символов: {is})"
+exam:
+  check-proctor-session: Проверить запись на экзамен
+  close-date: Дата закрытия экзамена
+  confirm: >-
+    {count, plural, other {У вас есть # минуты и единственная попытка чтобы сдать экзамен. Вы
+    уверены что хотите начать?} many {У вас есть # минут и единственная попытка чтобы сдать
+    экзамен. Вы уверены что хотите начать?} few {У вас есть # минуты и единственная попытка чтобы
+    сдать экзамен. Вы уверены что хотите начать?} =1 {У вас есть # минута и единственная попытка
+    чтобы сдать экзамен. Вы уверены что хотите начать?}}
+  finish-prematurely:
+    btn: Завершить досрочно
+    confirm-no: "Нет, продолжить решать"
+    confirm-text: >-
+      За решения, отправленные после досрочного завершения экзамена, баллы начислены не будут.
+      Завершить экзамен сейчас?
+    confirm-yes: "Да, завершить"
+  game-over: Экзамен закончен
+  go-back: К содержанию
+  header: Идёт экзамен.
+  info-head: >-
+    {count, plural, other {Это экзаменационный модуль на # минуты} many {Это экзаменационный модуль
+    на # минут} few {Это экзаменационный модуль на # минуты} =1 {Это экзаменационный модуль на #
+    минуту}}
+  info-latest-date: "Рекомендуем приступить не позднее {date} чтобы успеть до закрытия экзамена."
+  info-paragraph: У вас будет 1 попытка на прохождение экзамена.
+  is_exam_without_progress: Оценки отправленных решений будут недоступны.
+  is_random_exam: 'Экзамен со случайной выборкой вопросов из курса <b>"{course}"</b>.'
+  is_random_exam_learner: Экзамен со случайной выборкой вопросов.
+  label: Экзамен
+  not-started: Экзамен пока недоступен
+  open-date: Дата открытия экзамена
+  proctor-accepted: Проктор одобрил ваш экзамен.
+  proctor-comment: Комментарий от проктора
+  proctor-rejected: Проктор отклонил ваш экзамен. Вы получаете 0 баллов.
+  proctor-waiting: Ждем решения проктора.
+  schedule-proctor-session: Записаться на экзамен
+  start-button: Начать экзамен
+  start-error: Не получается начать экзамен. Попробуйте перезагрузить страницу
+  timer: "осталось времени:"
+  too-late: "Сожалеем, но время экзамена прошло. Вы опоздали"
+explore:
+  course-pack__trending-courses: Популярные курсы
+  search-aria-label: Очистить поле
+  search-placeholder: Поиск по каталогу
+  show-all: Смотреть все
+footer__CC_note: >-
+  Public user contributions licensed under <a target="_blank" rel="noopener noreferrer"
+  href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license with attribution
+  required
+footer__about: О нас
+footer__active-count: >-
+  {count, plural, other {<strong>#</strong> активных учащихся} =1 {<strong>#</strong> активный
+  учащийся} many {<strong>#</strong> активных учащихся} few {<strong>#</strong> активных учащихся}}
+footer__active-count-desc: >-
+  Уникальные зарегистрированные пользователи, активно сдающие задачи в последние 3 месяца
+footer__contacts: Контакты
+footer__copyright: "© 2013 — {currentYear}. Stepik"
+footer__helpcenter: Помощь
+footer__press: Прессе
+footer__pricing: Тарифы
+footer__quiz-count: >-
+  {count, plural, other {<strong>#</strong> задачи} =1 {<strong>#</strong> задача} many
+  {<strong>#</strong> задач} few {<strong>#</strong> задачи}}
+footer__quiz-count-desc: Общее количество задач и тестов на Stepik
+footer__submissions-count: >-
+  {count, plural, other {<strong>{count_display}</strong> решений} few
+  {<strong>{count_display}</strong> решения} =1 {<strong>{count_display}</strong> решение}}
+footer__submissions-count-desc: Общее количество отправленных решений на Stepik
+footer__team: Команда
+footer__terms_and_privacy: >-
+  Наши условия <a href="{url_path}terms" target="_blank" rel="noopener
+  noreferrer">использования</a> и <a href="{url_path}privacy" target="_blank" rel="noopener
+  noreferrer">конфиденциальности</a>
+footer__url-path: "https://welcome.stepik.org/ru/"
+form-validation:
+  required-footnote: "* Обязательное поле"
+history:
+  hide-history: Скрыть историю
+  show-history: Показать историю
+import-lessons:
+  btn-caption: >-
+    {count, plural, =0 {Загрузите csv файл} other {Загрузите csv файл (макс. #)}}
+  example: >-
+    text|Чему равен радиус земли?|_||option|6371 километр|y||option|148,6 миллионов
+    километров|n||text|Как звали Эйнштейна?|_||option|Альберт|y||option|Albert|y||option|Ричард|n
+  example-title: Пример файла
+  file-warn: Возникли ошибки при чтении файла. Проверьте правильность формата файла.
+  header: "Импортировать уроки из файла в модуль «{title}»"
+  import: Импортировать
+  reading: чтение файла
+index__registration-link: Регистрация
+instr-review__student-first-step: >-
+  <strong>Этап 1 из 3</strong>. Чтобы получить баллы, <strong>сохраните</strong> и
+  <strong>отправьте</strong> лучшее решение на рецензию преподавателю
+instr-review__student-second-step: >-
+  <strong>Этап 2 из 3</strong>. Решение отправлено на рецензию, <strong>ожидайте ответа</strong>
+instr-review__student-third-step: >-
+  <strong>Этап 3 из 3</strong>. Получена <a href="{url}">рецензия</a> от преподавателя. Результат:
+  <strong>{result}%</strong>
+instr-review__teacher-notice: >-
+  {count, plural, =1 {<b>Отрецензируйте # решение</b>, чтобы учащиеся получили баллы.} few
+  {<b>Отрецензируйте # решения</b>, чтобы учащиеся получили баллы.} many {<b>Отрецензируйте #
+  решений</b>, чтобы учащиеся получили баллы.} other {<b>Отрецензируйте решения</b>, чтобы учащиеся
+  получили баллы.} =0 {Все нужные рецензии на решения отправлены.}}
+instr-review__teacher-start: Рецензировать
+instruction__add-rubric-button: Добавить новую рубрику
+instruction__delete: Убрать рецензирование
+instruction__description-help: >-
+  Любая информация, которая поможет при рецензировании или понять мысли преподавателя.
+instruction__frozen-description: >-
+  Рецензирование уже началось. Вы можете редактировать описания. Вы не можете менять максимальный
+  баллы и добавлять/удалять рубрики.
+instruction__header: Правила рецензирования
+instruction__max-point: Максимальный балл
+instruction__max-point-placeholder: "от {greater} до {less}"
+instruction__reviewcount-help: >-
+  Чтобы ученик получил баллы за свое решение, оно должно получить указанное количество рецензий.
+instruction__reviews-required: "Обязательное количество рецензий:"
+instruction__rubric: Критерий оценки
+instruction__rubric-deleted: (Удалено)
+instruction__rubric-help: "Запишите, по какому критерию будет оцениваться ответ."
+instruction__rubric-template: Оцените решение от 0 до 3 баллов
+instruction__strategy-help: >-
+  Вы можете давать свои рецензии на решения учеников,чтобы дать им наиболее объективную оценку.
+  Также вы можете дать возможность ученикам рецензировать друг друга.
+instruction__strategy-instructor: Только авторы урока
+instruction__strategy-instructor-tooltip: Преподаватели будут оценивать решения учащихся
+instruction__strategy-label: Кто будет рецензировать решения учащихся?
+instruction__strategy-peer: Учащиеся и авторы урока
+instruction__strategy-peer-tooltip: Учащиеся будут оценивать решения друг друга
+instruction__teacher-comment: Комментарий от преподавателя
+instruction__will_be_deleted: >-
+  Рецензирование будет удалено когда Вы сохраните урок.<br>Нажмите здесь если вы передумали
+  удалять.
+instruction_urgent:
+  btn: Завершить досрочно
+  btn_expl: Оценка будет рассчитана на основе уже полученных рецензий
+  fail: "Не удалось завершить рецензирование, попробуйте позже"
+  finished_expl: >-
+    {count, plural, =1 {Итог: {percentage}%. По инициативе преподавателя оценка была рассчитана на
+    основе # рецензии {date}} few {Итог: {percentage}%. По инициативе преподавателя оценка была
+    рассчитана на основе # рецензий {date}} many {Итог: {percentage}%. По инициативе преподавателя
+    оценка была рассчитана на основе # рецензий {date}} other {Итог: {percentage}%. По инициативе
+    преподавателя оценка была рассчитана на основе # реценций {date}}}
+  note: >-
+    {count, plural, =1 {Для автоматического завершения не хватает еще # рецензии.} few {Для
+    автоматического завершения не хватает еще # рецензий.} many {Для автоматического завершения не
+    хватает еще # рецензий.} other {Для автоматического завершения не хватает еще # реценций.}}
+  success: Рецензирование завершено
+instructor-dashboard:
+  info: >-
+    Наш робот рекомендует присмотреться к этим шагам. Возможно, там есть проблемы.
+  kind:
+    abuse_comment_votes: Жалобы на комментарии
+    correct_ratio: Низкий процент успешных решений
+    default_text: Шаблонный текст
+    discrimination: Дискриминативность
+    error_video: Проблемы с видео
+    magic: Магия
+    pending_comments: Комментарии без ответа
+    pending_instructor_review_sessions: Незавершённые рецензии от преподавателей
+    pending_peer_review_sessions: Незавершённые рецензии от учащихся
+    plagiarized_submissions: Плагиат
+    reviews_outliers: Необычные рецензии
+  no-issues:
+    default: "В этом курсе проблем нет :)"
+    error_video: В этом курсе нет шагов с видео
+    no_successes: В этом курсе нет шагов с практическими заданиями
+  step-stat:
+    abused: жалобы
+    abused-tooltip: Количество негативных оценок комметариев этого шага.
+    comments: Комментарии
+    discrimination: дискриминативность
+    discrimination-tooltip: >-
+      Дискриминативность показывает, кто лучше решает задание – лучшие или худшие учащиеся.
+    pending: без ответа
+    pending-reviews-sessions: ожидают проверки
+    pending-reviews-sessions-tooltip: "Количество рецензий, которые ожидают проверки."
+    pending-tooltip: Количество комментариев без ответа
+    plagiarism: >-
+      {count, plural, =1 {# плагиат в решениях} few {# плагиата в решениях} many {# плагиатов в
+      решениях} other {# плагиатов в решениях}}
+    plagiarism-tooltip: "Количество решений, помеченных роботом как плагиат."
+    quiz-error: Ошибка в условии!!!
+    quiz-error-tooltip: В условии задачи есть ошибки - учащиеся в принципе не могут решить задачу.
+    quiz-warning: Замечания в условии!
+    quiz-warning-tooltip: >-
+      В условии задачи есть замечания. Рекомендуется исправить задачу согласно замечаниям.
+    reviews: Рецензии
+    reviews-outliers: >-
+      {count, plural, =1 {# необычная рецензия} few {# необычных рецензии} many {# необычных
+      рецензий} other {# необычных рецензий}}
+    reviews-outliers-tooltip: Количество необычных рецензий к этому шагу.
+    submissions: Решения
+    success-rate: процент успеха
+    success-rate-tooltip: Количество успешных решений / количество всех решений.
+    total-comments: всего комментариев
+invitations-editor:
+  empty-list: Нет активных ссылок-приглашений
+  invite: Отправить приглашение
+  load-more: Загрузить еще ↓
+  new-desc:
+    admins: администраторами
+    assistants: ассистентами
+    learners: учащимися
+    moderators: модераторами
+    teachers: преподавателями
+    testers: тестирующими
+    text: "Все, кто перейдёт по ссылке, смогут стать <strong>{name}</strong> курса"
+  new-link: Сгенерировать ссылку для доступа
+  one-time: одноразовую
+  remove: Удалить ссылку-приглашение
+  remove-confirm: Вы действительно хотите удалить ссылку?
+  reusable: многоразовую
+invitations-modal:
+  desc: >-
+    Здесь вы можете пригласить в приватный курс ваших учащихся или сотрудников. Для этого добавьте
+    простой список email адресов в текстовое поле. Они получат письмо со ссылкой-приглашением и
+    смогут попасть на ваш курс. Каждая почта должна быть на новой строке.
+  edit: Изменить список адресов
+  edit-confirm: У вас уже есть действующая рассылка. Вы хотите отредактировать список?
+  email-list: по списку e-mail
+  empty-warn: В списке не найдены email адреса.
+  group:
+    admins: Администраторы
+    assistants: Ассистенты
+    learners: Учащиеся
+    moderators: Модераторы
+    teachers: Преподаватели
+    testers: Тестирующие
+  send: Отправить
+  send-caption: Отправить приглашения
+  stop: Остановить
+  textarea-placeholder: |-
+    Пример списка:
+    user1@email.com
+    user2@email.ru
+    user3@email.org
+  title: "Рассылка приглашений в группу {group}"
+  try-again: Попробуйте еще раз.
+  unique-emails: >-
+    {count, plural, =1 {Прочитан # уникальный email адрес} few {Прочитано # уникальных email
+    адреса} many {Прочитано # уникальных email адресов} other {Прочитано # уникальных email
+    адресов}}
+invite_friends_subtitle: Пригласите друзей учиться вместе на Stepik.
+invite_friends_title: За одной партой
+klass:
+  add-assistant: Добавить преподавателя
+  add-assistant__error: Не удалось добавить преподавателя
+  add-assistant__label: ID пользователя
+  add-assistant__placeholder: ""
+  add-assistant__success: Преподаватель успешно добавлен
+  assistants: Преподаватели класса
+  assistants-subpage: Преподаватели класса
+  course: Курс
+  dismiss-assistant__confirm: "Вы уверены, что хотите удалить преподавателя {name}?"
+  dismiss-assistant__error: "Не удалось удалить преподавателя {name}"
+  dismiss-student__confirm: "Вы уверены, что хотите отчислить учащегося {name}?"
+  dismiss-student__error: "Не удалось отчислить учащегося {name}"
+  edit: Редактировать
+  error-leave: Не удалось покинуть класс
+  gradebook: Смотреть оценки класса
+  gradebook-subpage: Оценки и решения
+  gradebook_link: Перейти на страницу оценок
+  header: Класс
+  index-subpage: Информация о классе
+  inivtation_link_descr: Для приглашения учащихся в класс пришлите им эту ссылку
+  invitation_link: Ссылка для приглашения учащихся
+  leave: Покинуть класс
+  students: Учащиеся класса
+  students-subpage: Учащиеся класса
+  submissions: Смотреть решения класса
+klass-edit:
+  cancel: Отмена
+  delete: Удалить класс
+  delete-confirm: "Вы уверены, что хотите удалить этот класс?"
+  deleted: Класс удален
+  description: Описание класса
+  error-on-delete: Что-то пошло не так. Не удалось удалить класс.
+  error-on-save: Что-то пошло не так. Не получилось сохранить изменения в классе.
+  header: Редактировать класс
+  save: Сохранить
+  saved: Изменения сохранены
+  title: Название
+  title-hint: Название класса
+klass-join:
+  cancel: Отмена
+  course: Курс
+  disclaimer-text: "Обратите внимание, ваши решения станут доступны преподавателю класса."
+  error: Не удалось вступить в класс
+  header: Поступить в класс
+  is_joined: Вы уже вступили в данный класс.
+  join: Вступить
+  success: Приглашение в класс успешно принято
+klass-new:
+  about: Узнать о классах
+  cancel: Отмена
+  course: В курсе
+  course-hint: Идентификатор курса
+  create: Создать
+  description: Описание класса
+  header: Создать класс
+  title: Название
+  title-hint: Название класса
+klasses:
+  empty-list: У вас нет ни одного класса.
+  header: Классы
+  iown: Cозданные классы
+  is-access-restricted_other: Доступ ограничен. Обратитесь с создателю класса.
+  is-access-restricted_owner: >-
+    Вы превысили допустимый лимит учащихся в классах: <b>{count}</b> из <b>{allowed_count}</b>.
+    <br>Удалите несколько учащихся в своих классах, чтобы получить доступ к оценкам и решениям.
+    {link}.
+  istudent: "Классы, где я учусь"
+  klass-plan-landing: >-
+    <a href="{href}" rel="noopener noreferrer" target="_blank">Подробнее об ограничениях в
+    классах</a>
+  klass-plan-support: >-
+    Свяжитесь с нами по адресу support@stepik.org для получения более подробной информации
+  my-students: Мои учащиеся
+lesson:
+  instructor:
+    edit-permissions: Доступ к уроку
+  likes:
+    disliked: Вам не понравился этот урок
+    liked: Вам понравился этот урок
+  private: Приватный
+  public: Публичный
+  toc-show: Показать список уроков курса
+  updated: Последнее обновление
+lesson-actions:
+  actions: Настройки урока
+  delete: Удалить урок
+lesson-edit:
+  cancel: Вернуться
+  delete-step: |-
+    Этот шаг будет удалён после нажатия кнопки "Сохранить".<br>
+      Для отмены нажмите здесь.
+  save: Сохранить
+  unsaved-confirm-text: "Вы отредактировали урок, но не сохранили его.<br>Сохранить изменения?"
+lesson-end:
+  after-exam-link-active: >-
+    Вы набрали в экзамене {score} из {max_score} баллов.<br> Закройте это окно, чтобы вернуться в
+    экзамен.
+  after-exam-link-active_full: Вы набрали максимальный балл!
+  after-exam-link-ended: "Вы набрали в экзамене {score} из {max_score} баллов."
+  buy-course-btn: "Купить курс за {price}"
+  course_score: "Количество баллов на этом курсе:"
+  enroll: записаться
+  enroll_for_lessons: на курс для доступа к остальным урокам
+  lesson_finished: Вы прошли урок
+  next_unit_is_exam: является экзаменом. Вы можете начать его из расписания курса.
+  next_unit_p1: Следующий модуль
+  next_unit_p2: из этого курса будет доступен
+  next_unit_p3: >-
+    Для открытия модуля "{next_module}" необходимо набрать в модуле "{required_module}"
+  not_enought_score: "К сожалению, вы набрали недостаточное количество баллов."
+  or_enroll: или записаться на
+  other_courses: другие курсы
+  to_congrats_header_course: "Поздравляем! Вы завершили курс:"
+  to_congrats_header_lesson: Поздравляем! Вы закончили модуль
+  to_syllabus: перейти к расписанию
+  to_syllabus-and-explore-next: Перейти к расписанию для дальнейшего изучения курса.
+  you_are_leaving_exam_active: "Внимание, это был последний урок в экзамене!"
+  you_are_leaving_exam_ended: Поздравляем! Вы закончили экзамен
+  you_can: Вы можете
+lesson-new:
+  fail: >-
+    При создании урока что-то пошло не так. Проверьте интернет соединение и сохраните ещё раз.
+  header: Создание урока
+  long-title: >-
+    Длинновато получилось. Вы можете создать урок, но его название будет урезано до 64 символов.
+lesson-print:
+  images: "Загрузка изображений: {loaded} из {total}"
+  latex: Рендеринг LaTeX
+lesson__adaptive_no_connection: >-
+  Не удалось отправить реакцию. Проверьте интернет соединение и попробуйте еще раз.
+lesson__adaptive_recommendation_fail:
+  "Не удалось получить рекоммендацию. Проверьте, залогинены ли вы."
+lesson__attributes:
+  comments: Комментарии включены
+  public: Публичный
+lesson__autogenerated-step: >-
+  Все шаги урока были удалены. Этот шаг сгенерирован автоматически. Отредактируйте текст шага и
+  сохраните урок.
+lesson__comments-disabled: Преподаватель отключил комментарии для этого урока.
+lesson__created-by: "Урок от:"
+lesson__delete-confirm: "Вы уверены, что хотите удалить этот урок?"
+lesson__edit_cannot-save: "В некоторых шагах обнаружены проблемы, проверьте подсвеченные шаги."
+lesson__edit_saved: Сохранено
+lesson__ended-course-warning: >-
+  Курс закончился, данный урок недоступен. Возможно, вам понравятся <a href="/catalog">другие
+  курсы</a>.
+lesson__enroll-for-access: "Запишитесь на курс, чтобы получить доступ к урокам"
+lesson__enroll-invite-warning: >-
+  Урок, который вы пытаетесь открыть, доступен в рамках курса <a
+  href="/course/{course_slug}">"{course_title}"</a>. Вы можете записаться на этот курс.
+lesson__enroll-warning: >-
+  Это приватный курс. Требуется специальный доступ (например ссылка-приглашение). Но сам урок
+  открыт для обучения.
+lesson__header: Настройки урока
+lesson__likes_dislike_tooltip: Не оценил.
+lesson__likes_like_tooltip: Одобряю!
+lesson__passed: "Количество человек, прошедших урок"
+lesson__print-soon-note: Загрузка урока. Печать скоро начнется…
+lesson__private-warning: >-
+  Это приватный урок. Требуется специальный доступ (например ссылка-приглашение).
+lesson__private-warning-guest: >-
+  Это приватный урок. Требуется специальный доступ (например ссылка-приглашение). <a
+  href="{login_link}?next={current_url}">Войти в Stepik!</a>
+lesson__quiz-print-notify: Чтобы решить это задание откройте
+lesson__report-common: Общие отчёты
+lesson__scores: Ваш / макс балл
+lesson__section-requirement-warning: >-
+  {count, plural, =1 {Получите <strong>#</strong> балл в модуле "<strong>{section_title}</strong>"
+  ({percent}%) чтобы открыть этот урок.} few {Получите <strong>#</strong> балла в модуле
+  "<strong>{section_title}</strong>" ({percent}%) чтобы открыть этот урок.} many {Получите
+  <strong>#</strong> баллов в модуле "<strong>{section_title}</strong>" ({percent}%) чтобы открыть
+  этот урок.} other {Получите <strong>#</strong> баллов в модуле "<strong>{section_title}</strong>"
+  ({percent}%) чтобы открыть этот урок.}}
+lesson__settings: Настройки
+lesson__statement: Условие
+lesson__step-title: "Шаг {position}"
+lesson__teachers-help: Помощь преподавателям
+lesson__time_to_complete: Среднее время прохождения урока (в минутах)
+lesson__unavailable: Урок недоступен
+lesson__video-print-notify: Чтобы просмотреть это видео откройте
+lesson__views: Количество просмотров
+lesson_attachments:
+  add_file: + Добавить файл
+  back: Вернуться
+  confirm_del: "Вы уверены, что хотите удалить «{file}»?"
+  copy_link: Скопировать ссылку
+  empty: Вы пока не добавили ни одного файла к уроку
+  header: Файлы урока
+  size_limit: "Ограничение на каждый файл: 25 МБ"
+lesson_ccbysa_summary: Лицензия Creative Commons (CC BY-SA 4.0)
+lesson_finder:
+  not_found: Ничего не найдено. Попробуйте искать по ID урока.
+  query_placeholder: Быстрый поиск уроков (по названию или ID)
+library__leaders: Рейтинг пользователей
+library__leaders-empty: Пока нет пользователей
+library__leaders-knowledge: Знания
+library__leaders-reputation: Репутация
+license__license: Лицензия
+license__license-type: Тип лицензии
+license__received-description: >-
+  JetBrains производит профессиональные инструменты разработки программного обеспечения, которые
+  поддерживают самые передовые технологии, фреймворки и языки программирования. Вы можете скачать
+  любой продукт JetBrains на <a href="https://www.jetbrains.com/products.html">этой странице</a> и
+  использовать этот ключ при первом запуске. Вы можете использовать несколько продуктов JetBrains c
+  этим ключом одновременно.
+license__received-expire-date: >-
+  Пожалуйста, обратите внимание, что вы можете использовать эту лицензию только в образовательных
+  целях, и она действует до
+license__received-introduction: >-
+  Мы заметили, что вы недавно решили трудную задачу на Stepik, поздравляем! Поэтому, мы дарим вам
+  образовательный лицензионный ключ для любой среды разработки от JetBrains IDE:
+license__received-learn-more: >-
+  Если вам не хватит этого времени, просто продолжайте учиться на Stepik, и вы получите новую
+  лицензию.
+license__received-signature: >-
+  Хорошего обучения и разрабатывайте с удовольствием,<br/> Команды Stepik и JetBrains.
+license__received-thanks: >-
+  Мы выражаем благодарность JetBrains за предоставленную возможность для наших учащихся, а также за
+  поддержку и приверженность образованию.
+login:
+  email: E-mail
+  failed_login: Е-mail или пароль некорректны.
+  forgot_password: Напомнить пароль
+  google_signin: Войти через Google
+  is_password_reset: >-
+    На указанный email отправлено письмо с инструкциями по сбросу пароля. Если вы не получили его в
+    течение нескольких минут, проверьте папку спам. Если письма нет, напишите нам:
+    support@stepik.org
+  no_account: Нет аккаунта на Stepik?
+  password: Пароль
+  register_now: Зарегистрируйтесь сейчас!
+  social_login_title: Или войдите через социальные сети
+  social_login_title-lower-ab: Или через почту
+  social_login_title-upper-ab: Зарегистрируйтесь через социальные сети
+  social_login_with: Войти через
+  social_signup_with_existing_email: >-
+    Указанный email привязан к другому аккаунту. Чтобы входить через эту социальную сеть,
+    необходимо войти, используя email и пароль.
+  title: Войти
+lti-editor:
+  intagration: >-
+    Подробнее про процесс интеграции для систем Moodle, Canvas и других вы можете узнать из <a
+    href='https://support.stepik.org/hc/ru/articles/360000177314' target='_blank'>нашей
+    документации</a>.
+  key-title: LTI Key (Consumer)
+  private-profile-title: Создавать приватные профили для учащихся
+  save: Сохранить настройки LTI
+  secret-title: LTI Secret
+  sync: >-
+    Синхронизировать оценки LTI с использованием всех сохраненных подключений LTI для данного курса
+  sync-btn: Синхронизировать оценки. Занимает длительное время.
+  tool-provider: >-
+    Stepik может быть интегрирован в вашу LMS с помощью <a
+    href='http://www.imsglobal.org/activity/learning-tools-interoperability' target='_blank'
+    rel='noopener noreferrer'>LTI</a>.
+material__video-not-ready: Видео ещё не было загружено или обработано.
+material__video-save-error: >-
+  Во время сохранения видео произошла ошибка. Возможно, у вас недостаточно прав для редактирования
+  этого шага.
+member-field:
+  desc:
+    admins: администраторами
+    assistants: ассистентами
+    learners: учащимися
+    moderators: модераторами
+    teachers: преподавателями
+    testers: тестирующими
+    text: "Получившие приглашения станут <strong>{name}</strong> курса."
+  register: "Если пользователя нет на Stepik, мы предложим ему зарегистрироваться."
+  user-not-found: Пользователь с данным id не найден
+members-list:
+  empty-list: Нет пользователей
+  load-more: Загрузить еще ↓
+  remove: Удалить пользователя из списка
+  remove-confirm: Вы действительно хотите удалить пользователя из списка?
+modal-dialog-confirm:
+  discard: Отменить изменения
+  save: Сохранить
+  text: У вас есть несохраненные изменения. Сохранить или отменить их?
+new-class-form:
+  choose-course-btn: Выбрать курс
+  choose-course-how-to-img:
+    alt: Как создать класс со страницы курса
+    src: /static/frontend/new-class-how-to-ru.png
+  choose-course-text: >-
+    Создайте класс для <b>любого открытого</b> курса и получите доступ к оценкам и решениям ваших
+    учащихся.
+  create-class-btn: Создать класс
+  create-class-choose-course: Выберите курс...
+  create-class-text: >-
+    Создайте класс для <b>любого своего</b> курса, чтобы разделить учащихся по группам и пригласить
+    для них преподавателей.
+new-course-form:
+  course-title:
+    caption: Название курса
+    footnote: >-
+      {count, plural, =1 {Максимум 1 символ} few {Максимум # символа} many {Максимум # символов}
+      other {Максимум # символов}}
+  create-btn: Создать курс
+new-lesson-form:
+  create-btn: Создать урок
+  lesson-title:
+    caption: Название урока
+    footnote: >-
+      {count, plural, =1 {Максимум 1 символ} few {Максимум # символа} many {Максимум # символов}
+      other {Максимум # символов}}
+notification__favorite: избранное
+notification__muted: скрыто
+notifications__empty-list: Нет уведомлений
+notifications__events-link: Мои события
+notifications__flag-favorite: Избранные
+notifications__flag-read: Прочитанные
+notifications__flag-unread: Непрочитанные
+notifications__items-count: >-
+  {count, plural, other {# уведомления} =1 {# уведомление} many {# уведомлений} few {#
+  уведомления}}
+notifications__mark-all-btn: Отметить все как прочитанные
+notifications__mark-all-confirm: Отметить все уведомления как прочитанные?
+notifications__mark-fav: В избранное
+notifications__mark-one: Отметить как прочитанное
+notifications__type-comments: Комментарии
+notifications__type-default: Другое
+notifications__type-learn: Обучение
+notifications__type-review: Рецензии
+notifications__type-teach: Преподавание
+notifications__unmark-fav: Убрать из избранного
+notifications__unmark-one: Отметить как непрочитанное
+notifications__unmute-tooltip: Показывать аналогичные
+org:
+  avatar_img_alt: Логотип организации
+  courses_tab: Курсы
+  created_courses_count: >-
+    {count, plural, other {# курса опубликовано} many {# курсов опубликовано} few {# курса
+    опубликовано} =1 {# курс опубликован}}
+  created_lessons_count: >-
+    {count, plural, other {# урока создано} many {# уроков создано} few {# урока создано} =1 {#
+    урок создан}}
+  edit_profile: Настройки профиля
+  issued_certificates_count: >-
+    {count, plural, other {# сертификата выпущено} many {# сертификатов выпущено} few {#
+    сертификатa выпущено} =1 {# сертификат выпущен}}
+  klasses_tab: Классы
+  lessons_tab: Уроки
+  mailing_tab: Рассылки
+  no_courses: Курсы не найдены
+  no_lessons: Уроки не найдены
+  students_tab: Мои учащиеся
+peer-review__first-step: >-
+  <strong>Этап 1 из 4</strong>. Чтобы получить баллы, <strong>сохраните</strong> и
+  <strong>отправьте</strong> лучшее решение на рецензию <strong>другим ученикам</strong>
+peer-review__fourth-step: >-
+  {count, plural, other {<strong>Этап 4 из 4</strong>. Получено <a href="{url}"># рецензий</a>.
+  Результат по медиане {minimum} рецензий: <strong>{result}%</strong>} =1 {<strong>Этап 4 из
+  4</strong>. Получена <a href="{url}"># рецензия</a>. Результат рецензирования:
+  <strong>{result}%</strong>} many {<strong>Этап 4 из 4</strong>. Получено <a href="{url}">#
+  рецензий</a>. Результат по медиане {minimum} рецензий: <strong>{result}%</strong>} few
+  {<strong>Этап 4 из 4</strong>. Получено <a href="{url}"># рецензии</a>. Результат по медиане
+  {minimum} рецензий: <strong>{result}%</strong>}}
+peer-review__nothing: Пока нет решений для рецензии
+peer-review__second-step: >-
+  {count, plural, other {<strong>Этап 2 из 4</strong>. Сделайте <strong># рецензий</strong> на
+  решения других учеников} =1 {<strong>Этап 2 из 4</strong>. Сделайте <strong># рецензию</strong>
+  на решения других учеников} many {<strong>Этап 2 из 4</strong>. Сделайте <strong>#
+  рецензий</strong> на решения других учеников} few {<strong>Этап 2 из 4</strong>. Сделайте
+  <strong># рецензии</strong> на решения других учеников}}
+peer-review__teacher-text: Учащиеся проверяют решения друг друга
+peer-review__third-step: >-
+  {count, plural, other {<strong>Этап 3 из 4</strong>. Вы дали свои рецензии. Осталось получить
+  <strong># рецензий</strong> для получения баллов. Подождите} =1 {<strong>Этап 3 из 4</strong>. Вы
+  дали свои рецензии. Осталось получить <strong># рецензию</strong> для получения баллов.
+  Подождите} many {<strong>Этап 3 из 4</strong>. Вы дали свои рецензии. Осталось получить <strong>#
+  рецензий</strong> для получения баллов. Подождите} few {<strong>Этап 3 из 4</strong>. Вы дали
+  свои рецензии. Осталось получить <strong># рецензии</strong> для получения баллов. Подождите}}
+peer-review__to-give: >-
+  {count, plural, other {Осталось сделать <strong># рецензий</strong>} =1 {Осталось сделать
+  <strong># рецензию</strong>} many {Осталось сделать <strong># рецензий</strong>} few {Осталось
+  отправить <strong># рецензии</strong>}}
+personal_license__received-activate-instructions: >-
+  Для получения лицензии вам необходимо зарегистрировать ключ на <a
+  href="https://www.jetbrains.com/store/redeem/?ALL">этой странице</a>.
+personal_license__received-description: >-
+  JetBrains производит профессиональные инструменты разработки программного обеспечения, которые
+  поддерживают самые передовые технологии, фреймворки и языки программирования. Вы можете скачать
+  любой <a href="https://www.jetbrains.com/products.html">продукт JetBrains</a> и использовать
+  полученную лицензию. Вы можете использовать несколько продуктов JetBrains c этой лицензией
+  одновременно.
+personal_license__received-introduction: >-
+  Мы заметили, что вы недавно решили трудную задачу на Stepik, поздравляем! Поэтому, мы дарим вам
+  ключ для активации образовательной лицензии для любой среды разработки от JetBrains IDE:
+plan-card:
+  meter-caption: "{courseType}-курсы <var>{counter}</var>"
+  meter-subnote-free: "PRO-курсы недоступны на тарифе {planName}."
+  owner-note:
+    details-text: >-
+      Чтобы учитывать курс в вашей подписке, <a href='mailto:support@stepik.org'>напишите нам</a>
+      на support@stepik.org с просьбой стать основным администратором курса.
+    details-toggler: Изменить
+    text: "Курс учитывается в подписке <a href='{ownerURL}'>{ownerName}</a>"
+  text-free: >-
+    <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Оформите подписку</a>, чтобы
+    получить доступ к расширенной функциональности курса
+  text-limit: >-
+    <a href='/pricing'>Поменяйте план</a>, чтобы увеличить число доступных {courseType}-курсов. Или
+    сделайте один из своих {courseType}-курсов базовым.
+  text-want-more: >-
+    <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Хочу больше</a>
+  title: "Ваш текущий план <var>{planName}</var>"
+plan-upgrade-card:
+  button: Улучшить план
+  text: >-
+    Нужен доступ к табелю успеваемости, отчётам, списку учащихся? Хотите использовать проверку
+    решений преподавателем или получать улучшенную поддержку? <a
+    href='https://welcome.stepik.org/ru/pricing' target='_blank' style='white-space: nowrap'>Узнать
+    о тарифах</a>
+  title: Улучшить тарифный план
+plans:
+  ask_questions: >-
+    Если у вас есть вопросы, напишите нам на <a href="mailto:info@stepik.org">info@stepik.org</a>.
+  better_support: Улучшенная техподдержка.
+  card:
+    change: изменить
+    confirm: Применить
+    description: Привязать новую карту
+  connected_card: "Привязанная карта: ****{card}"
+  description: >-
+    {count, plural, =1 {Подписка на # PRO-курс} few {Подписка на # PRO-курса} many {Подписка на #
+    PRO-курсов} other {Подписка на # PRO-курсов}}
+  discount_valid: "Ваша скидка заканчивается {discount_end}"
+  fail: Не удалось подписаться
+  free:
+    another_plans: >-
+      Для создания приватных курсов <a href='https://welcome.stepik.org/ru/pricing'>оформите
+      подписку</a>.
+    max_courses: Нет возможности создавать приватные курсы.
+    support: Стандартная техподдержка.
+  loading: В пороцессе...
+  login_req: "Войдите, чтобы подписаться"
+  max_pro_courses: >-
+    {count, plural, =1 {Вы можете создать # приватный курс с неограниченным числом учащихся.} few
+    {Вы можете создать # приватных курса с неограниченным числом учащихся.} many {Вы можете создать
+    # приватных курсов с неограниченным числом учащихся.} other {Вы можете создать # приватных
+    курсов с неограниченным числом учащихся.}}
+  max_public_courses: Можно создавать неограниченное число открытых курсов.
+  next_payment: "Следующий платеж {price} будет списан {payment_date}."
+  not_found: >-
+    Тарифный план не найден. Пожалуйста, обратитесь в службу поддержки - support@stepik.org за
+    корректной ссылкой.
+  other_plans: >-
+    Информация о других <a href="https://welcome.stepik.org/ru/pricing">тарифных планах</a>.
+  sub_title: >-
+    Сейчас у вас тарифный план <strong>{plan_name}</strong>. В данном тарифном плане:
+  subscribe: Подписаться
+  success: Успешная подписка
+  title: Создавайте приватные онлайн-курсы
+  unsubscribe: отписаться
+  unsubscribe_description1: "Вы можете "
+  unsubscribe_description2:
+    ' от текущего плана или посмотреть информацию о других <a
+    href="https://welcome.stepik.org/ru/pricing">тарифных планах</a>.'
+platform-news__title: Новости Stepik
+plugin__admin: Задача на Linux
+plugin__admin-description: Настройте удалённый сервер
+plugin__chemical: Химическая задача (устаревшее)
+plugin__chemical-description: Введите химическую формулу
+plugin__choice: Тест
+plugin__choice-description: Выберите все подходящие ответы из списка
+plugin__code: Программирование
+plugin__code-description: Напишите программу. Тестируется через stdin → stdout
+plugin__dataset: Задача на данные
+plugin__dataset-description: Обработайте индивидуальный набор данных за отведённое время
+plugin__external-grader: External grader
+plugin__external-grader-description: Решение проверяется внешним сервисом
+plugin__fill-blanks: Пропуски
+plugin__fill-blanks-description: Заполните пропуски
+plugin__free-answer: Свободный ответ
+plugin__free-answer-description: Напишите ответ
+plugin__html: HTML и CSS задача
+plugin__html-description: Напишите структуру и стили html документа
+plugin__linux-code: Задача на программирование в Linux
+plugin__linux-code-description: Напишите программу
+plugin__lti-consumer: LTI consumer
+plugin__lti-consumer-description: Решение проверяется через LTI provider
+plugin__manual-score: Оценка преподавателя
+plugin__manual-score-description: Преподаватель загружает файл с баллами за это задание
+plugin__matching: Задача на сопоставление
+plugin__matching-description: Сопоставьте значения из двух списков
+plugin__math: Математическая задача
+plugin__math-description: Введите математическую формулу
+plugin__math-start: "Начните набирать математическую формулу, чтобы увидеть результат"
+plugin__number: Численная задача
+plugin__number-description: Введите численный ответ
+plugin__parsons: Задача Парсона
+plugin__parsons-description: Расположите блоки кода в правильном порядке и с правильными отступами
+plugin__puzzle: Задача на пазлы
+plugin__puzzle-description: Соберите картинку из пазлов
+plugin__pycharm: Задача с JetBrains IDE (альфа версия)
+plugin__pycharm-description: Решите в JetBrains IDE
+plugin__random-tasks: Задача со случайной генерацией условия
+plugin__random-tasks-description: Введите численный ответ
+plugin__schulte: Задача на таблицу Шульте
+plugin__schulte-description: Найдите числа в правильном порядке
+plugin__single-choice: Тест
+plugin__single-choice-description: Выберите один вариант из списка
+plugin__sorting: Задача на сортировку
+plugin__sorting-description: Расположите элементы списка в правильном порядке
+plugin__sql: SQL Challenge
+plugin__sql-description: Введите SQL запрос
+plugin__string: Текстовая задача
+plugin__string-description: Напишите текст
+plugin__table: Табличная задача
+plugin__table-description: Отметьте верные ячейки
+plugin__text: Текст
+plugin__text-description: "Текст с форматированием, изображениями, формулами"
+plugin__trik: Задача в TRIK Studio
+plugin__trik-description: Запрограммируйте робота в TRIK Studio
+plugin__trik-download-dataset: Скачать TRIK Studio save
+plugin__video: Видео
+plugin__video-description: Загружайте видео
+plugins:
+  chemical:
+    capital-first-letter: Каждый химический элемент должен начинаться с заглавной буквы.
+    chemical-expression: "Химическое выражение (формула или уравнение):"
+    errors:
+      expression-invalid: Некорректное химическое выражение.
+      template-invalid: Некорректный шаблон.
+    expression-template: "Шаблон выражения:"
+    match-case: Регистр должен совпадать
+    use-tags: >-
+      Вы можете использовать <b>#</b> (обычные символы), <b>_</b> (нижний индекс), <b>^</b>
+      (верхний индекс) и <b>-</b> (subsup).
+  choice:
+    add-options: Добавьте варианты ответа и отметьте правильные.
+    any-correct: Любой ответ верный
+    checkboxes: Количество правильных ответов
+    do-not-randomize: Не перемешивать ответы
+    enable-HTML: Разрешить HTML-теги в вариантах ответа.
+    enable-multiple: >-
+      Включить несколько правильных вариантов ответа. Если не включено, выбрать можно только один
+      вариант.
+    errors:
+      ambiguous-options: Неоднозначные варианты ответа.
+      no-correct-options: Не выбран правильный вариант ответа.
+      sample-size-big: >-
+        Размер выборки из вариантов ответа больше, чем количество вариантов ответа.
+      sample-size-small: Размер выборки из вариантов ответа должен быть не меньше 1.
+      too-many-correct-options: Выбрано больше одного правильного варианта ответа.
+    explanations-options: Объяснения рядом с ответами
+    explanations-to-corresponding-options:
+      Пояснения будут показаны рядом с соответствующими вариантами ответа
+    option-explanation: >-
+      Это будет показано, когда учащийся отметил (или не отметил) этот вариант не так, как надо.
+    poll: Создать голосование.
+    preserve-order: Сохранить указанный порядок вариантов ответа.
+    sample-size: Размер выборки из вариантов ответа
+    show-explanations: Показать объяснения
+    show-options: Показать ответы
+    shown-options-count: >-
+      Количество вариантов ответа, которые будут показаны учащемуся. Должно быть меньше, чем
+      количество вариантов ответа выше.
+    type:
+      multiple-choice: Несколько
+      single-choice: Один
+  code:
+    advanced:
+      description: >-
+        Вы можете создать собственную логику генерации тестов и проверки решений учащихся.
+      docs: >-
+        Узнайте больше о расширенном редактировании задач на программирование <a target_='_blank'
+        href='{href}'>по ссылке</a>.
+      info: >-
+        Используйте функцию generate() для генерации тестов (они будут добавлены к тестам,
+        объявленым во вкладке Тесты), solve() для написания эталонного решения задания, а также
+        check() для оценки кода пользователя.<br>В конце сгенерированного в функции generate()
+        dataset рекомендуется явно вставлять символ перевода строки "\\n".
+    download-archive-tests: Скачать архив с последними сгенерированными тестами.
+    download-tests: Скачать тесты
+    enter-code: Введите ваш проверяющий код на Python.
+    errors:
+      memory-limit-max: "Ограничение на используемую память должно быть не больше {max}"
+      memory-limit-min: "Ограничение на используемую память должно быть не меньше {min}."
+      number-sample-tests-negative: Количество примеров тестов должно быть неотрицательным.
+      test-broken: |-
+        Тест сломан.
+        dataset: {dataset}
+        clue: {clue}
+        reply: {reply}
+        result: {result}
+        hint: {hint}
+      test-cases-too-large: >-
+        Общий размер тестовых данных слишком велик (не должен превышать {max} MB).
+      test-format-wrong: Формат теста неверный.
+      tests-empty: Пустой набор тестов (должно быть не меньше 1 теста).
+      tests-too-large: >-
+        Общий размер сгенерированных тестов слишком велик (не должен превышать 64 MB).
+      tests-too-many: Слишком много тестов (может быть не более 100 тестов).
+      time-limit-max: "Ограничение на время выполнения должно быть не больше {max}."
+      time-limit-min: "Ограничение на время выполнения должно быть не меньше {min}."
+      unknown-language: Неизвестный язык
+    for-each-case: Для каждого отдельного теста
+    language: Язык
+    languages:
+      add-lang: |-
+        Укажите начальный код в формате:<pre><code>::python3
+        def solution():
+            a, b = map(int, input().split())
+            c = ...
+            print(c)
+        solution()
+        </code></pre>
+      description: |-
+        Укажите список языков в поле ниже в формате:
+        <pre><code>::python3
+        ::kotlin
+        </code></pre>
+      docs: >-
+        Узнайте больше про поддерживаемые языки и шаблоны по <a target_='_blank' href='{href}'>этой
+        ссылке</a>.
+    limit-memory: Memory Limit
+    limit-memory-unit: MB
+    limit-time: Time Limit
+    limit-time-unit: "{count, plural, few {секунды} many {секунд} =1 {секунда} other {секунд}}"
+    number-of-shown-tests: "Количество примеров тестов, показанных учащемуся"
+    number-of-tests: "Количество примеров тестов:"
+    run: Запустить код
+    run-all-tests: Запускать решения на всех тестах
+    run-all-tests-title: >-
+      По умолчанию проверка решения прекращается на первом неудачном тесте. При выборе этой опции
+      проверка решения не будет прерываться, если тест не пройден.
+    run-notify:
+      data: с произвольными входными данными!
+      debug: Попробуйте протестировать свой код
+    run-user-code-allowed: Учащийся может запустить решение на своих данных
+    run-user-code-allowed-title: >-
+      Учащийся может редактировать входные данные и запускать программу с произвольными данными
+    scale-memory-limit: Масштабировать ограничение памяти
+    scale-memory-limit-or-manually:
+      Масштабировать ограничение на используемую память или задать вручную
+    scale-time-limit: Масштабировать TL
+    scale-time-limit-or-manually: >-
+      Масштабировать ограничение на время выполнения для каждого языка или задать его вручную
+    score-all-tests: Оценка зависит от количества пройденных тестов
+    score-all-tests-title: >-
+      Оценка учащегося будет зависеть от количества пройденных тестов и вычисляться по формуле:
+      (количество пройденных тестов / количество тестов) * балл за задание.
+    select-language: Выберите язык программирования
+    tabs:
+      advanced: Расширенный редактор
+      languages: Языки и шаблоны
+      test-cases: Тестовые данные
+    templates: Шаблоны кода и допустимые языки. По умолчанию поле пустое.
+    test-cases:
+      add-test-case: Добавить тест
+      description: >-
+        Добавьте тесты, чтобы проверить правильность кода учащегося. Отправленное решение будет
+        проверяться на каждом тесте. Если вы хотите создать тесты более сложным способом,
+        используйте вкладку Расширенный редактор.
+      title: "Тест №{num}"
+    type-code: Введите ваш код здесь...
+    upload-archive: >-
+      Загрузите zip архив с тестами (N – имя файла с входными данными и N.clue — имя файла,
+      содержащего строку или JSON-объект clue). Эти тесты используются в функции generate().
+    upload-tests: "Загрузить тесты:"
+  dataset:
+    download-dataset: Сначала скачайте данные
+    download-last-submission: Вы можете скачать ваше последнее решение
+    enable_time_limit: Ограничить время одной попытки (5 минут)
+    enter-code: Введите ваш код ниже.
+    enter-code-placeholder: Введите ваш код здесь...
+    errors:
+      solve-check-failed: >-
+        Правильный ответ из функции 'solve' оценивается как {score} вместо 1 или True. Пожалуйста,
+        проверьте ваши функции 'solve' и 'check'.
+
+        {hint}
+    type-dataset: Введите ваш ответ здесь...
+  ext-grader:
+    errors:
+      filenames-not-unique: Значения 'filename' в списке 'files' должны быть уникальными.
+      files-empty: >-
+        В списке 'files' должно быть хотя бы одно значение, если значение 'is_text_enabled' –
+        'false'.
+      queue-name-incorrect: >-
+        Значение 'queue_name' некорректно. Пожалуйста, напишите нам на support@stepik.org, чтобы мы
+        могли создать новую очередь для вашего грейдера.
+    problem-source: "Конфигурация задания (JSON):"
+    syntax-error: Синтаксическая ошибка в JSON
+    type-ext-grader: Напишите ваш ответ здесь...
+  fill-blanks:
+    add-blank: Добавить пропуск
+    add-correct-options: "Добавить правильные ответы:"
+    add-options: "Добавить варианты ответа (отметьте правильные):"
+    add-text: Добавить текст
+    blank-type: "Тип пропуска:"
+    case-sensitive: Регистр должен совпадать
+    check-A-a: Различать 'A' от 'а'
+    choice: Выбор
+    detailed-feedback: Детализировать фидбек учащимся (показывать верные и ошибочные ячейки)
+    errors:
+      blanks-empty: В задании должен быть хотя бы один пропуск.
+      no-correct-options: В каждом пропуске должен быть хотя бы один правильный ответ.
+    input-placeholder: Введите текст здесь (режим HTML разрешен)
+    partially-correct: Оценка зависит от количества верных ячеек
+    partially-correct-title: >-
+      Оценка учащегося будет зависеть от количества верных ячеек и вычисляться по формуле:
+      (количество верных ячеек / количество ячеек) * балл за задание.
+    select-prompt: "Выбрать:"
+    text-input: Ввод текста
+  free-answer:
+    any-response-is-correct: Любой ответ будет оценен как правильный.
+    enable-HTML: Включить HTML и WYSIWYG редактор для ответов
+    enable-attachments-for-response: >-
+      Включить <b>файлы</b> в ответах (дополнительно к тексту, макс 5 MB на ответ)
+    enable-tags: Включить <b>текстовый редактор с форматированием</b> для ответов
+    type-free-answer: Напишите ваш ответ здесь...
+  html:
+    checklist:
+      add-check-item: Добавить задание
+      title: "Задание №{num}"
+    errors:
+      not-found-target: "Не найден целевой элемент {selector}"
+      not-found-type: "Тип теста {type} не определен. Пожалуйста, сообщите автору."
+      test-failed: "Тест {title} не пройден"
+    html-tests:
+      attr-name: Название атрибута
+      attr-value: Значение атрибута
+      child-sel: Селектор дочернего элемента (опционально)
+      class-name: Название класса
+      content-exp: Содержимое элемента или регулярное выражение вида /expression/flags
+      css-rule: Название css стиля
+      css-value: Значение css стиля
+      source-exp: Регулярное выражение вида /expression/flags
+      source-type: Исходный код
+    name: Текст задания
+    result: Результат
+    selector: DOM селектор
+    submission:
+      hide-results: Скрыть результат
+      run-code: Запустить
+    tests:
+      add-test: Добавить проверку
+      title: "Проверка №{num}"
+      type: Тип проверки
+    tip:
+      exact-or-regexp: По умолчанию применяется проверка на точное соответствие
+      exact-value: Проверка на точное соответствие
+      no-regexp: Не удалось прочесть регулярное выражение
+      regexp: Проверка по <b>регулярному выражению</b>
+  linux:
+    bootstrap-script: Введите ваш Bash скрипт ниже.
+    bootstrap-script-placeholder: Введите ваш Bash скрипт здесь...
+    errors:
+      bootstrap-failed: |-
+        Не удалось инициализировать виртуальную машину.
+
+        {stdout}
+        {stderr}
+      bootstrap-internal-error: >-
+        Внутренняя ошибка: не удалось инициализировать виртуальную машину: {error}. Пожалуйста,
+        попробуйте ещё раз.
+      bootstrap-script-check-timeout: >-
+        Не удалось проверить синтакс инициализирующего кода, заняло слишком много времени.
+      bootstrap-script-syntax-error: |-
+        Синтаксическая ошибка в инициализирующем коде:
+
+        {error}
+      bootstrap-timeout: >-
+        Не удалось инициализировать виртуальную машину: заняло слишком много времени.
+      memory-limit-max: "Максимальное значение для ограничения на используемую память: {max} MB."
+      memory-limit-min: "Минимальное значение для ограничения на используемую память: {min} MB."
+      rootnroll-error: >-
+        Внутренняя ошибка: не удалось соединиться с облачным сервисом. Пожалуйста, попробуйте ещё
+        раз.
+      test-scenario-check-error: |-
+        Произошла внутренняя ошибка во время проверки тестового сценария:
+
+        {stdout}{stderr}
+      test-scenario-has-errors: |-
+        Код тестового сценария содержит ошибки:
+
+        {error}
+    image: "Образ:"
+    initialize-script: Инициализировать виртуальную машину с помощью скрипта
+    memory-limit: "Ограничение на используемую память (MB):"
+    test-scenario: Введите код вашего тестового сценария ниже.
+    test-scenario-placeholder: Введите код вашего тестового сценария здесь...
+    virtual-machine-image: "Образ, который используется для создания новой виртуальной машины"
+  lti-consumer:
+    add-custom-field: Добавить custom field
+    remove-custom-field: Удалить custom field
+  manual-score:
+    files:
+      files: Файлы
+      ok: OK
+      process-date: Время обработки
+      processing: обрабатывается...
+      status: Состояние
+      upload-date: Время загрузки
+    manual-score: Баллы за это задание выставляет преподаватель.
+    no-settings: В этом шаге нет настроек.
+    text: >-
+      Используя этот шаг, вы можете добавить произвольное количество баллов учащимся.<br>
+       Для этого сохраните шаг и загрузите CSV файл с оценками (из режима просмотра учащимся).<br>
+       Формат CSV файла:<br>
+       <pre>
+         user_id,score,feedback
+         41,0, необязательный комментарий к решению учащегося 41
+         42,25,25% от максимального балла для учащегося 42
+         43,100,100% от максимального балла для учащегося 43
+       </pre>
+       % от максимального балла – процент от выставленного количества баллов за задание, должен
+      быть от 0 до 100.
+    upload: Загрузить оценки
+    upload_done: Оценки загружены
+    upload_fail: >-
+      Не удалось загрузить оценки. Проверьте интернет соединение и попробуйте еще раз
+  matching:
+    enable-HTML: Разрешить HTML-теги в элементах
+    errors:
+      pairs-ambiguous: Неоднозначные пары.
+      pairs-empty: Пустые пары.
+    not-randomize: >-
+      Не перемешивать порядок первой колонки (вторая колонка перемешивается всегда)
+    preserve-order: Сохранить указанный выше порядок
+    specify-items: >-
+      Пожалуйста, укажите элементы. Учащиеся должны будут соотнести их по парам, как указано ниже:
+  math:
+    correct-answer: "Правильный ответ (математическое выражение):"
+    errors:
+      answer-empty: Правильный ответ не может быть пустым.
+      im-z-incorrect: Некорректное Im z.
+      parse-answer-failed: Не удалось распознать правильный ответ.
+      re-z-incorrect: Некорректное Re z.
+      tolerated-error-incorrect: Некорректная допустимая абсолютная ошибка.
+    int-only: Только целые числа
+    numerical-test: "Численный тест на случайной точке z (дополнительные настройки):"
+    test-on-random: Тестировать только на случайных целых числах
+    tolerated-error: Допустимая абсолютная ошибка
+    type-math: Напишите ваш ответ здесь...
+  number:
+    accepted-rule: >-
+      Любой из указанных вариантов ответа ± допустимая погрешность будет засчитан как правильный.
+    add-option: Добавить ещё один возможный вариант ответа
+    add-remove-answer: Добавить/Удалить правильный ответ
+    correct-answer: Правильный ответ
+    delete-last-option: Удалить возможный вариант ответа
+    errors:
+      answer-not-provided: Должен быть указан хотя бы один правильный ответ.
+      tolerated-error-negative: Допустимая погрешность должна быть неотрицательным числом.
+    only-number: Ответ должен быть числом
+    tolerated-error: Допустимая погрешность
+    write-number: Введите число
+  parsons:
+    alert: Этот тип шага в настоящее время не поддерживается.
+    enter-code: Введите ваш код ниже
+    indent: "Пожалуйста, используйте 4 пробела для отступа."
+    type-code: Введите ваш код здесь...
+  puzzle:
+    difficulty: "Сложность:"
+    upload-image: Загрузить изображение
+  random:
+    errors:
+      ranges-invalid: Ошибка в диапазонах.
+      solve-expression-incorrect:
+        Ошибка в решении. Возможно одна или несколько переменных не объявлены.
+    number-of-tasks: "Количество разных заданий:"
+    solve: Решение
+    task: "Задание:"
+    tolerated-error: Допустимая погрешность
+    type-random: Введите число
+    write-here: Введите текст
+  schulte:
+    Schulte-Gorbov-table: Таблица Шульте-Горбова
+    randomize-color: Случайный цвет
+    randomize-font-size: Случайный размер шрифта
+    show-grid: Показывать сетку
+    table-size: "Размер таблицы:"
+  sorting:
+    enable-HTML: Разрешить HTML-теги в элементах
+    errors:
+      options-ambiguous: Неоднозначные элементы.
+      options-empty: Пустые элементы.
+    items-below: >-
+      Пожалуйста, укажите элементы ниже. Учащиеся должны будут расположить их в том же порядке.<br>
+       Не забудьте указать требуемый порядок (например, по возрастанию или убыванию) в описании
+      задания выше.
+  sql:
+    check-code: Проверяющий код
+    check-multiple-statements: Разрешить пользователям использовать несколько SQL запросов
+    errors:
+      challenge-broken: >-
+        Задание сломано. Пожалуйста, проверьте правильный запрос и проверяющий код.
+
+        {hint}
+      db-container-start-failed:
+        "Не удалось запустить контейнер с БД. Пожалуйста, попробуйте ещё раз."
+      init-sql-failed: |-
+        Не удалось запустить скрипт, инициализирующий SQL:
+        {error}
+    init-script: "Скрипт, инициализирующий SQL (необязательный)"
+    multiple-statements: Несколько SQL запросов
+    run-user-code-allowed: Учащийся может выполнить произвольные SQL запросы
+    run-user-code-allowed-title:
+      Учащийся во время отладки решения может выполнять произвольные SQL запросы
+    solution-query: Правильный SQL запрос
+    type-code: Введите ваш код здесь...
+    type-sql: Введите ваш SQL код здесь...
+  string:
+    case: Различать прописные и заглавные буквы
+    case_descr: >-
+      Oбращать вниманиe на регистр букв. Например, если "Пушкин" задано как верный ответ, то ответы
+      "ПУШКИН" или "пУшКиН" так же будут верными
+    correct_answer: Верный ответ
+    errors:
+      match-empty-string: Фрагмент совпадает с пустой строкой
+      regex-malformed: Некорректное регулярное выражение.
+      solve-check-failed: >-
+        Правильный ответ из функции 'solve' оценивается как {score} вместо 1 или True. Пожалуйста,
+        проверьте ваши функции 'solve' и 'check'.
+
+        {hint}
+    input_type: Тип ответа
+    input_types:
+      file_only: Только файл
+      text_only: Только текст
+      text_or_file: Текст или файл
+    input_types_descr: >-
+      Как учащиеся могу прислать ответ: прямо в поле ввода в уроке или прикрепить файл c текстом
+      ответа
+    matching_descr: Настройка проверки ответов
+    optional-code: >-
+      Необязательный код с функциями <code>solve()</code> и <code>check(reply)</code>. Если вы
+      укажете проверяющий код, все предыдущие настройки применяться не будут. Решения будут
+      оцениваться на основании результата функции <code>check(reply)</code>.
+    regexp: >-
+      Проверка по <a href="https://docs.python.org/3/howto/regex.html">регулярному выражению</a>
+    regexp_descr: >-
+      Вы можете описать правила на специальном языке для определения верного ответа
+    substring: Сверка по фрагменту
+    substring_descr: >-
+      Верный ответ учащегося может содержать дополнительный (лишний) текст. Например, если "Пушкин"
+      задано как верный ответ, то ответ "А.С. Пушкин" так же будет верным
+    type-code: Напишите ваш код здесь...
+    type-string: Напишите ваш ответ здесь...
+  table:
+    add-column: Добавить новую колонку
+    add-row: Добавить ряд
+    any-is-correct: Любой ответ верный
+    choice-type: "Тип кнопок:"
+    delete-column: Удалить последнюю колонку
+    delete-row: Удалить последний ряд
+    errors:
+      columns-name-collision: "У двух колонок одинаковое название '{name}'."
+      multiple-answers-not-allowed: В этом режиме не может быть несколько правильных ответов.
+      row-no-answer: "Не указаны верные ответы для ряда '{name}'."
+      rows-name-collision: "У двух рядов одинаковое название '{name}'."
+    first-column: Первая колонка
+    first-row: Первый ряд
+    make-poll: Создать опрос
+    radio-or-checkboxes: >-
+      Чтобы отметить только один ответ в ряду, выберите тип кнопок radio. Если ответов в ряду
+      несколько, выберите checkboxes
+    randomize-columns: Перемешивать порядок колонок
+    randomize-rows: Перемешивать порядок рядов
+    rows: "Ряды: "
+    second-column: Вторая колонка
+    second-row: Второй ряд
+    third-column: Третья колонка
+    third-row: Третий ряд
+  utils:
+    incorrect-html: "Некорректный HTML: {html}"
+    parse-decimal-not-number: "Поле '{field}' должно быть числом."
+plugins__show_more: >-
+  {count, plural, =1 {+ еще # тип шага} few {+ еще # типа шага} many {+ еще # типов шага} other {+
+  еще # типов шага}}
+profile:
+  activity: Активность за последний год
+  add_annon: Добавить новость
+  all_courses: Все курсы
+  all_lessons: Все уроки
+  best_courses: Лучшие курсы
+  best_lessons: Лучшие уроки
+  certificate-empty-list: Пока вы не получили ни одного сертификата.
+  certificates: Сертификаты
+  city: Город
+  courses-empty-list: Курсы не найдены
+  courses-empty-list-call-to-action: Вы можете найти подходящий курс в каталоге
+  courses_archived: Архив
+  courses_favorites: Избранные
+  details: О себе
+  joined-date: Присоединился
+  knowledge-tooltip: >-
+    Вы получаете знания за прохождение уроков. Учитываются только шаги с более чем 100 решениями.
+  knowledge_rank: по знаниям
+  mailing: Рассылки
+  my-courses: Мои курсы
+  no_annons: Пока нет новостей
+  no_courses: Вы не создали ни одного курса
+  no_courses_link: Создать курс
+  no_lessons: Вы не создали ни одного урока
+  no_lessons_link: Создать урок
+  profile: Профиль
+  reputation-tooltip: >-
+    Вы получаете репутацию, когда другие пользователи решают ваши уроки или положительно оценивают
+    ваши комментарии. Учитываются только шаги с более чем 100 решениями.
+  reputation_rank: по репутации
+  teaching: Преподавание
+  user_no_courses: Пока нет курсов
+  user_no_lessons: Пока нет уроков
+quiz:
+  correct_ratio: Успешных решений
+  passed_by: Решило
+  score: Вы получили
+  score-max: из
+  submit-failed: >-
+    Не получилось отправить ваше решение. Проверьте интернет соединение и попробуйте еще раз
+quiz__again: Решить снова
+quiz__answer-received: Ваше решение сохранено.
+quiz__attempt-allow-solutions: Теперь вам доступен
+quiz__attempt-correct-outdated: Задание было изменено авторами. Баллы за прошлые решения сохранены.
+quiz__attempt-expand: Показать поле для ответа
+quiz__attempt-loading-error: >-
+  Не получилось загрузить задачу, скорее всего, сервер перегружен. Попробуйте чуть позже.
+quiz__attempt-outdated: >-
+  Извините, задание было изменено авторами. Необходимо начать сначала. Баллы за прошлые решения
+  сохранены.
+quiz__attempt-solutions: Форум решений
+quiz__attempt-solutions-desc:
+  ", где вы можете сравнить свое решение с другими или спросить совета."
+quiz__attempt-time-limit: "<strong>Время одной попытки:</strong>"
+quiz__attempts-unlimited: У вас есть неограниченное число попыток.
+quiz__correct:
+  "0": Правильно.
+  "1": "Правильно, молодец!"
+  "10": Прекрасный ответ.
+  "11": Так точно!
+  "12": Отлично!
+  "13": Всё получилось!
+  "2": Всё правильно.
+  "3": Верно.
+  "4": Верно. Так держать!
+  "5": "Здорово, всё верно."
+  "6": Хорошая работа.
+  "7": Отличное решение!
+  "8": Абсолютно точно.
+  "9": "Хорошие новости, верно!"
+quiz__correct-call-to-comment: >-
+  Вы решили сложную задачу, поздравляем! Вы можете <a href="#discussions">помочь другим</a>
+  учащимся в комментариях.
+quiz__correct-ratio-tooltip: Процент успешных решений (обновляется каждые 2 мин)
+quiz__download-dataset: скачать набор данных
+quiz__download-dataset-last: скачать последний набор данных
+quiz__download-submission-last: скачать ваше последнее решение
+quiz__empty-reply-warn: Нужен ответ. Пустые решения не принимаются!
+quiz__eval: Проверяем... С этого шага можно безопасно уходить.
+quiz__eval-eta: "Примерное время проверки:"
+quiz__next-button: Следующий шаг
+quiz__p2p: Рецензирование
+quiz__p2p-new: Отправить это решение на рецензию
+quiz__partially-correct:
+  "0": Почти верно. Так держать!
+  "1": Вы близки к верному ответу! Попробуйте улучшить результат.
+  "2": Ваш ответ почти верен. Попробуете улучшить результат?
+  "3": "Почти верно, отлично! Может быть, попробуете ещё?"
+  "4": Почти верно. Попробуйте получить полный балл!
+  "5": "Вы близки к верному ответу, так держать. Попробуете ещё?"
+quiz__passed-by-tooltip: Количество успешных решений (обновляется каждые 2 мин)
+quiz__pending: "Отправка решения... подождите, не покидайте страницу."
+quiz__reset-prompt: "Вы уверены, что хотите начать задание с самого начала?"
+quiz__restart: Начать сначала (сброс)
+quiz__retry: Попробовать снова
+quiz__signup-link: "Войдите, чтобы мы запомнили ваши успехи"
+quiz__start-button: "Нажмите, чтобы начать решать"
+quiz__status-service: "Статус сервиса:"
+quiz__status-service__down: >-
+  Сервис сломался и может работать некорректно в данный момент. Мы знаем об этом и скоро исправим.
+quiz__status-service__partially-up: >-
+  Сервис может работать некорректно в данный момент. Мы знаем об этом и скоро исправим.
+quiz__step-cost: "Баллы за шаг:"
+quiz__submissions-link: Ваши решения
+quiz__time-over: Время истекло!
+quiz__timelimit: Ограничение
+quiz__wrong: >-
+  > [is_not_last_try] Пока неправильно, попробуйте еще раз!
+  > [infinite_tries] Неверный ответ. Ничего страшного, у вас все еще бесконечное количество попыток!
+  > Пока неверно. Ошибки - наши лучшие учителя!
+  > [no_discount,infinite_tries] Неверно. Попробуй еще раз - вы ничего не теряете!
+  > [open_comments,no_comments] Неверно. Попробуйте задать наводящий вопрос в комментариях, тогда
+    команда курса и другие учащиеся смогут помочь вам.
+  > [is_not_last_try] Пока неверно, но вы можете попробовать еще!
+  > [is_not_last_try] Пока неверно. Упорства вам не занимать, попробуете еще раз?
+  > [is_not_last_try] Неверно. Не теряйте надежды, вы точно сможете!
+  > [is_not_last_try] Неверный ответ. Трудное задание, попробуете еще раз?
+  > [is_not_last_try] Пока неверно. Вы прошли уже такой путь! Не сдавайтесь!
+  > [is_not_last_try] Не получилось. Еще немного и вы точно сможете!
+  > [open_solutions,no_solutions] Пока неверно. Вам доступен форум решений, поделитесь своим
+    решением – возможно вам подскажут в чем ошибка.
+  > [open_solutions,has_solutions] Пока неверно. Вам доступен форум решений, возможно там вы
+    найдете подсказку.
+  > [is_not_last_try] Пока неверно. Не опускайте руки - попробуйте еще раз!
+  > [no_discount] Неверный ответ. Ничего страшного, вы все еще можете заработать полный балл!
+  > [no_discount,no_close_deadline] Неправильно. Крепкий орешек! Вы можете вернуться к нему позже и
+    все равно получить полный балл!
+random-exam:
+  completed: >-
+    {count, plural, =1 {задание в экзаменационном шаге пройдено} few {задания в экзаменационном
+    шаге пройдено} many {заданий в экзаменационном шаге пройдено} other {заданий в экзаменационном
+    шаге пройдено}}
+  confirm: >-
+    Перейдя к следующему вопросу, Вы больше не сможете вернуться к этому вопросу!
+
+
+    OK - всё равно перейти.
+  counter: "{current} из {length}"
+  go-to-syllabus: Перейти к расписанию для начала экзамена
+  intro:
+    good-luck: "Ни пуха, ни пера!"
+    irrevocably: После перехода к следующему вопросу вернуться к предыдущему уже нельзя.
+    need-solve: >-
+      {count, plural, =1 {Вам нужно решить # задание} few {Вам нужно решить # задания} many {Вам
+      нужно решить # заданий} other {Вам нужно решить # заданий}}
+    rules: "Правила:"
+    time: >-
+      {count, plural, =1 {за # минуту} few {за # минуты} many {за # минут} other {за # минут}}
+    title: Набор случайных экзаменационных заданий.
+  next-question: Следующий вопрос
+  no-questions: Нет доступных вопросов
+  question: Вопрос
+  skip-question: Пропустить вопрос
+  start: Начать экзамен
+registration:
+  and: и
+  email: E-mail
+  full_name: Имя и фамилия
+  password: Пароль
+  privacy: Конфиденциальность
+  terms: Правила
+  title: Регистрация
+reminders:
+  cancel: Вернуть мои решения
+  intro: "Наш робот рекомендует вам решить эти задачи ещё раз:"
+  lesson-intro: "Вы в режиме повторения материала, прошлые решения скрыты."
+  link-to-list: Перейти к напоминаниям
+  nothing: "Робот не знает, что вам посоветовать перерешать"
+reports:
+  categories:
+    content: Содержание курса
+    marketing: Маркетинг и продажи
+    other: Другое
+    scores-and-submissions: Оценки и решения
+    users: Пользователи
+  class_download_grade_book:
+    desc: ""
+    name: Табель успеваемости
+  course-reports-title: Отчеты курса
+  course_download_activity_basic:
+    desc: >-
+      Активность учащихся в модулях: процент посещаемости (steps) и процент успеваемости (score)
+    name: Действия учащихся
+    sample: report-samples/ru/activity.csv
+  course_download_activity_full:
+    desc: >-
+      Активность учащихся в шагах, уроках и модулях: успеваемость, количество попыток, процент
+      верных решений
+    name: Действия учащихся (полный)
+    sample: report-samples/ru/activity-full.csv
+  course_download_cheating:
+    desc: Вероятность жульничества при решении задач
+    name: Жульничество
+    sample: report-samples/ru/cheating.csv
+  course_download_comments:
+    desc: Все комментарии пользователей с привязкой к шагам
+    name: Комментарии
+    sample: report-samples/ru/comments.csv
+  course_download_difficulty_discrimination:
+    desc: >-
+      Дискриминативность говорит о сложности заданий: 0.5-1.0 сложное, 0.1-0.5 среднее, меньше 0.1
+      низкое качество задания (его двоечники решают лучше отличников)
+    name: Сложность и дискриминативность шагов
+    sample: report-samples/ru/step-difficulty-discrimination.csv
+  course_download_exam_sessions:
+    desc: Время начала прохождения и окончания экзамена для каждого учащегося
+    name: Прохождение экзаменов
+    sample: report-samples/ru/exam-sessions.csv
+  course_download_grade_book:
+    desc: >-
+      Оценки и общий результат каждого учащегося с учётом политик снижения баллов
+    name: Табель успеваемости (полный)
+    sample: report-samples/ru/grade-book.csv
+  course_download_grade_book_short:
+    desc: >-
+      Сумма оценок и процент набранных баллов по модулям и в курсе для каждого учащегося
+    name: Табель успеваемости
+    sample: report-samples/ru/grade-book-short.csv
+  course_download_grade_book_without_deadlines:
+    desc: >-
+      Оценки и общий результат каждого учащегося без учета политик снижения баллов
+    name: Табель успеваемости без дисконтирования
+    sample: report-samples/ru/grade-book-without-deadlines.csv
+  course_download_learners:
+    desc: >-
+      Все учащиеся с указанием даты записи на курс и времени последней активности
+    name: Список учащихся
+    sample: report-samples/ru/learners.csv
+  course_download_not_finished_review_sessions:
+    desc: "Решения в шагах с рецензированием, за которые ещё не выставлена оценка"
+    name: Незавершённые сессии рецензирования
+    sample: report-samples/ru/not-finished-review-sessions.csv
+  course_download_payments:
+    desc: Оплаты курса и неуспешные платежи
+    name: Платежи
+    sample: report-samples/ru/payments.csv
+  course_download_plagiarism:
+    desc: Процент наложения у похожих текстовых решений
+    name: Плагиат
+    sample: report-samples/ru/plagiarism.csv
+  course_download_referral_traffic:
+    desc: "Информация о источниках, которые приводят посетителей на страницу курса"
+    name: Переходы по ссылкам на курс
+    sample: report-samples/ru/referral-traffic.csv
+  course_download_reviews_outliers:
+    desc: "Рецензии, оцененные не так, как оценила бы похожие работы система"
+    name: Необычные рецензии
+    sample: report-samples/ru/reviews-outliers.csv
+  course_download_steps_stats:
+    desc: "Количество просмотров, верных и неверных решений в шаге"
+    name: Статистика шагов
+    sample: report-samples/ru/step-stats.csv
+  course_download_structure:
+    desc: Связь шагов с уроками и модулями
+    name: Структура курса
+    sample: report-samples/ru/structure.csv
+  course_download_submissions_basic:
+    desc: "Попытки, правильность решения и время ответа каждого учащегося"
+    name: Решения учащихся
+    sample: report-samples/ru/submissions.csv
+  course_download_submissions_full:
+    desc: >-
+      Содержание решений и обратная связь по ним, правильность и время ответа каждого учащегося
+    name: Решения учащихся (полный)
+    sample: report-samples/ru/submissions-full.csv
+  course_download_teachers:
+    desc: Преподаватели курса
+    name: Список преподавателей
+    sample: report-samples/ru/teachers.csv
+  course_download_time_to_complete:
+    desc: "Среднее время прохождения шагов, уроков, модулей и курса"
+    name: Среднее время прохождения
+    sample: report-samples/ru/time-to-complete.csv
+  create: Сформировать
+  download: Файлы
+  lesson_download_grade_book:
+    desc: ""
+    name: Табель успеваемости
+  lesson_download_structure:
+    desc: ""
+    name: Структура урока
+  lesson_download_submissions_full:
+    desc: ""
+    name: Решения учащихся (полный)
+  loading: Формируется
+  name: Название отчёта
+  not-available:
+    toast: "Отчёты доступны только для <b>{planTitle}-курсов</b>."
+    tooltip: "Отчёты доступны только для {planTitle}-курсов"
+  sample: Пример
+  status: Статус
+  step_download_plagiarism:
+    desc: ""
+    name: Плагиат
+  step_download_reviews:
+    desc: ""
+    name: Рецензии
+  step_download_reviews_outliers:
+    desc: ""
+    name: Необычные рецензии
+  step_download_submissions_files:
+    desc: ""
+    name: Прикреплённые файлы учащихся
+  step_download_submissions_full:
+    desc: ""
+    name: Решения учащихся (полный)
+  time: Время создания отчёта
+  update: Обновить
+reset-password:
+  desc: >-
+    Введите свой e-mail адрес, и мы отправим вам письмо со ссылкой для сброса пароля.
+  email: E-mail
+  tab: Сбросить пароль
+  title: Забыли свой пароль?
+review-detail:
+  based-on-criteria: >-
+    {count, plural, =1 {На основании # критерия} few {На основании # критериев} many {На основании
+    # критериев} other {На основании # критериев}}
+  explanation-placeholder: Развернутое объяснение вашей оценки
+  extra-review-notice: >-
+    Вы уже отправили минимально необходимое количество рецензий. Эта рецензия дополнительная.
+  not-reviewed: Не рецензировано
+  result: "Итог: {percentage}%. Оценка является медианой первых {count} рецензий"
+  reviewed: Рецензировано
+  rubric: Критерий
+  score: Оценка
+  score-rubric: Поставьте балл по критерию
+  submission: Решение учащегося
+  submit-button: Отправить рецензию
+  total-score: Общий балл
+  update-button: Обновить и одобрить
+review-new__cancel: Подумаю ещё
+review-new__modal-header: Отправьте решение на проверку
+review-new__submit: Отправить на проверку
+review-new__warning: После отправки на проверку решение сменить нельзя.
+review-session:
+  approve: Одобрить
+  given-count: "{count} из {required} необходимых"
+  given-reviews: >-
+    {count, plural, =1 {Отправленная рецензия} few {Отправленные рецензии} many {Отправленные
+    рецензии} other {Отправленные рецензии}}
+  instruction-title: Как оценивается решение
+  next: Следующая →
+  not-received-review: Рецензия не получена
+  page: "{current} из {total}"
+  prev: ← Предыдущая
+  received-reviews: >-
+    {count, plural, =1 {Полученная рецензия} few {Полученные рецензии} many {Полученные рецензии}
+    other {Полученные рецензии}}
+  rubric: Критерий
+  total-score: Сумма по критериям
+  verified-label: Одобрено преподавателем
+review-session-status:
+  finished: >-
+    {count, plural, =1 {{score} из # балла начислено} few {{score} из # баллов начислено} many
+    {{score} из # баллов начислено} other {{score} из # баллов начислено} =0 {{score} из X баллов
+    начислено}}
+  finished-aot: >-
+    {count, plural, =1 {{score} из # балла начислено. Завершено досрочно.} few {{score} из # баллов
+    начислено. Завершено досрочно.} many {{score} из # баллов начислено. Завершено досрочно.} other
+    {{score} из # баллов начислено. Завершено досрочно.} =0 {{score} из X баллов начислено.
+    Завершено досрочно.}}
+  finished-aot-help-tip: >-
+    Балл рассчитан на основе оценки преподавателя.<br>Критерии оценки выполнены на
+    {scorePercentage}%.
+  finished-help-tip: >-
+    {count, plural, =1 {Балл рассчитан на основе первой рецензии.<br>Критерии оценки выполнены на
+    {scorePercentage}%.} few {Балл рассчитан на основе первых # рецензий.<br>Критерии оценки
+    выполнены на {scorePercentage}%.} many {Балл рассчитан на основе первых # рецензий.<br>Критерии
+    оценки выполнены на {scorePercentage}%.} other {Балл рассчитан на основе первых #
+    рецензий.<br>Критерии оценки выполнены на {scorePercentage}%.}}
+  peer-student:
+    note: >-
+      Чем больше рецензий вы дадите, тем выше шанс получить рецензию на своё решение.
+    remaining-given: >-
+      {count, plural, =1 {Для получения баллов не хватает ещё <b>#</b> отправленной рецензии.} few
+      {Для получения баллов не хватает ещё <b>#</b> отправленных рецензий.} many {Для получения
+      баллов не хватает ещё <b>#</b> отправленных рецензий.} other {Для получения баллов не хватает
+      ещё <b>#</b> отправленных рецензий.}}
+    remaining-taken: >-
+      {count, plural, =1 {Для получения баллов не хватает ещё <b>#</b> полученной рецензии.} few
+      {Для получения баллов не хватает ещё <b>#</b> полученных рецензий.} many {Для получения
+      баллов не хватает ещё <b>#</b> полученных рецензий.} other {Для получения баллов не хватает
+      ещё <b>#</b> полученных рецензий.}}
+    remaining-taken-given-1: >-
+      {count, plural, =1 {Для получения баллов не хватает ещё <b>#</b> полученной} few {Для
+      получения баллов не хватает ещё <b>#</b> полученных} many {Для получения баллов не хватает
+      ещё <b>#</b> полученных} other {Для получения баллов не хватает ещё <b>#</b> полученных}}
+    remaining-taken-given-2: >-
+      {count, plural, =1 {и <b>#</b> отправленной рецензий.} few {и <b>#</b> отправленных
+      рецензий.} many {и <b>#</b> отправленных рецензий.} other {и <b>#</b> отправленных
+      рецензий.}}
+    review-link: Рецензировать
+  peer-teacher:
+    note: >-
+      {count, plural, =1 {Завершить рецензирование досрочно можно будет после <b>отправки учащимся
+      еще #</b> рецензии.} few {Завершить рецензирование досрочно можно будет после <b>отправки
+      учащимся еще #</b> рецензий.} many {Завершить рецензирование досрочно можно будет после
+      <b>отправки учащимся еще #</b> рецензий.} other {Завершить рецензирование досрочно можно
+      будет после <b>отправки учащимся еще #</b> рецензий.}}
+    remaining-given: >-
+      {count, plural, =1 {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленной рецензии.} few {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных рецензий.} many {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных рецензий.} other {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных рецензий.}}
+    remaining-given-taken-1: >-
+      {count, plural, =1 {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленной} few {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных} many {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных} other {Для автоматического начисления баллов не хватает ещё <b>#</b>
+      отправленных}}
+    remaining-given-taken-2: >-
+      {count, plural, =1 {и <b>#</b> полученной рецензий.} few {и <b>#</b> полученных рецензий.}
+      many {и <b>#</b> полученных рецензий.} other {и <b>#</b> полученных рецензий.}}
+    remaining-taken: >-
+      {count, plural, =1 {Для автоматического начисления баллов не хватает ещё <b>#</b> полученной
+      рецензии.} few {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} many {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} other {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.}}
+  peer-teacher-able-to-finish-aot:
+    p1: >-
+      {count, plural, =1 {Для автоматического начисления баллов не хватает ещё <b>#</b> полученной
+      рецензии.} few {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} many {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} other {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.}}
+    p2: >-
+      При досрочном завершении оценка будет рассчитана на основе уже полученных рецензий.
+  peer-teacher-finish-aot-btn: Завершить досрочно
+  peer-teacher-giving-finished:
+    p1: >-
+      {count, plural, =1 {Для автоматического начисления баллов не хватает ещё <b>#</b> полученной
+      рецензии.} few {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} many {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.} other {Для автоматического начисления баллов не хватает ещё <b>#</b> полученных
+      рецензий.}}
+    p2: "<b>Дайте свою рецензию</b> на решение, чтобы досрочно начислить баллы."
+  student-given-nil: >-
+    Чем больше рецензий вы дадите, тем выше шанс получить рецензию на своё решение.
+  teacher-given-nil: Ни одной рецензии не отправлено.
+review-session-title:
+  learner-link: "<a href={url} class={class}>{learner-name}</a>"
+  step-link: "<a href={url} class={class}>{lesson} → {step}</a>"
+  with-learner: >-
+    {count, plural, =1 {Рецензия {learner-link} на задачу {step-link}} few {Рецензии {learner-link}
+    на задачу {step-link}} many {Рецензии {learner-link} на задачу {step-link}} other {Рецензии
+    {learner-link} на задачу {step-link}}}
+  without-learner: >-
+    {count, plural, =1 {Рецензия на решения задачи {step-link}} few {Рецензии на решения задачи
+    {step-link}} many {Рецензии на решения задачи {step-link}} other {Рецензии на решения задачи
+    {step-link}}}
+review-stages:
+  aside-panels:
+    passed-by: >-
+      {count, plural, =0 {Вы можете стать первым, кто решит эту задачу} =1 {Решил <b>#</b> человек}
+      few {Решило <b>#</b> человека} many {Решили <b>#</b> человек} other {Решили <b>#</b>
+      человек}}
+    submissions-count: >-
+      {count, plural, =1 {# решение} few {# решения} many {# решений} other {# решений}}
+  instrReview:
+    completed:
+      subtitle: "<a href={linkURL}>Рецензия</a> преподавателя"
+      title: >-
+        {count, plural, =1 {Ваш ответ оценили на {score} из # балла.} few {Ваш ответ оценили на
+        {score} из # баллов.} many {Ваш ответ оценили на {score} из # баллов.} other {Ваш ответ
+        оценили на {score} из # баллов.} =0 {Дождитесь оценки преподавателя}}
+    in-progress:
+      note: >-
+        Обычно ответ преподавателя приходит через 2 дня после отправки решения на проверку, но это
+        зависит от авторов курса
+    pending:
+      title: >-
+        {count, plural, =1 {Дождитесь оценки преподавателя, максимум за задачу — # балл} few
+        {Дождитесь оценки преподавателя, максимум за задачу — # балла} many {Дождитесь оценки
+        преподавателя, максимум за задачу — # баллов} other {Дождитесь оценки преподавателя,
+        максимум за задачу — # баллов} =0 {Дождитесь оценки преподавателя}}
+  peerFinished:
+    title:
+      completed: >-
+        {count, plural, =1 {Ваш ответ оценили на {score} из # балла} few {Ваш ответ оценили на
+        {score} из # баллов} many {Ваш ответ оценили на {score} из # баллов} other {Ваш ответ
+        оценили на {score} из # баллов} =0 {Получите баллы}}
+      pending: >-
+        {count, plural, =1 {Получите баллы, максимальная оценка — # балл} few {Получите баллы,
+        максимальная оценка — # балла} many {Получите баллы, максимальная оценка — # баллов} other
+        {Получите баллы, максимальная оценка — # баллов} =0 {Получите баллы}}
+  peerGivenReviews:
+    completed:
+      extraReviewNote: >-
+        Делая дополнительные рецензии, вы повышаете шанс получить рецензии на свою работу быстрее
+      startReview: Рецензировать
+      title: >-
+        {count, plural, =1 {# рецензия отправлена} few {# рецензии отправлены} many {# рецензий
+        отправлены} other {# рецензий отправлены}}
+    in-progress:
+      noReviewsAvailable: Пока нет решений для рецензии
+      startReview: Рецензировать
+      subtitle: >-
+        {count, plural, =1 {# рецензия отправлена} few {# рецензии отправлены} many {# рецензий
+        отправлены} other {# рецензий отправлены}}
+      title: >-
+        {count, plural, =1 {Сделайте ещё # рецензию на решения других учащихся.} few {Сделайте ещё
+        # рецензии на решения других учащихся.} many {Сделайте ещё # рецензий на решения других
+        учащихся.} other {Сделайте ещё # рецензий на решения других учащихся.}}
+    pending:
+      title: >-
+        {count, plural, =1 {Сделайте # рецензию на решения других учащихся} few {Сделайте #
+        рецензии на решения других учащихся} many {Сделайте # рецензий на решения других учащихся}
+        other {Сделайте # рецензий на решения других учащихся} =0 {Сделайте рецензии на решения
+        других учащихся}}
+  peerTakenReviews:
+    active:
+      subtitle: >-
+        {count, plural, =1 {<a href={linkURL}># рецензия</a> получена} few {<a href={linkURL}>#
+        рецензии</a> получены} many {<a href={linkURL}># рецензий</a> получены} other {<a
+        href={linkURL}># рецензий</a> получены}}
+      title: >-
+        {count, plural, =1 {Дождитесь ещё # рецензии на своё решение.} few {Дождитесь ещё #
+        рецензий на своё решение.} many {Дождитесь ещё # рецензий на своё решение.} other
+        {Дождитесь ещё # рецензий на своё решение.}}
+    completed:
+      title: >-
+        {count, plural, =1 {<a href={linkURL}># рецензия</a> получена} few {<a href={linkURL}>#
+        рецензии</a> получены} many {<a href={linkURL}># рецензий</a> получены} other {<a
+        href={linkURL}># рецензий</a> получены}}
+    pending:
+      note: >-
+        Обычно первая рецензия приходит через 2 дня после отправки решения на рецензирование (но
+        это не точно)
+      title: >-
+        {count, plural, =1 {Дождитесь # рецензии на своё решение} few {Дождитесь # рецензий на своё
+        решение} many {Дождитесь # рецензий на своё решение} other {Дождитесь # рецензий на своё
+        решение} =0 {Дождитесь рецензий на своё решение}}
+  quiz:
+    noMoreAttempts: У вас не осталось попыток
+    resetAttempt: Начать сначала (сброс)
+    submit: Отправить
+    submit-has-restrictions: >-
+      {count, plural, =1 {Отправить (осталась # попытка)} few {Отправить (осталось # попытки)} many
+      {Отправить (осталось # попыток)} other {Отправить (осталось # попыток)}}
+    tryAgain: Попробовать снова
+  sendReview:
+    choose: Выбрать решение для проверки
+    submit: Отправить решение на проверку
+    title:
+      completed: "Решение <b>{submissionNumber}</b> отправлено на проверку"
+      in-progress: >-
+        <b>Отправьте лучшее решение на проверку.</b> После отправки заменить решение нельзя.
+      pending: Отправьте лучшее решение на проверку
+    tryAgain: Решить снова
+review__comments: Общие комментарии
+review__comments-placeholder: Общие замечания касательно решения
+review__confirm-force-submit: >-
+  Учащиеся могут отправить только одно решение на рецензию. Этот учащийся пока не выбрал решение
+  для рецензии. Начав рецензию вы делаете выбор за него. Начать рецензировать?
+review__description-placeholder: Необязательно
+review__description-title: Дополнительная информация
+review__extra-eval-notice:
+  Делая доп. рецензии вы повышаете шанс получить рецензии на свою работу быстрее
+review__freeze-warn: >-
+  Внимание! Как только вы получите хотя бы один ответ на рецензию к этому шагу, изменить можно
+  будет только поля "Дополнительная информация" и поле описания "Критерий оценки", но не кол-во
+  максимальных баллов
+review__instructor-review: Это задание рецензируется преподавателем
+review__peer-review: Это задание рецензируется другим учащимся
+review__received-review: Полученные рецензии
+review__review: Рецензия
+review__review-another: >-
+  Рецензирование этого решения невозможно. Другое решение было отправлено на рецензию:
+review__saved-error: >-
+  При сохранении рецензии что-то пошло не так. Проверьте обязательные поля, интернет соединение и
+  сохраните ещё раз.
+review__saved-msg: Рецензия отправлена!
+review__start-button: Рецензировать
+review__start-eval: Начать рецензировать
+review__start-eval-extra: Рецензировать ещё
+review__student-choose: Отправьте лучшее решение на рецензию
+review__student-no-submissions: Сохраните хотя бы одно решение
+review__student-send: Отправить это решение на рецензию
+review__student-send-notice: Отправлено на рецензию
+review__submit-confirm: "Вы уверены, что хотите отправить эту рецензию?"
+review__wait-peers-giving-note: >-
+  Обратите внимание, что чем больше рецензий вы напишете, тем больше вероятность получить рецензию
+  на своё решение!
+scoreboard__current-user-rank: "Ваше место в рейтинге:"
+scoreboard__current-user-score: "Ваши баллы:"
+scoreboard__name: Имя
+scoreboard__no-contestants: Нет участников
+scoreboard__rank: Место
+scoreboard__score: Баллы
+search-members:
+  placeholder: "Поиск по имени, e-mail, ID"
+  search-btn: Найти
+search__button: Искать
+search__context: "Область поиска:"
+search__course: "Курс:"
+search__filters-warn: Попробуйте ослабить фильтры поиска
+search__info:
+  alter: Попробуйте популярные запросы
+  query: "Показаны результаты по запросу:"
+  query-original: "Искать вместо этого:"
+search__lesson: "Урок:"
+search__no-results: Ничего не найдено
+search__search: Поиск
+section-editor__begin-date: Дата открытия
+section-editor__step-content: Урок сгенерирован роботом ;)
+section_edit:
+  add_lesson_header: "Добавить урок в модуль «{title}»"
+  back: Вернуться
+  description: Дополнительное описание
+  exam_duration: Продолжительность экзамена
+  grading_policy:
+    descr: Как снижать баллы в зависимости от количества попыток решений
+    first_one: Ноль баллов начиная со второй попытки
+    first_three: Ноль баллов начиная с четвертой попытки
+    inverse: Снижать по формуле 1/N
+    no_discount: Не снижать
+  is_exam: Экзаменационный модуль
+  is_exam_without_progress: Скрывать правильность решений
+  is_random_exam: Экзамен со случайной выборкой вопросов
+  marked_delete: "Модуль «{title}» будет удален после сохранения курса"
+  needs-plan: >-
+    Чтобы вы могли опубликовать курс с такими настройками, нужно перевести его в {planTitle}-режим.
+    <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Подробнее о тарифах.</a>
+  no_req_section: Не выбран
+  points: Всего баллов
+  random_exam_course: Курс банк задач
+  random_exam_course_empty: Нет подходящих курсов
+  random_exam_problems_count: Количество заданий в экзамене
+  random_exam_select-course: (Выберите курс)
+  req_section: Требуемый модуль для открытия текущего
+  req_section_percent: >-
+    Необходимый процент баллов в модуле <strong>«{title}»</strong> для открытия текущего
+  settings: "Начисление баллов, зависимости между модулями, экзамены"
+  settings_title: 'Настройки модуля "{name}"'
+shortened-text-show-more: Ещё
+socket:
+  status-notok: Есть проблемы с подключением к серверу
+step-actions:
+  actions: Настройки шага
+  add-new-step: Добавить новый шаг
+  add-review: Добавить рецензирование
+  delete: Удалить шаг
+  download: Скачать шаг
+  upload: Импортировать шаг
+step-edit:
+  add-step: + Добавить шаг
+  correct-submission-feedback: Этот текст будет показан учащемуся в случае верного ответа.
+  hide-advanced-settings: Скрыть дополнительные настройки
+  limit-submissions-settings-description: "Посылать решения можно:"
+  limit-submissions-settings-inf: Без ограничений
+  limit-submissions-settings-note: >-
+    Note: эти ограничения влияют только на учащихся, тестирующих и модераторов. Администраторы и
+    преподаватели курса не имеют ограничений на попытки.
+  limit-submissions-settings-number: "Разрешено только "
+  limit-submissions-settings-number-after: " попыток"
+  limit-submissions-settings-title: Ограничение числа попыток
+  more-about:
+    admin: документацией к задаче на Linux
+    choice: документацией к тестовой задаче
+    code: документацией к задаче на программирование
+    dataset: документацией к задаче на обработку данных
+    external-grader: документацией к External grader
+    free-answer: документацией к задаче Свободный ответ
+    matching: документацией к задаче на соответствие
+    math: документацией к математической задаче
+    number: документацией к численной задаче
+    random-tasks: документацией к задаче со случайной генерацией условия
+    see: "Узнайте больше на странице с "
+    sorting: документацией к задаче на сортировку
+    string: документацией к текстовой задаче
+    table: документацией к табличной задаче
+  optional-correct-submission-feedback: Комментарий к верному ответу
+  optional-submission-feedback-title: Свои комментарии к ответам
+  optional-wrong-submission-feedback: Комментарий к неверному ответу
+  show-advanced-settings: Показать дополнительные настройки
+  unlock-solutions-forum-after: "после "
+  unlock-solutions-forum-after-success: только после правильного решения
+  unlock-solutions-forum-attempts: " попыток"
+  unlock-solutions-forum-settings-description: "Доступно после:"
+  unlock-solutions-forum-settings-note: >-
+    Note: Администраторы и преподаватели курса всегда имеют доступ к форуму решений
+  unlock-solutions-forum-settings-title: Обсуждение решений
+  wrong-submission-feedback: Этот текст будет показан учащемуся в случае неверного ответа.
+step__add-info: Выберите тип шага
+step__from: из
+step__next-tooltip: Следующий шаг
+step__not-found: "Шаг №{position} не был найден."
+step__not-ready-warn: 'Извините, эта задача ещё не готова.<br/>Статус задачи: "{status}".'
+step__submissions-left: >-
+  {count, plural, =1 {(осталась # попытка)} few {(осталось # попытки)} many {(осталось # попыток)}
+  other {(осталось # попыток)}}
+step__submissions-no-left: У вас не осталось попыток
+step__templates:
+  animation: ""
+  choice: >-
+    Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Чему
+    равняется 1004 разделить на 2?
+  code: >-
+    Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Напишите
+    программу, которая считает сумму двух чисел.
+  default: Вы можете изменить условие задания в этом поле и указать настройки ниже.
+  number: >-
+    Вы можете изменить условие задания в этом поле и указать настройки ниже. <br><br> Чему
+    равняется среднее арифметическое первых 50 натуральных чисел?
+  text: >-
+    Вы можете добавить в этот шаг текст, а также изображения, математические формулы, примеры кода
+    и многое другое.
+  video: ""
+submissions:
+  cant-review:
+    another: Другое решение отправлено на рецензию
+    evaluation: Ответ в обработке
+    label: Рецензирование невозможно.
+    teacher: Решение преподавателя отрецензировать нельзя
+    wrong: Ответ неверен
+  caption: Решения
+  empty-list:
+    for-learners: Вы ещё не решали эту задачу.
+    for-teachers: Никто ещё не решал эту задачу.
+    has-filters: Решения не найдены.
+    has-query: 'По запросу <strong>"{query}"</strong> найдено <strong>0</strong> решений.'
+    try-change-query: Попробуйте изменить параметры поиска.
+    try-change-query-filters: >-
+      Попробуйте изменить параметры поиска или <a href="{filter-reset-url}">сбросить фильтры</a>.
+    try-reset-filters: 'Попробуйте <a href="{filter-reset-url}">сбросить фильтры</a>.'
+  header: >-
+    Решения задач урока <a href="{step-url}">{lesson-title}</a> из курса <a
+    href="{course-url}">{course-title}</a>
+  header-without-course: 'Решения задач урока <a href="{step-url}">{lesson-title}</a>'
+  in-progress:
+    await-instructor-review: Ждёт оценки преподавателя
+    await-other-users-review: Ждёт оценки от других учащихся
+    await-review-tooltip: Нужны ещё рецензии на это решение.
+    await-twoway-review-tooltip: >-
+      {user} ещё не отправил все рецензии на чужие работы и не получил рецензии на свою.
+    await-user-review-tooltip: "{user} ещё не отправил все рецензии на чужие работы."
+  not-submitted:
+    label: Не отправлено на рецензию.
+    to-see: Посмотреть
+    tooltip: Нужно выбрать решение для проверки.
+  review-filter:
+    all: Любой статус рецензии
+    awaiting: Ожидают рецензии
+    done: Рецензирование завершено
+  search-filter-placeholder: "ID, email, имя, номер решения"
+  show-reviews:
+    done: "{done} из {needed} рецензий."
+    to-review: Рецензировать
+    to-see: Посмотреть
+    to-see-instructor-review: Посмотреть ответ преподавателя
+  sort:
+    asc: Сначала старые
+    desc: Сначала новые
+  status-filter:
+    all: Любой статус
+    correct: Верные
+    evaluation: В обработке
+    wrong: Неверные
+  table:
+    date: Дата отправки
+    reviews: Рецензии
+    score: Оценка
+    submissions: Решения
+    user: Пользователь
+submissions__a-lot-tips: У вас еще много подсказок.
+submissions__get-hint: Взять подсказку!
+submissions__next: Следующее
+submissions__no-tips-left: У вас не осталось подсказок. Но завтра появятся!
+submissions__prev: Предыдущее
+submissions__submission: решение
+submissions__tips-left: "У вас осталась {tips} подсказка на сегодня."
+submissions__tips-server-error: "Ошибка :( Не получилось получить подсказку."
+submissions__title: "Решения - шаг {step_position}"
+subscriptions__reset: Сбросить подписку
+subscriptions__reset-tooltip: получать только оповещения по умолчанию
+subscriptions__subscribe: Подписаться
+subscriptions__subscribe-lesson-comments: Подписаться на комментарии урока
+subscriptions__subscribe-step-comments: Подписаться на комментарии шага
+subscriptions__subscribe-tooltip: всегда получать оповещения
+subscriptions__unsubscribe: Отписаться
+subscriptions__unsubscribe-lesson-comments: Отписаться от комментариев урока
+subscriptions__unsubscribe-step-comments: Отписаться от комментариев шага
+subscriptions__unsubscribe-tooltip: никогда не получать оповещения
+syllabus_edit:
+  course-settings: Настройки запуска курса
+  deadlines:
+    course_begin_date: Начало курса
+    course_end_date: Конец курса
+    course_hard_deadline: Жесткий дедлайн
+    course_soft_deadline: Мягкий дедлайн
+    policy:
+      descr: Как начислять баллы
+      halved: Половина баллов
+      linear: Баллы убывают линейно
+      no_deadlines: Не учитывать дедлайны
+      "null": Как во всем курсе
+    section_begin_date: Начало модуля
+    section_end_date: Конец модуля
+    section_hard_deadline: Жесткий дедлайн
+    section_soft_deadline: Мягкий дедлайн
+    tooltip:
+      course_begin_date: >-
+        С этого момента всем учащимся, записанным на курс, будут доступны все уроки, в том числе
+        приватные.
+      course_end_date: >-
+        В этот момент учащиеся лишатся доступа к приватным урокам. Оставьте это поле пустым, если
+        не планируете скрывать уроки
+      course_hard_deadline: >-
+        Начиная с этого момента, учащиеся не будут получать баллы за решение задач
+      course_soft_deadline: >-
+        Начиная с этого момента, учащиеся будут получать меньше баллов за решение задач
+      section_begin_date: >-
+        С этого момента всем учащимся, записанным на курс, будут доступны все уроки модуля, в том
+        числе приватные.
+      section_end_date: >-
+        В этот момент учащиеся лишатся доступа к приватным урокам этого модуля. Оставьте это поле
+        пустым, если не планируете скрывать уроки
+      section_hard_deadline: >-
+        Начиная с этого момента, учащиеся не будут получать баллы за решение задач
+      section_soft_deadline: >-
+        Начиная с этого момента, учащиеся будут получать меньше баллов за решение задач
+  lesson_added: Урок успешно добавлен в курс
+  page-subtitle: Редактирование расписания
+  saved_msg: Курс успешно сохранен
+  section_added: Модуль успешно добавлен в курс
+  zero_sections: >-
+    В курсе пока нет ни одного урока.<br>Создайте первый модуль, чтобы добавить уроки
+teach-beta:
+  classes:
+    empty: >-
+      У вас пока нет классов. <a href='https://welcome.stepik.org/ru/class' target='_blank'>Что
+      такое класс?</a>
+    gradebook: Табель
+    reports: Отчёты
+    submissions: Решения
+    title: Классы
+  courses:
+    comments: Комментарии
+    empty: "У вас пока нет курсов, создайте первый."
+    filters:
+      all: Все курсы
+      draft: В разработке
+      inactive: Неактивные
+      private: Приватные
+      public: Открытые
+    gradebook: Табель
+    info-edit: Описание
+    no-results: Найдено <b>0</b> курсов.
+    no-results-reset-link: Сбросить фильтры
+    pending-reviews: >-
+      {count, plural, =1 {# решение на рецензию} few {# решения на рецензию} many {# решений на
+      рецензию} other {# решений на рецензию}}
+    permissions-edit: Права доступа
+    reports: Отчеты
+    search-placeholder: Название или ID курса
+    syllabus-edit: Содержание
+    title: Курсы
+  lessons:
+    empty: У вас пока нет уроков.
+    outside-course: Вне курса
+    permissions: Права доступа
+    reports: Отчеты
+    steps-count: >-
+      {count, plural, =1 {1 шаг} few {# шага} many {# шагов} other {# шагов} =0 {Пустой}}
+    title: Уроки
+  nav:
+    classes: Классы
+    courses: Курсы
+    lessons: Уроки
+    mailings: Рассылки
+    new-course: Новый курс
+    new-lesson: Новый урок
+    notifications: Уведомления
+  new-class:
+    title: Создание нового класса
+  new-course:
+    title: Создание нового курса
+  new-lesson:
+    title: Создание нового урока
+time:
+  minutes__short: мин.
+  seconds__short: сек.
+toc__progress:
+  goal:
+    best_result: До идеального результата осталось
+    certificate_distinction: До сертификата с отличием осталось
+    certificate_regular: До сертификата осталось
+    end_course: До окончания курса осталось
+  rank: в рейтинге курса
+  remaining:
+    get: >-
+      {count, plural, =1 {получить <span>#</span> балл} few {получить <span>#</span> балла} many
+      {получить <span>#</span> баллов} other {получить <span>#</span> баллов}}
+    learn: >-
+      {count, plural, =1 {учиться <span>#</span> час} few {учиться <span>#</span> часа} many
+      {учиться <span>#</span> часов} other {учиться <span>#</span> часов}}
+  title: прогресс по курсу
+topbar__create:
+  course: Новый курс
+  create: Создать
+  lesson: Новый урок
+unit_edit:
+  add_existed: Добавить ваш существующий урок
+  import: Импортировать уроки из файла
+  marked_delete: >-
+    Урок&nbsp;<strong>«{title}»</strong>&nbsp;будет удален из курса при сохранении
+  new_lesson: Создать урок
+  restore: Восстановить
+  title_placeholder: Введите название нового урока и нажмите Enter.
+user-subscribe:
+  followers: >-
+    {count, plural, =1 {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}
+  has-followers: >-
+    {count, plural, =1 {У вас # подписчик} few {У вас # подписчика} many {У вас # подписчиков}
+    other {У вас # подписчиков}}
+  subscribe: Подписаться
+  subscribe-process: Подписываем…
+  subscribed: Вы подписаны
+  unsubscribe-confirm: Вы действительно хотите отписаться?
+  unsubscribe-process: Отписываем…
+  unsubscribed: Вы отписались
+user__edit:
+  about: Обо мне
+  add_provider: Подключить
+  auth_social: Вход через социальные сети
+  change_password: Изменить пароль
+  city: Город
+  city_placeholder: Начните вводить свой город...
+  connected: Подключено
+  current_pass: Текущий пароль
+  disconnect: Отключить
+  edit-email:
+    add_button: Добавить почту
+    make-primary: Сделать основным
+    placeholder: Новый адрес
+    primary: Основной
+    remove: Удалить
+    resend-verification: Почта не подтверждена! Отправить код подтверждения.
+    table-header: Ваши почтовые адреса
+    verified: Подтверждён
+  edit_profile: Редактирование профиля
+  email: Изменить почту
+  forgot_pass: Вспомнить пароль
+  info: Редактировать профиль
+  language: Язык
+  legal_names_info: "Ваше официальное имя, используемое в сертификатах."
+  make_private: Сделать профиль приватным
+  new_pass: Новый пароль
+  notifications:
+    allow-likes: >-
+      Присылать уведомления, когда другие пользователи оценивают ваши комментарии или уроки
+    allow-push: Разрешить push-уведомления в браузере
+    course-updates:
+      announcements: Новости
+      announcements-hint: Получать уведомления о новостях в курсе
+      comments: Комментарии
+      comments-hint: Получать уведомления о новых комментариях в курсе
+      description: >-
+        Преподаватель может отправлять вам новости о специальных мероприятиях, новых материалах или
+        других событиях курса. Stepik будет отправлять регулярные уведомления, касающиеся вашего
+        прогресса обучения, в том числе напоминая о дедлайнах и новых комментариях в курсе.
+      instructor_reviews: Рецензии
+      instructor_reviews-hint:
+        "Получать уведомления о новых решениях, ожидающих рецензии преподавателя"
+      label: Обновления курса
+      reminders: Напоминания
+      reminders-hint: >-
+        Получать уведомления об открытии новых модулей в курсе и приближающихся дедлайнах
+      solutions: Решения
+      solutions-hint: Получать уведомления о новых решениях на форуме решений
+    delay: Интервал
+    header: Настройки уведомлений
+    language_en: Получать новости от Stepik на английском языке
+    language_ru: Получать новости от Stepik на русском языке
+    likes: Отметки 'Нравится'
+    mailings: Рассылки
+    menu-item: Уведомления
+    push: Push-уведомления
+    receiving: Уведомления
+    subscribed_for_marketing: Получать маркетинговые письма Stepik
+    subscribed_for_partners: Получать новости партнеров Stepik
+    will-not-receive: Не получать уведомлений
+    will-receive: Получать уведомления на почту
+    your-email: Ваша почта
+  privacy: Приватность
+  profile_pic: Аватарка
+  remove_pic: Убрать
+  repeat_pass: Новый пароль (ещё раз)
+  save: Сохранить изменения
+  set_password: Установить пароль
+  short_bio: Краткая биография<br>(до 255 символов)
+  social_links: Ссылки на социальные сети
+  social_links_description: Эти ссылки будут отображаться в вашем профиле
+  time:
+    12h: 12 часов
+    1d: 1 день
+    1h: 1 час
+    30m: 30 минут
+    3h: 3 часа
+    5m: 5 минут
+    6h: 6 часов
+  upload_pic: Загрузить
+  woof__account-disconnected: Профиль социальной сети отключён.
+  woof__account-disconnected-failed:
+    Невозможно отключить аккаунт последней социальной сети до установки пароля.
+  woof__avatar-changed: Ваш аватар был изменён.
+  woof__avatar-failed: >-
+    Аватар не был изменён. Файл, который вы загрузили, повреждён или не является изображением.
+  woof__avatar-removed: Ваш аватар бы успешно удалён.
+  woof__confirmation-sent: "Письмо с подтверждением отправлено на почту {email}"
+  woof__email-added: Почтовый адрес добавлен.
+  woof__email-disconnected: "{email} удалён."
+  woof__links-saved: Ссылки на соцсети обновлены.
+  woof__mismatch: "Несовпадение. Удостоверьтесь, что вы ввели новый пароль дважды."
+  woof__pass-changed: Пароль успешно изменён.
+  woof__pass-empty: Необходимо заполнить все поля.
+  woof__pass-error: >-
+    Ошибка при смене пароля. Пароль не изменён. Проверьте, правильно ли введён текущий пароль.
+  woof__primary-email-already-used: Email уже используется в качестве основного в другом аккаунте.
+  woof__primary-email-changed: Основной адрес обновлён.
+  woof__profile-failed:
+    "Не удалось сохранить профиль, пожалуйста, заполните все обязательные поля."
+  woof__saved: Ваш профиль обновлён.
+  woof__settings-changed: Настройки обновлены.
+  your_last_name: Фамилия
+  your_name: Ваше имя
+user__knowledge-title: Знания
+user__lock-course-title: Этот курс доступен ограниченному кругу лиц
+user__lock-title: Этот урок доступен ограниченному кругу лиц
+user__profile: Профиль
+user__reputation-title: Репутация
+video-editor:
+  error: >-
+    Во время загрузки видео ({video_id}){filename} произошла ошибка. Проверьте, что вы загрузили
+    правильный файл.
+  filename: " имя файла: <b>{filename}</b>"
+  help: >-
+    <p>Вы можете загружать видео до 200 Мегабайт.</p><p>Для сжатия больших
+    файлов:<ol><li>Используйте <tt>ffmpeg</tt> с кодеком <tt>H.264</tt>:<br><code>ffmpeg -i
+    INITIAL_VIDEO.mp4 -codec:a copy -vcodec libx264 -preset slow -crf 25
+    COMPRESSED_VIDEO.mp4</code></li><li>Используйте <tt>Avidemux</tt> — бесплатный инструмент,
+    доступный для всех операционных систем.</li><li>Также смотрите <a
+    href="https://vimeo.com/help/compression" rel="noopener noreferrer"
+    target="_blank">рекомендации Vimeo</a> (на английском).</li></ol></p>
+  link-placeholder: или вставьте сюда ссылку на видео
+  ready: "Видео ({video_id}){filename} готово. Вы можете загрузить новое видео."
+  remove: Удалить видео
+  replace-video: Заменить видео
+  subtitles: Ниже вы можете добавить субтитры
+  subtitles-placeholder: Субтитры в формате WebVTT
+  upload-date: Дата загрузки
+  upload-label: Загрузите видео по этой ссылке из интернета
+  upload-video: Загрузите видео из файла
+  uploaded: >-
+    Видео ({video_id}){filename} обрабатывается и скоро будет загружено!<br>Вы можете покинуть
+    страницу, но не забудьте сохранить изменения.
+video-player__error-support: >-
+  Подробнее про проблемы с видео читайте по <a
+  href="https://support.stepik.org/hc/articles/360000250673" target="_blank">ссылке</a>.
+video-player__next-step-cancel: Остаться на этом шаге
+video-player__next-step-warn_p1: Следующий шаг
+video-player__next-step-warn_p2: откроется автоматически
+video-player__no-flash: >-
+  Ваш браузер не поддерживает mp4<br>пожалуйста, установите flash player<br>или просто скачайте
+  видео по ссылке ниже ⤓
+video-player__start-sign: Начать просмотр
+video__upload-failed: >-
+  Произошла ошибка при загрузке видео-файла. Пожалуйста, проверьте, что размер вашего файла не
+  превышает 200 мегабайт.
+woof__user_already_registered: У вас уже есть аккаунт.
+woof_label:
+  alert: Внимание
+  info: Информация
+  success: Успешно
+  warning: Предупреждение

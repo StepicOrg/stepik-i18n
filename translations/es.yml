@@ -1,0 +1,777 @@
+---
+adaptive:
+  next: Siguiente recomendación
+  nothing: No existen recomendaciones para usted. Utilice Syllabus.
+  too-boring: Muy aburrido
+  too-hard: Muy difícil
+attachments__list-delete-attachment-tooltip: Borrar
+attachments__list-open-attachment-tooltip: Abierto
+attachments__list-title: Archivos adjuntos
+attachments__list-too-big-file-warn: "Tamaño máximo de archivo para adjuntar: {max_size}."
+breadcrumbs__certificate-edit: Certificado
+breadcrumbs__course-edit: Editar
+breadcrumbs__course-grade-book: cuaderno de notas
+breadcrumbs__course-reports: Informes
+breadcrumbs__course-syllabus: Silaba
+breadcrumbs__home: Casa
+breadcrumbs__instructor-dashboard: Tablero de instrumentos instructor
+breadcrumbs__lesson: lección Página
+breadcrumbs__lesson-edit: Editar
+breadcrumbs__lesson-reports: Informes
+breadcrumbs__notifications-my: Mis eventos
+breadcrumbs__notifications-new: nuevas notificaciones
+breadcrumbs__review: revisión
+breadcrumbs__review-session: sesión de revisión
+breadcrumbs__submissions: presentaciones
+button__new-course: Crear un curso
+button__new-lesson: Crear una lección
+certificate-editor:
+  auto-issue-label: emitir certificados de automóviles
+  auto-issue-text:
+    both: >-
+      Los estudiantes recibirán certificados cuando alcanzan una puntuación requerida:
+      <b>{regular}</b> para el certificado normal, <b>{distinction}</b> para el certificado con la
+      distinción.
+    distinction: >-
+      Los estudiantes recibirán certificados cuando alcanzan una puntuación requerida:
+      <b>{distinction}</b> para el certificado con la distinción.
+    regular: >-
+      Los estudiantes recibirán certificados cuando alcanzan una puntuación requerida:
+      <b>{regular}</b> para el certificado normal.
+  download-distinction: Descargar certificado con distinción
+  download-regular: Descargar el certificado regular de
+  header: configuración del certificado
+  issue-button: emitir certificados
+  issue-disabled: No se puede emitir certificados antes de establecer puntos mínimos.
+  issue-header: emitir certificados
+  issue-text-1: >-
+    <b>¡Atención!</b> Usted puede emitir certificados manualmente solamente después de la última
+    fecha límite, en su curso después de <b>{deadline}</b>.
+  issue-text-2:
+    both: >-
+      Los estudiantes que alcanzaron <b>{regular}</b> recibirán certificado regular, los
+      estudiantes que alcanzaron <b>{distinction}</b> recibirá el certificado con la distinción.
+    distinction: >-
+      Los estudiantes que alcanzaron <b>{distinction}</b> recibirá el certificado con la
+      distinción.
+    regular: >-
+      Los estudiantes que alcanzaron <b>{regular}</b> recibirán certificado regular.
+  max-points: "Total de puntos en su curso:"
+  minimal-points-distinction: "puntos mínimos requeridos para <b>certificado con distinción</b>:"
+  minimal-points-regular: "puntos mínimos requeridos para <b>certificado regulares</b>:"
+  org-header: logotipo de la Organización
+  org-label: "Imagen con transparente (png), altura = 150 px"
+  org-placeholder: Lugar para el logotipo de la organización
+  show-distinction: Mostrar certificado con distinción
+  show-regular: Mostrar certificado regulares
+  signs-header: instructores firmas
+  signs-label: "Imagen con transparente (png), width = 3000 px, altura = 484 px"
+  signs-placeholder: Lugar para la firma
+  upload-again: Sube de nuevo
+  upload-file: Subir archivo
+comments__abuse: No me gusto
+comments__abuse-tooltip: marca de comentario como no me gusta
+comments__active-order: Mas activo
+comments__auth-warn: Para unirse a esta discusión que tiene que
+comments__by-date-order: últimos debates
+comments__default-order: Lo más popular
+comments__delete: Borrar
+comments__delete-error: al eliminar el comentario de error
+comments__delete-tooltip: eliminar este comentario
+comments__deleted-by: suprimido
+comments__deleted-by-user: por
+comments__discussion-link: enlace a esta discusión
+comments__empty-disc-warn: Su comentario está vacía
+comments__gradebook: grados
+comments__gradebook-tooltip: libro de calificaciones para el autor de este comentario
+comments__load: Mostrar discusiones
+comments__load-replies: cargar más respuestas
+comments__network-error: Algo salió mal. Refrescar la página para los nuevos comentarios.
+comments__not-found: "Сomment #{comment_id} ha sido borrada"
+comments__pin: Alfiler
+comments__pin-tooltip: mostrar este comentario en la parte superior
+comments__pinned: clavado
+comments__pinned-tooltip: Este comentario está fijado (será siempre en la parte superior)
+comments__post-reply: Enviar respuesta
+comments__recent-order: Actividad reciente
+comments__replies-hide: Ocultar las respuestas
+comments__replies-show: "{count, plural, =1 {Mostrar # respuesta} other {Mostrar # respuestas}}"
+comments__replies-toggle-tooltip: respuestas de palanca
+comments__reply: Respuesta
+comments__reply-link: enlace a esta respuesta
+comments__reply-tooltip: responder a este comentario
+comments__staff-badge: Stepik equipo
+comments__staff-replied: El personal respondió
+comments__submissions: presentaciones
+comments__submissions-tooltip: presentaciones por autor de este comentario
+comments__submit-error: No se puede enviar su comentario = (
+comments__teacher-badge: El personal de golf
+comments__unpin: Desprender
+comments__unpin-tooltip: Mostrar comentario en orden común
+common__activity: Actividad
+common__back-link: Espalda
+common__back-to-step-link: Volver al paso
+common__certificate: Certificado
+common__certificate-distinction: Certificado con distinción
+common__challenge: Reto
+common__close-window: Cerrar ventana
+common__cookies-warn: >-
+  Ups! su navegador parece haber desactivado las cookies. Asegúrese de que las cookies estén
+  habilitadas o tratan de abrir una nueva ventana del navegador.
+common__course: Curso
+common__download-video: Descargar video
+common__edit: Editar
+common__error-loading: "[{resource_name}] Error al cargar!"
+common__experimental: Experimental
+common__feedback: Mostrar retroalimentación completa
+common__feedback-hide: Esconder
+common__fixed: Marcar como fijo
+common__fullscreen: Pantalla completa
+common__hard-deadline: fecha límite duro
+common__input-length-warn:
+  "{count, plural, other {# caracteres como mínimo} =1 {# mínimo de caracteres}}"
+common__knowledge: Conocimiento
+common__lessons: Lecciones
+common__link: enlazar
+common__load-more-button: Carga más
+common__loading-text: cargando...
+common__login: Iniciar sesión
+common__logout: Cerrar sesión
+common__logout-confirm: ¿Seguro que desea finalizar la sesión?
+common__min: min
+common__my-courses: Mis cursos
+common__notifications: Notificaciones
+common__number-sign: "#"
+common__points: "{count, plural, =1 {# point} other {# points}}"
+common__print: Imprimir
+common__problem: Problema
+common__profile: Perfil
+common__reload: Recargar
+common__reports-expiration: Informes se eliminan después de 7 días
+common__reputation: Reputación
+common__save-button: Salvar
+common__save-failed-warn: Error al guardar.
+common__saving-text: ahorro...
+common__search-placeholder: Escribe para buscar
+common__self-voting: No se puede votar por su propio contenido
+common__settings: Ajustes
+common__soft-deadline: plazo flexible
+common__step: Paso
+common__submission: Sumisión
+common__submission-correct: correcto
+common__submission-evaluation: evaluación
+common__submission-wrong: incorrecto
+common__submit: Enviar
+common__submit_file: presentar archivo
+common__symbols_left: >-
+  {count, plural, =1 {# símbolo de la izquierda} other {# símbolos de la izquierda}}
+common__unauth-voting: Debe iniciar sesión para la votación.
+common__unsaved-warn: Todos los cambios no guardados se perderán!
+course-edit__cancel: Volver
+course-edit__new-module: Agregar módulo
+course-edit__save: Guardar cambios
+course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
+course-index__cert: Certificado
+course-index__ends: "termina:"
+course-index__enrolled-msg: ¡Estás inscrito!
+course-index__instructors: "{count, plural, other {Los instructores} =1 {Instructor}}"
+course-index__lang: Idioma
+course-index__starts: "Empieza:"
+course-index__workload: carga de trabajo
+course-info-edit__add: Añadir
+course-info-edit__author-placeholder: Identificación del autor ...
+course-info-edit__authors-403: Sólo supuesto propietario puede editar autores.
+course-info-edit__cover: "Cargar nuevo logotipo de curso: width = 230 px, altura = 230 px"
+course-info-edit__instructor-placeholder: Identificación del instructor ...
+course-info-edit__instructors-403: Sólo supuesto propietario puede editar instructores.
+course-info-edit__remove-author: Retire autor
+course-info-edit__remove-instructor: Retire el instructor
+course-new:
+  cancel: Cancelar
+  create: Crear
+  header: Crear nuevo curso
+  title: Título
+course-syll__begins: Fecha de inicio
+course-syll__scores: tu / nota máx
+course__add-annon: El nuevo anuncio
+course__add-to-favorites-link: Agregar a los favoritos
+course__annon-delete: Borrar
+course__annon-delete-confirm: Eliminar este anuncio?
+course__annon-delete-done: El anuncio ha sido borrada
+course__annon-delete-error: No se puede eliminar el anuncio
+course__annon-empty: Este curso tiene ningún boletín aún.
+course__annon-save: Guardar como borrador
+course__annon-send: Enviar
+course__annon-send-done: El anuncio comenzó el envío
+course__annon-send-error: No se puede enviar el anuncio
+course__annon-test: Prueba
+course__annon-test-done: electrónico de prueba enviado con éxito
+course__annon-test-error: No se puede enviar correo electrónico de prueba
+course__annon-test-tooltip: Enviado este anuncio a su dirección de correo electrónico sólo
+course__annon-tmpl-subj: El nuevo anuncio
+course__annon-tmpl-text: "Hola {%user_name%}!"
+course__certificate-distinction: Certificado con distinción
+course__certificate-link: Certificado
+course__certificate-regular: Certificado regular
+course__comments-link: comentarios
+course__continue-empty-warning: El curso no es un solo paso
+course__continue-learn: Continuar
+course__continue-tooltip: Continuar desde donde se detenga la última vez
+course__drop-confirm: ¿Está seguro de que quiere eliminar este curso?
+course__drop-fail: No se puede quitar este curso.
+course__drop-link: Dejar el Curso
+course__drop-success: Curso cayó. Vuelve a cargar la página.
+course__info-link: Información
+course__instructor-dashboard-link: Tablero de instrumentos instructor
+course__join-button: Participar en este curso
+course__join-fail: >-
+  No se puede entrar al mismo (código de error: {status}). Intenta volver a cargar esta página.
+course__news-link: Noticias
+course__remove-from-favorites-link: Remover de favoritos
+course__scoreboard-link: Marcador
+course__syll-link: Silaba
+deadlines-editor__begin_date_source: módulo de la fecha de apertura
+deadlines-editor__course-deadlines: plazos predeterminados curso
+deadlines-editor__course-deadlines_tooltip:
+  Funciona si otros plazos no están especificados en la configuración del módulo
+deadlines-editor__course_begin_date_source: Curso de fecha abierta
+deadlines-editor__course_begin_date_tooltip:
+  "fecha abierta: cuando se inicia el curso para los usuarios inscritos."
+deadlines-editor__course_end_date_source: Por supuesto la fecha de cierre
+deadlines-editor__course_end_date_tooltip: >-
+  Fecha de cierre: cuando el curso se desactivará (fecha de cierre se suele dejar vacío).
+deadlines-editor__course_hard_deadline_source: Por supuesto fecha límite duro
+deadlines-editor__course_soft_deadline_source: Por supuesto plazo flexible
+deadlines-editor__end_date_source: módulo de la fecha de cierre
+deadlines-editor__grading_policy_tooltip: >-
+  Clasificación de la política - cómo disminuir los costos entre los plazos blandos y duros.
+deadlines-editor__hard_deadline_source: Módulo fecha límite duro
+deadlines-editor__hard_deadline_tooltip:
+  "fecha límite duro: cuando el costo de cada paso será cero."
+deadlines-editor__section_begin_date_tooltip:
+  "fecha abierta: al arrancar el módulo para los usuarios inscritos."
+deadlines-editor__section_end_date_tooltip: >-
+  Fecha de cierre: cuando el módulo se desactivará (fecha de cierre se suele dejar vacío).
+deadlines-editor__soft_deadline_source: plazo flexible módulo
+deadlines-editor__soft_deadline_tooltip:
+  "fecha límite blanda: cuando se reduce el costo de cada paso."
+discussions__delete-prompt: Eliminar este comentario?
+discussions__none: No hay discusiones. No dude en iniciar uno.
+discussions__start-disc-button: Deje un comentario
+edit-ui__video-uploading-warn: El video todavía se está subiendo. ¿Seguro que deseas partió?
+footer__active-count: >-
+  {count, plural, other {<strong>#</strong> aprendices activos} =1 {<strong>#</strong> aprendices
+  activos}}
+footer__active-count-desc: >-
+  Únicos usuarios registrados siendo activamente el aprendizaje y la solución ejercicios durante
+  los últimos 3 meses
+footer__contacts: contactos
+footer__helpcenter: Centro de ayuda
+footer__press: Prensa
+footer__pricing: Precios
+footer__quiz-count: >-
+  {count, plural, other {<strong>#</strong> problemas} =1 {<strong>#</strong> problemas}}
+footer__quiz-count-desc: Número de problemas en la plataforma
+footer__team: Equipo
+index__registration-link: Registro
+instr-review__student-first-step: >-
+  <strong>Etapa 1 de cada 3</strong>. Para los puntos, <strong>guardar</strong> y
+  <strong>enviar</strong> la mejor presentación al instructor para su revisión
+instr-review__student-second-step: >-
+  <strong>Etapa 2 de cada 3</strong>. Presentación enviada a revisar, <strong>esperar a que la
+  retroalimentación</strong>
+instr-review__student-third-step: >-
+  <strong>Etapa 3 de 3</strong>. Tienes <a href="{url}">revisión</a> del instructor. Resultado:
+  <strong>{result}%</strong>
+instr-review__teacher-start: Comience revisión
+instruction__add-rubric-button: Añadir nueva matriz de valoración
+instruction__delete: Retire la revisión
+instruction__description-help: >-
+  Usted puede agregar cualquier información aquí, que puede ser útil para los revisores.
+instruction__frozen-description: >-
+  Revisión ya ha comenzado. Puede cambiar las descripciones. No se puede cambiar el costo y añadir
+  / eliminar rúbricas.
+instruction__header: Reglas de revisión
+instruction__max-point: Número máximo de puntos
+instruction__max-point-placeholder: "entre {greater} y {less}"
+instruction__reviewcount-help: >-
+  Los estudiantes reciben resultados de la lección sólo cuando conseguir un número requerido de
+  comentarios en sus presentaciones.
+instruction__reviews-required: "número requerido de revisiones para cada presentación:"
+instruction__rubric: Rúbrica de puntuación
+instruction__rubric-deleted: (Suprimido)
+instruction__rubric-help: >-
+  rúbricas de puntuación pueden ayudar a los estudiantes a ser evaluadores reflexivos propios y
+  otros trabajan.
+instruction__rubric-template: Grado esta sumisión de 0 a 3
+instruction__strategy-help: >-
+  Puede dar a sus críticas a las presentaciones de los estudiantes, para darles la puntuación más
+  objetiva. También puede activar la opción, permite a los estudiantes para revisar el uno al otro.
+instruction__strategy-instructor: Solamente los instructores (maestros)
+instruction__strategy-instructor-tooltip:
+  Sólo los profesores (Usted y los demás autores de esta lección)
+instruction__strategy-label: Quien revisará envíos de los estudiantes?
+instruction__strategy-peer: Los estudiantes y profesores (maestros)
+instruction__strategy-peer-tooltip:
+  Los estudiantes entre sí. Los maestros (Usted) también puede revisar
+instruction__teacher-comment: Comentario del profesor
+instruction__will_be_deleted: >-
+  Revisando está marcado para su eliminación! <br> Ésta será borrada después de pulsar "Guardar".
+  Haga clic aquí para deshacer.
+instructor-dashboard:
+  info: "Probablemente hay algunos problemas con los pasos siguientes:"
+  kind:
+    abuse_comment_votes: comentarios abusados
+    correct_ratio: baja tasa de éxito
+    magic: magia
+    pending_comments: A la espera de los comentarios
+    plagiarized_submissions: Plagio
+    reviews_outliers: Los comentarios de los valores atípicos
+  no-issues:
+    default: "Sin problemas :)"
+  step-stat:
+    abused: abusado
+    abused-tooltip: Conde de disgustos para comentarios en este paso.
+    comments: comentarios
+    pending: pendiente
+    pending-tooltip: Comentarios con ninguna respuesta
+    plagiarism: >-
+      {count, plural, =1 {# presentación plagiado} other {# presentaciones plagiados}}
+    plagiarism-tooltip: Conde de presentaciones que marcaron como plagiado por el robot.
+    quiz-error: Prueba de error !!!
+    quiz-error-tooltip: >-
+      Hay algunos errores en la prueba en sí - los estudiantes no tienen ninguna posibilidad de
+      resolverlo.
+    quiz-warning: la advertencia del concurso!
+    quiz-warning-tooltip: Hay algunas advertencias en concurso en sí. Será mejor que resolverlos.
+    reviews-outliers: >-
+      {count, plural, =1 {# revisiones valor atípico} other {# revisiones valores atípicos}}
+    reviews-outliers-tooltip: Conde de comentarios que marcaron valores anómalos por robot.
+    submissions: presentaciones
+    success-rate: tasa de éxito
+    success-rate-tooltip: Conde de presentaciones de éxito / Conde de envíos totales.
+    total-comments: total
+lesson-end:
+  course_score: "Tu puntuación:"
+  next_unit_p1: Siguiente lección
+  next_unit_p2: a partir de este curso estará disponible en
+  to_congrats_header_course: "Felicitaciones, usted tiene que por supuesto"
+  to_congrats_header_lesson: "módulo de felicitaciones, usted acaba de terminar"
+  to_syllabus: Para programa del curso
+lesson-new:
+  fail: >-
+    Lección no se ha guardado. Compruebe su conexión a Internet y vuelve a intentarlo.
+  header: Crear nueva lección
+  long-title: >-
+    El título es demasiado largo. Todavía se puede crear lección, pero el título se reducirá a 64
+    símbolos.
+lesson__attributes:
+  comments: comentarios habilitadas
+  public: Público
+lesson__autogenerated-step: >-
+  Se eliminarán todos los pasos. Este paso se ha generado. Cambiar el texto y guardar lección.
+lesson__comments-disabled: Instructor deshabilitado comentarios para esta lección.
+lesson__created-by: lección
+lesson__delete-confirm: ¿Está seguro que desea borrar la lección?
+lesson__enroll-invite-warning: >-
+  Lección que está intentando abrir está disponible en <a
+  href="/course/{course_slug}">"{course_title}"</a> curso, que está disponible para que se
+  inscriba.
+lesson__enroll-warning: >-
+  Este curso es privado y requiere un acceso especial (por ejemplo: enlace de invitación). Pero
+  todavía se puede aprender esta lección pública.
+lesson__header: ajustes de las lecciones
+lesson__likes_dislike_tooltip: Disgusto
+lesson__likes_like_tooltip: Me gusta
+lesson__passed: total del pasado
+lesson__print-soon-note: lección de carga. La impresión comenzará pronto ...
+lesson__private-warning: >-
+  Esta lección es privado y requiere un acceso especial (por ejemplo: enlace de invitación).
+lesson__private-warning-guest: >-
+  Esta lección es privado y requiere un acceso especial (por ejemplo: enlace de invitación). <a
+  href="{login_link}?next={current_url}"> Por favor ingresa en Stepik primero!</a>
+lesson__quiz-print-notify: "Para resolver este problema, visite"
+lesson__report-common: informes comunes
+lesson__scores: tu / nota máx
+lesson__settings: ajustes
+lesson__statement: declaración
+lesson__time_to_complete: El tiempo promedio para completar la lección (en minutos)
+lesson__video-print-notify: "Para ver este video, visita"
+lesson__views: vistas totales
+library__leaders: Top usuarios
+library__leaders-empty: Ningún usuario superior todavía
+library__leaders-knowledge: Conocimiento
+library__leaders-reputation: Reputación
+license__license: Licencia
+material__video-not-ready: El vídeo no se ha subido aún o procesado.
+notification__favorite: favorito
+notification__muted: apagado
+notifications__empty-list: No Notificaciones
+notifications__events-link: Mis eventos
+notifications__flag-favorite: favoritos
+notifications__flag-read: Leer
+notifications__flag-unread: No leído
+notifications__items-count: "{count, plural, other {# artículos} =1 {# elemento}}"
+notifications__mark-all-btn: marcar todo como leido
+notifications__mark-all-confirm: Marcar todos como leídos notificaciones?
+notifications__mark-fav: para favoritos
+notifications__mark-one: Marcar como leído
+notifications__type-comments: comentarios
+notifications__type-default: Otro
+notifications__type-learn: Aprendizaje
+notifications__type-review: opiniones
+notifications__type-teach: Enseñando
+notifications__unmark-fav: Remover de favoritos
+notifications__unmark-one: marcar como no leido
+notifications__unmute-tooltip: No silenciado similares
+peer-review__first-step: >-
+  <Strong>Etapa 1 de 4</strong>. Para los puntos, <strong>guardar</strong> y
+  <strong>enviar</strong> la mejor presentación a <strong>otros estudiantes</strong> para su
+  revisión
+peer-review__fourth-step: >-
+  {count, plural, other {<strong>Etapa 4 de 4</strong>. Tienes <a href="{url}"># revisiones</a>. El
+  resultado es la mediana de {minimum} mínimas comentarios: <strong>{result}%</strong>} =1
+  {<strong>Etapa 4 de 4</strong>. Tienes <a href="{url}"># revisión</a>. Resultado:
+  <strong>{result}%</strong>}}
+peer-review__nothing: No se presentaron para su revisión
+peer-review__second-step: >-
+  {count, plural, other {<strong>Etapa 2 de 4</strong>. Make <strong># revisiones</strong> para
+  otros estudiantes} =1 {<strong>Etapa 2 de 4</strong>. Hacer revisión <strong>#</strong> para
+  otros estudiantes}}
+peer-review__third-step: >-
+  {count, plural, other {<strong>Etapa 3 de cada 4</strong>. Usted dio sus revisiones. Usted
+  necesita recibir <strong># revisiones</strong> por los puntos. Espere} =1 {<strong>Etapa 3 de
+  cada 4</strong>. Usted dio sus revisiones. Usted necesita recibir <strong>revisión #</strong> por
+  los puntos. Espere}}
+peer-review__to-give: >-
+  {count, plural, other {<strong># revisiones</strong> que quedan} =1 {<strong># de
+  revisión</strong> a la izquierda}}
+plugin__admin: Desafío Linux
+plugin__admin-description: Configurar un servidor remoto
+plugin__chemical: problema químico (obsoleto)
+plugin__chemical-description: Introducir una fórmula química
+plugin__choice: Multiple Choice Quiz
+plugin__choice-description: Seleccionar una mejor respuesta posible de la lista
+plugin__code: Desafío código
+plugin__code-description: "Escribir un programa, prueba usando stdin stdout →"
+plugin__dataset: Desafío de datos
+plugin__dataset-description: Procesar un conjunto de datos aleatorios dentro del plazo
+plugin__fill-blanks: Llenar los espacios en blanco
+plugin__fill-blanks-description: Llenar los espacios en blanco
+plugin__free-answer: Respuesta libre
+plugin__free-answer-description: Escribe un ensayo
+plugin__linux-code: Desafío código de Linux
+plugin__linux-code-description: Escribir un programa
+plugin__matching: Problema coincidente
+plugin__matching-description: Coinciden con dos listas
+plugin__math: Problema de matemáticas
+plugin__math-description: Introducir una fórmula matemática
+plugin__number: Problema número
+plugin__number-description: Introduzca una respuesta numérica
+plugin__puzzle: Rompecabezas
+plugin__puzzle-description: Coloque las piezas de imagen en una imagen completa
+plugin__pycharm: JetBrains IDE Challenge (versión alfa)
+plugin__pycharm-description: Resolverlo utilizando JetBrains IDE
+plugin__random-tasks: Problema de tareas al azar
+plugin__random-tasks-description: Introduzca una respuesta numérica
+plugin__schulte: Schulte Tabla Problema
+plugin__schulte-description: Encuentra los números en el orden correcto
+plugin__sorting: Problema de clasificación
+plugin__sorting-description: Ordenar una lista dada
+plugin__sql: Desafío SQL
+plugin__sql-description: Introduce una consulta SQL
+plugin__string: Problema de texto
+plugin__string-description: Escribir una respuesta en forma de texto (cadena)
+plugin__table: Problema mesa
+plugin__table-description: Partido de la mesa
+plugin__trik: TRIK Estudio Challenge
+plugin__trik-description: Programar el robot en TRIK Estudio
+plugin__trik-download-dataset: Descargar TRIK Studio guardar
+profile:
+  certificate-empty-list: No es necesario que todos los certificados todavía.
+  certificates: Certificados
+  courses-empty-list: No se encontraron cursos
+  courses-empty-list-call-to-action: Echa un vistazo a nuestros cursos
+  joined-date: Unido
+  knowledge-tooltip: >-
+    Obtiene puntos de conocimiento para completar lecciones. Solo los pasos con más de 100 envíos
+    cuentan.
+  my-courses: Mis cursos
+  profile: Perfil
+  reputation-tooltip: >-
+    Obtienes puntos de reputación cuando otros resuelven tus lecciones o te gustan tus comentarios.
+    Solo los pasos con más de 100 envíos cuentan.
+  teaching: Enseñando
+quiz__again: resolver de nuevo
+quiz__answer-received: Su respuesta fue salvado.
+quiz__attempt-loading-error: >-
+  We can not prepare challenge for you right now. Probably, server overloaded. Please, try again
+  later.
+quiz__attempt-outdated: >-
+  ¡Lo siento! Este problema ha sido actualizado por un profesor. Usted tiene que empezar de nuevo.
+  Su puntuación para las presentaciones anteriores se conserva.
+quiz__attempt-time-limit: "<strong>Límite de tiempo:</strong>"
+quiz__attempts-unlimited: Usted tiene una cantidad ilimitada de intentos.
+quiz__correct-ratio-tooltip: >-
+  proporción correcta: # presentaciones de éxito / todas las presentaciones (se actualiza cada 2
+  min)
+quiz__download-dataset: Descargar el conjunto de datos
+quiz__download-dataset-last: Descargar el último conjunto de datos
+quiz__download-submission-last: Descargar tu última presentación
+quiz__empty-reply-warn: Necesitamos una respuesta. presentaciones en blanco no están permitidos!
+quiz__eval: Evaluación ... Puede dejar este paso.
+quiz__eval-eta: "momento de la evaluación estimado:"
+quiz__next-button: Próximo paso
+quiz__p2p: Este problema se incluye la revisión
+quiz__p2p-new: Presentar esta solución para su revisión
+quiz__passed-by-tooltip: Aprobada por (actualiza cada 2 min)
+quiz__reset-prompt: ¿Estás seguro? Esto restablecerá el problema!
+quiz__restart: Empezar de nuevo (reset)
+quiz__retry: Inténtalo de nuevo
+quiz__signup-link: Para guardar su progreso por favor ingresa primero
+quiz__start-button: Haga clic aquí para empezar a resolver
+quiz__status-service: "Estado del servicio:"
+quiz__status-service__down: >-
+  El servicio parece estar roto y podría no funcionar correctamente en este momento. Sabemos de eso
+  y encontrar una solución lo más pronto.
+quiz__status-service__partially-up: >-
+  El servicio puede no funcionar correctamente en este momento. Sabemos de eso y encontrar una
+  solución lo más pronto.
+quiz__submissions-link: sus presentaciones
+quiz__time-over: límite de tiempo excedido!
+quiz__timelimit: límite
+quiz__wrong: "> Incorrecto."
+reminders:
+  cancel: Restaurar mis presentaciones!
+  intro: "Solucionar concursos de nuevo:"
+  lesson-intro: Sus presentaciones están ocultos.
+  link-to-list: recordatorios
+  nothing: No hay nada que recordar.
+reports:
+  class_download_grade_book:
+    name: libro de calificaciones
+  course_download_activity_basic:
+    name: la actividad de los alumnos
+  course_download_activity_full:
+    name: la actividad de los alumnos (completo)
+  course_download_cheating:
+    name: Engañando
+  course_download_comments:
+    name: comentarios
+  course_download_exam_sessions:
+    name: Sesiones de examen
+  course_download_grade_book:
+    name: libro de calificaciones
+  course_download_grade_book_without_deadlines:
+    name: libro de calificaciones sin plazos
+  course_download_learners:
+    name: los alumnos del curso
+  course_download_payments:
+    name: Pagos
+  course_download_plagiarism:
+    name: Plagio
+  course_download_reviews_outliers:
+    name: opiniones extrañas
+  course_download_steps_stats:
+    name: estadísticas de paso
+  course_download_structure:
+    name: estructura de los estudios
+  course_download_submissions_basic:
+    name: presentaciones de los alumnos
+  course_download_submissions_full:
+    name: presentaciones de los alumnos (completo)
+  course_download_teachers:
+    name: profesores del curso
+  course_download_time_to_complete:
+    name: Tiempo para completar
+  create: Crear
+  download: archivos
+  lesson_download_grade_book:
+    name: Lessona Ciudad de libro
+  lesson_download_structure:
+    name: estructura de la lección
+  lesson_download_submissions_full:
+    name: presentaciones de los alumnos (completo)
+  loading: Generación de
+  name: Informe
+  status: Estado
+  step_download_plagiarism:
+    name: Plagio
+  step_download_reviews:
+    name: opiniones
+  step_download_reviews_outliers:
+    name: opiniones extrañas
+  step_download_submissions_files:
+    name: archivos adjuntos
+  step_download_submissions_full:
+    name: presentaciones de los alumnos (completo)
+  time: Hora del último informe
+  update: Actualizar
+review-detail:
+  explanation-placeholder: Explicación detallada de la puntuación
+  extra-review-notice: Usted envió tanto críticas como debería. Éste es adicional
+  result: >-
+    resultado de la opinión: {percentage}%. Esta puntuación es una mediana de primera {count}
+    recibido críticas.
+  rubric: Rúbrica
+  score-rubric: Puntuación según la rúbrica
+  submit-button: Enviar opinión
+review__comments: Comentarios generales
+review__comments-placeholder: Observaciones generales sobre la presentación
+review__confirm-force-submit: >-
+  Los estudiantes pueden enviar sólo una presentación para su revisión. Este estudiante no envió
+  ninguna todavía. Al revisar esta presentación que tomar esta decisión para él. ¿Están seguros?
+review__description-placeholder: Opcional
+review__description-title: Información Adicional
+review__extra-eval-notice: >-
+  Más comentarios que envíe más posibilidades de que su presentación se revisarán en breve
+review__freeze-warn: >-
+  ¡Atención! Una vez que reciba al menos una presentación para revisar, puede cambiar sólo estos
+  campos: "Información adicional para los estudiantes o respuesta" y las descripciones para la
+  puntuación rúbricas
+review__received-review: opinión recibida
+review__review: revisión
+review__review-another: >-
+  No se puede revisar esta presentación. En otra comunicación se envió para su revisión:
+review__saved-error: >-
+  Opinión no se ha guardado. Compruebe su conexión a Internet y guardar de nuevo.
+review__saved-msg: Comentario enviado!
+review__start-button: Comience opinión
+review__start-eval: Comience opinión
+review__start-eval-extra: Comentario más
+review__student-choose: Enviar la mejor presentación para revisar
+review__student-no-submissions: Guardar al menos una presentación
+review__student-send: Enviar esta presentación para revisar
+review__student-send-notice: Presentación ha sido enviada a revisar
+review__submit-confirm: ¿Estás listo para presentar el examen?
+review__wait-peers-giving-note: >-
+  Nota: los comentarios más haga, mayor será la posibilidad de que su presentación será revisado!
+scoreboard__name: Nombre
+scoreboard__score: Puntuación
+search__button: Buscar
+search__context: "Búsqueda en contexto:"
+search__course: "Curso:"
+search__filters-warn: Trate de eliminar los filtros de búsqueda
+search__lesson: "Lección:"
+search__no-results: No hay resultados
+search__search: Buscar
+section-editor__begin-date: Cita abierta
+section-editor__step-content: lección generada
+step__next-tooltip: Próximo paso
+step__not-ready-warn:
+  'Lo sentimos, este problema no está listo. Problema estado <br/> es "{status}".'
+submissions:
+  review-filter:
+    all: Todas
+    awaiting: pendiente de revisión
+    done: revisión lista
+  sort:
+    asc: más viejos primero
+    desc: Más reciente primero
+  status-filter:
+    all: cualquiera Situación
+    correct: Correcto
+    evaluation: Tratamiento
+    wrong: Incorrecto
+submissions__submission: sumisión
+submissions__title: "Presentaciones - Paso {step_position}"
+subscriptions__reset: suscripción de reposición
+subscriptions__reset-tooltip: recibir notificaciones por defecto
+subscriptions__subscribe: Suscribir
+subscriptions__subscribe-tooltip: Siempre recibir notificaciones
+subscriptions__unsubscribe: Darse de baja
+subscriptions__unsubscribe-tooltip: Nunca recibir notificaciones
+time:
+  minutes__short: min
+  seconds__short: segundo
+toc__progress:
+  title: progreso del curso
+user__edit:
+  about: Acerca de
+  add_provider: Conectar
+  auth_social: Entrada social
+  change_password: Cambia la contraseña
+  city: Ciudad
+  city_placeholder: Empieza a escribir tu ciudad ...
+  connected: Conectado
+  current_pass: Contraseña actual
+  disconnect: Desconectar
+  edit-email:
+    add_button: Añadir correo electrónico
+    make-primary: hacer primaria
+    placeholder: Nuevo Email
+    primary: Primario
+    remove: retirar
+    resend-verification: Re-send verification
+    table-header: Sus direcciones de correo electrónico
+    verified: Verified
+  edit_profile: Perfil
+  email: Cambiar e-mail
+  forgot_pass: Se te olvidó tu contraseña?
+  info: Editar perfil
+  language: Idioma
+  legal_names_info: "Sus nombres legales, que se utiliza para todos los certificados."
+  make_private: Hacer perfil privado
+  new_pass: Nueva contraseña
+  notifications:
+    delay: Retrasar
+    header: configuración de correos
+    language_en: Suscribirse a boletines de noticias Inglés Stepik
+    language_ru: Suscribirse a boletines de noticias rusas Stepik
+    menu-item: Notifications
+    receiving: Notificaciones
+    will-not-receive: No recibirá notificaciones
+    will-receive: Usted recibirá notificaciones por correo electrónico
+    your-email: Tu correo electrónico
+  privacy: Intimidad
+  profile_pic: imagen del usuario
+  remove_pic: retirar
+  repeat_pass: Nueva contraseña (repetición)
+  save: Guardar cambios
+  set_password: Establecer contraseña
+  short_bio: Breve biografía<br>(255 caracteres max)
+  social_links: Vínculos sociales
+  social_links_description: Estos enlaces se mostrarán en la página de perfil
+  time:
+    12h: 12 horas
+    1d: 1 día
+    1h: 1 hora
+    30m: 30 minutos
+    3h: 3 horas
+    5m: 5 minutos
+    6h: 6 horas
+  upload_pic: Subir
+  woof__account-disconnected: Cuenta que se haya desconectado.
+  woof__account-disconnected-failed:
+    No se puede desconectar esta cuenta antes de configurar la contraseña.
+  woof__avatar-changed: Su foto de perfil se ha cambiado
+  woof__avatar-failed: "Su foto de perfil no se ha cambiado, debido a un error de red; ("
+  woof__avatar-removed: Su foto de perfil se eliminó
+  woof__confirmation-sent: "Сonfirmation email sent to {email}"
+  woof__email-added: Email añadió.
+  woof__email-disconnected: "{email} De correo electrónico eliminados."
+  woof__links-saved: Los enlaces a las cuentas sociales se han guardado.
+  woof__mismatch: >-
+    Nueva contraseña no coincide. Asegúrese de que ha introducido misma contraseña dos veces.
+  woof__pass-changed: Contraseña se ha cambiado correctamente.
+  woof__pass-empty: Los campos que no puede estar vacío.
+  woof__pass-error: >-
+    La contraseña no se ha cambiado. Asegúrese de que ha escrito correctamente la contraseña actual
+    en el primer campo.
+  woof__primary-email-changed: Su correo electrónico principal cambió.
+  woof__profile-failed: Por favor llene todos los campos requeridos. Perfil no se ha guardado.
+  woof__saved: Su perfil guardado.
+  woof__settings-changed: Configuración se ha cambiado con éxito.
+  your_last_name: Apellido
+  your_name: Nombre de pila
+user__knowledge-title: Conocimiento
+user__lock-course-title: Este curso es privado
+user__lock-title: Esta lección es privada
+user__profile: Perfil
+user__reputation-title: Reputación
+video-player__no-flash: >-
+  Su navegador no soporta mp4g <br> instale flash player <br> o simplemente descargar el archivo de
+  vídeo a continuación ⤓
+video__upload-failed: >-
+  Se ha producido un error al cargar un archivo de vídeo. Por favor, compruebe que el archivo de
+  vídeo no exceda de 200 Mbytes.

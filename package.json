@@ -1,0 +1,18 @@
+{
+  "name": "stepik-i18n",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Stepik's UI translations",
+  "license": "Apache-2.0",
+  "author": "StepicOrg",
+  "scripts": {
+    "lint:translations": "yamllint translations",
+    "build": "cd ./node_modules/stepik-i18n-dummy && npm build",
+    "start": "cd ./node_modules/stepik-i18n-dummy && npm start",
+    "pretest": "npm run lint:translations",
+    "test": "cd ./node_modules/stepik-i18n-dummy && npm test"
+  },
+  "devDependencies": {
+    "stepik-i18n-dummy": "github:StepicOrg/stepik-i18n-dummy#f99a71d"
+  }
+}

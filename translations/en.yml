@@ -1,0 +1,3135 @@
+---
+ARIA:
+  nav:
+    common: Site navigation
+    course: Course navigation
+    lesson: Lesson navigation
+activity_graph:
+  current_streak: "{count, plural, other {current streak} =1 {current streak}}"
+  info: "Next day will be at 00:00 UTC"
+  longest_streak: "{count, plural, other {longest streak} =1 {longest streak}}"
+  quiz_count: "{count, plural, other {problems solved} =1 {problem solved}}"
+  steps: problems solved
+adaptive:
+  edit:
+    header: Adjust adaptiveness for course
+    is_adaptive: Course is adaptive
+    more_info: Read more about adaptiveness
+  next: Next recommended lesson
+  not-enrolled: "You are not enrolled, please enroll to course and start learning."
+  nothing: >-
+    We have no more recommendations for you, you've learned everything. Congratulations!
+  title: Adaptive mode activated
+  too-boring: Lesson is too easy
+  too-hard: Lesson is too hard
+  transition_reaction:
+    "0": Analyzing your reply
+    "1": Looking for next assignment
+    "2": Robots still working
+    "3": Making some math
+announcement-show:
+  statistic-label:
+    click_count: Clicked
+    open_count: Opened
+    publish_count: Published
+    queue_count: Queued
+    sent_count: Sent
+  statistic-tooltip:
+    click_count: Number of emails in which a recipient clicked on a link
+    open_count: Number of opened emails
+    publish_count: Number of announcements made (for recurring announcements)
+    queue_count: Number of emails in the sending queue
+    sent_count: Number of sent email
+  status-label:
+    aborted: Aborted
+    composing: Composing
+    queued: Waiting for queue
+    queueing: Queueing
+    scheduled: Scheduled
+    sending: Sending
+    sent: Sent
+  status-tooltip:
+    aborted: Announcement canceled.
+    composing: You can edit this announcement.
+    queued: "Emails are in the queue, waiting to send."
+    queueing: Emails are adding into the sending queue.
+    scheduled: Announcement will be sent by timer. You can cancel delivery.
+    sending: Emails are sending.
+    sent: This announcement has been sent to relevant learners.
+    will_end: " Sending will end at: "
+    will_start: " Sending will start at: "
+announcement__default-template: Default template
+attachments__list-attach-file: "{count, plural, =0 {Attach file} other {Attach file (max #)}}"
+attachments__list-delete-attachment-tooltip: Delete
+attachments__list-open-attachment-tooltip: Open
+attachments__list-title: Attachments
+attachments__list-too-big-file-warn: "Max file size to attach: {max_size}."
+autotransit_off: Auto-transition off
+autotransit_on: Auto-transition on
+autotransit_turn_on: Turn on auto-transition
+autotransit_turn_on_expl: Turn on step auto-transition when video finished
+breadcrumbs__certificate-edit: Certificate
+breadcrumbs__course-edit: Edit
+breadcrumbs__course-grade-book: Gradebook
+breadcrumbs__course-lti-edit: LTI integration
+breadcrumbs__course-permissions-edit: Permissions
+breadcrumbs__course-reports: Reports
+breadcrumbs__course-statistics: Statistics
+breadcrumbs__course-syllabus: Syllabus
+breadcrumbs__home: Home
+breadcrumbs__instructor-dashboard: Instructor dashboard
+breadcrumbs__lesson: Lesson page
+breadcrumbs__lesson-edit: Edit
+breadcrumbs__lesson-reports: Reports
+breadcrumbs__notifications-my: My events
+breadcrumbs__notifications-new: New notifications
+breadcrumbs__review: Review
+breadcrumbs__review-session: Review session
+breadcrumbs__submissions: Submissions
+button__new-course: Create a course
+button__new-lesson: Create a lesson
+certificate-editor:
+  auto-issue-label: Auto issue certificates
+  auto-issue-text:
+    both: >-
+      Learners will receive certificates automatically when they reach <b>{regular}</b>  for
+      regular certificate, <b>{distinction}</b> for certificate with distinction.
+    distinction: >-
+      Learners will receive certificates automatically when they reach <b>{distinction}</b> for
+      certificate with distinction.
+    regular: >-
+      Learners will receive certificates automatically when they reach <b>{regular}</b> for regular
+      certificate.
+  download-distinction: Download certificate with distinction
+  download-regular: Download regular certificate
+  header: Certificate settings
+  issue-button: Issue certificates
+  issue-disabled: You can not issue certificates before you set minimal points.
+  issue-header: Issue certificates
+  issue-text-1: >-
+    <b>Attention!</b> You can manually issue certificates only after last deadline, in your course
+    after <b>{deadline}</b>.
+  issue-text-2:
+    both: >-
+      Learners who reached <b>{regular}</b> will receive a regular certificate, learners who
+      reached <b>{distinction}</b> will receive a certificate with distinction.
+    distinction: >-
+      Learners who reached <b>{distinction}</b> will receive a certificate with distinction.
+    regular: "Learners who reached <b>{regular}</b> will receive a regular certificate."
+  max-points: "Total points in your course:"
+  minimal-points-distinction: "Minimal points required for <b>certificate with distinction</b>:"
+  minimal-points-regular: "Minimal points required for <b>regular certificate</b>:"
+  org-header: Organization logo
+  org-label: "Image with transparency (png), height=150 px"
+  org-placeholder: Place for organization logo
+  show-distinction: Show certificate with distinction
+  show-regular: Show regular certificate
+  signs-header: Instructors signatures
+  signs-label: "Image with transparency (png), width=3000 px, height=484 px"
+  signs-placeholder: Place for signatures
+  upload-again: Upload again
+  upload-file: Upload file
+certificate-page:
+  edit:
+    confirm: >-
+      Are you sure you want to change the certificate recipient name from '{old_fullname}' to
+      '{new_fullname}'?
+    fail: An error occurred during updating the certificate recipient name.
+    last-change: >-
+      Attention! After this change, you will no longer be able to change the name.
+    prompt: >-
+      {count, plural, =1 {Attention! You can change the certificate recipient name only once! Enter
+      name:} other {Attention! You can change the certificate recipient name only # times! Enter
+      name:}}
+    success: The certificate recipient name has been changed.
+    title: Edit recipient name
+certificate-widget:
+  distinction: With distinction
+  goto: Go to course
+  grade: "{count, plural, other {#% done} =1 {#% done}}"
+  hidden: Hidden
+  hide: Hide
+  page_url: Open certificate page
+  result:
+    students-count: >-
+      {count, plural, =1 {The result is better than # course learner} other {The result is better
+      than # course learners}}
+  unhide: Unhide
+  visibility__settings-failed: An error occurred during updating certificate privacy settings.
+  visibility__settings-success: Privacy settings for certificate successfully saved.
+certificate__download: Download certificate
+clipboard:
+  click-to-copy: Click to copy
+  fail: Copy failed. Try again!
+  success: Copied!
+comments__abuse: Don't like
+comments__abuse-tooltip: mark comment as not liked
+comments__active-order: Most discussed
+comments__all: All user comments
+comments__assistant-badge: Course assistant
+comments__auth-warn: To join this discussion you have to
+comments__by-date-order: Last discussions
+comments__default-order: Most liked
+comments__delete: Delete
+comments__delete-all: Delete all comments
+comments__delete-all-confirm: Delete all comments?
+comments__delete-error: Error deleting comment
+comments__delete-tooltip: delete this comment
+comments__deleted-by: Deleted
+comments__deleted-by-user: by
+comments__discussion-link: link to this discussion
+comments__edit: Edit
+comments__edit-tooltip: edit this comment
+comments__edited: Edited by
+comments__empty: Comment list is empty
+comments__empty-disc-warn: Your comment is empty
+comments__gradebook: Grades
+comments__gradebook-tooltip: gradebook for author of this comment
+comments__leave: Leave a comment
+comments__leave-solution: Leave a solution
+comments__load: Show discussions
+comments__load-replies: load more replies
+comments__moderator-badge: Course moderator
+comments__network-error: Something went wrong. Refresh page for new comments.
+comments__not-found: "Comment #{comment_id} has been deleted or never existed."
+comments__pin: Pin
+comments__pin-tooltip: show this comment on top
+comments__pinned: pinned
+comments__pinned-text: Comment is pinned
+comments__pinned-tooltip: this comment is pinned (will be always on top)
+comments__post-reply: Post reply
+comments__recent-order: Recent activity
+comments__replies-hide: hide replies
+comments__replies-show: "{count, plural, =1 {show # reply} other {show # replies}}"
+comments__replies-toggle-tooltip: hide / show replies
+comments__reply: Reply
+comments__reply-link: link to this reply
+comments__reply-tooltip: reply to this comment
+comments__solutions-thread-permisison-error:
+  You have no permission for solutions forum. Solve step and read forum
+comments__staff-badge: Stepik Team
+comments__staff-replied: staff replied
+comments__submissions: Submissions
+comments__submissions-tooltip: submissions by author of this comment
+comments__submit-error: Can't post your comment =(
+comments__teacher-badge: Course staff
+comments__thread-default: "{count, plural, =1 {Comment} other {Comments} =0 {Comments}}"
+comments__thread-solutions: "{count, plural, =1 {Solution} other {Solutions} =0 {Solutions}}"
+comments__unpin: Unpin
+comments__unpin-tooltip: show comment in regular order (not pinned)
+comments__without-submissions: You should solve the problem to leave a solution
+common:
+  end: ends
+  pin: Pin
+  start: starts
+  unpin: Unpin
+common__activity: Activity
+common__back-link: Back
+common__back-to-step-link: Back to step
+common__catalog: Catalog
+common__certificate: Certificate
+common__certificate-distinction: Certificate with distinction
+common__certificate-recipient: Recipient
+common__challenge: Challenge
+common__close: Close
+common__close-window: Close window
+common__collapse: Collapse
+common__cookies-warn: >-
+  Oops! Your browser seems to have cookies disabled. Make sure cookies are enabled or try opening a
+  new browser window.
+common__course: Course
+common__course-logo: Course logo
+common__course-search-placeholder: Search in the course
+common__delete: Delete
+common__delete-failed-warn: Deletion failed.
+common__download-video: Download video
+common__edit: Edit
+common__error-loading: "[{resource_name}] Error loading!"
+common__expand: Expand
+common__experimental: Experimental
+common__feedback: Show full feedback
+common__feedback-hide: Hide
+common__fixed: Mark as fixed
+common__fullscreen: Fullscreen
+common__hard-deadline: Hard deadline
+common__hour: h
+common__input-length-warn: "{count, plural, other {# characters minimum} =1 {# character minimum}}"
+common__knowledge: Knowledge
+common__learner: Learner
+common__lesson: Lesson
+common__lesson-image: Lesson image
+common__lessons: Lessons
+common__link: link
+common__list-is-empty: List is empty
+common__load-more-button: Load more
+common__loading-text: loading...
+common__login: Log in
+common__logout: Logout
+common__logout-confirm: Are you sure you want to log out?
+common__min: min
+common__my-courses: My courses
+common__notifications: Notifications
+common__number-sign: "#"
+common__off: "off"
+common__out-of-points: "{count, plural, =1 {# point} other {# points}}"
+common__platform-news: What's new
+common__points: "{count, plural, =1 {# point} other {# points}}"
+common__points-received: "{count, plural, =1 {received} other {received}}"
+common__pricing: My subscription plan
+common__print: Print
+common__problem: Problem
+common__profile: Profile
+common__reload: Reload
+common__reports-expiration: Reports are deleted after 7 days
+common__reputation: Reputation
+common__save-button: Save
+common__save-failed-warn: Save failed.
+common__saving-text: saving...
+common__search-placeholder: Search
+common__self-voting: You can't vote for your own content
+common__settings: Settings
+common__soft-deadline: Soft deadline
+common__statement: Statement
+common__step: Step
+common__step-passed: "{count, plural, =1 {passed} other {passed}}"
+common__steps: "{count, plural, =1 {# step} other {# steps}}"
+common__submission: Submission
+common__submission-correct: correct
+common__submission-evaluation: evaluation
+common__submission-partially-correct: partially correct
+common__submission-settled: received
+common__submission-wrong: wrong
+common__submit: Submit
+common__submit_file: Submit file
+common__symbols_left: "{count, plural, =1 {# symbol left} other {# symbols left}}"
+common__symbols_overflow: >-
+  {count, plural, =1 {limit exceeded by # symbol} other {limit exceeded by # symbols}}
+common__time-warn: >-
+  Perhaps the timezone or time on your device is set wrongly. Please check your timezone, date and
+  time.
+common__unauth-voting: You should login for voting.
+common__unsaved-warn: All unsaved changes will be lost!
+common__update: Update
+common__userpic: User picture
+common__woof-unverified-email: >-
+  Your email is not verified! <a href="/edit-profile/email">Please verify to continue using
+  Stepik.</a>
+common__woof-wrong: Something went wrong. Check your internet connection and try again.
+content_advices:
+  action:
+    course_quizzes: 'add problem steps to the lessons from the <a href="{url}">{text}</a> page'
+    other: '<a href="{url}">{text}</a>'
+  course_cover: Course image is uploaded
+  course_lessons: There are at least 10 lessons in the course
+  course_quizzes: There are at least 10 problems in the course
+  course_sections: There are at least 2 modules in the course
+  course_summary: The short description is at least 100 characters long
+  empty_video_steps: All video steps in the course contain a video
+  link-text:
+    course_cover: edit course info
+    course_lessons: edit syllabus
+    course_quizzes: syllabus
+    course_sections: edit syllabus
+    course_summary: edit course info
+    empty_video_steps: check out instructor dashboard
+    quiz_correct_submissions: check out instructor dashboard
+    section_lessons: edit syllabus
+    section_titles: edit syllabus
+    step_default_texts: check out instructor dashboard
+  not_complete: "now: {current}"
+  quiz_correct_submissions: Each problem has at least one correct submission
+  readiness: Course readiness
+  readiness_progress: "Course is <b>{score}/{cost}</b> ready"
+  section_lessons: Each module has at least one lesson
+  section_titles: Each module has a non-default title
+  show_less: Collapse
+  show_more: Read more
+  step_default_texts: Texts in all steps are not default
+copy_link_to_clipboard: Copy link
+cost:
+  after: after
+  before: before
+  can-try-again: But you can still test yourself
+  deadlines:
+    dont-delay: ", do not delay"
+    hard: Points are not awarded even for the correct decision sent after
+    soft-halved: Only half of the points are awarded for the correct decision sent after
+    soft-linear: Points are awarded less every day after
+  discounting:
+    first_one: on the <strong>first</strong> attempt
+    first_one-desc: >-
+      Points are not awarded even for the correct submission sent from the second attempt
+    first_one-zero: not on the first attempt
+    first_three: with <strong>three</strong> attempts
+    first_three-desc: >-
+      Points are not awarded even for the correct submission sent from the fourth attempt
+    first_three-zero: after the third attempt
+    inverse: on this attempt
+    inverse-desc: Points are awarded less with each next attempt
+  fold: Collapse
+  for-submission: per submission
+  get: "{count, plural, =1 {# point} other {# points}}"
+  max: Maximum
+  more: More details
+  restriction-extra: >-
+    {count, plural, =1 {Submissions are not made after # attempt} other {Submissions are not made
+    after # attempts}}
+  submissions-left: >-
+    {count, plural, =1 {Only <strong>#</strong> attempt} other {Only <strong>#</strong> attempts}}
+course:
+  draft: Draft
+  edit-btns:
+    info: Edit course information
+    syllabus: Edit course syllabus
+  info:
+    adaptive_info_link: Learn more about adaptive courses
+    adaptive_note: "This course is adaptive: it will adjust according to your skill"
+    certificate: Certificate
+    certificate_details: Certificate details
+    certificate_distinction_cond_title: "With distinction: "
+    certificate_is_issued: Issuing
+    certificate_is_not_issued: Not issuing
+    certificate_regular_cond_title: "Certificate condition: "
+    description_header: About the course
+    fill_empty: This field is empty. Please use the course editor to fill it in.
+    hours_to_complete: Expected time to complete
+    hours_to_complete_text: "{count, plural, =1 {# hour} other {# hours}}"
+    instructors_header: Instructors
+    lang: Language
+    last_deadline: Last deadline
+    repeat_intro_video: Repeat video
+    requirements_header: Requirements
+    reviews_header: Reviews
+    reviews_link: See all reviews
+    reviews_short_link: All reviews
+    selfpaced_note: This course is entirely free. All content is available now.
+    share_text: Share this course
+    share_text_short: Share
+    soon_note: >-
+      This course is entirely free. The content of this course will be available on {date}
+    start_date: Open date
+    summary_header: Summary
+    target_audience_header: Target audience
+    workload: Workload
+  learners_count: Total joined
+  private: Private course
+  readiness:
+    high_expl: The course meets the formal recommendations of Stepik
+    low_expl: Most likely the course is under development
+  sections:
+    default_title: New module
+  tariffs:
+    badge:
+      enterprise: Enterprise
+      pro: PRO
+    caption:
+      basic: Basic
+      enterprise: Enterprise
+      pro: PRO
+    paid-features:
+      deadlines: Course deadlines
+      exams: Exams
+      section-deadlines: Module deadlines
+      section-discounting-policy: Module discounting policy
+      section-required-section: Required modules
+      step-free-answer-attachments: Free Response step attachments
+      step-instruction-type-instructor: Instructor reviews
+      step-quiz-admin: Linux Challenge
+      step-quiz-dataset: Data Challenge
+      step-quiz-external-grader: External grader
+      step-quiz-linux-code: Linux Code Challenge
+      step-quiz-lti-consumer: LTI consumer
+      step-quiz-manual-score: Manual Score
+      step-string-attachments: Text Problem step attachments
+      step-submissions-restrictions: Step submissions restrictions
+    toast-help-link: >-
+      <a target='_blank' href='https://welcome.stepik.org/en/pricing'>What's this?</a>
+    toast-plug-button:
+      enterprise: Activate Enterprise features
+      pro: Activate PRO features
+    upgrade-course-modal:
+      activate: "Enable {planTitle}"
+      dont-show-again: Do not show this window again
+      ok: Got it!
+      text1: "Wow, you found {planTitle} features!"
+      text2: >-
+        Upgrade your course to publish it with {planTitle} features.<br><a
+        href='https://welcome.stepik.org/en/pricing' target='_blank'>Learn about plans</a>
+course-actions__button: Manage
+course-assessments:
+  empty: All solutions are reviewed
+  pending-reviews-badge: Pending instructor reviews
+  submission-link: Solutions
+  tab-caption: Instructor reviews
+  title: >-
+    {count, plural, =1 {# solution is waiting for review} other {# solutions are waiting for
+    review}}
+course-edit__back: Back to Course
+course-edit__cancel: Back
+course-edit__new-module: New module
+course-edit__save: Save
+course-filters:
+  categories: Categories
+  langs: Languages
+  tags: Subjects
+course-grade-book:
+  download-sign: "Download the gradebook on the "
+  filter: "Learner name, ID or email"
+  "no": No learners
+  not-available:
+    toast: "Course gradebook is available for <b>{planTitle} courses</b> only."
+    tooltip: "Course gradebook is available for {planTitle} courses only"
+  reports: reports page
+  title: Course gradebook
+  total: Course total
+  user: User
+course-grade-book-cell:
+  await-instructor: Waiting score from instructor
+  await-peer: Waiting score from learners
+  await-user: Learner hasn't reviewed other learners
+  no-sent-review: Hasn't sent for review
+  no-submissions: No submissions
+  success: "Correct submission, has already scored"
+  wrong: Wrong submissions only
+course-index__authors: "{count, plural, other {Authors} =1 {Author}}"
+course-index__cert: Certificate
+course-index__ends: "Ends:"
+course-index__enrolled-msg: You are enrolled!
+course-index__instructors: "{count, plural, other {Instructors} =1 {Instructor}}"
+course-index__lang: Language
+course-index__starts: "Starts:"
+course-index__workload: Workload
+course-info-edit__add: Add
+course-info-edit__author-placeholder: author id...
+course-info-edit__authors-403: Only course admin can edit the list of authors.
+course-info-edit__cover: "Upload new course logo:<br>230 x 230"
+course-info-edit__instructor-placeholder: instructor id...
+course-info-edit__instructors-403: Only course admin can edit the list of instructors.
+course-info-edit__remove-author: Remove author
+course-info-edit__remove-instructor: Remove instructor
+course-info-edit__upload-failed: >-
+  Upload a valid image. The file you uploaded was either not an image or a corrupted image.
+course-lti-edit__header: LTI integration settings
+course-new:
+  access:
+    info: >-
+      Once created, the course will only be available to authors, the course tariff is Basic.
+    paid-course: "Learners need to pay for this course. Base price:"
+  cancel: Cancel
+  create: Create
+  explanation: >-
+    Courses and lessons are distributed under <a
+    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    target="_blank">Creative Commons (CC BY-SA 4.0)</a> license.
+  header: Create a new course
+  help-center-link: More about creating courses
+  teaching-landing:
+    features:
+      "0": "Online editor for courses, lessons, quizzes and challenges"
+      "1": >-
+        <a href='https://stepik.org/lesson/9173/step/1?unit=1718' target='_blank'>20+ types of
+        assignments</a>
+      "2": Stepik API and LTI
+      "3": Autograding and instructor review
+      "4": Gradebook and other reports
+      "5": Discussion forum
+      extra: >-
+        We provide methodological support and help with video shooting in St. Petersburg for the
+        selected authors.
+    features-header: Share knowledge with Stepik
+    form:
+      submit: Create course
+      title-placeholder: Course title
+    header: Teach with Stepik
+    navbar-link: Teach
+    new-class-content: >-
+      Create <a href='https://welcome.stepik.org/en/classroom' target='_blank'>Classroom</a> for
+      you students and get access to their progress and solutions.
+    new-class-header: Do you want to use online course in your class?
+    tips:
+      "0": >-
+        <b>Publish your open online course for free.</b> Thousands learners will see your course on
+        Stepik.
+      "1": >-
+        <b>Monetize your knowledge.</b> Create paid course like <a
+        href='https://stepik.org/course/15001' target='_blank'>this</a>. Or restrict access to your
+        content with <a href='https://welcome.stepik.org/en/' target='_blank' rel='nofollow
+        noreferrer'>private courses</a>.
+      "2": >-
+        <b>Teach your employees.</b> Use <a href='https://welcome.stepik.org/en/'
+        target='_blank'>private courses</a> for onboarding process in your company.
+      "3": >-
+        <b>Create online contest</b>, like <a href='http://contest.bioinf.me/' target='_blank'
+        rel='nofollow noreferrer'>Bioinformatics Contest</a>
+  title: Title
+  title-hint: Up to 64 symbols.
+course-permissions-edit:
+  access-personal:
+    description: useful option during creation process
+    label: Only for course team
+  access-public:
+    description: open for everyone
+    label: Public course
+  can: can
+  group:
+    admins: admin
+    assistants: assistant
+    learners: learner
+    moderators: moderator
+    teachers: teacher
+    testers: tester
+  group-header:
+    admins: Admins
+    assistants: Assistants
+    learners: Learners
+    moderators: Moderators
+    teachers: Teachers
+    testers: Testers
+  group-right:
+    comments: write comments
+    edit: edit content
+    gradebook: view submissions and gradebook
+    learn-dates: learn without taking into account the open/close dates
+    manage-users: >-
+      manage teachers, assistants, moderators, testers, and learners on this page
+    peer-review: edit and approve instructor or peer reviews
+    pin: pin and delete comments
+    solve-problems: solve problems
+    view: view content
+  invitations-error-add: Error adding invitation link
+  invitations-error-delete: Error removing invitation link
+  invitations-title: Invitations
+  label: User ID or email
+  learners-limit: Up to 1000 students can take a PRO course.
+  link-doc: "Documentation: Permissions"
+  load-more: Load more
+  loading_member: load..
+  lti-title: IMS LTI 1.1 Integration
+  members-email-error-add: "Failed to send invitation {email}"
+  members-email-success-add: "Invitation {email} was successfully sent"
+  members-error-add: Error adding user
+  members-error-already-exists: "{username} has already been added"
+  members-error-delete: Error removing user
+  members-success-add: User successfully added
+  no-edit-label: Can not access rights management.
+  personal-testers-note: >-
+    Testers will not have access to the content when your course has "Only for course team" access
+    setting.
+  save-access: Save access settings
+  tariff-help-link: >-
+    More <a target='_blank' href='https://welcome.stepik.org/en/pricing'>about plans</a>
+  tariff-info: "Access settings are available for <b>{plan} courses</b> only."
+  title-prefix: Course access settings
+  user-is-admin: is primary admin
+course-promo:
+  about-course: About this course
+  about-page-widget:
+    button: Preview
+    text: There is a course landing page which learners see before enrollment
+  certificate-section-header: Certificate
+  course-content: Course content
+  course-content-aside-link: Course content
+  course-includes: "This course contains:"
+  course-includes-aside:
+    challenges: >-
+      {count, plural, =1 {<b>#</b> interactive challenge} other {<b>#</b> interactive challenges}}
+    header: This course includes
+    lessons: "{count, plural, =1 {<b>#</b> lesson} other {<b>#</b> lessons}}"
+    quizzes: "{count, plural, =1 {<b>#</b> quiz} other {<b>#</b> quizzes}}"
+    video: >-
+      {count, plural, =1 {<b>#</b> hour of video} other {<b>#</b> hours of video}}
+  course-price: Price
+  demo: Demo access
+  head-widgets:
+    adaptive:
+      caption: Adaptive course
+      help: What's this?
+      helpURL: "https://support.stepik.org/hc/en-us/articles/360002316314"
+    certificate: Certificate Stepik
+    difficulty:
+      easy: Beginner Level
+      hard: Advanced Level
+      normal: Intermediate Level
+  how-you-will-learn: How you will learn
+  meet-instructors: Meet the Instructors
+  read-all-reviews: "{count, plural, =1 {Read # review} other {Read all # reviews}}"
+  reviews: "{count, plural, =1 {# review} other {# reviews}}"
+  share-course: Share this course
+  share-course-direct-link: "Direct link:"
+  student-reviews: Learners' reviews
+  students: "{count, plural, =1 {# learner} other {# learners}}"
+  what-you-will-get: What you will get
+  what-you-will-learn: What you will learn
+  who-is-this-course-for: Who is this course for
+course-settings:
+  about-pro-link:
+    text: Learn more about PRO courses
+    url: "https://welcome.stepik.org/en/pricing"
+  cancel: Cancel
+  course-access:
+    enabled: Open for enrollment
+    not-enabled: Visible for course team only
+    not-public: By invitations
+    public: For everybody
+    title: Course visibility
+  course-type:
+    legacy-note: >-
+      If you're using advanced features, the course will become visible for authors only on <time>1
+      July 2020</time>. Upgrade your course to PRO or adjust its settings according to the basic
+      plan to keep it published.
+    title: Course type
+  save: Apply changes
+  save-error-woof: Save failed.
+  save-success-woof: Saved.
+  title: Course settings
+course-settings__button: Edit
+course-syll__begins: Start date
+course-syll__compact-progress: passed steps ratio
+course-syll__ends: Close date
+course-syll__scores: your / max score
+course-syllabus__closed-yet: This module is closed
+course-syllabus__required-module-message: >-
+  {count, plural, =1 {score # point in module {position} ({title})} other {score # points in module
+  {position} ({title})}}
+course-syllabus__required-module-message-percent:
+  "{percent}% of points in module {position} ({title})"
+course-syllabus__required-module-message-title: "Open condition:"
+course__add-annon: New announcement
+course__add-to-archived-link: Move to archived
+course__add-to-favorites-link: Add to favorites
+course__added-to-archived-fail: Can't move course to archived. Please reload this page.
+course__added-to-archived-success: >-
+  Moved to archived. To move back click an arrow on a course widget and then — Remove from
+  archived.
+course__added-to-favorites-fail: Can't add course to favorites. Please reload this page.
+course__added-to-favorites-success: >-
+  Added to favorites. To remove it click an arrow on a course widget and then — Remove from
+  favorites.
+course__annon-delete: Delete
+course__annon-delete-confirm: Delete this announcement?
+course__annon-delete-done: The announcement has been deleted
+course__annon-delete-error: Can't delete the announcement
+course__annon-empty: This course has no announcements yet.
+course__annon-is-infinite-label: Send this announcement forever.
+course__annon-is-scheduled-label: Set delivery date.
+course__annon-max-score: Max percent
+course__annon-min-score: Min percent
+course__annon-on-enroll-label: Send this announcement after enrollment.
+course__annon-restrict-description: >-
+  Only learners who achieve points between min and max percent will receive message. Learners who
+  achieve exactly min or max percent will also receive email.
+course__annon-restrict-score-label: Restrict by score percent
+course__annon-save: Save as draft
+course__annon-send: Send
+course__annon-send-done: Announcement sending started
+course__annon-send-done-is-scheduled:
+  "Announcement sending scheduled. First delivery will be at {date}."
+course__annon-send-done-on-enroll: All new learners will receive email after enrollment.
+course__annon-send-error: Can't send the announcement
+course__annon-send-is-scheduled: Schedule sending
+course__annon-send-on-enroll: Start sending on enrollment
+course__annon-sent-confirm: >-
+  Please note that delivery to learners may take up to 24 hours. Are you going to start sending
+  this announcement?
+course__annon-sent-confirm-is-scheduled: Are you sure you want to schedule sending?
+course__annon-sent-confirm-on-enroll:
+  Are you sure you want to send this message to every learners after enrollment?
+course__annon-start-date: Delivery date
+course__annon-stop: Stop delivery
+course__annon-stop-done: Delivery canceled.
+course__annon-stop-error: Something went wrong.
+course__annon-template-label: Email template
+course__annon-test: Send example to myself
+course__annon-test-done: Test mail sent successfully
+course__annon-test-error: Can't send test mail
+course__annon-test-tooltip: Sent this announcement to your email address only
+course__annon-tmpl-subj: New announcement
+course__annon-tmpl-text: "Hi {%user_name%}!"
+course__anon-stop-warn: This action can not be reverted. Stop delivery?
+course__buy: Buy
+course__buy-button: "Buy for {price}"
+course__buy-form:
+  add-email: You can add primary email
+  here: here
+  pay-button: Pay
+  pay-button-promo: "Pay with promo code: {promo}"
+  price-label: Price
+  price-promo-desc: >-
+    (basic price, the promo code <strong>{promo}</strong> will also be activated upon purchase, the
+    final price will be shown on the payment page)
+  primary-email-notice: >-
+    You will receive a confirmation of the payment on this email. You can change it in the profile
+    settings.
+  promo-label: Promo code
+  promo-placeholder: Insert promo code
+  register-button: Register to pay
+  support-notice: >-
+    In case of any problems with payment please ask support <a
+    href="mailto:support@stepik.org">support@stepik.org</a>.
+  title: 'Buy access to course "{course}"'
+  user-agreement: 'By clicking <b>Pay</b> you agree to our <a href="{terms_url}">Terms</a>'
+course__certificate:
+  is_auto_issued: >-
+    Congratulations! You have earned enough points to receive a certificate. The certificate will
+    appear in your profile within a day.
+  not_auto_issued: >-
+    Congratulations! You have earned enough points to receive a certificate. The certificate will
+    appear in your profile after the end of the course.
+  ok: OK
+course__certificate-distinction: Certificate with distinction
+course__certificate-link: Certificate
+course__certificate-regular: Certificate
+course__class-new: + Create class
+course__comments-link: Comments
+course__continue-empty-warning: >-
+  Failed to open the first lesson in the course, you can try another one from syllabus.
+course__continue-exam-warning: You need to start the exam.
+course__continue-learn: Learn
+course__continue-tooltip: Continue with the last solved step
+course__drop-confirm: Are you sure you want to drop this course?
+course__drop-fail: Can't drop this course.
+course__drop-link: Drop
+course__drop-success: Course dropped. Please reload this page.
+course__empty-warn-1: There are no lessons in this course yet.
+course__empty-warn-2: It's empty =(
+course__empty-warn-add: Add your first lesson using course syllabus editor.
+course__free: Free
+course__info-link: Information
+course__instructor-attachments-link: Attachments
+course__instructor-clone-course: Make a copy
+course__instructor-clone-module: Copy module
+course__instructor-course-settings: Publication
+course__instructor-dashboard-link: Instructor dashboard
+course__instructor-delete-course: Delete
+course__instructor-edit-adaptiveness: Adaptiveness
+course__instructor-edit-certificates: Certificates
+course__instructor-edit-info: Edit information
+course__instructor-edit-lti: LTI integration
+course__instructor-edit-permissions: Permissions
+course__instructor-edit-syllabus: Edit syllabus
+course__instructor-grade-book: Gradebook
+course__instructor-reports: Reports
+course__instructor-statistics: Statistics
+course__join-button: Join this course
+course__join-button_ab: Learn
+course__join-fail: "Can't join this course (error code: {status}). Try to reload this page."
+course__learn-now: You can learn right away
+course__menu: Menu
+course__news-link: News
+course__remove-from-archived-link: Remove from archived
+course__remove-from-favorites-link: Remove from favorites
+course__removed-from-archived-fail: Can't remove course from archived. Please reload this page.
+course__removed-from-archived-success: >-
+  Removed from archived. You can move it back by clicking an arrow on a course widget and then —
+  Move to archived.
+course__removed-from-favorites-fail: Can't remove course from favorites. Please reload this page.
+course__removed-from-favorites-success: >-
+  Removed from favorites. You can add it back by clicking an arrow on a course widget and then —
+  Add to favorites.
+course__reviews:
+  can-review: "You passed more than {treshold}%, write a review"
+  can-review-no: No thanks
+  can-review-yes: Create review
+  cancel-edit: Cancel
+  cant-review: "To send a review, complete more than {treshold}% steps"
+  change-review: Change review
+  create-review: Send review
+  delete-review: Delete
+  give-us-feedback: Please give us some feedback
+  lesson:
+    also-can-leave-there-p1: "You also can create and edit review on "
+    also-can-leave-there-p2: Reviews
+    also-can-leave-there-p3: page
+    leave-review: Create course review
+  link: Reviews
+  modal:
+    is_owned: Thanks for your review! <br>You can share your review with your friends.
+    other_user: Share this review
+    success_copy: Link to review successfully copied
+  no-reviews-yet: "Unfortunately, there are no reviews sent for this course. But, you"
+  no-reviews-yet-be-first: can be first.
+  no-reviews-yet-for-author: "Unfortunately, there are no reviews sent for your course."
+  on-save-error: An error occurred while saving you review. It wasn't saved.
+  on-success: "Thank you, your review was saved."
+  rate: "Give this course a rate:"
+  show-profile: Show user profile
+  show_orig: Show original text
+  summary:
+    count_certificates: "Certificates issued:"
+    count_learners: "Enrolled users:"
+    count_reviews: "Reviews:"
+    mean: "Average review:"
+    no-reviews: Not enough reviews.
+  user-rated-as: "Rated:"
+course__scoreboard-link: Scoreboard
+course__syll-link: Syllabus
+course__try-free-button: Try for free
+course__unsaved-confirm-text: "You've edited the course, but didn't save it.<br>Save changes?"
+course__waiting-review: >-
+  {count, plural, =1 {# solution is waiting for review} other {# solutions are waiting for review}}
+course_cannot_buy-already: Course already purchased
+course_cannot_buy-button: Purchase unavailable
+course_cannot_buy-warn:
+  "Purchase unavailable for this course, you can write us: support@stepik.org"
+course_finder:
+  query_placeholder: Course search (by name or ID)
+course_payment_not_ready-warn: >-
+  Payment is not ready yet, if you have questions please ask support support@stepik.org
+course_payment_success-msg: >-
+  Thank you for purchasing access to the course, your payment is still being processed. Very soon
+  we will enroll you to the course. If the enrollment has not occurred within 24 hours please write
+  to us: support@stepik.org.
+course_payment_success-woof: Congratulations! You are successfully enrolled to course.
+deadlines-editor__advanced-settings: Advanced settings
+deadlines-editor__begin_date_source: module open date
+deadlines-editor__course-deadlines: Course default deadlines
+deadlines-editor__course-deadlines_tooltip:
+  Works if other deadlines are not specified in module settings
+deadlines-editor__course_begin_date_source: course open date
+deadlines-editor__course_begin_date_tooltip:
+  "Open date: when the course starts for enrolled users."
+deadlines-editor__course_end_date_source: course close date
+deadlines-editor__course_end_date_tooltip: >-
+  Close date: when the course will be disabled (close date is usually left empty).
+deadlines-editor__course_hard_deadline_source: course hard deadline
+deadlines-editor__course_soft_deadline_source: course soft deadline
+deadlines-editor__end_date_source: module close date
+deadlines-editor__grading_policy_tooltip:
+  Grading policy - how to decrease cost between soft and hard deadlines.
+deadlines-editor__hard_deadline_source: module hard deadline
+deadlines-editor__hard_deadline_tooltip: "Hard deadline: when the cost of every step will be zero."
+deadlines-editor__section_begin_date_tooltip:
+  "Open date: when the module starts for enrolled users."
+deadlines-editor__section_end_date_tooltip: >-
+  Close date: when the module will be disabled (close date is usually left empty).
+deadlines-editor__soft_deadline_source: module soft deadline
+deadlines-editor__soft_deadline_tooltip:
+  "Soft deadline: when the cost of every step will be reduced."
+discussions__delete-prompt: Delete this comment?
+discussions__edit-disc-button: Edit comment
+discussions__none: No discussions. Feel free to start one.
+discussions__start-disc-button: Leave a comment
+edit-ui__video-uploading-warn: Video is still uploading. Are you sure you want to abort?
+email-invitations-list:
+  empty-list: No pending invitations
+  load-more: Load more ↓
+  remove: Remove email invitation
+  remove-confirm: Are you sure you want to delete the email invitation?
+embed_auth:
+  done:
+    continue: continue learning
+    greeting: "You signed in as {user_name}"
+  popup_login:
+    and_reload: and reload this page
+    reload: Reload this page
+    sign_in: Sign in to Stepik
+error-page:
+  "400":
+    message: ""
+    title: Bad request
+  "403":
+    message: >-
+      Check URL. If you still see this page then probably the page owner has restricted access to
+      this page.
+    message-guest: >-
+      Check URL and <a href='{loginLink}'>login</a> again. If you still see this page then probably
+      the page owner has restricted access to this page.
+    tip: Go to the <a href='/catalog'>catalog</a>.
+    title: Access denied
+  "404":
+    message: Page was deleted or has never existed.
+    tip: Go to the <a href='/catalog'>catalog</a>.
+    title: Page not found
+  "500":
+    message: >-
+      Either we have troubles on server and have already recorded them or Stepik is being updated
+      right now
+    title: "Something went wrong :("
+  "503":
+    message: ""
+    title: Site maintenance
+  default:
+    message: >-
+      We have logged this error and hopefully will fix this soon. Try reloading the page.
+    tip: >-
+      Try to <a href='{url}' data-href-to-ignore>reload the page</a> or <a
+      href='http://support.stepik.org' target='_blank'>write us</a>.
+    title: "Something went wrong :("
+errors:
+  accepted: "{description} must be accepted"
+  after: "{description} must be after {after}"
+  before: "{description} must be before {before}"
+  blank: "{description} can't be blank"
+  collection: "{description} must be a collection"
+  confirmation: "{description} doesn't match {on}"
+  date: "{description} must be a valid date"
+  description: This field value
+  email: "{description} must be a valid email address"
+  empty: "{description} can't be empty"
+  equalTo: "{description} must be equal to {is}"
+  even: "{description} must be even"
+  exclusion: "{description} is reserved"
+  greaterThan: "{description} must be greater than {gt}"
+  greaterThanOrEqualTo: "{description} must be greater than or equal to {gte}"
+  inclusion: "{description} is not included in the list"
+  invalid: "{description} is invalid"
+  lessThan: "{description} must be less than {lt}"
+  lessThanOrEqualTo: "{description} must be less than or equal to {lte}"
+  notANumber: "{description} must be a number"
+  notAnInteger: "{description} must be an integer"
+  odd: "{description} must be odd"
+  onOrAfter: "{description} must be on or after {onOrAfter}"
+  onOrBefore: "{description} must be on or before {onOrBefore}"
+  otherThan: "{description} must be other than {value}"
+  phone: "{description} must be a valid phone number"
+  positive: "{description} must be positive"
+  present: "{description} must be blank"
+  singular: "{description} can't be a collection"
+  tooLong: "{description} is too long (maximum is {max} characters)"
+  tooShort: "{description} is too short (minimum is {min} characters)"
+  url: "{description} must be a valid url"
+  wrongDateFormat: "{description} must be in the format of {format}"
+  wrongLength: "{description} is the wrong length (should be {is} characters)"
+exam:
+  check-proctor-session: Check proctor session
+  close-date: Exam session ends
+  confirm: >-
+    {count, plural, other {You will have # minutes and only one attempt to complete the exam. Are
+    you sure you want to start the exam?} =1 {You will have # minute and only one attempt to
+    complete the exam. Are you sure you want to start the exam?}}
+  finish-prematurely:
+    btn: Finish prematurely
+    confirm-no: "No, continue to solve"
+    confirm-text: >-
+      For submissions sent after finishing the exam, no score will be awarded. Finish the exam now?
+    confirm-yes: "Yes, finish the exam"
+  game-over: Exam is over
+  go-back: Go to syllabus
+  header: Exam is active.
+  info-head: >-
+    {count, plural, other {You will have # minutes to finish the exam} =1 {You will have # minute
+    to finish the exam}}
+  info-latest-date: "You should start no later than {date} to finish in time."
+  info-paragraph: You will only have 1 attempt.
+  is_exam_without_progress: You won't see the grades.
+  is_random_exam: 'Exam with a random selection of questions from the course <b>"{course}"</b>.'
+  is_random_exam_learner: Exam with a random selection of questions.
+  label: Exam
+  not-started: Exam isn't accessible yet
+  open-date: Exam session starts
+  proctor-accepted: Proctor accepted your exam.
+  proctor-comment: Comment from proctor
+  proctor-rejected: Proctor rejected your exam. You receive 0 points.
+  proctor-waiting: Waiting for decision.
+  schedule-proctor-session: Schedule proctor session
+  start-button: Start exam
+  start-error: Can not start the exam. Try to reload the page
+  timer: "time left:"
+  too-late: You are too late. The exam has ended
+explore:
+  course-pack__trending-courses: Trending
+  search-aria-label: Clear search
+  search-placeholder: Search catalog
+  show-all: Show all
+footer__CC_note: >-
+  Public user contributions licensed under <a
+  href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener
+  noreferrer">CC BY-SA 4.0</a> license with attribution required
+footer__about: About Stepik
+footer__active-count: >-
+  {count, plural, other {<strong>#</strong> active learners} =1 {<strong>#</strong> active
+  learners}}
+footer__active-count-desc: >-
+  Unique registered users being actively learning and solving exercises during the last 3 months
+footer__contacts: Contacts
+footer__copyright: "© 2013 — {currentYear}. Stepik"
+footer__helpcenter: Help Center
+footer__press: Press
+footer__pricing: Pricing
+footer__quiz-count: >-
+  {count, plural, other {<strong>#</strong> problems} =1 {<strong>#</strong> problems}}
+footer__quiz-count-desc: Number of problems on Stepik
+footer__submissions-count: >-
+  <strong>{count_display}</strong> {count, plural, other {submissions} =1 {submission}}
+footer__submissions-count-desc: Number of submissions on Stepik
+footer__team: Team
+footer__terms_and_privacy: >-
+  <a href="{url_path}terms" target="_blank" rel="noopener noreferrer">Terms of service</a> and <a
+  href="{url_path}privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>
+footer__url-path: "https://welcome.stepik.org/en/"
+form-validation:
+  required-footnote: "* Required field"
+history:
+  hide-history: Hide history
+  show-history: Show history
+import-lessons:
+  btn-caption: >-
+    {count, plural, =0 {Upload the csv file} other {Upload the csv file (max. #)}}
+  example: >-
+    text|What is the radius of the Earth?|_||option|6371 kilometers|y||option|148.6 million
+    kilometers|n||text|What Was Einstein's
+    Name?|_||option|Albert|y||option|Albie|y||option|Richard|n
+  example-title: Example file
+  file-warn: There are errors while reading the file. Check the file format is correct.
+  header: Import lessons from file to "{title}" module
+  import: Import
+  reading: file reading
+index__registration-link: Register
+instr-review__student-first-step: >-
+  <strong>Stage 1 out of 3</strong>. For points, <strong>save</strong> and <strong>send</strong>
+  the best submission to instructor for review
+instr-review__student-second-step: >-
+  <strong>Stage 2 out of 3</strong>. Submission sent to review, <strong>wait for feedback</strong>
+instr-review__student-third-step: >-
+  <strong>Stage 3 out of 3</strong>. You got <a href="{url}">review</a> from instructor. Result:
+  <strong>{result}%</strong>
+instr-review__teacher-notice: >-
+  {count, plural, =1 {<b>Review # submission</b>, learners will receive points} other {<b>Review #
+  submissions</b>, learners will receive points} =0 {All reviews have been sent.}}
+instr-review__teacher-start: Start review
+instruction__add-rubric-button: Add new rubric
+instruction__delete: Remove reviewing
+instruction__description-help: You can add any information here that may be helpful for reviewers.
+instruction__frozen-description: >-
+  Reviewing has already started. You can change descriptions. You can not change cost and
+  add/remove rubrics.
+instruction__header: Rules of reviewing
+instruction__max-point: Max points
+instruction__max-point-placeholder: "between {greater} and {less}"
+instruction__reviewcount-help: >-
+  Learners receive scores for the lesson only when getting a required number of reviews on their
+  submissions.
+instruction__reviews-required: "Required number of reviews for each submission:"
+instruction__rubric: Scoring rubric
+instruction__rubric-deleted: (Deleted)
+instruction__rubric-help: >-
+  Scoring rubrics may help learners become thoughtful evaluators of their own and others work.
+instruction__rubric-template: Grade this submission from 0 to 3
+instruction__strategy-help: >-
+  You can give your reviews to the submissions of learners, to give them the most objective score.
+  You can also enable the option, allows learners to review each other.
+instruction__strategy-instructor: Only instructors (teachers)
+instruction__strategy-instructor-tooltip: Only teachers (You and the other authors of this lesson)
+instruction__strategy-label: Who will review learner submissions?
+instruction__strategy-peer: Learners and instructors (teachers)
+instruction__strategy-peer-tooltip: Learners to each other. Teachers (You) also can review
+instruction__teacher-comment: Comment from teacher
+instruction__will_be_deleted: >-
+  Reviewing is marked for deletion!<br>It will be deleted after you press "Save". Click here to
+  undo.
+instruction_urgent:
+  btn: Finish now
+  btn_expl: Score will be given based on reviews received at the moment.
+  fail: "Failed to finish review, try again later"
+  finished_expl: >-
+    {count, plural, =1 {Review result: {percentage}%. At the initiative of the instructor score was
+    given based on single review {date}.} other {Review result: {percentage}%. At the initiative of
+    the instructor score was given based on # reviews {date}.}}
+  note: >-
+    {count, plural, =1 {Points will be given automatically after # more review received.} other
+    {Points will be given automatically after # more reviews received.}}
+  success: Reviewing finished
+instructor-dashboard:
+  info: "There are probably some issues with steps below:"
+  kind:
+    abuse_comment_votes: Abused comments
+    correct_ratio: Low success rate
+    default_text: Default texts
+    discrimination: Discrimination index
+    error_video: Video problems
+    magic: Magic
+    pending_comments: Pending comments
+    pending_instructor_review_sessions: Pending instructor reviews
+    pending_peer_review_sessions: Pending peer reviews
+    plagiarized_submissions: Plagiarism
+    reviews_outliers: Reviews outliers
+  no-issues:
+    default: "No issues :)"
+    error_video: There are no video steps
+    no_successes: There are no problem steps
+  step-stat:
+    abused: abused
+    abused-tooltip: Count of dislikes for comments in this step.
+    comments: Comments
+    discrimination: discrimination index
+    discrimination-tooltip: >-
+      The discrimination index is a measure of how well a step is able to distinguish between
+      learners who are knowledgeable and those who are not.
+    pending: pending
+    pending-reviews-sessions: pending
+    pending-reviews-sessions-tooltip: Count of pending reviews.
+    pending-tooltip: Comments with no replies
+    plagiarism: >-
+      {count, plural, =1 {# plagiarized submission} other {# plagiarized submissions}}
+    plagiarism-tooltip: Count of submissions that marked as plagiarized by robot.
+    quiz-error: Step error!!!
+    quiz-error-tooltip: >-
+      There are some errors in step itself - learners have no chance to solve it.
+    quiz-warning: Step warning!
+    quiz-warning-tooltip: There are some warnings in step itself. You'd better resolve them.
+    reviews: Reviews
+    reviews-outliers: "{count, plural, =1 {# reviews outlier} other {# reviews outliers}}"
+    reviews-outliers-tooltip: Count of reviews that marked as outliers by robot.
+    submissions: Submissions
+    success-rate: success rate
+    success-rate-tooltip: Count of success submissions / Count of total submissions.
+    total-comments: total
+invitations-editor:
+  empty-list: No active invitation links
+  invite: Invite people
+  load-more: Load more ↓
+  new-desc:
+    admins: administer
+    assistants: assist
+    learners: learn
+    moderators: moderate
+    teachers: teach
+    testers: test
+    text: "Anyone with this link can <strong>{name}</strong> the course."
+  new-link: Get invitation link
+  one-time: one-time
+  remove: Remove invitation
+  remove-confirm: Are you sure you want to delete the link?
+  reusable: reusable
+invitations-modal:
+  desc: >-
+    Here you can invite your learners or employees to a private course. Add a simple list of email
+    addresses in the textarea. They will receive an email with an invitation link and will be able
+    to get on your course. Each email should be on a new line.
+  edit: Edit email address List
+  edit-confirm: You already have a ready mailing. Do you want to edit the list?
+  email-list: a list of emails
+  empty-warn: No email addresses were found on the list.
+  group:
+    admins: Admins
+    assistants: Assistants
+    learners: Learners
+    moderators: Moderators
+    teachers: Teachers
+    testers: Testers
+  send: Send
+  send-caption: Invite people by
+  stop: Stop
+  textarea-placeholder: |-
+    List example:
+    user1@email.com
+    user2@email.ru
+    user3@email.org
+  title: "Sending invitations to the {group} group"
+  try-again: Try again.
+  unique-emails: >-
+    {count, plural, =1 {Recognized # unique email address} other {Recognized # unique email
+    addresses}}
+invite_friends_subtitle: Let your friends become classmates on Stepik.
+invite_friends_title: Invite a friend
+klass:
+  add-assistant: Add assistant
+  add-assistant__error: Error adding assistants
+  add-assistant__label: User ID
+  add-assistant__placeholder: ""
+  add-assistant__success: Assistant successfully added
+  assistants: Class assistants
+  assistants-subpage: Class assistants
+  course: Course
+  dismiss-assistant__confirm: "Are you sure you want to remove assistant {name}?"
+  dismiss-assistant__error: "Could not remove assistant {name}"
+  dismiss-student__confirm: "Are you sure you want to dismiss {name}?"
+  dismiss-student__error: "Could not dismiss learner {name}"
+  edit: Edit
+  error-leave: Could not leave class
+  gradebook: Show gradebook for class
+  gradebook-subpage: Gradebook & Submissions
+  gradebook_link: Go to gradebook page
+  header: Class
+  index-subpage: Class info
+  inivtation_link_descr: Share this link with your learners to invite them
+  invitation_link: Invitation link
+  leave: Leave class
+  students: Class learners
+  students-subpage: Class learners
+  submissions: Show submissions for class
+klass-edit:
+  cancel: Cancel
+  delete: Delete class
+  delete-confirm: Are you sure you want to delete current class?
+  deleted: Class deleted
+  description: Class description
+  error-on-delete: Something went wrong. Can't delete current class.
+  error-on-save: Something went wrong. Can't save current changes.
+  header: Edit class
+  save: Save
+  saved: Changes saved
+  title: Title
+  title-hint: Class title
+klass-join:
+  cancel: Cancel
+  course: Course
+  disclaimer-text: Please note that your solutions will be available to the class teacher.
+  error: Could not join class
+  header: Join class
+  is_joined: You have already joined this class.
+  join: Join
+  success: You have successfully joined the class
+klass-new:
+  about: About classes
+  cancel: Cancel
+  course: In the course
+  course-hint: Course id
+  create: Create
+  description: Class description
+  header: Create a new class
+  title: Title
+  title-hint: Class title
+klasses:
+  empty-list: You do not have classes.
+  header: Classes
+  iown: Created classes
+  is-access-restricted_other: Access is restricted. Please contact the class owner.
+  is-access-restricted_owner: >-
+    You have exceeded the limit of learners in classes: <b>{count}</b> of <b>{allowed_count}</b>.
+    <br> Please remove some learners in your classes to have access to the scores and submissions.
+    {link}.
+  istudent: Classes where I study
+  klass-plan-landing: >-
+    <a href="{href}" target="_blank" rel="noopener noreferrer">Read more about restrictions in
+    classes</a>
+  klass-plan-support: Contact us at support@stepik.org for more information
+  my-students: My learners
+lesson:
+  instructor:
+    edit-permissions: Permissions
+  likes:
+    disliked: You disliked this lesson
+    liked: You liked this lesson
+  private: Private
+  public: Public
+  toc-show: Show table of contents
+  updated: Last update
+lesson-actions:
+  actions: Lesson actions
+  delete: Delete lesson
+lesson-edit:
+  cancel: Back
+  delete-step: |-
+    This step is marked for deletion!<br>
+     It will be deleted after you press "Save". Click here to undo.
+  save: Save changes
+  unsaved-confirm-text: "You've edited the lesson, but didn't save it.<br>Save changes?"
+lesson-end:
+  after-exam-link-active: >-
+    You scored {score} out of {max_score} in this exam.<br> Close this window to go back.
+  after-exam-link-active_full: You scored maximum score in exam!
+  after-exam-link-ended: "You scored {score} out of {max_score} in this exam."
+  buy-course-btn: "Buy full course for {price}"
+  course_score: "Your score:"
+  enroll: enroll in
+  enroll_for_lessons: the course to view other lessons
+  lesson_finished: You have just finished the lesson
+  next_unit_is_exam: is exam. You can start your Exam from syllabus section.
+  next_unit_p1: Next module
+  next_unit_p2: from this course will be available at
+  next_unit_p3: >-
+    To open a module "{next_module}" you need to score in module "{required_module}"
+  not_enought_score: "Unfortunately, you did not score enough points."
+  or_enroll: or enroll to
+  other_courses: other courses
+  to_congrats_header_course: "Congratulations, you finished course"
+  to_congrats_header_lesson: "Congratulations, you just finished module"
+  to_syllabus: go to course syllabus
+  to_syllabus-and-explore-next: "To course syllabus, and explore next module"
+  you_are_leaving_exam_active: Attention! It was last lesson in exam.
+  you_are_leaving_exam_ended: "Congratulations, you just finished exam"
+  you_can: You can
+lesson-new:
+  fail: Lesson was not saved. Check your internet connection and try again.
+  header: Create a new lesson
+  long-title: >-
+    Title is too long. You still can create lesson, but title will be reduced to 64 symbols.
+lesson-print:
+  images: "Images loaded: {loaded} of {total}"
+  latex: LaTeX render
+lesson__adaptive_no_connection:
+  Failed to send reaction. Check your internet connection and try again.
+lesson__adaptive_recommendation_fail: Failed to get recommendation. Check if you are logged in.
+lesson__attributes:
+  comments: Comments enabled
+  public: Public
+lesson__autogenerated-step: >-
+  All steps were deleted. This step has been generated. Change text and save lesson.
+lesson__comments-disabled: Instructor disabled comments for this lesson.
+lesson__created-by: Lesson by
+lesson__delete-confirm: Are you sure to delete Lesson?
+lesson__edit_cannot-save: "Some steps are incorrect, check highlighted steps."
+lesson__edit_saved: Saved
+lesson__ended-course-warning: >-
+  Course ended, lesson is not available. There are <a href="/catalog">more courses</a>.
+lesson__enroll-for-access: Enroll in the course to view lessons
+lesson__enroll-invite-warning: >-
+  Lesson you are trying to open is available in <a
+  href="/course/{course_slug}">"{course_title}"</a> course, which is available for you to enroll.
+lesson__enroll-warning: >-
+  This course is private and requires special access (for example: invitation link). But you still
+  can learn this public lesson.
+lesson__header: Lesson settings
+lesson__likes_dislike_tooltip: Dislike
+lesson__likes_like_tooltip: Like
+lesson__passed: total passed
+lesson__print-soon-note: Loading lesson. Printing will start soon…
+lesson__private-warning: >-
+  This lesson is private and requires special access (for example: invitation link).
+lesson__private-warning-guest: >-
+  This lesson is private and requires special access (for example: invitation link). <a
+  href="{login_link}?next={current_url}">Please log in to Stepik first!</a>
+lesson__quiz-print-notify: To solve this problem please visit
+lesson__report-common: Common reports
+lesson__scores: your / max score
+lesson__section-requirement-warning: >-
+  {count, plural, =1 {Get <strong>#</strong> point in the "<strong>{section_title}</strong>" module
+  ({percent}%) to open this lesson.} other {Get <strong>#</strong> points in the
+  "<strong>{section_title}</strong>" module ({percent}%) to open this lesson.}}
+lesson__settings: Settings
+lesson__statement: Statement
+lesson__step-title: "Step {position}"
+lesson__teachers-help: Instructors help center
+lesson__time_to_complete: Average time to complete the lesson (in minutes)
+lesson__unavailable: The lesson is not available
+lesson__video-print-notify: To watch this video please visit
+lesson__views: total views
+lesson_attachments:
+  add_file: + Add file
+  back: Return back
+  confirm_del: 'Are you sure you want to delete "{file}"?'
+  copy_link: Copy link
+  empty: No files were attached to this lesson yet
+  header: Lesson attachments
+  size_limit: "Each file limit: 25 MB"
+lesson_ccbysa_summary: Creative Commons license (CC BY-SA 4.0)
+lesson_finder:
+  not_found: Nothing found. Try to search by lesson ID
+  query_placeholder: Lesson search (by name or ID)
+library__leaders: Top users
+library__leaders-empty: No top users yet
+library__leaders-knowledge: Knowledge
+library__leaders-reputation: Reputation
+license__license: License
+license__license-type: License type
+license__received-description: >-
+  By automating routine checks and corrections, JetBrains tools speed up production, freeing
+  developers to grow, discover and create. You can download any JetBrains product on <a
+  href="https://www.jetbrains.com/products.html">this page</a> and use this key on a first launch.
+  You can use multiple JetBrains products with this key at the same time.
+license__received-expire-date: >-
+  Please note, that you can use this license for educational purposes only, and it is valid up to
+license__received-introduction: >-
+  We've noticed that you've recently solved a hard assignment on Stepik, congratulations! As a
+  gift, this is the educational license key for any JetBrains IDE for you:
+license__received-learn-more: >-
+  If you will need a new educational license after this date, just continue learning on Stepik, and
+  you'll get one.
+license__received-signature:
+  "Best learning and with the drive to develop,<br/>Stepik and JetBrains Teams."
+license__received-thanks: >-
+  This offer was made available thanks to generosity of JetBrains and its commitment to education.
+login:
+  email: E-mail
+  failed_login: The e-mail address and/or password you specified are not correct.
+  forgot_password: Remind the password
+  google_signin: Sign in with Google
+  is_password_reset: >-
+    We've sent you an e-mail. If you won't receive it within a few minutes, please check your spam
+    folder. If it's still not there, please contact us at support@stepik.org
+  no_account: Don't have a Stepik account?
+  password: Password
+  register_now: Register now!
+  social_login_title: Or sign in through social
+  social_login_title-lower-ab: Or with an email
+  social_login_title-upper-ab: Sign up with social account
+  social_login_with: Sign in with
+  social_signup_with_existing_email: >-
+    This email is already used. To log in using this social account you have to log in via email
+    and password.
+  title: Log in
+lti-editor:
+  intagration: >-
+    <a href='https://support.stepik.org/hc/en-us/articles/360000177314' target='_blank'>Check our
+    docs</a> to learn more about the integration process for Moodle, Canvas, edX, Coursera and
+    others.
+  key-title: LTI Key (Consumer)
+  private-profile-title: Create private profiles for learners
+  save: Save LTI access settings
+  secret-title: LTI Secret
+  sync: Sync LTI grades using all stored LTI connections for this Course
+  sync-btn: "Don't click unless necessary, takes a while"
+  tool-provider: >-
+    Stepik can be integrated into your LMS via LTI as a Tool Provider. Read more about Learning
+    Tools Interoperability (<a
+    href='http://www.imsglobal.org/activity/learning-tools-interoperability' target='_blank'
+    rel='noopener noreferrer'>LTI</a>).
+material__video-not-ready: Video has not been uploaded or processed yet.
+material__video-save-error: >-
+  An error occurred while saving the video. You may not have enough rights to edit this step.
+member-field:
+  desc:
+    admins: admins
+    assistants: assistants
+    learners: learners
+    moderators: moderators
+    teachers: teachers
+    testers: testers
+    text: >-
+      Those who receive invitations will be <strong>{name}</strong> of the course.
+  register: "If the user is not on Stepik, we will offer him to register."
+  user-not-found: User with this id not found
+members-list:
+  empty-list: No users yet
+  load-more: Load more ↓
+  remove: Remove a user from the list
+  remove-confirm: Are you sure you want to remove a user from the list?
+modal-dialog-confirm:
+  discard: Discard changes
+  save: Save
+  text: You have made changes. Do you want to save or discard them?
+new-class-form:
+  choose-course-btn: Выбрать курс
+  choose-course-how-to-img:
+    alt: How to create a class from the course page
+    src: /static/frontend/new-class-how-to-en.png
+  choose-course-text: >-
+    Создайте класс для <b>любого открытого</b> курса и получите доступ к оценкам и решениям ваших
+    учащихся.
+  create-class-btn: Создать класс
+  create-class-choose-course: Выберите курс...
+  create-class-text: >-
+    Создайте класс для <b>любого своего</b> курса, чтобы разделить учащихся по группам и пригласить
+    для них преподавателей.
+new-course-form:
+  course-title:
+    caption: Название курса
+    footnote: "{count, plural, =1 {Максимум 1 символ} other {Максимум # символов}}"
+  create-btn: Создать курс
+new-lesson-form:
+  create-btn: Создать урок
+  lesson-title:
+    caption: Название урока
+    footnote: "{count, plural, =1 {Максимум 1 символ} other {Максимум # символов}}"
+notification__favorite: favorite
+notification__muted: muted
+notifications__empty-list: No notifications
+notifications__events-link: My events
+notifications__flag-favorite: Favorites
+notifications__flag-read: Read
+notifications__flag-unread: Unread
+notifications__items-count: "{count, plural, other {# items} =1 {# item}}"
+notifications__mark-all-btn: Mark all as read
+notifications__mark-all-confirm: Mark all notifications as read?
+notifications__mark-fav: To favorites
+notifications__mark-one: Mark read
+notifications__type-comments: Comments
+notifications__type-default: Other
+notifications__type-learn: Learning
+notifications__type-review: Reviews
+notifications__type-teach: Teaching
+notifications__unmark-fav: Remove from favorites
+notifications__unmark-one: Mark unread
+notifications__unmute-tooltip: Show similar notifications
+org:
+  avatar_img_alt: Organization logo
+  courses_tab: Courses
+  created_courses_count: "{count, plural, other {# courses published} =1 {# course published}}"
+  created_lessons_count: "{count, plural, other {# lessons created} =1 {# lesson created}}"
+  edit_profile: Edit profile
+  issued_certificates_count:
+    "{count, plural, other {# certificates issued} =1 {# certificate issued}}"
+  klasses_tab: Classes
+  lessons_tab: Lessons
+  mailing_tab: Mailings
+  no_courses: No courses found
+  no_lessons: No lessons found
+  students_tab: My learners
+peer-review__first-step: >-
+  <strong>Stage 1 out of 4</strong>. For points, <strong>save</strong> and <strong>send</strong>
+  the best submission to <strong>other students</strong> for review
+peer-review__fourth-step: >-
+  {count, plural, other {<strong>Stage 4 out of 4</strong>. You got <a href="{url}"># reviews</a>.
+  Result is median of {minimum} reviews: <strong>{result}%</strong>} =1 {<strong>Stage 4 out of
+  4</strong>. You got <a href="{url}"># review</a>. Result: <strong>{result}%</strong>}}
+peer-review__nothing: No submissions for review
+peer-review__second-step: >-
+  {count, plural, other {<strong>Stage 2 out of 4</strong>. Make <strong># reviews</strong> for
+  other learners} =1 {<strong>Stage 2 out of 4</strong>. Make <strong># review</strong> for other
+  learners}}
+peer-review__teacher-text: Learners review each other
+peer-review__third-step: >-
+  {count, plural, other {<strong>Stage 3 out of 4</strong>. You gave your reviews. You need to
+  receive <strong># reviews</strong> for points. Wait} =1 {<strong>Stage 3 out of 4</strong>. You
+  gave your reviews. You need to receive <strong># review</strong> for points. Wait}}
+peer-review__to-give: >-
+  {count, plural, other {<strong># reviews</strong> left} =1 {<strong># review</strong> left}}
+personal_license__received-activate-instructions: >-
+  To start using this license you should register this key at <a
+  href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>.
+personal_license__received-description: >-
+  By automating routine checks and corrections, JetBrains tools speed up production, freeing
+  developers to grow, discover and create. You can download any <a
+  href="https://www.jetbrains.com/products.html">JetBrains product</a> and use it with this
+  license. You can use multiple JetBrains products with this license at the same time.
+personal_license__received-introduction: >-
+  We've noticed that you've recently solved a hard assignment on Stepik, congratulations! As a
+  gift, this is an activation key for the educational license for any JetBrains IDE for you:
+plan-card:
+  meter-caption: "{courseType} courses <var>{counter}</var>"
+  meter-subnote-free: "PRO courses are not available for {planName} plan."
+  owner-note:
+    details-text: >-
+      To include the course in your subscription please <a href='mailto:support@stepik.org'>contact
+      us</a> at support@stepik.org so that we make you primary admin of the course.
+    details-toggler: Change
+    text: >-
+      The course is included in <a href='{ownerURL}'>{ownerName}</a> subscription
+  text-free: >-
+    <a href='https://welcome.stepik.org/en/pricing' target='_blank'>Get a subscription</a> to
+    access advanced course features
+  text-limit: >-
+    <a href='/pricing'>Change the plan</a> to increase the number of the available {courseType}
+    courses or make one of your current {courseType} courses basic.
+  text-want-more: >-
+    <a href='https://welcome.stepik.org/en/pricing' target='_blank'>I want more</a>
+  title: "Your current plan <var>{planName}</var>"
+plan-upgrade-card:
+  button: Upgrade
+  text: >-
+    Need access to gradebook, reports, list of students? Want to use instructor review of
+    submissions and get advanced support? <a href='https://welcome.stepik.org/en/pricing'
+    target='_blank' style='white-space: nowrap'>Learn more about our plans</a>
+  title: Upgrade the plan
+plans:
+  ask_questions: >-
+    If you have any questions, send us an email to <a
+    href="mailto:info@stepik.org">info@stepik.org</a>.
+  better_support: Higher priority support.
+  card:
+    change: change
+    confirm: Apply
+    description: Change card
+  connected_card: "Connected card: {card}"
+  description: >-
+    {count, plural, =1 {Subscription to # PRO course} other {Subscription to # PRO courses}}
+  discount_valid: "Your discount will end at {discount_end}."
+  fail: Failed to subscribe
+  free:
+    another_plans: >-
+      To create private courses <a href='https://welcome.stepik.org/en/pricing'>see subscriptions
+      plans</a>.
+    max_courses: You cannot create private courses.
+    support: Regular support.
+  loading: In progress...
+  login_req: Login to subscribe
+  max_pro_courses: >-
+    {count, plural, =1 {You can create # private course with unlimited learners.} other {You can
+    create # private courses with unlimited learners.}}
+  max_public_courses: You can create unlimited public courses.
+  next_payment: "Next payment {price} will be charged on {payment_date}."
+  not_found: >-
+    Subscription plan not found. Please contact support@stepik.org for a correct link.
+  other_plans: >-
+    You can try also <a href="https://welcome.stepik.org/en/pricing">another plan</a>.
+  sub_title: "You are on <strong>{plan_name}</strong> subscription plan. With this plan:"
+  subscribe: Subscribe for
+  success: Successfully subscribed
+  title: Create more private online courses
+  unsubscribe: unsubscribe
+  unsubscribe_description1: "You can also "
+  unsubscribe_description2:
+    ' from this plan, or try <a href="https://welcome.stepik.org/en/pricing">another plan</a>.'
+platform-news__title: What's new on Stepik
+plugin__admin: Linux Challenge
+plugin__admin-description: Configure a remote server
+plugin__chemical: Chemical Problem (deprecated)
+plugin__chemical-description: Enter a chemical formula
+plugin__choice: Multiple Choice Quiz
+plugin__choice-description: Select all correct options from the list
+plugin__code: Code Challenge
+plugin__code-description: "Write a program, test using stdin → stdout"
+plugin__dataset: Data Challenge
+plugin__dataset-description: Process a randomized dataset within the time limit
+plugin__external-grader: External Grader
+plugin__external-grader-description: Submission's processed via external service
+plugin__fill-blanks: Fill in the Blanks
+plugin__fill-blanks-description: Fill in the blanks
+plugin__free-answer: Free Response
+plugin__free-answer-description: Write an answer
+plugin__html: HTML and CSS challenge
+plugin__html-description: Write the structure and styles of the html document
+plugin__linux-code: Linux Code Challenge
+plugin__linux-code-description: Write a program
+plugin__lti-consumer: LTI Consumer
+plugin__lti-consumer-description: Submission's processed via LTI provider
+plugin__manual-score: Manual Score
+plugin__manual-score-description: Manual Score
+plugin__matching: Matching Problem
+plugin__matching-description: Match two lists
+plugin__math: Math Problem
+plugin__math-description: Enter a math formula
+plugin__math-start: Start typing a mathematical formula to see the result
+plugin__number: Number Problem
+plugin__number-description: Enter a number
+plugin__parsons: Parsons problem
+plugin__parsons-description: Arrange the blocks of code in the correct order and indent
+plugin__puzzle: Jigsaw Puzzle
+plugin__puzzle-description: Place the image pieces into a complete image
+plugin__pycharm: JetBrains IDE Challenge (alpha version)
+plugin__pycharm-description: Solve it using your JetBrains IDE
+plugin__random-tasks: Random Task Problem
+plugin__random-tasks-description: Enter a numerical answer
+plugin__schulte: Schulte Table Problem
+plugin__schulte-description: Find numbers in the correct order
+plugin__single-choice: Multiple Choice Quiz
+plugin__single-choice-description: Select one option from the list
+plugin__sorting: Sorting Problem
+plugin__sorting-description: Sort a given list
+plugin__sql: SQL Challenge
+plugin__sql-description: Enter an SQL query
+plugin__string: Text Problem
+plugin__string-description: Write text answer
+plugin__table: Table Problem
+plugin__table-description: Tick the right boxes
+plugin__text: Text
+plugin__text-description: Formatted text with images and math formulas
+plugin__trik: TRIK Studio Challenge
+plugin__trik-description: Program the robot in TRIK Studio
+plugin__trik-download-dataset: Download TRIK Studio save
+plugin__video: Video
+plugin__video-description: Upload your video
+plugins:
+  chemical:
+    capital-first-letter: >-
+      Each chemical element must be written with its first letter as a capital letter and the
+      remaining letters in lower case.
+    chemical-expression: "Chemical expression (formula or equation):"
+    errors:
+      expression-invalid: Chemical expression is invalid.
+      template-invalid: Chemical template is invalid.
+    expression-template: "Expression template:"
+    match-case: Case must match
+    use-tags: >-
+      You can use <b>#</b> (normal), <b>_</b> (sub), <b>^</b> (sup) and <b>-</b> (subsup).
+  choice:
+    add-options: Add options and mark correct ones.
+    any-correct: Any response is correct
+    checkboxes: Input type
+    do-not-randomize: Do not randomize order
+    enable-HTML: Enable HTML tags in options.
+    enable-multiple: "Enable multiple correct options. If unchecked: one choice only."
+    errors:
+      ambiguous-options: Ambiguous options.
+      no-correct-options: No correct options selected.
+      sample-size-big: Sample size is greater than the number of available options
+      sample-size-small: Sample size should be at least 1.
+      too-many-correct-options: Too many correct options selected.
+    explanations-options: Explanations next to options
+    explanations-to-corresponding-options: Explanations will be shown next to corresponding options
+    option-explanation: >-
+      This will be shown when learner marked (or unmarked) this option in a wrong way
+    poll: Make a poll.
+    preserve-order: Preserve options order as above.
+    sample-size: Sample size
+    show-explanations: Show explanations
+    show-options: Show options
+    shown-options-count: >-
+      Number of options which will be shown to user. Should be less than number of available
+      options above.
+    type:
+      multiple-choice: Checkboxes
+      single-choice: Radio buttons
+  code:
+    advanced:
+      description: >-
+        You can build your own logic for generating tests and checking learners' submissions.
+      docs: >-
+        <a target_='_blank' href='{href}'>Click here</a> to learn more about advanced editor.
+      info: >-
+        Use generate() for generating tests (they will be appended to the tests you added on Test
+        cases tab), solve() to write a perfect solution for the challenge and check() for
+        evaluating the user's reply.<br>We highly recommend appending the trailing "\\n" character
+        to all datasets in your generate() function.
+    download-archive-tests: Download an archive with the latest generated tests.
+    download-tests: Download tests
+    enter-code: Enter your code in Python below.
+    errors:
+      memory-limit-max: "Memory Limit should be at most {max}"
+      memory-limit-min: "Memory Limit should be at least {min}."
+      number-sample-tests-negative: Number of sample tests should be non-negative.
+      test-broken: |-
+        Test is broken.
+        dataset: {dataset}
+        clue: {clue}
+        reply: {reply}
+        result: {result}
+        hint: {hint}
+      test-cases-too-large: "The total size of test cases is too large (must not exceed {max} MB)."
+      test-format-wrong: Test format is wrong.
+      tests-empty: Empty tests set (should be at least 1 test).
+      tests-too-large: The total size of generated tests is too large (must not exceed 64 MB).
+      tests-too-many: Too many tests (should be <= 100 tests).
+      time-limit-max: "Time Limit should be at most {max}."
+      time-limit-min: "Time Limit should be at least {min}."
+      unknown-language: Unknown language
+    for-each-case: For each (single) test case
+    language: Language
+    languages:
+      add-lang: >-
+        Specify initial code for each selected language. Example:<pre><code>::python3
+
+        def solution():
+            a, b = map(int, input().split())
+            c = ...
+            print(c)
+        solution()
+
+        </code></pre>
+      description: >-
+        List available languages in field below. If empty, learners can use any language. Example:
+        <pre><code>::python3
+
+        ::kotlin</code></pre>
+      docs: >-
+        <a target_='_blank' href='{href}'>Click here</a> to learn more about languages and
+        templates.
+    limit-memory: Memory limit
+    limit-memory-unit: MB
+    limit-time: Time limit
+    limit-time-unit: "{count, plural, =1 {second} other {seconds}}"
+    number-of-shown-tests: Number of sample tests shown on step
+    number-of-tests: "Number of sample tests:"
+    run: Run code
+    run-all-tests: Run all test cases
+    run-all-tests-title: >-
+      By default submission testing stops at the first failed test case. By checking this option
+      all test cases are run even if one fails.
+    run-notify:
+      data: with your own inputs!
+      debug: Debug your code
+    run-user-code-allowed: Learner can run a code on their data
+    run-user-code-allowed-title: Learner can edit input data and run a program with arbitrary data
+    scale-memory-limit: Scale memory limit
+    scale-memory-limit-or-manually: "Scale memory limit for each language, or set it manually"
+    scale-time-limit: Scale time limit
+    scale-time-limit-or-manually: "Scale time limit for each language, or set it manually"
+    score-all-tests: Give partial score for passed test cases
+    score-all-tests-title: >-
+      Learner's score will depend on the number of passed test cases and be calculated as (Number
+      of passed test cases / Total number of tests) * Step cost.
+    select-language: Select programming language
+    tabs:
+      advanced: Advanced
+      languages: Languages & Templates
+      test-cases: Test cases
+    templates: >-
+      Templates and restrictions for programming languages. Leave empty for defaults.
+    test-cases:
+      add-test-case: Add test case
+      description: >-
+        Add test cases to check the correctness of a learner's code. The submitted solution will be
+        tested on every test case. If you want to generate tests in a more advanced way use
+        Advanced tab.
+      title: "Test case #{num}"
+    type-code: Type your code here...
+    upload-archive: >-
+      Upload a zip archive with tests (N – input filename, N.clue – clue filename). These tests are
+      used after generated by the generate() function.
+    upload-tests: "Upload tests:"
+  dataset:
+    download-dataset: Download dataset first
+    download-last-submission: You can download your submission
+    enable_time_limit: Limit attempt time to 5 minutes
+    enter-code: Enter your code below.
+    enter-code-placeholder: Type your code here...
+    errors:
+      solve-check-failed: >-
+        The correct reply from the 'solve' function is scored as {score} instead of 1 or True.
+        Please check your 'solve' and 'check' functions.
+
+        {hint}
+    type-dataset: Type your answer here...
+  ext-grader:
+    errors:
+      filenames-not-unique: "'filename' values in 'files' list should be unique."
+      files-empty: >-
+        'files' list should contain at least one file definition when 'is_text_enabled' value is
+        false.
+      queue-name-incorrect: >-
+        'queue_name' value is incorrect. Please contact us at support@stepik.org to create a new
+        queue from which your external grader will pull.
+    problem-source: "Problem source (JSON):"
+    syntax-error: JSON syntax error
+    type-ext-grader: Type your answer here...
+  fill-blanks:
+    add-blank: Add blank
+    add-correct-options: "Add correct options:"
+    add-options: "Add options (mark correct ones):"
+    add-text: Add text
+    blank-type: "Blank type:"
+    case-sensitive: Case sensitive
+    check-A-a: Check to differ 'A' from 'a'
+    choice: Choice
+    detailed-feedback: Show detailed feedback to learners (show correct and wrong cells)
+    errors:
+      blanks-empty: The problem should contain at least one blank block.
+      no-correct-options: Every blank block should have at least one correct option.
+    input-placeholder: Write text here (HTML is allowed)
+    partially-correct: Give partial score for correct cells
+    partially-correct-title: >-
+      Learner's score will depend on the number of correct cells and be calculated as (Number of
+      correct cells / Total number of cells) * Step cost.
+    select-prompt: "Select:"
+    text-input: Text input
+  free-answer:
+    any-response-is-correct: Any text response will be graded as correct.
+    enable-HTML: Enable HTML and WYSIWYG editor for responses
+    enable-attachments-for-response: >-
+      Enable <b>attachments</b> for responses (in addition to the text, max 5 MB per response)
+    enable-tags: Enable <b>rich-text editor</b> for responses
+    type-free-answer: Type your answer here...
+  html:
+    checklist:
+      add-check-item: Add task
+      title: "Task #{num}"
+    errors:
+      not-found-target: "Not found the target element {selector}"
+      not-found-type: "{type} test type is not defined. Please inform the author."
+      test-failed: "{title} test failed"
+    html-tests:
+      attr-name: Attribute name
+      attr-value: Attribute value
+      child-sel: Selector of the child element (optional)
+      class-name: Class name
+      content-exp: Element content or regular expression of the form /expression/flags
+      css-rule: CSS rule name
+      css-value: CSS rule value
+      source-exp: Regular expression of the form /expression/flags
+      source-type: Type of source
+    name: Text of task
+    result: Result
+    selector: DOM selector
+    submission:
+      hide-results: Hide Results
+      run-code: Run
+    tests:
+      add-test: Add test
+      title: "Test №{num}"
+      type: Type of test
+    tip:
+      exact-or-regexp: "By default, an exact match is applied"
+      exact-value: Check on exact match
+      no-regexp: Unable to read regular expression
+      regexp: Check by <b>regular expression</b>
+  linux:
+    bootstrap-script: Enter your bootstrap Bash script below.
+    bootstrap-script-placeholder: Enter your bootstrap Bash script here...
+    errors:
+      bootstrap-failed: |-
+        Failed to bootstrap a virtual machine.
+
+        {stdout}
+        {stderr}
+      bootstrap-internal-error: >-
+        Internal error: failed to bootstrap a virtual machine: {error}. Please try again.
+      bootstrap-script-check-timeout: "Cannot check bootstrap script syntax, took too much time."
+      bootstrap-script-syntax-error: |-
+        Syntax error in bootstrap script:
+
+        {error}
+      bootstrap-timeout: "Failed to bootstrap a virtual machine: took too much time."
+      memory-limit-max: "Maximum value for memory limit is {max} MB."
+      memory-limit-min: "Minimum value for memory limit is {min} MB."
+      rootnroll-error: >-
+        Internal error: failed to communicate with the cloud service. Please try again.
+      test-scenario-check-error: |-
+        Internal error while checking test scenario correctness:
+
+        {stdout}{stderr}
+      test-scenario-has-errors: |-
+        Test scenario code contains errors:
+
+        {error}
+    image: "Image:"
+    initialize-script: Initialize a virtual machine with script
+    memory-limit: "Memory Limit (MB):"
+    test-scenario: Enter your test scenario code below.
+    test-scenario-placeholder: Enter your test scenario code here...
+    virtual-machine-image: Image that is used to create a new virtual machine instance
+  lti-consumer:
+    add-custom-field: New custom field
+    remove-custom-field: Delete current custom field
+  manual-score:
+    files:
+      files: Files
+      ok: OK
+      process-date: Process date
+      processing: processing...
+      status: Status
+      upload-date: Upload date
+    manual-score: An instructor assigns points for this step.
+    no-settings: There are no settings for this step.
+    text: |-
+      This step allows you to add arbitrary grade points to learners.<br>
+       To do so, save the step and upload a csv file with grades (from learner's view).<br>
+       CSV file format:<br>
+       <pre>
+       user_id,score,feedback
+       41,0,optional feedback for user 41
+       42,25,25% score for user 42
+       43,100,100% score for user 43
+       </pre>
+       Score is a percentage from this step's cost, it should be from 0 to 100.
+    upload: Upload scores
+    upload_done: File with points has been uploaded.
+    upload_fail: Upload failed. Check internet connection and try again.
+  matching:
+    enable-HTML: Enable HTML tags in items
+    errors:
+      pairs-ambiguous: Ambiguous pairs.
+      pairs-empty: Empty pairs.
+    not-randomize: >-
+      Do not randomize order of the first column (second column is always shuffled)
+    preserve-order: Preserve options order as above
+    specify-items: "Please specify items. Learners will need to put them in pairs as below:"
+  math:
+    correct-answer: "Correct answer (math formula):"
+    errors:
+      answer-empty: Correct answer should be non-empty.
+      im-z-incorrect: Incorrect Im z.
+      parse-answer-failed: Failed to parse correct answer.
+      re-z-incorrect: Incorrect Re z.
+      tolerated-error-incorrect: Incorrect tolerated absolute error.
+    int-only: Integer numbers only
+    numerical-test: "Numerical test on random point z (advanced settings):"
+    test-on-random: Test on random integer numbers only
+    tolerated-error: Tolerated absolute error
+    type-math: Type your answer here...
+  number:
+    accepted-rule: >-
+      Any of the specified above correct answers ± tolerated error will be accepted.
+    add-option: Add one more answer option
+    add-remove-answer: Add/Remove a correct answer
+    correct-answer: Correct answer
+    delete-last-option: Delete the last answer option
+    errors:
+      answer-not-provided: At least one answer option should be provided.
+      tolerated-error-negative: Tolerated error should be non-negative.
+    only-number: The answer must be a number
+    tolerated-error: Tolerated error
+    write-number: Write number here
+  parsons:
+    alert: This type of step is not currently supported.
+    enter-code: Enter your code in below.
+    indent: Please use 4 spaces for indentation.
+    type-code: Type your code here...
+  puzzle:
+    difficulty: "Difficulty:"
+    upload-image: Upload image
+  random:
+    errors:
+      ranges-invalid: Error in ranges.
+      solve-expression-incorrect:
+        Error in solve expression. Perhaps one or more variable is not declared.
+    number-of-tasks: "Total number of different tasks:"
+    solve: Solve
+    task: "Task:"
+    tolerated-error: Tolerated Error
+    type-random: Write number here
+    write-here: Write text here
+  schulte:
+    Schulte-Gorbov-table: Schulte-Gorbov table
+    randomize-color: Randomize color
+    randomize-font-size: Randomize font size
+    show-grid: Show grid
+    table-size: "Table size:"
+  sorting:
+    enable-HTML: Enable HTML tags in items
+    errors:
+      options-ambiguous: Ambiguous options.
+      options-empty: Empty options.
+    items-below: >-
+      Please specify items below. Learners will need to put them in the same order.<br>
+       Don't forget to specify required order (e.g. ascending or descending) in the problem
+      statement above.
+  sql:
+    check-code: Check code
+    check-multiple-statements: Allow user to use multiple SQL queries
+    errors:
+      challenge-broken: >-
+        The challenge is broken. Please check your solution query and check code.
+
+        {hint}
+      db-container-start-failed: Failed to start db container. Please try again.
+      init-sql-failed: |-
+        Init SQL script failed:
+        {error}
+    init-script: Init SQL script (optional)
+    multiple-statements: Multiple SQL queries
+    run-user-code-allowed: Learner can execute arbitrary SQL queries
+    run-user-code-allowed-title:
+      Learner can execute arbitrary SQL queries while debugging the submission
+    solution-query: Solution SQL query
+    type-code: Type your code here...
+    type-sql: Type your SQL code here...
+  string:
+    case: Case sensitive
+    case_descr: Check to differ 'A' from 'a'
+    correct_answer: Correct answer
+    errors:
+      match-empty-string: Pattern matches empty string
+      regex-malformed: Malformed regular expression.
+      solve-check-failed: >-
+        The correct reply from the 'solve' function is scored as {score} instead of 1 or True.
+        Please check your 'solve' and 'check' functions.
+
+        {hint}
+    input_type: Answer type
+    input_types:
+      file_only: File only
+      text_only: Text only
+      text_or_file: Text or file
+    input_types_descr: "Allow submissions only with text, with attached files or both"
+    matching_descr: Matching options
+    optional-code: >-
+      Optional code with <code>solve()</code> and <code>check(reply)</code> functions. If
+      specified, no previous options applied.
+       Submission will be graded based of result of <code>check(reply)</code>.
+    regexp: >-
+      Allow <a href="https://docs.python.org/3/howto/regex.html">regular expressions</a> (geeks
+      only)
+    regexp_descr: >-
+      You can specify the rules for the set of possible strings that you want to match
+    substring: Allow match as a substring
+    substring_descr: >-
+      Correct response may contain your string at any position. For example, 'the best of' is a
+      substring of 'It was the best of times'
+    type-code: Type your code here...
+    type-string: Type your answer here...
+  table:
+    add-column: Add new column
+    add-row: Add new row
+    any-is-correct: Any response is correct
+    choice-type: "Choice type:"
+    delete-column: Delete last column
+    delete-row: Delete last row
+    errors:
+      columns-name-collision: "There are two columns with the same name '{name}'."
+      multiple-answers-not-allowed: There cannot be multiple right answers in this mode.
+      row-no-answer: "There are no right answers for row '{name}'."
+      rows-name-collision: "There are two rows with the same name '{name}'."
+    first-column: First column
+    first-row: First row
+    make-poll: Make a poll
+    radio-or-checkboxes: >-
+      Single column choice per row is represented by radio buttons. Multiple choice is represented
+      by checkboxes
+    randomize-columns: Randomize columns order
+    randomize-rows: Randomize rows order
+    rows: "Rows: "
+    second-column: Second column
+    second-row: Second row
+    third-column: Third column
+    third-row: Third row
+  utils:
+    incorrect-html: "Incorrect HTML: {html}"
+    parse-decimal-not-number: "Field '{field}' should be a number."
+plugins__show_more: >-
+  {count, plural, =1 {+ # additional step type} other {+ # additional step types}}
+profile:
+  activity: Activity last year
+  add_annon: New announcement
+  all_courses: All courses
+  all_lessons: All lessons
+  best_courses: Popular courses
+  best_lessons: Popular lessons
+  certificate-empty-list: You don't have any certificates yet.
+  certificates: Certificates
+  city: City
+  courses-empty-list: No courses found
+  courses-empty-list-call-to-action: Check out our courses
+  courses_archived: Archive
+  courses_favorites: Favorites
+  details: Details
+  joined-date: Joined
+  knowledge-tooltip: >-
+    You get knowledge points for completing lessons. Only steps with more than 100 submissions
+    counts.
+  knowledge_rank: by knowledge
+  mailing: Mailings
+  my-courses: My courses
+  no_annons: No announcements yet
+  no_courses: Create your first course!
+  no_courses_link: Course creating
+  no_lessons: Create your first lesson!
+  no_lessons_link: Lesson creating
+  profile: Profile
+  reputation-tooltip: >-
+    You get reputation points when others solve your lessons or like your comments. Only steps with
+    more than 100 submissions counts.
+  reputation_rank: by reputation
+  teaching: Teaching
+  user_no_courses: No courses yet
+  user_no_lessons: No lessons yet
+quiz:
+  correct_ratio: Correct submissions
+  passed_by: Passed
+  score: You got
+  score-max: out of
+  submit-failed: Can not send your submission. Check internet connection and try again
+quiz__again: Solve again
+quiz__answer-received: Your answer was saved.
+quiz__attempt-allow-solutions: Now you have access to the
+quiz__attempt-correct-outdated: >-
+  This problem has been updated by the author. Your score for previous submissions is preserved.
+quiz__attempt-expand: Expand quiz
+quiz__attempt-loading-error: >-
+  We can not prepare challenge for you right now. Probably, server overloaded. Please try again
+  later.
+quiz__attempt-outdated: >-
+  Sorry! This problem has been updated by the author. You have to start it over. Your score for
+  previous submissions is preserved.
+quiz__attempt-solutions: Forum of Solutions
+quiz__attempt-solutions-desc: " where you can discuss your solution with others."
+quiz__attempt-time-limit: "<strong>Time limit:</strong>"
+quiz__attempts-unlimited: You have an unlimited number of attempts.
+quiz__correct:
+  "0": Correct.
+  "1": "You are right, well done!"
+  "10": Fabulous answer.
+  "11": Yes!
+  "12": Great!
+  "13": Well done!
+  "2": All is correct.
+  "3": Right.
+  "4": You're right!
+  "5": Totally right.
+  "6": Good job.
+  "7": Great work!
+  "8": Absolutely right.
+  "9": "Good news for you, correct!"
+quiz__correct-call-to-comment: >-
+  You just solved a difficult problem, congratulations! You can <a href="#discussions">help
+  others</a> in the comments below.
+quiz__correct-ratio-tooltip:
+  "Correct ratio: # success submissions / all submissions (updates each 2 min)"
+quiz__download-dataset: Download your dataset
+quiz__download-dataset-last: Download your last dataset
+quiz__download-submission-last: Download your last submission
+quiz__empty-reply-warn: We need a reply. Empty submissions are not allowed!
+quiz__eval: Evaluation... You can safely leave this step.
+quiz__eval-eta: "Estimated time of evaluation:"
+quiz__next-button: Next step
+quiz__p2p: This problem includes reviewing
+quiz__p2p-new: Submit this solution for review
+quiz__partially-correct:
+  "0": Almost correct! Keep trying.
+  "1": You're close to the correct answer. Let's try again!
+  "2": Your answer is almost correct. Try to improve your result!
+  "3": "Partially correct, great! You can do better, try again!"
+  "4": Partially correct. Try to improve your score!
+  "5": "You're almost right, keep going!"
+quiz__passed-by-tooltip: Passed by (updates each 2 min)
+quiz__pending: "Sending... wait, don't leave the page."
+quiz__reset-prompt: Are you sure? This will reset the problem!
+quiz__restart: Start over (reset)
+quiz__retry: Try again
+quiz__signup-link: To save your progress please log in first
+quiz__start-button: Click to start solving
+quiz__status-service: "Service status:"
+quiz__status-service__down: >-
+  The service seems to be broken and may not work correctly right now. We know about that and will
+  fix it soon.
+quiz__status-service__partially-up: >-
+  The service may not work correctly right now. We know about that and will fix it soon.
+quiz__step-cost: "Step cost:"
+quiz__submissions-link: Your submissions
+quiz__time-over: Time limit exceeded!
+quiz__timelimit: limit
+quiz__wrong: >-
+  > Incorrect.
+  > [is_not_last_try] Wrong. Let's try again.
+  > Incorrect, sorry.
+  > It's incorrect.
+  > [is_not_last_try] Wrong. Let's try again.
+  > Wrong this time.
+  > [is_not_last_try] No. Time for the next try.
+  > Wrong answer.
+  > Bad news. It's wrong.
+  > No, it's not.
+  > Incorrect.
+  > [is_not_last_try] Try again, incorrect answer.
+  > Didn't work.
+  > [is_not_last_try] Wrong. Let's try again.
+  > Wrong.
+  > [is_not_last_try] Wrong. Let's try again.
+  > Wrong answer.
+random-exam:
+  completed: >-
+    {count, plural, =1 {problem in the examination step passed} other {problems in the examination
+    step passed}}
+  confirm: |-
+    If you move on to the next question, you cannot return to this question!
+
+    OK - go anyway.
+  counter: "{current} of {length}"
+  go-to-syllabus: Go to the syllabus to start the exam
+  intro:
+    good-luck: Good luck!
+    irrevocably: >-
+      After transition onto the next question, you can't go back to the previous one.
+    need-solve: >-
+      {count, plural, =1 {You need to solve # problem} other {You need to solve # problems}}
+    rules: "Rules:"
+    time: "{count, plural, =1 {in # minute} other {in # minutes}}"
+    title: Set of random exam problems.
+  next-question: Next question
+  no-questions: No questions available
+  question: Question
+  skip-question: Skip the question
+  start: Start the exam
+registration:
+  and: and
+  email: E-mail
+  full_name: Full name
+  password: Password
+  privacy: Privacy policy
+  terms: Terms of service
+  title: Register
+reminders:
+  cancel: Restore my submissions
+  intro: "Solve steps again:"
+  lesson-intro: Reminder mode active. Your previous submissions are hidden.
+  link-to-list: Reminders
+  nothing: Nothing to remind.
+reports:
+  categories:
+    content: Course Content
+    marketing: Sales and Marketing
+    other: Other
+    scores-and-submissions: Grades and Submissions
+    users: Users
+  class_download_grade_book:
+    desc: ""
+    name: Gradebook
+  course-reports-title: "Course reports: "
+  course_download_activity_basic:
+    desc: >-
+      Learners' participation by modules: rate of attendance (steps) and rate of performance
+      (score)
+    name: Learners' activity
+    sample: report-samples/ru/activity.csv
+  course_download_activity_full:
+    desc: >-
+      Learners' participation by steps, lessons, and modules: performance, number of attempts,
+      correct submissions rate
+    name: Learners' activity (full)
+    sample: report-samples/ru/activity-full.csv
+  course_download_cheating:
+    desc: Probability of cheating when solving problems
+    name: Cheating
+    sample: report-samples/ru/cheating.csv
+  course_download_comments:
+    desc: All comments by steps
+    name: Comments
+    sample: report-samples/ru/comments.csv
+  course_download_difficulty_discrimination:
+    desc: >-
+      Discrimination describes the complexity of the problems: 0.5-1.0 is hard, 0.1-0.5 is normal,
+      less than 0.1 indicates poor quality of the task (weak learners manage better than excellent
+      ones)
+    name: Steps difficulty and discrimination
+    sample: report-samples/ru/step-difficulty-discrimination.csv
+  course_download_exam_sessions:
+    desc: Start and end time of the exam for each learner
+    name: Exam sessions
+    sample: report-samples/ru/exam-sessions.csv
+  course_download_grade_book:
+    desc: >-
+      Grades and the overall result for each learner with score points reduction policies applied
+    name: Gradebook (full)
+    sample: report-samples/ru/grade-book.csv
+  course_download_grade_book_short:
+    desc: >-
+      Total scores and the rate of score points by modules and by course for each learner
+    name: Gradebook
+    sample: report-samples/ru/grade-book-short.csv
+  course_download_grade_book_without_deadlines:
+    desc: >-
+      Grades and the overall result for each learner without score points reduction policies
+    name: Gradebook without deadlines
+    sample: report-samples/ru/grade-book-without-deadlines.csv
+  course_download_learners:
+    desc: >-
+      All learners with their date of enrollment for the course and the time of the most recent
+      activity
+    name: Course learners
+    sample: report-samples/ru/learners.csv
+  course_download_not_finished_review_sessions:
+    desc: Submissions in reviewed steps that are not graded yet
+    name: Not finished review sessions
+    sample: report-samples/ru/not-finished-review-sessions.csv
+  course_download_payments:
+    desc: Succesful course payments and failed transactions
+    name: Payments
+    sample: report-samples/ru/payments.csv
+  course_download_plagiarism:
+    desc: The rate of overlapping for similar text submissions
+    name: Plagiarism
+    sample: report-samples/ru/plagiarism.csv
+  course_download_referral_traffic:
+    desc: Information on the sources that lead users to the course page
+    name: Course referral traffic
+    sample: report-samples/ru/referral-traffic.csv
+  course_download_reviews_outliers:
+    desc: Reviews graded differently than the system would grade similar ones
+    name: Learners' reviews outliers
+    sample: report-samples/ru/reviews-outliers.csv
+  course_download_steps_stats:
+    desc: "Number of views, correct and incorrect submissions of the step"
+    name: Step stats
+    sample: report-samples/ru/step-stats.csv
+  course_download_structure:
+    desc: Steps distribution within lessons and modules
+    name: Course structure
+    sample: report-samples/ru/structure.csv
+  course_download_submissions_basic:
+    desc: >-
+      Attempts, the accuracy and the time of submission for each learner's answer
+    name: Learners' submissions
+    sample: report-samples/ru/submissions.csv
+  course_download_submissions_full:
+    desc: >-
+      Content with feedback, accuracy and the time of submission for each learner's answer
+    name: Learners' submissions (full)
+    sample: report-samples/ru/submissions-full.csv
+  course_download_teachers:
+    desc: Course teachers
+    name: Course teachers
+    sample: report-samples/ru/teachers.csv
+  course_download_time_to_complete:
+    desc: "Average time of steps, lessons, modules and course completion"
+    name: Time to complete
+    sample: report-samples/ru/time-to-complete.csv
+  create: Create
+  download: Files
+  lesson_download_grade_book:
+    desc: ""
+    name: Lesson gradebook
+  lesson_download_structure:
+    desc: ""
+    name: Lesson structure
+  lesson_download_submissions_full:
+    desc: ""
+    name: Learners' submissions (full)
+  loading: Generating
+  name: Report
+  not-available:
+    toast: "Reports are available for <b>{planTitle} courses</b> only."
+    tooltip: "Reports are available for {planTitle} courses only"
+  sample: Example
+  status: Status
+  step_download_plagiarism:
+    desc: ""
+    name: Plagiarism
+  step_download_reviews:
+    desc: ""
+    name: Reviews
+  step_download_reviews_outliers:
+    desc: ""
+    name: Learners' reviews outliers
+  step_download_submissions_files:
+    desc: ""
+    name: Learners' attachments
+  step_download_submissions_full:
+    desc: ""
+    name: Learners' submissions (full)
+  time: Last report time
+  update: Update
+reset-password:
+  desc: >-
+    Enter your e-mail address and we will send you an email with a link to reset your password.
+  email: E-mail
+  tab: Reset the password
+  title: Forgot your password?
+review-detail:
+  based-on-criteria: "{count, plural, =1 {Based on # rubric} other {Based on # rubrics}}"
+  explanation-placeholder: Detailed explanation of the score
+  extra-review-notice: You sent as much reviews as you should. This one is additional
+  not-reviewed: Not reviewed
+  result: >-
+    Review result: {percentage}%. This score is a median of first {count} received reviews.
+  reviewed: Reviewed
+  rubric: Rubric
+  score: Score
+  score-rubric: Score according to rubric
+  submission: Submission
+  submit-button: Submit review
+  total-score: Total score
+  update-button: Update and approve
+review-new__cancel: Let me think about it
+review-new__modal-header: Send your submission for review
+review-new__submit: Submit for review
+review-new__warning: You won't be able to change your submission after submitting it.
+review-session:
+  approve: Approve
+  given-count: "{count} out of {required}"
+  given-reviews: "{count, plural, =1 {Given review} other {Given reviews}}"
+  instruction-title: How submission will be evaluated
+  next: Next →
+  not-received-review: No review received
+  page: "{current} of {total}"
+  prev: ← Previous
+  received-reviews: "{count, plural, =1 {Received review} other {Received reviews}}"
+  rubric: Rubric
+  total-score: Sum
+  verified-label: Approved by instructor
+review-session-status:
+  finished: >-
+    {count, plural, =1 {{score} out of # points} other {{score} out of # points} =0 {{score} out of
+    X points}}
+  finished-aot: >-
+    {count, plural, =1 {{score} out of # points. Finished by instructor.} other {{score} out of #
+    points. Finished by instructor.} =0 {{score} out of X points. Finished by instructor.}}
+  finished-aot-help-tip: >-
+    Score based on the instructor's review.<br>Review result: {scorePercentage}%.
+  finished-help-tip: >-
+    {count, plural, =1 {Score based on first review.<br>Review result: {scorePercentage}%.} other
+    {Score based on first # reviews.<br>Review result: {scorePercentage}%.}}
+  peer-student:
+    note: Send more reviews and increase your chance to receive reviews.
+    remaining-given: >-
+      {count, plural, =1 {To get points you need to send <b>#</b> more review.} other {To get
+      points you need to send <b>#</b> more reviews.}}
+    remaining-taken: >-
+      {count, plural, =1 {To get points you need to receive <b>#</b> more review.} other {To get
+      points you need to receive <b>#</b> more reviews.}}
+    remaining-taken-given-1: >-
+      {count, plural, =1 {To get points you need to receive <b>#</b> more review} other {To get
+      points you need to receive <b>#</b> more reviews}}
+    remaining-taken-given-2: >-
+      {count, plural, =1 {and send <b>#</b> more review.} other {and send <b>#</b> more reviews.}}
+    review-link: Review
+  peer-teacher:
+    note: >-
+      {count, plural, =1 {It would be possible to finish review, when <b>learner send #</b> more
+      review.} other {It would be possible to finish review, when <b>learner send #</b> more
+      reviews.}}
+    remaining-given: >-
+      {count, plural, =1 {Learner will receive points automatically after sending <b>#</b> more
+      review.} other {Learner will receive points automatically after sending <b>#</b> more
+      reviews.}}
+    remaining-given-taken-1: >-
+      {count, plural, =1 {Learner will receive points automatically after sending <b>#</b> more
+      review} other {Learner will receive points automatically after sending <b>#</b> more
+      reviews}}
+    remaining-given-taken-2: >-
+      {count, plural, =1 {and receiving <b>#</b> more review.} other {and receiving <b>#</b> more
+      reviews.}}
+    remaining-taken: >-
+      {count, plural, =1 {Learner will receive points automatically after receiving <b>#</b> more
+      review.} other {Learner will receive points automatically after receiving <b>#</b> more
+      reviews.}}
+  peer-teacher-able-to-finish-aot:
+    p1: >-
+      {count, plural, =1 {To receive points you need to receive <b>#</b> more review.} other {To
+      receive points you need to receive <b>#</b> more reviews.}}
+    p2: "If you finish now, final score would be based on existing reviews."
+  peer-teacher-finish-aot-btn: Finish review now
+  peer-teacher-giving-finished:
+    p1: >-
+      {count, plural, =1 {Learner will receive points automatically after receiving <b>#</b> more
+      review.} other {Learner will receive points automatically after receiving <b>#</b> more
+      reviews.}}
+    p2: "<b>Send review</b> for submission, and you will be able to finish review."
+  student-given-nil: Send more reviews and increase your chance to receive reviews.
+  teacher-given-nil: No reviews sent.
+review-session-title:
+  learner-link: "<a href={url} class={class}>{learner-name}</a>"
+  step-link: "<a href={url} class={class}>{lesson} → {step}</a>"
+  with-learner: >-
+    {count, plural, =1 {Review {learner-link} for problem {step-link}} other {Reviews
+    {learner-link} for problem {step-link}}}
+  without-learner: >-
+    {count, plural, =1 {Review for submission for problem {step-link}} other {Reviews for
+    submission for problem {step-link}}}
+review-stages:
+  aside-panels:
+    passed-by: >-
+      {count, plural, =0 {You will be the first person who solved this step} =1 {<b>#</b> person
+      solved} other {<b>#</b> people solved}}
+    submissions-count: "{count, plural, =1 {# submission} other {# submissions}}"
+  instrReview:
+    completed:
+      subtitle: "Instructor's <a href={linkURL}>Review</a>"
+      title: >-
+        {count, plural, =1 {You got {score} out of # point.} other {You got {score} out of #
+        points.} =0 {Please wait, instructor will grade your solution.}}
+    in-progress:
+      note: It usually takes 48 hours for your answer to be reviewed.
+    pending:
+      title: >-
+        {count, plural, =1 {Instructor will grade your solution with the maximum score of # point}
+        other {Instructor will grade your solution with the maximum score of # points} =0 {Please
+        wait, instructor will grade your solution.}}
+  peerFinished:
+    title:
+      completed: >-
+        {count, plural, =1 {Your solution was scored for {score} out of # point} other {Your
+        solution was scored for {score} out of # points} =0 {Get points}}
+      pending: >-
+        {count, plural, =1 {Get points, max score is # point} other {Get points, max score is #
+        points} =0 {Get points}}
+  peerGivenReviews:
+    completed:
+      extraReviewNote: Write more reviews to increase your chance to receive review
+      startReview: Start review
+      title: "{count, plural, =1 {# review was sent} other {# reviews were sent}}"
+    in-progress:
+      noReviewsAvailable: Nothing to review
+      startReview: Start review
+      subtitle: "{count, plural, =1 {# review was sent} other {# reviews were sent}}"
+      title: "{count, plural, =1 {Write # more review.} other {Write # more reviews.}}"
+    pending:
+      title: >-
+        {count, plural, =1 {Review # submission} other {Review # submissions} =0 {Review
+        submissions}}
+  peerTakenReviews:
+    active:
+      subtitle: >-
+        {count, plural, =1 {<a href={linkURL}># review</a> received} other {<a href={linkURL}>#
+        reviews</a> received}}
+      title: >-
+        {count, plural, =1 {Wait for # more review of your solution.} other {Wait for # more
+        reviews of your solution.}}
+    completed:
+      title: >-
+        {count, plural, =1 {<a href={linkURL}># review</a> received} other {<a href={linkURL}>#
+        reviews</a> received}}
+    pending:
+      note: Average waiting time - 48 hours.
+      title: >-
+        {count, plural, =1 {Wait for # review of your solution} other {Wait for # reviews of your
+        solution} =0 {Wait for reviews of your solution}}
+  quiz:
+    noMoreAttempts: You have no attempts
+    resetAttempt: Reset
+    submit: Submit
+    submit-has-restrictions: >-
+      {count, plural, =1 {Submit (you have # submission left)} other {Submit (you have #
+      submissions left)}}
+    tryAgain: Try again
+  sendReview:
+    choose: Choose submission for review
+    submit: Send submission to review
+    title:
+      completed: "Submission <b>{submissionNumber}</b> was sent to review"
+      in-progress: <b>Send your best submission to review.</b> You can't change it later.
+      pending: Send your best submission to review
+    tryAgain: Try again
+review__comments: General comments
+review__comments-placeholder: General comments on the submission
+review__confirm-force-submit: >-
+  Learner can send only one submission for review. This learner hasn't sent any yet. By reviewing
+  this submission you are making this choice for her. Are you sure?
+review__description-placeholder: Optional
+review__description-title: Additional information
+review__extra-eval-notice: More reviews you send more chances your submission will be reviewed soon
+review__freeze-warn: >-
+  Attention! Once you receive at least one submission to review, you can change only these fields:
+  "Additional Information for Learners or Answer" and the descriptions for Scoring Rubrics
+review__instructor-review: This problem is reviewed by the teacher
+review__peer-review: This problem is reviewed by other learner
+review__received-review: Received review
+review__review: Review
+review__review-another:
+  "You can't review this submission. Another submission was sent for review: "
+review__saved-error: >-
+  Review was not saved. Check required fields, your internet connection and save again.
+review__saved-msg: Review submitted!
+review__start-button: Start review
+review__start-eval: Start review
+review__start-eval-extra: Review more
+review__student-choose: Send the best submission to review
+review__student-no-submissions: Save at least one submission
+review__student-send: Send this submission to review
+review__student-send-notice: Submission has been sent to review
+review__submit-confirm: Are you ready to submit the review?
+review__wait-peers-giving-note: >-
+  Note: the more reviews you do, the higher the chance your submission will be reviewed!
+scoreboard__current-user-rank: "Your rank:"
+scoreboard__current-user-score: "Your score:"
+scoreboard__name: Name
+scoreboard__no-contestants: No contestants
+scoreboard__rank: Rank
+scoreboard__score: Score
+search-members:
+  placeholder: "Search by name, e-mail, ID"
+  search-btn: Find
+search__button: Search
+search__context: "Search context:"
+search__course: "Course:"
+search__filters-warn: Try to remove search filters
+search__info:
+  alter: Try popular queries
+  query: Showing results for
+  query-original: Search instead for
+search__lesson: "Lesson:"
+search__no-results: No results
+search__search: Search
+section-editor__begin-date: Open date
+section-editor__step-content: Generated lesson
+section_edit:
+  add_lesson_header: "Add lesson to «{title}» module"
+  back: Return back
+  description: Additional description
+  exam_duration: Exam duration
+  grading_policy:
+    descr: How to change points depending on number of tries
+    first_one: Zero after first attempt
+    first_three: Zero after third attempt
+    inverse: Decrease to 1/N
+    no_discount: Do not change
+  is_exam: Exam module
+  is_exam_without_progress: Hide the correctness of submissions
+  is_random_exam: Exam with random selection of questions
+  marked_delete: "«{title}» module will be deleted at course save"
+  needs-plan: >-
+    To publish a course with these settings, you need to upgrade it to {planTitle}. <a
+    href='https://welcome.stepik.org/en/pricing' target='_blank'>Learn more about plans.</a>
+  no_req_section: Not selected
+  points: Points total
+  random_exam_course: Source course
+  random_exam_course_empty: No matching courses
+  random_exam_problems_count: Total problems in the exam
+  random_exam_select-course: (Choose a course)
+  req_section: Required module
+  req_section_percent: 'Required percent in <strong>"{title}"</strong> module to open this one'
+  settings: "Scoring, module dependencies, exams"
+  settings_title: 'Module settings "{name}"'
+shortened-text-show-more: More
+socket:
+  status-notok: There are some server connection issues
+step-actions:
+  actions: Step actions
+  add-new-step: Add new step
+  add-review: Add reviewing
+  delete: Delete step
+  download: Download step
+  upload: Upload step
+step-edit:
+  add-step: + Add step
+  correct-submission-feedback: This feedback will be shown to the learner on a correct submission.
+  hide-advanced-settings: Hide advanced settings
+  limit-submissions-settings-description: "Learners are allowed:"
+  limit-submissions-settings-inf: unlimited submissions
+  limit-submissions-settings-note: >-
+    Note: these limits works only for learners, testers and moderators. Admins and teachers always
+    have unlimited submissions.
+  limit-submissions-settings-number: "allowed only "
+  limit-submissions-settings-number-after: " submissions"
+  limit-submissions-settings-title: Limits for number of submissions
+  more-about:
+    admin: Linux Challenge documentation
+    choice: Multiple Choice Quiz documentation
+    code: Code Challenge documentation
+    dataset: Data Challenge documentation
+    external-grader: External Grader documentation
+    free-answer: Free Response Problem documentation
+    matching: Matching Problem documentation
+    math: Math Problem documentation
+    number: Number Problem documentation
+    random-tasks: Random Task Problem documentation
+    see: For details and examples see
+    sorting: Sorting Problem documentation
+    string: Text Problem documentation
+    table: Table Problem documentation
+  optional-correct-submission-feedback: Optional feedback on correct submission
+  optional-submission-feedback-title: Your optional feedbacks
+  optional-wrong-submission-feedback: Optional feedback on wrong submission
+  show-advanced-settings: Show advanced settings
+  unlock-solutions-forum-after: "after the correct submission or after "
+  unlock-solutions-forum-after-success: only after the correct submission
+  unlock-solutions-forum-attempts: " incorrect submissions"
+  unlock-solutions-forum-settings-description: "Unlock after:"
+  unlock-solutions-forum-settings-note:
+    "Note: Admins and teachers always have solutions forum unlocked"
+  unlock-solutions-forum-settings-title: Solutions forum
+  wrong-submission-feedback: This feedback will be shown to the learner on a wrong submission.
+step__add-info: Select step type
+step__from: of
+step__next-tooltip: Next step
+step__not-found: "Step #{position} was not found."
+step__not-ready-warn: 'Sorry this problem is not ready.<br/>Problem status is "{status}".'
+step__submissions-left: >-
+  {count, plural, =1 {(you have # submission left)} other {(you have # submissions left)}}
+step__submissions-no-left: You have no attempts
+step__templates:
+  animation: ""
+  choice: >-
+    You can change the problem statement right here and specify the settings below. <br><br> What
+    is 1004 divided by 2?
+  code: >-
+    You can change the problem statement right here and specify the settings below. <br><br> Write
+    a program that finds the sum of two numbers.
+  default: >-
+    You can change the problem statement right here and specify the settings below.
+  number: >-
+    You can change the problem statement right here and specify the settings below. <br><br> What
+    is the average of first 50 natural numbers?
+  text: >-
+    You can add text and also images, math formulas, code examples and much more in this theory
+    step.
+  video: ""
+submissions:
+  cant-review:
+    another: Another submission has been sent for review
+    evaluation: Answer in processing
+    label: Reviewing is not possible.
+    teacher: Submission of a teacher cannot be reviewed
+    wrong: Wrong answer
+  caption: Submissions
+  empty-list:
+    for-learners: You have not yet solved this problem.
+    for-teachers: No one has yet solved this problem.
+    has-filters: No submissions found.
+    has-query: >-
+      Your search <strong>"{query}"</strong> found <strong>0</strong> submissions.
+    try-change-query: Try changing your search options.
+    try-change-query-filters: >-
+      Try changing your search options or <a href="{filter-reset-url}">reset filters</a>.
+    try-reset-filters: 'Try <a href="{filter-reset-url}">resetting the filters</a>.'
+  header: >-
+    Submissions of the <a href="{step-url}">{lesson-title}</a> lesson from the <a
+    href="{course-url}">{course-title}</a> course
+  header-without-course: 'Submissions of the  <a href="{step-url}">{lesson-title}</a> lesson'
+  in-progress:
+    await-instructor-review: Waiting for the teacher's review
+    await-other-users-review: Waiting for grades from other learners
+    await-review-tooltip: Need more reviews for this submission.
+    await-twoway-review-tooltip: >-
+      {user} has not yet submitted all reviews for other learner submissions and has not received
+      his reviews.
+    await-user-review-tooltip:
+      "{user} has not yet submitted all reviews for other learner submissions."
+  not-submitted:
+    label: Not submitted for review
+    to-see: To see
+    tooltip: Need to choose a submission to review.
+  review-filter:
+    all: Any review status
+    awaiting: Awaiting review
+    done: Review done
+  search-filter-placeholder: "ID, email, name, submission number"
+  show-reviews:
+    done: "{done} out of {needed} reviews."
+    to-review: To review
+    to-see: To see
+    to-see-instructor-review: To see the teacher's review
+  sort:
+    asc: Older first
+    desc: Newer first
+  status-filter:
+    all: Any status
+    correct: Correct
+    evaluation: Processing
+    wrong: Wrong
+  table:
+    date: Date
+    reviews: Reviews
+    score: Score
+    submissions: Submissions
+    user: User
+submissions__a-lot-tips: You have a lot of tips left.
+submissions__get-hint: Get Hint!
+submissions__next: Next
+submissions__no-tips-left: You already spent your hints. But tomorrow you will have another one!
+submissions__prev: Previous
+submissions__submission: submission
+submissions__tips-left: "You have {tips} hint left for today."
+submissions__tips-server-error: "Error :( Can't get a hint from a server."
+submissions__title: "Submissions - Step {step_position}"
+subscriptions__reset: reset subscription
+subscriptions__reset-tooltip: receive notifications by default
+subscriptions__subscribe: Subscribe
+subscriptions__subscribe-lesson-comments: Subscribe to lesson comments
+subscriptions__subscribe-step-comments: Subscribe to step comments
+subscriptions__subscribe-tooltip: always receive notifications
+subscriptions__unsubscribe: Unsubscribe
+subscriptions__unsubscribe-lesson-comments: Unsubscribe from lesson comments
+subscriptions__unsubscribe-step-comments: Unsubscribe from step comments
+subscriptions__unsubscribe-tooltip: never receive notifications
+syllabus_edit:
+  course-settings: Course launch settings
+  deadlines:
+    course_begin_date: Course open date
+    course_end_date: Course close date
+    course_hard_deadline: Course hard deadline
+    course_soft_deadline: Course soft deadline
+    policy:
+      descr: Grading policy
+      halved: Half points
+      linear: Linear descending
+      no_deadlines: No deadlines
+      "null": Default for this course
+    section_begin_date: Module open date
+    section_end_date: Module close date
+    section_hard_deadline: Module hard deadline
+    section_soft_deadline: Module soft deadline
+    tooltip:
+      course_begin_date: "Open date: when the course starts for enrolled users"
+      course_end_date: >-
+        Close date: when the course will be disabled (close date is usually left empty)
+      course_hard_deadline: "Hard deadline: when the cost of every step will be zero"
+      course_soft_deadline: "Soft deadline: when the cost of every step will be reduced"
+      section_begin_date: "Open date: when the module starts for enrolled users"
+      section_end_date: >-
+        Close date: when the module will be disabled (close date is usually left empty)
+      section_hard_deadline: "Hard deadline: when the cost of every step will be zero"
+      section_soft_deadline: "Soft deadline: when the cost of every step will be reduced"
+  lesson_added: Lesson was successfully added to course
+  page-subtitle: Editing syllabus
+  saved_msg: Course successfully saved
+  section_added: Module was successfully added to course
+  zero_sections: There are no any lessons.<br>Add first module to add lessons
+teach-beta:
+  classes:
+    empty: >-
+      У вас пока нет классов. <a href='https://welcome.stepik.org/en/classroom' target='_blank'>Что
+      такое класс?</a>
+    gradebook: Gradebook
+    reports: Reports
+    submissions: Submissions
+    title: Classes
+  courses:
+    comments: Комментарии
+    empty: "У вас пока нет курсов, создайте первый."
+    filters:
+      all: All courses
+      draft: Drafts
+      inactive: Inactive
+      private: Private
+      public: Public
+    gradebook: Табель
+    info-edit: Описание
+    no-results: Найдено <b>0</b> курсов.
+    no-results-reset-link: Сбросить фильтры
+    pending-reviews: "{count, plural, =1 {# решений на рецензию} other {# решений на рецензию}}"
+    permissions-edit: Права доступа
+    reports: Отчеты
+    search-placeholder: Название или ID курса
+    syllabus-edit: Содержание
+    title: Courses
+  lessons:
+    empty: У вас пока нет уроков.
+    outside-course: Вне курса
+    permissions: Permissions
+    reports: Reports
+    steps-count: "{count, plural, =1 {1 шаг} other {# шагов} =0 {Пустой}}"
+    title: Lessons
+  nav:
+    classes: Classes
+    courses: Courses
+    lessons: Lessons
+    mailings: Mailings
+    new-course: New course
+    new-lesson: New lesson
+    notifications: Notifications
+  new-class:
+    title: Создание нового класса
+  new-course:
+    title: Создание нового курса
+  new-lesson:
+    title: Создание нового урока
+time:
+  minutes__short: min
+  seconds__short: sec
+toc__progress:
+  goal:
+    best_result: "To the best results:"
+    certificate_distinction: "To get certificate with distinction:"
+    certificate_regular: "To get certificate:"
+    end_course: "To finish course:"
+  rank: in the course rating
+  remaining:
+    get: >-
+      {count, plural, =1 {receive <span>#</span> more point} other {receive <span>#</span> more
+      points}}
+    learn: >-
+      {count, plural, =1 {study <span>#</span> hour} other {study <span>#</span> hours}}
+  title: course progress
+topbar__create:
+  course: New course
+  create: Create
+  lesson: New lesson
+unit_edit:
+  add_existed: Add your existing lesson
+  import: Import lessons from file
+  marked_delete: >-
+    Lesson&nbsp;<strong>«{title}»</strong>&nbsp;will be removed from the course on save
+  new_lesson: Create lesson
+  restore: Restore
+  title_placeholder: Type a name for the new lesson and press Enter.
+user-subscribe:
+  followers: "{count, plural, =1 {# follower} other {# followers}}"
+  has-followers: "{count, plural, =1 {You have # follower} other {You have # followers}}"
+  subscribe: Follow
+  subscribe-process: You are following…
+  subscribed: Following
+  unsubscribe-confirm: Do you really want to unfollow?
+  unsubscribe-process: You are unfollowing…
+  unsubscribed: You have successfully unfollowed
+user__edit:
+  about: About
+  add_provider: Connect
+  auth_social: Social login
+  change_password: Change password
+  city: City
+  city_placeholder: Start typing your city...
+  connected: Connected
+  current_pass: Current password
+  disconnect: Disconnect
+  edit-email:
+    add_button: Add email
+    make-primary: Make primary
+    placeholder: New email
+    primary: Primary
+    remove: Remove
+    resend-verification: Email is not verified! Send verification code.
+    table-header: Your e-mail addresses
+    verified: Verified
+  edit_profile: Profile
+  email: Change email
+  forgot_pass: Forgot password?
+  info: Edit profile
+  language: Language
+  legal_names_info: "Your legal names, used for any certificates."
+  make_private: Make profile private
+  new_pass: New password
+  notifications:
+    allow-likes: "Send notifications, when someone likes your comment or lesson"
+    allow-push: Allow push notifications in web
+    course-updates:
+      announcements: Announcements
+      announcements-hint: Receive course news notifications
+      comments: Comments
+      comments-hint: Receive notifications about new comments in the course
+      description: >-
+        Your course instructor may send announcements about special events, new materials, or other
+        course-specific developments. Stepik will send occasional notifications related to your
+        course progress, including deadline reminders and new comment notifications.
+      instructor_reviews: Reviews
+      instructor_reviews-hint: Receive notifications about new solutions awaiting instructor review
+      label: Course Updates
+      reminders: Reminders
+      reminders-hint: >-
+        Receive notifications about the opening of new modules in the course and the upcoming
+        deadlines
+      solutions: Solutions
+      solutions-hint: Receive notifications about new solutions in the solution forum
+    delay: Delay
+    header: Notifications settings
+    language_en: Subscribe to English Stepik newsletters
+    language_ru: Subscribe to Russian Stepik newsletters
+    likes: Likes
+    mailings: Mailings
+    menu-item: Notifications
+    push: Push notifications
+    receiving: Notifications
+    subscribed_for_marketing: Subscribe to Stepik marketing emails
+    subscribed_for_partners: Subscribe to emails from Stepik partners
+    will-not-receive: You will not receive notifications
+    will-receive: You will receive notifications by email
+    your-email: Your email
+  privacy: Privacy
+  profile_pic: User picture
+  remove_pic: Remove
+  repeat_pass: New password (repeat)
+  save: Save changes
+  set_password: Set password
+  short_bio: Short bio<br>(255 chars max)
+  social_links: Social links
+  social_links_description: These links will be shown on your profile page
+  time:
+    12h: 12 hours
+    1d: 1 day
+    1h: 1 hour
+    30m: 30 min
+    3h: 3 hours
+    5m: 5 min
+    6h: 6 hours
+  upload_pic: Upload
+  woof__account-disconnected: Account has been disconnected.
+  woof__account-disconnected-failed: You can not disconnect this account before you set password.
+  woof__avatar-changed: Your profile picture was changed
+  woof__avatar-failed: >-
+    Your profile picture was not changed. The file you uploaded was either not an image or a
+    corrupted image.
+  woof__avatar-removed: Your profile picture was removed
+  woof__confirmation-sent: "Confirmation email sent to {email}"
+  woof__email-added: Email added.
+  woof__email-disconnected: "{email} removed."
+  woof__links-saved: Links to social accounts have been saved.
+  woof__mismatch: New password mismatch. Make sure you entered same password twice.
+  woof__pass-changed: Password was successfully changed.
+  woof__pass-empty: Fields can't be empty.
+  woof__pass-error: >-
+    Password hasn't been changed. Make sure you correctly typed current password in the first
+    field.
+  woof__primary-email-already-used: Email is already used as the primary email in another account.
+  woof__primary-email-changed: Your primary email changed.
+  woof__profile-failed: Please fill all required fields. Profile not saved.
+  woof__saved: Your profile saved.
+  woof__settings-changed: Settings were successfully changed.
+  your_last_name: Last name
+  your_name: First name
+user__knowledge-title: Knowledge
+user__lock-course-title: This course is private
+user__lock-title: This lesson is private
+user__profile: Profile
+user__reputation-title: Reputation
+video-editor:
+  error: >-
+    There was an error while processing this video ({video_id}){filename}.Please check that it was
+    a correct video file.
+  filename: " with filename: <b>{filename}</b>"
+  help: >-
+    <p>You can upload a video up to 200 MBytes in size.</p><p>In order to compress larger
+    files:<ol><li>Use <tt>ffmpeg</tt> tool and <tt>H.264</tt> codec:<br> <code>ffmpeg -i
+    INITIAL_VIDEO.mp4 -codec:a copy -vcodec libx264 -preset slow -crf 25
+    COMPRESSED_VIDEO.mp4</code></li><li>Use <tt>Avidemux</tt>, a free tool available for any
+    platform.</li><li>See also <a href="https://vimeo.com/help/compression" target="_blank"
+    rel="noopener noreferrer">Vimeo guidelines</a> for best practices.</li></ol></p>
+  link-placeholder: or paste a link to a video here
+  ready: "Video ({video_id}){filename} is ready. You can also re-upload a new one."
+  remove: Remove video
+  replace-video: Replace video
+  subtitles: You can add Subtitles below
+  subtitles-placeholder: Subtitles (WebVTT format)
+  upload-date: Upload date
+  upload-label: Upload this video from the Web
+  upload-video: Upload video
+  uploaded: >-
+    Video ({video_id}){filename} is processing, but it will be available soon!<br>You can safely
+    leave this page now, but don't forget to save changes in this lesson afterwards.
+video-player__error-support: >-
+  Read more about video problems <a href="https://support.stepik.org/hc/articles/360000250673"
+  target="_blank">here</a>.
+video-player__next-step-cancel: Stay on this step
+video-player__next-step-warn_p1: Next step
+video-player__next-step-warn_p2: will open automatically
+video-player__no-flash: >-
+  Your browser does not support mp4 <br>please install flash player <br>or just download video file
+  below ⤓
+video-player__start-sign: Play
+video__upload-failed: >-
+  An error occurred while uploading a video file. Please check that your video file does not exceed
+  200 Mbytes.
+woof__user_already_registered: You already have an account.
+woof_label:
+  alert: Alert
+  info: Info
+  success: Success
+  warning: Warning
