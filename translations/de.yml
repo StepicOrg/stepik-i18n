@@ -290,11 +290,9 @@ course-filters:
   tags: Themen
 course-index__authors: "{count, plural, other {Autoren} =1 {Autor}}"
 course-index__cert: Zertifikat
-course-index__ends: "Endet:"
 course-index__enrolled-msg: Sie sind eingeschrieben
 course-index__instructors: "{count, plural, other {Instruktoren} =1 {Instructor}}"
 course-index__lang: Sprache
-course-index__starts: "Beginnt:"
 course-index__workload: Arbeitspensum
 course-info-edit__add: Hinzufügen
 course-info-edit__author-placeholder: Autor ID ..
@@ -534,7 +532,7 @@ footer__pricing: Preise
 footer__quiz-count: >-
   {count, plural, other {<strong>#</strong> Probleme} =1 {<strong>#</strong> Probleme}}
 footer__quiz-count-desc: Anzahl Probleme auf der Plattform
-footer__submissions-count: "<strong>{count_display}</strong> Einreichungen"
+footer__submissions-count: "<strong>{count, number}</strong> Einreichungen"
 footer__submissions-count-desc: Anzahl der Einreichung auf der Plattform
 footer__team: Team
 footer__terms_and_privacy: >-

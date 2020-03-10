@@ -218,12 +218,10 @@ course-edit__new-module: Додати Модуль
 course-edit__save: Зберегти зміни
 course-index__authors: "{count, plural, other {Автора} =1 {Автор} many {Авторів} few {Автори}}"
 course-index__cert: Сертифікат
-course-index__ends: "Закінчення:"
 course-index__enrolled-msg: Ви записані!
 course-index__instructors: >-
   {count, plural, other {Викладача} =1 {Викладач} many {Викладачів} few {Викладачі}}
 course-index__lang: Мова
-course-index__starts: "Початок:"
 course-index__workload: Навантаження
 course-info-edit__add: Додати
 course-info-edit__author-placeholder: id автора...

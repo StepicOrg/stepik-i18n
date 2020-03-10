@@ -172,11 +172,9 @@ course-edit__new-module: Agregar módulo
 course-edit__save: Guardar cambios
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
 course-index__cert: Certificado
-course-index__ends: "termina:"
 course-index__enrolled-msg: ¡Estás inscrito!
 course-index__instructors: "{count, plural, other {Los instructores} =1 {Instructor}}"
 course-index__lang: Idioma
-course-index__starts: "Empieza:"
 course-index__workload: carga de trabajo
 course-info-edit__add: Añadir
 course-info-edit__author-placeholder: Identificación del autor ...

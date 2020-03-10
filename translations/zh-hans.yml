@@ -152,11 +152,9 @@ course-edit__new-module: 添加模块
 course-edit__save: 保存更改
 course-index__authors: "{count, plural, other {作者} =1 {作者}}"
 course-index__cert: 证书
-course-index__ends: 结束：
 course-index__enrolled-msg: 你现在注册！
 course-index__instructors: "{count, plural, other {教师} =1 {讲师}}"
 course-index__lang: 语言
-course-index__starts: 开始时间：
 course-index__workload: 工作负载
 course-info-edit__add: 笔者添加
 course-info-edit__author-placeholder: 作者ID ...

@@ -522,13 +522,11 @@ course-grade-book-cell:
 course-index__authors: >-
   {count, plural, other {Создатели} =1 {Создатель} many {Создатели} few {Создатели}}
 course-index__cert: Сертификат
-course-index__ends: "Окончание:"
 course-index__enrolled-msg: Вы записаны!
 course-index__instructors: >-
   {count, plural, other {Преподаватели} =1 {Преподаватель} many {Преподаватели} few
   {Преподаватели}}
 course-index__lang: Язык
-course-index__starts: "Начало:"
 course-index__workload: Нагрузка
 course-info-edit__add: Добавить
 course-info-edit__author-placeholder: id создателя...
@@ -1039,7 +1037,6 @@ errors:
   tooLong: "{description} слишком большой длины (максимум символов: {max})"
   tooShort: "{description} недостаточной длины (минимум символов: {min})"
   url: "{description} не является корректным URL"
-  wrongDateFormat: "{description} должно соответствовать формату {format}"
   wrongLength: "{description} неверной длины (должно быть символов: {is})"
 exam:
   check-proctor-session: Проверить запись на экзамен
@@ -1106,8 +1103,11 @@ footer__quiz-count: >-
   {<strong>#</strong> задач} few {<strong>#</strong> задачи}}
 footer__quiz-count-desc: Общее количество задач и тестов на Stepik
 footer__submissions-count: >-
-  {count, plural, other {<strong>{count_display}</strong> решений} few
-  {<strong>{count_display}</strong> решения} =1 {<strong>{count_display}</strong> решение}}
+  <strong>{count, number}</strong> {count, plural,
+    =1 {решение}
+    few {решения}
+    other {решений}
+  }
 footer__submissions-count-desc: Общее количество отправленных решений на Stepik
 footer__team: Команда
 footer__terms_and_privacy: >-

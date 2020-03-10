@@ -493,11 +493,9 @@ course-grade-book-cell:
   wrong: Wrong submissions only
 course-index__authors: "{count, plural, other {Authors} =1 {Author}}"
 course-index__cert: Certificate
-course-index__ends: "Ends:"
 course-index__enrolled-msg: You are enrolled!
 course-index__instructors: "{count, plural, other {Instructors} =1 {Instructor}}"
 course-index__lang: Language
-course-index__starts: "Starts:"
 course-index__workload: Workload
 course-info-edit__add: Add
 course-info-edit__author-placeholder: author id...
@@ -988,7 +986,6 @@ errors:
   tooLong: "{description} is too long (maximum is {max} characters)"
   tooShort: "{description} is too short (minimum is {min} characters)"
   url: "{description} must be a valid url"
-  wrongDateFormat: "{description} must be in the format of {format}"
   wrongLength: "{description} is the wrong length (should be {is} characters)"
 exam:
   check-proctor-session: Check proctor session
@@ -1050,7 +1047,10 @@ footer__quiz-count: >-
   {count, plural, other {<strong>#</strong> problems} =1 {<strong>#</strong> problems}}
 footer__quiz-count-desc: Number of problems on Stepik
 footer__submissions-count: >-
-  <strong>{count_display}</strong> {count, plural, other {submissions} =1 {submission}}
+  <strong>{count, number}</strong> {count, plural,
+    =1 {submission}
+    other {submissions}
+  }
 footer__submissions-count-desc: Number of submissions on Stepik
 footer__team: Team
 footer__terms_and_privacy: >-
