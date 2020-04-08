@@ -198,7 +198,6 @@ common__fixed: Als fixiert markieren
 common__fullscreen: Vollbildschirm
 common__hard-deadline: Verbindliche Frist
 common__input-length-warn: "{count, plural, other {Minimum # Zeichen} =1 {Minimum # Zeichen}}"
-common__knowledge: Wissen
 common__lesson: Lektion
 common__lesson-image: Lektione Bild
 common__lessons: Lektionen
@@ -221,7 +220,6 @@ common__problem: Problem
 common__profile: Profile
 common__reload: Neu laden
 common__reports-expiration: Berichte werden nach 7 Tagen gelöscht
-common__reputation: Reputation
 common__save-button: Speichern
 common__save-failed-warn: Speichern konnte nicht durchgeführt werden
 common__saving-text: speichern …
@@ -244,9 +242,9 @@ common__time-warn: >-
 common__unauth-voting: Zum beurteilen müssen Sie sich einloggen.
 common__unsaved-warn: Alle nicht gespeicherten Änderungen gehen verloren!
 common__userpic: Teilnehmer Bild
-common__woof-unverified-email: >-
-  Ihre eMail Adresse ist nicht verfiziert <a href="/edit-profile/email">Bitte verifizieren, um
-  Stepik weiter benutzen zu können</a>
+common__woof-unverified-email:
+  text: Ihre eMail Adresse ist nicht verfiziert
+  verify: Verifizieren
 common__woof-wrong: >-
   Fehler - überpüfen Sie bitte Ihre Internetverbindung und versuchen Sie es nochmals.
 copy_link_to_clipboard: Link kopieren
@@ -387,7 +385,7 @@ course__annon-test-done: Test Mail erfolgreich gesendet
 course__annon-test-error: Test Mail kann nicht gesendet werden
 course__annon-test-tooltip: Diese Ankündigung wurde nur an Ihre eMail gesendet
 course__annon-tmpl-subj: Neue Ankündigung
-course__annon-tmpl-text: "Hallo {%user_name%}!"
+course__annon-tmpl-text: "Hallo \\{\\{user_name\\}\\}!"
 course__anon-stop-warn: Diese Aktion kann nicht rückgängig gemacht werden. Zustellung unterbrechen?
 course__certificate-distinction: Zertifikate mit Auszeichnung
 course__certificate-link: Zertifikate
@@ -790,13 +788,13 @@ peer-review__to-give: >-
 plans:
   ask_questions: >-
     Als Sie Fragen haben, schreiben Sie uns einen E-Mail <a
-    href="mailto:info@stepik.org">info@stepik.org</a>.
+    href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Hohe Priorität der Kundenbetreuung.
   card:
     change: Ändern
     confirm: Anwenden
     description: Kreditkarte ändern
-  connected_card: "Verbundene Karte: {card}"
+  connected_card: "Verbundene Karte: ****{card}"
   discount_valid: "Ihr Ermäßigung endet bei {discount_end}."
   fail: Registrieren war nicht erfolgreich
   free:
@@ -805,12 +803,7 @@ plans:
       Abonnementpläne</a>.
     max_courses: Sie können keine private Kurse kreieren.
     support: Reguläre Kundenbetreuung.
-  loading: In Bearbeitung ..
   login_req: Log in um Ihnen Plan überprüfen
-  max_pro_courses: >-
-    {count, plural, =1 {Sie können # Private Kurs mit eine unlimitierte Anzahl von Lernenden
-    kreieren.} other {Sie können bis zu # Private Kurse mit der unlimitierte Anzahl von Lernenden
-    kreieren.}}
   max_public_courses: Sie können eine unlimitierte Anzahl von den öffentlichen Kursen kreieren.
   next_payment: "Nächste Zahlung {price} am {payment_date}."
   other_plans: >-
@@ -934,19 +927,25 @@ profile:
   courses_favorites: Favoriten
   details: Details
   joined-date: Beigetreten
-  knowledge-tooltip: >-
-    Sie erhalten Wissenspunkte für Lektionen. Nur Schritte mit mehr als 100 Beiträgen zählen.
-  knowledge_rank: nach Wissen
   my-courses: Meine Kurse
   no_courses: Erstellen Sie Ihren ersten Kurs
   no_courses_link: Kurs wird erstellt
   no_lessons: Erstellen Sie Ihre erste Lektion
   no_lessons_link: Lektion wird erstellt
   profile: Profile
-  reputation-tooltip: >-
-    Sie erhalten Punkte für Reputation wenn andere Ihre Lektionen bearbeiten, oder ihre Antworten
-    gut finden. Nur Schritte mit mehr als 100 Beiträgen zählen.
-  reputation_rank: nach Reputation
+  ranks:
+    position: >-
+      {pos, selectordinal, other {#.}}
+      {term, select, knowledge {nach Wissen} reputation {nach Reputation} other {}}
+    title: "{term, select, knowledge {Wissen} reputation {Reputation} other {}}"
+    tooltip: >-
+      {term, select,
+        knowledge {Sie erhalten Wissenspunkte für Lektionen. Nur Schritte mit mehr als 100
+                   Beiträgen zählen.}
+        reputation {Sie erhalten Punkte für Reputation wenn andere Ihre Lektionen bearbeiten,
+                    oder ihre Antworten gut finden. Nur Schritte mit mehr als 100 Beiträgen zählen.}
+        other {}
+      }
   teaching: Unterrichten
   user_no_courses: Es gibt noch keine Kurse
   user_no_lessons: Es gibt noch keine Lektionen
@@ -1262,10 +1261,6 @@ time:
   seconds__short: sek
 toc__progress:
   title: Kurs Fortschrittskurve
-topbar__create:
-  course: Neuer Kurs
-  create: Erstellen
-  lesson: Neue Lektion
 unit_edit:
   add_existed: Existierende Lektion hinzfügen
   marked_delete: >-
@@ -1398,8 +1393,3 @@ video-player__no-flash: >-
   herunterladen ⤓
 video__upload-failed: Fehler beim Hochladen des Videos. Es darf nicht größer als 200 MB sein.
 woof__user_already_registered: Sie haben bereits ein Konto
-woof_label:
-  alert: Hinweis
-  info: Information
-  success: Erfolgreich
-  warning: Warnung

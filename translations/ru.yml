@@ -67,7 +67,7 @@ announcement-show:
     will_start: " Рассылка начнется: "
 announcement__default-template: Стандартный шаблон
 attachments__list-attach-file:
-  "{count, plural, =0 {Прикрепить файл} other {Прикрепить файл (макс. #)}}"
+  "{size, select, 0 {Прикрепить файл} other {Прикрепить файл (макс. {size})}}"
 attachments__list-delete-attachment-tooltip: Удалить
 attachments__list-open-attachment-tooltip: Открыть
 attachments__list-title: Файлы
@@ -173,7 +173,7 @@ comments__abuse: Не нравится
 comments__abuse-tooltip: отметить комментарий как не понравившийся
 comments__active-order: Самые обсуждаемые
 comments__all: Все комментарии пользователя
-comments__assistant-badge: Ассистент курса
+comments__assistant-badge: Команда курса
 comments__auth-warn: Чтобы присоединиться к этому обсуждению вам нужно
 comments__by-date-order: Новые обсуждения
 comments__default-order: Самые популярные
@@ -270,7 +270,6 @@ common__hour: ч
 common__input-length-warn: >-
   {count, plural, other {минимум # символа} =1 {минимум # символ} many {минимум # символов} few
   {минимум # символа}}
-common__knowledge: Знания
 common__learner: Учащийся
 common__lesson: Урок
 common__lesson-image: Картинка урока
@@ -299,7 +298,6 @@ common__problem: Задача
 common__profile: Профиль
 common__reload: Перезагрузить
 common__reports-expiration: Отчёты хранятся 7 дней
-common__reputation: Репутация
 common__save-button: Сохранить
 common__save-failed-warn: Сохранить не удалось.
 common__saving-text: сохраняем...
@@ -335,7 +333,8 @@ common__unsaved-warn: Все несохранённые данные будут 
 common__update: Обновить
 common__userpic: Аватар пользователя
 common__woof-unverified-email:
-  Ваша почта не подтверждена! <a href="/edit-profile/email">Подтвердить</a>
+  text: Ваша почта не подтверждена!
+  verify: Подтвердить
 common__woof-wrong: Что-то пошло не так. Проверьте наличие интернета и попробуйте ещё раз.
 content_advices:
   action:
@@ -455,6 +454,7 @@ course:
     paid-features:
       deadlines: Дедлайны в курсе
       exams: Экзамены
+      lti-integration: Интеграция курса по LTI
       section-deadlines: Дедлайны в модуле
       section-discounting-policy: Политики снижения баллов
       section-required-section: Требуемый модуль
@@ -507,10 +507,17 @@ course-grade-book:
     toast: >-
       Табель успеваемости учащихся доступен только для <b>{planTitle}-курсов</b>.
     tooltip: "Табель успеваемости учащихся доступен только для {planTitle}-курсов"
+  refresh-row-btn: Обновить данные строки
+  refresh-row-success: Обновлено
   reports: странице отчета
   title: Табель успеваемости курса
   total: Итог
   user: Пользователь
+  user-sort:
+    score-asc: Сначала отстающие
+    score-des: По успеваемости
+    username-asc: По алфавиту А → Я
+    username-des: По алфавиту Я → А
 course-grade-book-cell:
   await-instructor: Ожидается оценка преподавателя
   await-peer: Ожидается оценка учащихся
@@ -541,9 +548,6 @@ course-info-edit__upload-failed: >-
   изображением.
 course-lti-edit__header: Настройки интеграции по LTI
 course-new:
-  access:
-    info: "После создания курс будет доступен только авторам, тариф Basic."
-    paid-course: "Этот курс платен для учащихся. Базовая цена:"
   cancel: Отмена
   create: Создать
   explanation: >-
@@ -552,49 +556,50 @@ course-new:
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
   header: Создание нового курса
   help-center-link: Подробнее о создании курсов
+  note:
+    paid: "Этот курс платен для учащихся. Базовая цена:"
+    tariff: "Будет создан Basic-курс, потом можно поменять его тип на PRO."
   teaching-landing:
     features:
-      "0": "Редактор для создания курсов и тестов, их дальнейшее размещение"
+      "0": "Редактор для создания курсов и их дальнейшее размещение"
       "1": >-
-        <a href='https://support.stepik.org/hc/ru/articles/360000159673' target='_blank'>20+ типов
-        задач</a>, включая задания на программирование и данные
-      "2": Интеграция по Stepik API
-      "3": Автоматическая проверка решений и ручное выставление оценок
-      "4": Отчёты по успеваемости
-      "5": Форум для ответов на вопросы учащихся
-      extra: >-
-        Лучшим авторам мы оказываем методическую поддержку и помогаем со съёмкой видео в
-        <nobr>Санкт-Петербурге</nobr>.
+        <a href='https://support.stepik.org/hc/ru/articles/360000159673'
+        target='_blank'>20+ типов задач</a> с автоматической проверкой
+      "10": Оплата по счету
+      "2": Форум и рассылки для общения с учащимися
+      "3": Табель и отчёты по успеваемости
+      "4": Ручная проверка заданий
+      "5": Дедлайны, экзамены, ограничение попыток
+      "6": Управление доступом к курсу
+      "7": Выдача своих сертификатов
+      "8": Экзамены с прокторингом
+      "9": Интеграция LTI
     features-header: "Делитесь знаниями, используя возможности платформы"
     form:
+      note: Будет создан Basic-курс, потом можно поменять его тип на PRO.
       submit: Создать курс
       title-placeholder: Название курса
     header: Начните преподавать со Stepik
-    navbar-link: Преподавание
-    new-class-content: >-
-      Создайте <a href='https://welcome.stepik.org/ru/class' target='_blank'>класс</a> и получите
-      доступ к оценкам и решениям ваших учащихся на курсе.
-    new-class-header: >-
-      Преподаёте и хотите использовать другие открытые курсы в работе? Ведёте несколько групп?
+    help: >-
+      В помощь вам наш <a href='https://support.stepik.org/hc/ru/categories/360000016274'
+      target='_blank'>справочный центр</a> и <a href='https://stepik.org/course/5207'
+      target='_blank'>курс для авторов</a>
     tips:
       "0": >-
-        <b>Опубликуйте бесплатно открытый курс в нашем каталоге</b>, и его увидят сотни тысяч
-        студентов Stepik.
+        <b>Используйте готовые курсы, чтобы обучать свою группу.</b> Создайте
+        <a href='https://welcome.stepik.org/ru/class' target='_blank'>класс</a>
+        в любом курсе Stepik и получите доступ к решениям и прогрессу своих учащихся.
       "1": >-
-        <b>Монетизируйте свои знания.</b> Создайте <a
-        href='https://welcome.stepik.org/ru/paid-courses' target='_blank'>платный курс</a>. Или
-        ограничьте доступ учащихся к материалам через <a
-        href='https://welcome.stepik.org/ru/pricing' target='_blank'>приватные курсы</a>.
+        <b>Создайте свой открытый или приватный курс</b>, выбрав один из наших
+        <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>тарифов</a>.
       "2": >-
-        <b>Обучайте своих сотрудников.</b> Используйте <a
-        href='https://welcome.stepik.org/ru/pricing' target='_blank'>приватные курсы</a> для
-        адаптации персонала, повышения квалификации или тестирования.
+        <b>Монетизируйте свои знания.</b> Создайте
+        <a href='https://welcome.stepik.org/ru/paid-courses' target='_blank'>платный курс</a> и
+        принимайте платежи сразу на Stepik.
       "3": >-
-        <b>Проведите соревнование или онлайн-олимпиаду</b>, как это уже сделали <a
-        href='https://stepik.org/users/6360382' target='_blank' rel='nofollow noreferrer'>Олимпиада
-        НТИ</a>, <a href='http://contest.bioinf.me/' target='_blank' rel='nofollow
-        noreferrer'>Bioinformatics Contest</a> и <a href='https://totaldict.ru/' target='_blank'
-        rel='nofollow noreferrer'>Тотальный Диктант</a>.
+        <b>Проводите <a href='https://support.stepik.org/hc/ru/articles/360010608059'
+        target='_blank'>соревнования</a> онлайн</b>, как это уже сделали Олимпиада НТИ,
+        Bioinformatics Contest и Тотальный Диктант.
   title: Название
   title-hint: Не более 64 символов
 course-permissions-edit:
@@ -714,7 +719,7 @@ course-settings:
   course-access:
     enabled: Открыт для прохождения
     not-enabled: Виден только команде курса
-    not-public: По приглашениям
+    not-public: Только по приглашениям
     public: Для всех
     title: Видимость курса
   course-type:
@@ -723,6 +728,11 @@ course-settings:
       курс будет виден только авторам. Переведите курс в PRO-режим или настройте его в соответствии
       с базовым тарифом, чтобы продолжить публикацию после 01.07.2020.
     title: Тип курса
+  owner-limit-note:
+    text: >-
+      <p>Попросите <b>{ownerName}</b> перевести курс в PRO-режим.</p>
+      <p>Или напишите нам на support@stepik.org,
+      чтобы стать основным администратором курса и учитывать его в вашей подписке.</p>
   save: Применить изменения
   save-error-woof: Не удалось сохранить курс.
   save-success-woof: Сохранено.
@@ -789,7 +799,7 @@ course__annon-test-done: Проверочное письмо успешно от
 course__annon-test-error: Не могу отправить проверочное письмо
 course__annon-test-tooltip: Отправить эту новость только на ваш адрес
 course__annon-tmpl-subj: Новость
-course__annon-tmpl-text: "Здравствуйте, {%user_name%}!"
+course__annon-tmpl-text: "Здравствуйте, \\{\\{user_name\\}\\}!"
 course__anon-stop-warn: Остановить рассылку? Возобновление рассылки будет невозможно.
 course__buy: Купить
 course__buy-button: "Купить за {price}"
@@ -928,6 +938,9 @@ course_payment_success-msg: >-
   поддержку: support@stepik.org.
 course_payment_success-woof: Поздравляем! Вы успешно записаны на курс!
 deadlines-editor__advanced-settings: Расширенные настройки
+deadlines-editor__advanced-settings-disabled: >-
+  <a href="/course/{courseId}/settings">Переведите курс в {planTitle}-режим</a>,
+  чтобы использовать дополнительные настройки.
 deadlines-editor__begin_date_source: дата открытия модуля
 deadlines-editor__course-deadlines: Дедлайны курса по умолчанию
 deadlines-editor__course-deadlines_tooltip: "Работают, если иное не указано в настройках модуля"
@@ -1254,7 +1267,9 @@ invitations-editor:
   one-time: одноразовую
   remove: Удалить ссылку-приглашение
   remove-confirm: Вы действительно хотите удалить ссылку?
+  restricted: Пригласить по ссылке можно только в {planTitle}-курс
   reusable: многоразовую
+
 invitations-modal:
   desc: >-
     Здесь вы можете пригласить в приватный курс ваших учащихся или сотрудников. Для этого добавьте
@@ -1362,6 +1377,7 @@ klasses:
     Свяжитесь с нами по адресу support@stepik.org для получения более подробной информации
   my-students: Мои учащиеся
 lesson:
+  draft: В разработке
   instructor:
     edit-permissions: Доступ к уроку
   likes:
@@ -1533,12 +1549,15 @@ lti-editor:
     href='https://support.stepik.org/hc/ru/articles/360000177314' target='_blank'>нашей
     документации</a>.
   key-title: LTI Key (Consumer)
+  not-available:
+    toast: "Интеграция по LTI доступна только для <b>{planTitle}-курсов</b>."
   private-profile-title: Создавать приватные профили для учащихся
   save: Сохранить настройки LTI
   secret-title: LTI Secret
   sync: >-
     Синхронизировать оценки LTI с использованием всех сохраненных подключений LTI для данного курса
   sync-btn: Синхронизировать оценки. Занимает длительное время.
+  title: "Настройки интеграции по LTI курса"
   tool-provider: >-
     Stepik может быть интегрирован в вашу LMS с помощью <a
     href='http://www.imsglobal.org/activity/learning-tools-interoperability' target='_blank'
@@ -1557,12 +1576,23 @@ member-field:
     testers: тестирующими
     text: "Получившие приглашения станут <strong>{name}</strong> курса."
   register: "Если пользователя нет на Stepik, мы предложим ему зарегистрироваться."
+  restricted: Отправить приглашение можно только в {planTitle}-курс
   user-not-found: Пользователь с данным id не найден
 members-list:
   empty-list: Нет пользователей
   load-more: Загрузить еще ↓
   remove: Удалить пользователя из списка
   remove-confirm: Вы действительно хотите удалить пользователя из списка?
+  restricted: >-
+    Список {group, select,
+      admins {администраторов}
+      assistants {ассистентов}
+      learners {учащихся}
+      moderators {модераторов}
+      teachers {преподавателей}
+      testers {тестирующих}
+      other {пользователей}
+    } доступен только в {planTitle}-курсе
 modal-dialog-confirm:
   discard: Отменить изменения
   save: Сохранить
@@ -1695,6 +1725,7 @@ plan-card:
   text-want-more: >-
     <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Хочу больше</a>
   title: "Ваш текущий план <var>{planName}</var>"
+  title-owner: "План владельца курса <var>{planName}</var>"
 plan-upgrade-card:
   button: Улучшить план
   text: >-
@@ -1705,16 +1736,20 @@ plan-upgrade-card:
   title: Улучшить тарифный план
 plans:
   ask_questions: >-
-    Если у вас есть вопросы, напишите нам на <a href="mailto:info@stepik.org">info@stepik.org</a>.
-  better_support: Улучшенная техподдержка.
+    Если у вас есть вопросы, напишите нам на
+    <a href="mailto:support@stepik.org">support@stepik.org</a>.
+  better_support: Улучшенная техподдержка
   card:
-    change: изменить
+    change: Изменить
     confirm: Применить
     description: Привязать новую карту
   connected_card: "Привязанная карта: ****{card}"
   description: >-
-    {count, plural, =1 {Подписка на # PRO-курс} few {Подписка на # PRO-курса} many {Подписка на #
-    PRO-курсов} other {Подписка на # PRO-курсов}}
+    Подписка на {type, select,
+      pro {{count, plural, =1 {# PRO-курс} few {# PRO-курса} other {# PRO-курсов}}}
+      other {{count, plural, =1 {# Enterprise-курс} few {# Enterprise-курса}
+                             other {# Enterprise-курсов}}}
+    }
   discount_valid: "Ваша скидка заканчивается {discount_end}"
   fail: Не удалось подписаться
   free:
@@ -1723,15 +1758,18 @@ plans:
       подписку</a>.
     max_courses: Нет возможности создавать приватные курсы.
     support: Стандартная техподдержка.
-  loading: В пороцессе...
+  handmade-note: >-
+    Чтобы изменить или отменить подписку, напишите нам на
+    <a href="mailto:support@stepik.org">support@stepik.org</a>.
   login_req: "Войдите, чтобы подписаться"
   max_pro_courses: >-
-    {count, plural, =1 {Вы можете создать # приватный курс с неограниченным числом учащихся.} few
-    {Вы можете создать # приватных курса с неограниченным числом учащихся.} many {Вы можете создать
-    # приватных курсов с неограниченным числом учащихся.} other {Вы можете создать # приватных
-    курсов с неограниченным числом учащихся.}}
-  max_public_courses: Можно создавать неограниченное число открытых курсов.
-  next_payment: "Следующий платеж {price} будет списан {payment_date}."
+    <b>{type, select,
+      pro {{count, plural, =1 {# PRO-курс} few {# PRO-курса} other {# PRO-курсов}}}
+      other {{count, plural, =1 {# Enterprise-курс} few {# Enterprise-курса}
+                            other {# Enterprise-курсов}}}
+    }</b> с 1000 учащимися
+  max_public_courses: Неограниченное число открытых basic-курсов
+  next_payment: "Следующий платеж <b>{price}</b> будет списан <b>{payment_date}</b>."
   not_found: >-
     Тарифный план не найден. Пожалуйста, обратитесь в службу поддержки - support@stepik.org за
     корректной ссылкой.
@@ -1742,7 +1780,7 @@ plans:
   subscribe: Подписаться
   success: Успешная подписка
   title: Создавайте приватные онлайн-курсы
-  unsubscribe: отписаться
+  unsubscribe: Отменить подписку
   unsubscribe_description1: "Вы можете "
   unsubscribe_description2:
     ' от текущего плана или посмотреть информацию о других <a
@@ -2140,7 +2178,6 @@ plugins:
     tolerated-error: Допустимая погрешность
     write-number: Введите число
   parsons:
-    alert: Этот тип шага в настоящее время не поддерживается.
     enter-code: Введите ваш код ниже
     indent: "Пожалуйста, используйте 4 пробела для отступа."
     type-code: Введите ваш код здесь...
@@ -2278,9 +2315,6 @@ profile:
   courses_favorites: Избранные
   details: О себе
   joined-date: Присоединился
-  knowledge-tooltip: >-
-    Вы получаете знания за прохождение уроков. Учитываются только шаги с более чем 100 решениями.
-  knowledge_rank: по знаниям
   mailing: Рассылки
   my-courses: Мои курсы
   no_annons: Пока нет новостей
@@ -2289,10 +2323,22 @@ profile:
   no_lessons: Вы не создали ни одного урока
   no_lessons_link: Создать урок
   profile: Профиль
-  reputation-tooltip: >-
-    Вы получаете репутацию, когда другие пользователи решают ваши уроки или положительно оценивают
-    ваши комментарии. Учитываются только шаги с более чем 100 решениями.
-  reputation_rank: по репутации
+  ranks:
+    leaders: >-
+      Рейтинг по {term, select, knowledge {знаниям} reputation {репутации} other {}}
+    position: >-
+      {pos, selectordinal, other {#-й}}
+      {term, select, knowledge {по знаниям} reputation {по репутации} other {}}
+    title: "{term, select, knowledge {Знания} reputation {Репутация} other {}}"
+    tooltip: >-
+      {term, select,
+        knowledge {Вы получаете знания за прохождение уроков. Учитываются только шаги с более
+                   чем 100 решениями.}
+        reputation {Вы получаете репутацию, когда другие пользователи решают ваши уроки или
+                    положительно оценивают ваши комментарии. Учитываются только шаги с более чем
+                    100 решениями.}
+        other {}
+      }
   teaching: Преподавание
   user_no_courses: Пока нет курсов
   user_no_lessons: Пока нет уроков
@@ -2732,9 +2778,7 @@ review-stages:
         {score} из # баллов.} many {Ваш ответ оценили на {score} из # баллов.} other {Ваш ответ
         оценили на {score} из # баллов.} =0 {Дождитесь оценки преподавателя}}
     in-progress:
-      note: >-
-        Обычно ответ преподавателя приходит через 2 дня после отправки решения на проверку, но это
-        зависит от авторов курса
+      note: Ответ преподавателя придет не сразу, вы получите уведомление.
     pending:
       title: >-
         {count, plural, =1 {Дождитесь оценки преподавателя, максимум за задачу — # балл} few
@@ -3093,7 +3137,7 @@ syllabus_edit:
   section_added: Модуль успешно добавлен в курс
   zero_sections: >-
     В курсе пока нет ни одного урока.<br>Создайте первый модуль, чтобы добавить уроки
-teach-beta:
+teach:
   classes:
     empty: >-
       У вас пока нет классов. <a href='https://welcome.stepik.org/ru/class' target='_blank'>Что
@@ -3124,13 +3168,23 @@ teach-beta:
     syllabus-edit: Содержание
     title: Курсы
   lessons:
+    blank: Пустой
+    edit: Содержание
     empty: У вас пока нет уроков.
-    outside-course: Вне курса
+    filters:
+      all: Все уроки
+      draft: В разработке
+      orphaned: Вне курса
+    no-results: Найдено <b>0</b> уроков.
+    no-results-reset-link: Сбросить фильтры
+    orphaned: Вне курса
     permissions: Права доступа
     reports: Отчеты
+    search-placeholder: Название или ID урока
     steps-count: >-
-      {count, plural, =1 {1 шаг} few {# шага} many {# шагов} other {# шагов} =0 {Пустой}}
+      {count, plural, =1 {# шаг} few {# шага} other {# шагов} =0 {Пустой}}
     title: Уроки
+    used-in-courses: "В {count, number} курсах:"
   nav:
     classes: Классы
     courses: Курсы
@@ -3139,6 +3193,7 @@ teach-beta:
     new-course: Новый курс
     new-lesson: Новый урок
     notifications: Уведомления
+  navbar-link: Преподавание
   new-class:
     title: Создание нового класса
   new-course:
@@ -3163,10 +3218,6 @@ toc__progress:
       {count, plural, =1 {учиться <span>#</span> час} few {учиться <span>#</span> часа} many
       {учиться <span>#</span> часов} other {учиться <span>#</span> часов}}
   title: прогресс по курсу
-topbar__create:
-  course: Новый курс
-  create: Создать
-  lesson: Новый урок
 unit_edit:
   add_existed: Добавить ваш существующий урок
   import: Импортировать уроки из файла
@@ -3176,10 +3227,9 @@ unit_edit:
   restore: Восстановить
   title_placeholder: Введите название нового урока и нажмите Enter.
 user-subscribe:
-  followers: >-
-    {count, plural, =1 {# подписчик} few {# подписчика} many {# подписчиков} other {# подписчиков}}
+  followers: "{followers_count} подписчиков"
   has-followers: >-
-    {count, plural, =1 {У вас # подписчик} few {У вас # подписчика} many {У вас # подписчиков}
+    {count, plural, one {У вас # подписчик} few {У вас # подписчика} many {У вас # подписчиков}
     other {У вас # подписчиков}}
   subscribe: Подписаться
   subscribe-process: Подписываем…
@@ -3259,6 +3309,32 @@ user__edit:
   short_bio: Краткая биография<br>(до 255 символов)
   social_links: Ссылки на социальные сети
   social_links_description: Эти ссылки будут отображаться в вашем профиле
+  subscription:
+    caption: Тарифный план
+    coupon-caption: Промокод
+    current-plan: Текущий план — <b>{planName}</b>
+    current-plan-counter: >-
+      {courseType, select,
+        basic {PRO-курсы недоступны на тарифе Basic}
+        pro {PRO-курсы: {used}/{total}}
+        other {Enterprise-курсы: {used}/{total}}
+      }
+    subscribe-btn:
+      cancel: Отменить
+      change: Изменить подписку
+      new: Оформить подписку
+    subscribe-description:
+      charge: >-
+        Начиная с <b>{chargeDate, date, medium-date}</b> платёж в <b>{priceText}</b>
+        будет списываться каждый месяц до окончания подписки.
+      trial: >-
+        <p><b>Бесплатный 14-ти дневный пробный период</b> начнётся сразу.</p>
+        <p>После пробного периода вы будете платить {priceText} в месяц.</p>
+    subscribe-footnote: >-
+      Мы используем
+      <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
+      для обработки ваших платежей.
+    title: Мой тарифный план
   time:
     12h: 12 часов
     1d: 1 день
@@ -3336,8 +3412,3 @@ video__upload-failed: >-
   Произошла ошибка при загрузке видео-файла. Пожалуйста, проверьте, что размер вашего файла не
   превышает 200 мегабайт.
 woof__user_already_registered: У вас уже есть аккаунт.
-woof_label:
-  alert: Внимание
-  info: Информация
-  success: Успешно
-  warning: Предупреждение

@@ -111,7 +111,6 @@ common__fixed: 标记为已修复
 common__fullscreen: 全屏
 common__hard-deadline: 硬截止时间
 common__input-length-warn: "{count, plural, other {最低#个字符} =1 {#个字符的最小}}"
-common__knowledge: 知识
 common__lessons: 教训
 common__link: 链接
 common__load-more-button: 装载更多
@@ -129,7 +128,6 @@ common__problem: 问题
 common__profile: 轮廓
 common__reload: 刷新
 common__reports-expiration: 报告将被删除在7天
-common__reputation: 声誉
 common__save-button: 保存
 common__save-failed-warn: 保存失败。
 common__saving-text: 保存...
@@ -186,7 +184,7 @@ course__annon-test-done: 测试邮件发送成功
 course__annon-test-error: 无法发送测试邮件
 course__annon-test-tooltip: 本公告发送到您的电子邮件地址只有
 course__annon-tmpl-subj: 新公告
-course__annon-tmpl-text: "嗨{%user_name%}！"
+course__annon-tmpl-text: "嗨\\{\\{user_name\\}\\}！"
 course__certificate-distinction: 证书与区别
 course__certificate-link: 证书
 course__certificate-regular: 普通证书
@@ -424,11 +422,16 @@ profile:
   courses-empty-list: 没有找到课程
   courses-empty-list-call-to-action: 看看我们的课程
   joined-date: 加盟
-  knowledge-tooltip: 你获得完成课程的知识点。 只有超过100份提交的步骤才算数。
   my-courses: 我的课程
   profile: 轮廓
-  reputation-tooltip:
-    当别人解决您的课程或您的意见时，您可以获得声望点。 只有超过100份提交的步骤才算数。
+  ranks:
+    title: "{term, select, knowledge {知识} reputation {声誉} other {}}"
+    tooltip: >-
+      {term, select,
+        knowledge {你获得完成课程的知识点。 只有超过100份提交的步骤才算数。}
+        reputation {当别人解决您的课程或您的意见时，您可以获得声望点。 只有超过100份提交的步骤才算数。}
+        other {}
+      }
   teaching: 教学
 quiz:
   correct_ratio: Correct submissions

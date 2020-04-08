@@ -59,7 +59,7 @@ announcement-show:
     will_end: " Sending will end at: "
     will_start: " Sending will start at: "
 announcement__default-template: Default template
-attachments__list-attach-file: "{count, plural, =0 {Attach file} other {Attach file (max #)}}"
+attachments__list-attach-file: "{size, select, 0 {Attach file} other {Attach file (max {size})}}"
 attachments__list-delete-attachment-tooltip: Delete
 attachments__list-open-attachment-tooltip: Open
 attachments__list-title: Attachments
@@ -166,7 +166,7 @@ comments__abuse: Don't like
 comments__abuse-tooltip: mark comment as not liked
 comments__active-order: Most discussed
 comments__all: All user comments
-comments__assistant-badge: Course assistant
+comments__assistant-badge: Course team
 comments__auth-warn: To join this discussion you have to
 comments__by-date-order: Last discussions
 comments__default-order: Most liked
@@ -254,7 +254,6 @@ common__fullscreen: Fullscreen
 common__hard-deadline: Hard deadline
 common__hour: h
 common__input-length-warn: "{count, plural, other {# characters minimum} =1 {# character minimum}}"
-common__knowledge: Knowledge
 common__learner: Learner
 common__lesson: Lesson
 common__lesson-image: Lesson image
@@ -281,7 +280,6 @@ common__problem: Problem
 common__profile: Profile
 common__reload: Reload
 common__reports-expiration: Reports are deleted after 7 days
-common__reputation: Reputation
 common__save-button: Save
 common__save-failed-warn: Save failed.
 common__saving-text: saving...
@@ -311,9 +309,9 @@ common__unauth-voting: You should login for voting.
 common__unsaved-warn: All unsaved changes will be lost!
 common__update: Update
 common__userpic: User picture
-common__woof-unverified-email: >-
-  Your email is not verified! <a href="/edit-profile/email">Please verify to continue using
-  Stepik.</a>
+common__woof-unverified-email:
+  text: Your email is not verified!
+  verify: Verify
 common__woof-wrong: Something went wrong. Check your internet connection and try again.
 content_advices:
   action:
@@ -429,6 +427,7 @@ course:
     paid-features:
       deadlines: Course deadlines
       exams: Exams
+      lti-integration: LTI integration
       section-deadlines: Module deadlines
       section-discounting-policy: Module discounting policy
       section-required-section: Required modules
@@ -479,10 +478,17 @@ course-grade-book:
   not-available:
     toast: "Course gradebook is available for <b>{planTitle} courses</b> only."
     tooltip: "Course gradebook is available for {planTitle} courses only"
+  refresh-row-btn: Refresh row data
+  refresh-row-success: Updated
   reports: reports page
   title: Course gradebook
   total: Course total
   user: User
+  user-sort:
+    score-asc: Lowest grade first
+    score-des: Highest grade first
+    username-asc: "Name: A → Z"
+    username-des: "Name: Z → A"
 course-grade-book-cell:
   await-instructor: Waiting score from instructor
   await-peer: Waiting score from learners
@@ -509,10 +515,6 @@ course-info-edit__upload-failed: >-
   Upload a valid image. The file you uploaded was either not an image or a corrupted image.
 course-lti-edit__header: LTI integration settings
 course-new:
-  access:
-    info: >-
-      Once created, the course will only be available to authors, the course tariff is Basic.
-    paid-course: "Learners need to pay for this course. Base price:"
   cancel: Cancel
   create: Create
   explanation: >-
@@ -521,44 +523,50 @@ course-new:
     target="_blank">Creative Commons (CC BY-SA 4.0)</a> license.
   header: Create a new course
   help-center-link: More about creating courses
+  note:
+    paid: "Learners need to pay for this course. Base price:"
+    tariff: >-
+      You'll create a Basic course. You can always upgrade to Pro for more handy features.
   teaching-landing:
     features:
-      "0": "Online editor for courses, lessons, quizzes and challenges"
+      "0": "An online course editor and a place for your course in our catalog"
       "1": >-
-        <a href='https://stepik.org/lesson/9173/step/1?unit=1718' target='_blank'>20+ types of
-        assignments</a>
-      "2": Stepik API and LTI
-      "3": Autograding and instructor review
-      "4": Gradebook and other reports
-      "5": Discussion forum
-      extra: >-
-        We provide methodological support and help with video shooting in St. Petersburg for the
-        selected authors.
+        <a href='https://support.stepik.org/hc/en-us/articles/360000159673-Types-of-assignments'
+        target='_blank'>20+ types</a> of assignments with autograding
+      "10": LTI integration
+      "2": Communication with students through comments and newsletters
+      "3": Gradebook and reports
+      "4": Instructor review
+      "5": Exams and deadlines
+      "6": Course access control
+      "7": Course certificates
+      "8": Exams with proctoring
+      "9": External grader
     features-header: Share knowledge with Stepik
     form:
+      note: "You'll create a Basic course. You can always upgrade to Pro for more handy features."
       submit: Create course
       title-placeholder: Course title
     header: Teach with Stepik
-    navbar-link: Teach
-    new-class-content: >-
-      Create <a href='https://welcome.stepik.org/en/classroom' target='_blank'>Classroom</a> for
-      you students and get access to their progress and solutions.
-    new-class-header: Do you want to use online course in your class?
+    help: >-
+      For more details reach our
+      <a href='https://support.stepik.org/hc/en-us/categories/360000016274'
+      target='_blank'>Help Center</a>.
     tips:
       "0": >-
-        <b>Publish your open online course for free.</b> Thousands learners will see your course on
-        Stepik.
+        <b>Teach your students using content from other courses on Stepik.</b> Create a
+        <a href='https://welcome.stepik.org/en/classroom' target='_blank'>classroom</a> in
+        any course from the catalog and get access to your students' submissions and progress.
       "1": >-
-        <b>Monetize your knowledge.</b> Create paid course like <a
-        href='https://stepik.org/course/15001' target='_blank'>this</a>. Or restrict access to your
-        content with <a href='https://welcome.stepik.org/en/' target='_blank' rel='nofollow
-        noreferrer'>private courses</a>.
+        <b>Create your own open or private course</b> by choosing one of our
+        <a href='https://welcome.stepik.org/en/pricing' target='_blank'>plans</a>.
       "2": >-
-        <b>Teach your employees.</b> Use <a href='https://welcome.stepik.org/en/'
-        target='_blank'>private courses</a> for onboarding process in your company.
+        <b>Monetize your knowledge</b>. Create a
+        <a href='https://support.stepik.org/hc/en-us/sections/360003326714' target='_blank'>paid
+        course</a> and accept payments directly through Stepik.
       "3": >-
-        <b>Create online contest</b>, like <a href='http://contest.bioinf.me/' target='_blank'
-        rel='nofollow noreferrer'>Bioinformatics Contest</a>
+        <b>Arrange online competitions</b>, for example see
+        <a href='https://bioinf.me/en/contest' target='_blank'>Bioinformatics Contest</a>.
   title: Title
   title-hint: Up to 64 symbols.
 course-permissions-edit:
@@ -667,15 +675,20 @@ course-settings:
   course-access:
     enabled: Open for enrollment
     not-enabled: Visible for course team only
-    not-public: By invitations
+    not-public: By invitations only
     public: For everybody
     title: Course visibility
   course-type:
     legacy-note: >-
-      If you're using advanced features, the course will become visible for authors only on <time>1
-      July 2020</time>. Upgrade your course to PRO or adjust its settings according to the basic
-      plan to keep it published.
+      If you're using advanced features, this course will become visible only for its authors on
+      <time>July 1, 2020</time>. Upgrade your course to PRO before that or adjust course settings
+      according to the basic plan to keep it published.
     title: Course type
+  owner-limit-note:
+    text: >-
+      <p>Ask <b>{ownerName}</b> to upgrade the course to PRO.</p>
+      <p>Or contact us at support@stepik.org
+      to become primary admin and include the course into your subscription.</p>
   save: Apply changes
   save-error-woof: Save failed.
   save-success-woof: Saved.
@@ -742,7 +755,7 @@ course__annon-test-done: Test mail sent successfully
 course__annon-test-error: Can't send test mail
 course__annon-test-tooltip: Sent this announcement to your email address only
 course__annon-tmpl-subj: New announcement
-course__annon-tmpl-text: "Hi {%user_name%}!"
+course__annon-tmpl-text: "Hi \\{\\{user_name\\}\\}!"
 course__anon-stop-warn: This action can not be reverted. Stop delivery?
 course__buy: Buy
 course__buy-button: "Buy for {price}"
@@ -879,6 +892,8 @@ course_payment_success-msg: >-
   to us: support@stepik.org.
 course_payment_success-woof: Congratulations! You are successfully enrolled to course.
 deadlines-editor__advanced-settings: Advanced settings
+deadlines-editor__advanced-settings-disabled: >-
+  <a href="/course/{courseId}/settings">Upgrade to {planTitle}</a>, to apply advanced settings.
 deadlines-editor__begin_date_source: module open date
 deadlines-editor__course-deadlines: Course default deadlines
 deadlines-editor__course-deadlines_tooltip:
@@ -1190,6 +1205,7 @@ invitations-editor:
   one-time: one-time
   remove: Remove invitation
   remove-confirm: Are you sure you want to delete the link?
+  restricted: You may invite someone via a link only to {planTitle}-courses.
   reusable: reusable
 invitations-modal:
   desc: >-
@@ -1296,6 +1312,7 @@ klasses:
   klass-plan-support: Contact us at support@stepik.org for more information
   my-students: My learners
 lesson:
+  draft: Draft
   instructor:
     edit-permissions: Permissions
   likes:
@@ -1455,11 +1472,14 @@ lti-editor:
     docs</a> to learn more about the integration process for Moodle, Canvas, edX, Coursera and
     others.
   key-title: LTI Key (Consumer)
+  not-available:
+    toast: "LTI integration is available for <b>{planTitle} courses</b> only."
   private-profile-title: Create private profiles for learners
   save: Save LTI access settings
   secret-title: LTI Secret
   sync: Sync LTI grades using all stored LTI connections for this Course
   sync-btn: "Don't click unless necessary, takes a while"
+  title: "LTI integration settings of the course"
   tool-provider: >-
     Stepik can be integrated into your LMS via LTI as a Tool Provider. Read more about Learning
     Tools Interoperability (<a
@@ -1479,39 +1499,50 @@ member-field:
     text: >-
       Those who receive invitations will be <strong>{name}</strong> of the course.
   register: "If the user is not on Stepik, we will offer him to register."
+  restricted: You may send an invitation only to {planTitle}-courses
   user-not-found: User with this id not found
 members-list:
   empty-list: No users yet
   load-more: Load more ↓
   remove: Remove a user from the list
   remove-confirm: Are you sure you want to remove a user from the list?
+  restricted: >-
+    You may see a {group, select,
+      admins {administrators}
+      assistants {assistants}
+      learners {learners}
+      moderators {moderators}
+      teachers {teachers}
+      testers {testers}
+      other {users}
+    } list only in {planTitle}-courses
 modal-dialog-confirm:
   discard: Discard changes
   save: Save
   text: You have made changes. Do you want to save or discard them?
 new-class-form:
-  choose-course-btn: Выбрать курс
+  choose-course-btn: Choose a course
   choose-course-how-to-img:
     alt: How to create a class from the course page
     src: /static/frontend/new-class-how-to-en.png
   choose-course-text: >-
-    Создайте класс для <b>любого открытого</b> курса и получите доступ к оценкам и решениям ваших
-    учащихся.
-  create-class-btn: Создать класс
-  create-class-choose-course: Выберите курс...
+    Create a classroom for <b>any public</b> course and gain access to your students' scores and
+    submissions.
+  create-class-btn: Create classroom
+  create-class-choose-course: Choose a course...
   create-class-text: >-
-    Создайте класс для <b>любого своего</b> курса, чтобы разделить учащихся по группам и пригласить
-    для них преподавателей.
+    Create a classroom for <b>any of your</b> courses to divide students into groups and invite
+    teachers for them.
 new-course-form:
   course-title:
-    caption: Название курса
-    footnote: "{count, plural, =1 {Максимум 1 символ} other {Максимум # символов}}"
-  create-btn: Создать курс
+    caption: Course title
+    footnote: "{count, plural, =1 {Max # character} other {Max # characters}}"
+  create-btn: Create course
 new-lesson-form:
-  create-btn: Создать урок
+  create-btn: Create lesson
   lesson-title:
-    caption: Название урока
-    footnote: "{count, plural, =1 {Максимум 1 символ} other {Максимум # символов}}"
+    caption: Lesson title
+    footnote: "{count, plural, =1 {Max # character} other {Max # characters}}"
 notification__favorite: favorite
 notification__muted: muted
 notifications__empty-list: No notifications
@@ -1595,6 +1626,7 @@ plan-card:
   text-want-more: >-
     <a href='https://welcome.stepik.org/en/pricing' target='_blank'>I want more</a>
   title: "Your current plan <var>{planName}</var>"
+  title-owner: "Course owner's plan <var>{planName}</var>"
 plan-upgrade-card:
   button: Upgrade
   text: >-
@@ -1605,15 +1637,18 @@ plan-upgrade-card:
 plans:
   ask_questions: >-
     If you have any questions, send us an email to <a
-    href="mailto:info@stepik.org">info@stepik.org</a>.
-  better_support: Higher priority support.
+    href="mailto:support@stepik.org">support@stepik.org</a>.
+  better_support: Higher priority support
   card:
-    change: change
+    change: Change
     confirm: Apply
     description: Change card
-  connected_card: "Connected card: {card}"
+  connected_card: "Current payment method: ****{card}"
   description: >-
-    {count, plural, =1 {Subscription to # PRO course} other {Subscription to # PRO courses}}
+    Subscription to {type, select,
+      pro {{count, plural, =1 {# PRO course} other {# PRO courses}}}
+      other {{count, plural, =1 {# Enterprise course} other {# Enterprise courses}}}
+    }
   discount_valid: "Your discount will end at {discount_end}."
   fail: Failed to subscribe
   free:
@@ -1622,22 +1657,26 @@ plans:
       plans</a>.
     max_courses: You cannot create private courses.
     support: Regular support.
-  loading: In progress...
+  handmade-note: >-
+    To change or cancel your subscription, email us at
+    <a href="mailto:support@stepik.org">support@stepik.org</a>.
   login_req: Login to subscribe
   max_pro_courses: >-
-    {count, plural, =1 {You can create # private course with unlimited learners.} other {You can
-    create # private courses with unlimited learners.}}
-  max_public_courses: You can create unlimited public courses.
-  next_payment: "Next payment {price} will be charged on {payment_date}."
+    <b>{type, select,
+      pro {{count, plural, =1 {# PRO course} other {# PRO courses}}}
+      other {{count, plural, =1 {# Enterprise course} other {# Enterprise courses}}}
+    }</b> with 1000 students
+  max_public_courses: Unlimited public Basic courses
+  next_payment: "Next payment of <b>{price}</b> will be charged on <b>{payment_date}</b>."
   not_found: >-
     Subscription plan not found. Please contact support@stepik.org for a correct link.
   other_plans: >-
-    You can try also <a href="https://welcome.stepik.org/en/pricing">another plan</a>.
+    Information about other <a href="https://welcome.stepik.org/en/pricing">tariff plans</a>.
   sub_title: "You are on <strong>{plan_name}</strong> subscription plan. With this plan:"
   subscribe: Subscribe for
   success: Successfully subscribed
   title: Create more private online courses
-  unsubscribe: unsubscribe
+  unsubscribe: Unsubscribe
   unsubscribe_description1: "You can also "
   unsubscribe_description2:
     ' from this plan, or try <a href="https://welcome.stepik.org/en/pricing">another plan</a>.'
@@ -2021,7 +2060,6 @@ plugins:
     tolerated-error: Tolerated error
     write-number: Write number here
   parsons:
-    alert: This type of step is not currently supported.
     enter-code: Enter your code in below.
     indent: Please use 4 spaces for indentation.
     type-code: Type your code here...
@@ -2154,10 +2192,6 @@ profile:
   courses_favorites: Favorites
   details: Details
   joined-date: Joined
-  knowledge-tooltip: >-
-    You get knowledge points for completing lessons. Only steps with more than 100 submissions
-    counts.
-  knowledge_rank: by knowledge
   mailing: Mailings
   my-courses: My courses
   no_annons: No announcements yet
@@ -2166,10 +2200,21 @@ profile:
   no_lessons: Create your first lesson!
   no_lessons_link: Lesson creating
   profile: Profile
-  reputation-tooltip: >-
-    You get reputation points when others solve your lessons or like your comments. Only steps with
-    more than 100 submissions counts.
-  reputation_rank: by reputation
+  ranks:
+    leaders: >-
+      {term, select, knowledge {Knowledge} reputation {Reputation} other {}} ranking
+    position: >-
+      {pos, selectordinal, one {#st} two {#nd} few {#rd} other {#th}}
+      {term, select, knowledge {by knowledge} reputation {by reputation} other {}}
+    title: "{term, select, knowledge {Knowledge} reputation {Reputation} other {}}"
+    tooltip: >-
+      {term, select,
+        knowledge {You get knowledge points for completing lessons. Only steps with more than
+                   100 submissions counts.}
+        reputation {You get reputation points when others solve your lessons or like your comments.
+                    Only steps with more than 100 submissions counts.}
+        other {}
+      }
   teaching: Teaching
   user_no_courses: No courses yet
   user_no_lessons: No lessons yet
@@ -2568,7 +2613,7 @@ review-stages:
         {count, plural, =1 {You got {score} out of # point.} other {You got {score} out of #
         points.} =0 {Please wait, instructor will grade your solution.}}
     in-progress:
-      note: It usually takes 48 hours for your answer to be reviewed.
+      note: The instructor’s response will not come immediately, you will receive a notification.
     pending:
       title: >-
         {count, plural, =1 {Instructor will grade your solution with the maximum score of # point}
@@ -2894,41 +2939,51 @@ syllabus_edit:
   saved_msg: Course successfully saved
   section_added: Module was successfully added to course
   zero_sections: There are no any lessons.<br>Add first module to add lessons
-teach-beta:
+teach:
   classes:
     empty: >-
-      У вас пока нет классов. <a href='https://welcome.stepik.org/en/classroom' target='_blank'>Что
-      такое класс?</a>
+      You don't have classes yet. <a href='https://welcome.stepik.org/en/classroom'
+      target='_blank'>What's a class?</a>
     gradebook: Gradebook
     reports: Reports
     submissions: Submissions
     title: Classes
   courses:
-    comments: Комментарии
-    empty: "У вас пока нет курсов, создайте первый."
+    comments: Comments
+    empty: "You don't have courses yet, create the first one."
     filters:
       all: All courses
       draft: Drafts
       inactive: Inactive
       private: Private
       public: Public
-    gradebook: Табель
-    info-edit: Описание
-    no-results: Найдено <b>0</b> курсов.
-    no-results-reset-link: Сбросить фильтры
-    pending-reviews: "{count, plural, =1 {# решений на рецензию} other {# решений на рецензию}}"
-    permissions-edit: Права доступа
-    reports: Отчеты
-    search-placeholder: Название или ID курса
-    syllabus-edit: Содержание
+    gradebook: Gradebook
+    info-edit: Information
+    no-results: Found <b>0</b> courses.
+    no-results-reset-link: Reset filters
+    pending-reviews: "{count, plural, =1 {# submission} other {# submissions}} for review"
+    permissions-edit: Permissions
+    reports: Reports
+    search-placeholder: Course name or ID
+    syllabus-edit: Syllabus
     title: Courses
   lessons:
-    empty: У вас пока нет уроков.
-    outside-course: Вне курса
+    blank: Empty
+    edit: Edit
+    empty: You don't have lessons yet.
+    filters:
+      all: All lessons
+      draft: Draft
+      orphaned: Standalone
+    no-results: Found <b>0</b> lessons.
+    no-results-reset-link: Reset filters
+    orphaned: Standalone
     permissions: Permissions
     reports: Reports
-    steps-count: "{count, plural, =1 {1 шаг} other {# шагов} =0 {Пустой}}"
+    search-placeholder: Lesson name of ID
+    steps-count: "{count, plural, =1 {# step} other {# steps} =0 {Empty}}"
     title: Lessons
+    used-in-courses: "In {count, number} courses:"
   nav:
     classes: Classes
     courses: Courses
@@ -2937,12 +2992,13 @@ teach-beta:
     new-course: New course
     new-lesson: New lesson
     notifications: Notifications
+  navbar-link: Teach
   new-class:
-    title: Создание нового класса
+    title: Create a new class
   new-course:
-    title: Создание нового курса
+    title: Create a new course
   new-lesson:
-    title: Создание нового урока
+    title: Create a new lesson
 time:
   minutes__short: min
   seconds__short: sec
@@ -2960,10 +3016,6 @@ toc__progress:
     learn: >-
       {count, plural, =1 {study <span>#</span> hour} other {study <span>#</span> hours}}
   title: course progress
-topbar__create:
-  course: New course
-  create: Create
-  lesson: New lesson
 unit_edit:
   add_existed: Add your existing lesson
   import: Import lessons from file
@@ -2973,7 +3025,7 @@ unit_edit:
   restore: Restore
   title_placeholder: Type a name for the new lesson and press Enter.
 user-subscribe:
-  followers: "{count, plural, =1 {# follower} other {# followers}}"
+  followers: "{followers_count} followers"
   has-followers: "{count, plural, =1 {You have # follower} other {You have # followers}}"
   subscribe: Follow
   subscribe-process: You are following…
@@ -3052,6 +3104,31 @@ user__edit:
   short_bio: Short bio<br>(255 chars max)
   social_links: Social links
   social_links_description: These links will be shown on your profile page
+  subscription:
+    caption: Subscription
+    coupon-caption: Promo code
+    current-plan: Current plan — <b>{planName}</b>
+    current-plan-counter: >-
+      {courseType, select,
+        basic {PRO courses are not available}
+        pro {PRO courses: {used}/{total}}
+        other {Enterprise courses: {used}/{total}}
+      }
+    subscribe-btn:
+      cancel: Cancel
+      change: Update subscription
+      new: Subscribe
+    subscribe-description:
+      charge: >-
+        Starting from <b>{chargeDate, date, medium-date}</b> you will be charged a payment
+        of <b>{priceText}</b> monthly until you cancel the subscription.
+      trial: >-
+        <p><b>Free 14-Days trial</b> will start immediately.</p>
+        <p>After the trial period, you will be charged a payment of {priceText} monthly.</p>
+    subscribe-footnote: >-
+      We use <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
+      for the processing of your payments.
+    title: My subscription
   time:
     12h: 12 hours
     1d: 1 day
@@ -3128,8 +3205,3 @@ video__upload-failed: >-
   An error occurred while uploading a video file. Please check that your video file does not exceed
   200 Mbytes.
 woof__user_already_registered: You already have an account.
-woof_label:
-  alert: Alert
-  info: Info
-  success: Success
-  warning: Warning

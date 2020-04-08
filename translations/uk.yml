@@ -168,7 +168,6 @@ common__hard-deadline: Кінцевий термін виконання
 common__input-length-warn: >-
   {count, plural, other {мінімум # символу} =1 {мінімум # символ} many {мінімум # символів} few
   {мінімум # символи}}
-common__knowledge: Знання
 common__lessons: Уроки
 common__link: посилання
 common__load-more-button: Звантажити ще
@@ -187,7 +186,6 @@ common__problem: Завдання
 common__profile: Профіль
 common__reload: Перезавантажити
 common__reports-expiration: Звіти будуть видалені через 7 днів
-common__reputation: Репутація
 common__save-button: Зберегти
 common__save-failed-warn: Зберегти не вдалося.
 common__saving-text: збереження...
@@ -210,9 +208,9 @@ common__time-warn: >-
   часового пояса.
 common__unauth-voting: "Щоб голосувати, необхідно ідентифікувати себе."
 common__unsaved-warn: Усі незбережені дані будуть втрачені!
-common__woof-unverified-email: >-
-  Ви не підтвердили адресу вашої електронної поштової скриньки! <a href="/edit-profile/email">Будь
-  ласка, підтвердьте</a>
+common__woof-unverified-email:
+  text: Ви не підтвердили адресу вашої електронної поштової скриньки!
+  verify: Будь ласка, підтвердьте
 course-edit__cancel: Повернутися
 course-edit__new-module: Додати Модуль
 course-edit__save: Зберегти зміни
@@ -292,7 +290,7 @@ course__annon-test-done: Лист для перевірки надісланий
 course__annon-test-error: Не вдається надіслати лист для перевірки
 course__annon-test-tooltip: Надіслати це оголошення лише на вашу адресу
 course__annon-tmpl-subj: Оголошення
-course__annon-tmpl-text: "Доброго часу, {%user_name%}!"
+course__annon-tmpl-text: "Доброго часу, \\{\\{user_name\\}\\}!"
 course__anon-stop-warn: Зупинити надсилання? Відновити надсилання не можливо
 course__certificate-distinction: Сертифікат з відзнакою
 course__certificate-link: Сертифікат
@@ -694,13 +692,18 @@ profile:
   courses-empty-list: Курси відсутні
   courses-empty-list-call-to-action: Знайдіть курс у каталозі
   joined-date: Зареєстрований
-  knowledge-tooltip: >-
-    Ви отримуєте «знання», коли проходите етапи, при умові, що етап пройшло щонайменше 100 учнів.
   my-courses: Мої курси
   profile: Профіль
-  reputation-tooltip: >-
-    Ви отримуєте «репутацію», коли учні вирішують ваші етапи, при умові, що етап пройшло щонайменше
-    100 учнів.
+  ranks:
+    title: "{term, select, knowledge {Знання} reputation {Репутація} other {}}"
+    tooltip: >-
+      {term, select,
+        knowledge {Ви отримуєте «знання», коли проходите етапи, при умові, що етап пройшло
+                   щонайменше 100 учнів.}
+        reputation {Ви отримуєте «репутацію», коли учні вирішують ваші етапи, при умові, що етап
+                    пройшло щонайменше 100 учнів.}
+        other {}
+      }
   teaching: Викладання
 quiz:
   correct_ratio: Правильних розв’язків
@@ -1022,8 +1025,3 @@ video-player__no-flash: >-
   можна завантажити за посиланням нижче ⤓
 video__upload-failed: >-
   Помилка завантаження відео. Будь ласка, перевірте, що розмір файлу не більший 200 мегабайтів
-woof_label:
-  alert: Увага
-  info: Інформація
-  success: Успішно
-  warning: Попередження
