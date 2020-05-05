@@ -113,9 +113,9 @@ certificate-editor:
   issue-header: Выпуск сертыфікатаў
   max-points: "Максімальны бал у вашым курсе:"
   minimal-points-distinction: "Балы, якія неабходна набраць для сертыфікату з адзнакай:"
-  minimal-points-regular: "Балы, якія неабходна набраць для <b>звычайнага сертыфікату </b>:"
+  minimal-points-regular: "Балы, якія неабходна набраць для <b>звычайнага сертыфікату</b>:"
   org-header: Лагатып арганізацыі
-  org-label: "Малюнак з празрыстасцю( png), вышыня=150 px"
+  org-label: "Малюнак з празрыстасцю (png), вышыня=150 px"
   org-placeholder: Месца для лагатыпу арганізацыі
   show-distinction: Паказаць сертыфікат з адзнакай
   show-regular: Паказаць звычайны сертыфікат
@@ -201,7 +201,7 @@ common__challenge: Складаная задача
 common__close: Закрыць
 common__close-window: Закрыць вакно
 common__cookies-warn: >-
-  Ваш браўзер не падтрымлівае cookies. Калі ласка, <a data-outward=true target=" _blank"
+  Ваш браўзер не падтрымлівае cookies. Калі ласка, <a target=" _blank" rel="noopener noreferrer"
   href="https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml">уключыце</a>
   cookies у наладах вашага браўзэра.
 common__course: Курс
@@ -894,7 +894,7 @@ lesson__private-warning: >-
   Гэта прыватны ўрок. Патрабуецца адмысловы доступ (напрыклад, спасылка-запрашэнне).
 lesson__private-warning-guest: >-
   Гэта прыватны ўрок. Патрабуецца адмысловы доступ (напрыклад, спасылка-запрашэнне). <a
-  data-outward=true href="{login_link}?next={current_url}">Увайсці ў Stepik!</a>
+  href="{login_link}?next={current_url}">Увайсці ў Stepik!</a>
 lesson__quiz-print-notify: Каб вырашыць гэта заданне адкрыйце
 lesson__report-common: Агульныя справаздачы
 lesson__scores: Ваш / макс бал
@@ -1928,7 +1928,7 @@ user__edit:
     30m: 30 хвілін
     3h: 3 гадзіны
     5m: 5 хвілін
-    6h: "06: 00"
+    6h: 6 гадзін
   upload_pic: Загрузіць
   woof__account-disconnected: Профіль сацыяльнай сеткі адключаны.
   woof__account-disconnected-failed:
@@ -1962,13 +1962,13 @@ video-editor:
   error: >-
     Падчас загрузкі відэа ({video_id}){filename} адбылася памылка. Праверце, што вы загрузілі
     правільны файл.
-  filename: "Імя файла: <b>{filename} </b>"
+  filename: "Імя файла: <b>{filename}</b>"
   help: >-
-    Вы можаце загружаць відэа да 200 Мегабайт. Сціскайце вялікія файлы:<br> <br>1. Выкарыстоўвайце
+    Вы можаце загружаць відэа да 200 Мегабайт. Сціскайце вялікія файлы:<br><br>1. Выкарыстоўвайце
     <tt>ffmpeg</tt> з кодэкам <tt>h. 264</tt>:<br><code>ffmpeg-i INITIAL_VIDEO.mp4-codec: a
     copy-vcodec libx264-preset slow-crf 25 COMPRESSED_VIDEO.mp4</code><br><br>2. Выкарыстоўвайце
     <tt>Avidemux</tt> - бясплатны інструмент, даступны для ўсіх платформаў<br> <br> таксама
-    паглядзіце рэкамендацыі <a href="https://vimeo.com/help/compression" target="_blank " >Vimeo
+    паглядзіце рэкамендацыі <a href="https://vimeo.com/help/compression" target="_blank">Vimeo
     guidelines (English)</a>.
   link-placeholder: Устаўце спасылку на відэа файл (хутчэй за ўсё канчаецца на .mp4)...
   ready: "Відэа ({video_id}){filename} гатова. Вы можаце загрузіць новае відэа."
