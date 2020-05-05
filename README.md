@@ -49,5 +49,5 @@ requiresTranslation(key, locale) {
 
 * Stepik Team (English and Russian translations; Spanish and Chinese rough auto-translation)
 * Андрій Красоткін (Ukrainian translation)
-* @ethnoby team (Belarusian translation)
+* [@ethnoby](https://github.com/ethnoby) team (Belarusian translation)
 * add your name here
