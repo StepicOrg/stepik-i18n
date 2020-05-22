@@ -217,7 +217,7 @@ common__points: "{count, plural, =1 {# Punkt} other {# Punkte}}"
 common__pricing: Meine Bestellung
 common__print: Drucken
 common__problem: Problem
-common__profile: Profile
+common__profile: Profil
 common__reload: Neu laden
 common__reports-expiration: Berichte werden nach 7 Tagen gelöscht
 common__save-button: Speichern
@@ -929,10 +929,10 @@ profile:
   joined-date: Beigetreten
   my-courses: Meine Kurse
   no_courses: Erstellen Sie Ihren ersten Kurs
-  no_courses_link: Kurs wird erstellt
+  no_courses_link: Kurs erstellen
   no_lessons: Erstellen Sie Ihre erste Lektion
-  no_lessons_link: Lektion wird erstellt
-  profile: Profile
+  no_lessons_link: Lektion erstellen
+  profile: Profil
   ranks:
     position: >-
       {pos, selectordinal, other {#.}}
