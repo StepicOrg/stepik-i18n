@@ -126,7 +126,7 @@ comments__post-reply: Надіслати відповідь
 comments__recent-order: Нещодавні
 comments__replies-hide: сховати відповіді
 comments__replies-show: >-
-  {count, plural, few {показати # відповідь} many {показати # відповіді} =1 {показати # відповідей}
+  {count, plural, few {показати # відповідь} many {показати # відповіді} one {показати # відповідей}
   other {показати # відповідей}}
 comments__replies-toggle-tooltip: показати / приховати відповіді до коментаря
 comments__reply: Відповісти
@@ -166,7 +166,7 @@ common__fixed: Відмітити виправленим
 common__fullscreen: Повноекранний режим
 common__hard-deadline: Кінцевий термін виконання
 common__input-length-warn: >-
-  {count, plural, other {мінімум # символу} =1 {мінімум # символ} many {мінімум # символів} few
+  {count, plural, other {мінімум # символу} one {мінімум # символ} many {мінімум # символів} few
   {мінімум # символи}}
 common__lessons: Уроки
 common__link: посилання
@@ -180,7 +180,7 @@ common__my-courses: Мої курси
 common__notifications: Повідомлення
 common__number-sign: №
 common__off: вимкн.
-common__points: "{count, plural, few {# бали} many {# балів} =1 {# бал} other {# бала}}"
+common__points: "{count, plural, few {# бали} many {# балів} one {# бал} other {# бала}}"
 common__print: Друк
 common__problem: Завдання
 common__profile: Профіль
@@ -201,24 +201,21 @@ common__submission-wrong: помилковий
 common__submit: Надіслати
 common__submit_file: Надіслати файл
 common__symbols_left: >-
-  {count, plural, few {залишилося # символи} many {залишилося # символів} =1 {залишився # символ}
+  {count, plural, few {залишилося # символи} many {залишилося # символів} one {залишився # символ}
   other {залишилося # символу}}
 common__time-warn: >-
   Возможно, время на вашем устройстве установлено неправильно. Проверьте настройки даты, времени и
   часового пояса.
 common__unauth-voting: "Щоб голосувати, необхідно ідентифікувати себе."
 common__unsaved-warn: Усі незбережені дані будуть втрачені!
-common__woof-unverified-email:
-  text: Ви не підтвердили адресу вашої електронної поштової скриньки!
-  verify: Будь ласка, підтвердьте
 course-edit__cancel: Повернутися
 course-edit__new-module: Додати Модуль
 course-edit__save: Зберегти зміни
-course-index__authors: "{count, plural, other {Автора} =1 {Автор} many {Авторів} few {Автори}}"
+course-index__authors: "{count, plural, other {Автора} one {Автор} many {Авторів} few {Автори}}"
 course-index__cert: Сертифікат
 course-index__enrolled-msg: Ви записані!
 course-index__instructors: >-
-  {count, plural, other {Викладача} =1 {Викладач} many {Викладачів} few {Викладачі}}
+  {count, plural, other {Викладача} one {Викладач} many {Викладачів} few {Викладачі}}
 course-index__lang: Мова
 course-index__workload: Навантаження
 course-info-edit__add: Додати
@@ -239,7 +236,7 @@ course-syll__ends: Час закінчення
 course-syll__scores: ваш / максимальний бал
 course-syllabus__required-module-message: >-
   {count, plural, few {# бали у модулі {position} ({title})} many {# балів у модулі {position}
-  ({title})} =1 {# бал у модулі {position} ({title})} other {# бала у модулі {position} ({title})}}
+  ({title})} one {# бал у модулі {position} ({title})} other {# бала у модулі {position} ({title})}}
 course-syllabus__required-module-message-percent: "{percent} % балів у модулі {position} ({title})"
 course-syllabus__required-module-message-title: "Умови доступу:"
 course__add-annon: Додати новину
@@ -331,25 +328,28 @@ course__removed-from-favorites-success: >-
   віджеті курсу.
 course__scoreboard-link: Рейтинг
 course__syll-link: Зміст
-deadlines-editor__begin_date_source: Початок модуля
+deadlines-editor:
+  field:
+    beginDateCourse: Час початку курсу
+    beginDateSection: Початок модуля
+    endDateCourse: Час закінчення курсу
+    endDateSection: Час завершення модуля
+    hardDeadlineCourse: кінцевий термін проходження курсу
+    hardDeadlineSection: кінцевий термін проходження модуля
+    softDeadlineCourse: рекомендований термін проходження курсу
+    softDeadlineSection: рекомендований термін проходження модуля
 deadlines-editor__course-deadlines: Терміни проходження курсу за замовчуванням
 deadlines-editor__course-deadlines_tooltip: >-
   Увімкнені терміни проходження курсу за замовчуванням, якщо інших не вказано в налаштуваннях
   модуля.
-deadlines-editor__course_begin_date_source: Час початку курсу
 deadlines-editor__course_begin_date_tooltip: >-
   З цього часу усі учні, які приєдналися до курсу, мають доступ до всіх уроків, включно з
   приватними.
-deadlines-editor__course_end_date_source: Час закінчення курсу
 deadlines-editor__course_end_date_tooltip: >-
   З цього часу відсутній доступ учнів до приватних уроків. Залиште це поле порожнім, щоб учні мали
   доступ.
-deadlines-editor__course_hard_deadline_source: кінцевий термін проходження курсу
-deadlines-editor__course_soft_deadline_source: рекомендований термін проходження курсу
-deadlines-editor__end_date_source: Час завершення модуля
 deadlines-editor__grading_policy_tooltip:
   Спосіб нарахування балів посля закінчення рекомендованого терміну проходження.
-deadlines-editor__hard_deadline_source: кінцевий термін проходження модуля
 deadlines-editor__hard_deadline_tooltip:
   З цього часу відсутнє нарахування учням балів за розв’язки.
 deadlines-editor__section_begin_date_tooltip: >-
@@ -358,7 +358,6 @@ deadlines-editor__section_begin_date_tooltip: >-
 deadlines-editor__section_end_date_tooltip: >-
   З цього часу відсутній доступ учнів до приватних уроків. Залиште це поле порожнім, щоб учні мали
   доступ.
-deadlines-editor__soft_deadline_source: рекомендований термін проходження модуля
 deadlines-editor__soft_deadline_tooltip:
   З цього часу учням буде нараховано менше балів за розв’язок завдань.
 discussions__delete-prompt: Видалити цей коментар?
@@ -370,7 +369,7 @@ exam:
   close-date: Дата закінчення екзамену
   confirm: >-
     {count, plural, other {Ви маєте # хвилини та одну спробу, щоб здати екзамен. Ви справді хочете
-    розпочати?} =1 {Ви маєте # хвилину та одну спробу, щоб здати екзамен. Ви справді хочете
+    розпочати?} one {Ви маєте # хвилину та одну спробу, щоб здати екзамен. Ви справді хочете
     розпочати?} many {Ви маєте # хвилин та одну спробу, щоб здати екзамен. Ви справді хочете
     розпочати?} few {Ви маєте # хвилини та одну спробу, щоб здати екзамен. Ви справді хочете
     розпочати?}}
@@ -378,7 +377,7 @@ exam:
   go-back: До змісту
   header: Екзамен.
   info-head: >-
-    {count, plural, other {Екзамен тривалістю # хвилини} =1 {Екзамен тривалістю # хвилина} many
+    {count, plural, other {Екзамен тривалістю # хвилини} one {Екзамен тривалістю # хвилина} many
     {Екзамен тривалістю # хвилин} few {Екзамен тривалістю # хвилини}}
   info-latest-date: >-
     Рекомендуємо виконання екзаменаційних завдань не пізніше {date}, щоб встигнути здати екзамен.
@@ -391,7 +390,7 @@ exam:
   timer: "до кінця:"
   too-late: Час розв’язку екзаменаційних завдань минув.
 footer__active-count: >-
-  {count, plural, other {<strong>#</strong> активних учня} =1 {<strong>#</strong> активний учень}
+  {count, plural, other {<strong>#</strong> активних учня} one {<strong>#</strong> активний учень}
   many {<strong>#</strong> активних учнів} few {<strong>#</strong> активних учні}}
 footer__active-count-desc: "Учні, які розв’язували задачі протягом останніх 3-х місяців."
 footer__contacts: Контакти
@@ -399,7 +398,7 @@ footer__helpcenter: Допомога
 footer__press: ЗМІ
 footer__pricing: Тарифи
 footer__quiz-count: >-
-  {count, plural, other {<strong>#</strong> задачі} =1 {<strong>#</strong> задача} many
+  {count, plural, other {<strong>#</strong> задачі} one {<strong>#</strong> задача} many
   {<strong>#</strong> задач} few {<strong>#</strong> задачі}}
 footer__quiz-count-desc: Усього завдань та тестів у системі
 footer__team: Команда
@@ -462,7 +461,7 @@ instructor-dashboard:
     pending: без відповіді
     pending-tooltip: Кількість коментарів без відповіді
     plagiarism: >-
-      {count, plural, few {# плагіатів у розв’язках} many {# плагіатів у розв’язках} =1 {# плагіат
+      {count, plural, few {# плагіатів у розв’язках} many {# плагіатів у розв’язках} one {# плагіат
       у розв’язку} other {# плагіату у розв’язках}}
     plagiarism-tooltip: "Кількість розв’язків, відмічених роботом як плагіат."
     quiz-error: Помилка в умовах!!!
@@ -471,7 +470,7 @@ instructor-dashboard:
     quiz-warning-tooltip: >-
       До умов завдання є зауваження. Будь ласка, виправте умови, зважаючи на зауваження.
     reviews-outliers: >-
-      {count, plural, few {# незвичайних рецензій} =1 {# незвичайна рецензія} many {# незвичайних
+      {count, plural, few {# незвичайних рецензій} one {# незвичайна рецензія} many {# незвичайних
       рецензій} other {# незвичних рецензії}}
     reviews-outliers-tooltip: Кількість незвичайних рецензій на цьому етапі.
     submissions: Розв’язки
@@ -579,7 +578,7 @@ notifications__flag-favorite: Вибрані
 notifications__flag-read: Прочитані
 notifications__flag-unread: Непрочитані
 notifications__items-count: >-
-  {count, plural, other {#  повідомлення} =1 {# повідомлення} many {# повідомлень} few {#
+  {count, plural, other {#  повідомлення} one {# повідомлення} many {# повідомлень} few {#
   повідомлення}}
 notifications__mark-all-btn: Позначити усі прочитаними
 notifications__mark-all-confirm: Позначити усі повідомлення прочитаними?
@@ -598,7 +597,7 @@ peer-review__first-step: >-
   <strong>надішліть</strong> розв’язок на рецензію <strong>іншим учням</strong>
 peer-review__fourth-step: >-
   {count, plural, other {<strong>Етап 4 з 4</strong>. Отримано <a href="{url}"># рецензії</a>.
-  Медіана {minimum} результату рецензування: <strong>{result}%</strong>} =1 {<strong>Етап 4 з
+  Медіана {minimum} результату рецензування: <strong>{result}%</strong>} one {<strong>Етап 4 з
   4</strong>. Отримано <a href="{url}"># рецензію</a>. Результат рецензування:
   <strong>{result}%</strong>} many {<strong>Етап 4 з 4</strong>. Отримано <a href="{url}">#
   рецензій</a>. Медіана {minimum} результатів рецензування: <strong>{result}%</strong>} few
@@ -607,21 +606,21 @@ peer-review__fourth-step: >-
 peer-review__nothing: Відсутній розв’язок для цієї рецензії
 peer-review__second-step: >-
   {count, plural, other {<strong>Етап 2 з 4</strong>. Напишіть <strong># рецензії</strong> на
-  розв’язки учнів.} =1 {<strong>Етап 2 з 4</strong>. Напишіть <strong># рецензію</strong> на
+  розв’язки учнів.} one {<strong>Етап 2 з 4</strong>. Напишіть <strong># рецензію</strong> на
   розв’язки учнів.} many {<strong>Етап 2 з 4</strong>. Напишіть <strong># рецензій</strong> на
   розв’язки учнів.} few {<strong>Етап 2 з 4</strong>. Напишіть <strong># рецензії</strong> на
   розв’язки учнів.}}
 peer-review__third-step: >-
   {count, plural, other {<strong>Етап 3 з 4</strong>. Ви написали необхідну кількість рецензій.
   Необхідно отримати <strong># рецензії</strong>, щоб мати необхідну кількість балів. Будь ласка,
-  чекайте.} =1 {<strong>Етап 3 з 4</strong>. Ви написали необхідну кількість рецензій. Необхідно
+  чекайте.} one {<strong>Етап 3 з 4</strong>. Ви написали необхідну кількість рецензій. Необхідно
   отримати <strong># рецензію</strong>, щоб мати необхідну кількість балів. Будь ласка, чекайте.}
   many {<strong>Етап 3 з 4</strong>. Ви написали необхідну кількість рецензій. Необхідно отримати
   <strong># рецензій</strong>, щоб мати необхідну кількість балів. Будь ласка, чекайте.} few
   {<strong>Етап 3 з 4</strong>. Ви написали необхідну кількість рецензій. Необхідно отримати
   <strong># рецензії</strong>, щоб мати необхідну кількість балів. Будь ласка, чекайте.}}
 peer-review__to-give: >-
-  {count, plural, other {Необхідно написати <strong># рецензії.</strong>} =1 {Необхідно написати
+  {count, plural, other {Необхідно написати <strong># рецензії.</strong>} one {Необхідно написати
   <strong># рецензію.</strong>} many {Необхідно написати <strong># рецензій.</strong>} few
   {Необхідно написати <strong># рецензії.</strong>}}
 personal_license__received-activate-instructions: >-

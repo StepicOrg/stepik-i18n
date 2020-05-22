@@ -5,9 +5,9 @@ ARIA:
     course: Navigation Kurs
     lesson: Navigation Lektion
 activity_graph:
-  current_streak: "{count, plural, other {Jetzige Aktivität} =1 {Jetzige Aktivität}}"
-  longest_streak: "{count, plural, other {Längste Aktivität} =1 {Längste Aktivität}}"
-  quiz_count: "{count, plural, other {Aufgaben gelöst} =1 {Aufgaben gelöst}}"
+  current_streak: "{count, plural, other {Jetzige Aktivität} one {Jetzige Aktivität}}"
+  longest_streak: "{count, plural, other {Längste Aktivität} one {Längste Aktivität}}"
+  quiz_count: "{count, plural, other {Aufgaben gelöst} one {Aufgaben gelöst}}"
   steps: Aufgaben gelöst
 adaptive:
   edit:
@@ -123,7 +123,7 @@ certificate-editor:
 certificate-widget:
   distinction: mit Auszeichnung
   goto: Zum Kurs gehen
-  grade: "{count, plural, other {#% fertig} =1 {#% fertig}}"
+  grade: "{count, plural, other {#% fertig} one {#% fertig}}"
   hidden: verborgen
   hide: verbergen
   unhide: nicht mehr verbergen
@@ -156,7 +156,7 @@ comments__pinned-tooltip: dieser Kommentar ist festgemacht (erscheint immer oben
 comments__post-reply: Antwort absenden
 comments__recent-order: Letzte Aktivitäten
 comments__replies-hide: Antworten verbergen
-comments__replies-show: "{count, plural, =1 {# Antworten zeigen} other {# Antworten zeigen}}"
+comments__replies-show: "{count, plural, one {# Antworten zeigen} other {# Antworten zeigen}}"
 comments__replies-toggle-tooltip: Auf- / zuklappenn
 comments__reply: Antworten
 comments__reply-link: Link zu dieser Antwort
@@ -197,7 +197,7 @@ common__feedback-hide: Verbergen
 common__fixed: Als fixiert markieren
 common__fullscreen: Vollbildschirm
 common__hard-deadline: Verbindliche Frist
-common__input-length-warn: "{count, plural, other {Minimum # Zeichen} =1 {Minimum # Zeichen}}"
+common__input-length-warn: "{count, plural, other {Minimum # Zeichen} one {Minimum # Zeichen}}"
 common__lesson: Lektion
 common__lesson-image: Lektione Bild
 common__lessons: Lektionen
@@ -213,7 +213,7 @@ common__notifications: Benachrichtungen
 common__number-sign: Nr.
 common__off: aus
 common__platform-news: Neuigkeiten
-common__points: "{count, plural, =1 {# Punkt} other {# Punkte}}"
+common__points: "{count, plural, one {# Punkt} other {# Punkte}}"
 common__pricing: Meine Bestellung
 common__print: Drucken
 common__problem: Problem
@@ -234,17 +234,14 @@ common__submission-evaluation: Bewertung
 common__submission-wrong: "FALSE"
 common__submit: Senden
 common__submit_file: Datei senden
-common__symbols_left: "{count, plural, =1 {Noch # Zeichen} other {Noch # Zeichen}}"
+common__symbols_left: "{count, plural, one {Noch # Zeichen} other {Noch # Zeichen}}"
 common__symbols_overflow: >-
-  {count, plural, =1 {Limit um  # Zeichen überschritten} other {Limit um # Zeichen überschritten}}
+  {count, plural, one {Limit um  # Zeichen überschritten} other {Limit um # Zeichen überschritten}}
 common__time-warn: >-
   Vielleicht ist die Zeit falsch gesetzt. Bitte überprüfen Sie Tag, Zeit und Zeitzone.
 common__unauth-voting: Zum beurteilen müssen Sie sich einloggen.
 common__unsaved-warn: Alle nicht gespeicherten Änderungen gehen verloren!
 common__userpic: Teilnehmer Bild
-common__woof-unverified-email:
-  text: Ihre eMail Adresse ist nicht verfiziert
-  verify: Verifizieren
 common__woof-wrong: >-
   Fehler - überpüfen Sie bitte Ihre Internetverbindung und versuchen Sie es nochmals.
 copy_link_to_clipboard: Link kopieren
@@ -258,7 +255,7 @@ course:
     description_header: Über den Kurs
     fill_empty: Dieses Feld ist leer; mit Kurseditor ausfüllen.
     hours_to_complete: Vorgegebene Stunden zur Fertigstellung
-    hours_to_complete_text: "{count, plural, =1 {# Stunde} other {# Stunden}}"
+    hours_to_complete_text: "{count, plural, one {# Stunde} other {# Stunden}}"
     instructors_header: Instruktoren
     lang: Sprache
     last_deadline: Letzte Frist
@@ -316,7 +313,6 @@ course-permissions-edit:
   invitations-error-delete: Fehler beim Entfernen eines Einladungslinks
   invitations-title: Einladungen
   label: Benutzer Kennwort oder eMail
-  link-doc: "Dokumentation: Erlaubnisse"
   load-more: Weitere laden
   loading_member: laden ..
   lti-title: IMS LTI 1.1 Integration
@@ -335,7 +331,7 @@ course-syll__ends: Datum Ende
 course-syll__scores: Ihre / maximale Punkte
 course-syllabus__closed-yet: This Modul ist geschlossen
 course-syllabus__required-module-message: >-
-  {count, plural, =1 { # Punkt im Modul {position} ({title})} other {# Punkte im Modul {position}
+  {count, plural, one {# Punkt im Modul {position} ({title})} other {# Punkte im Modul {position}
   ({title})}}
 course-syllabus__required-module-message-percent:
   "{percent}% der Punkte im Modul {position} ({title})"
@@ -458,25 +454,27 @@ course__reviews:
   user-rated-as: "Bewerted:"
 course__scoreboard-link: Anzeigetafel
 course__syll-link: Lehrplan
-deadlines-editor__begin_date_source: Modul Starttermin
+deadlines-editor:
+  field:
+    beginDateCourse: Kurs Starttermin
+    beginDateSection: Modul Starttermin
+    endDateCourse: Endtermin
+    endDateSection: Modul Endtermin
+    hardDeadlineCourse: Äußerste Frist für diesen Kurs
+    hardDeadlineSection: module hard deadline
+    softDeadlineCourse: Frist für diesen Kurs
+    softDeadlineSection: Modulfrist
 deadlines-editor__course-deadlines: Kurs Standardfristen
 deadlines-editor__course-deadlines_tooltip:
   In Ordnung falls keine anderen Fristen im Modul gesetzt wurden
-deadlines-editor__course_begin_date_source: Kurs Starttermin
 deadlines-editor__course_begin_date_tooltip: Starttermin für registrierte Nutzer
-deadlines-editor__course_end_date_source: Endtermin
 deadlines-editor__course_end_date_tooltip:
   Termin zu dem der Kurs geschlossen wird (kann freigelassen werden)
-deadlines-editor__course_hard_deadline_source: Äußerste Frist für diesen Kurs
-deadlines-editor__course_soft_deadline_source: Frist für diesen Kurs
-deadlines-editor__end_date_source: Modul Endtermin
 deadlines-editor__grading_policy_tooltip: Notenvergabe - in Abhängig von (äußersten) Fristen
-deadlines-editor__hard_deadline_source: module hard deadline
 deadlines-editor__hard_deadline_tooltip: "Äußerste Frist: bei keiner Vergabe für einzelne Schritte"
 deadlines-editor__section_begin_date_tooltip: Modulstarttermin für registrierte Nutzer
 deadlines-editor__section_end_date_tooltip:
   Termin zu dem das Modul geschlossen wird (kann freigelassen werden)
-deadlines-editor__soft_deadline_source: Modulfrist
 deadlines-editor__soft_deadline_tooltip: "Frist: bei keiner Vergabe für einzelne Schritte"
 discussions__delete-prompt: Diesen Kommentar löschen?
 discussions__none: Noch keine Diskussionen. Beginnen Sie eine!
@@ -487,12 +485,12 @@ exam:
   close-date: Klausur endet
   confirm: >-
     {count, plural, other {Sie haben nur # Minuten und nur einen Versuch. Wollen Sie die Klausur
-    beginnen?} =1 {Sie haben nur # Minute und nur einen Versuch. Wollen Sie die Klausur beginnen?}}
+    beginnen?} one {Sie haben nur # Minute und nur einen Versuch. Wollen Sie die Klausur beginnen?}}
   game-over: Die Klausur ist beendet.
   go-back: Zum Studienplan
   header: Der Examen Modus ist aktiv.
   info-head: >-
-    {count, plural, other {Sie werden # Minuten für diese Klausur haben} =1 {Sie werden # Minute
+    {count, plural, other {Sie werden # Minuten für diese Klausur haben} one {Sie werden # Minute
     für diese Klausur haben}}
   info-latest-date: "Sie sollten nicht später als {date} beginnen um rechtzeitig fertig zu werden"
   info-paragraph: Sie werden nur einen Versuch haben
@@ -519,7 +517,7 @@ footer__CC_note: >-
   required
 footer__about: Über Stepik
 footer__active-count: >-
-  {count, plural, other {<strong>#</strong> aktive Lernende} =1 {<strong>#</strong> aktive
+  {count, plural, other {<strong>#</strong> aktive Lernende} one {<strong>#</strong> aktive
   Lernende}}
 footer__active-count-desc: >-
   Individuelle aktive Nutzer, die während der letzten drei Monate Aufgaben bearbeiteten
@@ -528,7 +526,7 @@ footer__helpcenter: Hilfezentrale
 footer__press: Presse
 footer__pricing: Preise
 footer__quiz-count: >-
-  {count, plural, other {<strong>#</strong> Probleme} =1 {<strong>#</strong> Probleme}}
+  {count, plural, other {<strong>#</strong> Probleme}}
 footer__quiz-count-desc: Anzahl Probleme auf der Plattform
 footer__submissions-count: "<strong>{count, number}</strong> Einreichungen"
 footer__submissions-count-desc: Anzahl der Einreichung auf der Plattform
@@ -599,13 +597,13 @@ instructor-dashboard:
     pending: "offen "
     pending-tooltip: Kommentare ohne Antworten
     plagiarism: >-
-      {count, plural, =1 {# plagiasierte Beiträge} other {# plagiarisierte Beiträge}}
+      {count, plural, one {# plagiasierte Beiträge} other {# plagiarisierte Beiträge}}
     plagiarism-tooltip: "Anzahl der Beiträge, die vom System als plagiasiert markiert wurden."
     quiz-error: Fehler im Schritt!
     quiz-error-tooltip: "In diesem Schritt gibt es Fehler, Lernende können diese nicht lösen."
     quiz-warning: Warnung für diesen Schritt
     quiz-warning-tooltip: "In diesem Schritt gibt es Warnungen, Sie sollten diese nun auflösen."
-    reviews-outliers: "{count, plural, =1 {# Review Ausreisser} other {# Review Ausreisser}}"
+    reviews-outliers: "{count, plural, one {# Review Ausreisser} other {# Review Ausreisser}}"
     reviews-outliers-tooltip: "Anzahl der Reviews, die vom System als Ausreisser markiert wurden."
     submissions: Beiträge
     success-rate: Erfolgsrate
@@ -740,7 +738,7 @@ notifications__events-link: Meine Aktivitäten
 notifications__flag-favorite: Favoriten
 notifications__flag-read: Gelesen
 notifications__flag-unread: Gelesen aufheben
-notifications__items-count: "{count, plural, other {# Items} =1 {# Item }}"
+notifications__items-count: "{count, plural, other {# Items} one {# Item}}"
 notifications__mark-all-btn: Alles als gelesen marken
 notifications__mark-all-confirm: Alles Benachrichtigungen als gelesen markieren?
 notifications__mark-fav: Zu Favoriten
@@ -757,11 +755,11 @@ org:
   avatar_img_alt: Logo der Organisation
   courses_tab: Kurse
   created_courses_count:
-    "{count, plural, other {# Kurse veröffentlicht} =1 {# Kurs veröffentlicht}}"
-  created_lessons_count: "{count, plural, other {# Lektionen erstellt} =1 {# Lektion erstellt}}"
+    "{count, plural, other {# Kurse veröffentlicht} one {# Kurs veröffentlicht}}"
+  created_lessons_count: "{count, plural, other {# Lektionen erstellt} one {# Lektion erstellt}}"
   edit_profile: Profil ändern
   issued_certificates_count: >-
-    {count, plural, other {# Zertifikate ausgestellt} =1 {# Zertifikat ausgestellt}}
+    {count, plural, other {# Zertifikate ausgestellt} one {# Zertifikat ausgestellt}}
   lessons_tab: Lektionen
   no_courses: Keine Kurse gefunden
   no_lessons: Keinen Lektionen gefunden
@@ -770,21 +768,21 @@ peer-review__first-step: >-
   Beiträge an andere Studenten zum Review<strong>senden</strong> students</strong> for review
 peer-review__fourth-step: >-
   {count, plural, other {<strong>Stufe 4 von 4</strong>. Sie erhielten <a href="{url}">#
-  Reviews</a>. Das Resultat ist der Median von {minimum} Reviews: <strong>{result}%</strong>} =1
+  Reviews</a>. Das Resultat ist der Median von {minimum} Reviews: <strong>{result}%</strong>} one
   {<strong>Stufe 4 von 4</strong>. Sie erhielten einen <a href="{url}"># review</a>. Resultat:
   <strong>{result}%</strong>}}
 peer-review__nothing: Keine Beiträge für Review
 peer-review__second-step: >-
   {count, plural, other {<strong>Stufe 2 von 4</strong>. Führen Sie <strong># Reviews</strong> für
-  andere Lernende durch} =1 {<strong>Stage 2 out of 4</strong>. Führen Sie einen <strong>#
+  andere Lernende durch} one {<strong>Stage 2 out of 4</strong>. Führen Sie einen <strong>#
   Review</strong> für andere Lernende durch}}
 peer-review__third-step: >-
   {count, plural, other {<strong>Stufe 3 von 4</strong>. Sie haben Reviews abgegeben. Sie müssen
-  <strong># Reviews erhalten</strong> um Punkte zu bekommen} =1 {<strong>Stufe 3 von 4</strong>.
+  <strong># Reviews erhalten</strong> um Punkte zu bekommen} one {<strong>Stufe 3 von 4</strong>.
   Sie haben Reviews abgegeben. Sie müssen einen <strong># Review erhalten</strong> um Punkte zu
   bekommen}}
 peer-review__to-give: >-
-  {count, plural, other {Noch <strong># Reviews</strong> } =1 {Noch <strong># Review</strong> }}
+  {count, plural, other {Noch <strong># Reviews</strong> } one {Noch <strong># Review</strong> }}
 plans:
   ask_questions: >-
     Als Sie Fragen haben, schreiben Sie uns einen E-Mail <a
@@ -798,24 +796,13 @@ plans:
   discount_valid: "Ihr Ermäßigung endet bei {discount_end}."
   fail: Registrieren war nicht erfolgreich
   free:
-    another_plans: >-
-      Um einen privaten Kurse zu kreieren, <a href="https://welcome.stepik.org/en/pricing">siehe
-      Abonnementpläne</a>.
-    max_courses: Sie können keine private Kurse kreieren.
     support: Reguläre Kundenbetreuung.
-  login_req: Log in um Ihnen Plan überprüfen
   max_public_courses: Sie können eine unlimitierte Anzahl von den öffentlichen Kursen kreieren.
   next_payment: "Nächste Zahlung {price} am {payment_date}."
-  other_plans: >-
-    Sie können <a href="https://welcome.stepik.org/en/pricing">anderen Planen versuchen</a>.
-  sub_title: "Der Aktuelle Tarifplan ist <strong>{plan_name}</strong>. Mit diesem Plan:"
-  subscribe: Registrieren
+  stripe:
+    button: "{trial, select, true {Kostenlos testen} other {Abonnieren}}"
   success: Erfolgreich registriert
-  title: Kreieren Sie private Kurse
   unsubscribe: absagen
-  unsubscribe_description1: "Sie können auch der aktuellen Plan "
-  unsubscribe_description2: >-
-    , oder den <a href="https://welcome.stepik.org/en/pricing">anderen Planen versuchen</a>.
 platform-news__title: Was es auf der Plattform Neues gibt
 plugin__admin: Linux Aufgabe
 plugin__admin-description: Remote Server konfigurieren
@@ -913,7 +900,7 @@ plugins:
       Die richtige Antwort kann den Textstring an irgend einer Position haben. Beispielsweise ist
       'beste Zeit' ein Teilstring von 'Es war die beste Zeit, es war die schlechteste Zeit'
 plugins__show_more: >-
-  {count, plural, =1 {+ # zusätzliche Schrittarten} other {+ # zusätzliche Schrittarten}}
+  {count, plural, one {+ # zusätzliche Schrittarten} other {+ # zusätzliche Schrittarten}}
 profile:
   activity: Aktivität
   all_courses: Alle Kurse
@@ -1201,7 +1188,7 @@ step__next-tooltip: Nächster Schritt
 step__not-ready-warn: >-
   Tut uns leid - diese Aufgabe ist noch nicht fertig<br/>Problem Status "{status}".
 step__submissions-left: >-
-  {count, plural, =1 {(Sie haben noch # Einreichung)} other {(Sie haben noch # Einreichungen)}}
+  {count, plural, one {(Sie haben noch # Einreichung)} other {(Sie haben noch # Einreichungen)}}
 step__submissions-no-left: Sie haben keine Versuche
 submissions:
   review-filter:

@@ -202,22 +202,24 @@ course__join-fail: "不能参加此课程（错误代码：{status}）。请尝�
 course__news-link: 新闻
 course__scoreboard-link: 记分牌
 course__syll-link: 教学大纲
-deadlines-editor__begin_date_source: 模块开放日期
+deadlines-editor:
+  field:
+    beginDateCourse: 当然，开放日期
+    beginDateSection: 模块开放日期
+    endDateCourse: 当然结束日期
+    endDateSection: 模块结束日期
+    hardDeadlineCourse: 当然硬期限
+    hardDeadlineSection: 模块硬期限
+    softDeadlineCourse: 当然软截止时间
+    softDeadlineSection: 模块软截止时间
 deadlines-editor__course-deadlines: 当然默认的最后期限
 deadlines-editor__course-deadlines_tooltip: 如果其他期限未在模块设置中指定工作
-deadlines-editor__course_begin_date_source: 当然，开放日期
 deadlines-editor__course_begin_date_tooltip: 开放日期：在课程开始为登记用户。
-deadlines-editor__course_end_date_source: 当然结束日期
 deadlines-editor__course_end_date_tooltip: 关闭日期：当课程将被禁用（截止日期通常是空）。
-deadlines-editor__course_hard_deadline_source: 当然硬期限
-deadlines-editor__course_soft_deadline_source: 当然软截止时间
-deadlines-editor__end_date_source: 模块结束日期
 deadlines-editor__grading_policy_tooltip: 分级政策 - 如何软硬最后期限之间降低成本。
-deadlines-editor__hard_deadline_source: 模块硬期限
 deadlines-editor__hard_deadline_tooltip: 硬截止时间：在每一步的成本将为零。
 deadlines-editor__section_begin_date_tooltip: 开放日期：当模块开始为登记用户。
 deadlines-editor__section_end_date_tooltip: 关闭日期：当模块将被禁用（截止日期通常是空）。
-deadlines-editor__soft_deadline_source: 模块软截止时间
 deadlines-editor__soft_deadline_tooltip: 软截止时间：在每一步的成本也随之降低。
 discussions__delete-prompt: 删除此评论吗？
 discussions__none: 没有讨论。随意启动一台。

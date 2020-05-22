@@ -7,19 +7,19 @@ ARIA:
 activity_graph:
   current_streak: >-
     {count, plural,
-      =1 {Дзень без перапынку}
+      one {Дзень без перапынку}
       few {Дні без перапынку}
       other {Дзён без перапынку}
     }
   longest_streak: >-
     {count, plural,
-      =1 {Дзень без перапынку (макс.)}
+      one {Дзень без перапынку (макс.)}
       few {Дні без перапынку (макс.)}
       other {Дзён без перапынку (макс.)}
     }
   quiz_count: >-
     {count, plural,
-      =1 {Задача вырашана}
+      one {Задача вырашана}
       few {Задачы вырашана}
       other {Задач вырашана}
     }
@@ -74,7 +74,6 @@ announcement-show:
     will_end: "Рассылка скончыцца: "
     will_start: "Рассылка пачнецца: "
 announcement__default-template: Стандартны шаблон
-attachments__list-attach-file: Далучыць файл
 attachments__list-delete-attachment-tooltip: Выдаліць
 attachments__list-open-attachment-tooltip: Адкрыць
 attachments__list-title: Файлы
@@ -128,16 +127,13 @@ certificate-widget:
   distinction: Сертыфікат з адзнакай
   goto: Перайсці да курсу
   grade: >-
-    {count, plural, other {# % пройдзена} many {# % пройдзена} few {# % пройдзена} =1 {# %
-    пройдзены}}
+    {count, plural, one {#% пройдзены} other {#% пройдзена}}
   hidden: Схаваны
   hide: Схаваць
   page_url: Адкрыць старонку сертыфікату
   result:
     students-count: >-
-      {count, plural, =1 {Вынік лепш, чым у # навучэнца курсу} few {Вынік лепш, чым у # навучэнцаў
-      курсу} many {Вынік лепш, чым у # навучэнцаў курсу} other {Вынік лепш, чым у # навучэнцаў
-      курсу}}
+      Вынік лепш, чым у {count, plural, one {# навучэнца} other {# навучэнцаў}} курсу
   unhide: Паказваць усім
   visibility__settings-failed: Не атрымалася захаваць налады прыватнасці сертыфікату.
   visibility__settings-success: Налады прыватнасці сертыфіката паспяхова захаваныя.
@@ -219,8 +215,7 @@ common__fullscreen: Поўнаэкранны рэжым
 common__hard-deadline: Жорсткі дэдлайн
 common__hour: гадз
 common__input-length-warn: >-
-  {count, plural, other {Мінімум # сімвала} =1 {Мінімум # сімвал} many {Мінімум # сімвалаў} few
-  {Мінімум # сімвала}}
+  Мінімум {count, plural, one {# сімвал} few {# сімвала} other {# сімвалаў}}
 common__lesson: Урок
 common__lesson-image: Малюнак уроку
 common__lessons: Урокі
@@ -236,11 +231,11 @@ common__my-courses: Мае курсы
 common__notifications: Апавяшчэнні
 common__number-sign: " №"
 common__off: выкл.
-common__out-of-points: "{count, plural, =1 {# балa} few {# балаў} many {# балаў} other {# балаў}}"
+common__out-of-points: "{count, plural, one {# балa} other {# балаў}}"
 common__platform-news: Што новага
-common__points: "{count, plural, =1 {# бал} few {# бала} many {# балаў} other {# бала}}"
+common__points: "{count, plural, one {# бал} few {# бала} other {# балаў}}"
 common__points-received:
-  "{count, plural, =1 {атрыманы} few {атрымана} many {атрымана} other {атрымана}}"
+  "{count, plural, one {атрыманы} other {атрымана}}"
 common__pricing: Мае падпіскі
 common__print: Друк
 common__problem: Задача
@@ -256,8 +251,8 @@ common__settings: Налады
 common__soft-deadline: Мяккі дэдлайн
 common__step: Крок
 common__step-passed: >-
-  {count, plural, =1 {пройдзены} few {пройдзена} many {пройдзена} other {пройдзена}}
-common__steps: "{count, plural, =1 {# крокі} few {# крокаў} many {# крокаў} other {# крокі}}"
+  {count, plural, one {пройдзены} other {пройдзена}}
+common__steps: "{count, plural, one {# крокі} other {# крокаў}}"
 common__submission: Рашэнне
 common__submission-correct: слушна
 common__submission-evaluation: у апрацоўцы
@@ -266,10 +261,14 @@ common__submission-wrong: Няслушна
 common__submit: Адправіць
 common__submit_file: Адправіць файл
 common__symbols_left: >-
-  {count, plural, =1 {застаўся # сімвал} few {засталося # сімвала} many {засталося # сімвалаў}
-  other {засталося # сімвалы}}
+  {count, plural,
+    one {застаўся # сімвал}
+    few {засталося # сімвала}
+    many {засталося # сімвалаў}
+    other {засталося # сімвалы}
+  }
 common__symbols_overflow: >-
-  {count, plural, =1 {Рэкамендаваны памер перабольшаны на # сімвал} few {Рэкамендаваны памер
+  {count, plural, one {Рэкамендаваны памер перабольшаны на # сімвал} few {Рэкамендаваны памер
   перабольшаны на # сімвалы} many {Рэкамендаваны памер перабольшаны на # сімвалаў} other
   {Рэкамендаваны памер перабольшаны на # сімвалы}}
 common__time-warn: >-
@@ -328,7 +327,7 @@ course:
     fill_empty: "Поле не запоўнена. Калі ласка, запоўніце яго ў рэдактары курсу."
     hours_to_complete: Час праходжання курсу
     hours_to_complete_text: >-
-      {count, plural, =1 {# гадзіна} few {# гадзіны} many {# гадзін} other {# гадзіны}}
+      {count, plural, one {# гадзіна} few {# гадзіны} many {# гадзін} other {# гадзіны}}
     instructors_header: Выкладчыкі
     lang: Мова
     last_deadline: Апошні дэдлайн
@@ -369,11 +368,11 @@ course-grade-book:
   total: Вынік
   user: Карыстальнік
 course-index__authors: >-
-  {count, plural, other {Стваральнікі} =1 {Стваральнікі} many {Стваральнікі} few {Стваральнікі}}
+  {count, plural, =1 {Стваральнік} other {Стваральнікі}}
 course-index__cert: Сертыфікат
 course-index__enrolled-msg: Вы запісаныя!
 course-index__instructors: >-
-  {count, plural, other {Выкладчыкі} =1 {Выкладчык} many {Выкладчыкі} few {Выкладчыкі}}
+  {count, plural, =1 {Выкладчык} other {Выкладчыкі}}
 course-index__lang: Мова
 course-index__workload: Нагрузка
 course-info-edit__add: Дадаць
@@ -404,7 +403,7 @@ course-syll__ends: Дата сканчэння
 course-syll__scores: ваш / макс бал
 course-syllabus__closed-yet: Гэты модуль закрыты
 course-syllabus__required-module-message: >-
-  {count, plural, other {# балаў у модулі {position} ({title})} =1 {# бал у модулі {position}
+  {count, plural, other {# балаў у модулі {position} ({title})} one {# бал у модулі {position}
   ({title})} many {# балаў у модулі {position} ({title})} few {# бала ў модулі {position}
   ({title})}}
 course-syllabus__required-module-message-percent: "{percent}% балаў у модулі {position} ({title})"
@@ -538,33 +537,6 @@ course_cannot_buy-button: Купля недаступная
 course_cannot_buy-warn: "Немагчыма купіць курс, напішыце нам на support@stepik.org"
 course_payment_not_ready-warn: >-
   Плата не завершана, калі ў вас ёсць пытанні, звярніцеся ў падтрымку support@stepik.org
-deadlines-editor__begin_date_source: дата адкрыцця модуля
-deadlines-editor__course-deadlines: Дэдлайны курса па змоўчанні
-deadlines-editor__course-deadlines_tooltip: "Працуюць, калі іншае не паказана ў наладах модуля"
-deadlines-editor__course_begin_date_source: дата адкрыцця курса
-deadlines-editor__course_begin_date_tooltip: >-
-  З гэтага моманту ўсім студэнтам, запісаным на курс, будуць даступныя ўсе ўрокі, у тым ліку
-  прыватныя.
-deadlines-editor__course_end_date_source: дата закрыцця курса
-deadlines-editor__course_end_date_tooltip: >-
-  У гэты момант студэнты страцяць доступ да прыватных урокаў. Пакіньце гэта поле пустым, калі не
-  плануеце хаваць урокі
-deadlines-editor__course_hard_deadline_source: жорсткі дэдлайн курса
-deadlines-editor__course_soft_deadline_source: мяккі дэдлайн курса
-deadlines-editor__end_date_source: дата закрыцця модуля
-deadlines-editor__grading_policy_tooltip: Спосаб налічэння балаў пасля мяккага дэдлайну.
-deadlines-editor__hard_deadline_source: жорсткі дэдлайн модуля
-deadlines-editor__hard_deadline_tooltip: >-
-  Пачынаючы з гэтага моманту, студэнты не будуць атрымліваць балы за рашэнні заданняў
-deadlines-editor__section_begin_date_tooltip: >-
-  З гэтага моманту ўсім студэнтам, запісаным на курс, будуць даступныя ўсе ўрокі, у тым ліку
-  прыватныя.
-deadlines-editor__section_end_date_tooltip: >-
-  У гэты момант студэнты страцяць доступ да прыватных урокаў. Пакіньце гэта поле пустым, калі не
-  плануеце хаваць урокі
-deadlines-editor__soft_deadline_source: мяккі дэдлайн модуля
-deadlines-editor__soft_deadline_tooltip: >-
-  Пачынаючы з гэтага моманту, студэнты будуць атрымліваць менш балаў за рашэнне заданняў
 discussions__delete-prompt: Выдаліць гэты каментар?
 discussions__edit-disc-button: Змяніць каментар
 discussions__none: Няма абмеркаванняў. Пачніце першае.
@@ -585,14 +557,14 @@ exam:
     {count, plural, other {У вас ёсць # хвіліны і адзіная спроба каб здаць экзамен. Вы ўпэўнены што
     хочаце пачаць?} many {У вас ёсць # хвілінаў і адзіная спроба каб здаць экзамен. Вы ўпэўнены што
     хочаце пачаць?} few {У вас ёсць # хвіліны і адзіная спроба каб здаць экзамен. Вы ўпэўнены што
-    хочаце пачаць?} =1 {У вас ёсць # хвіліна і адзіная спроба каб здаць экзамен. Вы ўпэўнены што
+    хочаце пачаць?} one {У вас ёсць # хвіліна і адзіная спроба каб здаць экзамен. Вы ўпэўнены што
     хочаце пачаць?}}
   game-over: Экзамен скончаны
   go-back: Да зместу
   header: Вы ў рэжыме экзамену. Паспейце вырашыць заданні з модуля за адведзены час
   info-head: >-
     {count, plural, other {Гэта экзаменацыйны модуль на # хвіліны} many {Гэта экзаменацыйны модуль
-    на # хвілінаў} few {Гэта экзаменацыйны модуль на # хвіліны} =1 {Гэта экзаменацыйны модуль на #
+    на # хвілінаў} few {Гэта экзаменацыйны модуль на # хвіліны} one {Гэта экзаменацыйны модуль на #
     хвіліну}}
   info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
   info-paragraph: У вас будзе адна спроба на праходжанне экзамену.
@@ -619,7 +591,7 @@ footer__CC_note: >-
   указаннем аўтарства
 footer__about: Пра нас
 footer__active-count: >-
-  {count, plural, other {<strong>#</strong> актыўных навучэнцаў} =1 {<strong>#</strong> актыўны
+  {count, plural, other {<strong>#</strong> актыўных навучэнцаў} one {<strong>#</strong> актыўны
   навучэнец} many {<strong>#</strong> актыўных навучэнцаў} few {<strong>#</strong> актыўных
   навучэнцаў}}
 footer__active-count-desc: >-
@@ -630,7 +602,7 @@ footer__press: Для прэсы
 footer__pricing: Тарыфы
 footer__quiz-count: >-
   {count, plural,
-    =1 {<strong>#</strong> заданне}
+    one {<strong>#</strong> заданне}
     few {<strong>#</strong> заданні}
     many {<strong>#</strong> заданняў}
     other {<strong>#</strong> заданні}
@@ -690,13 +662,13 @@ instruction_urgent:
   btn_expl: Ацэнка будзе разлічана на падставе ўжо атрыманых рэцэнзій
   fail: "Не атрымалася завяршыць рэцэнзаванне, паспрабуйце пазней"
   finished_expl: >-
-    {count, plural, =1 {Вынік: {percentage}%. Па ініцыятыве выкладчыка ацэнка была разлічана на
+    {count, plural, one {Вынік: {percentage}%. Па ініцыятыве выкладчыка ацэнка была разлічана на
     падставе # рэцэнзіі {date}} few {Вынік: {percentage}%. Па ініцыятыве выкладчыка ацэнка была
     разлічана на падставе # рэцэнзій {date}} many {Вынік: {percentage}%. Па ініцыятыве выкладчыка
     ацэнка была разлічана на падставе # рэцэнзій {date}} other {Вынік: {percentage}%. Па ініцыятыве
     выкладчыка ацэнка была разлічана на падставе # рэцэнзій {date}}}
   note: >-
-    {count, plural, =1 {Для аўтаматычнага завяршэння бракуе яшчэ # рэцэнзіі.} few {Для
+    {count, plural, one {Для аўтаматычнага завяршэння бракуе яшчэ # рэцэнзіі.} few {Для
     аўтаматычнага завяршэння бракуе яшчэ # рэцэнзій.} many {Для аўтаматычнага завяршэння бракуе
     яшчэ # рэцэнзій.} other {Для аўтаматычнага завяршэння бракуе яшчэ # рэцэнзій.}}
   success: Рэцэнзаванне завершана
@@ -725,7 +697,7 @@ instructor-dashboard:
     pending: без адказу
     pending-tooltip: Колькасць каментароў без адказу
     plagiarism: >-
-      {count, plural, =1 {# плагіят у рашэннях} few {# плагіяту ў рашэннях} many {# плагіятаў у
+      {count, plural, one {# плагіят у рашэннях} few {# плагіяту ў рашэннях} many {# плагіятаў у
       рашэннях} other {# плагіятаў у рашэннях}}
     plagiarism-tooltip: "Колькасць рашэнняў, пазначаных робатам як плагіят."
     quiz-error: Памылка ва ўмове!!!
@@ -755,13 +727,13 @@ klass:
   dismiss-student__error: "Не атрымалася адлічыць студэнта {name}"
   edit: Рэдагаваць
   error-leave: Не атрымалася пакінуць клас
-  gradebook: Глядзець ацэнкі класа
-  gradebook-subpage: Ацэнкі і рашэнні
-  gradebook_link: Перайсці на старонку ацэнак
+  gradebook:
+    link: Ацэнкі
+    report-create: Сфармаваць
+    report-loading: У працэсе
+    report-update: Абнавіць
+    subpage: Ацэнкі і рашэнні
   header: Клас
-  index-subpage: Інфармацыя пра клас
-  inivtation_link_descr: Для запрашэння студэнтаў у клас дашліце ім гэтую спасылку
-  invitation_link: Спасылка для запрашэння студэнтаў
   leave: Пакінуць клас
   students: Студэнты класа
   students-subpage: Студэнты класа
@@ -842,7 +814,6 @@ lesson-end:
   next_unit_p2: з гэтага курса будзе даступны
   next_unit_p3: >-
     Для адкрыцця модуля "{next_module}" трэба набраць у модулі "{required_module}"
-  not_enought_score: "На жаль, вы набралі недастатковую колькасць балаў."
   or_enroll: ці запісацца на
   other_courses: іншыя курсы
   to_congrats_header_course: "Віншуем! Вы завяршылі курс:"
@@ -970,7 +941,7 @@ notifications__flag-favorite: Абраныя
 notifications__flag-read: Прачытаныя
 notifications__flag-unread: Непрачытаныя
 notifications__items-count: >-
-  {count, plural, other {# апавяшчэнні} =1 {# апавяшчэнне} many {# апавяшчэнняў} few {#
+  {count, plural, other {# апавяшчэнні} one {# апавяшчэнне} many {# апавяшчэнняў} few {#
   апавяшчэнні}}
 notifications__mark-all-btn: Адзначыць усе як прачытаныя
 notifications__mark-all-confirm: Адзначыць усе апавяшчэнні як прачытаныя?
@@ -989,14 +960,14 @@ org:
   courses_tab: Курсы
   created_courses_count: >-
     {count, plural, other {# курсы апублікаваныя} many {# курсаў апублікавана} few {# курсы
-    апублікаваныя} =1 {# курс апублікаваны}}
+    апублікаваныя} one {# курс апублікаваны}}
   created_lessons_count: >-
-    {count, plural, other {# урокі створана} many {# урокаў створана} few {# урокі створана} =1 {#
+    {count, plural, other {# урокі створана} many {# урокаў створана} few {# урокі створана} one {#
     урок створаны}}
   edit_profile: Налады профілю
   issued_certificates_count: >-
     {count, plural, other {# сертыфіката выпушчана} many {# сертыфікатаў выпушчана} few {#
-    сертыфікаты выпушчана} =1 {# сертыфікат выпушчаны}}
+    сертыфікаты выпушчана} one {# сертыфікат выпушчаны}}
   klasses_tab: Класы
   lessons_tab: Урокі
   mailing_tab: Рассылкі
@@ -1008,7 +979,7 @@ peer-review__first-step: >-
   <strong>адпраўце</strong> лепшае рашэнне на рэцэнзію <strong>іншым вучням</strong>
 peer-review__fourth-step: >-
   {count, plural, other {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзій</a>.
-  Вынік па медыяне {minimum} рэцэнзій: <strong>{result}%</strong>} =1 {<strong>Этап 4 з 4</strong>.
+  Вынік па медыяне {minimum} рэцэнзій: <strong>{result}%</strong>} one {<strong>Этап 4 з 4</strong>.
   Атрымана <a href="{url}"># рэцэнзія</a>. Вынік рэцэнзавання: <strong>{result}%</strong>} many
   {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзій</a>. Вынік па медыяне {minimum}
   рэцэнзій: <strong>{result}%</strong>} few {<strong>Этап 4 з 4</strong>. Атрымана <a
@@ -1016,19 +987,19 @@ peer-review__fourth-step: >-
 peer-review__nothing: Пакуль няма рашэнняў для рэцэнзіі
 peer-review__second-step: >-
   {count, plural, other {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзій</strong> на
-  рашэнні іншых вучняў} =1 {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзію</strong> на
+  рашэнні іншых вучняў} one {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзію</strong> на
   рашэнні іншых вучняў} many {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзій</strong> на
   рашэнні іншых вучняў} few {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзіі</strong> на
   рашэнні іншых вучняў}}
 peer-review__third-step: >-
   {count, plural, other {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць
-  <strong># рэцэнзій</strong> для атрымання балаў. Пачакайце} =1 {<strong>Этап 3 з 4</strong>. Вы
+  <strong># рэцэнзій</strong> для атрымання балаў. Пачакайце} one {<strong>Этап 3 з 4</strong>. Вы
   далі свае рэцэнзіі. Засталося атрымаць <strong># рэцэнзію</strong> для атрымання балаў.
   Пачакайце} many {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць <strong>#
   рэцэнзій</strong> для атрымання балаў. Пачакайце} few {<strong>Этап 3 з 4</strong>. Вы далі свае
   рэцэнзіі. Засталося атрымаць <strong># рэцэнзіі</strong> для атрымання балаў. Пачакайце}}
 peer-review__to-give: >-
-  {count, plural, other {Засталося зрабіць <strong># рэцэнзій</strong>} =1 {Засталося зрабіць
+  {count, plural, other {Засталося зрабіць <strong># рэцэнзій</strong>} one {Засталося зрабіць
   <strong># рэцэнзію</strong>} many {Засталося зрабіць <strong># рэцэнзій</strong>} few {Засталося
   адправіць <strong># рэцэнзіі</strong>}}
 personal_license__received-activate-instructions: >-
@@ -1042,41 +1013,6 @@ personal_license__received-description: >-
 personal_license__received-introduction: >-
   Мы заўважылі, што вы нядаўна вырашылі цяжкае заданне на Stepik, віншуем! Таму, мы дорым вам ключ
   для актывацыі адукацыйнай ліцэнзіі для любога асяроддзя распрацоўкі ад JetBrains IDE:
-plans:
-  ask_questions: >-
-    Калі ў вас ёсць пытанні, напішыце нам на <a href="mailto:info@stepik.org">info@stepik.org</a>.
-  better_support: Палепшаная тэхпадтрымка.
-  card:
-    change: змяніць
-    confirm: Ужыць
-    description: Прывязаць новую карту
-  connected_card: "Прывязаная карта: ****{card}"
-  discount_valid: "Вашая зніжка сканчаецца {discount_end}"
-  fail: Не атрымалася падпісацца
-  free:
-    another_plans: >-
-      Для стварэння прыватных курсаў <a href='https://welcome.stepik.org/ru/pricing'>аформіце
-      падпіску</a>.
-    max_courses: Няма магчымасці ствараць прыватныя курсы.
-    support: Стандартная тэхпадтрымка.
-  login_req: "Увайдзіце, каб падпісацца"
-  max_public_courses: Можна ствараць неабмежаваную колькасць адкрытых курсаў.
-  next_payment: "Наступны плацёж {price} будзе спісаны {payment_date}."
-  not_found: >-
-    Тарыфны план не знойдзены. Калі ласка, зверніцеся ў службу падтрымкі support@stepik.org па
-    карэктную спасылку.
-  other_plans: >-
-    Інфармацыя пра іншыя <a href="https://welcome.stepik.org/ru/pricing">тарыфныя планы</a>.
-  sub_title: >-
-    Цяпер у вас тарыфны план <strong>{plan_name}</strong>. У дадзеным тарыфным плане:
-  subscribe: Падпісацца
-  success: Паспяховая падпіска
-  title: Стварайце прыватныя анлайн-курсы
-  unsubscribe: адпісацца
-  unsubscribe_description1: "Вы можаце "
-  unsubscribe_description2:
-    ' ад бягучага плана ці паглядзець інфармацыю пра іншыя <a
-    href="https://welcome.stepik.org/ru/pricing">тарыфныя планы</a>.'
 platform-news__title: Навіны Stepik
 plugin__admin: Заданне на Linux
 plugin__admin-description: Наладзьце выдалены сервер
@@ -1495,7 +1431,7 @@ plugins:
   utils:
     parse-decimal-not-number: "Поле '{field}' павінна быць лікам."
 plugins__show_more: >-
-  {count, plural, =1 {+ яшчэ # тып кроку} few {+ яшчэ # тыпы кроку} many {+ яшчэ # тыпаў кроку}
+  {count, plural, one {+ яшчэ # тып кроку} few {+ яшчэ # тыпы кроку} many {+ яшчэ # тыпаў кроку}
   other {+ яшчэ # тыпаў кроку}}
 profile:
   activity: Актыўнасць за апошні год
@@ -1748,7 +1684,7 @@ step__next-tooltip: Наступны крок
 step__not-found: "Крок № {position} не быў знойдзены."
 step__not-ready-warn: 'Выбачайце, гэтая задача яшчэ не гатовая.<br/>Статус задачы:"{status}".'
 step__submissions-left: >-
-  {count, plural, =1 {(засталася # спроба)} few {(засталіся # спробы)} many {(засталося # спробаў)}
+  {count, plural, one {(засталася # спроба)} few {(засталіся # спробы)} many {(засталося # спробаў)}
   other {(засталося # спробаў)}}
 step__submissions-no-left: У вас не засталося спробаў
 step__templates:
@@ -1822,10 +1758,8 @@ syllabus_edit:
         Пачынаючы з гэтага моманту, студэнты не будуць атрымліваць балы за рашэнне задач
       section_soft_deadline: >-
         пачынаючы з гэтага моманту, студэнты будуць атрымліваць менш балаў за рашэнне задач
-  lesson_added: Урок паспяхова дададзены ў курс
   page-subtitle: Рэдагаванне раскладу
   saved_msg: Курс паспяхова захаваны
-  section_added: Модуль паспяхова дададзены ў курс
   zero_sections: >-
     У курсе пакуль няма ніводнага ўрока.<br>Стварыце першы модуль, каб дадаць ўрокі
 time:
@@ -1839,10 +1773,10 @@ toc__progress:
     end_course: Да заканчэння курса засталося
   remaining:
     get: >-
-      {count, plural, =1 {Атрымаць <span>#</span> бал} few {Атрымаць <span>#</span> бала} many
+      {count, plural, one {Атрымаць <span>#</span> бал} few {Атрымаць <span>#</span> бала} many
       {Атрымаць <span>#</span> балаў} other {Атрымаць <span>#</span> балаў}}
     learn: >-
-      {count, plural, =1 {Вучыцца <span>#</span> гадзіну} few {Вучыцца <span>#</span> гадзіны} many
+      {count, plural, one {Вучыцца <span>#</span> гадзіну} few {Вучыцца <span>#</span> гадзіны} many
       {Вучыцца <span>#</span> гадзін} other {Вучыцца <span>#</span> гадзін}}
   title: Прагрэс па курсе
 unit_edit:
@@ -1853,7 +1787,7 @@ unit_edit:
   title_placeholder: "Калі ласка, увядзіце назву новага ўрока і націсніце Enter."
 user-subscribe:
   has-followers: >-
-    {count, plural, =1 {У вас # падпісант} few {У вас # падпісчыкі} many {У вас # падпісчыкаў}
+    {count, plural, one {У вас # падпісант} few {У вас # падпісчыкі} many {У вас # падпісчыкаў}
     other {У вас # падпісчыкаў}}
   subscribe: Падпісацца
   subscribe-process: Падпісваем…

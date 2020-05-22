@@ -5,10 +5,10 @@ ARIA:
     course: Course navigation
     lesson: Lesson navigation
 activity_graph:
-  current_streak: "{count, plural, other {current streak} =1 {current streak}}"
+  current_streak: "{count, plural, other {current streak}}"
   info: "Next day will be at 00:00 UTC"
-  longest_streak: "{count, plural, other {longest streak} =1 {longest streak}}"
-  quiz_count: "{count, plural, other {problems solved} =1 {problem solved}}"
+  longest_streak: "{count, plural, other {longest streak}}"
+  quiz_count: "{count, plural, one {problem solved} other {problems solved}}"
   steps: problems solved
 adaptive:
   edit:
@@ -100,6 +100,7 @@ certificate-editor:
     regular: >-
       Learners will receive certificates automatically when they reach <b>{regular}</b> for regular
       certificate.
+  display-score: Display score in certificate
   download-distinction: Download certificate with distinction
   download-regular: Download regular certificate
   header: Certificate settings
@@ -138,22 +139,20 @@ certificate-page:
     last-change: >-
       Attention! After this change, you will no longer be able to change the name.
     prompt: >-
-      {count, plural, =1 {Attention! You can change the certificate recipient name only once! Enter
-      name:} other {Attention! You can change the certificate recipient name only # times! Enter
-      name:}}
+      Attention! You can change the certificate recipient name only
+      {count, plural, =1 {once!} other {# times!}} Enter name:
     success: The certificate recipient name has been changed.
     title: Edit recipient name
 certificate-widget:
   distinction: With distinction
   goto: Go to course
-  grade: "{count, plural, other {#% done} =1 {#% done}}"
+  grade: "{count, plural, other {#% done}}"
   hidden: Hidden
   hide: Hide
   page_url: Open certificate page
   result:
     students-count: >-
-      {count, plural, =1 {The result is better than # course learner} other {The result is better
-      than # course learners}}
+      The result is better than {count, plural, one {# course learner} other {# course learners}}
   unhide: Unhide
   visibility__settings-failed: An error occurred during updating certificate privacy settings.
   visibility__settings-success: Privacy settings for certificate successfully saved.
@@ -200,7 +199,7 @@ comments__pinned-tooltip: this comment is pinned (will be always on top)
 comments__post-reply: Post reply
 comments__recent-order: Recent activity
 comments__replies-hide: hide replies
-comments__replies-show: "{count, plural, =1 {show # reply} other {show # replies}}"
+comments__replies-show: "show {count, plural, one {# reply} other {# replies}}"
 comments__replies-toggle-tooltip: hide / show replies
 comments__reply: Reply
 comments__reply-link: link to this reply
@@ -213,8 +212,8 @@ comments__submissions: Submissions
 comments__submissions-tooltip: submissions by author of this comment
 comments__submit-error: Can't post your comment =(
 comments__teacher-badge: Course staff
-comments__thread-default: "{count, plural, =1 {Comment} other {Comments} =0 {Comments}}"
-comments__thread-solutions: "{count, plural, =1 {Solution} other {Solutions} =0 {Solutions}}"
+comments__thread-default: "{count, plural, =0 {Comments} =1 {Comment} other {Comments}}"
+comments__thread-solutions: "{count, plural, =0 {Solutions} =1 {Solution} other {Solutions}}"
 comments__unpin: Unpin
 comments__unpin-tooltip: show comment in regular order (not pinned)
 comments__without-submissions: You should solve the problem to leave a solution
@@ -226,6 +225,9 @@ common:
 common__activity: Activity
 common__back-link: Back
 common__back-to-step-link: Back to step
+common__banner-unverified-email: >-
+  Your email is not verified.
+  Please <a href="/edit-profile/email">verify</a> to continue using Stepik.
 common__catalog: Catalog
 common__certificate: Certificate
 common__certificate-distinction: Certificate with distinction
@@ -253,7 +255,7 @@ common__fixed: Mark as fixed
 common__fullscreen: Fullscreen
 common__hard-deadline: Hard deadline
 common__hour: h
-common__input-length-warn: "{count, plural, other {# characters minimum} =1 {# character minimum}}"
+common__input-length-warn: "{count, plural, one {# character} other {# characters}} minimum"
 common__learner: Learner
 common__lesson: Lesson
 common__lesson-image: Lesson image
@@ -270,10 +272,10 @@ common__my-courses: My courses
 common__notifications: Notifications
 common__number-sign: "#"
 common__off: "off"
-common__out-of-points: "{count, plural, =1 {# point} other {# points}}"
+common__out-of-points: "{count, plural, one {# point} other {# points}}"
 common__platform-news: What's new
-common__points: "{count, plural, =1 {# point} other {# points}}"
-common__points-received: "{count, plural, =1 {received} other {received}}"
+common__points: "{count, plural, one {# point} other {# points}}"
+common__points-received: "{count, plural, other {received}}"
 common__pricing: My subscription plan
 common__print: Print
 common__problem: Problem
@@ -289,8 +291,8 @@ common__settings: Settings
 common__soft-deadline: Soft deadline
 common__statement: Statement
 common__step: Step
-common__step-passed: "{count, plural, =1 {passed} other {passed}}"
-common__steps: "{count, plural, =1 {# step} other {# steps}}"
+common__step-passed: "{count, plural, other {passed}}"
+common__steps: "{count, plural, one {# step} other {# steps}}"
 common__submission: Submission
 common__submission-correct: correct
 common__submission-evaluation: evaluation
@@ -299,9 +301,9 @@ common__submission-settled: received
 common__submission-wrong: wrong
 common__submit: Submit
 common__submit_file: Submit file
-common__symbols_left: "{count, plural, =1 {# symbol left} other {# symbols left}}"
+common__symbols_left: "{count, plural, one {# symbol} other {# symbols}} left"
 common__symbols_overflow: >-
-  {count, plural, =1 {limit exceeded by # symbol} other {limit exceeded by # symbols}}
+  limit exceeded by {count, plural, one {# symbol} other {# symbols}}
 common__time-warn: >-
   Perhaps the timezone or time on your device is set wrongly. Please check your timezone, date and
   time.
@@ -309,9 +311,6 @@ common__unauth-voting: You should login for voting.
 common__unsaved-warn: All unsaved changes will be lost!
 common__update: Update
 common__userpic: User picture
-common__woof-unverified-email:
-  text: Your email is not verified!
-  verify: Verify
 common__woof-wrong: Something went wrong. Check your internet connection and try again.
 content_advices:
   action:
@@ -366,14 +365,13 @@ cost:
     inverse-desc: Points are awarded less with each next attempt
   fold: Collapse
   for-submission: per submission
-  get: "{count, plural, =1 {# point} other {# points}}"
+  get: "{count, plural, one {# point} other {# points}}"
   max: Maximum
   more: More details
   restriction-extra: >-
-    {count, plural, =1 {Submissions are not made after # attempt} other {Submissions are not made
-    after # attempts}}
+    Submissions are not made after {count, plural, one {# attempt} other {# attempts}}
   submissions-left: >-
-    {count, plural, =1 {Only <strong>#</strong> attempt} other {Only <strong>#</strong> attempts}}
+    Only {count, plural, one {<strong>#</strong> attempt} other {<strong>#</strong> attempts}}
 course:
   draft: Draft
   edit-btns:
@@ -391,7 +389,7 @@ course:
     description_header: About the course
     fill_empty: This field is empty. Please use the course editor to fill it in.
     hours_to_complete: Expected time to complete
-    hours_to_complete_text: "{count, plural, =1 {# hour} other {# hours}}"
+    hours_to_complete_text: "{count, plural, one {# hour} other {# hours}}"
     instructors_header: Instructors
     lang: Language
     last_deadline: Last deadline
@@ -461,8 +459,7 @@ course-assessments:
   submission-link: Solutions
   tab-caption: Instructor reviews
   title: >-
-    {count, plural, =1 {# solution is waiting for review} other {# solutions are waiting for
-    review}}
+    {count, plural, one {# solution is} other {# solutions are}} waiting for review
 course-edit__back: Back to Course
 course-edit__cancel: Back
 course-edit__new-module: New module
@@ -497,10 +494,10 @@ course-grade-book-cell:
   no-submissions: No submissions
   success: "Correct submission, has already scored"
   wrong: Wrong submissions only
-course-index__authors: "{count, plural, other {Authors} =1 {Author}}"
+course-index__authors: "{count, plural, =1 {Author} other {Authors}}"
 course-index__cert: Certificate
 course-index__enrolled-msg: You are enrolled!
-course-index__instructors: "{count, plural, other {Instructors} =1 {Instructor}}"
+course-index__instructors: "{count, plural, =1 {Instructor} other {Instructors}}"
 course-index__lang: Language
 course-index__workload: Workload
 course-info-edit__add: Add
@@ -526,7 +523,8 @@ course-new:
   note:
     paid: "Learners need to pay for this course. Base price:"
     tariff: >-
-      You'll create a Basic course. You can always upgrade to Pro for more handy features.
+      You'll create a draft of the Basic course. You can always upgrade to PRO for more handy
+      features.
   teaching-landing:
     features:
       "0": "An online course editor and a place for your course in our catalog"
@@ -544,7 +542,9 @@ course-new:
       "9": External grader
     features-header: Share knowledge with Stepik
     form:
-      note: "You'll create a Basic course. You can always upgrade to Pro for more handy features."
+      note: >-
+        You'll create a draft of the Basic course. You can always upgrade to PRO for more handy
+        features.
       submit: Create course
       title-placeholder: Course title
     header: Teach with Stepik
@@ -577,6 +577,12 @@ course-permissions-edit:
     description: open for everyone
     label: Public course
   can: can
+  course-state:
+    change: Change
+    draft: The course has <b>not been published</b> and is only available to the course team now.
+    paid: The course is available for the price of <b>{price}</b>.
+    private: The course has been published and is only available through <b>invitations</b>.
+    public: The course has been published and is available <b>for everyone</b>.
   group:
     admins: admin
     assistants: assistant
@@ -607,7 +613,6 @@ course-permissions-edit:
   invitations-title: Invitations
   label: User ID or email
   learners-limit: Up to 1000 students can take a PRO course.
-  link-doc: "Documentation: Permissions"
   load-more: Load more
   loading_member: load..
   lti-title: IMS LTI 1.1 Integration
@@ -617,6 +622,16 @@ course-permissions-edit:
   members-error-already-exists: "{username} has already been added"
   members-error-delete: Error removing user
   members-success-add: User successfully added
+  more-about-rights: >-
+    More about {groupName, select,
+      admins {admin}
+      assistants {assistant}
+      learners {learner}
+      moderators {moderator}
+      teachers {teacher}
+      testers {tester}
+      other {}
+    } rights
   no-edit-label: Can not access rights management.
   personal-testers-note: >-
     Testers will not have access to the content when your course has "Only for course team" access
@@ -638,12 +653,12 @@ course-promo:
   course-includes: "This course contains:"
   course-includes-aside:
     challenges: >-
-      {count, plural, =1 {<b>#</b> interactive challenge} other {<b>#</b> interactive challenges}}
+      {count, plural, one {<b>#</b> interactive challenge} other {<b>#</b> interactive challenges}}
     header: This course includes
-    lessons: "{count, plural, =1 {<b>#</b> lesson} other {<b>#</b> lessons}}"
-    quizzes: "{count, plural, =1 {<b>#</b> quiz} other {<b>#</b> quizzes}}"
+    lessons: "{count, plural, one {<b>#</b> lesson} other {<b>#</b> lessons}}"
+    quizzes: "{count, plural, one {<b>#</b> quiz} other {<b>#</b> quizzes}}"
     video: >-
-      {count, plural, =1 {<b>#</b> hour of video} other {<b>#</b> hours of video}}
+      {count, plural, one {<b>#</b> hour} other {<b>#</b> hours}} of video
   course-price: Price
   demo: Demo access
   head-widgets:
@@ -658,12 +673,12 @@ course-promo:
       normal: Intermediate Level
   how-you-will-learn: How you will learn
   meet-instructors: Meet the Instructors
-  read-all-reviews: "{count, plural, =1 {Read # review} other {Read all # reviews}}"
-  reviews: "{count, plural, =1 {# review} other {# reviews}}"
+  read-all-reviews: "Read {count, plural, one {# review} other {all # reviews}}"
+  reviews: "{count, plural, one {# review} other {# reviews}}"
   share-course: Share this course
   share-course-direct-link: "Direct link:"
   student-reviews: Learners' reviews
-  students: "{count, plural, =1 {# learner} other {# learners}}"
+  students: "{count, plural, one {# learner} other {# learners}}"
   what-you-will-get: What you will get
   what-you-will-learn: What you will learn
   who-is-this-course-for: Who is this course for
@@ -672,6 +687,11 @@ course-settings:
     text: Learn more about PRO courses
     url: "https://welcome.stepik.org/en/pricing"
   cancel: Cancel
+  convert-into-paid: Convert this course into a paid one
+  convert-into-paid-description: >-
+    You can
+    <a href="https://support.stepik.org/hc/en-us/sections/360003326714" target="_blank">convert
+    this course into paid</a> and accept course payments directly through Stepik.
   course-access:
     enabled: Open for enrollment
     not-enabled: Visible for course team only
@@ -684,11 +704,15 @@ course-settings:
       <time>July 1, 2020</time>. Upgrade your course to PRO before that or adjust course settings
       according to the basic plan to keep it published.
     title: Course type
-  owner-limit-note:
-    text: >-
-      <p>Ask <b>{ownerName}</b> to upgrade the course to PRO.</p>
-      <p>Or contact us at support@stepik.org
-      to become primary admin and include the course into your subscription.</p>
+  disabled-no-rights: Only the course administrators can change these settings.
+  disabled-not-owner:
+    To receive extended rights please contact <a href="{ownerURL}">{ownerName}</a>.
+  owner-limit-note: >-
+    <p>Ask <b>{ownerName}</b> to upgrade the course to PRO.</p>
+    <p>Or contact us at support@stepik.org
+    to become primary admin and include the course into your subscription.</p>
+  price-title: Course price — {price}
+  promocode-editor-title: Promo codes
   save: Apply changes
   save-error-woof: Save failed.
   save-success-woof: Saved.
@@ -700,8 +724,7 @@ course-syll__ends: Close date
 course-syll__scores: your / max score
 course-syllabus__closed-yet: This module is closed
 course-syllabus__required-module-message: >-
-  {count, plural, =1 {score # point in module {position} ({title})} other {score # points in module
-  {position} ({title})}}
+  score {count, plural, one {# point} other {# points}} in module {position} ({title})
 course-syllabus__required-module-message-percent:
   "{percent}% of points in module {position} ({title})"
 course-syllabus__required-module-message-title: "Open condition:"
@@ -761,13 +784,13 @@ course__buy: Buy
 course__buy-button: "Buy for {price}"
 course__buy-form:
   add-email: You can add primary email
+  error:
+    not-allowed-promo: The promo code is invalid
   here: here
   pay-button: Pay
-  pay-button-promo: "Pay with promo code: {promo}"
+  pay-button-promo: "Pay with promo code «{promo}»"
+  pay-button-without-promo: Pay without a promo code
   price-label: Price
-  price-promo-desc: >-
-    (basic price, the promo code <strong>{promo}</strong> will also be activated upon purchase, the
-    final price will be shown on the payment page)
   primary-email-notice: >-
     You will receive a confirmation of the payment on this email. You can change it in the profile
     settings.
@@ -827,6 +850,7 @@ course__join-fail: "Can't join this course (error code: {status}). Try to reload
 course__learn-now: You can learn right away
 course__menu: Menu
 course__news-link: News
+course__publish: Publish
 course__remove-from-archived-link: Remove from archived
 course__remove-from-favorites-link: Remove from favorites
 course__removed-from-archived-fail: Can't remove course from archived. Please reload this page.
@@ -877,11 +901,12 @@ course__syll-link: Syllabus
 course__try-free-button: Try for free
 course__unsaved-confirm-text: "You've edited the course, but didn't save it.<br>Save changes?"
 course__waiting-review: >-
-  {count, plural, =1 {# solution is waiting for review} other {# solutions are waiting for review}}
+  {count, plural, one {# solution is} other {# solutions are}} waiting for review
 course_cannot_buy-already: Course already purchased
 course_cannot_buy-button: Purchase unavailable
-course_cannot_buy-warn:
-  "Purchase unavailable for this course, you can write us: support@stepik.org"
+course_cannot_buy-warn: >-
+  Purchase unavailable for this course, you can write us: <a
+  href="mailto:support@stepik.org">support@stepik.org</a>
 course_finder:
   query_placeholder: Course search (by name or ID)
 course_payment_not_ready-warn: >-
@@ -891,31 +916,99 @@ course_payment_success-msg: >-
   we will enroll you to the course. If the enrollment has not occurred within 24 hours please write
   to us: support@stepik.org.
 course_payment_success-woof: Congratulations! You are successfully enrolled to course.
+deadlines-editor:
+  errors:
+    beginDateCourse: >-
+      {type, select,
+        after-end-date {The start of the course must come before its end}
+        after-soft-deadline {The start of the course must come before the soft deadline}
+        after-hard-deadline {The start of the course must come before the hard deadline}
+        other {}
+      }
+    beginDateSection: >-
+      {type, select,
+        after-end-date {The start of the module must come before its end}
+        before-begin-date-course {The start of the module must come after the start of the course}
+        after-soft-deadline {The start of the module must come before soft deadline}
+        after-hard-deadline {The start of the module must come before hard deadline}
+        other {}
+      }
+    endDateCourse: >-
+      {type, select,
+        before-begin-date {The end of the course must come after its start}
+        before-soft-deadline {The end of the course must come after the soft deadline}
+        before-hard-deadline {The end of the course must come after the hard deadline}
+        other {}
+      }
+    endDateSection: >-
+      {type, select,
+        after-end-date-course {The end of the module must come before the end of the course}
+        before-soft-deadline {The end of the module must come after soft deadline}
+        before-hard-deadline {The end of the module must come after hard deadline}
+        other {}
+      }
+    hardDeadlineCourse: >-
+      {type, select,
+        equal-begin-end-date {Hard deadline must come after the start of the course
+                              and before its end}
+        before-begin-date {Hard deadline must come after the start of the course}
+        after-end-date {Hard deadline must come after the start of the course}
+        before-soft-deadline {Hard deadline of the module must come after the soft one}
+        other {}
+      }
+    hardDeadlineSection: >-
+      {type, select,
+        equal-begin-end-date {Hard deadline must come after the start of the module
+                              and before its end}
+        before-begin-date {Hard deadline must come after the start of the module}
+        after-end-date {Hard deadline must come before the end of the module}
+        before-soft-deadline {Hard deadline of the module must come after the soft one}
+        other {}
+      }
+    softDeadlineCourse: >-
+      {type, select,
+        after-hard-deadline {Soft deadline must come before the hard one}
+        equal-begin-end-date {Soft deadline must come after the start of the course
+                              and before its end}
+        before-begin-date {Soft deadline must come after the start of the course}
+        after-end-date {Soft deadline must come before the end of the course }
+        other {}
+      }
+    softDeadlineSection: >-
+      {type, select,
+        after-hard-deadline {Soft deadline of the module must come before the hard one}
+        equal-begin-end-date {Soft deadline must come after the start of the module
+                              and before its end}
+        before-begin-date {Soft deadline must come after the start of the module}
+        after-end-date {Soft deadline must come before the end of the module}
+        other {}
+      }
+  field:
+    beginDateCourse: course open date
+    beginDateSection: module open date
+    endDateCourse: course close date
+    endDateSection: module close date
+    hardDeadlineCourse: course hard deadline
+    hardDeadlineSection: module hard deadline
+    softDeadlineCourse: course soft deadline
+    softDeadlineSection: module soft deadline
 deadlines-editor__advanced-settings: Advanced settings
 deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Upgrade to {planTitle}</a>, to apply advanced settings.
-deadlines-editor__begin_date_source: module open date
 deadlines-editor__course-deadlines: Course default deadlines
 deadlines-editor__course-deadlines_tooltip:
   Works if other deadlines are not specified in module settings
-deadlines-editor__course_begin_date_source: course open date
 deadlines-editor__course_begin_date_tooltip:
   "Open date: when the course starts for enrolled users."
-deadlines-editor__course_end_date_source: course close date
 deadlines-editor__course_end_date_tooltip: >-
   Close date: when the course will be disabled (close date is usually left empty).
-deadlines-editor__course_hard_deadline_source: course hard deadline
-deadlines-editor__course_soft_deadline_source: course soft deadline
-deadlines-editor__end_date_source: module close date
 deadlines-editor__grading_policy_tooltip:
   Grading policy - how to decrease cost between soft and hard deadlines.
-deadlines-editor__hard_deadline_source: module hard deadline
 deadlines-editor__hard_deadline_tooltip: "Hard deadline: when the cost of every step will be zero."
 deadlines-editor__section_begin_date_tooltip:
   "Open date: when the module starts for enrolled users."
 deadlines-editor__section_end_date_tooltip: >-
   Close date: when the module will be disabled (close date is usually left empty).
-deadlines-editor__soft_deadline_source: module soft deadline
 deadlines-editor__soft_deadline_tooltip:
   "Soft deadline: when the cost of every step will be reduced."
 discussions__delete-prompt: Delete this comment?
@@ -1006,9 +1099,8 @@ exam:
   check-proctor-session: Check proctor session
   close-date: Exam session ends
   confirm: >-
-    {count, plural, other {You will have # minutes and only one attempt to complete the exam. Are
-    you sure you want to start the exam?} =1 {You will have # minute and only one attempt to
-    complete the exam. Are you sure you want to start the exam?}}
+    You will have {count, plural, one {# minute} other {# minutes}} and only one attempt
+    to complete the exam. Are you sure you want to start the exam?
   finish-prematurely:
     btn: Finish prematurely
     confirm-no: "No, continue to solve"
@@ -1019,8 +1111,7 @@ exam:
   go-back: Go to syllabus
   header: Exam is active.
   info-head: >-
-    {count, plural, other {You will have # minutes to finish the exam} =1 {You will have # minute
-    to finish the exam}}
+    You will have {count, plural, one {# minute} other {# minutes}} to finish the exam
   info-latest-date: "You should start no later than {date} to finish in time."
   info-paragraph: You will only have 1 attempt.
   is_exam_without_progress: You won't see the grades.
@@ -1049,8 +1140,10 @@ footer__CC_note: >-
   noreferrer">CC BY-SA 4.0</a> license with attribution required
 footer__about: About Stepik
 footer__active-count: >-
-  {count, plural, other {<strong>#</strong> active learners} =1 {<strong>#</strong> active
-  learners}}
+  {count, plural,
+    one {<strong>#</strong> active learner}
+    other {<strong>#</strong> active learners}
+  }
 footer__active-count-desc: >-
   Unique registered users being actively learning and solving exercises during the last 3 months
 footer__contacts: Contacts
@@ -1059,13 +1152,10 @@ footer__helpcenter: Help Center
 footer__press: Press
 footer__pricing: Pricing
 footer__quiz-count: >-
-  {count, plural, other {<strong>#</strong> problems} =1 {<strong>#</strong> problems}}
+  {count, plural, one {<strong>#</strong> problem} other {<strong>#</strong> problems}}
 footer__quiz-count-desc: Number of problems on Stepik
 footer__submissions-count: >-
-  <strong>{count, number}</strong> {count, plural,
-    =1 {submission}
-    other {submissions}
-  }
+  <strong>{count, number}</strong> {count, plural, one {submission} other {submissions}}
 footer__submissions-count-desc: Number of submissions on Stepik
 footer__team: Team
 footer__terms_and_privacy: >-
@@ -1079,7 +1169,7 @@ history:
   show-history: Show history
 import-lessons:
   btn-caption: >-
-    {count, plural, =0 {Upload the csv file} other {Upload the csv file (max. #)}}
+    {size, select, 0 {Attach csv file} other {Attach csv file (max. {size})}}
   example: >-
     text|What is the radius of the Earth?|_||option|6371 kilometers|y||option|148.6 million
     kilometers|n||text|What Was Einstein's
@@ -1099,8 +1189,11 @@ instr-review__student-third-step: >-
   <strong>Stage 3 out of 3</strong>. You got <a href="{url}">review</a> from instructor. Result:
   <strong>{result}%</strong>
 instr-review__teacher-notice: >-
-  {count, plural, =1 {<b>Review # submission</b>, learners will receive points} other {<b>Review #
-  submissions</b>, learners will receive points} =0 {All reviews have been sent.}}
+  {count, plural,
+    =0 {All reviews have been sent.}
+    one {<b>Review # submission</b>, learners will receive points}
+    other {<b>Review # submissions</b>, learners will receive points}
+  }
 instr-review__teacher-start: Start review
 instruction__add-rubric-button: Add new rubric
 instruction__delete: Remove reviewing
@@ -1137,12 +1230,11 @@ instruction_urgent:
   btn_expl: Score will be given based on reviews received at the moment.
   fail: "Failed to finish review, try again later"
   finished_expl: >-
-    {count, plural, =1 {Review result: {percentage}%. At the initiative of the instructor score was
-    given based on single review {date}.} other {Review result: {percentage}%. At the initiative of
-    the instructor score was given based on # reviews {date}.}}
+    Review result: {percentage}%. At the initiative of the instructor score was given based on
+    {count, plural, =1 {single review} other {# reviews}} {date}.
   note: >-
-    {count, plural, =1 {Points will be given automatically after # more review received.} other
-    {Points will be given automatically after # more reviews received.}}
+    Points will be given automatically after
+    {count, plural, one {# more review} other {# more reviews}} received.
   success: Reviewing finished
 instructor-dashboard:
   info: "There are probably some issues with steps below:"
@@ -1175,7 +1267,7 @@ instructor-dashboard:
     pending-reviews-sessions-tooltip: Count of pending reviews.
     pending-tooltip: Comments with no replies
     plagiarism: >-
-      {count, plural, =1 {# plagiarized submission} other {# plagiarized submissions}}
+      {count, plural, one {# plagiarized submission} other {# plagiarized submissions}}
     plagiarism-tooltip: Count of submissions that marked as plagiarized by robot.
     quiz-error: Step error!!!
     quiz-error-tooltip: >-
@@ -1183,7 +1275,7 @@ instructor-dashboard:
     quiz-warning: Step warning!
     quiz-warning-tooltip: There are some warnings in step itself. You'd better resolve them.
     reviews: Reviews
-    reviews-outliers: "{count, plural, =1 {# reviews outlier} other {# reviews outliers}}"
+    reviews-outliers: "{count, plural, one {# reviews outlier} other {# reviews outliers}}"
     reviews-outliers-tooltip: Count of reviews that marked as outliers by robot.
     submissions: Submissions
     success-rate: success rate
@@ -1234,8 +1326,7 @@ invitations-modal:
   title: "Sending invitations to the {group} group"
   try-again: Try again.
   unique-emails: >-
-    {count, plural, =1 {Recognized # unique email address} other {Recognized # unique email
-    addresses}}
+    Recognized {count, plural, one {# unique email address} other {# unique email addresses}}
 invite_friends_subtitle: Let your friends become classmates on Stepik.
 invite_friends_title: Invite a friend
 klass:
@@ -1245,29 +1336,46 @@ klass:
   add-assistant__placeholder: ""
   add-assistant__success: Assistant successfully added
   assistants: Class assistants
-  assistants-subpage: Class assistants
+  assistants-subpage: Assistants
   course: Course
   dismiss-assistant__confirm: "Are you sure you want to remove assistant {name}?"
   dismiss-assistant__error: "Could not remove assistant {name}"
+  dismiss-student-confirm:
+    cancel: No, cancel
+    confirm: Yes, dismiss
+    text: >-
+      <h4>Dismiss {name} from class?</h4>
+      <p>{name} will continue learning the course, but you will lose access to his submissions and
+      scores in the class.</p>
+  dismiss-student-success: "{name} has been dismissed from the class"
   dismiss-student__confirm: "Are you sure you want to dismiss {name}?"
   dismiss-student__error: "Could not dismiss learner {name}"
   edit: Edit
   error-leave: Could not leave class
-  gradebook: Show gradebook for class
-  gradebook-subpage: Gradebook & Submissions
-  gradebook_link: Go to gradebook page
+  gradebook:
+    download: "Download gradebook of <b>{readyDate, date, medium-datetime}</b>"
+    link: Gradebook
+    report-create: Create report
+    report-loading: Report generating
+    report-update: Update report
+    subpage: Gradebook & Submissions
   header: Class
-  index-subpage: Class info
-  inivtation_link_descr: Share this link with your learners to invite them
-  invitation_link: Invitation link
+  invite-students: "To invite students to the class, send them this link:"
+  invite-students-copy-link: Copy link
   leave: Leave class
   students: Class learners
-  students-subpage: Class learners
+  students-list-empty: No one's enrolled in the class yet
+  students-subpage: Learners
   submissions: Show submissions for class
 klass-edit:
   cancel: Cancel
   delete: Delete class
   delete-confirm: Are you sure you want to delete current class?
+  delete-confirm-modal:
+    cancel: No, cancel
+    confirm: Yes, delete
+    text: >-
+      Are you sure you want to delete the «<b>{name}</b>» class?
   deleted: Class deleted
   description: Class description
   error-on-delete: Something went wrong. Can't delete current class.
@@ -1342,12 +1450,17 @@ lesson-end:
   enroll: enroll in
   enroll_for_lessons: the course to view other lessons
   lesson_finished: You have just finished the lesson
+  next-required-section:
+    back-btn: Back to problems
+    syllabus-btn: Go to syllabus
   next_unit_is_exam: is exam. You can start your Exam from syllabus section.
   next_unit_p1: Next module
   next_unit_p2: from this course will be available at
   next_unit_p3: >-
-    To open a module "{next_module}" you need to score in module "{required_module}"
-  not_enought_score: "Unfortunately, you did not score enough points."
+    To open a module "{next_module}" you need to solve quizzes in module "{required_module}"
+    and score <b>{score, plural, one {# point} other {# points}}</b>.
+  not_enough_score: >-
+    Get {count, plural, one {# more point} other {# more points}} to open the next module
   or_enroll: or enroll to
   other_courses: other courses
   to_congrats_header_course: "Congratulations, you finished course"
@@ -1401,9 +1514,8 @@ lesson__quiz-print-notify: To solve this problem please visit
 lesson__report-common: Common reports
 lesson__scores: your / max score
 lesson__section-requirement-warning: >-
-  {count, plural, =1 {Get <strong>#</strong> point in the "<strong>{section_title}</strong>" module
-  ({percent}%) to open this lesson.} other {Get <strong>#</strong> points in the
-  "<strong>{section_title}</strong>" module ({percent}%) to open this lesson.}}
+  Get {count, plural, one {<strong>#</strong> point} other {<strong>#</strong> points}}
+  in the "<strong>{section_title}</strong>" module ({percent}%) to open this lesson.
 lesson__settings: Settings
 lesson__statement: Statement
 lesson__step-title: "Step {position}"
@@ -1536,13 +1648,13 @@ new-class-form:
 new-course-form:
   course-title:
     caption: Course title
-    footnote: "{count, plural, =1 {Max # character} other {Max # characters}}"
+    footnote: "{count, plural, one {Max # character} other {Max # characters}}"
   create-btn: Create course
 new-lesson-form:
   create-btn: Create lesson
   lesson-title:
     caption: Lesson title
-    footnote: "{count, plural, =1 {Max # character} other {Max # characters}}"
+    footnote: "{count, plural, one {Max # character} other {Max # characters}}"
 notification__favorite: favorite
 notification__muted: muted
 notifications__empty-list: No notifications
@@ -1550,7 +1662,7 @@ notifications__events-link: My events
 notifications__flag-favorite: Favorites
 notifications__flag-read: Read
 notifications__flag-unread: Unread
-notifications__items-count: "{count, plural, other {# items} =1 {# item}}"
+notifications__items-count: "{count, plural, one {# item} other {# items}}"
 notifications__mark-all-btn: Mark all as read
 notifications__mark-all-confirm: Mark all notifications as read?
 notifications__mark-fav: To favorites
@@ -1566,11 +1678,11 @@ notifications__unmute-tooltip: Show similar notifications
 org:
   avatar_img_alt: Organization logo
   courses_tab: Courses
-  created_courses_count: "{count, plural, other {# courses published} =1 {# course published}}"
-  created_lessons_count: "{count, plural, other {# lessons created} =1 {# lesson created}}"
+  created_courses_count: "{count, plural, one {# course published} other {# courses published}}"
+  created_lessons_count: "{count, plural, one {# lesson created} other {# lessons created}}"
   edit_profile: Edit profile
   issued_certificates_count:
-    "{count, plural, other {# certificates issued} =1 {# certificate issued}}"
+    "{count, plural, one {# certificate issued} other {# certificates issued}}"
   klasses_tab: Classes
   lessons_tab: Lessons
   mailing_tab: Mailings
@@ -1581,21 +1693,29 @@ peer-review__first-step: >-
   <strong>Stage 1 out of 4</strong>. For points, <strong>save</strong> and <strong>send</strong>
   the best submission to <strong>other students</strong> for review
 peer-review__fourth-step: >-
-  {count, plural, other {<strong>Stage 4 out of 4</strong>. You got <a href="{url}"># reviews</a>.
-  Result is median of {minimum} reviews: <strong>{result}%</strong>} =1 {<strong>Stage 4 out of
-  4</strong>. You got <a href="{url}"># review</a>. Result: <strong>{result}%</strong>}}
+  <strong>Stage 4 out of 4</strong>. {count, plural,
+    =1 {
+      You got <a href="{url}"># review</a>.
+      Result: <strong>{result}%</strong>
+    }
+    other {
+      You got <a href="{url}"># reviews</a>.
+      Result is median of {minimum} reviews: <strong>{result}%</strong>
+    }
+  }
 peer-review__nothing: No submissions for review
 peer-review__second-step: >-
-  {count, plural, other {<strong>Stage 2 out of 4</strong>. Make <strong># reviews</strong> for
-  other learners} =1 {<strong>Stage 2 out of 4</strong>. Make <strong># review</strong> for other
-  learners}}
+  <strong>Stage 2 out of 4</strong>. Make {count, plural,
+    one {<strong># review</strong>}
+    other {<strong># reviews</strong>}
+  } for other learners
 peer-review__teacher-text: Learners review each other
 peer-review__third-step: >-
-  {count, plural, other {<strong>Stage 3 out of 4</strong>. You gave your reviews. You need to
-  receive <strong># reviews</strong> for points. Wait} =1 {<strong>Stage 3 out of 4</strong>. You
-  gave your reviews. You need to receive <strong># review</strong> for points. Wait}}
+  <strong>Stage 3 out of 4</strong>. You gave your reviews. You need to receive
+  {count, plural, one {<strong># review</strong>} other {<strong># reviews</strong>}} for points.
+  Wait
 peer-review__to-give: >-
-  {count, plural, other {<strong># reviews</strong> left} =1 {<strong># review</strong> left}}
+  {count, plural, other {<strong># reviews</strong>} one {<strong># review</strong>}} left
 personal_license__received-activate-instructions: >-
   To start using this license you should register this key at <a
   href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>.
@@ -1621,12 +1741,12 @@ plan-card:
     <a href='https://welcome.stepik.org/en/pricing' target='_blank'>Get a subscription</a> to
     access advanced course features
   text-limit: >-
-    <a href='/pricing'>Change the plan</a> to increase the number of the available {courseType}
-    courses or make one of your current {courseType} courses basic.
+    <a href='/edit-profile/subscription'>Change the plan</a> to increase the number of
+    the available {courseType} courses or make one of your current {courseType} courses basic.
   text-want-more: >-
-    <a href='https://welcome.stepik.org/en/pricing' target='_blank'>I want more</a>
-  title: "Your current plan <var>{planName}</var>"
-  title-owner: "Course owner's plan <var>{planName}</var>"
+    <a href="/edit-profile/subscription">I want more</a>
+  title: "Your current plan"
+  title-owner: "Course owner's plan"
 plan-upgrade-card:
   button: Upgrade
   text: >-
@@ -1645,41 +1765,36 @@ plans:
     description: Change card
   connected_card: "Current payment method: ****{card}"
   description: >-
-    Subscription to {type, select,
-      pro {{count, plural, =1 {# PRO course} other {# PRO courses}}}
-      other {{count, plural, =1 {# Enterprise course} other {# Enterprise courses}}}
+    {type, select,
+      basic {Downgrade to free Basic plan}
+      pro {Subscription to {count, plural, one {# PRO course} other {# PRO courses}}}
+      enterprise {Subscription to {count, plural, one {# Enterprise course}
+                                                  other {# Enterprise courses}}}
+      other {Subscription}
     }
   discount_valid: "Your discount will end at {discount_end}."
   fail: Failed to subscribe
   free:
-    another_plans: >-
-      To create private courses <a href='https://welcome.stepik.org/en/pricing'>see subscriptions
-      plans</a>.
-    max_courses: You cannot create private courses.
-    support: Regular support.
+    support: Standard technical support instead of advanced
   handmade-note: >-
     To change or cancel your subscription, email us at
     <a href="mailto:support@stepik.org">support@stepik.org</a>.
-  login_req: Login to subscribe
   max_pro_courses: >-
-    <b>{type, select,
-      pro {{count, plural, =1 {# PRO course} other {# PRO courses}}}
-      other {{count, plural, =1 {# Enterprise course} other {# Enterprise courses}}}
-    }</b> with 1000 students
-  max_public_courses: Unlimited public Basic courses
+    {type, select,
+      basic {No PRO courses}
+      pro {<b>{count, plural, one {# PRO course} other {# PRO courses}}</b> with 1000 students}
+      enterprise {<b>{count, plural, one {# Enterprise course} other {# Enterprise courses}}</b>
+                  with 1000 students}
+      other {}
+    }
+  max_public_courses: Unlimited number of public Basic courses
   next_payment: "Next payment of <b>{price}</b> will be charged on <b>{payment_date}</b>."
   not_found: >-
     Subscription plan not found. Please contact support@stepik.org for a correct link.
-  other_plans: >-
-    Information about other <a href="https://welcome.stepik.org/en/pricing">tariff plans</a>.
-  sub_title: "You are on <strong>{plan_name}</strong> subscription plan. With this plan:"
-  subscribe: Subscribe for
+  stripe:
+    button: "{trial, select, true {Try for free} other {Subscribe for}}"
   success: Successfully subscribed
-  title: Create more private online courses
   unsubscribe: Unsubscribe
-  unsubscribe_description1: "You can also "
-  unsubscribe_description2:
-    ' from this plan, or try <a href="https://welcome.stepik.org/en/pricing">another plan</a>.'
 platform-news__title: What's new on Stepik
 plugin__admin: Linux Challenge
 plugin__admin-description: Configure a remote server
@@ -1837,7 +1952,7 @@ plugins:
     limit-memory: Memory limit
     limit-memory-unit: MB
     limit-time: Time limit
-    limit-time-unit: "{count, plural, =1 {second} other {seconds}}"
+    limit-time-unit: "{count, plural, one {second} other {seconds}}"
     number-of-shown-tests: Number of sample tests shown on step
     number-of-tests: "Number of sample tests:"
     run: Run code
@@ -2175,7 +2290,7 @@ plugins:
     incorrect-html: "Incorrect HTML: {html}"
     parse-decimal-not-number: "Field '{field}' should be a number."
 plugins__show_more: >-
-  {count, plural, =1 {+ # additional step type} other {+ # additional step types}}
+  + {count, plural, one {# additional step type} other {# additional step types}}
 profile:
   activity: Activity last year
   add_annon: New announcement
@@ -2218,6 +2333,42 @@ profile:
   teaching: Teaching
   user_no_courses: No courses yet
   user_no_lessons: No lessons yet
+promocode-editor:
+  add: Add
+  errors:
+    discount-presence: Set a discount
+    greater-than: Discount must be more than {gt}
+    less-than: Max discount {lte}
+    name-presence: Create a code
+    too-long: Create a code less than {max, plural, one {# symbol} other {# symbols}}
+    too-short: Create a code longer than {min, plural, one {# symbol} other {# symbols}}
+  fields:
+    date: Valid before
+    discount: Discount, {currency}
+    name: Promo code
+  max-discount-info: >-
+    Adding new promo codes is only possible if the course price is more than <b>{overheadCost}</b>.
+  modal:
+    delete:
+      cancel: No, keep it
+      confirm: Yes, delete it
+      done: "{name} promo code has been deleted"
+      error: Failed to remove {name} promo code
+      text: >-
+        The promo code will not be valid anymore and learners
+        will not be able use it to get discount.
+      title: Delete {name} promo code with {discount} discount?
+    edit:
+      add-month: + month
+      add-week: + week
+      cancel: Cancel
+      done: The validity of the {name} promo code has been extended until {date}
+      done-unlimited: The validity of the {name} promo code has been extended
+      error: Failed to change the promo code expiration date. Try again.
+      save: Apply
+      title: Extend promo code validity<br>{name}
+  prolong: Prolong
+  until: ''
 quiz:
   correct_ratio: Correct submissions
   passed_by: Passed
@@ -2313,8 +2464,7 @@ quiz__wrong: >-
   > Wrong answer.
 random-exam:
   completed: >-
-    {count, plural, =1 {problem in the examination step passed} other {problems in the examination
-    step passed}}
+    {count, plural, one {problem} other {problems}} in the examination step passed
   confirm: |-
     If you move on to the next question, you cannot return to this question!
 
@@ -2326,9 +2476,9 @@ random-exam:
     irrevocably: >-
       After transition onto the next question, you can't go back to the previous one.
     need-solve: >-
-      {count, plural, =1 {You need to solve # problem} other {You need to solve # problems}}
+      You need to solve {count, plural, one {# problem} other {# problems}}
     rules: "Rules:"
-    time: "{count, plural, =1 {in # minute} other {in # minutes}}"
+    time: "in {count, plural, one {# minute} other {# minutes}}"
     title: Set of random exam problems.
   next-question: Next question
   no-questions: No questions available
@@ -2500,7 +2650,7 @@ reset-password:
   tab: Reset the password
   title: Forgot your password?
 review-detail:
-  based-on-criteria: "{count, plural, =1 {Based on # rubric} other {Based on # rubrics}}"
+  based-on-criteria: "Based on {count, plural, one {# rubric} other {# rubrics}}"
   explanation-placeholder: Detailed explanation of the score
   extra-review-notice: You sent as much reviews as you should. This one is additional
   not-reviewed: Not reviewed
@@ -2533,61 +2683,56 @@ review-session:
   verified-label: Approved by instructor
 review-session-status:
   finished: >-
-    {count, plural, =1 {{score} out of # points} other {{score} out of # points} =0 {{score} out of
-    X points}}
+    {score} out of {count, plural, =0 {X points} one {# points} other {# points}}
   finished-aot: >-
-    {count, plural, =1 {{score} out of # points. Finished by instructor.} other {{score} out of #
-    points. Finished by instructor.} =0 {{score} out of X points. Finished by instructor.}}
+    {score} out of {count, plural, =0 {X points} one {# points} other {# points}}.
+    Finished by instructor.
   finished-aot-help-tip: >-
     Score based on the instructor's review.<br>Review result: {scorePercentage}%.
   finished-help-tip: >-
-    {count, plural, =1 {Score based on first review.<br>Review result: {scorePercentage}%.} other
-    {Score based on first # reviews.<br>Review result: {scorePercentage}%.}}
+    Score based on first {count, plural, =1 {review} other {# reviews}}.
+    <br>Review result: {scorePercentage}%.
   peer-student:
     note: Send more reviews and increase your chance to receive reviews.
     remaining-given: >-
-      {count, plural, =1 {To get points you need to send <b>#</b> more review.} other {To get
-      points you need to send <b>#</b> more reviews.}}
+      To get points you need to send
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     remaining-taken: >-
-      {count, plural, =1 {To get points you need to receive <b>#</b> more review.} other {To get
-      points you need to receive <b>#</b> more reviews.}}
+      To get points you need to receive
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     remaining-taken-given-1: >-
-      {count, plural, =1 {To get points you need to receive <b>#</b> more review} other {To get
-      points you need to receive <b>#</b> more reviews}}
+      To get points you need to receive
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}
     remaining-taken-given-2: >-
-      {count, plural, =1 {and send <b>#</b> more review.} other {and send <b>#</b> more reviews.}}
+      and send {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     review-link: Review
   peer-teacher:
     note: >-
-      {count, plural, =1 {It would be possible to finish review, when <b>learner send #</b> more
-      review.} other {It would be possible to finish review, when <b>learner send #</b> more
-      reviews.}}
+      It would be possible to finish review, when {count, plural,
+        one {<b>learner send #</b> more review}
+        other {<b>learner send #</b> more reviews}
+      }.
     remaining-given: >-
-      {count, plural, =1 {Learner will receive points automatically after sending <b>#</b> more
-      review.} other {Learner will receive points automatically after sending <b>#</b> more
-      reviews.}}
+      Learner will receive points automatically after sending
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     remaining-given-taken-1: >-
-      {count, plural, =1 {Learner will receive points automatically after sending <b>#</b> more
-      review} other {Learner will receive points automatically after sending <b>#</b> more
-      reviews}}
+      Learner will receive points automatically after sending
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}
     remaining-given-taken-2: >-
-      {count, plural, =1 {and receiving <b>#</b> more review.} other {and receiving <b>#</b> more
-      reviews.}}
+      and receiving {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     remaining-taken: >-
-      {count, plural, =1 {Learner will receive points automatically after receiving <b>#</b> more
-      review.} other {Learner will receive points automatically after receiving <b>#</b> more
-      reviews.}}
+      Learner will receive points automatically after receiving
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
   peer-teacher-able-to-finish-aot:
     p1: >-
-      {count, plural, =1 {To receive points you need to receive <b>#</b> more review.} other {To
-      receive points you need to receive <b>#</b> more reviews.}}
+      To receive points you need to receive
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     p2: "If you finish now, final score would be based on existing reviews."
   peer-teacher-finish-aot-btn: Finish review now
   peer-teacher-giving-finished:
     p1: >-
-      {count, plural, =1 {Learner will receive points automatically after receiving <b>#</b> more
-      review.} other {Learner will receive points automatically after receiving <b>#</b> more
-      reviews.}}
+      Learner will receive points automatically after receiving
+      {count, plural, one {<b>#</b> more review} other {<b>#</b> more reviews}}.
     p2: "<b>Send review</b> for submission, and you will be able to finish review."
   student-given-nil: Send more reviews and increase your chance to receive reviews.
   teacher-given-nil: No reviews sent.
@@ -2595,76 +2740,88 @@ review-session-title:
   learner-link: "<a href={url} class={class}>{learner-name}</a>"
   step-link: "<a href={url} class={class}>{lesson} → {step}</a>"
   with-learner: >-
-    {count, plural, =1 {Review {learner-link} for problem {step-link}} other {Reviews
-    {learner-link} for problem {step-link}}}
+    {count, plural, one {Review} other {Reviews}} {learner-link} for problem {step-link}
   without-learner: >-
-    {count, plural, =1 {Review for submission for problem {step-link}} other {Reviews for
-    submission for problem {step-link}}}
+    {count, plural, one {Review} other {Reviews}} for submission for problem {step-link}
 review-stages:
   aside-panels:
     passed-by: >-
-      {count, plural, =0 {You will be the first person who solved this step} =1 {<b>#</b> person
-      solved} other {<b>#</b> people solved}}
-    submissions-count: "{count, plural, =1 {# submission} other {# submissions}}"
+      {count, plural,
+        =0 {You will be the first person who solved this step}
+        one {<b>#</b> person solved}
+        other {<b>#</b> people solved}
+      }
+    submissions-count: "{count, plural, one {# submission} other {# submissions}}"
   instrReview:
     completed:
       subtitle: "Instructor's <a href={linkURL}>Review</a>"
       title: >-
-        {count, plural, =1 {You got {score} out of # point.} other {You got {score} out of #
-        points.} =0 {Please wait, instructor will grade your solution.}}
+        {count, plural,
+          =0 {Please wait, instructor will grade your solution}
+          one {You got {score} out of # point}
+          other {You got {score} out of # points}
+        }.
     in-progress:
       note: The instructor’s response will not come immediately, you will receive a notification.
     pending:
       title: >-
-        {count, plural, =1 {Instructor will grade your solution with the maximum score of # point}
-        other {Instructor will grade your solution with the maximum score of # points} =0 {Please
-        wait, instructor will grade your solution.}}
+        {count, plural,
+          =0 {Please wait, instructor will grade your solution.}
+          one {Instructor will grade your solution with the maximum score of # point}
+          other {Instructor will grade your solution with the maximum score of # points}
+        }
   peerFinished:
     title:
       completed: >-
-        {count, plural, =1 {Your solution was scored for {score} out of # point} other {Your
-        solution was scored for {score} out of # points} =0 {Get points}}
+        {count, plural,
+          =0 {Get points}
+          one {Your solution was scored for {score} out of # point}
+          other {Your solution was scored for {score} out of # points}
+        }
       pending: >-
-        {count, plural, =1 {Get points, max score is # point} other {Get points, max score is #
-        points} =0 {Get points}}
+        {count, plural,
+          =0 {Get points}
+          one {Get points, max score is # point}
+          other {Get points, max score is # points}
+        }
   peerGivenReviews:
     completed:
       extraReviewNote: Write more reviews to increase your chance to receive review
       startReview: Start review
-      title: "{count, plural, =1 {# review was sent} other {# reviews were sent}}"
+      title: "{count, plural, one {# review was} other {# reviews were}} sent"
     in-progress:
       noReviewsAvailable: Nothing to review
       startReview: Start review
-      subtitle: "{count, plural, =1 {# review was sent} other {# reviews were sent}}"
-      title: "{count, plural, =1 {Write # more review.} other {Write # more reviews.}}"
+      subtitle: "{count, plural, one {# review was} other {# reviews were}} sent"
+      title: "Write {count, plural, one {# more review} other {# more reviews}}."
     pending:
       title: >-
-        {count, plural, =1 {Review # submission} other {Review # submissions} =0 {Review
-        submissions}}
+        Review {count, plural, =0 {submissions} one {# submission} other {# submissions}}
   peerTakenReviews:
     active:
       subtitle: >-
-        {count, plural, =1 {<a href={linkURL}># review</a> received} other {<a href={linkURL}>#
-        reviews</a> received}}
+        {count, plural,
+          one {<a href={linkURL}># review</a>}
+          other {<a href={linkURL}># reviews</a>}
+        } received
       title: >-
-        {count, plural, =1 {Wait for # more review of your solution.} other {Wait for # more
-        reviews of your solution.}}
+        Wait for {count, plural, one {# more review} other {# more reviews}} of your solution.
     completed:
       title: >-
-        {count, plural, =1 {<a href={linkURL}># review</a> received} other {<a href={linkURL}>#
-        reviews</a> received}}
+        {count, plural,
+          one {<a href={linkURL}># review</a>}
+          other {<a href={linkURL}># reviews</a>}
+        } received
     pending:
       note: Average waiting time - 48 hours.
       title: >-
-        {count, plural, =1 {Wait for # review of your solution} other {Wait for # reviews of your
-        solution} =0 {Wait for reviews of your solution}}
+        Wait for {count, plural, =0 {reviews} one {# review} other {# reviews}} of your solution
   quiz:
     noMoreAttempts: You have no attempts
     resetAttempt: Reset
     submit: Submit
     submit-has-restrictions: >-
-      {count, plural, =1 {Submit (you have # submission left)} other {Submit (you have #
-      submissions left)}}
+      Submit (you have {count, plural, one {# submission} other {# submissions}} left)
     tryAgain: Try again
   sendReview:
     choose: Choose submission for review
@@ -2809,7 +2966,7 @@ step__next-tooltip: Next step
 step__not-found: "Step #{position} was not found."
 step__not-ready-warn: 'Sorry this problem is not ready.<br/>Problem status is "{status}".'
 step__submissions-left: >-
-  {count, plural, =1 {(you have # submission left)} other {(you have # submissions left)}}
+  (you have {count, plural, one {# submission} other {# submissions}} left)
 step__submissions-no-left: You have no attempts
 step__templates:
   animation: ""
@@ -2870,8 +3027,8 @@ submissions:
   search-filter-placeholder: "ID, email, name, submission number"
   show-reviews:
     done: "{done} out of {needed} reviews."
-    to-review: To review
-    to-see: To see
+    to-review: Review
+    to-see: View
     to-see-instructor-review: To see the teacher's review
   sort:
     asc: Older first
@@ -2934,10 +3091,8 @@ syllabus_edit:
         Close date: when the module will be disabled (close date is usually left empty)
       section_hard_deadline: "Hard deadline: when the cost of every step will be zero"
       section_soft_deadline: "Soft deadline: when the cost of every step will be reduced"
-  lesson_added: Lesson was successfully added to course
   page-subtitle: Editing syllabus
   saved_msg: Course successfully saved
-  section_added: Module was successfully added to course
   zero_sections: There are no any lessons.<br>Add first module to add lessons
 teach:
   classes:
@@ -2961,8 +3116,9 @@ teach:
     info-edit: Information
     no-results: Found <b>0</b> courses.
     no-results-reset-link: Reset filters
-    pending-reviews: "{count, plural, =1 {# submission} other {# submissions}} for review"
+    pending-reviews: "{count, plural, one {# submission} other {# submissions}} for review"
     permissions-edit: Permissions
+    publication: Publication
     reports: Reports
     search-placeholder: Course name or ID
     syllabus-edit: Syllabus
@@ -2981,7 +3137,7 @@ teach:
     permissions: Permissions
     reports: Reports
     search-placeholder: Lesson name of ID
-    steps-count: "{count, plural, =1 {# step} other {# steps} =0 {Empty}}"
+    steps-count: "{count, plural, =0 {Empty} one {# step} other {# steps}}"
     title: Lessons
     used-in-courses: "In {count, number} courses:"
   nav:
@@ -3011,10 +3167,9 @@ toc__progress:
   rank: in the course rating
   remaining:
     get: >-
-      {count, plural, =1 {receive <span>#</span> more point} other {receive <span>#</span> more
-      points}}
+      receive {count, plural, one {<span>#</span> more point} other {<span>#</span> more points}}
     learn: >-
-      {count, plural, =1 {study <span>#</span> hour} other {study <span>#</span> hours}}
+      study {count, plural, one {<span>#</span> hour} other {<span>#</span> hours}}
   title: course progress
 unit_edit:
   add_existed: Add your existing lesson
@@ -3022,11 +3177,12 @@ unit_edit:
   marked_delete: >-
     Lesson&nbsp;<strong>«{title}»</strong>&nbsp;will be removed from the course on save
   new_lesson: Create lesson
+  not-saved: Not saved
   restore: Restore
   title_placeholder: Type a name for the new lesson and press Enter.
 user-subscribe:
   followers: "{followers_count} followers"
-  has-followers: "{count, plural, =1 {You have # follower} other {You have # followers}}"
+  has-followers: "You have {count, plural, one {# follower} other {# followers}}"
   subscribe: Follow
   subscribe-process: You are following…
   subscribed: Following
@@ -3105,7 +3261,13 @@ user__edit:
   social_links: Social links
   social_links_description: These links will be shown on your profile page
   subscription:
+    cancel-btn: Cancel
     caption: Subscription
+    contact-form:
+      contact-us-btn: Contact us
+      mailto-subject: "Change user subscription #{userId}"
+      text: Do you want to extend the number of Enterprise courses or cancel the subscription?
+      title: Contact us to change your subscription
     coupon-caption: Promo code
     current-plan: Current plan — <b>{planName}</b>
     current-plan-counter: >-
@@ -3114,14 +3276,113 @@ user__edit:
         pro {PRO courses: {used}/{total}}
         other {Enterprise courses: {used}/{total}}
       }
-    subscribe-btn:
-      cancel: Cancel
-      change: Update subscription
-      new: Subscribe
+    downgrade-warning: >-
+      If you change your subscription, {prune, select,
+        all {all your}
+        other {{prune} out of your {used}}
+      } {type, select,
+        pro {PRO courses}
+        enterprise {Enterprise courses}
+        other {courses}
+      } will become Basic, go to the Draft mode and will not be available for learners anymore.
+      You will be able to change their type and publish later.
+    invalid-warn: >-
+      Your <b>subscription ended</b> on {validUntil, date, medium-date}
+      To continue using extended functions, <a href={contactUsHref}>contact us</a>
+      at support@stepik.org.
+    invalid-warn-short: >-
+      Your <b>subscription ended</b> on {validUntil, date, medium-date},
+      <a href={contactUsHref}>contact us</a> at support@stepik.org.
+    plan-cards:
+      buttons:
+        choose-plan: Choose plan
+        contact-us: Contact us
+        contact-us-href: https://welcome.stepik.org/en/pricing#write_us
+        course-count-select: >-
+          {count} {type, select,
+            pro {PRO}
+            enterprise {Enterprise}
+            other {}
+          } {count, plural, one {course} other {courses}}
+        course-count-select-more:
+          Need more courses?<br>
+          <a href="https://welcome.stepik.org/en/pricing#write_us" target="_blank">Contact us</a>
+        current-plan: Current plan
+        start-trial: Start for free
+      details: >-
+        {type, select,
+          basic {
+            <li>Unlimited number of public Basic courses</li>
+            <li>Standard technical support</li>
+          }
+          pro {
+            <li><b>Everything available in Basic</b></li>
+            <li>Course access control</li>
+            <li>Gradebook</li>
+            <li>Reports</li>
+            <li>Instructor review (of submissions)</li>
+            <li>Exams</li>
+            <li>Deadlines</li>
+            <li>Advanced technical support</li>
+          }
+          enterprise {
+            <li><b>Everything available in PRO</b></li>
+            <li>LTI integration</li>
+            <li>Exams with proctoring</li>
+            <li>Billing</li>
+            <li>Contracts for accounting</li>
+            <li>High priority technical support</li>
+          }
+          other {}
+        }
+      details-caption: >-
+        {type, select,
+          basic {Available on Basic:}
+          pro {Available for <b>PRO courses</b>:}
+          enterprise {Available for <b>Enterprise courses</b>:}
+          other {}
+        }
+      name: "{type, select, basic {Basic} pro {PRO} enterprise {Enterprise} other {}}"
+      name-note: >-
+        {type, select,
+          basic {Create MOOC courses for everyone}
+          pro {Professional training}
+          enterprise {Custom terms for large companies}
+          other {}
+        }
+      price: "{prefix, select, gt {from} other {}} {price}"
+      price-note: >-
+        {type, select,
+          basic {free}
+          pro {
+            {per, select, month {per month} year {per year} other {}}
+            for {courseCount, plural, one {# PRO course} other {# PRO courses}}
+          }
+          enterprise {{per, select, month {per month} year {per year} other {}}}
+          other {}
+        }
+      section-title: Change subscription
+      section-title-details: >-
+        <a target="_blank" href="https://welcome.stepik.org/en/pricing">
+          {type, select,
+            basic {More about plans for authors}
+            other {More about plans}
+          }
+        </a>
+      trial-note: First 2 weeks for free
+    subscribe-btn: >-
+      {kind, select,
+        upgrade {{by, select, type {Subscribe} other {Upgrade}}}
+        downgrade {Change subscription}
+        other {Subscribe}
+      }
     subscribe-description:
       charge: >-
-        Starting from <b>{chargeDate, date, medium-date}</b> you will be charged a payment
-        of <b>{priceText}</b> monthly until you cancel the subscription.
+        Starting from <b>{chargeDate, date, medium-date}</b> {type, select,
+          basic {there will be no payments}
+          other {you will be charged a payment of <b>{priceText}</b> monthly until you cancel
+                 the subscription}
+        }.
       trial: >-
         <p><b>Free 14-Days trial</b> will start immediately.</p>
         <p>After the trial period, you will be charged a payment of {priceText} monthly.</p>
@@ -3129,6 +3390,8 @@ user__edit:
       We use <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
       for the processing of your payments.
     title: My subscription
+    valid-perpetual: Permanent subscription
+    valid-until: "Subscription is valid till <b>{validUntil, date, medium-date}</b>"
   time:
     12h: 12 hours
     1d: 1 day

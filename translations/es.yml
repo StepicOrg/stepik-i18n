@@ -95,7 +95,7 @@ comments__pinned-tooltip: Este comentario está fijado (será siempre en la part
 comments__post-reply: Enviar respuesta
 comments__recent-order: Actividad reciente
 comments__replies-hide: Ocultar las respuestas
-comments__replies-show: "{count, plural, =1 {Mostrar # respuesta} other {Mostrar # respuestas}}"
+comments__replies-show: "{count, plural, one {Mostrar # respuesta} other {Mostrar # respuestas}}"
 comments__replies-toggle-tooltip: respuestas de palanca
 comments__reply: Respuesta
 comments__reply-link: enlace a esta respuesta
@@ -129,7 +129,7 @@ common__fixed: Marcar como fijo
 common__fullscreen: Pantalla completa
 common__hard-deadline: fecha límite duro
 common__input-length-warn:
-  "{count, plural, other {# caracteres como mínimo} =1 {# mínimo de caracteres}}"
+  "{count, plural, other {# caracteres como mínimo} one {# mínimo de caracteres}}"
 common__lessons: Lecciones
 common__link: enlazar
 common__load-more-button: Carga más
@@ -141,7 +141,7 @@ common__min: min
 common__my-courses: Mis cursos
 common__notifications: Notificaciones
 common__number-sign: "#"
-common__points: "{count, plural, =1 {# point} other {# points}}"
+common__points: "{count, plural, one {# point} other {# points}}"
 common__print: Imprimir
 common__problem: Problema
 common__profile: Perfil
@@ -162,7 +162,7 @@ common__submission-wrong: incorrecto
 common__submit: Enviar
 common__submit_file: presentar archivo
 common__symbols_left: >-
-  {count, plural, =1 {# símbolo de la izquierda} other {# símbolos de la izquierda}}
+  {count, plural, one {# símbolo de la izquierda} other {# símbolos de la izquierda}}
 common__unauth-voting: Debe iniciar sesión para la votación.
 common__unsaved-warn: Todos los cambios no guardados se perderán!
 course-edit__cancel: Volver
@@ -226,29 +226,31 @@ course__news-link: Noticias
 course__remove-from-favorites-link: Remover de favoritos
 course__scoreboard-link: Marcador
 course__syll-link: Silaba
-deadlines-editor__begin_date_source: módulo de la fecha de apertura
+deadlines-editor:
+  field:
+    beginDateCourse: Curso de fecha abierta
+    beginDateSection: módulo de la fecha de apertura
+    endDateCourse: Por supuesto la fecha de cierre
+    endDateSection: módulo de la fecha de cierre
+    hardDeadlineCourse: Por supuesto fecha límite duro
+    hardDeadlineSection: Módulo fecha límite duro
+    softDeadlineCourse: Por supuesto plazo flexible
+    softDeadlineSection: plazo flexible módulo
 deadlines-editor__course-deadlines: plazos predeterminados curso
 deadlines-editor__course-deadlines_tooltip:
   Funciona si otros plazos no están especificados en la configuración del módulo
-deadlines-editor__course_begin_date_source: Curso de fecha abierta
 deadlines-editor__course_begin_date_tooltip:
   "fecha abierta: cuando se inicia el curso para los usuarios inscritos."
-deadlines-editor__course_end_date_source: Por supuesto la fecha de cierre
 deadlines-editor__course_end_date_tooltip: >-
   Fecha de cierre: cuando el curso se desactivará (fecha de cierre se suele dejar vacío).
-deadlines-editor__course_hard_deadline_source: Por supuesto fecha límite duro
-deadlines-editor__course_soft_deadline_source: Por supuesto plazo flexible
-deadlines-editor__end_date_source: módulo de la fecha de cierre
 deadlines-editor__grading_policy_tooltip: >-
   Clasificación de la política - cómo disminuir los costos entre los plazos blandos y duros.
-deadlines-editor__hard_deadline_source: Módulo fecha límite duro
 deadlines-editor__hard_deadline_tooltip:
   "fecha límite duro: cuando el costo de cada paso será cero."
 deadlines-editor__section_begin_date_tooltip:
   "fecha abierta: al arrancar el módulo para los usuarios inscritos."
 deadlines-editor__section_end_date_tooltip: >-
   Fecha de cierre: cuando el módulo se desactivará (fecha de cierre se suele dejar vacío).
-deadlines-editor__soft_deadline_source: plazo flexible módulo
 deadlines-editor__soft_deadline_tooltip:
   "fecha límite blanda: cuando se reduce el costo de cada paso."
 discussions__delete-prompt: Eliminar este comentario?
@@ -256,7 +258,7 @@ discussions__none: No hay discusiones. No dude en iniciar uno.
 discussions__start-disc-button: Deje un comentario
 edit-ui__video-uploading-warn: El video todavía se está subiendo. ¿Seguro que deseas partió?
 footer__active-count: >-
-  {count, plural, other {<strong>#</strong> aprendices activos} =1 {<strong>#</strong> aprendices
+  {count, plural, other {<strong>#</strong> aprendices activos} one {<strong>#</strong> aprendices
   activos}}
 footer__active-count-desc: >-
   Únicos usuarios registrados siendo activamente el aprendizaje y la solución ejercicios durante
@@ -266,7 +268,7 @@ footer__helpcenter: Centro de ayuda
 footer__press: Prensa
 footer__pricing: Precios
 footer__quiz-count: >-
-  {count, plural, other {<strong>#</strong> problemas} =1 {<strong>#</strong> problemas}}
+  {count, plural, other {<strong>#</strong> problemas} one {<strong>#</strong> problemas}}
 footer__quiz-count-desc: Número de problemas en la plataforma
 footer__team: Equipo
 index__registration-link: Registro
@@ -332,7 +334,7 @@ instructor-dashboard:
     pending: pendiente
     pending-tooltip: Comentarios con ninguna respuesta
     plagiarism: >-
-      {count, plural, =1 {# presentación plagiado} other {# presentaciones plagiados}}
+      {count, plural, one {# presentación plagiado} other {# presentaciones plagiados}}
     plagiarism-tooltip: Conde de presentaciones que marcaron como plagiado por el robot.
     quiz-error: Prueba de error !!!
     quiz-error-tooltip: >-
@@ -341,7 +343,7 @@ instructor-dashboard:
     quiz-warning: la advertencia del concurso!
     quiz-warning-tooltip: Hay algunas advertencias en concurso en sí. Será mejor que resolverlos.
     reviews-outliers: >-
-      {count, plural, =1 {# revisiones valor atípico} other {# revisiones valores atípicos}}
+      {count, plural, one {# revisiones valor atípico} other {# revisiones valores atípicos}}
     reviews-outliers-tooltip: Conde de comentarios que marcaron valores anómalos por robot.
     submissions: presentaciones
     success-rate: tasa de éxito
@@ -407,7 +409,7 @@ notifications__events-link: Mis eventos
 notifications__flag-favorite: favoritos
 notifications__flag-read: Leer
 notifications__flag-unread: No leído
-notifications__items-count: "{count, plural, other {# artículos} =1 {# elemento}}"
+notifications__items-count: "{count, plural, other {# artículos} one {# elemento}}"
 notifications__mark-all-btn: marcar todo como leido
 notifications__mark-all-confirm: Marcar todos como leídos notificaciones?
 notifications__mark-fav: para favoritos
@@ -426,21 +428,21 @@ peer-review__first-step: >-
   revisión
 peer-review__fourth-step: >-
   {count, plural, other {<strong>Etapa 4 de 4</strong>. Tienes <a href="{url}"># revisiones</a>. El
-  resultado es la mediana de {minimum} mínimas comentarios: <strong>{result}%</strong>} =1
+  resultado es la mediana de {minimum} mínimas comentarios: <strong>{result}%</strong>} one
   {<strong>Etapa 4 de 4</strong>. Tienes <a href="{url}"># revisión</a>. Resultado:
   <strong>{result}%</strong>}}
 peer-review__nothing: No se presentaron para su revisión
 peer-review__second-step: >-
   {count, plural, other {<strong>Etapa 2 de 4</strong>. Make <strong># revisiones</strong> para
-  otros estudiantes} =1 {<strong>Etapa 2 de 4</strong>. Hacer revisión <strong>#</strong> para
+  otros estudiantes} one {<strong>Etapa 2 de 4</strong>. Hacer revisión <strong>#</strong> para
   otros estudiantes}}
 peer-review__third-step: >-
   {count, plural, other {<strong>Etapa 3 de cada 4</strong>. Usted dio sus revisiones. Usted
-  necesita recibir <strong># revisiones</strong> por los puntos. Espere} =1 {<strong>Etapa 3 de
+  necesita recibir <strong># revisiones</strong> por los puntos. Espere} one {<strong>Etapa 3 de
   cada 4</strong>. Usted dio sus revisiones. Usted necesita recibir <strong>revisión #</strong> por
   los puntos. Espere}}
 peer-review__to-give: >-
-  {count, plural, other {<strong># revisiones</strong> que quedan} =1 {<strong># de
+  {count, plural, other {<strong># revisiones</strong> que quedan} one {<strong># de
   revisión</strong> a la izquierda}}
 plugin__admin: Desafío Linux
 plugin__admin-description: Configurar un servidor remoto
