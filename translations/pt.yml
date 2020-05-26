@@ -1166,7 +1166,7 @@ instruction_urgent:
   finished_expl: >-
     {count, plural, =1 {Resultado da avaliação: {percentage}%. Por iniciativa do instrutor, a
     pontuação foi baseada em uma avaliação única {date}.} other {Resultado da avaliação:
-    {percentage}%. Por iniciativa do instrutor, a pontuação foi baseada em # avaliações {date}.}
+    {percentage}%. Por iniciativa do instrutor, a pontuação foi baseada em # avaliações {date}.}}
   note: >-
     {count, plural, =1 {Os pontos serão dados automaticamente após mais # crítica recebida.}
     other {Os pontos serão dados automaticamente após mais # críticas recebidas.}}
