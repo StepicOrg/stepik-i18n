@@ -827,9 +827,9 @@ course-settings:
   disabled-not-owner:
     Щоб отримати додаткові права зверніться до <a href="{ownerURL}">{ownerName}</a>.
   owner-limit-note:
-      <p>Попросіть <b>{ownerName}</b> перемкнути курс у PRO-режим.</p>
-      <p>Чи напишіть нам на support@stepik.org,
-      щоб стати головним адміністратором курсу та враховувати його у вашій підписці.</p>
+    <p>Попросіть <b>{ownerName}</b> перемкнути курс у PRO-режим.</p>
+    <p>Чи напишіть нам на support@stepik.org,
+    щоб стати головним адміністратором курсу та враховувати його у вашій підписці.</p>
   price-title: Вартість курсу — {price}
   promocode-editor-title: Промокоди
   save: застосувати зміни
