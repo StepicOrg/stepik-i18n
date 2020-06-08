@@ -3259,7 +3259,7 @@ review__instructor-review: Це завдання рецензує виклада
 review__peer-review: Це завдання рецензує учень
 review__received-review: Отримані рецензії
 review__review: Рецензія
-review__review-another: Не можна залишити рецензію на цей розв’язок, бо він був замінений іншим:
+review__review-another: "Не можна залишити рецензію на цей розв’язок, бо він був замінений іншим:"
 review__saved-error: Помилка збереження. Перевірте з’єднання з інтернетом та спробуйте ще раз.
 review__saved-msg: Рецензія відправлена!
 review__start-button: Залишити рецензію
