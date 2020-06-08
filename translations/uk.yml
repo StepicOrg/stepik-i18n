@@ -1185,7 +1185,7 @@ embed_auth:
     greeting: "Ви ідентифіковані як {user_name}"
   popup_login:
     and_reload: та перезавантажте цю сторінку.
-    reload:Перезавантажити сторінку
+    reload: Перезавантажити сторінку
     sign_in: Увійдіть у Stepik
 error-page:
   "400":
