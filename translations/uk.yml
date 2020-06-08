@@ -1574,12 +1574,12 @@ klass-edit:
   cancel: Скасувати
   delete: Видалити клас
   delete-confirm: "Ви справді хочете видалити цей клас?"
-  deleted: Клас видалено
   delete-confirm-modal:
     cancel: Ні, залишити
     confirm: Так, видалити
     text: >-
       Ви впевнені, що хочете видалити клас «<b>{name}</b>»?
+  deleted: Клас видалено
   description: Опис класу
   error-on-delete: Не вдалося видалити клас.
   error-on-save: Не вдалося зберегти зміни у класі.
@@ -3368,7 +3368,6 @@ step-edit:
   unlock-solutions-forum-after-success: лише після правильного розв’язку
   unlock-solutions-forum-attempts: " спроб(и)"
   unlock-solutions-forum-settings-description: "Досяжне після:"
-  unlock-solutions-forum-settings-title: Обговорення розв’язків
   unlock-solutions-forum-settings-note: >-
     Note: Адміністратори та викладачі курсу завжди мають доступ до форуму розв’язків
   unlock-solutions-forum-settings-title: Обговорення розв’язків
@@ -3390,7 +3389,7 @@ step__templates:
   animation: ""
   choice: >-
     У цьому полі ви можете змінити умови завдання та вказати нижче налаштування. <br><br>
-   Скільки буде 1004 поділити на 2?
+    Скільки буде 1004 поділити на 2?
   code: >-
     У цьому полі ви можете змінити умови завдання та вказати нижче налаштування. <br><br>
     Напишіть програму яка рахує суму двох чисел.
@@ -3829,7 +3828,7 @@ user__edit:
           }
         </a>
       trial-note: Перші 2 тижні безкоштовно
-    subscribe-btn:
+    subscribe-btn: >-
       {kind, select,
         upgrade {{by, select, type {Підписатися} other {Покращити}}}
         downgrade {Змінити}
