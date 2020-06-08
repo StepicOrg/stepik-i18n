@@ -2651,7 +2651,7 @@ promocode-editor:
       add-week: + тиждень
       cancel: Скасувати зміни
       done: Термін дії промокоду {name} продовжено до {date}
-      done-unlimited:Термін дії промокоду {name} продовжено
+      done-unlimited: Термін дії промокоду {name} продовжено
       error: Не вдалося змінити термін дії промокоду. Спробуйте ще раз.
       save: Зберегти
       title: Продовжити термін дії<br>{name}
@@ -2974,7 +2974,7 @@ review-session:
     {count, plural, =1 {Отримана рецензія} other {Отриманих рецензій}}
   rubric: Критерій
   total-score: Підсумок по критеріях
-  verified-label:Схвалено викладачем
+  verified-label: Схвалено викладачем
 review-session-status:
   finished: >-
     {score} з
@@ -3350,7 +3350,7 @@ step-edit:
     choice: документація тестового завдання
     code: документація завдання на програмування
     dataset: документація завдання на обробку даних
-    external-grader:документація завдання «External grader»
+    external-grader: документація завдання «External grader»
     free-answer: документація завдання «Вільна відповідь»
     matching: документація завдання на відповідність
     math: документація завдання з математики
