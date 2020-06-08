@@ -1152,8 +1152,8 @@ deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Переведіть курс у {planTitle}-режим</a>,
   щоб використовувати додаткові налаштування.
 deadlines-editor__course-deadlines: Терміни закінчення курсу за замовчуванням
-deadlines-editor__course-deadlines_tooltip: Увімкнені, якщо інших не вказано в налаштуваннях
-модуля.
+deadlines-editor__course-deadlines_tooltip: >-
+  Увімкнені, якщо інших не вказано в налаштуваннях модуля.
 deadlines-editor__course_begin_date_tooltip: >-
   З цього часу усі учні, які приєдналися до курсу, мають доступ до всіх уроків, включно з
   приватними.
