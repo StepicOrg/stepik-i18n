@@ -588,7 +588,7 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Автор} other {Автори}}"
 course-index__cert: Сертифікат
 course-index__enrolled-msg: Ви записані!
-course-index__instructors: {count, plural, =1 {Викладач} other {Викладачі}}
+course-index__instructors: "{count, plural, =1 {Викладач} other {Викладачі}}"
 course-index__lang: Мова
 course-index__workload: Навантаження
 course-info-edit__add: Додати
@@ -793,11 +793,11 @@ course-promo:
       many {усі # відгуків}
       other {усі # відгуків}
     }
-  reviews: {count, plural, one {# відгук} few {# відгуки} many {# відгуків} other {# відгуків}}
+  reviews: "{count, plural, one {# відгук} few {# відгуки} many {# відгуків} other {# відгуків}}"
   share-course: Розкажіть про курс друзям та знайомим
   share-course-direct-link: "Посилання на цей курс:"
   student-reviews: Відгуки учнів, які закінчили курс
-  students: {count, plural, one {# учень} few {# учні} many {# учнів} other {# учнів}}
+  students: "{count, plural, one {# учень} few {# учні} many {# учнів} other {# учнів}}"
   what-you-will-get: Що ви отримуєте
   what-you-will-learn: Чого ви можете навчитися
   who-is-this-course-for: Для кого цей курс
