@@ -46,7 +46,7 @@ announcement-show:
     sent: Оголошення відправлено.
 announcement__default-template: Стандартний шаблон
 attachments__list-delete-attachment-tooltip: Видалити
-attachments__list-open-attachment-tooltip: Відкрити
+attachments__list-download-attachment-tooltip: "Відкрити {name}"
 attachments__list-title: Файли
 attachments__list-too-big-file-warn: "Максимальний розмір файлу: {max_size}."
 breadcrumbs__certificate-edit: Сертифікат

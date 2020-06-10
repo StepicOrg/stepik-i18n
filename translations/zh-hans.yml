@@ -5,7 +5,7 @@ adaptive:
   too-boring: 太无聊了
   too-hard: 因此，很难
 attachments__list-delete-attachment-tooltip: 删除
-attachments__list-open-attachment-tooltip: 打开
+attachments__list-download-attachment-tooltip: "打开 {name}"
 attachments__list-title: 附件
 attachments__list-too-big-file-warn: "最大文件大小附加：{max_size}。"
 breadcrumbs__certificate-edit: 证书

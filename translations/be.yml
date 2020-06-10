@@ -75,7 +75,7 @@ announcement-show:
     will_start: "Рассылка пачнецца: "
 announcement__default-template: Стандартны шаблон
 attachments__list-delete-attachment-tooltip: Выдаліць
-attachments__list-open-attachment-tooltip: Адкрыць
+attachments__list-download-attachment-tooltip: "Адкрыць {name}"
 attachments__list-title: Файлы
 attachments__list-too-big-file-warn: "Максімальны памер файла: {max_size}."
 autotransit_off: Аўтапераход выключаны

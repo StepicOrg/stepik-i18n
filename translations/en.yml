@@ -61,9 +61,10 @@ announcement-show:
 announcement__default-template: Default template
 attachments__list-attach-file: "{size, select, 0 {Attach file} other {Attach file (max {size})}}"
 attachments__list-delete-attachment-tooltip: Delete
-attachments__list-open-attachment-tooltip: Open
+attachments__list-download-attachment-tooltip: "Open {name}"
 attachments__list-title: Attachments
 attachments__list-too-big-file-warn: "Max file size to attach: {max_size}."
+attachments__list-view-attachment-tooltip: "View {name}"
 autotransit_off: Auto-transition off
 autotransit_on: Auto-transition on
 autotransit_turn_on: Turn on auto-transition
@@ -220,6 +221,7 @@ comments__without-submissions: You should solve the problem to leave a solution
 common:
   end: ends
   pin: Pin
+  price-free: Free
   start: starts
   unpin: Unpin
 common__activity: Activity
@@ -420,6 +422,7 @@ course:
       pro: PRO
     caption:
       basic: Basic
+      basic_paid: Basic+
       enterprise: Enterprise
       pro: PRO
     paid-features:
@@ -798,7 +801,7 @@ course__buy-form:
   promo-placeholder: Insert promo code
   register-button: Register to pay
   support-notice: >-
-    In case of any problems with payment please ask support <a
+    In case of any issues with the payment, please contact support <a
     href="mailto:support@stepik.org">support@stepik.org</a>.
   title: 'Buy access to course "{course}"'
   user-agreement: 'By clicking <b>Pay</b> you agree to our <a href="{terms_url}">Terms</a>'
@@ -2669,6 +2672,7 @@ review-new__modal-header: Send your submission for review
 review-new__submit: Submit for review
 review-new__warning: You won't be able to change your submission after submitting it.
 review-session:
+  add: New review
   approve: Approve
   given-count: "{count} out of {required}"
   given-reviews: "{count, plural, =1 {Given review} other {Given reviews}}"

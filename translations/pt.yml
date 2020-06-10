@@ -62,7 +62,6 @@ announcement__default-template: Modelo padrão
 attachments__list-attach-file:
   "{size, select, 0 {Arquivo anexado} other {Arquivo anexado (max {size})}}"
 attachments__list-delete-attachment-tooltip: Excluir
-attachments__list-open-attachment-tooltip: Aberto
 attachments__list-title: Anexos
 attachments__list-too-big-file-warn: "Tamanho máximo de arquivo para anexar: {max_size}."
 autotransit_off: Transição automática desativada
