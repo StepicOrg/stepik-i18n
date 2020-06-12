@@ -78,9 +78,10 @@ announcement__default-template: Стандартний шаблон
 attachments__list-attach-file:
   "{size, select, 0 {Додати файл} other {Додати файл (макс. {size})}}"
 attachments__list-delete-attachment-tooltip: Видалити
-attachments__list-open-attachment-tooltip: Відкрити
+attachments__list-download-attachment-tooltip: "Відкрити {name}"
 attachments__list-title: Файли
 attachments__list-too-big-file-warn: "Максимальний розмір файлу: {max_size}."
+attachments__list-view-attachment-tooltip: "Перегляд {name}"
 autotransit_off: Автоматичний перехід вимкнено
 autotransit_on: Автоматичний перехід увімкнено
 autotransit_turn_on: Увімкнути автоматичний перехід
@@ -263,6 +264,7 @@ comments__without-submissions: "Ви не маєте розв’зків, які
 common:
   end: закінчення
   pin: Закріпити
+  price-free: Безкоштовно
   start: початок
   unpin: Відкріпити
 common__activity: Активність
@@ -494,6 +496,7 @@ course:
       pro: PRO
     caption:
       basic: Базовий
+      basic_paid: Базовий+
       enterprise: Enterprise
       pro: PRO
     paid-features:
@@ -2926,6 +2929,7 @@ review-new__modal-header: Надішліть розв’язок на перев
 review-new__submit: Надіслати на перевірку
 review-new__warning: Після надсилання розв’язку на перевірку змінити його не можна.
 review-session:
+  add: Нова рецензія
   approve: Схвалити
   given-count: "{count} з {required} необхідних"
   given-reviews: >-
