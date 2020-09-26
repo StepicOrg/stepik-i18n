@@ -37,7 +37,7 @@ requiresTranslation(key, locale) {
 
 ### Translations Format
 
-[ICU Message Syntax](https://formatjs.io/docs/icu-syntax) is used.
+[ICU Message Syntax](https://formatjs.io/docs/core-concepts/icu-syntax/) is used.
 
 ### Testing & linting translations
 
