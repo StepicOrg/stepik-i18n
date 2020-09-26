@@ -5,7 +5,7 @@ adaptive:
   too-boring: Muy aburrido
   too-hard: Muy difícil
 attachments__list-delete-attachment-tooltip: Borrar
-attachments__list-open-attachment-tooltip: Abierto
+attachments__list-download-attachment-tooltip: "Abierto {name}"
 attachments__list-title: Archivos adjuntos
 attachments__list-too-big-file-warn: "Tamaño máximo de archivo para adjuntar: {max_size}."
 breadcrumbs__certificate-edit: Certificado
@@ -121,7 +121,6 @@ common__cookies-warn: >-
 common__course: Curso
 common__download-video: Descargar video
 common__edit: Editar
-common__error-loading: "[{resource_name}] Error al cargar!"
 common__experimental: Experimental
 common__feedback: Mostrar retroalimentación completa
 common__feedback-hide: Esconder
@@ -171,14 +170,12 @@ course-edit__save: Guardar cambios
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
 course-index__cert: Certificado
 course-index__enrolled-msg: ¡Estás inscrito!
-course-index__instructors: "{count, plural, other {Los instructores} =1 {Instructor}}"
 course-index__lang: Idioma
 course-index__workload: carga de trabajo
 course-info-edit__add: Añadir
 course-info-edit__author-placeholder: Identificación del autor ...
 course-info-edit__authors-403: Sólo supuesto propietario puede editar autores.
 course-info-edit__cover: "Cargar nuevo logotipo de curso: width = 230 px, altura = 230 px"
-course-info-edit__instructor-placeholder: Identificación del instructor ...
 course-info-edit__instructors-403: Sólo supuesto propietario puede editar instructores.
 course-info-edit__remove-author: Retire autor
 course-info-edit__remove-instructor: Retire el instructor

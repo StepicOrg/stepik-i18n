@@ -58,7 +58,7 @@ announcement-show:
     will_start: "Senden beginnt um:"
 announcement__default-template: Standardvorlage
 attachments__list-delete-attachment-tooltip: Löschen
-attachments__list-open-attachment-tooltip: Öffnen
+attachments__list-download-attachment-tooltip: "Öffnen {name}"
 attachments__list-title: Anhänge
 attachments__list-too-big-file-warn: "Maximale Dateigröße für Anhänge {max_size}."
 breadcrumbs__certificate-edit: Zertifikat
@@ -190,7 +190,6 @@ common__course-search-placeholder: Suchen im Kurs
 common__delete-failed-warn: Löschen nicht erfolgreich
 common__download-video: Video herunterladen
 common__edit: Ändern
-common__error-loading: "[{resource_name}] kann nicht geladen werden"
 common__experimental: Experimentell
 common__feedback: Die ganze Rückmeldung zeigen
 common__feedback-hide: Verbergen
@@ -286,14 +285,12 @@ course-filters:
 course-index__authors: "{count, plural, other {Autoren} =1 {Autor}}"
 course-index__cert: Zertifikat
 course-index__enrolled-msg: Sie sind eingeschrieben
-course-index__instructors: "{count, plural, other {Instruktoren} =1 {Instructor}}"
 course-index__lang: Sprache
 course-index__workload: Arbeitspensum
 course-info-edit__add: Hinzufügen
 course-info-edit__author-placeholder: Autor ID ..
 course-info-edit__authors-403: Nur der Kurseigentümer kann Autoren ändern.
 course-info-edit__cover: "Neues Kurslogo: Breite = 230 px, Höhe = 230 px"
-course-info-edit__instructor-placeholder: Instruktor ID …
 course-info-edit__instructors-403: Nur Kurseigentümer können Instruktoren ändern.
 course-info-edit__remove-author: Autor entfernen
 course-info-edit__remove-instructor: Instruktor entfernen
@@ -426,7 +423,7 @@ course__reviews:
   can-review-no: Nein danke
   can-review-yes: Review erstellen
   cancel-edit: abbrechen
-  cant-review: "Um ein Review zu senden werden mehr als {treshold}% Schritte benötigt"
+  cant-review: "Um ein Review zu senden werden mehr als {threshold}% Schritte benötigt"
   change-review: Review ändern
   create-review: Review senden
   delete-review: Löschen
@@ -481,7 +478,6 @@ discussions__none: Noch keine Diskussionen. Beginnen Sie eine!
 discussions__start-disc-button: Kommentar senden
 edit-ui__video-uploading-warn: Video wird noch hochgeladen. Wollen Sie unterbrechen?
 exam:
-  check-proctor-session: Aufsichtplan einholen
   close-date: Klausur endet
   confirm: >-
     {count, plural, other {Sie haben nur # Minuten und nur einen Versuch. Wollen Sie die Klausur
@@ -534,9 +530,6 @@ footer__team: Team
 footer__terms_and_privacy: >-
   <a href="{url_path}terms">Vertragsbedingungen</a> und <a href="{url_path}privacy">Datenschutz</a>
 footer__url-path: "https://welcome.stepik.org/en/"
-history:
-  hide-history: Verlauf verbergen
-  show-history: Verlauf zeigen
 index__registration-link: Anmelden
 instr-review__student-first-step: >-
   <strong>Stufe 1 von 3</strong>. Um Punkte zu erhalten, <strong>speichern</strong> und
@@ -609,8 +602,6 @@ instructor-dashboard:
     success-rate: Erfolgsrate
     success-rate-tooltip: Anzahl erfolgreiche Beiträge / gesamte Beiträge
     total-comments: Gesamt
-invite_friends_subtitle: Lassen Sie Ihre Freunde bei Stepik teilnehmen.
-invite_friends_title: Einen Freund einladen
 lesson:
   instructor:
     edit-permissions: Erlaubnisse
@@ -937,8 +928,6 @@ profile:
   user_no_courses: Es gibt noch keine Kurse
   user_no_lessons: Es gibt noch keine Lektionen
 quiz:
-  correct_ratio: Korrekte Beiträge
-  passed_by: Bestanden
   score: Sie haben
   score-max: von
   submit-failed: >-
@@ -1161,8 +1150,6 @@ section_edit:
   req_section: Benötigtes Modul
   req_section_percent: >-
     Benötigter Prozentwert <strong>"{title}"</strong>&nbsp; um dieses Modul zu öffnen
-socket:
-  status-notok: Probleme mit der Serververbindung
 step-actions:
   actions: Schritte Aktionen
   add-review: Review hinzufügen
@@ -1171,6 +1158,8 @@ step-actions:
   upload: Schritt hochladen
 step-edit:
   hide-advanced-settings: Weitere Einstellungen verbergen
+  history:
+    show: Verlauf zeigen
   limit-submissions-settings-description: "Lernende sind erlaubt:"
   limit-submissions-settings-inf: Unlimitierte Anzahl Einreichungen
   limit-submissions-settings-number: erlaubt
@@ -1183,7 +1172,6 @@ step-edit:
   unlock-solutions-forum-settings-description: "Entsperren nach:"
   unlock-solutions-forum-settings-title: Lösungsforum
 step__add-info: Schrittart wählen
-step__from: von
 step__next-tooltip: Nächster Schritt
 step__not-ready-warn: >-
   Tut uns leid - diese Aufgabe ist noch nicht fertig<br/>Problem Status "{status}".
