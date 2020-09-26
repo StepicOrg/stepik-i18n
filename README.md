@@ -6,7 +6,7 @@ At this moment there are 6 locales:
 * [🇺🇸 English](translations/en.yml)  (default, falls back here if some translation is missing)
 * [🇷🇺 Russian](translations/ru.yml)
 * [🇺🇦 Ukrainian](translations/uk.yml)
-* [🇧🇾 Belarusian](translations/be.yml) [![Crowdin](https://badges.crowdin.net/stepik-be/localized.svg)](https://crowdin.com/project/stepik-be)
+* [🇧🇾 Belarusian](translations/be.yml)
 * [🇨🇳 Chinese](translations/zh-hans.yml)
 * [🇪🇸 Spanish](translations/es.yml)
 * [🇩🇪 Deutsch](translations/de.yml)
@@ -44,20 +44,6 @@ requiresTranslation(key, locale) {
 - `pip install -r requirements.txt`
 - `npm install`
 - `npm test`
-
-### Translation management
-Tools like [Crowdin.com](https://crowdin.com/) might be used for creating and updating translations.
-
-The workflow then might be the following:
-1. Fork this repo 
-2. Create a Crowdin project, choose language(s) you want to translate into.
-3. Integrate Crowdin project with your forked repo (see [the manual](https://support.crowdin.com/github-integration/)). Note that in Crowdin config file ([crowdin.yml](crowdin.yml)) Russian is set to be the source language for the translations. Change it to another language you want to translate from.
-4. Optionally, for better perfomance, you can integrate your Crowdin project with an auto translators of your choice like Google, Yandex, Amazon etc. (see [the manual](https://support.crowdin.com/configuring-machine-translation-engines/))
-5. Start translating using Crowding and sync changes with your repo.
-6. There is a `yamllint` integrated into the Stepik workflow which requires all the lines in a translation YML file to be less than 100 characters long. But Crowding automatically creates much longer lines. So to avoid linting errors you will need to wrap long lines. It could be easily done with [Prettier.io](https://prettier.io) — it is available as an online or command line tool or a plugin for popular editors (VS Code, Sublime, Emacs, JetBrains etc.)
-7. Test you translation by running `npm test` as mentioned above
-8. Create a pull request into the original repo
-
 
 ## Contributors
 
