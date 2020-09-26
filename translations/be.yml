@@ -1,1 +1,666 @@
 ---
+adaptive:
+  next: Наступны рэкамендаваны ўрок
+  nothing: Нам больш няма чаго вам параіць, вы ўсё вывучылі. Віншуем!
+  too-boring: Урок занадта просты
+  too-hard: Урок занадта складаны
+attachments__list-delete-attachment-tooltip: Выдаліць
+attachments__list-download-attachment-tooltip: "Адкрыць {name}"
+attachments__list-title: Файлы
+attachments__list-too-big-file-warn: "Максімальны памер файла: {max_size}."
+breadcrumbs__certificate-edit: Сертыфікат
+breadcrumbs__course-edit: Рэдагаванне
+breadcrumbs__course-grade-book: Адзнакі
+breadcrumbs__course-reports: Справаздачы
+breadcrumbs__course-syllabus: Расклад
+breadcrumbs__home: Галоўная
+breadcrumbs__instructor-dashboard: Панэль выкладчыка
+breadcrumbs__lesson: Урок
+breadcrumbs__lesson-edit: Рэдагаванне
+breadcrumbs__lesson-reports: Справаздачы
+breadcrumbs__notifications-my: Мае падзеі
+breadcrumbs__notifications-new: Новыя апавяшчэнні
+breadcrumbs__review: Рэцэнзаванне
+breadcrumbs__review-session: Рэцэнзіі
+breadcrumbs__submissions: Рашэнні
+button__new-course: Стварыць курс
+button__new-lesson: Стварыць ўрок
+certificate-editor:
+  auto-issue-label: Выпускаць аўтаматычна
+  download-distinction: Спампаваць сертыфікат з адзнакай
+  download-regular: Спампаваць звычайны сертыфікат
+  header: Налады сертыфікату
+  issue-button: Выпусціць сертыфікаты
+  issue-disabled: Немагчыма выпусціць сертыфікаты да ўстаноўкі мінімальных балаў.
+  issue-header: Выпуск сертыфікатаў
+  issue-text-1: "<b>Увага! Гэта важна.</b> Выпусціць сертыфікаты ўручную можна толькі пасля апошняга дэдлайну, у вашым курсе пасля <b>{deadline}</b>."
+  issue-text-2:
+    both: "Звычайныя сертыфікаты атрымаюць студэнты, якія набралі <b>{regular}</b>, сертыфікаты з адзнакай атрымаюць студэнты, якія набралі <b>{distinction}</b>."
+    distinction: "Сертыфікаты з адзнакай атрымаюць студэнты, якія набралі <b>{distinction}</b>."
+    regular: "Звычайныя сертыфікаты атрымаюць студэнты, якія набралі <b>{regular}</b>."
+  max-points: 'Максімальны бал у вашым курсе:'
+  minimal-points-distinction: 'Балы, якія неабходна набраць для сертыфікату з адзнакай:'
+  minimal-points-regular: 'Балы, якія неабходна набраць для <b>звычайнага сертыфікату</b>:'
+  org-header: Лагатып арганізацыі
+  org-label: Малюнак з празрыстасцю (png), вышыня=150 px
+  org-placeholder: Месца для лагатыпу арганізацыі
+  show-distinction: Паказаць сертыфікат з адзнакай
+  show-regular: Паказаць звычайны сертыфікат
+  signs-header: Подпісы выкладчыкаў
+  signs-label: Малюнак з празрыстасцю (png), шырыня=3000 px, вышыня=484 px
+  signs-placeholder: Месца для подпісаў выкладчыкаў
+  upload-again: Загрузіць зноў
+  upload-file: Загрузіць файл
+comments__abuse: Не падабаецца
+comments__abuse-tooltip: Адзначыць каментар як не ўпадабаны
+comments__active-order: Часта абмяркоўваюцца
+comments__auth-warn: Каб далучыцца да гэтага абмеркавання вам трэба
+comments__by-date-order: Новыя абмеркаванні
+comments__default-order: Самыя папулярныя
+comments__delete: Выдаліць
+comments__delete-error: Памылка выдалення каментара
+comments__delete-tooltip: Выдаліць гэты каментар
+comments__deleted-by: Выдалена
+comments__deleted-by-user: Карыстальнікам
+comments__discussion-link: Спасылка на гэта абмеркаванне
+comments__empty-disc-warn: Ваш каментар пусты
+comments__gradebook: Адзнакі
+comments__gradebook-tooltip: Адзнакі аўтара каментара за гэты курс
+comments__load: Паказаць абмеркаванні
+comments__load-replies: Паказаць больш адказаў
+comments__network-error: Штосьці пайшло не так. Абнавіце старонку, каб убачыць каментары.
+comments__not-found: "Каментар # {comment_id} выдалены ці ніколі не існаваў"
+comments__pin: Замацаваць
+comments__pin-tooltip: Паказваць гэты каментар вышэй за іншых
+comments__pinned: Замацавана
+comments__pinned-tooltip: Гэты каментар замацаваны (заўсёды паказваецца перад іншымі)
+comments__post-reply: Адправіць адказ
+comments__recent-order: Свежыя абнаўленні
+comments__replies-hide: Схаваць адказы
+comments__replies-show: "Паглядзець адказы"
+comments__replies-toggle-tooltip: Паказаць / схаваць адказы да каментароў
+comments__reply: Адказаць
+comments__reply-link: Спасылка на гэты каментар
+comments__reply-tooltip: Адказаць на гэты каментар
+comments__staff-badge: Каманда Stepik
+comments__staff-replied: ', адказ выкладчыка'
+comments__submissions: Рашэнні
+comments__submissions-tooltip: Рашэнні аўтара каментара
+comments__submit-error: Не атрымалася адправіць ваш каментар =(
+comments__teacher-badge: Каманда курсу
+comments__unpin: Адмацаваць
+comments__unpin-tooltip: Каказваць гэты каментар у звычайным парадку (не перад іншымі)
+common__activity: Актыўнасць
+common__back-link: Назад
+common__back-to-step-link: Назад да кроку
+common__certificate: Сертыфікат
+common__certificate-distinction: Сертыфікат з адзнакай
+common__close-window: Закрыць вакно
+common__cookies-warn: Ваш браўзер не падтрымлівае cookies. Калі ласка, <a target=" _blank" rel="noopener noreferrer" href="https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml">уключыце</a> cookies у наладах вашага браўзэра.
+common__course: Курс
+common__download-video: Спампаваць відэа
+common__edit: Рэдагаваць
+common__error-loading: "[{resource_name}] Памылка загрузкі!"
+common__experimental: Эксперыментальна
+common__feedback: Паказаць цалкам
+common__feedback-hide: Згарнуць
+common__fixed: Адзначыць выпраўленым
+common__fullscreen: Поўнаэкранны рэжым
+common__hard-deadline: Жорсткі дэдлайн
+common__input-length-warn: "Мінімум {count, plural, one {# сімвал} few {# сімвала} other {# сімвалаў}}"
+common__lessons: Урокі
+common__link: Спасылка
+common__load-more-button: Загрузіць яшчэ
+common__loading-text: Загружаем...
+common__login: Увайсці
+common__logout: Выхад
+common__logout-confirm: Вы ўпэўненыя, што хочаце выйсці?
+common__min: хвіл
+common__my-courses: Мае курсы
+common__notifications: Апавяшчэнні
+common__number-sign: ' №'
+common__points: "{count, plural, one {# бал} few {# бала} other {# балаў}}"
+common__print: Друк
+common__problem: Задача
+common__profile: Профіль
+common__reload: Перазагрузіць
+common__reports-expiration: Справаздачы выдаляюцца праз 7 дзён
+common__save-button: Захаваць
+common__save-failed-warn: Захаваць не атрымалася.
+common__saving-text: захоўваем...
+common__search-placeholder: Пошук…
+common__self-voting: Вы не можаце галасаваць за свой кантэнт
+common__settings: Налады
+common__soft-deadline: Мяккі дэдлайн
+common__step: Крок
+common__submission: Рашэнне
+common__submission-correct: слушна
+common__submission-evaluation: у апрацоўцы
+common__submission-wrong: Няслушна
+common__submit: Адправіць
+common__submit_file: Адправіць файл
+common__symbols_left: "{count, plural, one {застаўся # сімвал} few {засталося # сімвала} many {засталося # сімвалаў} other {засталося # сімвалы} }"
+common__unauth-voting: Каб галасаваць неабходна зайсці пад сваім аккаўнтам.
+common__unsaved-warn: Усе незахаваныя дадзеныя будуць згубленыя!
+course-edit__cancel: Адмена
+course-edit__new-module: Новы модуль
+course-edit__save: Захаваць
+course-index__authors: "{count, plural, =1 {Стваральнік} other {Стваральнікі}}"
+course-index__cert: Сертыфікат
+course-index__enrolled-msg: Вы запісаныя!
+course-index__instructors: "{count, plural, =1 {Выкладчык} other {Выкладчыкі}}"
+course-index__lang: Мова
+course-index__workload: Нагрузка
+course-info-edit__add: Дадаць
+course-info-edit__author-placeholder: id стваральніка...
+course-info-edit__authors-403: Толькі стваральнік курсу можа рэдагаваць спіс стваральнікаў ;(
+course-info-edit__cover: Загрузіць новы лагатып курсу:<br>230 x 230
+course-info-edit__instructor-placeholder: id выкладчыка...
+course-info-edit__instructors-403: Толькі стваральнік курсу можа рэдагаваць спіс выкладчыкаў ;(
+course-info-edit__remove-author: Выдаліць стваральніка
+course-info-edit__remove-instructor: Выдаліць выкладчыка
+course-new:
+  cancel: Скасаваць
+  create: Стварыць
+  header: Стварэнне новага курса
+  title: Назва
+course-syll__begins: Дата пачатку
+course-syll__scores: ваш / макс бал
+course__add-annon: Дадаць навіну
+course__annon-delete: Выдаліць
+course__annon-delete-confirm: Выдаліць гэтую навіну?
+course__annon-delete-done: Навіна была выдалена
+course__annon-delete-error: Не магу выдаліць гэтую навіну
+course__annon-empty: У гэтым курсе пакуль што няма навінаў
+course__annon-save: Захаваць як чарнавік
+course__annon-send: Адправіць
+course__annon-send-done: Адпраўка навіны пачалася
+course__annon-send-error: Не магу даслаць навіну
+course__annon-test: Даслаць прыклад самому сабе
+course__annon-test-done: Праверачны ліст паспяхова дасланы
+course__annon-test-error: Не магу даслаць праверачны ліст
+course__annon-test-tooltip: Даслаць гэтую навіну толькі на ваш адрас
+course__annon-tmpl-subj: Навіна
+course__annon-tmpl-text: "Добры дзень, \\{\\{user_name \\}\\}!"
+course__certificate-distinction: Сертыфікат з адзнакай
+course__certificate-link: Сертыфікат
+course__certificate-regular: Сертыфікат
+course__comments-link: Каментары
+course__continue-learn: Працягнуць
+course__continue-tooltip: Працягнуць навучанне з апошняга пройдзенага кроку
+course__drop-confirm: Вы ўпэўнены, што хочаце пакінуць гэты курс?
+course__drop-fail: Не атрымалася пакінуць курс.
+course__drop-link: Пакінуць
+course__drop-success: Курс пакінуты, перазагрузіце старонку.
+course__info-link: Інфармацыя
+course__instructor-dashboard-link: Дашборд выкладчыка
+course__join-button: Паступіць на курс
+course__join-fail: "Не атрымліваецца паступіць на курс (код памылкі: {status}). Паспрабуйце перазагрузіць старонку."
+course__news-link: Навіны
+course__scoreboard-link: Табло адзнак
+course__syll-link: Змест
+deadlines-editor:
+  field:
+    beginDateCourse: дата адкрыцця курса
+    beginDateSection: дата адкрыцця модуля
+    endDateCourse: дата закрыцця курса
+    endDateSection: дата закрыцця модуля
+    hardDeadlineCourse: жорсткі дэдлайн курса
+    hardDeadlineSection: жорсткі дэдлайн модуля
+    softDeadlineCourse: мяккі дэдлайн курса
+    softDeadlineSection: мяккі дэдлайн модуля
+deadlines-editor__course-deadlines: Дэдлайн курса па змаўчанні
+deadlines-editor__course-deadlines_tooltip: Працуюць, калі іншае не ўказана ў наладах модуля
+deadlines-editor__course_begin_date_tooltip: З гэтага моманту ўсім студэнтам, запісаным на курс, будуць даступныя ўсе ўрокі, у тым ліку прыватныя.
+deadlines-editor__course_end_date_tooltip: У гэты момант студэнты пазбавяцца доступу да прыватных ўрокаў. Пакіньце гэта поле пустым, калі не плануеце хаваць урокі
+deadlines-editor__grading_policy_tooltip: Спосаб налічэння балаў пасля мяккага дэдлайну.
+deadlines-editor__hard_deadline_tooltip: Пачынаючы з гэтага моманту, студэнты не будуць атрымліваць балы за рашэнне задач
+deadlines-editor__section_begin_date_tooltip: З гэтага моманту ўсім студэнтам, запісаным на курс, будуць даступныя ўсе ўрокі, у тым ліку прыватныя.
+deadlines-editor__section_end_date_tooltip: У гэты момант студэнты пазбавяцца доступу да прыватных урокаў. Пакіньце гэта поле пустым, калі не плануеце хаваць урокі
+deadlines-editor__soft_deadline_tooltip: Пачынаючы з гэтага моманту, студэнты будуць атрымліваць менш балаў за рашэнне задач
+discussions__delete-prompt: Выдаліць гэты каментар?
+discussions__none: Няма абмеркаванняў. Пачніце першае.
+discussions__start-disc-button: Пакінуць каментар
+edit-ui__video-uploading-warn: Ваша відэа ўсё яшчэ загружаецца. Перапыніць загрузку?
+footer__active-count: >-
+  {count, plural, other {<strong>#</strong> актыўных студэнтаў} one {<strong>#</strong> актыўны студэнт} many {<strong>#</strong> актыўных студэнтаў} few {<strong>#</strong> актыўных студэнтаў}}
+footer__active-count-desc: Унікальныя зарэгістраваныя карыстальнікі, якія актыўна здаюць заданні ў апошнія 3 месяцы
+footer__contacts: Кантакты
+footer__helpcenter: Дапамога
+footer__press: Для прэсы
+footer__pricing: Тарыфы
+footer__quiz-count: "{count, plural, one {<strong>#</strong> заданне} few {<strong>#</strong> заданні} many {<strong>#</strong> заданняў} other {<strong>#</strong> заданні} }"
+footer__quiz-count-desc: Агульная колькасць заданняў і тэстаў на Stepik
+footer__team: Каманда
+index__registration-link: Рэгістрацыя
+instr-review__student-first-step: >-
+  <strong>Этап 1 з 3</strong>. Каб атрымаць балы, <strong>захавайце</strong> і <strong>адпраўце</strong> лепшы адказ на рэцэнзію выкладчыку
+instr-review__student-second-step: <strong>Этап 2 з 3</strong>. Адказ дасланы на рэцэнзію, <strong>чакайце адказ</strong>
+instr-review__student-third-step: >-
+  <strong>Этап 3 з 3</strong>. Атрыманая <a href="{url}">рэцэнзія</a> ад выкладчыка. Вынік: <strong>{result}%</strong>
+instr-review__teacher-start: Пачаць рэцэнзаванне
+instruction__add-rubric-button: дадаць новую рубрыку
+instruction__delete: Прыбраць рэцэнзаванне
+instruction__description-help: Любая інфармацыя, якая дапаможа пры рэцэнзаванні альбо зразумець думкі выкладчыка.
+instruction__frozen-description: Рэцэнзаванне ўжо пачалося. Вы можаце рэдагаваць апісанні. Вы не можаце змяняць максімальны бал і дадаваць/выдаляць рубрыкі.
+instruction__header: Правілы рэцэнзавання
+instruction__max-point: Максімальны бал
+instruction__max-point-placeholder: "ад 0 до 20"
+instruction__reviewcount-help: Каб студэнт атрымаў балы, адказ мае атрымаць такую колькасць рэцэнзій.
+instruction__reviews-required: 'Абавязковая колькасць рэцэнзій:'
+instruction__rubric: Крытэр ацэнкі
+instruction__rubric-deleted: (Выдалена)
+instruction__rubric-help: Запішыце, па якім крытэры будзе ацэньвацца адказ.
+instruction__rubric-template: Ацаніце адказ ад 0 да 3 балаў
+instruction__strategy-help: Вы можаце даваць свае рэцэнзіі на адказы студэнтаў, каб даць ім найбольш аб'ектыўную ацэнку. Таксама вы можаце даць магчымасць вучням рэцэнзаваць адзін аднаго.
+instruction__strategy-instructor: Толькі аўтары ўрока
+instruction__strategy-instructor-tooltip: Выкладчыкі будуць ацэньваць адказы студэнтаў
+instruction__strategy-label: Хто будзе рэцэнзаваць адказы студэнтаў?
+instruction__strategy-peer: Студэнты і аўтары ўрока
+instruction__strategy-peer-tooltip: Студэнты будуць ацэньваць адказы адзін аднаго
+instruction__teacher-comment: Каментар ад выкладчыка
+instruction__will_be_deleted: Рэцэнзаванне будзе выдалена калі вы захаваеце ўрок.<br>Націсніце тут калі вы раздумалі выдаляць.
+instructor-dashboard:
+  info: Наш робат рэкамендуе прыгледзецца да гэтых крокаў. Магчыма, там ёсць праблемы.
+  kind:
+    abuse_comment_votes: Скаргі на каментары
+    correct_ratio: Нізкі адсотак паспяховых рашэнняў
+    magic: Магія
+    pending_comments: Каментары без адказу
+    plagiarized_submissions: Плагіят
+    reviews_outliers: Незвычайныя рэцэнзіі
+  no-issues:
+    default: У гэтым курсе праблем няма :)
+  step-stat:
+    abused: скаргі
+    abused-tooltip: Колькасць негатыўных ацэнак каментароў гэтага кроку.
+    comments: Каментары
+    pending: без адказу
+    pending-tooltip: Колькасць каментароў без адказу
+    plagiarism: "{count, plural, one {# плагіят у рашэннях} few {# плагіяту ў рашэннях} many {# плагіятаў у рашэннях} other {# плагіятаў у рашэннях}}"
+    plagiarism-tooltip: Колькасць рашэнняў, пазначаных робатам як плагіят.
+    quiz-error: Памылка ва ўмове!!!
+    quiz-error-tooltip: Ва ўмове задання ёсць памылкі - студэнты ў прынцыпе не могуць вырашыць заданне.
+    quiz-warning: Заўвагі ва ўмове!
+    quiz-warning-tooltip: Ва ўмовах задання ёсць заўвагі. Рэкамендуецца выправіць заданне паводле заўваг.
+    reviews-outliers: "{count, plural, one {# незвычайная рэцэнзія} few {# незвычайныя рэцэнзіі} many {# незвычайных рэцэнзій} other {# незвычайных рэцэнзій} }"
+    reviews-outliers-tooltip: Колькасць незвычайных рэцэнзій да гэтага кроку.
+    submissions: Рашэнні
+    success-rate: адсотак поспеху
+    success-rate-tooltip: Колькасць паспяховых рашэнняў / колькасць усіх рашэнняў.
+    total-comments: усяго каментароў
+lesson-end:
+  course_score: 'Колькасць балаў на гэтым курсе:'
+  next_unit_p1: Наступны модуль
+  next_unit_p2: з гэтага курса будзе даступны
+  to_congrats_header_course: 'Віншуем! Вы завяршылі курс:'
+  to_congrats_header_lesson: Віншуем! Вы скончылі модуль
+  to_syllabus: перайсці да раскладу
+lesson-new:
+  fail: Пры стварэнні ўрока нешта пайшло не так. Праверце інтэрнэт злучэнне і захавайце яшчэ раз.
+  header: Стварэнне ўрока
+  long-title: Даўгавата атрымалася. Вы можаце стварыць урок, але яго назва будзе падрэзана да 64 знакаў.
+lesson__attributes:
+  comments: Каментары ўлучаны
+  public: Публічны
+lesson__autogenerated-step: Усе крокі ўрока былі выдалены. Гэты крок згенераваны аўтаматычна. Адрэдагуйце тэкст кроку і захавайце ўрок.
+lesson__comments-disabled: Выкладнік адключыў каментары для гэтага ўрока.
+lesson__created-by: 'Урок ад:'
+lesson__delete-confirm: Вы ўпэўнены, што хочаце выдаліць гэты ўрок?
+lesson__enroll-invite-warning: 'Урок, які вы спрабуеце адкрыць, даступны ў рамках курса <a href="/course/{course_slug}">"{course_title}"</a>. Вы можаце запісацца на гэты курс.'
+lesson__enroll-warning: Гэта прыватны курс. Патрабуецца адмысловы доступ (напрыклад, спасылка-запрашэнне). Але сам урок адкрыты для навучання.
+lesson__header: Налады ўрока
+lesson__likes_dislike_tooltip: Не ацаніў.
+lesson__likes_like_tooltip: Ухваляю!
+lesson__passed: Колькасць чалавек, якія прайшлі ўрок
+lesson__print-soon-note: Загрузка ўрока. Друк хутка пачнецца…
+lesson__private-warning: Гэта прыватны ўрок. Патрабуецца адмысловы доступ (напрыклад, спасылка-запрашэнне).
+lesson__private-warning-guest: >-
+  Гэта прыватны ўрок. Патрабуецца адмысловы доступ (напрыклад, спасылка-запрашэнне). <a href="{login_link}?next={current_url}">Увайсці ў Stepik!</a>
+lesson__quiz-print-notify: Каб вырашыць гэта заданне адкрыйце
+lesson__report-common: Агульныя справаздачы
+lesson__scores: Ваш / макс бал
+lesson__settings: Налады
+lesson__statement: Умова
+lesson__time_to_complete: Сярэдні час праходжання ўрока (у хвілінах)
+lesson__video-print-notify: Каб прагледзець гэта відэа адкрыйце
+lesson__views: Колькасць праглядаў
+library__leaders: Рэйтынг карыстальнікаў
+library__leaders-empty: Пакуль няма карыстальнікаў
+library__leaders-knowledge: Веды
+library__leaders-reputation: Рэпутацыя
+material__video-not-ready: Відэа яшчэ не было загружана ці апрацавана.
+notification__favorite: абранае
+notification__muted: утоена
+notifications__empty-list: Няма апавяшчэнняў
+notifications__events-link: Мае падзеі
+notifications__flag-favorite: Абраныя
+notifications__flag-read: Прачытаныя
+notifications__flag-unread: Непрачытаныя
+notifications__items-count: "{count, plural, other {# апавяшчэнні} one {# апавяшчэнне} many {# апавяшчэнняў} few {# апавяшчэнні}}"
+notifications__mark-all-btn: Адзначыць усе як прачытаныя
+notifications__mark-all-confirm: Адзначыць усе апавяшчэнні як прачытаныя?
+notifications__mark-fav: У абранае
+notifications__mark-one: Адзначыць як прачытанае
+notifications__type-comments: Каментары
+notifications__type-default: Іншае
+notifications__type-learn: Навучанне
+notifications__type-review: Рэцэнзіі
+notifications__type-teach: Выкладанне
+notifications__unmark-fav: Прыбраць з абранага
+notifications__unmark-one: Адзначыць як непрачытанае
+notifications__unmute-tooltip: Паказваць аналагічныя
+peer-review__first-step: >-
+  <strong>Этап 1 з 4</strong>. Каб атрымаць балы, <strong>захавайце</strong> і <strong>адпраўце</strong> лепшае рашэнне на рэцэнзію <strong>іншым вучням</strong>
+peer-review__fourth-step: >-
+  {count, plural, other {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзій</a>. Вынік па медыяне {minimum} рэцэнзій: <strong>{result}%</strong>} one {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзія</a>. Вынік рэцэнзавання: <strong>{result}%</strong>} many {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзій</a>. Вынік па медыяне {minimum} рэцэнзій: <strong>{result}%</strong>} few {<strong>Этап 4 з 4</strong>. Атрымана <a href="{url}"># рэцэнзіі</a>. Вынік па медыяне {minimum} рэцэнзій: <strong>{result}%</strong>}}
+peer-review__nothing: Пакуль няма рашэнняў для рэцэнзіі
+peer-review__second-step: >-
+  {count, plural, other {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзій</strong> на рашэнні іншых вучняў} one {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзію</strong> на рашэнні іншых вучняў} many {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзій</strong> на рашэнні іншых вучняў} few {<strong>Этап 2 з 4</strong>. Зрабіце <strong># рэцэнзіі</strong> на рашэнні іншых вучняў}}
+peer-review__third-step: >-
+  {count, plural, other {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць <strong># рэцэнзій</strong> для атрымання балаў. Пачакайце} one {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць <strong># рэцэнзію</strong> для атрымання балаў. Пачакайце} many {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць <strong># рэцэнзій</strong> для атрымання балаў. Пачакайце} few {<strong>Этап 3 з 4</strong>. Вы далі свае рэцэнзіі. Засталося атрымаць <strong># рэцэнзіі</strong> для атрымання балаў. Пачакайце}}
+peer-review__to-give: >-
+  {count, plural, other {Засталося зрабіць <strong># рэцэнзій</strong>} one {Засталося зрабіць <strong># рэцэнзію</strong>} many {Засталося зрабіць <strong># рэцэнзій</strong>} few {Засталося адправіць <strong># рэцэнзіі</strong>}}
+plugin__admin: Заданне на Linux
+plugin__admin-description: Наладзьце выдалены сервер
+plugin__chemical: Хімічнае заданне (састарэлае)
+plugin__chemical-description: Увядзіце хімічную формулу
+plugin__choice: Тэст
+plugin__choice-description: Абярыце адзін ці некалькі варыянтаў са спіса
+plugin__code: Праграмаванне
+plugin__code-description: Напішыце праграму. Тэстуецца праз stdin → stdout
+plugin__dataset: Заданне на дадзеныя
+plugin__dataset-description: Апрацуйце індывідуальны набор дадзеных за адведзены час
+plugin__fill-blanks: Пропускі
+plugin__fill-blanks-description: Запоўніце пропускі
+plugin__free-answer: Вольны адказ
+plugin__free-answer-description: Напішыце эсэ
+plugin__linux-code: Заданне на праграмаванне ў Linux
+plugin__linux-code-description: Напішыце праграму
+plugin__matching: Заданне на параўнанне
+plugin__matching-description: Параўнайце значэнні з двух спісаў
+plugin__math: Матэматычнае заданне
+plugin__math-description: Увядзіце матэматычную формулу
+plugin__number: Лікавае заданне
+plugin__number-description: Увядзіце лікавы адказ
+plugin__puzzle: Заданне на пазлы
+plugin__puzzle-description: Збярыце малюнак з пазлаў
+plugin__pycharm: Заданне з JetBrains IDE (альфа версія)
+plugin__pycharm-description: Вырашыце ў JetBrains IDE
+plugin__random-tasks: Заданне з выпадковай генерацыяй умовы
+plugin__random-tasks-description: Увядзіце лікавы адказ
+plugin__schulte: Заданне на табліцу Шультэ
+plugin__schulte-description: Знайдзіце лікі ў слушным парадку
+plugin__sorting: Заданне на сартаванне
+plugin__sorting-description: Спарадкуйце элементы спіса
+plugin__sql: SQL Challenge
+plugin__sql-description: Увядзіце SQL запыт
+plugin__string: Тэкставае заданне
+plugin__string-description: Напішыце тэкст (радок)
+plugin__table: Таблічнае заданне
+plugin__table-description: Адзначце слушныя ячэйкі
+plugin__trik: Заданне ў TRIK Studio
+plugin__trik-description: Запраграмуйце робата ў TRIK Studio
+plugin__trik-download-dataset: Спампаваць TRIK Studio save
+profile:
+  certificate-empty-list: Пакуль вы не атрымалі ні аднаго сертыфіката.
+  certificates: Сертыфікаты
+  courses-empty-list: Курсы не знойдзеныя
+  courses-empty-list-call-to-action: Вы можаце знайсці падыходзячы курс у каталогу
+  joined-date: Далучыўся
+  my-courses: Мае курсы
+  profile: Профіль
+  ranks:
+    title: "{term, select, knowledge {Веды} reputation {Рэпутацыя} other {}}"
+    tooltip: >-
+      {term, select, knowledge {Вы атрымліваеце веды за праходжанне урокаў. Улічваюцца толькі крокі з больш чым 100 рашэннямі.} reputation {Вы атрымліваеце рэпутацыю, калі іншыя карыстальнікі рашаюць вашы ўрокі альбо станоўча ацэньваюць вашыя каментары. Улічваюцца толькі крокі з больш чым 100 рашэннямі.} other {} }
+  teaching: Выкладанне
+quiz:
+  correct_ratio: Паспяховых рашэнняў
+  passed_by: Рашыла
+  score: Вы атрымалі
+  score-max: З
+quiz__again: Рашыць зноў
+quiz__answer-received: Ваша рашэнне захавана.
+quiz__attempt-loading-error: >-
+  Не атрымалася загрузіць задачу, хутчэй за ўсё, сервер перагружаны. Паспрабуйце крыху пазней.
+quiz__attempt-outdated: Выбачайце, заданне было зменена аўтарамі. Неабходна пачаць спачатку. Балы за мінулыя рашэнні захаваныя.
+quiz__attempt-time-limit: <strong>час адной спробы:</strong>
+quiz__attempts-unlimited: У вас ёсць неабмежаваная колькасць спробаў.
+quiz__correct-ratio-tooltip: Працэнт паспяховых рашэнняў (абнаўляецца кожныя 2 хв)
+quiz__download-dataset: Спампаваць набор дадзеных
+quiz__download-dataset-last: Спампаваць апошні набор дадзеных
+quiz__download-submission-last: Спампаваць ваша апошняе рашэнне
+quiz__empty-reply-warn: Патрэбны адказ. Пустыя рашэнні не прымаюцца!
+quiz__eval: Правяраем... З гэтага кроку можна бяспечна сыходзіць.
+quiz__eval-eta: 'Прыкладны час праверкі:'
+quiz__next-button: Наступны крок
+quiz__p2p: Рэцэнзаванне
+quiz__p2p-new: Адправіць гэтае рашэнне на рэцэнзію
+quiz__passed-by-tooltip: Колькасць паспяховых рашэнняў (абнаўляецца кожныя 2 хв)
+quiz__reset-prompt: Вы ўпэўненыя, што хочаце пачаць заданне з самага пачатку?
+quiz__restart: Пачаць спачатку (скід)
+quiz__retry: Паспрабаваць зноў
+quiz__signup-link: Увайдзіце, каб мы запомнілі вашыя поспехі
+quiz__start-button: Націсніце, каб пачаць рашаць
+quiz__status-service: 'Статус сэрвісу:'
+quiz__status-service__down: Сэрвіс зламаўся і можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.
+quiz__status-service__partially-up: Сэрвіс можа працаваць некарэктна ў дадзены момант. Мы ведаем пра гэта і хутка выправім.
+quiz__submissions-link: Вашыя рашэнні
+quiz__time-over: Час скончыўся!
+quiz__timelimit: Абмежаванне
+quiz__wrong: "> [is_not_last_try] Пакуль няправільна, паспрабуйце яшчэ раз! > [infinite_tries] Няправільны адказ. Нічога страшнага, у вас усё яшчэ бясконцая колькасць спробаў! > Пакуль няслушна. Памылкі - нашы лепшыя настаўнікі! > [No_discount, infinite_tries] Няслушна. Паспрабуйце яшчэ раз — вы нічога не губляеце! > [Open_comments, no_comments] Няслушна. Паспрабуйце задаць навадное пытанне ў каментарах, тады каманда курсу і іншыя студэнты змогуць дапамагчы вам. > [is_not_last_try] Пакуль няслушна, але вы можаце паспрабаваць яшчэ! > [is_not_last_try] Пакуль няправільна. Зацятасці вам не займаць, паспрабуеце яшчэ раз? > [is_not_last_try] Не дакладна. Не губляйце надзеі, вы сапраўды зможаце! > [is_not_last_try] Няправільны адказ. Цяжкае заданне, паспрабуеце яшчэ раз? > [is_not_last_try] Пакуль няслушна. Вы прайшлі ўжо такі шлях! Не здавайцеся! > [is_not_last_try] Не атрымалася. Яшчэ троху і вы дакладна зможаце! > [Open_solutions, no_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, падзяліцеся сваім рашэннем - магчыма вам падкажуць у чым памылка. > [Open_solutions, has_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, магчыма там вы знойдзеце падказку. > [is_not_last_try] Пакуль няслушна. Ня апускайце рукі — паспрабуйце яшчэ раз! > [no_discount] Няправільны адказ. Нічога страшнага, вы ўсё яшчэ можаце зарабіць поўны бал! > [No_discount, no_close_deadline] Няправільна. Крэпкі арэшак! Вы можаце вярнуцца да яго пазней і ўсё роўна атрымаць поўны бал!"
+reminders:
+  cancel: Вярнуць мае рашэнні
+  intro: 'Наш робат рэкамендуе вам рашыць гэтыя задачы яшчэ раз:'
+  lesson-intro: Вы ў рэжыме паўтарэння матэрыялу, мінулыя рашэнні схаваныя.
+  link-to-list: Перайсці да напамінаў
+  nothing: Робат не ведае, што вам параіць перарашаць
+reports:
+  class_download_grade_book:
+    name: Табель паспяховасці
+  course_download_activity_basic:
+    name: Дзеянні студэнтаў
+  course_download_activity_full:
+    name: Дзеянні вучняў (поўны)
+  course_download_cheating:
+    name: Жульніцтва
+  course_download_comments:
+    name: Каментары
+  course_download_exam_sessions:
+    name: Праходжанне экзаменаў
+  course_download_grade_book:
+    name: Табель паспяховасці (поўны)
+  course_download_grade_book_without_deadlines:
+    name: Табель паспяховасці без дыскантавання
+  course_download_learners:
+    name: Спіс студэнтаў
+  course_download_payments:
+    name: Плацяжы
+  course_download_plagiarism:
+    name: Плагіят
+  course_download_reviews_outliers:
+    name: Незвычайныя рэцэнзіі
+  course_download_steps_stats:
+    name: Статыстыка крокаў
+  course_download_structure:
+    name: Структура курса
+  course_download_submissions_basic:
+    name: Рашэнні студэнтаў
+  course_download_submissions_full:
+    name: Рашэнні студэнтаў (поўны)
+  course_download_teachers:
+    name: Спіс выкладчыкаў
+  course_download_time_to_complete:
+    name: Сярэдні час праходжання
+  create: Сфармаваць
+  download: Файлы
+  lesson_download_grade_book:
+    name: Табель паспяховасці
+  lesson_download_structure:
+    name: Структура ўрока
+  lesson_download_submissions_full:
+    name: Рашэнні студэнтаў (поўны)
+  loading: У працэсе...
+  name: Назва справаздачы
+  status: Статус
+  step_download_plagiarism:
+    name: Плагіят
+  step_download_reviews:
+    name: Рэцэнзіі
+  step_download_reviews_outliers:
+    name: Незвычайныя рэцэнзіі
+  step_download_submissions_files:
+    name: Прымацаваныя файлы студэнтаў
+  step_download_submissions_full:
+    name: Рашэнні студэнтаў (поўны)
+  time: Час стварэння справаздачы
+  update: Абнавіць
+review-detail:
+  explanation-placeholder: Разгорнутае тлумачэнне вашай ацэнкі
+  extra-review-notice: Вы ўжо адправілі мінімальна неабходную колькасць рэцэнзій. Гэтая рэцэнзія дадатковая.
+  result: "Вынік: {percentage}%. Ацэнка з'яўляецца медыянай першых {count} рэцэнзій"
+  rubric: Крытэр
+  score-rubric: Пастаўце бал па крытэры
+  submit-button: Адправіць рэцэнзію
+review__comments: Агульныя каментары
+review__comments-placeholder: Агульныя заўвагі датычна рашэння
+review__confirm-force-submit: Студэнты могуць адправіць толькі адно рашэнне на рэцэнзію. Гэты студэнт пакуль не абраў рашэнне для рэцэнзіі. Пачаўшы рэцэнзію вы робіце выбар за яго. Пачаць рэцэнзаваць?
+review__description-placeholder: Неабавязкова
+review__description-title: Дадатковая інфармацыя
+review__extra-eval-notice: Робячы дадатковыя рэцэнзіі вы падвышаеце шанец атрымаць рэцэнзіі на сваю працу хутчэй
+review__freeze-warn: Увага! Як толькі вы атрымаеце хоць бы адзін адказ на рэцэнзію да гэтага кроку, змяніць можна будзе толькі поле "Дадатковая інфармацыя" і поле апісання "крытэр аадзнакі", але не колькасць максімальных балаў
+review__received-review: Атрыманыя рэцэнзіі
+review__review: Рэцэнзія
+review__review-another: 'Рэцэнзаванне гэтага рашэння немагчыма. Іншае рашэнне было адпраўлена на рэцэнзію:'
+review__saved-error: Пры захаванні рэцэнзіі нешта пайшло не так. Праверце абавязковыя палі, інтэрнэт злучэнне і захавайце яшчэ раз.
+review__saved-msg: Рэцэнзія адпраўлена!
+review__start-button: Рэцэнзаваць
+review__start-eval: Пачаць рэцэнзаваць
+review__start-eval-extra: Рэцэнзаваць яшчэ
+review__student-choose: Адпраўце лепшае рашэнне на рэцэнзію
+review__student-no-submissions: Захавайце хаця б адно рашэнне
+review__student-send: Адправіць гэтае рашэнне на рэцэнзію
+review__student-send-notice: Адпраўлена на рэцэнзію
+review__submit-confirm: Вы ўпэўненыя, што вы хочаце адправіць гэтую рэцэнзію?
+review__wait-peers-giving-note: Звярніце ўвагу, што чым больш рэцэнзій вы напішаце, тым больш верагоднасць атрымаць рэцэнзію на сваё рашэнне!
+scoreboard__name: Імя
+scoreboard__score: Балы
+search__button: Шукаць
+search__context: 'Вобласць пошуку:'
+search__course: 'Курс:'
+search__filters-warn: Паспрабуйце аслабіць фільтры пошуку
+search__lesson: 'Урок:'
+search__no-results: Нічога не знойдзена
+search__search: Пошук
+section-editor__begin-date: Дата адкрыцця
+section-editor__step-content: Урок згенераваны робатам ;)
+step__next-tooltip: Наступны крок
+step__not-ready-warn: "Выбачайце, гэтая задача яшчэ не гатовая.<br/>Статус задачы:\"{status}\"."
+submissions:
+  review-filter:
+    all: Любы статус рэцэнзіі
+    awaiting: Чакаюць рэцэнзіі
+    done: Рэцэнзаванне завершана
+  sort:
+    asc: Спачатку старыя
+    desc: Спачатку новыя
+  status-filter:
+    all: Любы статус
+    correct: Слушныя
+    evaluation: У апрацоўцы
+    wrong: Няслушныя
+submissions__submission: Рашэнне
+submissions__title: "Рашэнне-крок {step_position}"
+subscriptions__reset: Скінуць падпіску
+subscriptions__reset-tooltip: Атрымліваць толькі абвесткі па змоўчанні
+subscriptions__subscribe: Падпісацца
+subscriptions__subscribe-tooltip: Заўсёды атрымліваць абвесткі
+subscriptions__unsubscribe: Адпісацца
+subscriptions__unsubscribe-tooltip: Ніколі не атрымліваць абвесткі
+time:
+  minutes__short: хв.
+  seconds__short: сек.
+toc__progress:
+  title: Прагрэс па курсе
+user__edit:
+  about: Пра мяне
+  add_provider: Падключыць
+  auth_social: Уваход праз сацыяльныя сеткі
+  change_password: Змяніць пароль
+  city: Горад
+  city_placeholder: Пачніце ўводзіць свой горад...
+  connected: Падключана
+  current_pass: Бягучы пароль
+  disconnect: Адключыць
+  edit-email:
+    add_button: Дадаць пошту
+    make-primary: Зрабіць асноўным
+    placeholder: Новы адрас
+    primary: Асноўны
+    remove: Выдаліць
+    resend-verification: Пошта не пацверджана! Адправіць код пацверджання.
+    table-header: Вашы паштовыя адрасы
+    verified: Пацверджаны
+  edit_profile: Рэдагаванне профілю
+  email: Змяніць пошту
+  forgot_pass: Успомніць пароль
+  info: Рэдагаваць профіль
+  language: Мова
+  legal_names_info: Ваша афіцыйнае імя, якое выкарыстоўваецца ў сертыфікатах.
+  make_private: Зрабіць профіль прыватным
+  new_pass: Новы пароль
+  notifications:
+    delay: інтэрвал
+    header: Налады апавяшчэнняў
+    language_en: Атрымліваць навіны ад Stepik на англійскай мове
+    language_ru: Атрымліваць навіны ад Stepik на рускай мове
+    menu-item: Апавяшчэнні
+    receiving: Апавяшчэнні
+    will-not-receive: Не атрымліваць апавяшчэнні
+    will-receive: Атрымліваць паведамленні на пошту
+    your-email: Ваша пошта
+  privacy: Прыватнасць
+  profile_pic: Аватарка
+  remove_pic: Прыбраць
+  repeat_pass: Новы пароль (яшчэ раз)
+  save: Захаваць змены
+  set_password: Усталяваць пароль
+  short_bio: Кароткая біяграфія<br>(да 255 сімвалаў)
+  social_links: Спасылкі на сацыяльныя сеткі
+  social_links_description: Гэтыя спасылкі будуць адлюстроўвацца ў вашым профілі
+  time:
+    12h: 12 гадзін
+    1d: 1 дзень
+    1h: 1 гадзіна
+    30m: 30 хвілін
+    3h: 3 гадзіны
+    5m: 5 хвілін
+    6h: 6 гадзін
+  upload_pic: Загрузіць
+  woof__account-disconnected: Профіль сацыяльнай сеткі адключаны.
+  woof__account-disconnected-failed: Немагчыма адключыць рахунак апошняй сацыяльнай сеткі да ўстаноўкі пароля.
+  woof__avatar-changed: Ваш аватар быў зменены.
+  woof__avatar-failed: З-за праблем з сеткай аватар ня быў зменены. ;(
+  woof__avatar-removed: Ваш аватар б паспяхова выдалены.
+  woof__confirmation-sent: "Ліст з пацвярджэннем адпраўлены на пошту {email}"
+  woof__email-added: Паштовы адрас дададзены.
+  woof__email-disconnected: "{email} выдалены."
+  woof__links-saved: Спасылкі на сацыяльныя сеткі абноўлены.
+  woof__mismatch: Несупадзенне. Пераканайцеся, што вы ўвялі новы пароль двойчы.
+  woof__pass-changed: Пароль паспяхова зменены.
+  woof__pass-empty: Неабходна запоўніць усе палі.
+  woof__pass-error: Памылка пры змене пароля. Пароль ня зменены. Праверце, ці правільна уведзены бягучы пароль.
+  woof__primary-email-changed: Асноўны адрас абноўлены.
+  woof__profile-failed: Не атрымалася захаваць профіль, калі ласка, запоўніце ўсе абавязковыя палі.
+  woof__saved: Ваш профіль абноўлены.
+  woof__settings-changed: Налады абноўленыя.
+  your_last_name: Прозвішча
+  your_name: Ваша імя
+user__knowledge-title: Веды
+user__lock-course-title: Гэты курс даступны абмежаванаму колу асоб
+user__lock-title: Гэты ўрок даступны абмежаванаму колу асоб
+user__profile: Профіль
+user__reputation-title: Рэпутацыя
+video-player__no-flash: Ваш браўзер не падтрымлівае mp4 <br>калі ласка, усталюйце flash player<br>ці проста запампуйце відэа па спасылцы ніжэй
+video__upload-failed: Адбылася памылка пры загрузцы відэа-файла. Калі ласка, праверце, што памер вашага файла не перавышае 200 мегабайт.
