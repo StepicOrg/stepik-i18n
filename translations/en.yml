@@ -61,9 +61,10 @@ announcement-show:
 announcement__default-template: Default template
 attachments__list-attach-file: "{size, select, 0 {Attach file} other {Attach file (max {size})}}"
 attachments__list-delete-attachment-tooltip: Delete
-attachments__list-open-attachment-tooltip: Open
+attachments__list-download-attachment-tooltip: "Open {name}"
 attachments__list-title: Attachments
 attachments__list-too-big-file-warn: "Max file size to attach: {max_size}."
+attachments__list-view-attachment-tooltip: "View {name}"
 autotransit_off: Auto-transition off
 autotransit_on: Auto-transition on
 autotransit_turn_on: Turn on auto-transition
@@ -88,6 +89,15 @@ breadcrumbs__review-session: Review session
 breadcrumbs__submissions: Submissions
 button__new-course: Create a course
 button__new-lesson: Create a lesson
+catalog-beta:
+  filters-dialog:
+    langs: "{lang, select, ru {Русский} en {Английский} other {Любой}}"
+  search-empty: >-
+    По запросу "<var>{query}</var>" ничего не найдено.
+    Попробуйте изменить параметры поиска{hasAnyFilters, select,
+      true { или <a href="{resetFiltersHref}">сбросить фильтры</a>}
+      other {}
+    }.
 certificate-editor:
   auto-issue-label: Auto issue certificates
   auto-issue-text:
@@ -218,8 +228,11 @@ comments__unpin: Unpin
 comments__unpin-tooltip: show comment in regular order (not pinned)
 comments__without-submissions: You should solve the problem to leave a solution
 common:
+  choose: Choose
   end: ends
   pin: Pin
+  price-enrolled: Enrolled
+  price-free: Free
   start: starts
   unpin: Unpin
 common__activity: Activity
@@ -228,6 +241,7 @@ common__back-to-step-link: Back to step
 common__banner-unverified-email: >-
   Your email is not verified.
   Please <a href="/edit-profile/email">verify</a> to continue using Stepik.
+common__cancel-button: Cancel
 common__catalog: Catalog
 common__certificate: Certificate
 common__certificate-distinction: Certificate with distinction
@@ -246,7 +260,16 @@ common__delete: Delete
 common__delete-failed-warn: Deletion failed.
 common__download-video: Download video
 common__edit: Edit
-common__error-loading: "[{resource_name}] Error loading!"
+common__error-loading: >-
+  Failed to load {resourceName, select,
+    invitation {invitations}
+    member {members}
+    course {courses}
+    lesson {lessons}
+    klass {classes}
+    comment {comments}
+    other {the {resourceName} list}
+  }.
 common__expand: Expand
 common__experimental: Experimental
 common__feedback: Show full feedback
@@ -272,6 +295,8 @@ common__my-courses: My courses
 common__notifications: Notifications
 common__number-sign: "#"
 common__off: "off"
+common__ok-button: Cancel
+common__oops: Something went wrong :(
 common__out-of-points: "{count, plural, one {# point} other {# points}}"
 common__platform-news: What's new
 common__points: "{count, plural, one {# point} other {# points}}"
@@ -373,6 +398,7 @@ cost:
   submissions-left: >-
     Only {count, plural, one {<strong>#</strong> attempt} other {<strong>#</strong> attempts}}
 course:
+  access_restricted: Course is closed for revision.
   draft: Draft
   edit-btns:
     info: Edit course information
@@ -420,6 +446,7 @@ course:
       pro: PRO
     caption:
       basic: Basic
+      basic_paid: Basic+
       enterprise: Enterprise
       pro: PRO
     paid-features:
@@ -460,6 +487,9 @@ course-assessments:
   tab-caption: Instructor reviews
   title: >-
     {count, plural, one {# solution is} other {# solutions are}} waiting for review
+course-cards:
+  certificate: certificate
+  workload: "{hours} h"
 course-edit__back: Back to Course
 course-edit__cancel: Back
 course-edit__new-module: New module
@@ -497,14 +527,14 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Author} other {Authors}}"
 course-index__cert: Certificate
 course-index__enrolled-msg: You are enrolled!
-course-index__instructors: "{count, plural, =1 {Instructor} other {Instructors}}"
+course-index__instructors: Show as instructors
 course-index__lang: Language
 course-index__workload: Workload
 course-info-edit__add: Add
 course-info-edit__author-placeholder: author id...
 course-info-edit__authors-403: Only course admin can edit the list of authors.
 course-info-edit__cover: "Upload new course logo:<br>230 x 230"
-course-info-edit__instructor-placeholder: instructor id...
+course-info-edit__instructor-placeholder: User ID
 course-info-edit__instructors-403: Only course admin can edit the list of instructors.
 course-info-edit__remove-author: Remove author
 course-info-edit__remove-instructor: Remove instructor
@@ -641,6 +671,11 @@ course-permissions-edit:
     More <a target='_blank' href='https://welcome.stepik.org/en/pricing'>about plans</a>
   tariff-info: "Access settings are available for <b>{plan} courses</b> only."
   title-prefix: Course access settings
+  transfer-ownership: Transfer ownership
+  transfer-ownership-description: >-
+    You can <a href="{transferOwnershipURL}" data-href-to-ignore>transfer ownership</a>
+    of the course to another user. After that, it will be taken into account in the
+    new owner's subscription.
   user-is-admin: is primary admin
 course-promo:
   about-course: About this course
@@ -686,12 +721,34 @@ course-settings:
   about-pro-link:
     text: Learn more about PRO courses
     url: "https://welcome.stepik.org/en/pricing"
+  beneficiaries: >-
+    {count, plural,
+      =0 {
+        Please <a href="https://support.stepik.org/hc/en-us/requests/new" target="_blank"
+        >contact our support</a> to support to receive sales benefits from this course.
+      }
+      other {The course sales benefits go to}
+    }
   cancel: Cancel
-  convert-into-paid: Convert this course into a paid one
-  convert-into-paid-description: >-
-    You can
-    <a href="https://support.stepik.org/hc/en-us/sections/360003326714" target="_blank">convert
-    this course into paid</a> and accept course payments directly through Stepik.
+  commission: >-
+    {equal, select,
+      true {
+        All the sales of this course are subject to <b>{commissionPromo}%</b> fee.
+      }
+      other {
+        Our sales fee is <b>{commissionPromo}%</b> if
+        <a href="https://support.stepik.org/hc/en-us/articles/360016290639"
+        target="_blank">we promote</a> your course,
+        or <b>{commissionBasic}%</b> if you provide the promotion yourself.
+      }
+    }
+  convert-into-paid:
+    description: >-
+      You can
+      <a href="{url}" class="link-primary">convert
+      this course into paid</a> and accept course payments directly through Stepik.
+    title: Convert this course into a paid one
+    title-with-price: Declared course price — {price}
   course-access:
     enabled: Open for enrollment
     not-enabled: Visible for course team only
@@ -711,8 +768,78 @@ course-settings:
     <p>Ask <b>{ownerName}</b> to upgrade the course to PRO.</p>
     <p>Or contact us at support@stepik.org
     to become primary admin and include the course into your subscription.</p>
+  preview-lesson:
+    added: Promo lesson is added
+    changed: Promo lesson is changed
+    choose: Choose
+    choose-note: Add a public promo lesson for people to have a look before buying the course.
+    deleted: Promo lesson is deleted
+    dialog:
+      filter-no-results: >-
+        <p>No public lessons found under such query.</p>
+        <p>Check if the necessary lesson is set as a <b>public</b> one or change the query.</p>
+      filter-placeholder: Name of the public lesson in this course
+      more-about: >-
+        <a target="_blank" href="https://support.stepik.org/hc/en-us/articles/360013947659">
+        More on promo lessons</a>
+      no-items: >-
+        <p>There are no public lessons in this course now.</p>
+        <p>First mark the necessary lesson as <b>Public</b> in the settings.</p>
+      title: Choose a free promo lesson
+    edit: Change
+    title: Free promo lesson
+  price-change: Change price
+  price-editor:
+    description: >-
+      You can <button>convert this course into paid</button> and accept course payments directly
+      through Stepik.
+    errors:
+      price-gte: Set the price from {price}
+      price-invalid-format: Enter the correct price
+      price-lte: Set the price up to {price}
+    price-footnote: Price must be from {gtePrice}
+    price-free-note: >-
+      To make the course free, <a href="https://support.stepik.org/hc/en-us/requests/new"
+      target="_blank">contact us</a>.
+    price-label: "{change, select, true {New price} other {Price}}"
+    submit: >-
+      {hasPrice, select, true {
+        {change, select, true {Change price to} other {Set price at}}&nbsp;{price}
+      } other {
+        {change, select, true {Change price} other {Set price}}
+      }}
+    terms: Terms and conditions
+    terms-link: https://support.stepik.org/hc/en-us/articles/360018110654
+    title: Convert this course into a paid one
   price-title: Course price — {price}
   promocode-editor-title: Promo codes
+  publication: Publication
+  requests:
+    approved-desc: >-
+      We have successfully verified your financial details.
+      Now you can perform sales {currencies, select,
+        RUBUSD {in RUB and USD.}
+        RUB {in RUB.}
+        USD {in USD.}
+        other {.}
+      }<br>
+      You can also change the price and make your courses payable on your own.
+    approved-desc-admin: The course has been switched to paid mode.
+    edit: Change your application
+    edit-fd: Change your payout settings
+    no-response: >-
+      If you didn't receive the reply before <b>{date}</b>, please <a
+      target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://support.stepik.org/hc/en-us/requests/new">contact us</a>
+      at support@stepik.org.
+    pending-desc: Your application is now being considered by Stepik moderators.
+    rejected-desc: >-
+      Application for the course price setting was denied{email, select,
+        false {. Details are sent to <a href="{link}">{name}</a> email address}
+        other {, see more in the letter at {email}.}
+      }
+    send-again: Send the application again
+    start-earning: To start receiving money, make the course available for passing
   save: Apply changes
   save-error-woof: Save failed.
   save-success-woof: Saved.
@@ -798,7 +925,7 @@ course__buy-form:
   promo-placeholder: Insert promo code
   register-button: Register to pay
   support-notice: >-
-    In case of any problems with payment please ask support <a
+    In case of any issues with the payment, please contact support <a
     href="mailto:support@stepik.org">support@stepik.org</a>.
   title: 'Buy access to course "{course}"'
   user-agreement: 'By clicking <b>Pay</b> you agree to our <a href="{terms_url}">Terms</a>'
@@ -866,7 +993,7 @@ course__reviews:
   can-review-no: No thanks
   can-review-yes: Create review
   cancel-edit: Cancel
-  cant-review: "To send a review, complete more than {treshold}% steps"
+  cant-review: "To send a review, complete more than {threshold}% steps"
   change-review: Change review
   create-review: Send review
   delete-review: Delete
@@ -929,6 +1056,7 @@ deadlines-editor:
       {type, select,
         after-end-date {The start of the module must come before its end}
         before-begin-date-course {The start of the module must come after the start of the course}
+        after-end-date-course {The start of the module must come before the end of the course}
         after-soft-deadline {The start of the module must come before soft deadline}
         after-hard-deadline {The start of the module must come before hard deadline}
         other {}
@@ -943,6 +1071,7 @@ deadlines-editor:
     endDateSection: >-
       {type, select,
         after-end-date-course {The end of the module must come before the end of the course}
+        before-begin-date-course {The end of the module must come after the start of the course}
         before-soft-deadline {The end of the module must come after soft deadline}
         before-hard-deadline {The end of the module must come after hard deadline}
         other {}
@@ -960,8 +1089,13 @@ deadlines-editor:
       {type, select,
         equal-begin-end-date {Hard deadline must come after the start of the module
                               and before its end}
+        equal-begin-end-date-course {Hard deadline of the module must come after the start
+                                     of the course and before its end}
         before-begin-date {Hard deadline must come after the start of the module}
+        before-begin-date-course {Hard deadline of the module must come after the start
+                                  of the course}
         after-end-date {Hard deadline must come before the end of the module}
+        after-end-date-course {Hard deadline of the module must come before the end of the course}
         before-soft-deadline {Hard deadline of the module must come after the soft one}
         other {}
       }
@@ -977,10 +1111,17 @@ deadlines-editor:
     softDeadlineSection: >-
       {type, select,
         after-hard-deadline {Soft deadline of the module must come before the hard one}
+        after-hard-deadline-course {Soft deadline of the module must come before the hard deadline
+                                    of the course}
         equal-begin-end-date {Soft deadline must come after the start of the module
                               and before its end}
+        equal-begin-end-date-course {Soft deadline of the module must come after the start
+                                     of the course and before its end}
         before-begin-date {Soft deadline must come after the start of the module}
+        before-begin-date-course {Soft deadline of the module must come after the start
+                                  of the course}
         after-end-date {Soft deadline must come before the end of the module}
+        after-end-date-course {Soft deadline of the module must come before the end of the course}
         other {}
       }
   field:
@@ -1096,7 +1237,6 @@ errors:
   url: "{description} must be a valid url"
   wrongLength: "{description} is the wrong length (should be {is} characters)"
 exam:
-  check-proctor-session: Check proctor session
   close-date: Exam session ends
   confirm: >-
     You will have {count, plural, one {# minute} other {# minutes}} and only one attempt
@@ -1139,6 +1279,7 @@ footer__CC_note: >-
   href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener
   noreferrer">CC BY-SA 4.0</a> license with attribution required
 footer__about: About Stepik
+footer__academy: Stepik Academy
 footer__active-count: >-
   {count, plural,
     one {<strong>#</strong> active learner}
@@ -1146,6 +1287,7 @@ footer__active-count: >-
   }
 footer__active-count-desc: >-
   Unique registered users being actively learning and solving exercises during the last 3 months
+footer__careers: Careers
 footer__contacts: Contacts
 footer__copyright: "© 2013 — {currentYear}. Stepik"
 footer__helpcenter: Help Center
@@ -1164,9 +1306,6 @@ footer__terms_and_privacy: >-
 footer__url-path: "https://welcome.stepik.org/en/"
 form-validation:
   required-footnote: "* Required field"
-history:
-  hide-history: Hide history
-  show-history: Show history
 import-lessons:
   btn-caption: >-
     {size, select, 0 {Attach csv file} other {Attach csv file (max. {size})}}
@@ -1327,19 +1466,23 @@ invitations-modal:
   try-again: Try again.
   unique-emails: >-
     Recognized {count, plural, one {# unique email address} other {# unique email addresses}}
-invite_friends_subtitle: Let your friends become classmates on Stepik.
-invite_friends_title: Invite a friend
 klass:
   add-assistant: Add assistant
-  add-assistant__error: Error adding assistants
-  add-assistant__label: User ID
-  add-assistant__placeholder: ""
-  add-assistant__success: Assistant successfully added
+  add-assistant-error: Error adding assistants
+  add-assistant-label: User ID
+  add-assistant-placeholder: "123456"
+  add-assistant-success: "{name} is added to the assistant list"
   assistants: Class assistants
   assistants-subpage: Assistants
   course: Course
-  dismiss-assistant__confirm: "Are you sure you want to remove assistant {name}?"
-  dismiss-assistant__error: "Could not remove assistant {name}"
+  dismiss-assistant-confirm:
+    cancel: Cancel
+    confirm: Yes, remove
+    text: >-
+      <h4>Remove {name} from the classroom assistant list?</h4>
+      <p>The classroom solutions and grades will not be available to {name}.</p>
+  dismiss-assistant-error: "Could not remove assistant {name}"
+  dismiss-assistant-success: "{name} is removed from the assistant list"
   dismiss-student-confirm:
     cancel: No, cancel
     confirm: Yes, dismiss
@@ -1347,9 +1490,8 @@ klass:
       <h4>Dismiss {name} from class?</h4>
       <p>{name} will continue learning the course, but you will lose access to his submissions and
       scores in the class.</p>
+  dismiss-student-error: "Could not dismiss learner {name}"
   dismiss-student-success: "{name} has been dismissed from the class"
-  dismiss-student__confirm: "Are you sure you want to dismiss {name}?"
-  dismiss-student__error: "Could not dismiss learner {name}"
   edit: Edit
   error-leave: Could not leave class
   gradebook:
@@ -1421,6 +1563,7 @@ klasses:
   my-students: My learners
 lesson:
   draft: Draft
+  expand-toc-sidebar: Syllabus
   instructor:
     edit-permissions: Permissions
   likes:
@@ -1428,6 +1571,7 @@ lesson:
     liked: You liked this lesson
   private: Private
   public: Public
+  step-position: "Step {index} of {count}"
   toc-show: Show table of contents
   updated: Last update
 lesson-actions:
@@ -1689,6 +1833,25 @@ org:
   no_courses: No courses found
   no_lessons: No lessons found
   students_tab: My learners
+paid-course-requests:
+  edit:
+    desc: >-
+      Your application will be considered by the Stepik moderators' team within three days.
+      Before it is verified, current version of banking details will be used.
+    error: Couldn't update the request
+    success: The request was updated successfully
+    title: Update application for the course
+  new:
+    desc: >-
+      Your application will be considered by our moderators team within 3 working days.
+      After it is approved, you will be able to set prices to any of your courses.
+      Before applying, read
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://support.stepik.org/hc/en-us/articles/360018110654-Financial-terms-and-conditions-"
+      >the terms and conditions</a>.
+    error: Couldn't send the request
+    success: The request was sent successfully
+    title: Activate paid mode for the course
 peer-review__first-step: >-
   <strong>Stage 1 out of 4</strong>. For points, <strong>save</strong> and <strong>send</strong>
   the best submission to <strong>other students</strong> for review
@@ -1736,15 +1899,18 @@ plan-card:
       us</a> at support@stepik.org so that we make you primary admin of the course.
     details-toggler: Change
     text: >-
-      The course is included in <a href='{ownerURL}'>{ownerName}</a> subscription
+      The course is included in <a href='{ownerURL}' class='link-primary'>
+      {ownerName}</a> subscription
   text-free: >-
-    <a href='https://welcome.stepik.org/en/pricing' target='_blank'>Get a subscription</a> to
+    <a href='https://welcome.stepik.org/en/pricing'
+    target='_blank' class='link-primary'>Get a subscription</a> to
     access advanced course features
   text-limit: >-
-    <a href='/edit-profile/subscription'>Change the plan</a> to increase the number of
-    the available {courseType} courses or make one of your current {courseType} courses basic.
+    <a href='/edit-profile/subscription' class='link-primary'>Change the plan</a>
+    to increase the number of the available {courseType} courses
+    or make one of your current {courseType} courses basic.
   text-want-more: >-
-    <a href="/edit-profile/subscription">I want more</a>
+    <a href="/edit-profile/subscription" class="link-primary">I want more</a>
   title: "Your current plan"
   title-owner: "Course owner's plan"
 plan-upgrade-card:
@@ -1752,13 +1918,16 @@ plan-upgrade-card:
   text: >-
     Need access to gradebook, reports, list of students? Want to use instructor review of
     submissions and get advanced support? <a href='https://welcome.stepik.org/en/pricing'
-    target='_blank' style='white-space: nowrap'>Learn more about our plans</a>
+    target='_blank' style='white-space: nowrap' class='link-primary'>
+    Learn more about our plans</a>
   title: Upgrade the plan
 plans:
   ask_questions: >-
     If you have any questions, send us an email to <a
     href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Higher priority support
+  cancel_at_period_end: >-
+    Current subscription is active until {valid_until}. No additional payments will apply.
   card:
     change: Change
     confirm: Apply
@@ -1795,6 +1964,7 @@ plans:
     button: "{trial, select, true {Try for free} other {Subscribe for}}"
   success: Successfully subscribed
   unsubscribe: Unsubscribe
+platform-news__empty: No news so far.
 platform-news__title: What's new on Stepik
 plugin__admin: Linux Challenge
 plugin__admin-description: Configure a remote server
@@ -2370,8 +2540,13 @@ promocode-editor:
   prolong: Prolong
   until: ''
 quiz:
-  correct_ratio: Correct submissions
-  passed_by: Passed
+  correct_ratio: "Total <b>{count}%</b> of tries are correct"
+  passed_by: >-
+    {count, plural,
+      =0 {You will be the first to solve this problem}
+      one {Correct answer from <b>#</b> learner}
+      other {Correct answer from <b>#</b> learners}
+    }
   score: You got
   score-max: out of
   submit-failed: Can not send your submission. Check internet connection and try again
@@ -2669,7 +2844,17 @@ review-new__modal-header: Send your submission for review
 review-new__submit: Submit for review
 review-new__warning: You won't be able to change your submission after submitting it.
 review-session:
+  add: New review
   approve: Approve
+  cancel: Cancel
+  exit-confirm:
+    cancel: No
+    save: Yes
+    text: >-
+      You edited the {count, plural,
+        =1 {review but did not save it}
+        other {reviews but did not save them}
+      }.<br>Save changes?
   given-count: "{count} out of {required}"
   given-reviews: "{count, plural, =1 {Given review} other {Given reviews}}"
   instruction-title: How submission will be evaluated
@@ -2747,7 +2932,7 @@ review-stages:
   aside-panels:
     passed-by: >-
       {count, plural,
-        =0 {You will be the first person who solved this step}
+        =0 {You will be the first to solve this problem}
         one {<b>#</b> person solved}
         other {<b>#</b> people solved}
       }
@@ -2912,8 +3097,6 @@ section_edit:
   settings: "Scoring, module dependencies, exams"
   settings_title: 'Module settings "{name}"'
 shortened-text-show-more: More
-socket:
-  status-notok: There are some server connection issues
 step-actions:
   actions: Step actions
   add-new-step: Add new step
@@ -2925,6 +3108,22 @@ step-edit:
   add-step: + Add step
   correct-submission-feedback: This feedback will be shown to the learner on a correct submission.
   hide-advanced-settings: Hide advanced settings
+  history:
+    diff-method:
+      chars: chars
+      hide: hide
+      json: json (word wrap)
+      json-no-wrap: json
+      lines: lines
+      words: words
+    diff-method-title: "Difference:"
+    modal-title: >-
+      Change history of step {stepPos}, lesson "{lessonTitle}"
+    settings-block: Settings
+    show: Show history
+    snapshot-apply: Use this version
+    snapshot-size: "{size, plural, one {# byte} other {# bytes}}"
+    text-block: Text
   limit-submissions-settings-description: "Learners are allowed:"
   limit-submissions-settings-inf: unlimited submissions
   limit-submissions-settings-note: >-
@@ -2961,7 +3160,6 @@ step-edit:
   unlock-solutions-forum-settings-title: Solutions forum
   wrong-submission-feedback: This feedback will be shown to the learner on a wrong submission.
 step__add-info: Select step type
-step__from: of
 step__next-tooltip: Next step
 step__not-found: "Step #{position} was not found."
 step__not-ready-warn: 'Sorry this problem is not ready.<br/>Problem status is "{status}".'
@@ -2986,6 +3184,9 @@ step__templates:
     step.
   video: ""
 submissions:
+  actions:
+    filter: Filter by user
+    gradebook: Gradebook
   cant-review:
     another: Another submission has been sent for review
     evaluation: Answer in processing
@@ -3100,6 +3301,15 @@ teach:
       You don't have classes yet. <a href='https://welcome.stepik.org/en/classroom'
       target='_blank'>What's a class?</a>
     gradebook: Gradebook
+    remove-modal:
+      cancel: Cancel
+      confirm-checkbox: I understand that the class deleting is permanent, and cannot be undone
+      ok: Delete permanently
+      text: >-
+        <h4>Do you want to delete the class "{title}"?</h4>
+        <p>Class learners will still be enrolled to the course but you will lose access to their
+        solutions and grades.</p>
+    remove-success: Class «{title}» deleted
     reports: Reports
     submissions: Submissions
     title: Classes
@@ -3135,6 +3345,15 @@ teach:
     no-results-reset-link: Reset filters
     orphaned: Standalone
     permissions: Permissions
+    remove-modal:
+      cancel: Cancel
+      confirm-checkbox: I understand that the lesson deleting is permanent, and cannot be undone
+      ok: Delete permanently
+      text: >-
+        <h4>Do you want to delete the lesson "{title}"?</h4>
+        <p>It will be deleted from every course it is used in and all the connected data
+        will also be erased.</p>
+    remove-success: Lesson «{title}» deleted
     reports: Reports
     search-placeholder: Lesson name of ID
     steps-count: "{count, plural, =0 {Empty} one {# step} other {# steps}}"
@@ -3171,6 +3390,135 @@ toc__progress:
     learn: >-
       study {count, plural, one {<span>#</span> hour} other {<span>#</span> hours}}
   title: course progress
+ufd-form:
+  additional-info:
+    caption: Comments
+    footnote: Optional
+    title: Additional information
+  common:
+    digits-field-footnote: "{length, plural, one {# digit} other {# digits}}"
+  course-price:
+    caption: Price
+    title:
+      default: Set the course price
+      filled: The course price charged — {price}
+  currencies:
+    currencies:
+      error: Please select a currency
+      options:
+        RUB: RUB — payout via financial details within Russia
+        USD: >-
+          $ — world-wide payout via
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://vendors.paddle.com">Paddle</a>
+      title: Currency
+    email:
+      caption: Your contact e-mail
+      footnote: For payment documents
+      hint: >-
+        To contact you, we use the main e-mail of your account.
+        You can change it in your profile.
+    terms:
+      error:
+        In order to be able to sell your courses at Stepik, you must accept our terms and
+        conditions
+      options:
+        RUB: >-
+          I have read and agreed with the
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/u/1/d/e/2PACX-1vQFH0HJRW6X9qFe_LiIaS3kT6j1E9VmL1A2ipanD3BGu4paDdidfEAouXeYMKCIX3I_LvURwshcT2E-/pub"
+          >Stepik offer (agency agreement) on course sales in RUB</a>
+        USD: >-
+          I have read and agreed with the
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/d/e/2PACX-1vRAVAQy1roffFBYSUVeJjL-aLqyyEwR9Ewo4ux7Qgs5I-iHLy4K-xPy4viX2xXgwtgxS82cnafjk2_h/pub"
+          >Terms and Conditions for course sales in USD</a>
+      title: Read Stepik terms and conditions for paid courses
+    title:
+      currencies: "{value, select, RUB {RUB} USD {USD} other {{value}}}"
+      default: Accept Stepik terms and conditions for paid courses
+      filled: Selling courses in {currencies}
+  errors:
+    presence: Enter a value
+    select-value: Select a value
+  next: Next
+  next-validation-error: Fill in the form fields correctly to continue
+  prev: Back
+  requisites-dummy:
+    title: Change the revenue payout settings
+  requisites-rub:
+    bank-account:
+      caption: Current account
+    bank-bic:
+      caption: BIK
+    bank-fields-title: Your banking details
+    form:
+      options: >-
+        {value, select,
+          individual {Private person}
+          self_employed {Self-employed}
+          individual_entrepreneur {Individual entrepreneur}
+          company {Legal entity}
+          other {{value}}
+        }
+      title: "You are:"
+    fullname:
+      caption: "{form, select, company {Full name of a representative} other {Full name}}"
+      footnote: As in your passport
+      placeholder: Ivanov Ivan
+    inn:
+      caption: INN
+    kpp:
+      caption: KPP
+    legal-title:
+      caption: Company name
+      placeholder: Romashka
+    passport:
+      caption: Passport
+      footnote: Number, Date of issue, Issued by
+    rus:
+      caption: Citizen of Russian Federation
+    tax:
+      caption: Taxation system
+      options: >-
+        {value, select,
+          general_tax_system {General}
+          simple_tax_system_income {Simplified: income}
+          simple_tax_system_income_minus_expense {Simplified: income minus expenses}
+          single_tax_on_imputed_income {Unified tax on imputed income}
+          unified_agricultural_tax {Unified agricultural tax}
+          patent_tax_system {Patent}
+          other {{value}}
+        }
+    title:
+      default: Fill in your financial details to receive payouts within Russia
+      filled-ie: Individual entrepreneur {fullname}
+    vat:
+      caption: VAT rate
+      options: >-
+        {value, select,
+          no_vat {No VAT}
+          vat_0 {0%}
+          vat_10 {10%}
+          vat_20 {20%}
+          vat_10_110 {10/110}
+          vat_20_120 {20/120}
+          other {{value}}
+        }
+  requisites-usd:
+    info: >-
+      In order to receive money in USD, you must be registered at
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://vendors.paddle.com/signup">Paddle</a>.
+
+      <br>Your Paddle Vendor ID can be found on the
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://vendors.paddle.com/account">Authentication page</a> in your Paddle dashboard.
+    paddle:
+      caption: Paddle Vendor ID
+    title:
+      default: Fill in the financial details for money transfer via Paddle
+      filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Add your existing lesson
   import: Import lessons from file
@@ -3180,6 +3528,14 @@ unit_edit:
   not-saved: Not saved
   restore: Restore
   title_placeholder: Type a name for the new lesson and press Enter.
+user-card:
+  created_courses_count: "{count, plural, one {# course} other {# courses}}"
+  followers_count: "{count} followers"
+  issued_certificates_count:
+    "{count, plural, one {# certificate issued} other {# certificates issued}}"
+user-financial-details:
+  success: Your payout settings were updated successfully
+  title: Change your payout setting
 user-subscribe:
   followers: "{followers_count} followers"
   has-followers: "You have {count, plural, one {# follower} other {# followers}}"
@@ -3298,6 +3654,7 @@ user__edit:
         choose-plan: Choose plan
         contact-us: Contact us
         contact-us-href: https://welcome.stepik.org/en/pricing#write_us
+        continue-plan: Renew
         course-count-select: >-
           {count} {type, select,
             pro {PRO}
@@ -3377,19 +3734,30 @@ user__edit:
         other {Subscribe}
       }
     subscribe-description:
+      cancel-trial: The money will not be charged off your card.
       charge: >-
         Starting from <b>{chargeDate, date, medium-date}</b> {type, select,
           basic {there will be no payments}
-          other {you will be charged a payment of <b>{priceText}</b> monthly until you cancel
-                 the subscription}
+          other {you will be charged a payment of <b>{priceText}</b> {period, select,
+            month {monthly}
+            quarter {every 3 month}
+            half_year {every half of year}
+            year {yearly}
+            other {monthly}} until you cancel the subscription}
         }.
-      trial: >-
+      will-trial: >-
         <p><b>Free 14-Days trial</b> will start immediately.</p>
-        <p>After the trial period, you will be charged a payment of {priceText} monthly.</p>
+        <p>After the trial period, you will be charged a payment of {priceText} {period, select,
+        month {monthly}
+        quarter {every 3 month}
+        half_year {every half of year}
+        year {yearly}
+        other {monthly}}.</p>
     subscribe-footnote: >-
       We use <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
       for the processing of your payments.
     title: My subscription
+    trial: Trial period
     valid-perpetual: Permanent subscription
     valid-until: "Subscription is valid till <b>{validUntil, date, medium-date}</b>"
   time:
@@ -3430,6 +3798,8 @@ user__lock-course-title: This course is private
 user__lock-title: This lesson is private
 user__profile: Profile
 user__reputation-title: Reputation
+users-list:
+  me: "(me)"
 video-editor:
   error: >-
     There was an error while processing this video ({video_id}){filename}.Please check that it was

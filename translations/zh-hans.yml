@@ -5,7 +5,7 @@ adaptive:
   too-boring: 太无聊了
   too-hard: 因此，很难
 attachments__list-delete-attachment-tooltip: 删除
-attachments__list-open-attachment-tooltip: 打开
+attachments__list-download-attachment-tooltip: "打开 {name}"
 attachments__list-title: 附件
 attachments__list-too-big-file-warn: "最大文件大小附加：{max_size}。"
 breadcrumbs__certificate-edit: 证书
@@ -103,7 +103,6 @@ common__cookies-warn: 哎呀！您的浏览器似乎已经饼干禁用。确保�
 common__course: 课程
 common__download-video: 视频下载
 common__edit: 编辑
-common__error-loading: "[{resource_name}]加载时出错！"
 common__experimental: 试验
 common__feedback: 显示完整反馈
 common__feedback-hide: 隐藏
@@ -151,14 +150,12 @@ course-edit__save: 保存更改
 course-index__authors: "{count, plural, other {作者} =1 {作者}}"
 course-index__cert: 证书
 course-index__enrolled-msg: 你现在注册！
-course-index__instructors: "{count, plural, other {教师} =1 {讲师}}"
 course-index__lang: 语言
 course-index__workload: 工作负载
 course-info-edit__add: 笔者添加
 course-info-edit__author-placeholder: 作者ID ...
 course-info-edit__authors-403: 当然只有业主可以编辑作者
 course-info-edit__cover: 上传新课程标志：宽= 230像素，高度为230像素
-course-info-edit__instructor-placeholder: 教练ID ...
 course-info-edit__instructors-403: 当然只有业主可以编辑教员
 course-info-edit__remove-author: 笔者删除
 course-info-edit__remove-instructor: 删除教练
@@ -436,8 +433,6 @@ profile:
       }
   teaching: 教学
 quiz:
-  correct_ratio: Correct submissions
-  passed_by: Passed
   score: You got
   score-max: out of
 quiz__again: 再解决

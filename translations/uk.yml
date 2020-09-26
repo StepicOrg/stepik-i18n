@@ -291,7 +291,6 @@ common__delete: Видалити
 common__delete-failed-warn: Не вдалося видалити.
 common__download-video: Звантажити відео
 common__edit: Редагувати
-common__error-loading: "[{resource_name}] Помилка звантаження!"
 common__expand: Розгорнути
 common__experimental: Експериментально
 common__feedback: Показати повністю
@@ -580,7 +579,6 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Автор} other {Автори}}"
 course-index__cert: Сертифікат
 course-index__enrolled-msg: Ви записані!
-course-index__instructors: "{count, plural, =1 {Викладач} other {Викладачі}}"
 course-index__lang: Мова
 course-index__workload: Навантаження
 course-info-edit__add: Додати
@@ -793,11 +791,6 @@ course-settings:
     text: Детальніше про PRO-курси
     url: "https://welcome.stepik.org/ru/pricing"
   cancel: Скасувати
-  convert-into-paid: Зробити курс платним
-  convert-into-paid-description: >-
-    Ви можете
-    <a href="https://welcome.stepik.org/ru/paid-courses" target="_blank">зробити курс платним</a>
-    та отримувати гроші від учнів безпосередньо через Stepik.
   course-access:
     enabled: Відкритий для навчанняи усім
     not-enabled: Лише команда курсу може бачити цей курс
@@ -982,7 +975,7 @@ course__reviews:
   can-review-no: "Ні, дякую"
   can-review-yes: Залишити відгук
   cancel-edit: Скасувати
-  cant-review: "Щоб залишити відгук потрібно пройти понад {treshold}% навчальних материалів курсу"
+  cant-review: "Щоб залишити відгук потрібно пройти понад {threshold}% навчальних материалів курсу"
   change-review: Змінити свій відгук
   create-review: Залишити відгук
   delete-review: Видалити
@@ -1116,7 +1109,7 @@ deadlines-editor:
         after-hard-deadline {Дата рекомендованого терміну закінчення має бути меншою за дату
         крайнього терміну закінчення}
         equal-begin-end-date {Дата рекомендованого терміну закінчення має бути більшою за дату
-        початку модуля} та меншою за дату закінчення модуля}
+        початку модуля та меншою за дату закінчення модуля}
         before-begin-date {Дата рекомендованого терміну закінчення має бути більшою за дату
         початку модуля}
         after-end-date {Дата рекомендованого терміну закінчення має бути меншою за дату
@@ -1236,7 +1229,6 @@ errors:
   url: "{description} не коректний URL"
   wrongLength: "{description} неправильна довжина (потрібно символів: {is})"
 exam:
-  check-proctor-session: Перевірити запис на екзамен
   close-date: Дата закінчення екзамену
   confirm: >-
     Ви маєте
@@ -1326,9 +1318,6 @@ footer__terms_and_privacy: >-
 footer__url-path: "https://welcome.stepik.org/ru/"
 form-validation:
   required-footnote: "* Обов’язкове"
-history:
-  hide-history: Сховати історію
-  show-history: Показати історію
 import-lessons:
   btn-caption: >-
     {size, select, 0 {Прикріпіть csv файл} other {Прикріпіть csv файл (макс. {size})}}
@@ -1509,19 +1498,11 @@ invitations-modal:
       few {Прочитані # унікальні адреси email}
       other {Прочитано # унікальних адрес email}
     }
-invite_friends_subtitle: Запросіть друзів та знайомих навчатися разом на Stepik.
-invite_friends_title: За однією партою
 klass:
   add-assistant: Додати викладача
-  add-assistant__error: Не вдалося додати викладача
-  add-assistant__label: ID користуавача
-  add-assistant__placeholder: ""
-  add-assistant__success: Викладача додано
   assistants: Викладачі у класі
   assistants-subpage: Викладачі
   course: Курс
-  dismiss-assistant__confirm: "Ви справді хочете видалити викладача {name}?"
-  dismiss-assistant__error: "Не вдалося видалити викладача {name}"
   dismiss-student-confirm:
     cancel: Ні, залишити
     confirm: Так, відрахувати
@@ -1529,8 +1510,6 @@ klass:
       <h4>Відрахувати {name} з класу?</h4>
       <p>Учень {name} залишиться на курсі, але ви втратите доступ до його розв’язків та оцінок.</p>
   dismiss-student-success: "Учень {name} відрахований з класу"
-  dismiss-student__confirm: "Ви справді хочете відрахувати учня {name}?"
-  dismiss-student__error: "Не вдалося відрахувати учня {name}"
   edit: Редагувати
   error-leave: Не вдалося залишити клас
   gradebook:
@@ -1982,7 +1961,7 @@ plan-card:
   text-want-more: >-
     <a href="/edit-profile/subscription">Хочу більше</a>
   title: "Ваш поточний план"
-  title-owner: "План власника курсу <var>{planName}</var>"
+  title-owner: "План власника курсу"
 plan-upgrade-card:
   button: Додати можливості
   text: >-
@@ -2626,8 +2605,6 @@ promocode-editor:
   prolong: Продовжити
   until: до
 quiz:
-  correct_ratio: Правильних розв’язків
-  passed_by: Розв’язали
   score: Ви отримали
   score-max: з
   submit-failed: >-
@@ -2911,7 +2888,7 @@ reset-password:
 review-detail:
   based-on-criteria: >-
     На підставі
-    {count, plural, one {# критерію} few {# критеріїв} other {# критеріїв}
+    {count, plural, one {# критерію} few {# критеріїв} other {# критеріїв}}
   explanation-placeholder: Розгорнуте пояснення оцінки
   extra-review-notice: Ви вже написали необхідну кількість рецензій. Ця рецензія додаткова.
   not-reviewed: Не рецензовано
@@ -3285,8 +3262,6 @@ section_edit:
   settings: "Нарахування балів, залежності між модулями, екзамени"
   settings_title: 'Налаштування модуля "{name}"'
 shortened-text-show-more: Ще
-socket:
-  status-notok: Є проблема під’єднання до сервера
 step-actions:
   actions: Налаштування етапу
   add-new-step: Додати крок
@@ -3334,7 +3309,6 @@ step-edit:
   unlock-solutions-forum-settings-title: Обговорення розв’язків
   wrong-submission-feedback: У випадку неправильної відповіді покажемо цей текст учню.
 step__add-info: Оберіть тип кроку
-step__from: з
 step__next-tooltip: Наступний крок
 step__not-found: "Крок №{position} не знайдено."
 step__not-ready-warn: 'Вибачте, будь ласка, завдання ще не готове.<br/>Стан завдання: "{status}".'
@@ -3796,9 +3770,6 @@ user__edit:
           basic {кошти не будуть списані}
           other {платіж <b>{priceText}</b> буде списаний щомісяця до закінчення підписки}
         }.
-      trial: >-
-        <p><b>Безкоштовний 14-ти денний випробувальний період</b> почнеться відразу.</p>
-        <p>Після випробовувального періоду вартість складає {priceText} щомісяця.</p>
     subscribe-footnote: >-
       Ми використовуємо
       <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
