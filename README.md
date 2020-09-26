@@ -6,7 +6,7 @@ At this moment there are 6 locales:
 * [🇺🇸 English](translations/en.yml)  (default, falls back here if some translation is missing)
 * [🇷🇺 Russian](translations/ru.yml)
 * [🇺🇦 Ukrainian](translations/uk.yml)
-* [🇧🇾 Belarusian](translations/be.yml)
+* [🇧🇾 Belarusian](translations/be.yml) [![Crowdin](https://badges.crowdin.net/stepik-be/localized.svg)](https://crowdin.com/project/stepik-be)
 * [🇨🇳 Chinese](translations/zh-hans.yml)
 * [🇪🇸 Spanish](translations/es.yml)
 * [🇩🇪 Deutsch](translations/de.yml)
