@@ -48,7 +48,7 @@ requiresTranslation(key, locale) {
 ## Contributors
 
 * Stepik Team (English and Russian translations; Spanish and Chinese rough auto-translation)
-* Андрій Красоткін (Ukrainian translation)
+* [Андрій Красоткін](https://github.com/zimorodokan) (Ukrainian translation)
 * [@ethnoby](https://github.com/ethnoby) team (Belarusian translation)
 * [Maycon M. Kopelvski](https://github.com/mayconmk) (Brazilian Portuguese translation)
 * add your name here
