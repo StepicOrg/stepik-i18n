@@ -245,7 +245,6 @@ common__delete: Excluir
 common__delete-failed-warn: Falha na exclusão.
 common__download-video: Fazer download do video
 common__edit: Editar
-common__error-loading: "[{resource_name}] Erro ao carregar!"
 common__expand: Expandir
 common__experimental: Experimental
 common__feedback: Mostrar feedback completo
@@ -501,14 +500,12 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
 course-index__cert: Certificado
 course-index__enrolled-msg: Você esta matriculado!
-course-index__instructors: "{count, plural, other {Instrutores} =1 {Instrutor}}"
 course-index__lang: Idioma
 course-index__workload: Carga de trabalho
 course-info-edit__add: Adicionar
 course-info-edit__author-placeholder: ID do autor...
 course-info-edit__authors-403: Somente o administrador do curso pode editar a lista de autores.
 course-info-edit__cover: "Carregar novo logotipo do curso:<br>230 x 230"
-course-info-edit__instructor-placeholder: ID do instrutor...
 course-info-edit__instructors-403:
   Somente o administrador do curso pode editar a lista de instrutores.
 course-info-edit__remove-author: Remover autor
@@ -843,7 +840,7 @@ course__reviews:
   can-review-no: Não, obrigado
   can-review-yes: Criar um comentário de avaliação
   cancel-edit: Cancelar
-  cant-review: "Para enviar um comentário de avaliação, execute mais de {treshold}% das etapas"
+  cant-review: "Para enviar um comentário de avaliação, execute mais de {threshold}% das etapas"
   change-review: Alterar comentário de avaliação
   create-review: Enviar comentário de avaliação
   delete-review: Excluir
@@ -1005,7 +1002,6 @@ errors:
   url: "{description} deve ser um endereço URL válido"
   wrongLength: "{description} tem o tamanho errado (deve ter {is} caracteres)"
 exam:
-  check-proctor-session: Verifique a sessão do inspetor
   close-date: A sessão da prova termina
   confirm: >-
     {count, plural, other {Você terá # minutos e apenas uma tentativa de concluir a prova. Tem
@@ -1077,9 +1073,6 @@ footer__terms_and_privacy: >-
 footer__url-path: "https://welcome.stepik.org/en/"
 form-validation:
   required-footnote: "* Campo obrigatório"
-history:
-  hide-history: Ocultar histórico
-  show-history: Mostrar histórico
 import-lessons:
   btn-caption: >-
     {size, select, 0 {Carregar o arquivo csv} other {Carregar o arquivo csv (máx. {size})}}
@@ -1242,21 +1235,16 @@ invitations-modal:
   unique-emails: >-
     {count, plural, one {Reconhecido # endereço de e-mail único} other {Reconhecidos # endereços de
     e-mails únicos}}
-invite_friends_subtitle: Deixe seus amigos se tornarem colegas de turma no Stepik.
-invite_friends_title: Convidar um amigo
 klass:
   add-assistant: Adicionar assistente
-  add-assistant__error: Erro ao adicionar assistentes
-  add-assistant__label: ID do usuário
-  add-assistant__placeholder: ""
-  add-assistant__success: Assistente adicionado com sucesso
+  add-assistant-error: Erro ao adicionar assistentes
+  add-assistant-label: ID do usuário
+  add-assistant-success: "Assistente {name} adicionado com sucesso"
   assistants: Assistentes de turma
   assistants-subpage: Assistentes de turma
   course: Curso
-  dismiss-assistant__confirm: "Tem certeza de que deseja remover o assistente {name}?"
-  dismiss-assistant__error: "Não foi possível remover o assistente {name}"
-  dismiss-student__confirm: "Tem certeza de que deseja descartar {name}?"
-  dismiss-student__error: "Não foi possível dispensar o aluno {name}"
+  dismiss-assistant-error: "Não foi possível remover o assistente {name}"
+  dismiss-student-error: "Não foi possível dispensar o aluno {name}"
   edit: Editar
   error-leave: Não foi possível sair da turma
   header: Turma
@@ -2218,8 +2206,6 @@ profile:
   user_no_courses: Ainda não há cursos
   user_no_lessons: Ainda não há lições
 quiz:
-  correct_ratio: Submissões
-  passed_by: Passou por
   score: Você obteve
   score-max: em cada
   submit-failed:
@@ -2777,8 +2763,6 @@ section_edit:
   settings: "Pontuação, dependências do módulo, provas"
   settings_title: 'Configurações do módulo "{name}"'
 shortened-text-show-more: Mais
-socket:
-  status-notok: Existem alguns problemas de conexão do servidor
 step-actions:
   actions: Ações da etapa
   add-new-step: Adicionar nova etapa
@@ -2790,6 +2774,8 @@ step-edit:
   add-step: + Adicionar etapa
   correct-submission-feedback: Esse feedback será mostrado ao aluno em um envio correto.
   hide-advanced-settings: Ocultar configurações avançadas
+  history:
+    show: Mostrar histórico
   limit-submissions-settings-description: "Os alunos são permitidos:"
   limit-submissions-settings-inf: envios ilimitados
   limit-submissions-settings-note: >-
@@ -2826,7 +2812,6 @@ step-edit:
   unlock-solutions-forum-settings-title: Fórum de resoluções
   wrong-submission-feedback: Esse feedback será mostrado ao aluno em uma submissão com erros.
 step__add-info: Selecione o tipo de etapa
-step__from: de
 step__next-tooltip: Próxima Etapa
 step__not-found: "A etapa #{position} não foi encontrada."
 step__not-ready-warn:
@@ -3141,7 +3126,7 @@ user__edit:
         other {cursos Empresariais: {used}/{total}}
       }
     subscribe-description:
-      trial: >-
+      will-trial: >-
         <p><b>Avaliação gratuita por 14 dias</b> começará imediatamente.</p>
         <p>Após o período de avaliação, você receberá um pagamento mensal de {priceText}.</p>
     subscribe-footnote: >-

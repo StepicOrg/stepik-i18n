@@ -158,7 +158,6 @@ common__cookies-warn: >-
 common__course: Курс
 common__download-video: Звантажити відео
 common__edit: Редагувати
-common__error-loading: "[{resource_name}] Помилка звантаження!"
 common__experimental: Експериментально
 common__feedback: Показати повністю
 common__feedback-hide: Згорнути
@@ -214,15 +213,12 @@ course-edit__save: Зберегти зміни
 course-index__authors: "{count, plural, other {Автора} one {Автор} many {Авторів} few {Автори}}"
 course-index__cert: Сертифікат
 course-index__enrolled-msg: Ви записані!
-course-index__instructors: >-
-  {count, plural, other {Викладача} one {Викладач} many {Викладачів} few {Викладачі}}
 course-index__lang: Мова
 course-index__workload: Навантаження
 course-info-edit__add: Додати
 course-info-edit__author-placeholder: id автора...
 course-info-edit__authors-403: Тільки автор курсу може редагувати список авторів.
 course-info-edit__cover: "Завантажте зображення курсу: ширина = 230 px, висота = 230 px"
-course-info-edit__instructor-placeholder: id викладача...
 course-info-edit__instructors-403: Тільки автор курсу може редагувати список викладачів.
 course-info-edit__remove-author: Видалити автора
 course-info-edit__remove-instructor: Видалити викладача
@@ -402,9 +398,6 @@ footer__quiz-count: >-
   {<strong>#</strong> задач} few {<strong>#</strong> задачі}}
 footer__quiz-count-desc: Усього завдань та тестів у системі
 footer__team: Команда
-history:
-  hide-history: Сховати історію
-  show-history: Показати історію
 index__registration-link: Реєстрація
 instr-review__student-first-step: >-
   <strong>Етап 1 з 3</strong>. Щоб отримати бали, <strong>збережіть</strong> та
@@ -705,8 +698,6 @@ profile:
       }
   teaching: Викладання
 quiz:
-  correct_ratio: Правильних розв’язків
-  passed_by: Розв’язали
   score: Ви отримали
   score-max: з
   submit-failed: >-
@@ -887,8 +878,6 @@ search__no-results: Не вдалося нічого знайти
 search__search: Пошук
 section-editor__begin-date: Дата відкриття
 section-editor__step-content: Урок створений системою.
-socket:
-  status-notok: Є проблема під’єднання до сервера
 step-actions:
   actions: Налаштування етапу
   add-review: Додати рецензію
@@ -896,6 +885,8 @@ step-actions:
   download: Звантажити етап
   upload: Імпортувати етап
 step-edit:
+  history:
+    show: Показати історію
   unlock-solutions-forum-after: "після "
   unlock-solutions-forum-after-success: розв’язку
   unlock-solutions-forum-attempts: " спроб(и)"
