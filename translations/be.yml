@@ -243,7 +243,6 @@ common__delete: Выдаліць
 common__delete-failed-warn: Не атрымалася выдаліць.
 common__download-video: Спампаваць відэа
 common__edit: Рэдагаваць
-common__error-loading: "[{resource_name}] Памылка загрузкі!"
 common__expand: Разгарнуць
 common__experimental: Эксперыментальна
 common__feedback: Паказаць цалкам
@@ -453,7 +452,6 @@ course:
         Каб вы маглі апублікаваць курс з такімі наладамі, перавядзіце яго ў {planTitle}-рэжым.<br><a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Даведацца пра тарыфы</a>
 course-actions__button: Адміністраваць
 course-assessments:
-  empty: У курсе няма неправераных рашэнняў
   pending-reviews-badge: Чакаюць рэцэнзій
   submission-link: Да рашэнняў
   tab-caption: Праверка рашэнняў
@@ -497,14 +495,12 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Стваральнік} other {Стваральнікі}}"
 course-index__cert: Сертыфікат
 course-index__enrolled-msg: Вы запісаныя!
-course-index__instructors: "{count, plural, =1 {Выкладчык} other {Выкладчыкі}}"
 course-index__lang: Мова
 course-index__workload: Нагрузка
 course-info-edit__add: Дадаць
 course-info-edit__author-placeholder: id стваральніка...
 course-info-edit__authors-403: Толькі стваральнік курсу можа рэдагаваць спіс стваральнікаў ;(
 course-info-edit__cover: "Загрузіць новы лагатып курсу:<br>230 x 230"
-course-info-edit__instructor-placeholder: id выкладчыка...
 course-info-edit__instructors-403: Толькі стваральнік курсу можа рэдагаваць спіс выкладчыкаў ;(
 course-info-edit__remove-author: Выдаліць стваральніка
 course-info-edit__remove-instructor: Выдаліць выкладчыка
@@ -666,9 +662,6 @@ course-settings:
     text: Больш падрабязна аб PRO-курсах
     url: "https://welcome.stepik.org/ru/pricing"
   cancel: Адмяніць
-  convert-into-paid: Зрабіць курс платным
-  convert-into-paid-description: >-
-    Вы можаце <a href="https://welcome.stepik.org/ru/paid-courses" target="_blank">зрабіць курс платным</a> і прымаць аплату ад студэнтаў наўпрост праз Stepik.
   course-access:
     enabled: Адкрыты для праходжання
     not-enabled: Бачны толькі камандзе курса
@@ -827,7 +820,6 @@ course__reviews:
   can-review-no: "Не, дзякуй"
   can-review-yes: Пакінуць водгук
   cancel-edit: Скасаваць
-  cant-review: "Каб пакінуць водгук, прайдзіце больш {treshold}% матэрыялаў"
   change-review: Змяніць свой водгук
   create-review: Пакінуць водгук
   delete-review: Выдаліць
@@ -878,20 +870,12 @@ deadlines-editor:
   errors:
     beginDateCourse: >-
       {type, select, after-end-date {Пачатак курса мае наступіць да яго заканчэння} after-soft-deadline {Пачатак курса мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак курса мае наступіць да жорсткага дэдлайну} other {} }
-    beginDateSection: >-
-      {type, select, after-end-date {Пачатак модуля мае наступіць да яго заканчэння} before-begin-date-course {Пачатак модуля мае наступіць пасля пачатку курса} after-soft-deadline {Пачатак модуля мае наступіць да мяккага дэдлайна} after-hard-deadline {Пачатак модуля мае наступіць да жорсткага дэдлайна} other {} }
     endDateCourse: >-
       {type, select, before-begin-date {Канец курса мае наступіць пасля яго пачатку} before-soft-deadline {Канец курса мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец курса мае наступіць пасля жорсткага дэдлайну} other {} }
-    endDateSection: >-
-      {type, select, after-end-date-course {Канец модуля мае наступіць да заканчэння курсу} before-soft-deadline {Канец модуля мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец модуля мае наступіць пасля жорсткага дэдлайну} other {} }
     hardDeadlineCourse: >-
       {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца курсу} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
-    hardDeadlineSection: >-
-      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля} after-end-date {Жорсткі дэдлайн мае наступіць да канца модуля} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
     softDeadlineCourse: >-
       {type, select, after-hard-deadline {Мяккі дэдлайн курса мае наступіць да жорсткага} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца курса} other {} }
-    softDeadlineSection: >-
-      {type, select, after-hard-deadline {Мяккі дэдлайн модуля мае наступіць да жорсткага} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля} after-end-date {Мяккі дэдлайн мае наступіць да канца модуля} other {} }
   field:
     beginDateCourse: дата адкрыцця курса
     beginDateSection: дата адкрыцця модуля
@@ -996,10 +980,7 @@ errors:
   url: "{description} не з'яўляецца карэктным URL"
   wrongLength: "{description} няслушнай даўжыні (мае быць знакаў: {is})"
 exam:
-  check-proctor-session: Праверыць запіс на экзамен на ProctorEdu
   close-date: Дата закрыцця экзамену
-  confirm: >-
-    {count, plural, other {У вас ёсць # хвіліны і адзіная спроба каб здаць экзамен. Вы ўпэўнены што хочаце пачаць?} many {У вас ёсць # хвілінаў і адзіная спроба каб здаць экзамен. Вы ўпэўнены што хочаце пачаць?} few {У вас ёсць # хвіліны і адзіная спроба каб здаць экзамен. Вы ўпэўнены што хочаце пачаць?} one {У вас ёсць # хвіліна і адзіная спроба каб здаць экзамен. Вы ўпэўнены што хочаце пачаць?}}
   finish-prematurely:
     btn: Завяршыць датэрмінова
     confirm-no: "Не, працягнуць рашаць"
@@ -1035,7 +1016,6 @@ explore:
   show-all: Глядзець усё
 footer__CC_note: >-
   Публічныя ўнёскі карыстальнікаў, ліцэнзаваныя па <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-wiki</a> ліцэнзіі з абавязковым указаннем аўтарства
-footer__about: Пра нас
 footer__active-count: >-
   {count, plural, other {<strong>#</strong> актыўных студэнтаў} one {<strong>#</strong> актыўны студэнт} many {<strong>#</strong> актыўных студэнтаў} few {<strong>#</strong> актыўных студэнтаў}}
 footer__active-count-desc: >-
@@ -1057,9 +1037,6 @@ footer__terms_and_privacy: >-
 footer__url-path: "https://welcome.stepik.org/ru/"
 form-validation:
   required-footnote: "* Абавязковае поле"
-history:
-  hide-history: Схаваць гісторыю
-  show-history: Паказаць гісторыю
 import-lessons:
   btn-caption: >-
     {size, select, 0 {Прымацаваць csv файл} other {Прымацаваць csv файл (макс. {size})}}
@@ -1205,26 +1182,17 @@ invitations-modal:
   try-again: Паспрабуйце яшчэ раз.
   unique-emails: >-
     {count, plural, one {Прачытаны # унікальны email адрас} few {Прачытана # унікальных email адрасы} many {Прачытана # унікальных email адрасоў} other {Прачытана # унікальных email адрасоў} }
-invite_friends_subtitle: Запрасіце сяброў вучыцца разам на Stepik.
-invite_friends_title: За адной партай
 klass:
   add-assistant: Дадаць выкладчыка
-  add-assistant__error: Не атрымалася дадаць выкладчыка
-  add-assistant__label: ID карыстальніка
-  add-assistant__success: Выкладчык паспяхова дададзены
   assistants: Выкладчыкі класа
   assistants-subpage: Выкладнікі класа
   course: Курс
-  dismiss-assistant__confirm: "Вы ўпэўнены, што хочаце выдаліць выкладчыка {name}?"
-  dismiss-assistant__error: "Не атрымалася выдаліць выкладчыка {name}"
   dismiss-student-confirm:
     cancel: Не, пакінуць
     confirm: Так, адлічыць
     text: >-
       <h4>Адлічыць {name} з класа?</h4> <p>{name} працягне навучанне на курсе, але вы страціце доступ да яго/яе рашэнняў і ацэнак у класе.</p>
   dismiss-student-success: "{name} адлічаны з класа"
-  dismiss-student__confirm: "Вы ўпэўнены, што хочаце адлічыць студэнта {name}?"
-  dismiss-student__error: "Не атрымалася адлічыць студэнта {name}"
   edit: Рэдагаваць
   error-leave: Не атрымалася пакінуць клас
   gradebook:
@@ -1566,19 +1534,10 @@ plan-card:
     details-text: >-
       Каб улічваць курс у вашай падпісцы, <a href='mailto:support@stepik.org'>напішыце нам</a> на support@stepik.org з просьбай стаць асноўным адміністратарам курса.
     details-toggler: Змяніць
-    text: "Курс улічваецца ў падпісцы <a href='{ownerURL}'>{ownerName}</a>"
-  text-free: >-
-    <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Аформіце падпіску</a>, каб атрымаць доступ да пашыранай функцыянальнасці курса
-  text-limit: >-
-    <a href='/edit-profile/subscription'>Памяняйце план</a>, каб павялічыць колькасць даступных {courseType}-курсаў. Або зрабіце адзін з сваіх {courseType}-курсаў базавым.
-  text-want-more: >-
-    <a href="/edit-profile/subscription">Хачу болей</a>
   title: "Ваш бягучы план"
   title-owner: "План уладальніка курса"
 plan-upgrade-card:
   button: Палепшыць план
-  text: >-
-    Патрэбны доступ да табеля паспяховасці, справаздач, спісу студэнтаў? Хочаце выкарыстоўваць праверку рашэнняў выкладчыкам альбо атрымліваць палепшаную падтрымку? <a href='https://welcome.stepik.org/ru/pricing' target='_blank' style='white-space: nowrap'>Даведацца пра тарыфы</a>
   title: Палепшыць тарыфны план
 plans:
   ask_questions: >-
@@ -2123,8 +2082,6 @@ promocode-editor:
     date: Дзейнічае да
     discount: Зніжка, {currency}
     name: Прамакод
-  max-discount-info: >-
-    Даданне новых прамакодаў магчыма толькі пры кошце курсу большым за <b>{overheadCost}</b>.
   modal:
     delete:
       cancel: Не, пакінуць
@@ -2146,8 +2103,6 @@ promocode-editor:
   prolong: Падоўжыць
   until: да
 quiz:
-  correct_ratio: Паспяховых рашэнняў
-  passed_by: Рашыла
   score: Вы атрымалі
   score-max: З
   submit-failed: >-
@@ -2624,8 +2579,6 @@ section_edit:
   settings: "Налады модуля"
   settings_title: 'Налады модуля "{name}"'
 shortened-text-show-more: Яшчэ
-socket:
-  status-notok: Ёсць праблемы з падключэннем да сервера
 step-actions:
   actions: Налады кроку
   add-new-step: Дадаць новы крок
@@ -2672,7 +2625,6 @@ step-edit:
   unlock-solutions-forum-settings-title: Абмеркаванне рашэнняў
   wrong-submission-feedback: Гэты тэкст будзе паказаны вучню ў выпадку няправільнага адказу.
 step__add-info: Выберыце тып кроку
-step__from: з
 step__next-tooltip: Наступны крок
 step__not-found: "Крок № {position} не быў знойдзены."
 step__not-ready-warn: 'Выбачайце, гэтая задача яшчэ не гатовая.<br/>Статус задачы:"{status}".'
@@ -3011,11 +2963,6 @@ user__edit:
       trial-note: Першыя 2 тыдні бясплатна
     subscribe-btn: >-
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць} other {Аформіць} } падпіску
-    subscribe-description:
-      charge: >-
-        Пачынаючы з <b>{chargeDate, date, medium-date}</b> {type, select, basic {грошы больш спісвацца не будуць} other {плацёж у <b>{priceText}</b> будзе спісвацца штомесяц да заканчэння падпіскі} }.
-      trial: >-
-        <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага перыяду вы будзеце плаціць {priceText} на месяц.</p>
     subscribe-footnote: >-
       Мы выкарыстоўваем <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a> для апрацоўкі вашых плацяжоў.
     title: Мой тарыфны план
