@@ -92,6 +92,11 @@ breadcrumbs__review-session: Рэцэнзіі
 breadcrumbs__submissions: Рашэнні
 button__new-course: Стварыць курс
 button__new-lesson: Стварыць ўрок
+catalog-beta:
+  filters-dialog:
+    langs: "{lang, select, ru {Руская} en {Англійская} other {Любая}}"
+  search-empty: >-
+    Па запыце «<var>{query}</var>» нічога не знойдзена. Паспрабуйце змяніць параметры пошуку{hasAnyFilters, select, true { ці <a href="{resetFiltersHref}">скінуць фільтры</a>} other {} }.
 certificate-editor:
   auto-issue-label: Выпускаць аўтаматычна
   auto-issue-text:
@@ -216,8 +221,10 @@ comments__unpin: Адмацаваць
 comments__unpin-tooltip: Каказваць гэты каментар у звычайным парадку (не перад іншымі)
 comments__without-submissions: "У вас няма рашэнняў, якія можна апублікаваць"
 common:
+  choose: Абярыце
   end: сканчэнне
   pin: Замацаваць
+  price-enrolled: Вы запісаныя
   price-free: Бясплатна
   start: пачатак
   unpin: Адмацаваць
@@ -226,6 +233,7 @@ common__back-link: Назад
 common__back-to-step-link: Назад да кроку
 common__banner-unverified-email: >-
   <a href="/edit-profile/email">Падцвердзіце</a> свой email, каб працягнуць карыстацца Stepik.
+common__cancel-button: Адмяніць
 common__catalog: Каталог
 common__certificate: Сертыфікат
 common__certificate-distinction: Сертыфікат з адзнакай
@@ -243,6 +251,8 @@ common__delete: Выдаліць
 common__delete-failed-warn: Не атрымалася выдаліць.
 common__download-video: Спампаваць відэа
 common__edit: Рэдагаваць
+common__error-loading: >-
+  Не атрымалася загрузіць {resourceName, select, invitation {запрашэнні} member {удзельнікаў} course {спіс курсаў} lesson {спіс урокаў} klass {спіс класаў} comment {каментары} other {спіс аб'ектаў {resourceName}} }.
 common__expand: Разгарнуць
 common__experimental: Эксперыментальна
 common__feedback: Паказаць цалкам
@@ -269,6 +279,8 @@ common__my-courses: Мае курсы
 common__notifications: Апавяшчэнні
 common__number-sign: ' №'
 common__off: выкл.
+common__ok-button: Зразумела
+common__oops: Нешта пайшло не так :(
 common__out-of-points: "{count, plural, one {# балa} other {# балаў}}"
 common__platform-news: Што новага
 common__points: "{count, plural, one {# бал} few {# бала} other {# балаў}}"
@@ -371,6 +383,7 @@ cost:
   submissions-left: >-
     Усяго {count, plural, one {<strong>#</strong> спроба} few {<strong>#</strong> спробы} many {<strong>#</strong> спробаў} other {<strong>#</strong> спробаў} }
 course:
+  access_restricted: Курс закрыты на дапрацоўку.
   draft: У распрацоўцы
   edit-btns:
     info: Рэдагаваць інфармацыю пра курс
@@ -452,11 +465,15 @@ course:
         Каб вы маглі апублікаваць курс з такімі наладамі, перавядзіце яго ў {planTitle}-рэжым.<br><a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Даведацца пра тарыфы</a>
 course-actions__button: Адміністраваць
 course-assessments:
+  empty: Усе рашэнні правераныя
   pending-reviews-badge: Чакаюць рэцэнзій
   submission-link: Да рашэнняў
   tab-caption: Праверка рашэнняў
   title: >-
     {count, plural, one {# рашэнне чакае рэцэнзіі} few {# рашэнні чакаюць рэцэнзій} many {# рашэнняў чакаюць рэцэнзій} other {# рашэнняў чакаюць рэцэнзій} }
+course-cards:
+  certificate: сертыфікат
+  workload: "{hours} г"
 course-edit__back: Вярнуцца ў курс
 course-edit__cancel: Адмена
 course-edit__new-module: Новы модуль
@@ -495,12 +512,14 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Стваральнік} other {Стваральнікі}}"
 course-index__cert: Сертыфікат
 course-index__enrolled-msg: Вы запісаныя!
+course-index__instructors: Паказаць у якасці выкладчыкаў
 course-index__lang: Мова
 course-index__workload: Нагрузка
 course-info-edit__add: Дадаць
 course-info-edit__author-placeholder: id стваральніка...
 course-info-edit__authors-403: Толькі стваральнік курсу можа рэдагаваць спіс стваральнікаў ;(
 course-info-edit__cover: "Загрузіць новы лагатып курсу:<br>230 x 230"
+course-info-edit__instructor-placeholder: ID карыстальніка
 course-info-edit__instructors-403: Толькі стваральнік курсу можа рэдагаваць спіс выкладчыкаў ;(
 course-info-edit__remove-author: Выдаліць стваральніка
 course-info-edit__remove-instructor: Выдаліць выкладчыка
@@ -612,6 +631,9 @@ course-permissions-edit:
     Больш падрабязна <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>пра тарыфы</a>
   tariff-info: "Кіраваць правамі доступу можна толькі ў <b>{plan}-курсах</b>."
   title-prefix: Налады доступу курса
+  transfer-ownership: Змяніць уладальніка
+  transfer-ownership-description: >-
+    Вы можаце <a href="{transferOwnershipURL}" data-href-to-ignore>перадаць курс</a> іншаму карыстальніку. Пасля гэтага ён будзе ўлічвацца ў падпісцы новага ўладальніка.
   user-is-admin: асноўны адміністратар
 course-promo:
   about-course: Пра курс
@@ -661,7 +683,16 @@ course-settings:
   about-pro-link:
     text: Больш падрабязна аб PRO-курсах
     url: "https://welcome.stepik.org/ru/pricing"
+  beneficiaries: >-
+    {count, plural, =0 { <a href="https://support.stepik.org/hc/ru/requests/new" target="_blank" >Звярніцеся ў падтрымку</a>, каб атрымліваць сродкі з продажу курса. } =1 {Выручку з продажаў атрымлівае} other {Выручку з продажаў атрымліваюць} }
   cancel: Адмяніць
+  commission: >-
+    {equal, select, true { Мы бярэм камісію <b>{commissionPromo}%</b> з усіх продажаў дадзенага курса. } other { Мы бярэм камісію <b>{commissionPromo}%</b> з продажаў пры <a href="https://support.stepik.org/hc/ru/articles/360016290639" target="_blank">нашым удзеле ў прасоўванні</a> курсу, і <b>{commissionBasic}%</b>, калі вы прыцягваеце студэнтаў самі. } }
+  convert-into-paid:
+    description: >-
+      Вы можаце <a href="{url}" class="link-primary">зрабіць курс платным</a> і прымаць аплату ад студэнтаў наўпрост праз Stepik.
+    title: Зрабіць курс платным
+    title-with-price: Заяўлены кошт курса — {price}
   course-access:
     enabled: Адкрыты для праходжання
     not-enabled: Бачны толькі камандзе курса
@@ -676,6 +707,12 @@ course-settings:
   disabled-not-owner: Каб атрымаць дадатковыя правы, звярніцеся да <a href="{ownerURL}">{ownerName}</a>.
   owner-limit-note: >-
     <p>Папрасіце <b>{ownerName}</b> перавесці курс у PRO-рэжым.</p> <p>Або напішыце нам на support@stepik.org, каб стаць асноўным адміністратарам курса і ўлічваць яго ў вашай падпісцы.</p>
+  preview-lesson:
+    added: Азнаямленчы ўрок дададзены
+    changed: Азнаямленчы ўрок зменены
+    choose: Абраць
+    choose-note: Дадайце адкрыты азнаямленчы ўрок, які можна будзе паглядзець, перш чым купіць курс.
+    deleted: Азнаямленчы ўрок выдалены
   price-title: Кошт курсу - {price}
   promocode-editor-title: Прамакоды
   save: Ужыць змены
