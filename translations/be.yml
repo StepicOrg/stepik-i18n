@@ -713,8 +713,43 @@ course-settings:
     choose: Абраць
     choose-note: Дадайце адкрыты азнаямленчы ўрок, які можна будзе паглядзець, перш чым купіць курс.
     deleted: Азнаямленчы ўрок выдалены
+    dialog:
+      filter-no-results: >-
+        <p>Адкрытых урокаў у гэтым курсе па такім запыце ня знойдзена.</p> <p>Праверце, ці патрэбны ўрок настроены як <b>публічны</b>, альбо змяніце параметры пошуку.</p>
+      filter-placeholder: Назва ўрока з гэтага курса
+      more-about: >-
+        <a target="_blank" href="https://support.stepik.org/hc/ru/articles/360013947659">Больш падрабязна пра прома-ўрокі</a>
+      no-items: >-
+        <p>Адкрытых урокаў у гэтым курсе пакуль няма.</p> <p>Спачатку пастаўце патрэбнаму ўроку статус «<b>Публічны</b>» ў наладах.</p>
+      title: Абярыце бясплатны азнаямленчы ўрок
+    edit: Змяніць
+    title: Бясплатны азнаямленчы ўрок
+  price-change: Змяніць цану
+  price-editor:
+    description: >-
+      Вы можаце <button>зрабіць курс платным</button> і прымаць аплату ад студэнтаў наўпрост праз Stepik.
+    errors:
+      price-gte: Задайце цану ад {price}
+      price-invalid-format: Укажыце карэктную цану
+      price-lte: Задайце цану да {price}
+    price-footnote: Мае быць ад {gtePrice}
+    price-free-note: >-
+      Каб зрабіць курс бясплатным, <a href="https://support.stepik.org/hc/ru/requests/new" target="_blank">напішыце нам</a>.
+    price-label: "{change, select, true {Новая цана} other {Цана}}"
+    submit: >-
+      {hasPrice, select, true { {change, select, true {Змяніць цану на} other {Прызначыць цану ў}}&nbsp;{price} } other { {change, select, true {Змяніць цану} other {Прызначыць цану}} }}
+    terms: Умовы аказання паслугі
+    terms-link: https://support.stepik.org/hc/ru/articles/360018110654
+    title: Зрабіць курс платным
   price-title: Кошт курсу - {price}
   promocode-editor-title: Прамакоды
+  publication: Публікацыя
+  requests:
+    approved-desc: >-
+      Праверка фінансавай інфармацыі прайшла паспяхова. Вам цяпер даступныя продажы {currencies, select, RUBUSD {ў рублях і далярах.} RUB {ў рублях.} USD {ў далярах.} other {.} }<br> Далей мяняць цану і рабіць курсы платнымі вы зможаце самі.
+    approved-desc-admin: Курс пераведзены ў платны рэжым.
+    edit: Змяніць заяўку
+    edit-fd: Змяніць свае рэквізіты
   save: Ужыць змены
   save-error-woof: Не атрымалася захаваць курс.
   save-success-woof: Захавана.
@@ -2627,6 +2662,19 @@ step-edit:
   add-step: + дадаць крок
   correct-submission-feedback: Гэты тэкст будзе паказаны вучню ў выпадку дакладнага адказу.
   hide-advanced-settings: Схаваць дадатковыя налады
+  history:
+    diff-method:
+      json: json (word wrap)
+      json-no-wrap: json
+      lines: радкі
+      words: словы
+    diff-method-title: "Розніца:"
+    modal-title: "Гісторыя зменаў крока {stepPos} урока «{lessonTitle}»"
+    settings-block: Налады
+    show: Паказаць гісторыю
+    snapshot-apply: Выкарыстоўваць гэтую версію
+    snapshot-size: "{size, plural, few {# байта} other {# байт}}"
+    text-block: Тэкст
   limit-submissions-settings-description: "Пасылаць рашэнні можна:"
   limit-submissions-settings-inf: Без абмежаванняў
   limit-submissions-settings-note: >-
@@ -2679,6 +2727,9 @@ step__templates:
   text: >-
     Вы можаце дадаць у гэты крок тэкст, а таксама малюнкі, матэматычныя формулы, прыклады кода і шмат іншага.
 submissions:
+  actions:
+    filter: Фільтр па карыстальніку
+    gradebook: Табель
   cant-review:
     another: Іншае рашэнне адпраўлена на рэцэнзію
     evaluation: Адказ у апрацоўцы
@@ -2795,6 +2846,13 @@ teach:
     empty: >-
       У вас пакуль няма класаў. <a href='https://welcome.stepik.org/ru/class' target='_blank'>Што такое клас?</a>
     gradebook: Табель
+    remove-modal:
+      cancel: Не, адмяніць
+      confirm-checkbox: Я разумею, што выдалю клас назаўсёды і не змагу вярнуць дадзеныя
+      ok: Так, выдаліць назаўсёды
+      text: >-
+        <h4>Выдаліць клас «{title}»?</h4> <p>Студэнты гэтага класа застануцца запісанымі на курс, але вы страціце доступ да іх рашэнняў і ацэнак.</p>
+    remove-success: Клас «{title}» выдалены
     reports: Справаздачы
     submissions: Рашэнні
     title: Класы
@@ -2831,6 +2889,10 @@ teach:
     no-results-reset-link: Скінуць фільтры
     orphaned: Па-за курсам
     permissions: Правы доступу
+    remove-modal:
+      cancel: Не, адмяніць
+      confirm-checkbox: Я разумею, што выдалю ўрок назаўсёды і не змагу вярнуць дадзеныя
+      ok: Так, выдаліць назаўсёды
     reports: Справаздачы
     search-placeholder: Назва ці ID урока
     steps-count: >-
