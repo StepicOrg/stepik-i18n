@@ -13,6 +13,6 @@
     "test": "cd ./node_modules/stepik-i18n-dummy && npm test"
   },
   "devDependencies": {
-    "stepik-i18n-dummy": "github:StepicOrg/stepik-i18n-dummy#f99a71d"
+    "stepik-i18n-dummy": "github:StepicOrg/stepik-i18n-dummy#3ec3fddef03f458bacb089b352a52e20c84c5c03"
   }
 }
