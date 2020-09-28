@@ -750,6 +750,13 @@ course-settings:
     approved-desc-admin: Курс пераведзены ў платны рэжым.
     edit: Змяніць заяўку
     edit-fd: Змяніць свае рэквізіты
+    no-response: >-
+      Калі адказ не прыйшоў да <b>{date}</b>, <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://support.stepik.org/hc/ru/requests/new">напішыце нам</a> на support@stepik.org.
+    pending-desc: Заяўка разглядаецца мадэратарамі Stepik.
+    rejected-desc: >-
+      Заяўка на падлучэнне аплаты адхіленая, падрабязнасці адпраўленыя {email, select, false { на пошту <a href="{link}">{name}</a>. } other { вам на пошту {email}. }}
+    send-again: Адправіць заяўку яшчэ раз
+    start-earning: Каб пачаць прадаваць курс, адкрыйце курс для праходжання
   save: Ужыць змены
   save-error-woof: Не атрымалася захаваць курс.
   save-success-woof: Захавана.
@@ -892,6 +899,7 @@ course__reviews:
   can-review-no: "Не, дзякуй"
   can-review-yes: Пакінуць водгук
   cancel-edit: Скасаваць
+  cant-review: "Каб пакінуць водгук, прайдзіце больш за {threshold}% матэрыялаў"
   change-review: Змяніць свой водгук
   create-review: Пакінуць водгук
   delete-review: Выдаліць
@@ -942,12 +950,20 @@ deadlines-editor:
   errors:
     beginDateCourse: >-
       {type, select, after-end-date {Пачатак курса мае наступіць да яго заканчэння} after-soft-deadline {Пачатак курса мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак курса мае наступіць да жорсткага дэдлайну} other {} }
+    beginDateSection: >-
+      {type, select, after-end-date {Пачатак модуля мае наступіць да яго заканчэння} before-begin-date-course {Пачатак модуля мае наступіць пасля пачатку курса} after-end-date-course {Пачатак модуля мае наступіць да заканчэння курсу} after-soft-deadline {Пачатак модуля мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак модуля мае наступіць да жорсткага дэдлайну} other {} }
     endDateCourse: >-
       {type, select, before-begin-date {Канец курса мае наступіць пасля яго пачатку} before-soft-deadline {Канец курса мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец курса мае наступіць пасля жорсткага дэдлайну} other {} }
+    endDateSection: >-
+      {type, select, after-end-date-course {Канец модуля мае наступіць да заканчэння курсу} before-begin-date-course {Канец модуля мае наступіць пасля пачатку курса} before-soft-deadline {Канец модуля мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец модуля мае наступіць пасля жорсткага дэдлайну} other {} }
     hardDeadlineCourse: >-
       {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца курсу} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
+    hardDeadlineSection: >-
+      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Жорсткі дэдлайн мае мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Жорсткі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца модуля} after-end-date-course {Жорсткі дэдлайн модуля мае наступіць да канца курсу} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
     softDeadlineCourse: >-
       {type, select, after-hard-deadline {Мяккі дэдлайн курса мае наступіць да жорсткага} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца курса} other {} }
+    softDeadlineSection: >-
+      {type, select, after-hard-deadline {Мяккі дэдлайн модуля мае наступіць да жорсткага} after-hard-deadline-course {Мяккі дэдлайн модуля мае наступіць да жорсткага дэдлайну курсу} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца модуля} after-end-date-course {Мяккі дэдлайн модуля мае наступіць да канца курсу} other {} }
   field:
     beginDateCourse: дата адкрыцця курса
     beginDateSection: дата адкрыцця модуля
@@ -1053,6 +1069,8 @@ errors:
   wrongLength: "{description} няслушнай даўжыні (мае быць знакаў: {is})"
 exam:
   close-date: Дата закрыцця экзамену
+  confirm: >-
+    У вас ёсць {count, plural, one {# хвіліна} few {# хвіліны} other {# хвілінаў}} і адзіная спроба, каб здаць іспыт. Вы ўпэўненыя, што жадаеце пачаць?
   finish-prematurely:
     btn: Завяршыць датэрмінова
     confirm-no: "Не, працягнуць рашаць"
@@ -1088,10 +1106,13 @@ explore:
   show-all: Глядзець усё
 footer__CC_note: >-
   Публічныя ўнёскі карыстальнікаў, ліцэнзаваныя па <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-wiki</a> ліцэнзіі з абавязковым указаннем аўтарства
+footer__about: Аб праекце
+footer__academy: Stepik Акадэмія
 footer__active-count: >-
   {count, plural, other {<strong>#</strong> актыўных студэнтаў} one {<strong>#</strong> актыўны студэнт} many {<strong>#</strong> актыўных студэнтаў} few {<strong>#</strong> актыўных студэнтаў}}
 footer__active-count-desc: >-
   Унікальныя зарэгістраваныя карыстальнікі, якія актыўна здаюць заданні ў апошнія 3 месяцы
+footer__careers: Вакансіі
 footer__contacts: Кантакты
 footer__copyright: "© 2013 - {currentYear}. Stepik"
 footer__helpcenter: Дапамога
@@ -1256,14 +1277,26 @@ invitations-modal:
     {count, plural, one {Прачытаны # унікальны email адрас} few {Прачытана # унікальных email адрасы} many {Прачытана # унікальных email адрасоў} other {Прачытана # унікальных email адрасоў} }
 klass:
   add-assistant: Дадаць выкладчыка
+  add-assistant-error: Не атрымалася дадаць выкладчыка
+  add-assistant-label: ID карыстальніка
+  add-assistant-placeholder: "123456"
+  add-assistant-success: "{name} дададзены ў выкладчыкі"
   assistants: Выкладчыкі класа
   assistants-subpage: Выкладнікі класа
   course: Курс
+  dismiss-assistant-confirm:
+    cancel: Не, адмяніць
+    confirm: Так, выдаліць
+    text: >-
+      <h4>Выдаліць {name} з выкладчыкаў класа?</h4> <p>{name} страціць доступ да рашэнняў і ацэнак класа.</p>
+  dismiss-assistant-error: "Не атрымалася выдаліць выкладчыка {name}"
+  dismiss-assistant-success: "{name} выдалены з выкладчыкаў класа"
   dismiss-student-confirm:
     cancel: Не, пакінуць
     confirm: Так, адлічыць
     text: >-
       <h4>Адлічыць {name} з класа?</h4> <p>{name} працягне навучанне на курсе, але вы страціце доступ да яго/яе рашэнняў і ацэнак у класе.</p>
+  dismiss-student-error: "Не атрымалася адлічыць студэнта {name}"
   dismiss-student-success: "{name} адлічаны з класа"
   edit: Рэдагаваць
   error-leave: Не атрымалася пакінуць клас
@@ -1334,6 +1367,7 @@ klasses:
   my-students: Мае студэнты
 lesson:
   draft: Чарнавік
+  expand-toc-sidebar: Змест
   instructor:
     edit-permissions: Доступ да ўрока
   likes:
@@ -1341,6 +1375,7 @@ lesson:
     liked: Вам спадабаўся гэты ўрок
   private: Прыватны
   public: Публічны
+  step-position: "Крок {index} з {count}"
   toc-show: Паказаць спіс урокаў курса
   updated: Апошняе абнаўленне
 lesson-actions:
@@ -1581,6 +1616,13 @@ org:
   no_courses: Курсы не знойдзены
   no_lessons: Урокі не знойдзены
   students_tab: Мае студэнты
+paid-course-requests:
+  edit:
+    desc: >-
+      Заяўка будзе разгледжана камандай нашых мадэратараў на працягу трох рабочых дзён, да яе адабрэння будзе выкарыстоўвацца бягучая версія рэквізітаў.
+    error: Не атрымалася абнавіць заяўку
+    success: Заяўка паспяхова абноўлена
+    title: Змяніць заяўку для курса
 peer-review__first-step: >-
   <strong>Этап 1 з 4</strong>. Каб атрымаць балы, <strong>захавайце</strong> і <strong>адпраўце</strong> лепшае рашэнне на рэцэнзію <strong>іншым вучням</strong>
 peer-review__fourth-step: >-
