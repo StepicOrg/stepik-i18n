@@ -3241,9 +3241,14 @@ user__edit:
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць} other {Аформіць} } падпіску
     subscribe-description:
       cancel-trial: Грошы не будуць спісаныя з карты.
+      charge: >-
+        Пачынаючы з <b>{chargeDate, date, medium-date}</b> {type, select, basic {грошы больш спісвацца не будуць} other {плацёж у <b>{priceText}</b> будзе спісвацца {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц} } да адмены падпіскі} }.
+      will-trial: >-
+        <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага перыяду вы будзеце плаціць {priceText} {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц}}.</p>
     subscribe-footnote: >-
       Мы выкарыстоўваем <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a> для апрацоўкі вашых плацяжоў.
     title: Мой тарыфны план
+    trial: Пробны перыяд
     valid-perpetual: Бестэрміновая падпіска
     valid-until: "Падпіска дзейнічае да <b>{validUntil, date, medium-date}</b>"
   time:
@@ -3282,6 +3287,8 @@ user__lock-course-title: Гэты курс даступны абмежавана
 user__lock-title: Гэты ўрок даступны абмежаванаму колу асоб
 user__profile: Профіль
 user__reputation-title: Рэпутацыя
+users-list:
+  me: "(я)"
 video-editor:
   error: >-
     Падчас загрузкі відэа ({video_id}){filename} адбылася памылка. Праверце, што вы загрузілі правільны файл.
