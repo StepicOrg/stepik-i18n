@@ -3011,6 +3011,92 @@ ufd-form:
     caption: Каментар
     footnote: Апцыянальна
     title: Дадатковая інфармацыя
+  common:
+    digits-field-footnote: "{length, plural, one {# цифра} few {# цифры} other {# цифр}}"
+  course-price:
+    caption: Цана
+    title:
+      default: Устанавіце цану на курс
+      filled: Заяўлены кошт - {price}
+  currencies:
+    currencies:
+      error: Абярыце валюту продажаў
+      options:
+        RUB: '₽ - выплата сродкаў у РФ па рэквізітах'
+        USD: >-
+          $ — выплата сродкаў у любой краіне свету праз <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://vendors.paddle.com">Paddle</a>
+      title: У якой валюце вы будзеце прадаваць курсы?
+    email:
+      caption: Кантактны email
+      footnote: Для адпраўкі плацёжных дакументаў
+      hint: >-
+        Для сувязі з вамі мы выкарыстоўваем асноўны email вашага акаўнта, які можна змяніць у профілі.
+    terms:
+      error: Каб прадаваць курсы на Stepik, вы павінны пагадзіцца з нашымі ўмовамі
+      options:
+        RUB: >-
+          Я прачытаўшы і прымаю <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://docs.google.com/document/u/1/d/e/2PACX-1vQFH0HJRW6X9qFe_LiIaS3kT6j1E9VmL1A2ipanD3BGu4paDdidfEAouXeYMKCIX3I_LvURwshcT2E-/pub" >аферту (агенцкую дамову) аб продажах курсаў у рублях</a>
+        USD: >-
+          Я прачытаўшы і прымаю <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://docs.google.com/document/d/e/2PACX-1vRAVAQy1roffFBYSUVeJjL-aLqyyEwR9Ewo4ux7Qgs5I-iHLy4K-xPy4viX2xXgwtgxS82cnafjk2_h/pub" >пагадненне аб продажах курсаў у далярах</a>
+      title: Азнаёмцеся з умовамі Stepik на размяшчэнне платных курсаў
+    title:
+      currencies: "{value, select, RUB {рублях} USD {далярах} other {{value}}}"
+      default: Прыміце ўмовы Stepik на размяшчэнне платных курсаў
+      filled: Продаж курсаў у {currencies}
+  errors:
+    presence: Запоўніце поле
+    select-value: Абярыце значэнне
+  next: Далей
+  next-validation-error: Запоўніце палі формы правільна, каб працягнуць
+  prev: Назад
+  requisites-dummy:
+    title: Запоўніце рэквізіты для пералічэння грашовых сродкаў ад продажаў
+  requisites-rub:
+    bank-account:
+      caption: Разліковы рахунак
+    bank-bic:
+      caption: БІК банка
+    bank-fields-title: Куды пералічваць выручку з продажаў
+    form:
+      options: >-
+        {value, select, individual {Фізасоба} self_employed {Самазанятасць} individual_entrepreneur {ІП} company {Юрыдычная асоба} other {{value}} }
+      title: Вы дзейнічаеце як
+    fullname:
+      caption: "{form, select, company {Прозвішча, імя, імя па-бацьку прадстаўніка} other {Прозвішча, імя, імя па-бацьку}}"
+      footnote: Як у пашпарце
+      placeholder: Іваноў Іван Іванавіч
+    inn:
+      caption: ІНП
+    kpp:
+      caption: КПП
+    legal-title:
+      caption: Назва юрыдычныя асобы
+      placeholder: ТАА «Рамонак»
+    passport:
+      caption: Пашпарт
+      footnote: Нумар, калі выдадзены, кім і дзе выдадзены
+    rus:
+      caption: Грамадзянства РФ
+    tax:
+      caption: Сістэма падаткаабкладання
+      options: >-
+        {value, select, general_tax_system {Агульная} simple_tax_system_income {Спрошчаная: даходы} simple_tax_system_income_minus_expense {Спрошчаная: даходы мінус выдаткі} single_tax_on_imputed_income {Адзіны падатак на ўменены даход} unified_agricultural_tax {Адзіны сельскагаспадарчы падатак} patent_tax_system {Патэнтавая} other {{value}} }
+    title:
+      default: Запоўніце рэквізіты для пералічэння грашовых сродкаў у РФ
+      filled-ie: ІП {fullname}
+    vat:
+      caption: Cтаўка ПДВ
+      options: >-
+        {value, select, no_vat {Без ПДВ} vat_0 {0%} vat_10 {10%} vat_20 {20%} vat_10_110 {10/110} vat_20_120 {20/120} other {{value}} }
+  requisites-usd:
+    info: >-
+      Каб прымаць плацяжы ў далярах, вы павінны быць зарэгістраваныя ў <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://vendors.paddle.com/signup"> Paddle</a>.
+      <br>Вы можаце знайсці ваш Paddle Vendor ID на <a target="_blank" rel="noopener noreferrer" class="link-primary" href="https://vendors.paddle.com/account">старонцы аўтэнтыфікацыі</a> ў вашым акаўнце Paddle.
+    paddle:
+      caption: Paddle Vendor ID
+    title:
+      default: Запоўніце рэквізіты для пералічэння грашовых сродкаў у Paddle
+      filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Дадаць ваш існуючы ўрок
   import: Імпартаваць урокі з файла
@@ -3020,6 +3106,15 @@ unit_edit:
   not-saved: Урок не захаваны
   restore: Аднавіць
   title_placeholder: Калі ласка, увядзіце назву новага ўрока і націсніце Enter.
+user-card:
+  created_courses_count: >-
+    {count, plural, one {# курс} few {# курсы} other {# курсаў} }
+  followers_count: "{count} падпісантаў"
+  issued_certificates_count: >-
+    {count, plural, other {# сертыфіката выпушчана} many {# сертыфікатаў выпушчана} few {# сертыфікаты выпушчана} one {# сертыфікат выпушчаны}}
+user-financial-details:
+  success: Рэквізіты паспяхова абноўленыя
+  title: Абнавіць свае рэквізіты
 user-subscribe:
   followers: "{followers_count} падпісантаў"
   has-followers: >-
@@ -3122,6 +3217,7 @@ user__edit:
         choose-plan: Абраць
         contact-us: Напішыце нам
         contact-us-href: 'https://welcome.stepik.org/ru/pricing#write_us'
+        continue-plan: Падоўжыць
         course-count-select: >-
           {count} {type, select, pro {PRO-} enterprise {Enterprise-} other {} }{count, plural, one {курс} few {курсы} other {курсаў}}
         course-count-select-more: 'Трэба больш курсаў?<br> <a href="https://welcome.stepik.org/ru/pricing#write_us" target="_blank">Напішыце нам</a>'
@@ -3143,6 +3239,8 @@ user__edit:
       trial-note: Першыя 2 тыдні бясплатна
     subscribe-btn: >-
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць} other {Аформіць} } падпіску
+    subscribe-description:
+      cancel-trial: Грошы не будуць спісаныя з карты.
     subscribe-footnote: >-
       Мы выкарыстоўваем <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a> для апрацоўкі вашых плацяжоў.
     title: Мой тарыфны план
