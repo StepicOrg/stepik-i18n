@@ -95,13 +95,16 @@ breadcrumbs__review-session: Рэцэнзіі
 breadcrumbs__submissions: Рашэнні
 button__new-course: Стварыць курс
 button__new-lesson: Стварыць ўрок
-catalog-beta:
+catalog:
   filters-dialog:
-    langs: "{lang, select, ru {Руская} en {Англійская} other {Любая}}"
-  search-empty: >-
-    Па запыце «<var>{query}</var>» нічога не знойдзена. Паспрабуйце змяніць параметры
-    пошуку{hasAnyFilters, select, true { ці <a href="{resetFiltersHref}">скінуць фільтры</a>} other
-    {} }.
+    language-values: "{lang, select, ru {Руская} en {Англійская} other {Любая}}"
+  search:
+    empty: >-
+      Па запыце «<var>{query}</var>» нічога не знойдзена. Паспрабуйце змяніць параметры
+      пошуку{hasAnyFilters, select,
+        true { ці <a href="{resetFiltersHref}">скінуць фільтры</a>}
+        other {}
+      }.
 certificate-editor:
   auto-issue-label: Выпускаць аўтаматычна
   auto-issue-text:
@@ -405,7 +408,6 @@ cost:
     Усяго {count, plural, one {<strong>#</strong> спроба} few {<strong>#</strong> спробы} many
     {<strong>#</strong> спробаў} other {<strong>#</strong> спробаў} }
 course:
-  access_restricted: Курс закрыты на дапрацоўку.
   draft: У распрацоўцы
   edit-btns:
     info: Рэдагаваць інфармацыю пра курс
@@ -457,6 +459,14 @@ course:
       basic_paid: Базавы+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Базавы}
+          basic_paid {Базавы+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Дэдлайны ў курсе
       exams: Экзамены
@@ -496,7 +506,7 @@ course-assessments:
   title: >-
     {count, plural, one {# рашэнне чакае рэцэнзіі} few {# рашэнні чакаюць рэцэнзій} many {# рашэнняў
     чакаюць рэцэнзій} other {# рашэнняў чакаюць рэцэнзій} }
-course-cards:
+course-card:
   certificate: сертыфікат
   workload: "{hours} г"
 course-edit__back: Вярнуцца ў курс
@@ -834,12 +844,6 @@ course-syll__compact-progress: адсотак пройдзеных крокаў
 course-syll__ends: Дата сканчэння
 course-syll__scores: ваш / макс бал
 course-syllabus__closed-yet: Гэты модуль закрыты
-course-syllabus__required-module-message: >-
-  {count, plural, other {# балаў у модулі {position} ({title})} one {# бал у модулі {position}
-  ({title})} many {# балаў у модулі {position} ({title})} few {# бала ў модулі {position}
-  ({title})}}
-course-syllabus__required-module-message-percent: "{percent}% балаў у модулі {position} ({title})"
-course-syllabus__required-module-message-title: "Умова адкрыцця:"
 course__add-annon: Дадаць навіну
 course__add-to-archived-link: Перамясціць у архіў
 course__add-to-favorites-link: Дадаць у абранае
@@ -1191,9 +1195,6 @@ errors:
   wrongLength: "{description} няслушнай даўжыні (мае быць знакаў: {is})"
 exam:
   close-date: Дата закрыцця экзамену
-  confirm: >-
-    У вас ёсць {count, plural, one {# хвіліна} few {# хвіліны} other {# хвілінаў}} і адзіная спроба,
-    каб здаць іспыт. Вы ўпэўненыя, што жадаеце пачаць?
   finish-prematurely:
     btn: Завяршыць датэрмінова
     confirm-no: "Не, працягнуць рашаць"
@@ -1204,15 +1205,6 @@ exam:
   game-over: Экзамен скончаны
   go-back: Да зместу
   header: Вы ў рэжыме экзамену. Паспейце вырашыць заданні з модуля за адведзены час
-  info-head: >-
-    {count, plural, other {Гэта экзаменацыйны модуль на # хвіліны} many {Гэта экзаменацыйны модуль
-    на # хвілінаў} few {Гэта экзаменацыйны модуль на # хвіліны} one {Гэта экзаменацыйны модуль на #
-    хвіліну}}
-  info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
-  info-paragraph: У вас будзе адна спроба на праходжанне экзамену.
-  is_exam_without_progress: Ацэнкі адпраўленых рашэнняў будуць недаступныя.
-  is_random_exam: 'Экзамен з выпадковай выбаркай пытанняў з курсу <b>"{course}"</b>.'
-  is_random_exam_learner: Экзамен з выпадковай выбаркай пытанняў.
   label: Экзамен
   not-started: Экзамен пакуль недасяжны
   open-date: Дата адкрыцця экзамену
@@ -3224,6 +3216,21 @@ subscriptions__unsubscribe: Адпісацца
 subscriptions__unsubscribe-lesson-comments: Адпісацца ад каментароў урока
 subscriptions__unsubscribe-step-comments: Адпісацца ад каментароў кроку
 subscriptions__unsubscribe-tooltip: Ніколі не атрымліваць абвесткі
+syllabus:
+  exam:
+    attempts-info: У вас будзе адна спроба на праходжанне экзамену.
+    info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
+    is_exam_without_progress: Ацэнкі адпраўленых рашэнняў будуць недаступныя.
+    is_random_exam: 'Экзамен з выпадковай выбаркай пытанняў з курсу <b>"{course}"</b>.'
+    is_random_exam_learner: Экзамен з выпадковай выбаркай пытанняў.
+    type:
+      basic: >-
+        {minutes, plural,
+          other {Гэта экзаменацыйны модуль на # хвіліны}
+          many {Гэта экзаменацыйны модуль на # хвілінаў}
+          few {Гэта экзаменацыйны модуль на # хвіліны}
+          one {Гэта экзаменацыйны модуль на # хвіліну}
+        }
 syllabus_edit:
   course-settings: Налады курсу
   deadlines:
@@ -3588,9 +3595,9 @@ user__edit:
     downgrade-warning: >-
       Калі вы зменіце падпіску, {prune, select, all {усе вашы {type, select, pro {PRO-курсы}
       enterprise {Enterprise-курсы} other {курсы}} } other {{prune} з {used} вашых {type, select,
-      pro {PRO-курсаў} enterprise {Enterprise-курсаў} other {курсаў}} } } стануць базавымі,
-      пяройдуць у рэжым чарнавіка і больш не будуць даступныя студэнтам. Вы зможаце змяніць іх тып і
-      апублікаваць пазней.
+      pro {PRO-курсаў} enterprise {Enterprise-курсаў} other {курсаў}} } }
+      з <b>{fromDate, date, medium-date}</b> стануць базавымі, пяройдуць у рэжым чарнавіка і больш
+      не будуць даступныя студэнтам. Вы зможаце змяніць іх тып і апублікаваць пазней.
     invalid-warn: >-
       Ваша <b>падпіска скончылася</b> {validUntil, date, medium-date} Каб працягнуць карыстацца
       пашыранай функцыянальнасцю, <a href={contactUsHref}>напішыце нам</a> на support@stepik.org.
@@ -3640,12 +3647,15 @@ user__edit:
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць}
       other {Аформіць} } падпіску
     subscribe-description:
-      cancel-trial: Грошы не будуць спісаныя з карты.
       charge: >-
-        Пачынаючы з <b>{chargeDate, date, medium-date}</b> {type, select, basic {грошы больш
-        спісвацца не будуць} other {плацёж у <b>{priceText}</b> будзе спісвацца {period, select,
-        month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц}
-        } да адмены падпіскі} }.
+        Пачынаючы з <b>{chargeDate, date, medium-date}</b> плацёж у <b>{priceText}</b>
+        будзе спісвацца {period, select,
+          month {штомесяц}
+          quarter {штоквартал}
+          half_year {штопаўгады}
+          year {штогод}
+          other {штомесяц}
+        } да адмены падпіскі.
       will-trial: >-
         <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага
         перыяду вы будзеце плаціць {priceText} {period, select, month {штомесяц} quarter

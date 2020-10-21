@@ -106,15 +106,16 @@ breadcrumbs__review-session: Рецензії
 breadcrumbs__submissions: Розв’язки
 button__new-course: Створити курс
 button__new-lesson: Створити урок
-catalog-beta:
+catalog:
   filters-dialog:
-    langs: "{lang, select, ru {Російська} en {Англійська} other {Будь-яка}}"
-  search-empty: >-
-    За запитом «<var>{query}</var>» не знайдено нічого.
-    Спробуйте змінити параметри пошуку{hasAnyFilters, select,
-      true { чи <a href="{resetFiltersHref}">скинути фільтри</a>}
-      other {}
-    }.
+    language-values: "{lang, select, ru {Російська} en {Англійська} other {Будь-яка}}"
+  search:
+    empty: >-
+      За запитом «<var>{query}</var>» не знайдено нічого.
+      Спробуйте змінити параметри пошуку{hasAnyFilters, select,
+        true { чи <a href="{resetFiltersHref}">скинути фільтри</a>}
+        other {}
+      }.
 certificate-editor:
   auto-issue-label: Автоматично видавати сертифікати
   auto-issue-text:
@@ -471,7 +472,6 @@ cost:
       other {<strong>#</strong> спроб}
     }
 course:
-  access_restricted: Курс на доопрацюванні.
   draft: Чорновик
   edit-btns:
     info: Редагувати інформацію
@@ -523,6 +523,14 @@ course:
       basic_paid: Базовий+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Базовий}
+          basic_paid {Базовий+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Крайні терміни у курсі
       exams: Екзамени
@@ -566,7 +574,7 @@ course-assessments:
       few {# розв’язки очікують рецензування}
       other {# розв’язків очікують рецензування}
     }
-course-cards:
+course-card:
   certificate: сертифікат
   workload: "{hours} год"
 course-edit__back: Повернутися до курсу
@@ -957,15 +965,6 @@ course-syll__compact-progress: відсоток пройдених кроків
 course-syll__ends: Час закінчення
 course-syll__scores: ваш / максимальний бал
 course-syllabus__closed-yet: Цей модуль закритий
-course-syllabus__required-module-message: >-
-  {count, plural,
-    one {# бал}
-    few {# бали}
-    other {# балів}
-  }
-  у модулі {position} ({title})
-course-syllabus__required-module-message-percent: "{percent} % балів у модулі {position} ({title})"
-course-syllabus__required-module-message-title: "Умови доступу:"
 course__add-annon: Додати новину
 course__add-to-archived-link: Позначити архівним
 course__add-to-favorites-link: Позначити вибраним
@@ -1379,15 +1378,6 @@ errors:
   wrongLength: "{description} неправильна довжина (потрібно символів: {is})"
 exam:
   close-date: Дата закінчення екзамену
-  confirm: >-
-    Ви маєте
-    {count, plural,
-      one {# хвилину}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-     та одну спробу, щоб здати екзамен. Ви справді хочете розпочати?
   finish-prematurely:
     btn: Закінчити достроково
     confirm-no: "Ні, продовжити розв’язувати"
@@ -1398,19 +1388,6 @@ exam:
   game-over: Екзамен закінчено.
   go-back: До змісту
   header: Екзамен.
-  info-head: >-
-    Екзамен тривалістю
-    {count, plural,
-      one {# хвилина}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-  info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
-  info-paragraph: "Ви маєте одну спробу, щоб здати екзамен"
-  is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
-  is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
-  is_random_exam_learner: Екзамен з випадковими питаннями.
   label: Екзамен
   not-started: Екзамен не розпочався
   open-date: Дата початку екзамену
@@ -3634,6 +3611,22 @@ subscriptions__unsubscribe: Не отримувати повідомлення
 subscriptions__unsubscribe-lesson-comments: Не отримувати коментарі уроку
 subscriptions__unsubscribe-step-comments: Не отримувати коментарі кроку
 subscriptions__unsubscribe-tooltip: не отримувати повідомлення
+syllabus:
+  exam:
+    attempts-info: "Ви маєте одну спробу, щоб здати екзамен"
+    info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
+    is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
+    is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
+    is_random_exam_learner: Екзамен з випадковими питаннями.
+    type:
+      basic: >-
+        Екзамен тривалістю
+        {minutes, plural,
+          one {# хвилина}
+          few {# хвилини}
+          many {# хвилин}
+          other {# хвилини}
+        }
 syllabus_edit:
   course-settings: Налаштування старту курсу
   deadlines:
@@ -4058,8 +4051,8 @@ user__edit:
           enterprise {Enterprise-курсив}
           other {курсив}}
         }
-      } стануть базовыми в режимі чорновика та не будуть видимі для учнів.
-      Ви зможете змінити їх тип та опублікувати їх згодом.
+      } з <b>{fromDate, date, medium-date}</b> стануть базовыми в режимі чорновика та не будуть
+      видимі для учнів. Ви зможете змінити їх тип та опублікувати їх згодом.
     invalid-warn: >-
       Ваша <b>підписка завершилася</b> {validUntil, date, medium-date}
       Щоб продовжити використовувати додаткові можливості
@@ -4152,18 +4145,15 @@ user__edit:
         other {Підписатися}
       } подписку
     subscribe-description:
-      cancel-trial: Кошти не буде знято з карти.
       charge: >-
-        Починаючи з <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {кошти не будуть зняті}
-          other {платіж <b>{priceText}</b> буде знято {period, select,
-            month {щомісяця}
-            quarter {щокварталу}
-            half_year {щопівроку}
-            year {щороку}
-            other {щомісяця}
-        } до моменту скасування підписки}
-        }.
+        Починаючи з <b>{chargeDate, date, medium-date}</b> платіж <b>{priceText}</b> буде знято
+        {period, select,
+          month {щомісяця}
+          quarter {щокварталу}
+          half_year {щопівроку}
+          year {щороку}
+          other {щомісяця}
+        } до моменту скасування підписки.
       will-trial: >-
         <p><b>Безкоштовний 14-ти денний випробувальний період</b> буде розпочату відразу.</p>
         <p>Після випробувального періоду ви будете платити {priceText} {period, select,
