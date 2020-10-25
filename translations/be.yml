@@ -92,6 +92,16 @@ breadcrumbs__review-session: Рэцэнзіі
 breadcrumbs__submissions: Рашэнні
 button__new-course: Стварыць курс
 button__new-lesson: Стварыць ўрок
+catalog:
+  authors:
+    new-course: Стварыць свой курс
+  category:
+    similar-authors: Падобныя аўтары
+    similar-topics: Падобныя тэмы
+  filters-dialog:
+    free-only: Толькі бясплатныя
+    language: Мова курса
+    language-values: "{lang, select,  be {Беларуская} ru {Руская} en {Англійская} other {Любая}}"
 certificate-editor:
   auto-issue-label: Выпускаць аўтаматычна
   auto-issue-text:
