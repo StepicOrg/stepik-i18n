@@ -313,7 +313,7 @@ common__ok-button: Зразумела
 common__oops: Нешта пайшло не так :(
 common__out-of-points: "{count, plural, one {# балa} other {# балаў}}"
 common__platform-news: Што новага
-common__points: "{count, plural, one {# бал} few {# бала} other {# балаў}}"
+common__points: "{count, plural, one {# бал} few {# балы} other {# балаў}}"
 common__points-received: "{count, plural, one {атрыманы} other {атрымана}}"
 common__pricing: Мае падпіскі
 common__print: Друк
@@ -2941,7 +2941,7 @@ syllabus:
       after-check: Ацэнкі будуць даступныя пасля дадатковай праверкі
       after-check2: Ацэнка будзе выстаўлена пасля дадатковай праверкі
       after-exam: Ацэнка будзе бачная пасля іспыту
-      not-visible: Ацэнкі не бачныя навучэнцам падчас іспыту
+      not-visible: Ацэнкі не бачныя студэнтам падчас іспыту
     info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
     is_exam_without_progress: Ацэнкі адпраўленых рашэнняў будуць недаступныя.
     is_random_exam: 'Экзамен з выпадковай выбаркай пытанняў з курса <b>"{course}"</b>.'
@@ -3093,7 +3093,7 @@ toc__progress:
   rank: у рэйтынгу курса
   remaining:
     get: >-
-      {count, plural, one {Атрымаць <span>#</span> бал} few {Атрымаць <span>#</span> бала} many {Атрымаць <span>#</span> балаў} other {Атрымаць <span>#</span> балаў}}
+      {count, plural, one {Атрымаць <span>#</span> бал} few {Атрымаць <span>#</span> балы} many {Атрымаць <span>#</span> балаў} other {Атрымаць <span>#</span> балаў}}
     learn: >-
       {count, plural, one {Вучыцца <span>#</span> гадзіну} few {Вучыцца <span>#</span> гадзіны} many {Вучыцца <span>#</span> гадзін} other {Вучыцца <span>#</span> гадзін}}
   title: Прагрэс па курсе
@@ -3335,6 +3335,8 @@ user__edit:
       cancel-subscription: >-
         <p> Да {validUntil, date, medium-date} у вас застанецца тарыфны план {planName}, у рамках якога {proCoursesTotal, plural, one {доступны # {courseTypeCaption}-курс} few {даступныя # {courseTypeCaption}-курсы} many {доступна # {courseTypeCaption}-курсаў} other {даступна # {courseTypeCaption}-курсаў} }. </p> 
         <p> {currentlyTrial, select, true {Грошы не будуць спісаныя з карты} other {Пачынаючы з <b>{validUntil, date, medium-date}</b> грошы больш спісвацца не будуць} }. </p>
+      charge: >-
+        Пачынаючы з <b>{chargeDate, date, medium-date}</b> плацёж у <b>{priceText}</b> будзе спісвацца {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц} } да адмены падпіскі.
       will-trial: >-
         <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага перыяду вы будзеце плаціць {priceText} {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц}}.</p>
     subscribe-footnote: >-
