@@ -2922,6 +2922,51 @@ syllabus:
     hard:
       part1: Пасля
       part2: балы не налічваюцца
+    hard-soft:
+      part1: Пасля
+      part2: налічваецца менш балаў, а пасля
+      part3: '— 0 балаў'
+    open: Адкрыты
+    open-since: Адкрыты з
+    open-up: Адкрыты да
+    soft:
+      part1: Пасля
+      part2: налічваецца менш балаў
+    will-open: Адкрыецца
+  exam:
+    attempts-info: У вас будзе адна спроба яго прайсці.
+    continue: Працягнуць
+    finished: Скончаны
+    grade:
+      after-check: Ацэнкі будуць даступныя пасля дадатковай праверкі
+      after-check2: Ацэнка будзе выстаўлена пасля дадатковай праверкі
+      after-exam: Ацэнка будзе бачная пасля іспыту
+      not-visible: Ацэнкі не бачныя навучэнцам падчас іспыту
+    info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
+    is_exam_without_progress: Ацэнкі адпраўленых рашэнняў будуць недаступныя.
+    is_random_exam: 'Экзамен з выпадковай выбаркай пытанняў з курса <b>"{course}"</b>.'
+    is_random_exam_learner: Экзамен з выпадковай выбаркай пытанняў.
+    no-access: Недаступны
+    type:
+      basic: >-
+        Гэта экзамен на {minutes, plural, one {# хвіліну} few {# хвіліны} many {# хвілін} other {# хвілін}}.
+      proctored: >-
+        Гэта іспыт пад наглядам на {minutes, plural, one {# хвіліну} few {# хвіліны} many {# хвілін} other {# хвілін} }.
+      random: >-
+        Гэта экзамен на {minutes, plural, one {# хвіліну} few {# хвіліны} many {# хвілін} other {# хвілін}} з {questions, plural, one {# пытаннем} other {# пытаннямі}} з <a href="{courseHref}">courseTitle</a>
+  required-module:
+    message: >-
+      Набярыце {count, plural, one {# бал} few {# балы} many {# балаў} other {# балаў}} у модулі «{position}. {title}», каб атрымаць доступ
+    message-percent: >-
+      Набярыце "{percent}% балаў у модулі«{position}. {title}», каб атрымаць доступ
+    teacher-message: >-
+      Для доступу трэба набраць {count, plural, one {# бал} few {# балы} many {# балаў} other {# балаў}} у модулі «{position}. {title}»
+    teacher-message-percent: >-
+      Для доступу трэба набраць "{percent}% балаў у модулі«{position}. {title}»
+    tooltip: >-
+      Трэба атрымаць {count, plural, one {# бал} few {# балы} many {# балаў} other {# балаў}} у модулі «{position}. {title}»
+    tooltip-percent: >-
+      Трэба атрымаць "{percent}% балаў у модулі«{position}. {title}»
 syllabus_edit:
   course-settings: Налады курса
   deadlines:
@@ -3252,6 +3297,9 @@ user__edit:
     current-plan: Бягучы план — <b>{planName}</b>
     current-plan-counter: >-
       {courseType, select, basic {PRO-курсы недаступныя на тарыфе Basic} pro {PRO-курсы: {used}/{total}} other {Enterprise-курсы: {used}/{total}} }
+    current-plan-valid-until: да {validUntil, date, medium-date}
+    downgrade-warning: >-
+      Калі вы зменіце падпіску, {prune, select, all {усе вашыя {type, select, pro {PRO-курсы} enterprise {Enterprise-курсы} other {курсы}} } other {{prune} з {used} вашых {type, select, pro {PRO-курсаў} enterprise {Enterprise-курсаў} other {курсаў}} } } з <b>{fromDate, date, medium-date}</b> стануць базавымі, пяройдуць у рэжым чарнавіка і больш не будуць даступныя студэнтам. Вы зможаце змяніць іх тып і апублікаваць пазней.
     invalid-warn: >-
       Ваша <b>падпіска скончылася</b> {validUntil, date, medium-date} Каб працягнуць карыстацца пашыранай функцыянальнасцю, <a href={contactUsHref}>напішыце нам</a> на support@stepik.org.
     invalid-warn-short: >-
@@ -3284,6 +3332,9 @@ user__edit:
     subscribe-btn: >-
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць} other {Аформіць} } падпіску
     subscribe-description:
+      cancel-subscription: >-
+        <p> Да {validUntil, date, medium-date} у вас застанецца тарыфны план {planName}, у рамках якога {proCoursesTotal, plural, one {доступны # {courseTypeCaption}-курс} few {даступныя # {courseTypeCaption}-курсы} many {доступна # {courseTypeCaption}-курсаў} other {даступна # {courseTypeCaption}-курсаў} }. </p> 
+        <p> {currentlyTrial, select, true {Грошы не будуць спісаныя з карты} other {Пачынаючы з <b>{validUntil, date, medium-date}</b> грошы больш спісвацца не будуць} }. </p>
       will-trial: >-
         <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага перыяду вы будзеце плаціць {priceText} {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц}}.</p>
     subscribe-footnote: >-
