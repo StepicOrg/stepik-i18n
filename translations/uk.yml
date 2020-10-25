@@ -106,6 +106,16 @@ breadcrumbs__review-session: Рецензії
 breadcrumbs__submissions: Розв’язки
 button__new-course: Створити курс
 button__new-lesson: Створити урок
+catalog:
+  filters-dialog:
+    language-values: "{lang, select, ru {Російська} en {Англійська} other {Будь-яка}}"
+  search:
+    empty: >-
+      За запитом «<var>{query}</var>» не знайдено нічого.
+      Спробуйте змінити параметри пошуку{hasAnyFilters, select,
+        true { чи <a href="{resetFiltersHref}">скинути фільтри</a>}
+        other {}
+      }.
 certificate-editor:
   auto-issue-label: Автоматично видавати сертифікати
   auto-issue-text:
@@ -262,8 +272,10 @@ comments__unpin: Відкріпити
 comments__unpin-tooltip: показувати цей коментар у порядку за замовчуванням
 comments__without-submissions: "Ви не маєте розв’зків, які можна залишити"
 common:
+  choose: Оберіть
   end: закінчення
   pin: Закріпити
+  price-enrolled: Вас записано
   price-free: Безкоштовно
   start: початок
   unpin: Відкріпити
@@ -272,6 +284,7 @@ common__back-link: Назад
 common__back-to-step-link: Назад до кроку
 common__banner-unverified-email: >-
   <a href="/edit-profile/email">Підтвердіть</a> ваш email, щоб продовжити використовувати Stepik.
+common__cancel-button: Скасувати
 common__catalog: Каталог
 common__certificate: Сертифікат
 common__certificate-distinction: Сертифікат з відзнакою
@@ -291,6 +304,16 @@ common__delete: Видалити
 common__delete-failed-warn: Не вдалося видалити.
 common__download-video: Звантажити відео
 common__edit: Редагувати
+common__error-loading: >-
+  Не вдалося завантажити {resourceName, select,
+    invitation {запрошення}
+    member {учасників}
+    course {перелік курсів}
+    lesson {перелік уроків}
+    klass {перелік класів}
+    comment {коментарі}
+    other {перелік об’єктів {resourceName}}
+  }.
 common__expand: Розгорнути
 common__experimental: Експериментально
 common__feedback: Показати повністю
@@ -322,6 +345,8 @@ common__my-courses: Мої курси
 common__notifications: Повідомлення
 common__number-sign: №
 common__off: вимкн.
+common__ok-button: Зрозуміло
+common__oops: Якась помилка :(
 common__out-of-points:
   "{count, plural, one {# бала} few {# бали} other {# балів}}"
 common__platform-news: Що нового
@@ -498,6 +523,14 @@ course:
       basic_paid: Базовий+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Базовий}
+          basic_paid {Базовий+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Крайні терміни у курсі
       exams: Екзамени
@@ -531,7 +564,7 @@ course:
         target='_blank'>Ознайомтеся з тарифами</a>
 course-actions__button: Адмініструвати
 course-assessments:
-  empty: Курс не містить неперевірених розв’язків
+  empty: Усі розв’язки перевірено
   pending-reviews-badge: Очікують рецензування
   submission-link: До розв’язків
   tab-caption: Перевірка розв’язків
@@ -541,6 +574,9 @@ course-assessments:
       few {# розв’язки очікують рецензування}
       other {# розв’язків очікують рецензування}
     }
+course-card:
+  certificate: сертифікат
+  workload: "{hours} год"
 course-edit__back: Повернутися до курсу
 course-edit__cancel: Повернутися
 course-edit__new-module: Додати Модуль
@@ -579,13 +615,14 @@ course-grade-book-cell:
 course-index__authors: "{count, plural, =1 {Автор} other {Автори}}"
 course-index__cert: Сертифікат
 course-index__enrolled-msg: Ви записані!
+course-index__instructors: Показати як викладачів
 course-index__lang: Мова
 course-index__workload: Навантаження
 course-info-edit__add: Додати
 course-info-edit__author-placeholder: id автора...
 course-info-edit__authors-403: Тільки адміністратор курсу може редагувати список авторів.
 course-info-edit__cover: "Завантажте зображення курсу: ширина = 230 px, висота = 230 px"
-course-info-edit__instructor-placeholder: id викладача...
+course-info-edit__instructor-placeholder: ID користувача
 course-info-edit__instructors-403: Тільки адміністратора курсу може редагувати список викладачів.
 course-info-edit__remove-author: Видалити автора
 course-info-edit__remove-instructor: Видалити викладача
@@ -720,6 +757,10 @@ course-permissions-edit:
     Детальніше <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>про тарифи</a>
   tariff-info: "Управлять правами доступа можно только в <b>{plan}-курсах</b>."
   title-prefix: Налаштування доступу до курсу
+  transfer-ownership: Змінити власника
+  transfer-ownership-description: >-
+    Ви можете <a href="{transferOwnershipURL}" data-href-to-ignore>передати курс</a>
+    іншому користувачу. Після цього він з’явиться в особистому кабінеті нового власника.
   user-is-admin: головний адміністратор
 course-promo:
   about-course: Про курс
@@ -790,7 +831,35 @@ course-settings:
   about-pro-link:
     text: Детальніше про PRO-курси
     url: "https://welcome.stepik.org/ru/pricing"
+  beneficiaries: >-
+    {count, plural,
+      =0 {
+        <a href="https://support.stepik.org/hc/ru/requests/new" target="_blank"
+        >Зверніться у підтримку</a>, щоб отримувати кошти від продажів курсу.
+      }
+      =1 {Виручку від продажів отримує}
+      other {Виручку від продажів отримують}
+    }
   cancel: Скасувати
+  commission: >-
+    {equal, select,
+      true {
+        Ми отримуємо комісію <b>{commissionPromo}%</b> від усіх продажів цього курсу.
+      }
+      other {
+        Ми отримуємо комісію <b>{commissionPromo}%</b> з продажів, якщо
+        <a href="https://support.stepik.org/hc/ru/articles/360016290639"
+        target="_blank">ми займаємося рекламуванням</a> курсу,
+        ті <b>{commissionBasic}%</b>, якщо ви залучаєте учнів самі.
+      }
+    }
+  convert-into-paid:
+    description: >-
+      Ви можете
+      <a href="{url}" class="link-primary">зробити курс платним</a>
+      та отримувати кошти від учнів безпосередньо через Stepik.
+    title: Зробити курс платним
+    title-with-price: Вартість курсу – {price}
   course-access:
     enabled: Відкритий для навчанняи усім
     not-enabled: Лише команда курсу може бачити цей курс
@@ -800,8 +869,8 @@ course-settings:
   course-type:
     legacy-note: >-
       Якщо ви використовуєте додаткові можливості, то після <time>1 липня 2020 року</time>
-      лише автори будуть бачити цей курс. Будь ласка, перемкніть курс у PRO-режим чи налаштуйте його
-      відповідно до базового тарифу, щоб залишити курс публічно досяжним після 01.07.2020.
+      лише автори будуть бачити цей курс. Будь ласка, перемкніть курс у PRO-режим чи налаштуйте
+      його відповідно до базового тарифу, щоб залишити курс публічно досяжним після 01.07.2020.
     title: Тип курсу
   disabled-no-rights: Лише адміністратори можуть змінити ці налаштування.
   disabled-not-owner:
@@ -810,8 +879,82 @@ course-settings:
     <p>Попросіть <b>{ownerName}</b> перемкнути курс у PRO-режим.</p>
     <p>Чи напишіть нам на support@stepik.org,
     щоб стати головним адміністратором курсу та враховувати його у вашій підписці.</p>
+  preview-lesson:
+    added: Ознайомлювальний урок додано
+    changed: Ознайомлювальний урок змінено
+    choose: Вибрати
+    choose-note:
+      Додайте відкритий ознайомлювальний урок, який можна переглянути перед тим, як придбати курс.
+    deleted: Ознайомлювальний урок видалено
+    dialog:
+      filter-no-results: >-
+        <p>Відкритих уроків у цьому курсі за таким запитом не знайдено.</p>
+        <p>Перевірте, що потрібний урок налаштований як <b>публічний</b>, чи змініть параметри
+        пошуку.</p>
+      filter-placeholder: Название урока из этого курса
+      more-about: >-
+        <a target="_blank" href="https://support.stepik.org/hc/ru/articles/360013947659">
+        Подробнее о промо-уроках</a>
+      no-items: >-
+        <p>Открытых уроков в этом курсе пока нет.</p>
+        <p>Поставьте сначала нужному уроку статус «<b>Публичный</b>» в настройках.</p>
+      title: Выберите бесплатный ознакомительный урок
+    edit: Изменить
+    title: Бесплатный ознакомительный урок
+  price-change: Изменить цену
+  price-editor:
+    description: >-
+      Вы можете <button>сделать курс платным</button> и принимать оплату от учащихся напрямую
+      через Stepik.
+    errors:
+      price-gte: Задайте цену от {price}
+      price-invalid-format: Укажите корректную цену
+      price-lte: Задайте цену до {price}
+    price-footnote: Должна быть от {gtePrice}
+    price-free-note: >-
+      Чтобы сделать курс бесплатным, <a href="https://support.stepik.org/hc/ru/requests/new"
+      target="_blank">напишите нам</a>.
+    price-label: "{change, select, true {Новая цена} other {Цена}}"
+    submit: >-
+      {hasPrice, select, true {
+        {change, select, true {Изменить цену на} other {Назначить цену в}}&nbsp;{price}
+      } other {
+        {change, select, true {Изменить цену} other {Назначить цену}}
+      }}
+    terms: Условия оказания услуги
+    terms-link: https://support.stepik.org/hc/ru/articles/360018110654
+    title: Сделать курс платным
   price-title: Вартість курсу — {price}
   promocode-editor-title: Промокоди
+  publication: Публікація
+  requests:
+    approved-desc: >-
+      Перевірка фінансової інформації успішна.
+      Ви можете продавати {currencies, select,
+        RUBUSD {у рублях та доларах.}
+        RUB {у рублях.}
+        USD {у доларах.}
+        other {.}
+      }<br>
+      В подальшому змінювати ціну та створювати платні курси ви можете самі.
+    approved-desc-admin: Курс зроблено платним.
+    edit: Змінити заявку
+    edit-fd: Змінити реквізити
+    no-response: >-
+      Якщо відповідь не надійшла до <b>{date}</b>, <a
+      target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://support.stepik.org/hc/ru/requests/new">напишіть нам</a>
+      на support@stepik.org.
+    pending-desc: Заявка знаходиться на розгляді модераторами Stepik.
+    rejected-desc: >-
+      Заявку на підключення оплати відхилено,
+      деталі надіслано {email, select, false {
+        на пошту <a href="{link}">{name}</a>.
+      } other {
+        вам на пошту {email}.
+      }}
+    send-again: Надіслати заявку ще раз
+    start-earning: Щоб почати продаж курсу відкрийте курс для проходження
   save: застосувати зміни
   save-error-woof: Не вдалося зберегти курс.
   save-success-woof: Збережено.
@@ -822,15 +965,6 @@ course-syll__compact-progress: відсоток пройдених кроків
 course-syll__ends: Час закінчення
 course-syll__scores: ваш / максимальний бал
 course-syllabus__closed-yet: Цей модуль закритий
-course-syllabus__required-module-message: >-
-  {count, plural,
-    one {# бал}
-    few {# бали}
-    other {# балів}
-  }
-  у модулі {position} ({title})
-course-syllabus__required-module-message-percent: "{percent} % балів у модулі {position} ({title})"
-course-syllabus__required-module-message-title: "Умови доступу:"
 course__add-annon: Додати новину
 course__add-to-archived-link: Позначити архівним
 course__add-to-favorites-link: Позначити вибраним
@@ -975,7 +1109,7 @@ course__reviews:
   can-review-no: "Ні, дякую"
   can-review-yes: Залишити відгук
   cancel-edit: Скасувати
-  cant-review: "Щоб залишити відгук потрібно пройти понад {threshold}% навчальних материалів курсу"
+  cant-review: "Щоб залишити відгук пройдіть понад {threshold}% навчальних материалів курсу"
   change-review: Змінити свій відгук
   create-review: Залишити відгук
   delete-review: Видалити
@@ -1036,84 +1170,98 @@ deadlines-editor:
       {type, select,
         after-end-date {Дата початку курсу має бути меншою за дату його закінчення}
         after-soft-deadline {Дата початку курсу має бути меншою за дату рекомендованого
-        терміну закінчення}
+                             терміну закінчення}
         after-hard-deadline {Дата початку курсу має бути меншою за дату крайнього терміну
-        закінчення}
+                             закінчення}
         other {}
       }
     beginDateSection: >-
       {type, select,
         after-end-date {Дата початку модуля має бути меншою за дату його закінчення}
         before-begin-date-course {Дата початку модуля має бути більшою за дату початку курсу}
+        after-end-date-course {Дата початку модуля має бути меншою за дату закінчення курсу}
         after-soft-deadline {Дата початку модуля має бути меншою за дату рекомендованого терміну
-        закінчення}
+                             закінчення}
         after-hard-deadline {Дата початку модуля має бути меншою за дату крайнього терміну
-        закінчення}
+                             закінчення}
         other {}
       }
     endDateCourse: >-
       {type, select,
         before-begin-date {Дата закінчення курсу має бути більшою за дату його початку}
         before-soft-deadline {Дата закінчення курсу має бути більшою за дату рекомендованого
-        терміну закінчення}
+                              терміну закінчення}
         before-hard-deadline {Дата закінчення курсу має бути більшою за дату крайнього терміну
-        закінчення}
+                              закінчення}
         other {}
       }
     endDateSection: >-
       {type, select,
         after-end-date-course {Дата закінчення модуля має бути меншою за дату закінчення курсу}
+        before-begin-date-course {Дата закінчення модуля має бути більшою за дату початку курсу}
         before-soft-deadline {Дата закінчення модуля має бути більшою за дату рекомендованого
-        терміну закінчення}
+                              терміну закінчення}
         before-hard-deadline {Дата закінчення модуля має бути більшою за дату крайнього терміну
-        закінчення}
+                              закінчення}
         other {}
       }
     hardDeadlineCourse: >-
       {type, select,
         equal-begin-end-date {Дата крайнього терміну закінчення має бути більшою за дату початку
-        курсу та меншою за дату закінчення курсу}
+                              курсу та меншою за дату закінчення курсу}
         before-begin-date {Дата крайнього терміну закінчення має бути більшою за дату початку
-        курсу}
+                           курсу}
         after-end-date {Дата крайнього терміну закінчення має бути меншою за дату закінчення курсу}
         before-soft-deadline {Дата крайнього терміну закінчення має бути більшою за дату
-        рекомендованого терміну закінчення}
+                              рекомендованого терміну закінчення}
         other {}
       }
     hardDeadlineSection: >-
       {type, select,
         equal-begin-end-date {Дата крайнього терміну закінчення має бути більшою за дату
-        початку модуля та меншою за дату закінчення модуля}
+                              початку модуля та меншою за дату закінчення модуля}
+        equal-begin-end-date-course {Дата крайнього терміну закінчення модуля має бути більшою за
+                                     дату початку курсу і меншою за дату закінчення курсу}
         before-begin-date {Дата крайнього терміну закінчення має бути більшою за дату початку
-        модуля}
+                           модуля}
+        before-begin-date-course {Дата крайнього терміну закінчення модуля має бути більшою за
+                                  дату початку курсу}
         after-end-date {Дата крайнього терміну закінчення має бути меншою за дату закінчення
-        модуля}
+                        модуля}
+        after-end-date-course {Дата крайнього терміну закінчення модуля має бути меншою за дату
+                               закінчення курсу}
         before-soft-deadline {Дата крайнього терміну закінчення має бути більшою за дату
-        рекомендованого терміну закінчення}
+                              рекомендованого терміну закінчення}
         other {}
       }
     softDeadlineCourse: >-
       {type, select,
         after-hard-deadline {Дата рекомендованого терміну закінчення має бути меншою за дату
-        крайнього терміну закінчення}
+                             крайнього терміну закінчення}
         equal-begin-end-date {Дата рекомендованого терміну закінчення має бути більшою за дату
-        початку курсу та меншою за дату закінчення курсу}
+                              початку курсу та меншою за дату закінчення курсу}
         before-begin-date {Дата рекомендованого терміну закінчення має бути більшою за дату
-        початку курсу}
+                           початку курсу}
         after-end-date {Дата рекомендованого терміну закінчення має бути меншою за дату закінчення
-        курсу}
+                        курсу}
         other {}
       }
     softDeadlineSection: >-
       {type, select,
         after-hard-deadline {Дата рекомендованого терміну закінчення має бути меншою за дату
-        крайнього терміну закінчення}
+                             крайнього терміну закінчення}
+        after-hard-deadline-course {Дата рекомендованого терміну закінчення модуля має бути меншою
+                                    за дату крайнього терміну закінчення}
         equal-begin-end-date {Дата рекомендованого терміну закінчення має бути більшою за дату
-        початку модуля та меншою за дату закінчення модуля}
+                              початку модуля та меншою за дату закінчення модуля}
+        equal-begin-end-date-course {Дата рекомендованого терміну закінчення має бути більшою за
+                                     дату початку курсу та меншою за дату закінчення курсу}
         before-begin-date {Дата рекомендованого терміну закінчення має бути більшою за дату
-        початку модуля}
+                           початку модуля}
+        before-begin-date-course {Дата рекомендованого терміну закінчення модуля бути більшою за
+                                  дату початку курсу}
         after-end-date {Дата рекомендованого терміну закінчення має бути меншою за дату
-        закінчення модуля}
+                        закінчення модуля}
         other {}
       }
   field:
@@ -1230,15 +1378,6 @@ errors:
   wrongLength: "{description} неправильна довжина (потрібно символів: {is})"
 exam:
   close-date: Дата закінчення екзамену
-  confirm: >-
-    Ви маєте
-    {count, plural,
-      one {# хвилину}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-     та одну спробу, щоб здати екзамен. Ви справді хочете розпочати?
   finish-prematurely:
     btn: Закінчити достроково
     confirm-no: "Ні, продовжити розв’язувати"
@@ -1249,19 +1388,6 @@ exam:
   game-over: Екзамен закінчено.
   go-back: До змісту
   header: Екзамен.
-  info-head: >-
-    Екзамен тривалістю
-    {count, plural,
-      one {# хвилина}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-  info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
-  info-paragraph: "Ви маєте одну спробу, щоб здати екзамен"
-  is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
-  is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
-  is_random_exam_learner: Екзамен з випадковими питаннями.
   label: Екзамен
   not-started: Екзамен не розпочався
   open-date: Дата початку екзамену
@@ -1283,7 +1409,8 @@ footer__CC_note: >-
   Public user contributions licensed under <a target="_blank" rel="noopener noreferrer"
   href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk">CC BY-SA 4.0</a>
   license with attribution required
-footer__about: Про нас
+footer__about: Про проект
+footer__academy: Stepik Академія
 footer__active-count: >-
   {count, plural,
     one {<strong>#</strong> активний учень}
@@ -1291,6 +1418,7 @@ footer__active-count: >-
     other {<strong>#</strong> активних учнів}
   }
 footer__active-count-desc: "Учні, які розв’язували задачі протягом останніх 3-х місяців."
+footer__careers: Вакансії
 footer__contacts: Контакти
 footer__copyright: "© 2013 — {currentYear}. Stepik"
 footer__helpcenter: Допомога
@@ -1436,6 +1564,7 @@ instructor-dashboard:
     quiz-warning: Зауваження до завдання!
     quiz-warning-tooltip: >-
       До умов завдання є зауваження. Будь ласка, виправте умови, зважаючи на зауваження.
+    reviews: Рецензії
     reviews-outliers: >-
       {count, plural,
         one {# незвичайна рецензія}
@@ -1500,15 +1629,28 @@ invitations-modal:
     }
 klass:
   add-assistant: Додати викладача
+  add-assistant-error: Не вдалося додати викладача
+  add-assistant-label: ID користувача
+  add-assistant-placeholder: "123456"
+  add-assistant-success: "{name} додано до викладачів"
   assistants: Викладачі у класі
   assistants-subpage: Викладачі
   course: Курс
+  dismiss-assistant-confirm:
+    cancel: Ні, скасувати
+    confirm: Так, видалити
+    text: >-
+      <h4>Видалити {name} з викладачів класу?</h4>
+      <p>{name} втратить доступ до розв’язків та оцінок класу.</p>
+  dismiss-assistant-error: "Не вдалося додати викладача {name}"
+  dismiss-assistant-success: "{name} видалено з викладачів класу"
   dismiss-student-confirm:
     cancel: Ні, залишити
     confirm: Так, відрахувати
     text: >-
       <h4>Відрахувати {name} з класу?</h4>
       <p>Учень {name} залишиться на курсі, але ви втратите доступ до його розв’язків та оцінок.</p>
+  dismiss-student-error: "Не вдалося відрахувати учня {name}"
   dismiss-student-success: "Учень {name} відрахований з класу"
   edit: Редагувати
   error-leave: Не вдалося залишити клас
@@ -1581,6 +1723,7 @@ klasses:
   my-students: Мої учні
 lesson:
   draft: Чорновик
+  expand-toc-sidebar: Зміст
   instructor:
     edit-permissions: Доступ до уроку
   likes:
@@ -1588,6 +1731,7 @@ lesson:
     liked: Ви вподобали цей урок
   private: Приватний
   public: Публічний
+  step-position: "Крок {index} з {count}"
   toc-show: Показати перелік уроків цього курсу
   updated: Останні зміни
 lesson-actions:
@@ -1892,6 +2036,25 @@ org:
   no_courses: Курси не знайдено
   no_lessons: Уроки не знайдено
   students_tab: Мої учні
+paid-course-requests:
+  edit:
+    desc: >-
+      Заявку упродовж трьох робочих днів розгляне команда наших модераторів.
+      До її схвалення чинна поточна версія реквізитів.
+    error: Не вдалося оновити заявку
+    success: Заявка оновленя
+    title: Змінити заявку для курсу
+  new:
+    desc: >-
+      Заявку упродовж трьох робочих днів розгляне команда наших модераторів.
+      Після її схвалення ви зможете встановлювати ціну для усіх ваших курсів самостійно.
+      Перед відправлення заявки прочитайте
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://support.stepik.org/hc/ru/articles/360018110654-%D0%A4%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D1%8B%D0%B5-%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F"
+      >умови надання послуг</a>.
+    error: Не вдалося відправити заявку
+    success: Заявку надіслано
+    title: Підключити можливість оплати для курсу
 peer-review__first-step: >-
   <strong>Етап 1 з 4</strong>. Щоб отримати бали <strong>збережіть</strong> та
   <strong>надішліть</strong> розв’язок на рецензію <strong>іншим учням</strong>
@@ -1950,32 +2113,34 @@ plan-card:
       Щоб додати курс до вашої підписчки <a href='mailto:support@stepik.org'>напишіть нам</a>
       на support@stepik.org з проханням стати головним адміністратором курсу.
     details-toggler: Змінити
-    text: "Курс додано до підписки <a href='{ownerURL}'>{ownerName}</a>"
+    text: "Курс додано до підписки <a href='{ownerURL}' class='link-primary'>{ownerName}</a>"
   text-free: >-
-    <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Підпишіться</a>,
+    <a href='https://welcome.stepik.org/ru/pricing'
+    target='_blank' class='link-primary'>Підпишіться</a>,
     щоб отримати доступ до додаткових можливостей курсу.
   text-limit: >-
-    <a href='/edit-profile/subscription'>Змініть план</a>,
-    щоб збільшити кількість {courseType}-курсов.
-    Чи змініть тип одного з ваших {courseType}-курсів на Basic.
+    <a href='/edit-profile/subscription' class='link-primary'>Змініть план</a>,
+    щоб збільшити кількість можливих {courseType}-курсов.
+    Чи змініть тип одного з ваших {courseType}-курсів на базовий.
   text-want-more: >-
-    <a href="/edit-profile/subscription">Хочу більше</a>
+    <a href="/edit-profile/subscription" class="link-primary">Хочу більше</a>
   title: "Ваш поточний план"
   title-owner: "План власника курсу"
 plan-upgrade-card:
   button: Додати можливості
   text: >-
     Потрібний доступ до табеля успішності, звітів, списків учнів? Хочете, щоб викладачі мали
-    можливість
-    перевіряти розв’язки, хочете отримувати додаткову технічну підтримку? <a
-    href='https://welcome.stepik.org/ru/pricing' target='_blank' style='white-space: nowrap'>
-    Дізнайтеся про тарифи</a>
+    можливість перевіряти розв’язки, хочете отримувати додаткову технічну підтримку? <a
+    href='https://welcome.stepik.org/ru/pricing' target='_blank' style='white-space: nowrap'
+    class='link-primary'>Дізнайтеся про тарифи</a>
   title: Додати можливості
 plans:
   ask_questions: >-
     Маєте питання — напишіть на
     <a href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Додаткова технічна підтримка
+  cancel_at_period_end: >-
+    Підписка чинна до {valid_until}. Додаткові платежі не будуть списані.
   card:
     change: Змінити
     confirm: Застосувати
@@ -2002,7 +2167,7 @@ plans:
       pro {<b>{count, plural, one {# PRO-курс} few {# PRO-курси} other {# PRO-курсів}}</b>
            з 1000 учнів}
       enterprise {<b>{count, plural, one {# Enterprise-курс} few {# Enterprise-курси}
-        other {# Enterprise-курсов}}</b> з 1000 учнів}
+                  other {# Enterprise-курсов}}</b> з 1000 учнів}
       other {}
     }
   max_public_courses: Необмежена кількість basic-курсів
@@ -2013,6 +2178,7 @@ plans:
     button: "{trial, select, true {Сробуйте безкоштовне} other {Підпишісться}}"
   success: Успішно підписані
   unsubscribe: Скасувати підписку
+platform-news__empty: Наразі новин нема.
 platform-news__title: Новини Stepik
 plugin__admin: Завдання на Linux
 plugin__admin-description: Налаштуйте віддалений сервер
@@ -2491,8 +2657,8 @@ plugins:
       Ви можете написати правила для визначення правильної відповіді використовуючи спеціальну мову
     substring: Поірвняння фрагмента
     substring_descr: >-
-      Правильна відповідь може містити зайвий текст. Наприклад, якщо правильна відповідь "Шевченко",
-      то "Тарас Шевченко" теж правильна відповідь
+      Правильна відповідь може містити зайвий текст. Наприклад, якщо правильна відповідь
+      "Шевченко", то "Тарас Шевченко" теж правильна відповідь
     type-code: Розмістіть ваш код тут...
     type-string: Розмістіть вашу відповідь тут...
   table:
@@ -2583,7 +2749,7 @@ promocode-editor:
     discount: Знижка, {currency}
     name: Промокод
   max-discount-info: >-
-    Додавання промокодів можливе, якщо вартість курсу більша ніж <b>{overheadCost}</b>.
+    Додати промокод можна для курсу, вартість якого більша ніж <b>{overheadCost}</b>.
   modal:
     delete:
       cancel: Ні, залишити
@@ -2605,6 +2771,14 @@ promocode-editor:
   prolong: Продовжити
   until: до
 quiz:
+  correct_ratio: "Зі всіх спроб <b>{count}%</b> правильних"
+  passed_by: >-
+    {count, plural,
+      =0 {Ви можете стати першим, хто виконає це завдання}
+      one {Правильно виконав <b>#</b> учень}
+      few {Правильно виконали <b>#</b> учні}
+      other {Правильно виконали <b>#</b> учнів}
+    }
   score: Ви отримали
   score-max: з
   submit-failed: >-
@@ -2908,6 +3082,15 @@ review-new__warning: Після надсилання розв’язку на п
 review-session:
   add: Нова рецензія
   approve: Схвалити
+  cancel: Скасувати
+  exit-confirm:
+    cancel: Ні
+    save: Так
+    text: >-
+      Ви відредагували {count, plural,
+        =1 {рецензію, але не зберегли її}
+        other {рецензії, але не зберегли їх}
+      }.<br>Зберегти зміни?
   given-count: "{count} з {required} необхідних"
   given-reviews: >-
     {count, plural,
@@ -3272,7 +3455,22 @@ step-actions:
 step-edit:
   add-step: + Додати крок
   correct-submission-feedback: У випадку правильної відповіді покажемо цей текст учню.
-  hide-advanced-settings: ПРиховати додаткові налаштування
+  hide-advanced-settings: Приховати додаткові налаштування
+  history:
+    diff-method:
+      chars: символи
+      hide: не показувати
+      json: json (word wrap)
+      json-no-wrap: json
+      lines: рядки
+      words: слова
+    diff-method-title: "Відмінності:"
+    modal-title: "Історія змін кроку {stepPos} уроку «{lessonTitle}»"
+    settings-block: Налаштування
+    show: Показати історію
+    snapshot-apply: Використовувати цю версію
+    snapshot-size: "{size, plural, few {# байти} other {# байт}}"
+    text-block: Текст
   limit-submissions-settings-description: "Надсилати розв’язки можна:"
   limit-submissions-settings-inf: Без обмежень
   limit-submissions-settings-note: >-
@@ -3336,6 +3534,9 @@ step__templates:
     багато іншого.
   video: ""
 submissions:
+  actions:
+    filter: Фільтр по користувачу
+    gradebook: Табель
   cant-review:
     another: Інший розв’язок надіслано на рецензування
     evaluation: Відповідь в обробці
@@ -3410,6 +3611,22 @@ subscriptions__unsubscribe: Не отримувати повідомлення
 subscriptions__unsubscribe-lesson-comments: Не отримувати коментарі уроку
 subscriptions__unsubscribe-step-comments: Не отримувати коментарі кроку
 subscriptions__unsubscribe-tooltip: не отримувати повідомлення
+syllabus:
+  exam:
+    attempts-info: "Ви маєте одну спробу, щоб здати екзамен"
+    info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
+    is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
+    is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
+    is_random_exam_learner: Екзамен з випадковими питаннями.
+    type:
+      basic: >-
+        Екзамен тривалістю
+        {minutes, plural,
+          one {# хвилина}
+          few {# хвилини}
+          many {# хвилин}
+          other {# хвилини}
+        }
 syllabus_edit:
   course-settings: Налаштування старту курсу
   deadlines:
@@ -3457,6 +3674,15 @@ teach:
       Ви не маєте класів. <a href='https://welcome.stepik.org/ru/class' target='_blank'>
       Що таке клас?</a>
     gradebook: Табель
+    remove-modal:
+      cancel: Ні, скасувати
+      confirm-checkbox: Я маю розуміння, що видалю клас назавжди та не зможу відновити дані
+      ok: Так, видалити назавжди
+      text: >-
+        <h4>Видалити клас «{title}»?</h4>
+        <p>Учні цього класу будуть записані на курс, але ви втратите доступ до їх оцінок та
+        розв’язків.</p>
+    remove-success: Клас «{title}» видалено
     reports: Звіти
     submissions: Розв’язки
     title: Класи
@@ -3497,6 +3723,14 @@ teach:
     no-results-reset-link: Скинути фільтри
     orphaned: Поза курсом
     permissions: Права доступу
+    remove-modal:
+      cancel: Ні, скасувати
+      confirm-checkbox: Я маю розуміння, що видалю урок назавжди та не зможу повернути дані
+      ok: Так, видалити назавжди
+      text: >-
+        <h4>Видалити урок «{title}»?</h4>
+        <p>Урок та усі пов’язані з ним дані буде видалено з усіх курсів.</p>
+    remove-success: Урок «{title}» видалено
     reports: Звіти
     search-placeholder: Назва чи ID уроку
     steps-count: >-
@@ -3549,6 +3783,134 @@ toc__progress:
         other {<span>#</span> годин}
       }
   title: прогрес у курсі
+ufd-form:
+  additional-info:
+    caption: Коментар
+    footnote: Опція
+    title: Додаткова інформація
+  common:
+    digits-field-footnote: "{length, plural, one {# цифра} few {# цифри} other {# цифр}}"
+  course-price:
+    caption: Ціна
+    title:
+      default: Встановіть ціну курсу
+      filled: Ціна — {price}
+  currencies:
+    currencies:
+      error: Оберіть валюту продажів
+      options:
+        RUB: ₽ — виплата коштів у РФ відповідно до реквізитів
+        USD: >-
+          $ — виплата коштів у будь-якій країні за допомогою
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://vendors.paddle.com">Paddle</a>
+      title: Яку валюту ви будете використовувати для продажів курсу?
+    email:
+      caption: Контактна адреса e-mail
+      footnote: Для надсилання платіжних документів
+      hint: >-
+        Для зв’язку з вами ми використовуємо головну адресу email
+        вашого облікового запису. Його можна змінити у вашому профілі.
+    terms:
+      error: Щоб продавати курси на Stepik, ви маєте дати згоду з нашими умовами
+      options:
+        RUB: >-
+          Я даю згоду з умовами прочитаної мною
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/u/1/d/e/2PACX-1vQFH0HJRW6X9qFe_LiIaS3kT6j1E9VmL1A2ipanD3BGu4paDdidfEAouXeYMKCIX3I_LvURwshcT2E-/pub"
+          >оферти про продаж курсів у рублях</a>
+        USD: >-
+          Я даю згоду з умовами прочитаної мною
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/d/e/2PACX-1vRAVAQy1roffFBYSUVeJjL-aLqyyEwR9Ewo4ux7Qgs5I-iHLy4K-xPy4viX2xXgwtgxS82cnafjk2_h/pub"
+          >оферти про продаж курсів у доларах США</a>
+      title: Ознайомтеся з умовами Stepik, які стосуються розміщення платних курсів
+    title:
+      currencies: "{value, select, RUB {рублях} USD {доларах США} other {{value}}}"
+      default: Дайте згоду на умови Stepik про розміщення платних курсів
+      filled: Продаж курсів у {currencies}
+  errors:
+    presence: Заповніть поле
+    select-value: Оберіть значення
+  next: Уперед
+  next-validation-error: Заповніть правильно усі поля форми, щоб продовжити
+  prev: Назад
+  requisites-dummy:
+    title: Заповніть реквізити для перерахунку коштів від продажів
+  requisites-rub:
+    bank-account:
+      caption: Розрахунокви рахунок
+    bank-bic:
+      caption: БІК банку
+    bank-fields-title: Куди перераховувати кошти від продажів
+    form:
+      options: >-
+        {value, select,
+          individual {Фізособа}
+          self_employed {Самозайнята особа}
+          individual_entrepreneur {Підприємець}
+          company {Єридична особа}
+          other {{value}}
+        }
+      title: Ви дієте як
+    fullname:
+      caption: "{form, select, company {ПІБ представника} other {ПІБ}}"
+      footnote: Як у паспорті
+      placeholder: Іванов Іван Іванович
+    inn:
+      caption: ИНН
+    kpp:
+      caption: КПП
+    legal-title:
+      caption: Назва юридичної особи
+      placeholder: ТОВ «Ромашка»
+    passport:
+      caption: Паспорт
+      footnote: Номер, коли, ким та де виданий
+    rus:
+      caption: Громадянство РФ
+    tax:
+      caption: Система оподаткування
+      options: >-
+        {value, select,
+          general_tax_system {Загальна}
+          simple_tax_system_income {Спрощена: доходи}
+          simple_tax_system_income_minus_expense {Спрощена: доходи мінус витрати}
+          single_tax_on_imputed_income {Єдиний податок на обов’язковий дохід}
+          unified_agricultural_tax {Єдиний сільськогосподарський податок}
+          patent_tax_system {Патентна}
+          other {{value}}
+        }
+    title:
+      default: Заповніть реквізити для перерахування коштів у РФ
+      filled-ie: ИП {fullname}
+    vat:
+      caption: Ставка ПДВ
+      options: >-
+        {value, select,
+          no_vat {Без ПДВ}
+          vat_0 {0%}
+          vat_10 {10%}
+          vat_20 {20%}
+          vat_10_110 {10/110}
+          vat_20_120 {20/120}
+          other {{value}}
+        }
+  requisites-usd:
+    info: >-
+      Для отримання платежів у доларах США потрібно бути зареєстрованим у
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://vendors.paddle.com/signup">Paddle</a>.
+
+      <br>Знайти ваш Paddle Vendor ID можна на
+      <a target="_blank" rel="noopener noreferrer" class="link-primary"
+      href="https://vendors.paddle.com/account">сторінці ідентифікації</a> у вашому
+      обліковому записі Paddle.
+    paddle:
+      caption: Paddle Vendor ID
+    title:
+      default: Заповніть реквізити для перерахунку коштів у Paddle
+      filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Додати існуючий урок
   import: Імпортувати уроки з файлу
@@ -3558,6 +3920,23 @@ unit_edit:
   not-saved: Урок не збережено
   restore: Відновити
   title_placeholder: Напишіть назву уроку та натисніть Enter.
+user-card:
+  created_courses_count: >-
+    {count, plural,
+      one {# курс}
+      few {# курси}
+      other {# курсів}
+    }
+  followers_count: "{count} підписників"
+  issued_certificates_count: >-
+    {count, plural,
+      one {# сертифікат створено}
+      few {# сертифікати створено}
+      other {# сертифікатів створено}
+    }
+user-financial-details:
+  success: Реквізити оновлено
+  title: Оновіть реквізити
 user-subscribe:
   followers: "{followers_count} підписників"
   has-followers: >-
@@ -3672,8 +4051,8 @@ user__edit:
           enterprise {Enterprise-курсив}
           other {курсив}}
         }
-      } стануть базовыми в режимі чорновика та не будуть видимі для учнів.
-      Ви зможете змінити їх тип та опублікувати їх згодом.
+      } з <b>{fromDate, date, medium-date}</b> стануть базовыми в режимі чорновика та не будуть
+      видимі для учнів. Ви зможете змінити їх тип та опублікувати їх згодом.
     invalid-warn: >-
       Ваша <b>підписка завершилася</b> {validUntil, date, medium-date}
       Щоб продовжити використовувати додаткові можливості
@@ -3686,6 +4065,7 @@ user__edit:
         choose-plan: Обрати
         contact-us: Напишіть нам
         contact-us-href: https://welcome.stepik.org/ru/pricing#write_us
+        continue-plan: Продовжити
         course-count-select: >-
           {count} {type, select,
             pro {PRO-}
@@ -3766,15 +4146,28 @@ user__edit:
       } подписку
     subscribe-description:
       charge: >-
-        Начиная с <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {кошти не будуть списані}
-          other {платіж <b>{priceText}</b> буде списаний щомісяця до закінчення підписки}
-        }.
+        Починаючи з <b>{chargeDate, date, medium-date}</b> платіж <b>{priceText}</b> буде знято
+        {period, select,
+          month {щомісяця}
+          quarter {щокварталу}
+          half_year {щопівроку}
+          year {щороку}
+          other {щомісяця}
+        } до моменту скасування підписки.
+      will-trial: >-
+        <p><b>Безкоштовний 14-ти денний випробувальний період</b> буде розпочату відразу.</p>
+        <p>Після випробувального періоду ви будете платити {priceText} {period, select,
+          month {щомісяця}
+          quarter {щокварталу}
+          half_year {щопівроку}
+          year {щороку}
+          other {щомісяця}}.</p>
     subscribe-footnote: >-
       Ми використовуємо
       <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
       для обробки платежів.
     title: Мій тарифний план
+    trial: Випробувальний період
     valid-perpetual: Безстрокова підписка
     valid-until: "Підписка діє до <b>{validUntil, date, medium-date}</b>"
   time:
@@ -3816,6 +4209,8 @@ user__lock-course-title: Доступ до курсу має обмежене к
 user__lock-title: Доступ до уроку має обмежене коло користувачів
 user__profile: Профіль
 user__reputation-title: Репутація
+users-list:
+  me: "(я)"
 video-editor:
   error: >-
     Під час завантаження відео ({video_id}){filename} сталася помилка.

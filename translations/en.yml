@@ -89,15 +89,51 @@ breadcrumbs__review-session: Review session
 breadcrumbs__submissions: Submissions
 button__new-course: Create a course
 button__new-lesson: Create a lesson
-catalog-beta:
+catalog:
+  authors:
+    new-course: Create your own course
+  category:
+    similar-authors: Similar authors
+    similar-topics: Similar themes
   filters-dialog:
-    langs: "{lang, select, ru {Русский} en {Английский} other {Любой}}"
-  search-empty: >-
-    По запросу "<var>{query}</var>" ничего не найдено.
-    Попробуйте изменить параметры поиска{hasAnyFilters, select,
-      true { или <a href="{resetFiltersHref}">сбросить фильтры</a>}
-      other {}
-    }.
+    free-only: Only free
+    language: Course language
+    language-values: "{lang, select, ru {Russian} en {English} other {Any}}"
+    reset: Reset filters
+    submit: Show
+    title: Filters
+    with-cert-only: Only with certificate
+  recently-viewed: Recently viewed
+  search:
+    empty: >-
+      No results found for "<var>{query}</var>".
+      Try to change your search {hasAnyFilters, select,
+        true {query or <a href="{resetFiltersHref}">reset the filters</a>}
+        other {query}
+      }.
+    next-page: Next →
+    prev-page: ← Back
+    suggestioned: >-
+      Showing results for "<a href={suggestionHref}><var>{suggestion}</var></a>".
+      No results found for "<var>{query}</var>".
+  search-bar:
+    free-only: Free
+    input-placeholder: Course name, author or theme
+    language: "{lang, select, ru {Russian} en {English} other {Any language}}"
+    with-cert-only: With certificate
+  stepik-academy:
+    about:
+      description: >-
+        <b>Stepik Academy</b> – это программы с поддержкой преподавателя, группы и куратора от
+        команды Stepik c дедлайнами и проверкой заданий. Обучение платное, но оно того стоит!
+      learn-more: Узнать больше
+      learn-more-url: https://academy.stepik.org/
+      title: >-
+        {index, select,
+          1 {Скучаете<br>по дедлайнам?}
+          2 {Не хватает<br>обратной связи?}
+          other {Скучно<br>учиться одному?}
+        }
 certificate-editor:
   auto-issue-label: Auto issue certificates
   auto-issue-text:
@@ -398,7 +434,8 @@ cost:
   submissions-left: >-
     Only {count, plural, one {<strong>#</strong> attempt} other {<strong>#</strong> attempts}}
 course:
-  access_restricted: Course is closed for revision.
+  access_restricted: >-
+    Authors have closed the course "{courseTitle}", and you are not able to pass it for now.
   draft: Draft
   edit-btns:
     info: Edit course information
@@ -449,6 +486,14 @@ course:
       basic_paid: Basic+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Basic}
+          basic_paid {Basic+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Course deadlines
       exams: Exams
@@ -487,8 +532,9 @@ course-assessments:
   tab-caption: Instructor reviews
   title: >-
     {count, plural, one {# solution is} other {# solutions are}} waiting for review
-course-cards:
+course-card:
   certificate: certificate
+  view-more: View More
   workload: "{hours} h"
 course-edit__back: Back to Course
 course-edit__cancel: Back
@@ -540,6 +586,8 @@ course-info-edit__remove-author: Remove author
 course-info-edit__remove-instructor: Remove instructor
 course-info-edit__upload-failed: >-
   Upload a valid image. The file you uploaded was either not an image or a corrupted image.
+course-list-card:
+  course-count: "{count, plural, one {# course} other {# courses}}"
 course-lti-edit__header: LTI integration settings
 course-new:
   cancel: Cancel
@@ -850,11 +898,6 @@ course-syll__compact-progress: passed steps ratio
 course-syll__ends: Close date
 course-syll__scores: your / max score
 course-syllabus__closed-yet: This module is closed
-course-syllabus__required-module-message: >-
-  score {count, plural, one {# point} other {# points}} in module {position} ({title})
-course-syllabus__required-module-message-percent:
-  "{percent}% of points in module {position} ({title})"
-course-syllabus__required-module-message-title: "Open condition:"
 course__add-annon: New announcement
 course__add-to-archived-link: Move to archived
 course__add-to-favorites-link: Add to favorites
@@ -1238,9 +1281,19 @@ errors:
   wrongLength: "{description} is the wrong length (should be {is} characters)"
 exam:
   close-date: Exam session ends
-  confirm: >-
-    You will have {count, plural, one {# minute} other {# minutes}} and only one attempt
-    to complete the exam. Are you sure you want to start the exam?
+  confirm:
+    cancel: Cancel
+    start: Start the exam
+    text: >-
+      These <b>{problems, plural, one {# problem} other {# problems}}</b> should
+      be solved within <b>{minutes, plural, one {# minute} other {# minutes}}</b>.<br>
+      You can only start the exam once. Are you ready?
+    wishes: Good luck!
+  end-exam-alert:
+    ok: Got it
+    text: >-
+      Your time is up, the exam is finished.<br>
+      Solutions that are send later will not be scored.
   finish-prematurely:
     btn: Finish prematurely
     confirm-no: "No, continue to solve"
@@ -1250,13 +1303,6 @@ exam:
   game-over: Exam is over
   go-back: Go to syllabus
   header: Exam is active.
-  info-head: >-
-    You will have {count, plural, one {# minute} other {# minutes}} to finish the exam
-  info-latest-date: "You should start no later than {date} to finish in time."
-  info-paragraph: You will only have 1 attempt.
-  is_exam_without_progress: You won't see the grades.
-  is_random_exam: 'Exam with a random selection of questions from the course <b>"{course}"</b>.'
-  is_random_exam_learner: Exam with a random selection of questions.
   label: Exam
   not-started: Exam isn't accessible yet
   open-date: Exam session starts
@@ -1268,6 +1314,10 @@ exam:
   start-button: Start exam
   start-error: Can not start the exam. Try to reload the page
   timer: "time left:"
+  timer-parts:
+    hours: h
+    minutes: m
+    seconds: s
   too-late: You are too late. The exam has ended
 explore:
   course-pack__trending-courses: Trending
@@ -1927,7 +1977,8 @@ plans:
     href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Higher priority support
   cancel_at_period_end: >-
-    Current subscription is active until {valid_until}. No additional payments will apply.
+    Current subscription is active until {valid_until}. Payments won't be charged anymore,
+    auto prolongation is disabled.
   card:
     change: Change
     confirm: Apply
@@ -3200,6 +3251,9 @@ submissions:
     has-filters: No submissions found.
     has-query: >-
       Your search <strong>"{query}"</strong> found <strong>0</strong> submissions.
+    number-query-suggestion: >-
+      Are you looking for all submissions of <a href="{userSearchHref}">user {query}</a>
+      or the specific <a href="{submissionSearchHref}">submission \#{query}</a>?
     try-change-query: Try changing your search options.
     try-change-query-filters: >-
       Try changing your search options or <a href="{filter-reset-url}">reset filters</a>.
@@ -3264,6 +3318,68 @@ subscriptions__unsubscribe: Unsubscribe
 subscriptions__unsubscribe-lesson-comments: Unsubscribe from lesson comments
 subscriptions__unsubscribe-step-comments: Unsubscribe from step comments
 subscriptions__unsubscribe-tooltip: never receive notifications
+syllabus:
+  deadlines:
+    closed: Closed
+    closed-since: Closed since
+    hard:
+      part1: No points are awarded since
+      part2: ""
+    hard-soft:
+      part1: Less points are awarded since
+      part2: ", no points since"
+      part3: ""
+    open: Open
+    open-since: Open since
+    open-up: Open up to
+    soft:
+      part1: Less points are awarded since
+      part2: ""
+    will-open: Will open
+  exam:
+    attempts-info: You have one try to pass the exam.
+    continue: Continue
+    finished: Finished
+    grade:
+      after-check: Marks are available after additional check
+      after-check2: Your mark will be provided after additional check
+      after-exam: Your mark will be shown after the exam
+      not-visible: Marks are not visible to learners during the exam
+    info-latest-date: "You should start no later than {date} to finish in time."
+    is_exam_without_progress: You won't see the grades.
+    is_random_exam: 'Exam with a random selection of questions from the course <b>"{course}"</b>.'
+    is_random_exam_learner: Exam with a random selection of questions.
+    no-access: No access
+    type:
+      basic: >-
+        This is a {minutes, plural, one {# minute} other {# minutes}} exam
+      proctored: >-
+        This is a
+        {minutes, plural, one {# minute} other {# minutes}} exam with proctoring.
+      random: >-
+        This is a {minutes, plural, one {# minute} other {# minutes}}
+        exam containing {questions, plural, one {# question} other {# questions}}
+        from <a href="{courseHref}">courseTitle</a>
+  required-module:
+    message: >-
+      Earn
+      {count, plural, one {# point} other {# points}} in  «{position}. {title}»
+      module to get access
+    message-percent: >-
+      Earn
+      "{percent}% points in  «{position}. {title}» module to get access
+    teacher-message: >-
+      To get access, learnes have to earn
+      {count, plural, one {# point} other {# points}} in «{position}. {title}» module
+    teacher-message-percent: >-
+      To get access, learnes have to earn
+      "{percent}% points in «{position}. {title}» module
+    tooltip: >-
+      Earn
+      {count, plural, one {# point} other {# points}} in «{position}. {title}» module
+    tooltip-percent: >-
+      Earn
+      "{percent}% points in «{position}. {title}» module
 syllabus_edit:
   course-settings: Course launch settings
   deadlines:
@@ -3632,6 +3748,7 @@ user__edit:
         pro {PRO courses: {used}/{total}}
         other {Enterprise courses: {used}/{total}}
       }
+    current-plan-valid-until: until {validUntil, date, medium-date}
     downgrade-warning: >-
       If you change your subscription, {prune, select,
         all {all your}
@@ -3640,8 +3757,9 @@ user__edit:
         pro {PRO courses}
         enterprise {Enterprise courses}
         other {courses}
-      } will become Basic, go to the Draft mode and will not be available for learners anymore.
-      You will be able to change their type and publish later.
+      } since <b>{fromDate, date, medium-date}</b> will become Basic, go to the Draft mode and
+      will not be available for learners anymore. You will be able to change their type
+      and publish later.
     invalid-warn: >-
       Your <b>subscription ended</b> on {validUntil, date, medium-date}
       To continue using extended functions, <a href={contactUsHref}>contact us</a>
@@ -3734,17 +3852,30 @@ user__edit:
         other {Subscribe}
       }
     subscribe-description:
-      cancel-trial: The money will not be charged off your card.
+      cancel-subscription: >-
+        <p>
+          Until {validUntil, date, medium-date} you will still have a {planName} plan,
+          with {proCoursesTotal, plural,
+            one {# {courseTypeCaption} course}
+            other {# {courseTypeCaption} courses}
+          } available.
+        </p>
+
+        <p>
+          {currentlyTrial, select,
+            true {The money will not be charged off your card}
+            other {Starting from <b>{validUntil, date, medium-date}</b> there will be no payments}
+          }.
+        </p>
       charge: >-
-        Starting from <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {there will be no payments}
-          other {you will be charged a payment of <b>{priceText}</b> {period, select,
-            month {monthly}
-            quarter {every 3 month}
-            half_year {every half of year}
-            year {yearly}
-            other {monthly}} until you cancel the subscription}
-        }.
+        Starting from <b>{chargeDate, date, medium-date}</b> you will be charged a payment of
+        <b>{priceText}</b> {period, select,
+          month {monthly}
+          quarter {every 3 month}
+          half_year {every half of year}
+          year {yearly}
+          other {monthly}
+        } until you cancel the subscription.
       will-trial: >-
         <p><b>Free 14-Days trial</b> will start immediately.</p>
         <p>After the trial period, you will be charged a payment of {priceText} {period, select,
