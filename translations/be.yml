@@ -2,7 +2,7 @@
 ARIA:
   nav:
     common: Агульная навігацыя па сайту
-    course: Навігацыя па курсу
+    course: Навігацыя па курсе
     lesson: Навігацыя па ўроку
 activity_graph:
   current_streak: >-
@@ -15,7 +15,7 @@ activity_graph:
   steps: задач вырашана
 adaptive:
   edit:
-    header: Наладкі адаптыўнасці курсу
+    header: Наладкі адаптыўнасці курса
     is_adaptive: Курс з’яўляецца адаптыўным
     more_info: Даведацца больш пра адаптыўнасць
   next: Наступны рэкамендаваны ўрок
@@ -76,7 +76,7 @@ breadcrumbs__certificate-edit: Сертыфікат
 breadcrumbs__course-edit: Рэдагаванне
 breadcrumbs__course-grade-book: Адзнакі
 breadcrumbs__course-lti-edit: Інтэграцыя па LTI
-breadcrumbs__course-permissions-edit: Налады доступу да курсу
+breadcrumbs__course-permissions-edit: Налады доступу да курса
 breadcrumbs__course-reports: Справаздачы
 breadcrumbs__course-statistics: Статыстыка
 breadcrumbs__course-syllabus: Расклад
@@ -92,11 +92,6 @@ breadcrumbs__review-session: Рэцэнзіі
 breadcrumbs__submissions: Рашэнні
 button__new-course: Стварыць курс
 button__new-lesson: Стварыць ўрок
-catalog-beta:
-  filters-dialog:
-    langs: "{lang, select, ru {Руская} en {Англійская} other {Любая}}"
-  search-empty: >-
-    Па запыце «<var>{query}</var>» нічога не знойдзена. Паспрабуйце змяніць параметры пошуку{hasAnyFilters, select, true { ці <a href="{resetFiltersHref}">скінуць фільтры</a>} other {} }.
 certificate-editor:
   auto-issue-label: Выпускаць аўтаматычна
   auto-issue-text:
@@ -136,7 +131,7 @@ certificate-editor:
 certificate-page:
   edit:
     confirm: >-
-      Вы ўпэўненыя, што жадаеце змяніць імя атрымальніка сертыфіката з '{old_fullname}' на '{new_fullname}'?
+      Вы ўпэўненыя, што хочаце змяніць імя атрымальніка сертыфіката з '{old_fullname}' на '{new_fullname}'?
     fail: Не атрымалася змяніць імя атрымальніка сертыфіката.
     last-change: Увага! Пасля гэтай змены вы больш не зможаце змяніць імя.
     prompt: >-
@@ -145,14 +140,14 @@ certificate-page:
     title: Змяніць імя атрымальніка
 certificate-widget:
   distinction: Сертыфікат з адзнакай
-  goto: Перайсці да курсу
+  goto: Перайсці да курса
   grade: "{count, plural, one {#% пройдзены} other {#% пройдзена}}"
   hidden: Схаваны
   hide: Схаваць
   page_url: Адкрыць старонку сертыфікату
   result:
     students-count: >-
-      Вынік лепш, чым у {count, plural, one {# студэнта} other {# студэнтаў}} курсу
+      Вынік лепш, чым у {count, plural, one {# студэнта} other {# студэнтаў}} курса
   unhide: Паказваць усім
   visibility__settings-failed: Не атрымалася захаваць налады прыватнасці сертыфікату.
   visibility__settings-success: Налады прыватнасці сертыфіката паспяхова захаваныя.
@@ -188,7 +183,7 @@ comments__leave: Пакінуць каментар
 comments__leave-solution: Пакінуць рашэнне
 comments__load: Паказаць абмеркаванні
 comments__load-replies: Паказаць больш адказаў
-comments__moderator-badge: Мадэратар курсу
+comments__moderator-badge: Мадэратар курса
 comments__network-error: Штосьці пайшло не так. Абнавіце старонку, каб убачыць каментары.
 comments__not-found: "Каментар # {comment_id} выдалены ці ніколі не існаваў"
 comments__pin: Замацаваць
@@ -212,7 +207,7 @@ comments__staff-replied: ', адказ выкладчыка'
 comments__submissions: Рашэнні
 comments__submissions-tooltip: Рашэнні аўтара каментара
 comments__submit-error: Не атрымалася адправіць ваш каментар =(
-comments__teacher-badge: Каманда курсу
+comments__teacher-badge: Каманда курса
 comments__thread-default: >-
   Каментары
 comments__thread-solutions: >-
@@ -245,7 +240,7 @@ common__collapse: Згарнуць
 common__cookies-warn: >-
   Ваш браўзер не падтрымлівае cookies. Калі ласка, <a target=" _blank" rel="noopener noreferrer" href="https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml">уключыце</a> cookies у наладах вашага браўзэра.
 common__course: Курс
-common__course-logo: Лагатып курсу
+common__course-logo: Лагатып курса
 common__course-search-placeholder: Пошук па курсе…
 common__delete: Выдаліць
 common__delete-failed-warn: Не атрымалася выдаліць.
@@ -265,7 +260,7 @@ common__input-length-warn: >-
   Мінімум {count, plural, one {# сімвал} few {# сімвала} other {# сімвалаў}}
 common__learner: Студэнт
 common__lesson: Урок
-common__lesson-image: Малюнак уроку
+common__lesson-image: Малюнак урока
 common__lessons: Урокі
 common__link: Спасылка
 common__list-is-empty: Спіс пусты
@@ -325,7 +320,7 @@ content_advices:
   action:
     course_quizzes: 'дадайце задачы ва ўрокі са старонкі <a href="{url}">{text}</a>'
     other: '<a href="{url}">{text}</a>'
-  course_cover: Загружаны малюнак курсу
+  course_cover: Загружаны малюнак курса
   course_lessons: У курсе ёсць не менш за 10 урокаў
   course_quizzes: У курсе ёсць не менш за 10 задач
   course_sections: У курсе ёсць не менш 2 модуляў
@@ -333,18 +328,18 @@ content_advices:
   empty_video_steps: Усе відэа крокі у курсе змяшчаюць видэа
   link-text:
     course_cover: рэдагаваць інфармацыю пра курс
-    course_lessons: рэдагаваць змест курсу
+    course_lessons: рэдагаваць змест курса
     course_quizzes: змест
-    course_sections: рэдагаваць змест курсу
+    course_sections: рэдагаваць змест курса
     course_summary: рэдагаваць інфармацыю пра курс
     empty_video_steps: праверыць у дашбордзе выкладчыка
     quiz_correct_submissions: праверыць у дашбордзе выкладчыка
-    section_lessons: рэдагаваць змест курсу
-    section_titles: рэдагаваць змест курсу
+    section_lessons: рэдагаваць змест курса
+    section_titles: рэдагаваць змест курса
     step_default_texts: праверыць у дашбордзе выкладчыка
   not_complete: "цяпер: {current}"
   quiz_correct_submissions: Кожная задача вырашана слушна хоця б адзін раз
-  readiness: Падрыхтаванасць курсу
+  readiness: Падрыхтаванасць курса
   readiness_progress: "Курс гатовы на <b>{score}/{cost}</b>"
   section_lessons: У кожным модулі ёсць хаця б адзін урок
   section_titles: Указаныя назвы модуляў (не стандартныя)
@@ -383,7 +378,6 @@ cost:
   submissions-left: >-
     Усяго {count, plural, one {<strong>#</strong> спроба} few {<strong>#</strong> спробы} many {<strong>#</strong> спробаў} other {<strong>#</strong> спробаў} }
 course:
-  access_restricted: Курс закрыты на дапрацоўку.
   draft: У распрацоўцы
   edit-btns:
     info: Рэдагаваць інфармацыю пра курс
@@ -397,9 +391,9 @@ course:
     certificate_is_issued: Выдаецца
     certificate_is_not_issued: Не выдаецца
     certificate_regular_cond_title: "Умовы атрымання сертыфікату: "
-    description_header: Апісанне курсу
-    fill_empty: "Поле не запоўнена. Калі ласка, запоўніце яго ў рэдактары курсу."
-    hours_to_complete: Час праходжання курсу
+    description_header: Апісанне курса
+    fill_empty: "Поле не запоўнена. Калі ласка, запоўніце яго ў рэдактары курса."
+    hours_to_complete: Час праходжання курса
     hours_to_complete_text: "{count, plural, one {# гадзіна} few {# гадзіны} many {# гадзін} other {# гадзіны}}"
     instructors_header: Выкладчыкі
     lang: Мова
@@ -413,7 +407,7 @@ course:
       Курс дасяжны бясплатна.Усе матэрыялы дасяжныя зараз для свабоднага праходжання
     share_text: Падзяліцца ў сацыяльных сетках
     share_text_short: Падзяліцца
-    soon_note: "Курс дасяжны бясплатна. Матэрыялы курсу будуць дасяжныя {date}"
+    soon_note: "Курс дасяжны бясплатна. Матэрыялы курса будуць дасяжныя {date}"
     start_date: Дата пачатку
     summary_header: Каротка пра курс
     target_audience_header: Мэтавая аўдыторыя
@@ -437,7 +431,7 @@ course:
     paid-features:
       deadlines: Дэдлайны ў курсе
       exams: Экзамены
-      lti-integration: Інтэграцыя курсу па LTI
+      lti-integration: Інтэграцыя курса па LTI
       section-deadlines: Дэдлайны ў модулі
       section-discounting-policy: Палітыкі зніжэння балаў
       section-required-section: Абавязковы модуль
@@ -471,16 +465,13 @@ course-assessments:
   tab-caption: Праверка рашэнняў
   title: >-
     {count, plural, one {# рашэнне чакае рэцэнзіі} few {# рашэнні чакаюць рэцэнзій} many {# рашэнняў чакаюць рэцэнзій} other {# рашэнняў чакаюць рэцэнзій} }
-course-cards:
-  certificate: сертыфікат
-  workload: "{hours} г"
 course-edit__back: Вярнуцца ў курс
 course-edit__cancel: Адмена
 course-edit__new-module: Новы модуль
 course-edit__save: Захаваць
 course-filters:
   categories: Катэгорыі
-  langs: Мова курсу
+  langs: Мова курса
   tags: Прадметы
 course-grade-book:
   download-sign: "Вы можаце спампаваць табель паспяховасці на "
@@ -493,7 +484,7 @@ course-grade-book:
   refresh-row-btn: Абнавіць гэтыя радкі
   refresh-row-success: Абноўлена
   reports: старонцы справаздачы
-  title: Табель паспяховасці курсу
+  title: Табель паспяховасці курса
   total: Вынік
   user: Карыстальнік
   user-sort:
@@ -517,10 +508,10 @@ course-index__lang: Мова
 course-index__workload: Нагрузка
 course-info-edit__add: Дадаць
 course-info-edit__author-placeholder: id стваральніка...
-course-info-edit__authors-403: Толькі стваральнік курсу можа рэдагаваць спіс стваральнікаў ;(
-course-info-edit__cover: "Загрузіць новы лагатып курсу:<br>230 x 230"
+course-info-edit__authors-403: Толькі стваральнік курса можа рэдагаваць спіс стваральнікаў ;(
+course-info-edit__cover: "Загрузіць новы лагатып курса:<br>230 x 230"
 course-info-edit__instructor-placeholder: ID карыстальніка
-course-info-edit__instructors-403: Толькі стваральнік курсу можа рэдагаваць спіс выкладчыкаў ;(
+course-info-edit__instructors-403: Толькі стваральнік курса можа рэдагаваць спіс выкладчыкаў ;(
 course-info-edit__remove-author: Выдаліць стваральніка
 course-info-edit__remove-instructor: Выдаліць выкладчыка
 course-info-edit__upload-failed: >-
@@ -546,7 +537,7 @@ course-new:
       "3": Табель і справаздачы па паспяховасці
       "4": Ручная праверка заданняў
       "5": Дэдлайн, экзамены, абмежаванне спробаў
-      "6": Кіраванне доступам да курсу
+      "6": Кіраванне доступам да курса
       "7": Выдача сваіх сертыфікатаў
       "8": Экзамены з проктарынгам
       "9": Інтэграцыя LTI
@@ -687,7 +678,7 @@ course-settings:
     {count, plural, =0 { <a href="https://support.stepik.org/hc/ru/requests/new" target="_blank" >Звярніцеся ў падтрымку</a>, каб атрымліваць сродкі з продажу курса. } =1 {Выручку з продажаў атрымлівае} other {Выручку з продажаў атрымліваюць} }
   cancel: Адмяніць
   commission: >-
-    {equal, select, true { Мы бярэм камісію <b>{commissionPromo}%</b> з усіх продажаў дадзенага курса. } other { Мы бярэм камісію <b>{commissionPromo}%</b> з продажаў пры <a href="https://support.stepik.org/hc/ru/articles/360016290639" target="_blank">нашым удзеле ў прасоўванні</a> курсу, і <b>{commissionBasic}%</b>, калі вы прыцягваеце студэнтаў самі. } }
+    {equal, select, true { Мы бярэм камісію <b>{commissionPromo}%</b> з усіх продажаў дадзенага курса. } other { Мы бярэм камісію <b>{commissionPromo}%</b> з продажаў пры <a href="https://support.stepik.org/hc/ru/articles/360016290639" target="_blank">нашым удзеле ў прасоўванні</a> курса, і <b>{commissionBasic}%</b>, калі вы прыцягваеце студэнтаў самі. } }
   convert-into-paid:
     description: >-
       Вы можаце <a href="{url}" class="link-primary">зрабіць курс платным</a> і прымаць аплату ад студэнтаў наўпрост праз Stepik.
@@ -741,7 +732,7 @@ course-settings:
     terms: Умовы аказання паслугі
     terms-link: https://support.stepik.org/hc/ru/articles/360018110654
     title: Зрабіць курс платным
-  price-title: Кошт курсу - {price}
+  price-title: Кошт курса - {price}
   promocode-editor-title: Прамакоды
   publication: Публікацыя
   requests:
@@ -767,10 +758,6 @@ course-syll__compact-progress: адсотак пройдзеных крокаў
 course-syll__ends: Дата сканчэння
 course-syll__scores: ваш / макс бал
 course-syllabus__closed-yet: Гэты модуль закрыты
-course-syllabus__required-module-message: >-
-  {count, plural, other {# балаў у модулі {position} ({title})} one {# бал у модулі {position} ({title})} many {# балаў у модулі {position} ({title})} few {# бала ў модулі {position} ({title})}}
-course-syllabus__required-module-message-percent: "{percent}% балаў у модулі {position} ({title})"
-course-syllabus__required-module-message-title: "Умова адкрыцця:"
 course__add-annon: Дадаць навіну
 course__add-to-archived-link: Перамясціць у архіў
 course__add-to-favorites-link: Дадаць у абранае
@@ -838,7 +825,7 @@ course__buy-form:
     Калі ў вас узніклі праблемы з аплатай, пішыце на <a href="mailto:support@stepik.org">support@stepik.org</a>.
   title: 'Аплата доступу на курс "{course}"'
   user-agreement: >-
-    Аплачваючы доступ да гэтага курсу, вы згаджаецеся з умовамі <a href="{terms_url}">карыстальніцкага пагаднення</a>.
+    Аплачваючы доступ да гэтага курса, вы згаджаецеся з умовамі <a href="{terms_url}">карыстальніцкага пагаднення</a>.
 course__certificate:
   is_auto_issued: >-
     Віншуем! Вы набралі дастаткова балаў для атрымання сертыфіката. Сертыфікат з'явіцца ў вашым профілі на працягу сутак.
@@ -858,7 +845,7 @@ course__drop-confirm: "Вы ўпэўнены, што хочаце пакінуц
 course__drop-fail: Не атрымалася пакінуць курс.
 course__drop-link: Пакінуць
 course__drop-success: "Курс пакінуты, перазагрузіце старонку."
-course__empty-warn-1: У курсе пакуль што няма аніводнага ўроку.
+course__empty-warn-1: У курсе пакуль што няма аніводнага ўрока.
 course__empty-warn-2: Ён пусты =(
 course__empty-warn-add: Дадайце свой першы ўрок у рэдактары зместу курса.
 course__free: Бясплатна
@@ -951,19 +938,19 @@ deadlines-editor:
     beginDateCourse: >-
       {type, select, after-end-date {Пачатак курса мае наступіць да яго заканчэння} after-soft-deadline {Пачатак курса мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак курса мае наступіць да жорсткага дэдлайну} other {} }
     beginDateSection: >-
-      {type, select, after-end-date {Пачатак модуля мае наступіць да яго заканчэння} before-begin-date-course {Пачатак модуля мае наступіць пасля пачатку курса} after-end-date-course {Пачатак модуля мае наступіць да заканчэння курсу} after-soft-deadline {Пачатак модуля мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак модуля мае наступіць да жорсткага дэдлайну} other {} }
+      {type, select, after-end-date {Пачатак модуля мае наступіць да яго заканчэння} before-begin-date-course {Пачатак модуля мае наступіць пасля пачатку курса} after-end-date-course {Пачатак модуля мае наступіць да заканчэння курса} after-soft-deadline {Пачатак модуля мае наступіць да мяккага дэдлайну} after-hard-deadline {Пачатак модуля мае наступіць да жорсткага дэдлайну} other {} }
     endDateCourse: >-
       {type, select, before-begin-date {Канец курса мае наступіць пасля яго пачатку} before-soft-deadline {Канец курса мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец курса мае наступіць пасля жорсткага дэдлайну} other {} }
     endDateSection: >-
-      {type, select, after-end-date-course {Канец модуля мае наступіць да заканчэння курсу} before-begin-date-course {Канец модуля мае наступіць пасля пачатку курса} before-soft-deadline {Канец модуля мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец модуля мае наступіць пасля жорсткага дэдлайну} other {} }
+      {type, select, after-end-date-course {Канец модуля мае наступіць да заканчэння курса} before-begin-date-course {Канец модуля мае наступіць пасля пачатку курса} before-soft-deadline {Канец модуля мае наступіць пасля мяккага дэдлайну} before-hard-deadline {Канец модуля мае наступіць пасля жорсткага дэдлайну} other {} }
     hardDeadlineCourse: >-
-      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца курсу} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
+      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца курса} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
     hardDeadlineSection: >-
-      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Жорсткі дэдлайн мае мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Жорсткі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца модуля} after-end-date-course {Жорсткі дэдлайн модуля мае наступіць да канца курсу} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
+      {type, select, equal-begin-end-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Жорсткі дэдлайн мае мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Жорсткі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Жорсткі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Жорсткі дэдлайн мае наступіць да канца модуля} after-end-date-course {Жорсткі дэдлайн модуля мае наступіць да канца курса} before-soft-deadline {Жорсткі дэдлайн модуля мае наступіць пасля мяккага} other {} }
     softDeadlineCourse: >-
       {type, select, after-hard-deadline {Мяккі дэдлайн курса мае наступіць да жорсткага} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца курса} other {} }
     softDeadlineSection: >-
-      {type, select, after-hard-deadline {Мяккі дэдлайн модуля мае наступіць да жорсткага} after-hard-deadline-course {Мяккі дэдлайн модуля мае наступіць да жорсткага дэдлайну курсу} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца модуля} after-end-date-course {Мяккі дэдлайн модуля мае наступіць да канца курсу} other {} }
+      {type, select, after-hard-deadline {Мяккі дэдлайн модуля мае наступіць да жорсткага} after-hard-deadline-course {Мяккі дэдлайн модуля мае наступіць да жорсткага дэдлайну курса} equal-begin-end-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля і да яго канца} equal-begin-end-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса і да яго канца} before-begin-date {Мяккі дэдлайн мае наступіць пасля пачатку модуля} before-begin-date-course {Мяккі дэдлайн модуля мае наступіць пасля пачатку курса} after-end-date {Мяккі дэдлайн мае наступіць да канца модуля} after-end-date-course {Мяккі дэдлайн модуля мае наступіць да канца курса} other {} }
   field:
     beginDateCourse: дата адкрыцця курса
     beginDateSection: дата адкрыцця модуля
@@ -999,7 +986,7 @@ email-invitations-list:
   empty-list: Няма запрашэнняў на разглядзе
   load-more: Загрузіць яшчэ ↓
   remove: Выдаліць запрашэнне па пошце
-  remove-confirm: Вы сапраўды жадаеце выдаліць запрашэнне па пошце?
+  remove-confirm: Вы сапраўды хочаце выдаліць запрашэнне па пошце?
 embed_auth:
   done:
     continue: працягнуць вучыцца
@@ -1069,8 +1056,6 @@ errors:
   wrongLength: "{description} няслушнай даўжыні (мае быць знакаў: {is})"
 exam:
   close-date: Дата закрыцця экзамену
-  confirm: >-
-    У вас ёсць {count, plural, one {# хвіліна} few {# хвіліны} other {# хвілінаў}} і адзіная спроба, каб здаць іспыт. Вы ўпэўненыя, што жадаеце пачаць?
   finish-prematurely:
     btn: Завяршыць датэрмінова
     confirm-no: "Не, працягнуць рашаць"
@@ -1080,13 +1065,6 @@ exam:
   game-over: Экзамен скончаны
   go-back: Да зместу
   header: Вы ў рэжыме экзамену. Паспейце вырашыць заданні з модуля за адведзены час
-  info-head: >-
-    {count, plural, other {Гэта экзаменацыйны модуль на # хвіліны} many {Гэта экзаменацыйны модуль на # хвілінаў} few {Гэта экзаменацыйны модуль на # хвіліны} one {Гэта экзаменацыйны модуль на # хвіліну}}
-  info-latest-date: "Рэкамендуем прыступіць не пазней {date} каб паспець да закрыцця экзамену."
-  info-paragraph: У вас будзе адна спроба на праходжанне экзамену.
-  is_exam_without_progress: Ацэнкі адпраўленых рашэнняў будуць недаступныя.
-  is_random_exam: 'Экзамен з выпадковай выбаркай пытанняў з курсу <b>"{course}"</b>.'
-  is_random_exam_learner: Экзамен з выпадковай выбаркай пытанняў.
   label: Экзамен
   not-started: Экзамен пакуль недасяжны
   open-date: Дата адкрыцця экзамену
@@ -1246,7 +1224,7 @@ invitations-editor:
   new-link: Згенераваць спасылку для доступу
   one-time: аднаразовую
   remove: Выдаліць спасылку-запрашэнне
-  remove-confirm: Вы сапраўды жадаеце выдаліць спасылку?
+  remove-confirm: Вы сапраўды хочаце выдаліць спасылку?
   restricted: Запрасіць па спасылцы можна толькі ў {planTitle}-курс
   reusable: шматразовую
 invitations-modal:
@@ -1323,7 +1301,7 @@ klass-edit:
     cancel: Не, пакінуць
     confirm: Так, выдаліць
     text: >-
-      Вы ўпэўненыя, што жадаеце выдаліць клас «<b>{name}</b>»?
+      Вы ўпэўненыя, што хочаце выдаліць клас «<b>{name}</b>»?
   deleted: Клас выдалены
   description: Апісанне класа
   error-on-delete: Нешта пайшло ня так. Не атрымалася выдаліць клас.
@@ -1562,7 +1540,7 @@ new-class-form:
     alt: Як стварыць клас са старонкі курса
     src: /static/frontend/new-class-how-to-ru.png
   choose-course-text: >-
-    Стварыце клас для <b>любога адкрытага</b> курсу і атрымаеце доступ да адзнак і рашэнняў вашых студэнтаў.
+    Стварыце клас для <b>любога адкрытага</b> курса і атрымаеце доступ да адзнак і рашэнняў вашых студэнтаў.
   create-class-btn: Стварыць клас
   create-class-choose-course: Абярыце курс...
   create-class-text: >-
@@ -1672,8 +1650,6 @@ plans:
   ask_questions: >-
     Калі маеце пытанні, напішыце нам на <a href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Палепшаная тэхпадтрымка
-  cancel_at_period_end: >-
-    Падпіска сапраўдная да {valid_until}. Дадатковыя плацяжы спісвацца не будуць.
   card:
     change: Змяніць
     confirm: Ужыць
@@ -2308,7 +2284,7 @@ quiz__submissions-link: Вашыя рашэнні
 quiz__time-over: Час скончыўся!
 quiz__timelimit: Абмежаванне
 quiz__wrong: >-
-  > [is_not_last_try] Пакуль няправільна, паспрабуйце яшчэ раз! > [infinite_tries] Няправільны адказ. Нічога страшнага, у вас усё яшчэ бясконцая колькасць спробаў! > Пакуль няслушна. Памылкі - нашы лепшыя настаўнікі! > [No_discount, infinite_tries] Няслушна. Паспрабуйце яшчэ раз — вы нічога не губляеце! > [Open_comments, no_comments] Няслушна. Паспрабуйце задаць навадное пытанне ў каментарах, тады каманда курсу і іншыя студэнты змогуць дапамагчы вам. > [is_not_last_try] Пакуль няслушна, але вы можаце паспрабаваць яшчэ! > [is_not_last_try] Пакуль няправільна. Зацятасці вам не займаць, паспрабуеце яшчэ раз? > [is_not_last_try] Не дакладна. Не губляйце надзеі, вы сапраўды зможаце! > [is_not_last_try] Няправільны адказ. Цяжкае заданне, паспрабуеце яшчэ раз? > [is_not_last_try] Пакуль няслушна. Вы прайшлі ўжо такі шлях! Не здавайцеся! > [is_not_last_try] Не атрымалася. Яшчэ троху і вы дакладна зможаце! > [Open_solutions, no_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, падзяліцеся сваім рашэннем - магчыма вам падкажуць у чым памылка. > [Open_solutions, has_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, магчыма там вы знойдзеце падказку. > [is_not_last_try] Пакуль няслушна. Ня апускайце рукі — паспрабуйце яшчэ раз! > [no_discount] Няправільны адказ. Нічога страшнага, вы ўсё яшчэ можаце зарабіць поўны бал! > [No_discount, no_close_deadline] Няправільна. Крэпкі арэшак! Вы можаце вярнуцца да яго пазней і ўсё роўна атрымаць поўны бал!
+  > [is_not_last_try] Пакуль няправільна, паспрабуйце яшчэ раз! > [infinite_tries] Няправільны адказ. Нічога страшнага, у вас усё яшчэ бясконцая колькасць спробаў! > Пакуль няслушна. Памылкі - нашы лепшыя настаўнікі! > [No_discount, infinite_tries] Няслушна. Паспрабуйце яшчэ раз — вы нічога не губляеце! > [Open_comments, no_comments] Няслушна. Паспрабуйце задаць навадное пытанне ў каментарах, тады каманда курса і іншыя студэнты змогуць дапамагчы вам. > [is_not_last_try] Пакуль няслушна, але вы можаце паспрабаваць яшчэ! > [is_not_last_try] Пакуль няправільна. Зацятасці вам не займаць, паспрабуеце яшчэ раз? > [is_not_last_try] Не дакладна. Не губляйце надзеі, вы сапраўды зможаце! > [is_not_last_try] Няправільны адказ. Цяжкае заданне, паспрабуеце яшчэ раз? > [is_not_last_try] Пакуль няслушна. Вы прайшлі ўжо такі шлях! Не здавайцеся! > [is_not_last_try] Не атрымалася. Яшчэ троху і вы дакладна зможаце! > [Open_solutions, no_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, падзяліцеся сваім рашэннем - магчыма вам падкажуць у чым памылка. > [Open_solutions, has_solutions] Пакуль няслушна. Вам даступны форум рашэнняў, магчыма там вы знойдзеце падказку. > [is_not_last_try] Пакуль няслушна. Ня апускайце рукі — паспрабуйце яшчэ раз! > [no_discount] Няправільны адказ. Нічога страшнага, вы ўсё яшчэ можаце зарабіць поўны бал! > [No_discount, no_close_deadline] Няправільна. Крэпкі арэшак! Вы можаце вярнуцца да яго пазней і ўсё роўна атрымаць поўны бал!
 random-exam:
   completed: >-
     {count, plural, one {заданне} few {заданні} many {заданняў} other {заданняў}} у экзаменацыйным кроку пройдзена
@@ -2444,7 +2420,7 @@ reports:
     name: Спіс выкладчыкаў
     sample: report-samples/ru/teachers.csv
   course_download_time_to_complete:
-    desc: "Сярэдні час праходжання крокаў, урокаў, модуляў і курсу"
+    desc: "Сярэдні час праходжання крокаў, урокаў, модуляў і курса"
     name: Сярэдні час праходжання
     sample: report-samples/ru/time-to-complete.csv
   create: Сфармаваць
@@ -2707,7 +2683,7 @@ section_edit:
   is_exam: Экзаменацыйны модуль
   is_exam_without_progress: Хаваць правільнасць рашэнняў
   is_random_exam: Экзамен з выпадковай выбаркай пытанняў
-  marked_delete: "Модуль «{title}» будзе выдалены пасля захавання курсу"
+  marked_delete: "Модуль «{title}» будзе выдалены пасля захавання курса"
   needs-plan: >-
     Каб вы маглі апублікаваць курс з такімі наладамі, трэба перавесці яго ў {planTitle}-рэжым. <a href='https://welcome.stepik.org/ru/pricing' target='_blank'>Больш падрабязна пра тарыфы.</a>
   no_req_section: Не абраны
@@ -2742,7 +2718,7 @@ step-edit:
       lines: радкі
       words: словы
     diff-method-title: "Розніца:"
-    modal-title: "Гісторыя зменаў крока {stepPos} урока «{lessonTitle}»"
+    modal-title: "Гісторыя зменаў кроку {stepPos} урока «{lessonTitle}»"
     settings-block: Налады
     show: Паказаць гісторыю
     snapshot-apply: Выкарыстоўваць гэтую версію
@@ -2751,7 +2727,7 @@ step-edit:
   limit-submissions-settings-description: "Пасылаць рашэнні можна:"
   limit-submissions-settings-inf: Без абмежаванняў
   limit-submissions-settings-note: >-
-    Заўвага: Гэтыя абмежаванні ўплываюць толькі на студэнтаў, якія тэстуюць і мадэратараў. Адміны і выкладчыкі курсу не маюць абмежаванняў на спробы.
+    Заўвага: Гэтыя абмежаванні ўплываюць толькі на студэнтаў, якія тэстуюць і мадэратараў. Адміны і выкладчыкі курса не маюць абмежаванняў на спробы.
   limit-submissions-settings-number: "Дазволена толькі "
   limit-submissions-settings-number-after: "Спробаў"
   limit-submissions-settings-title: Абмежаванне колькасці спробаў
@@ -2814,7 +2790,6 @@ submissions:
     for-learners: Вы яшчэ не рашалі гэтую задачу.
     for-teachers: Ніхто яшчэ не рашаў гэтую задачу.
     has-filters: Рашэнні не знойдзеныя.
-    has-query: 'Па запыце <strong>"{query}"</strong> знойдзена <strong>0</strong> рашэнняў.'
     try-change-query: Паспрабуйце змяніць параметры пошуку.
     try-change-query-filters: >-
       Паспрабуйце змяніць параметры пошуку або <a href="{filter-reset-url}">скінуць фільтры</a>.
@@ -2877,7 +2852,7 @@ subscriptions__unsubscribe-lesson-comments: Адпісацца ад камент
 subscriptions__unsubscribe-step-comments: Адпісацца ад каментароў кроку
 subscriptions__unsubscribe-tooltip: Ніколі не атрымліваць абвесткі
 syllabus_edit:
-  course-settings: Налады курсу
+  course-settings: Налады курса
   deadlines:
     course_begin_date: Пачатак курса
     course_end_date: Канец курса
@@ -3101,7 +3076,7 @@ unit_edit:
   add_existed: Дадаць ваш існуючы ўрок
   import: Імпартаваць урокі з файла
   marked_delete: >-
-    Урок&nbsp;<strong>«{title}»</strong> будзе выдалены з курсу пры захаванні
+    Урок&nbsp;<strong>«{title}»</strong> будзе выдалены з курса пры захаванні
   new_lesson: Стварыць ўрок
   not-saved: Урок не захаваны
   restore: Аднавіць
@@ -3165,7 +3140,7 @@ user__edit:
         Выкладчык можа адпраўляць вам навіны пра спецыяльныя мерапрыемствы, новы матэрыялы або іншыя падзеі курса. Stepik будзе адпраўляць рэгулярныя апавяшчэнні, якія тычацца вашага прагрэсу навучання, у тым ліку нагадваючы пра дэдлайнах і новых каментарах ў курсе.
       instructor_reviews: Рэцэнзіі
       instructor_reviews-hint: "Атрымліваць апавяшчэнні аб новых рашэннях, якія чакаюць рэцэнзіі выкладчыка"
-      label: Абнаўленні курсу
+      label: Абнаўленні курса
       reminders: Напаміны
       reminders-hint: >-
         Атрымліваць апавяшчэнні аб адкрыцці новых модуляў у курсе і надыходзячых дэдлайнах
@@ -3206,8 +3181,6 @@ user__edit:
     current-plan: Бягучы план — <b>{planName}</b>
     current-plan-counter: >-
       {courseType, select, basic {PRO-курсы недаступныя на тарыфе Basic} pro {PRO-курсы: {used}/{total}} other {Enterprise-курсы: {used}/{total}} }
-    downgrade-warning: >-
-      Калі вы зменіце падпіску, {prune, select, all {усе вашы {type, select, pro {PRO-курсы} enterprise {Enterprise-курсы} other {курсы}} } other {{prune} з {used} вашых {type, select, pro {PRO-курсаў} enterprise {Enterprise-курсаў} other {курсаў}} } } стануць базавымі, пяройдуць у рэжым чарнавіка і больш не будуць даступныя студэнтам. Вы зможаце змяніць іх тып і апублікаваць пазней.
     invalid-warn: >-
       Ваша <b>падпіска скончылася</b> {validUntil, date, medium-date} Каб працягнуць карыстацца пашыранай функцыянальнасцю, <a href={contactUsHref}>напішыце нам</a> на support@stepik.org.
     invalid-warn-short: >-
@@ -3240,9 +3213,6 @@ user__edit:
     subscribe-btn: >-
       {kind, select, upgrade {{by, select, type {Аформіць} other {Палепшыць}}} downgrade {Змяніць} other {Аформіць} } падпіску
     subscribe-description:
-      cancel-trial: Грошы не будуць спісаныя з карты.
-      charge: >-
-        Пачынаючы з <b>{chargeDate, date, medium-date}</b> {type, select, basic {грошы больш спісвацца не будуць} other {плацёж у <b>{priceText}</b> будзе спісвацца {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц} } да адмены падпіскі} }.
       will-trial: >-
         <p><b>Бясплатны 14-ці дзённы пробны перыяд</b> пачнецца адразу.</p> <p>Пасля пробнага перыяду вы будзеце плаціць {priceText} {period, select, month {штомесяц} quarter {штоквартал} half_year {штопаўгады} year {штогод} other {штомесяц}}.</p>
     subscribe-footnote: >-
