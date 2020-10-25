@@ -327,12 +327,6 @@ course-syll__compact-progress: Verhältnis bestandene Schritte
 course-syll__ends: Datum Ende
 course-syll__scores: Ihre / maximale Punkte
 course-syllabus__closed-yet: This Modul ist geschlossen
-course-syllabus__required-module-message: >-
-  {count, plural, one {# Punkt im Modul {position} ({title})} other {# Punkte im Modul {position}
-  ({title})}}
-course-syllabus__required-module-message-percent:
-  "{percent}% der Punkte im Modul {position} ({title})"
-course-syllabus__required-module-message-title: Bedingung zum öffnen
 course__add-annon: Neue Ankündigung
 course__add-to-favorites-link: Bei den Favoriten hinzufügen
 course__added-to-favorites-fail:
@@ -479,17 +473,9 @@ discussions__start-disc-button: Kommentar senden
 edit-ui__video-uploading-warn: Video wird noch hochgeladen. Wollen Sie unterbrechen?
 exam:
   close-date: Klausur endet
-  confirm: >-
-    {count, plural, other {Sie haben nur # Minuten und nur einen Versuch. Wollen Sie die Klausur
-    beginnen?} one {Sie haben nur # Minute und nur einen Versuch. Wollen Sie die Klausur beginnen?}}
   game-over: Die Klausur ist beendet.
   go-back: Zum Studienplan
   header: Der Examen Modus ist aktiv.
-  info-head: >-
-    {count, plural, other {Sie werden # Minuten für diese Klausur haben} one {Sie werden # Minute
-    für diese Klausur haben}}
-  info-latest-date: "Sie sollten nicht später als {date} beginnen um rechtzeitig fertig zu werden"
-  info-paragraph: Sie werden nur einen Versuch haben
   label: Klausur
   not-started: Die Klausur ist nocht nicht verfügbar
   open-date: Klausur beginnt
@@ -1203,6 +1189,14 @@ subscriptions__unsubscribe: Einschreiben rückgängig machen
 subscriptions__unsubscribe-lesson-comments: Einschreibung der Lektionskommentare rückgängig machen
 subscriptions__unsubscribe-step-comments: Einschreibung der Schrittkommentare rückgängig machen
 subscriptions__unsubscribe-tooltip: Nie Benachrichtigungen erhalten
+syllabus:
+  exam:
+    attempts-info: Sie werden nur einen Versuch haben
+    info-latest-date: "Sie sollten nicht später als {date} beginnen um rechtzeitig fertig zu werden"
+    type:
+      basic: >-
+        {minutes, plural, other {Sie werden # Minuten für diese Klausur haben}
+        one {Sie werden # Minute für diese Klausur haben}}
 syllabus_edit:
   deadlines:
     course_begin_date: Kurs Starttermin
