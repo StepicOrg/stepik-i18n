@@ -102,6 +102,31 @@ catalog:
     free-only: Толькі бясплатныя
     language: Мова курса
     language-values: "{lang, select,  be {Беларуская} ru {Руская} en {Англійская} other {Любая}}"
+    reset: Скінуць
+    submit: Паказаць
+    title: Фільтры
+    with-cert-only: Толькі з сертыфікатам
+  recently-viewed: Нядаўна прагледжаныя
+  search:
+    empty: >-
+      Па запыце «<var>{query}</var>» нічога не знойдзена. Паспрабуйце змяніць параметры {hasAnyFilters, select, true {пошуку альбо <a href="{resetFiltersHref}">скінуць фільтры</a>} other {пошуку} }.
+    next-page: Далей →
+    prev-page: '← Назад'
+    suggestioned: >-
+      Паказаны вынікі па запыце «<a href={suggestionHref}><var>{suggestion}</var></a>». Не знойдзена вынікаў па запыце «<var>{query}</var>».
+  search-bar:
+    free-only: Бясплатныя
+    input-placeholder: Назва курса, аўтар або прадмет
+    language: "{lang, select,  be {На беларускай} ru {На рускай} en {На англійскай} other {На любой мове}}"
+    with-cert-only: З сертыфікатамі
+  stepik-academy:
+    about:
+      description: >-
+        <b>Stepik Academy</b> — гэта праграмы з падтрымкай выкладчыка, групы і куратара ад каманды Stepik c дэдлайнамі і праверкай заданняў. Навучанне платнае, але яно таго варта!
+      learn-more: Даведацца больш
+      learn-more-url: https://academy.stepik.org/
+      title: >-
+        {index, select, 1 {Сумуеце<br>па дэдлайнах?} 2 {Не хапае<br>зваротнай сувязі?} other {Сумна<br>вучыцца аднаму?} }
 certificate-editor:
   auto-issue-label: Выпускаць аўтаматычна
   auto-issue-text:
@@ -388,6 +413,8 @@ cost:
   submissions-left: >-
     Усяго {count, plural, one {<strong>#</strong> спроба} few {<strong>#</strong> спробы} many {<strong>#</strong> спробаў} other {<strong>#</strong> спробаў} }
 course:
+  access_restricted: >-
+    Аўтары закрылі курс «{courseTitle}» і пакуль праходзіць яго нельга.
   draft: У распрацоўцы
   edit-btns:
     info: Рэдагаваць інфармацыю пра курс
@@ -438,6 +465,8 @@ course:
       basic_paid: Базавы+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select, basic {Базавы} basic_paid {Базавы+} enterprise {Enterprise} pro {PRO} other {} }
     paid-features:
       deadlines: Дэдлайны ў курсе
       exams: Экзамены
@@ -475,6 +504,10 @@ course-assessments:
   tab-caption: Праверка рашэнняў
   title: >-
     {count, plural, one {# рашэнне чакае рэцэнзіі} few {# рашэнні чакаюць рэцэнзій} many {# рашэнняў чакаюць рэцэнзій} other {# рашэнняў чакаюць рэцэнзій} }
+course-card:
+  certificate: сертыфікат
+  view-more: Паглядзець усе
+  workload: "{hours} г"
 course-edit__back: Вярнуцца ў курс
 course-edit__cancel: Адмена
 course-edit__new-module: Новы модуль
@@ -526,6 +559,8 @@ course-info-edit__remove-author: Выдаліць стваральніка
 course-info-edit__remove-instructor: Выдаліць выкладчыка
 course-info-edit__upload-failed: >-
   Загрузіце правільную выяву. Файл, які вы загрузілі, пашкоджаны або не з'яўляецца выявай.
+course-list-card:
+  course-count: "{count, plural, one {# курс} few {# курсы} other {# курсаў}}"
 course-lti-edit__header: Налады інтэграцыы па LTI
 course-new:
   cancel: Скасаваць
@@ -1066,6 +1101,16 @@ errors:
   wrongLength: "{description} няслушнай даўжыні (мае быць знакаў: {is})"
 exam:
   close-date: Дата закрыцця экзамену
+  confirm:
+    cancel: Скасаваць
+    start: Пачаць экзамен
+    text: >-
+      На рашэнне <b>{problems, plural, one {# задання} few {# заданняў} many {# заданняў} other {# заданняў}}</b> даецца <b>{minutes, plural, one {# хвіліна} few {# хвіліны} many {# хвілін} other {# хвілін}}</b>.<br> Пачаць экзамен можна толькі адзін раз. Ці вы гатовыя?
+    wishes: Няхай вам шанцуе!
+  end-exam-alert:
+    ok: Ясна
+    text: >-
+      Час выйшаў, экзамен скончаны.<br> За рашэнні, дасланыя пазней, балы налічаны не будуць.
   finish-prematurely:
     btn: Завяршыць датэрмінова
     confirm-no: "Не, працягнуць рашаць"
@@ -1086,6 +1131,10 @@ exam:
   start-button: Пачаць экзамен
   start-error: Не атрымліваецца пачаць экзамен. Паспрабуйце перазагрузіць старонку
   timer: "засталося часу:"
+  timer-parts:
+    hours: г
+    minutes: х
+    seconds: с
   too-late: "Спачуваем, але час экзамену прайшоў. Вы спазніліся"
 explore:
   course-pack__trending-courses: Папулярныя курсы
@@ -1660,6 +1709,8 @@ plans:
   ask_questions: >-
     Калі маеце пытанні, напішыце нам на <a href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Палепшаная тэхпадтрымка
+  cancel_at_period_end: >-
+    Падпіска сапраўдная да {valid_until} Дадатковыя плацяжы спісвацца не будуць, аўтапрацяг адключаны.
   card:
     change: Змяніць
     confirm: Ужыць
@@ -2800,6 +2851,9 @@ submissions:
     for-learners: Вы яшчэ не рашалі гэтую задачу.
     for-teachers: Ніхто яшчэ не рашаў гэтую задачу.
     has-filters: Рашэнні не знойдзеныя.
+    has-query: "Рашэнняў па запыце <strong>«{query}»</strong> не знойдзена."
+    number-query-suggestion: >-
+      Вы шукалі ўсе рашэнні <a href="{userSearchHref}">карыстальніка {query}</a> або канкрэтнае <a href="{submissionSearchHref}">рашэнне \#{query}</a>?
     try-change-query: Паспрабуйце змяніць параметры пошуку.
     try-change-query-filters: >-
       Паспрабуйце змяніць параметры пошуку або <a href="{filter-reset-url}">скінуць фільтры</a>.
@@ -2861,6 +2915,13 @@ subscriptions__unsubscribe: Адпісацца
 subscriptions__unsubscribe-lesson-comments: Адпісацца ад каментароў урока
 subscriptions__unsubscribe-step-comments: Адпісацца ад каментароў кроку
 subscriptions__unsubscribe-tooltip: Ніколі не атрымліваць абвесткі
+syllabus:
+  deadlines:
+    closed: Закрыўся
+    closed-since: Закрыты з
+    hard:
+      part1: Пасля
+      part2: балы не налічваюцца
 syllabus_edit:
   course-settings: Налады курса
   deadlines:
