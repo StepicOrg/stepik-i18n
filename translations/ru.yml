@@ -106,15 +106,51 @@ breadcrumbs__review-session: Рецензии
 breadcrumbs__submissions: Решения
 button__new-course: Создать курс
 button__new-lesson: Создать урок
-catalog-beta:
+catalog:
+  authors:
+    new-course: Создать свой курс
+  category:
+    similar-authors: Похожие авторы
+    similar-topics: Похожие темы
   filters-dialog:
-    langs: "{lang, select, ru {Русский} en {Английский} other {Любой}}"
-  search-empty: >-
-    По запросу «<var>{query}</var>» ничего не найдено.
-    Попробуйте изменить параметры поиска{hasAnyFilters, select,
-      true { или <a href="{resetFiltersHref}">сбросить фильтры</a>}
-      other {}
-    }.
+    free-only: Только бесплатные
+    language: Язык курса
+    language-values: "{lang, select, ru {Русский} en {Английский} other {Любой}}"
+    reset: Сбросить
+    submit: Показать
+    title: Фильтры
+    with-cert-only: Только с сертификатом
+  recently-viewed: Недавно просмотренные
+  search:
+    empty: >-
+      По запросу «<var>{query}</var>» ничего не найдено.
+      Попробуйте изменить параметры {hasAnyFilters, select,
+        true {поиска или <a href="{resetFiltersHref}">сбросить фильтры</a>}
+        other {поиска}
+      }.
+    next-page: Далее →
+    prev-page: ← Назад
+    suggestioned: >-
+      Показаны результаты по запросу «<a href={suggestionHref}><var>{suggestion}</var></a>».
+      Не найдено результатов по запросу «<var>{query}</var>».
+  search-bar:
+    free-only: Бесплатные
+    input-placeholder: Название курса, автор или предмет
+    language: "{lang, select, ru {На русском} en {На английском} other {На любом языке}}"
+    with-cert-only: С сертификатами
+  stepik-academy:
+    about:
+      description: >-
+        <b>Stepik Academy</b> – это программы с поддержкой преподавателя, группы и куратора от
+        команды Stepik c дедлайнами и проверкой заданий. Обучение платное, но оно того стоит!
+      learn-more: Узнать больше
+      learn-more-url: https://academy.stepik.org/
+      title: >-
+        {index, select,
+          1 {Скучаете<br>по дедлайнам?}
+          2 {Не хватает<br>обратной связи?}
+          other {Скучно<br>учиться одному?}
+        }
 certificate-editor:
   auto-issue-label: Выпускать автоматически
   auto-issue-text:
@@ -429,7 +465,8 @@ cost:
       other {<strong>#</strong> попыток}
     }
 course:
-  access_restricted: Курс закрыт на доработку.
+  access_restricted: >-
+    Авторы закрыли курс «{courseTitle}» и пока проходить его нельзя.
   draft: Черновик
   edit-btns:
     info: Редактировать информацию
@@ -480,6 +517,14 @@ course:
       basic_paid: Базовый+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Базовый}
+          basic_paid {Базовый+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Дедлайны в курсе
       exams: Экзамены
@@ -523,8 +568,9 @@ course-assessments:
       few {# решения ждут рецензий}
       other {# решений ждут рецензий}
     }
-course-cards:
+course-card:
   certificate: сертификат
+  view-more: Посмотреть все
   workload: "{hours} ч"
 course-edit__back: Вернуться в курс
 course-edit__cancel: Вернуться
@@ -578,6 +624,8 @@ course-info-edit__remove-instructor: Удалить преподавателя
 course-info-edit__upload-failed: >-
   Загрузите правильное изображение. Файл, который вы загрузили, повреждён или не является
   изображением.
+course-list-card:
+  course-count: "{count, plural, one {# курс} few {# курса} other {# курсов}}"
 course-lti-edit__header: Настройки интеграции по LTI
 course-new:
   cancel: Отмена
@@ -901,10 +949,6 @@ course-syll__compact-progress: процент пройденных шагов
 course-syll__ends: Дата закрытия
 course-syll__scores: ваш / макс балл
 course-syllabus__closed-yet: Этот модуль закрыт
-course-syllabus__required-module-message: >-
-  {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле {position} ({title})
-course-syllabus__required-module-message-percent: "{percent}% баллов в модуле {position} ({title})"
-course-syllabus__required-module-message-title: "Условие открытия:"
 course__add-annon: Добавить новость
 course__add-to-archived-link: Переместить в архив
 course__add-to-favorites-link: Добавить в избранное
@@ -1291,9 +1335,19 @@ errors:
   wrongLength: "{description} неверной длины (должно быть символов: {is})"
 exam:
   close-date: Дата закрытия экзамена
-  confirm: >-
-    У вас есть {count, plural, one {# минута} few {# минуты} other {# минут}}
-    и единственная попытка, чтобы сдать экзамен. Вы уверены, что хотите начать?
+  confirm:
+    cancel: Отмена
+    start: Начать экзамен
+    text: >-
+      На решение <b>{problems, plural, one {# задания} other {# заданий}}</b>
+      даётся <b>{minutes, plural, one {# минута} few {# минуты} other {# минут}}</b>.<br>
+      Начать экзамен можно только один раз. Вы готовы?
+    wishes: Ни пуха ни пера!
+  end-exam-alert:
+    ok: Понятно
+    text: >-
+      Время вышло, экзамен окончен.<br>
+      За решения, отправленные позже, баллы начислены не будут.
   finish-prematurely:
     btn: Завершить досрочно
     confirm-no: "Нет, продолжить решать"
@@ -1304,13 +1358,6 @@ exam:
   game-over: Экзамен закончен
   go-back: К содержанию
   header: Идёт экзамен.
-  info-head: >-
-    Это экзаменационный модуль на {count, plural, one {# минуту} few {# минуты} other {# минут}}
-  info-latest-date: "Рекомендуем приступить не позднее {date} чтобы успеть до закрытия экзамена."
-  info-paragraph: У вас будет 1 попытка на прохождение экзамена.
-  is_exam_without_progress: Оценки отправленных решений будут недоступны.
-  is_random_exam: 'Экзамен со случайной выборкой вопросов из курса <b>"{course}"</b>.'
-  is_random_exam_learner: Экзамен со случайной выборкой вопросов.
   label: Экзамен
   not-started: Экзамен пока недоступен
   open-date: Дата открытия экзамена
@@ -1322,6 +1369,10 @@ exam:
   start-button: Начать экзамен
   start-error: Не получается начать экзамен. Попробуйте перезагрузить страницу
   timer: "осталось времени:"
+  timer-parts:
+    hours: ч
+    minutes: м
+    seconds: с
   too-late: "Сожалеем, но время экзамена прошло. Вы опоздали"
 explore:
   course-pack__trending-courses: Популярные курсы
@@ -2038,7 +2089,8 @@ plans:
     <a href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Улучшенная техподдержка
   cancel_at_period_end: >-
-    Подписка действительна до {valid_until}. Дополнительные платежи списываться не будут.
+    Подписка действительна до {valid_until} Дополнительные платежи списываться не будут,
+    автопродление отключено.
   card:
     change: Изменить
     confirm: Применить
@@ -3405,7 +3457,10 @@ submissions:
     for-learners: Вы ещё не решали эту задачу.
     for-teachers: Никто ещё не решал эту задачу.
     has-filters: Решения не найдены.
-    has-query: 'По запросу <strong>"{query}"</strong> найдено <strong>0</strong> решений.'
+    has-query: "Решений по запросу <strong>«{query}»</strong> не найдено."
+    number-query-suggestion: >-
+      Вы искали все решения <a href="{userSearchHref}">пользователя {query}</a>
+      или конкретное <a href="{submissionSearchHref}">решение \#{query}</a>?
     try-change-query: Попробуйте изменить параметры поиска.
     try-change-query-filters: >-
       Попробуйте изменить параметры поиска или <a href="{filter-reset-url}">сбросить фильтры</a>.
@@ -3468,6 +3523,71 @@ subscriptions__unsubscribe: Отписаться
 subscriptions__unsubscribe-lesson-comments: Отписаться от комментариев урока
 subscriptions__unsubscribe-step-comments: Отписаться от комментариев шага
 subscriptions__unsubscribe-tooltip: никогда не получать оповещения
+syllabus:
+  deadlines:
+    closed: Закрылся
+    closed-since: Закрыт с
+    hard:
+      part1: После
+      part2: баллы не начисляются
+    hard-soft:
+      part1: После
+      part2: начисляется меньше баллов, а после
+      part3: — 0 баллов
+    open: Открыт
+    open-since: Открыт с
+    open-up: Открыт до
+    soft:
+      part1: После
+      part2: начисляется меньше баллов
+    will-open: Откроется
+  exam:
+    attempts-info: У вас будет одна попытка на его прохождение.
+    continue: Продолжить
+    finished: Закончен
+    grade:
+      after-check: Оценки будут доступны после дополнительной проверки
+      after-check2: Оценка будет выставлена после дополнительной проверки
+      after-exam: Оценка будет видна после экзамена
+      not-visible: Оценки не видны учащимся во время экзамена
+    info-latest-date: "Рекомендуем приступить не позднее {date} чтобы успеть до закрытия экзамена."
+    is_exam_without_progress: Оценки отправленных решений будут недоступны.
+    is_random_exam: 'Экзамен со случайной выборкой вопросов из курса <b>"{course}"</b>.'
+    is_random_exam_learner: Экзамен со случайной выборкой вопросов.
+    no-access: Недоступен
+    type:
+      basic: >-
+        Это экзамен на {minutes, plural, one {# минуту} few {# минуты} other {# минут}}.
+      proctored: >-
+        Это экзамен под наблюдением на {minutes, plural,
+          one {# минуту}
+          few {# минуты}
+          other {# минут}
+        }.
+      random: >-
+        Это экзамен на {minutes, plural, one {# минуту} few {# минуты} other {# минут}}
+        c {questions, plural, one {# вопросом} other {# вопросами}}
+        из <a href="{courseHref}">courseTitle</a>
+  required-module:
+    message: >-
+      Наберите
+      {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле «{position}. {title}»,
+      чтобы получить доступ
+    message-percent: >-
+      Наберите
+      "{percent}% баллов в модуле «{position}. {title}», чтобы получить доступ
+    teacher-message: >-
+      Для доступа нужно набрать
+      {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле «{position}. {title}»
+    teacher-message-percent: >-
+      Для доступа нужно набрать
+      "{percent}% баллов в модуле «{position}. {title}»
+    tooltip: >-
+      Нужно получить
+      {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле «{position}. {title}»
+    tooltip-percent: >-
+      Нужно получить
+      "{percent}% баллов в модуле «{position}. {title}»
 syllabus_edit:
   course-settings: Настройки запуска курса
   deadlines:
@@ -3867,6 +3987,7 @@ user__edit:
         pro {PRO-курсы: {used}/{total}}
         other {Enterprise-курсы: {used}/{total}}
       }
+    current-plan-valid-until: до {validUntil, date, medium-date}
     downgrade-warning: >-
       Если вы измените подписку, {prune, select,
         all {все ваши {type, select,
@@ -3879,8 +4000,8 @@ user__edit:
           enterprise {Enterprise-курсов}
           other {курсов}}
         }
-      } станут базовыми, перейдут в режим черновика и больше не будут доступны учащимся.
-      Вы сможете изменить их тип и опубликовать позже.
+      } с <b>{fromDate, date, medium-date}</b> станут базовыми, перейдут в режим черновика
+      и больше не будут доступны учащимся. Вы сможете изменить их тип и опубликовать позже.
     invalid-warn: >-
       Ваша <b>подписка истекла</b> {validUntil, date, medium-date}
       Чтобы продолжить пользоваться расширенной функциональностью,
@@ -3973,18 +4094,32 @@ user__edit:
         other {Оформить}
       } подписку
     subscribe-description:
-      cancel-trial: Деньги не будут списаны с карты.
+      cancel-subscription: >-
+        <p>
+          До {validUntil, date, medium-date} у вас останется тарифный план {planName},
+          в рамках которого {proCoursesTotal, plural,
+            one {доступен # {courseTypeCaption}-курс}
+            few {доступны # {courseTypeCaption}-курса}
+            other {доступно # {courseTypeCaption}-курсов}
+          }.
+        </p>
+
+        <p>
+          {currentlyTrial, select,
+            true {Деньги не будут списаны с карты}
+            other {Начиная с <b>{validUntil, date, medium-date}</b> деньги больше списываться
+                   не будут}
+          }.
+        </p>
       charge: >-
-        Начиная с <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {деньги больше списываться не будут}
-          other {платёж в <b>{priceText}</b> будет списываться {period, select,
-            month {каждый месяц}
-            quarter {каждый квартал}
-            half_year {каждые полгода}
-            year {каждый год}
-            other {каждый месяц}
-        } до отмены подписки}
-        }.
+        Начиная с <b>{chargeDate, date, medium-date}</b> платёж в <b>{priceText}</b>
+        будет списываться {period, select,
+          month {каждый месяц}
+          quarter {каждый квартал}
+          half_year {каждые полгода}
+          year {каждый год}
+          other {каждый месяц}
+        } до отмены подписки.
       will-trial: >-
         <p><b>Бесплатный 14-ти дневный пробный период</b> начнётся сразу.</p>
         <p>После пробного периода вы будете платить {priceText} {period, select,

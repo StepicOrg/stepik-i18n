@@ -422,8 +422,17 @@ course:
       pro: PRO
     caption:
       basic: Básico
-      enterprise: Intermediário
+      basic_paid: Básico+
+      enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Básico}
+          basic_paid {Básico+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Prazos do curso
       exams: Provas
@@ -696,12 +705,6 @@ course-syll__compact-progress: proporção de etapas passadas
 course-syll__ends: Data de encerramento
 course-syll__scores: sua pontuação / max
 course-syllabus__closed-yet: Este módulo está fechado
-course-syllabus__required-module-message: >-
-  {count, plural, one {marcar # ponto no módulo {position} ({title})} other {marcar # pontos no
-  módulo {position} ({title})}}
-course-syllabus__required-module-message-percent:
-  "{percent}% de pontos no módulo {position} ({title})"
-course-syllabus__required-module-message-title: "Condição aberta:"
 course__add-annon: Novo anúncio
 course__add-to-archived-link: Mover para arquivado
 course__add-to-favorites-link: Adicionar aos favoritos
@@ -1003,10 +1006,6 @@ errors:
   wrongLength: "{description} tem o tamanho errado (deve ter {is} caracteres)"
 exam:
   close-date: A sessão da prova termina
-  confirm: >-
-    {count, plural, other {Você terá # minutos e apenas uma tentativa de concluir a prova. Tem
-    certeza de que deseja iniciar a prova?} one {Você terá # minutos e apenas uma tentativa de
-    concluir a prova. Tem certeza de que deseja iniciar a prova?}}
   finish-prematurely:
     btn: Termine prematuramente
     confirm-no: "Não, continue a resolver"
@@ -1017,14 +1016,6 @@ exam:
   game-over: A prova terminou
   go-back: Ir para o plano de estudos
   header: A prova está ativo.
-  info-head: >-
-    {count, plural, other {Você terá # minutos para concluir a prova} one {Você terá # minutos para
-    concluir a prova}}
-  info-latest-date: "Você deve começar o mais tardar em {date} para terminar a tempo."
-  info-paragraph: Você terá apenas uma tentativa.
-  is_exam_without_progress: Você não verá as notas.
-  is_random_exam: 'Prova com uma seleção aleatória de perguntas do curso <b>"{course}"</b>.'
-  is_random_exam_learner: Prova com uma seleção aleatória de perguntas.
   label: Prova
   not-started: A prova ainda não está acessível
   open-date: Início da sessão da prova
@@ -2915,6 +2906,17 @@ subscriptions__unsubscribe: Cancelar inscrição
 subscriptions__unsubscribe-lesson-comments: Cancelar inscrição nos comentários da lição
 subscriptions__unsubscribe-step-comments: Cancelar inscrição nos comentários da etapa
 subscriptions__unsubscribe-tooltip: nunca receba notificações
+syllabus:
+  exam:
+    attempts-info: Você terá apenas uma tentativa.
+    info-latest-date: "Você deve começar o mais tardar em {date} para terminar a tempo."
+    is_exam_without_progress: Você não verá as notas.
+    is_random_exam: 'Prova com uma seleção aleatória de perguntas do curso <b>"{course}"</b>.'
+    is_random_exam_learner: Prova com uma seleção aleatória de perguntas.
+    type:
+      basic: >-
+        {minutes, plural, other {Você terá # minutos para concluir a prova}
+        one {Você terá # minutos para concluir a prova}}
 syllabus_edit:
   course-settings: Configurações de lançamento do curso
   deadlines:
