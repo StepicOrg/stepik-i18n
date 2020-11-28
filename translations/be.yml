@@ -998,7 +998,7 @@ course__join-fail: >-
 course__learn-now: Вучыцца можна адразу
 course__menu: Меню
 course__news-link: Навіны
-course__publish: Аапублікаваць
+course__publish: Апублікаваць
 course__remove-from-archived-link: Прыбраць з архіву
 course__remove-from-favorites-link: Прыбраць з абранага
 course__removed-from-archived-fail:
@@ -2548,13 +2548,13 @@ promocode-editor:
   prolong: Падоўжыць
   until: да
 quiz:
-  correct_ratio: "З усіх спроб <b>{count}%</b> вернікаў"
+  correct_ratio: "З усіх спробаў <b>{count}%</b> слушных"
   passed_by: >-
     {count, plural, =0 {Вы можаце стаць першым, хто рашыць гэтую задачу} one {Дакладна рашыў
     <b>#</b> студэнт} few {Дакладна рашылі <b>#</b> студэнтаў} many {Дакладна рашылі <b>#</b>
     студэнтаў} other {Дакладна рашылі <b>#</b> студэнтаў} }
   score: Вы атрымалі
-  score-max: З
+  score-max: з
   submit-failed: >-
     Не атрымалася адправіць ваша рашэнне. Праверце інтэрнэт злучэнне і паспрабуйце яшчэ раз
 quiz__again: Рашыць зноў
