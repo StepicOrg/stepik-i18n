@@ -558,7 +558,8 @@ review__student-choose: 派出最好的提交审查
 review__student-no-submissions: 保存至少一个提交
 review__student-send: 发送提交审查
 review__student-send-notice: 提交已发送审查
-review__submit-confirm: 你准备好提交评论？
+review__submit-confirm:
+  text: 你准备好提交评论？
 review__wait-peers-giving-note: 注：以上的评论你的几率就越高您的提交将被审查！
 scoreboard__name: 名称
 scoreboard__score: 得分了

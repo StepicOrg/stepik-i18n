@@ -642,7 +642,8 @@ review__student-choose: Enviar la mejor presentación para revisar
 review__student-no-submissions: Guardar al menos una presentación
 review__student-send: Enviar esta presentación para revisar
 review__student-send-notice: Presentación ha sido enviada a revisar
-review__submit-confirm: ¿Estás listo para presentar el examen?
+review__submit-confirm:
+  text: ¿Estás listo para presentar el examen?
 review__wait-peers-giving-note: >-
   Nota: los comentarios más haga, mayor será la posibilidad de que su presentación será revisado!
 scoreboard__name: Nombre

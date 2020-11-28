@@ -129,6 +129,7 @@ catalog:
         other {поиска}
       }.
     next-page: Далее →
+    popular-queries: Популярные запросы
     prev-page: ← Назад
     suggestioned: >-
       Показаны результаты по запросу «<a href={suggestionHref}><var>{suggestion}</var></a>».
@@ -144,7 +145,7 @@ catalog:
         <b>Stepik Academy</b> – это программы с поддержкой преподавателя, группы и куратора от
         команды Stepik c дедлайнами и проверкой заданий. Обучение платное, но оно того стоит!
       learn-more: Узнать больше
-      learn-more-url: https://academy.stepik.org/
+      learn-more-url: https://academy.stepik.org/?utm_source=stepik&utm_medium=catalog
       title: >-
         {index, select,
           1 {Скучаете<br>по дедлайнам?}
@@ -308,6 +309,9 @@ common__challenge: Сложная задача
 common__close: Закрыть
 common__close-window: Закрыть окно
 common__collapse: Свернуть
+common__cookies-auth-warn: >-
+  Невозможно войти/зарегистрироваться. Пожалуйста, проверьте настройки безопасности
+  вашего браузера, а также настройки cookies.
 common__cookies-warn: >-
   Ваш браузер не поддерживает cookies. Пожалуйста, <a target="_blank" rel="noopener noreferrer"
   href="https://yandex.ru/support/common/browsers-settings/browsers-cookies.xml">включите</a>
@@ -525,6 +529,10 @@ course:
           pro {PRO}
           other {}
         }
+    invalid:
+      tooltip: >-
+        В курсе используются платные функции.
+        <br>Чтобы опубликовать курс, поменяйте его тип на <b>{type}</b>.
     paid-features:
       deadlines: Дедлайны в курсе
       exams: Экзамены
@@ -568,6 +576,14 @@ course-assessments:
       few {# решения ждут рецензий}
       other {# решений ждут рецензий}
     }
+course-badges:
+  basic: Базовый
+  draft: Черновик
+  paid: Платный
+  private: Приватный
+course-beta:
+  syllabus:
+    title: Программа курса
 course-card:
   certificate: сертификат
   view-more: Посмотреть все
@@ -627,6 +643,32 @@ course-info-edit__upload-failed: >-
 course-list-card:
   course-count: "{count, plural, one {# курс} few {# курса} other {# курсов}}"
 course-lti-edit__header: Настройки интеграции по LTI
+course-nav:
+  menu:
+    analytics: Аналитика
+    assessments: Проверка решений
+    attachments: Файлы
+    certificates: Сертификаты
+    comments: Комментарии
+    communications: Общение с учащимися
+    content: Курс
+    dashboard: Дашборд
+    gradebook: Табель успеваемости
+    information: Описание
+    lti: Интеграция по LTI
+    news: Новости
+    permissions: Права доступа
+    pricing: Цена и промокоды
+    publication: Публикация
+    reports: Отчёты
+    reviews: Отзывы
+    scoreboard: Лидерборд
+    settings: Настройки
+    statistics: Статистика
+    syllabus: Содержание
+  stat:
+    score-progress: "<b>{value}/{max}</b> баллов получено"
+    step-progress: "<b>{value}%</b> материалов пройдено"
 course-new:
   cancel: Отмена
   create: Создать
@@ -834,7 +876,7 @@ course-settings:
         Мы берём комиссию <b>{commissionPromo}%</b> с продаж при
         <a href="https://support.stepik.org/hc/ru/articles/360016290639"
         target="_blank">нашем участии в продвижении</a> курса,
-        и <b>{commissionBasic}%</b>, когда вы привлекаете учащихся сами.
+        и <b>{commissionBasic}%</b>, если учащиеся купят курс после перехода по этой ссылке:
       }
     }
   convert-into-paid:
@@ -911,6 +953,8 @@ course-settings:
   price-title: Стоимость курса — {price}
   promocode-editor-title: Промокоды
   publication: Публикация
+  referral-link:
+    tooltip: Кликните, чтобы скопировать ссылку для приглашения учащихся
   requests:
     approved-desc: >-
       Проверка финансовой информации прошла успешно.
@@ -1035,7 +1079,7 @@ course__certificate:
 course__certificate-distinction: Сертификат с отличием
 course__certificate-link: Сертификат
 course__certificate-regular: Сертификат
-course__class-new: + Создать класс
+course__class-new: Создать класс
 course__comments-link: Комментарии
 course__continue-empty-warning:
   "Не получилось открыть первый урок, попробуйте выбрать другой в расписании."
@@ -1118,7 +1162,7 @@ course__reviews:
     mean: "Средняя оценка:"
     no-reviews: "Пока недостаточно оценок, чтобы вывести среднюю."
   user-rated-as: "Оценка:"
-course__scoreboard-link: Скорборд
+course__scoreboard-link: Лидерборд
 course__syll-link: Содержание
 course__try-free-button: Попробовать бесплатно
 course__unsaved-confirm-text:
@@ -1339,8 +1383,8 @@ exam:
     cancel: Отмена
     start: Начать экзамен
     text: >-
-      На решение <b>{problems, plural, one {# задания} other {# заданий}}</b>
-      даётся <b>{minutes, plural, one {# минута} few {# минуты} other {# минут}}</b>.<br>
+      На решение заданий даётся
+      <b>{minutes, plural, one {# минута} few {# минуты} other {# минут}}</b>.<br>
       Начать экзамен можно только один раз. Вы готовы?
     wishes: Ни пуха ни пера!
   end-exam-alert:
@@ -2044,7 +2088,8 @@ peer-review__to-give: >-
   }
 personal_license__received-activate-instructions: >-
   Для получения лицензии вам необходимо зарегистрировать ключ на <a
-  href="https://www.jetbrains.com/store/redeem/?ALL">этой странице</a>.
+  href="https://www.jetbrains.com/store/redeem/?ALL">этой странице</a>. <br> <b>Внимание!</b>
+  При регистрации лицензии выберите <b>All Products Pack</b>.
 personal_license__received-description: >-
   JetBrains производит профессиональные инструменты разработки программного обеспечения, которые
   поддерживают самые передовые технологии, фреймворки и языки программирования. Вы можете скачать
@@ -3298,7 +3343,10 @@ review__student-choose: Отправьте лучшее решение на ре
 review__student-no-submissions: Сохраните хотя бы одно решение
 review__student-send: Отправить это решение на рецензию
 review__student-send-notice: Отправлено на рецензию
-review__submit-confirm: "Вы уверены, что хотите отправить эту рецензию?"
+review__submit-confirm:
+  cancel: Подумаю ещё
+  submit: Да
+  text: Вы уверены, что хотите отправить эту рецензию?
 review__wait-peers-giving-note: >-
   Обратите внимание, что чем больше рецензий вы напишете, тем больше вероятность получить рецензию
   на своё решение!
@@ -3417,6 +3465,7 @@ step-edit:
   wrong-submission-feedback: Этот текст будет показан учащемуся в случае неверного ответа.
 step__add-info: Выберите тип шага
 step__next-tooltip: Следующий шаг
+step__next-tooltip-mobile: Дальше
 step__not-found: "Шаг №{position} не был найден."
 step__not-ready-warn: 'Извините, эта задача ещё не готова.<br/>Статус задачи: "{status}".'
 step__submissions-left: >-
@@ -3575,19 +3624,19 @@ syllabus:
       чтобы получить доступ
     message-percent: >-
       Наберите
-      "{percent}% баллов в модуле «{position}. {title}», чтобы получить доступ
+      {percent}% баллов в модуле «{position}. {title}», чтобы получить доступ
     teacher-message: >-
       Для доступа нужно набрать
       {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле «{position}. {title}»
     teacher-message-percent: >-
       Для доступа нужно набрать
-      "{percent}% баллов в модуле «{position}. {title}»
+      {percent}% баллов в модуле «{position}. {title}»
     tooltip: >-
       Нужно получить
       {count, plural, one {# балл} few {# балла} other {# баллов}} в модуле «{position}. {title}»
     tooltip-percent: >-
       Нужно получить
-      "{percent}% баллов в модуле «{position}. {title}»
+      {percent}% баллов в модуле «{position}. {title}»
 syllabus_edit:
   course-settings: Настройки запуска курса
   deadlines:

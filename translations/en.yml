@@ -112,6 +112,7 @@ catalog:
         other {query}
       }.
     next-page: Next →
+    popular-queries: Popular queries
     prev-page: ← Back
     suggestioned: >-
       Showing results for "<a href={suggestionHref}><var>{suggestion}</var></a>".
@@ -127,7 +128,7 @@ catalog:
         <b>Stepik Academy</b> – это программы с поддержкой преподавателя, группы и куратора от
         команды Stepik c дедлайнами и проверкой заданий. Обучение платное, но оно того стоит!
       learn-more: Узнать больше
-      learn-more-url: https://academy.stepik.org/
+      learn-more-url: https://academy.stepik.org/?utm_source=stepik&utm_medium=catalog
       title: >-
         {index, select,
           1 {Скучаете<br>по дедлайнам?}
@@ -286,6 +287,9 @@ common__challenge: Challenge
 common__close: Close
 common__close-window: Close window
 common__collapse: Collapse
+common__cookies-auth-warn: >-
+  Unable to log in/register. Please check
+  your browser's security settings and cookie settings.
 common__cookies-warn: >-
   Oops! Your browser seems to have cookies disabled. Make sure cookies are enabled or try opening a
   new browser window.
@@ -494,6 +498,10 @@ course:
           pro {PRO}
           other {}
         }
+    invalid:
+      tooltip: >-
+        This course uses paid functions.
+        <br>To be able to publish a course, change its type to <b>{type}</b>.
     paid-features:
       deadlines: Course deadlines
       exams: Exams
@@ -532,6 +540,14 @@ course-assessments:
   tab-caption: Instructor reviews
   title: >-
     {count, plural, one {# solution is} other {# solutions are}} waiting for review
+course-badges:
+  basic: Basic
+  draft: Draft
+  paid: Paid
+  private: Private
+course-beta:
+  syllabus:
+    title: Course content
 course-card:
   certificate: certificate
   view-more: View More
@@ -589,6 +605,32 @@ course-info-edit__upload-failed: >-
 course-list-card:
   course-count: "{count, plural, one {# course} other {# courses}}"
 course-lti-edit__header: LTI integration settings
+course-nav:
+  menu:
+    analytics: Analytics
+    assessments: Instructor reviews
+    attachments: Attachments
+    certificates: Certificates
+    comments: Comments
+    communications: Communications
+    content: Content
+    dashboard: Dashboard
+    gradebook: Gradebook
+    information: Information
+    lti: LTI integration
+    news: News
+    permissions: Access control
+    pricing: Price & coupons
+    publication: Publication
+    reports: Reports
+    reviews: Reviews
+    scoreboard: Scoreboard
+    settings: Settings
+    statistics: Statistics
+    syllabus: Syllabus
+  stat:
+    score-progress: "<b>{value}/{max}</b> баллов получено"
+    step-progress: "<b>{value}%</b> материалов пройдено"
 course-new:
   cancel: Cancel
   create: Create
@@ -787,7 +829,7 @@ course-settings:
         Our sales fee is <b>{commissionPromo}%</b> if
         <a href="https://support.stepik.org/hc/en-us/articles/360016290639"
         target="_blank">we promote</a> your course,
-        or <b>{commissionBasic}%</b> if you provide the promotion yourself.
+        or <b>{commissionBasic}%</b> if a learner buys the course through the link below:
       }
     }
   convert-into-paid:
@@ -862,6 +904,8 @@ course-settings:
   price-title: Course price — {price}
   promocode-editor-title: Promo codes
   publication: Publication
+  referral-link:
+    tooltip: Click to copy the invitation link
   requests:
     approved-desc: >-
       We have successfully verified your financial details.
@@ -983,7 +1027,7 @@ course__certificate:
 course__certificate-distinction: Certificate with distinction
 course__certificate-link: Certificate
 course__certificate-regular: Certificate
-course__class-new: + Create class
+course__class-new: Create class
 course__comments-link: Comments
 course__continue-empty-warning: >-
   Failed to open the first lesson in the course, you can try another one from syllabus.
@@ -1285,8 +1329,8 @@ exam:
     cancel: Cancel
     start: Start the exam
     text: >-
-      These <b>{problems, plural, one {# problem} other {# problems}}</b> should
-      be solved within <b>{minutes, plural, one {# minute} other {# minutes}}</b>.<br>
+      These problems should be solved within
+      <b>{minutes, plural, one {# minute} other {# minutes}}</b>.<br>
       You can only start the exam once. Are you ready?
     wishes: Good luck!
   end-exam-alert:
@@ -1931,7 +1975,8 @@ peer-review__to-give: >-
   {count, plural, other {<strong># reviews</strong>} one {<strong># review</strong>}} left
 personal_license__received-activate-instructions: >-
   To start using this license you should register this key at <a
-  href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>.
+  href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>. <br> <b> Attention! </b>
+  Select <b>"All Products Pack"</b> when registering a license.
 personal_license__received-description: >-
   By automating routine checks and corrections, JetBrains tools speed up production, freeing
   developers to grow, discover and create. You can download any <a
@@ -3094,7 +3139,10 @@ review__student-choose: Send the best submission to review
 review__student-no-submissions: Save at least one submission
 review__student-send: Send this submission to review
 review__student-send-notice: Submission has been sent to review
-review__submit-confirm: Are you ready to submit the review?
+review__submit-confirm:
+  cancel: Cancel
+  submit: Yes
+  text: Are you ready to submit the review?
 review__wait-peers-giving-note: >-
   Note: the more reviews you do, the higher the chance your submission will be reviewed!
 scoreboard__current-user-rank: "Your rank:"
@@ -3212,6 +3260,7 @@ step-edit:
   wrong-submission-feedback: This feedback will be shown to the learner on a wrong submission.
 step__add-info: Select step type
 step__next-tooltip: Next step
+step__next-tooltip-mobile: Next
 step__not-found: "Step #{position} was not found."
 step__not-ready-warn: 'Sorry this problem is not ready.<br/>Problem status is "{status}".'
 step__submissions-left: >-
@@ -3367,19 +3416,19 @@ syllabus:
       module to get access
     message-percent: >-
       Earn
-      "{percent}% points in  «{position}. {title}» module to get access
+      {percent}% points in «{position}. {title}» module to get access
     teacher-message: >-
       To get access, learnes have to earn
       {count, plural, one {# point} other {# points}} in «{position}. {title}» module
     teacher-message-percent: >-
       To get access, learnes have to earn
-      "{percent}% points in «{position}. {title}» module
+      {percent}% points in «{position}. {title}» module
     tooltip: >-
       Earn
       {count, plural, one {# point} other {# points}} in «{position}. {title}» module
     tooltip-percent: >-
       Earn
-      "{percent}% points in «{position}. {title}» module
+      {percent}% points in «{position}. {title}» module
 syllabus_edit:
   course-settings: Course launch settings
   deadlines:

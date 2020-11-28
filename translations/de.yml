@@ -1100,7 +1100,8 @@ review__student-choose: Senden Sie den besten Beitrag zum Review
 review__student-no-submissions: Speichern Sie wenigstens einen Beitrag
 review__student-send: Senden Sie diesen Beitrag zum Review
 review__student-send-notice: Der Beitrag wurde zum Review gesandt
-review__submit-confirm: Sind Sie bereit diesen Review zu senden?
+review__submit-confirm:
+  text: Sind Sie bereit diesen Review zu senden?
 review__wait-peers-giving-note: >-
   Hinweis: Je mehr Reviews Sie senden, umso größer sind Ihre Chancen, dass Ihr Beitrag reviewt wird
 scoreboard__current-user-rank: "Ihr Rang:"

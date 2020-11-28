@@ -1053,7 +1053,7 @@ course__certificate:
 course__certificate-distinction: Сертифікат з відзнакою
 course__certificate-link: Сертифікат
 course__certificate-regular: Звичайний сертифікат
-course__class-new: + Створити клас
+course__class-new: Створити клас
 course__comments-link: Коментарі
 course__continue-empty-warning:
   "Не вдалося відкрити перший урок, спробуйте вибрати інший у розкладі."
@@ -2096,7 +2096,8 @@ peer-review__to-give: >-
   }
 personal_license__received-activate-instructions: >-
   Для використання ліцензії вам необхідно зареєструвати ключ на <a
-  href="https://www.jetbrains.com/store/redeem/?ALL"> цій сторінці </a>.
+  href="https://www.jetbrains.com/store/redeem/?ALL"> цій сторінці </a>. <br><b>Увага!</b>
+  При реєстрації ліцензії виберіть <b>"All Products Pack"</b>.
 personal_license__received-description: >-
   JetBrains — розробник професійних інструментів для розробки програмного забезпечення. Ви можете
   звантажити їх на <a href="https://www.jetbrains.com/products.html">цій сторінці</a> і
@@ -3390,7 +3391,8 @@ review__student-choose: Відправте розв’язок на реценз
 review__student-no-submissions: Збережіть хоча б один розв’язок
 review__student-send: Відправити цей розв’язок на рецензію
 review__student-send-notice: Відправлено на рецензію
-review__submit-confirm: Ви справді бажаєте відправити цю рецензію?
+review__submit-confirm:
+  text: Ви справді бажаєте відправити цю рецензію?
 review__wait-peers-giving-note: >-
   Пишіть більше рецензій — збільшуйте можливість отримати рецензії на ваші розв’язки
 scoreboard__current-user-rank: "Ваше місце у рейтингу:"

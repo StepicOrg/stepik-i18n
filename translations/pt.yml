@@ -789,7 +789,7 @@ course__certificate:
 course__certificate-distinction: Certificado com distinção
 course__certificate-link: Certificado
 course__certificate-regular: Certificado
-course__class-new: + Criar uma turma
+course__class-new: Criar uma turma
 course__comments-link: Comentários
 course__continue-empty-warning: >-
   Falha ao abrir a primeira lição do curso, você pode tentar outra no plano de estudos.
@@ -1583,7 +1583,8 @@ peer-review__to-give: >-
   }
 personal_license__received-activate-instructions: >-
   Para começar a usar esta licença, você deve registrar esta chave em<a
-  href="https://www.jetbrains.com/store/redeem/?ALL">nesta página</a>."
+  href="https://www.jetbrains.com/store/redeem/?ALL">nesta página</a>. <br> <b> Atenção! </b>
+  Selecione <b>"All Products Pack"</b> ao registrar uma licença.
 personal_license__received-description: >-
   Ao automatizar verificações e correções de rotina, as ferramentas JetBrains aceleram a produção,
   liberando os desenvolvedores para crescer, descobrir e criar. Você pode fazer o download de
@@ -2700,7 +2701,8 @@ review__student-choose: Enviar a melhor submissão para avaliação
 review__student-no-submissions: Salvar pelo menos uma submissão
 review__student-send: Envie esta submissão para avaliação
 review__student-send-notice: Submissão enviada para avaliação
-review__submit-confirm: Você está pronto para enviar a avaliação?
+review__submit-confirm:
+  text: Você está pronto para enviar a avaliação?
 review__wait-peers-giving-note: >-
   Nota: quanto mais avaliaçãoes você fizer, maior a chance de sua submissão ser avaliada!
 scoreboard__current-user-rank: "Sua classificação:"
