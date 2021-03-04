@@ -77,7 +77,6 @@ breadcrumbs__course-reports: Relatórios
 breadcrumbs__course-statistics: Estatisticas
 breadcrumbs__course-syllabus: Programa de Estudos
 breadcrumbs__home: Principal
-breadcrumbs__instructor-dashboard: Painel do instrutor
 breadcrumbs__lesson: Página de Atividades
 breadcrumbs__lesson-edit: Editar
 breadcrumbs__lesson-reports: Relatórios
@@ -463,7 +462,6 @@ course:
       text2: >-
         Atualize seu curso para publicá-lo com os recursos do {planTitle}. <br> <a
         href='https://welcome.stepik.org/pt/pricing' target='_blank'> Aprenda sobre os planos</a>
-course-actions__button: Gerenciar
 course-assessments:
   empty: Todas as soluções são revisadas
   pending-reviews-badge: Revisões pendentes do instrutor
@@ -472,14 +470,8 @@ course-assessments:
   title: >-
     {count, plural, one {# solução está aguardando revisão} other {# soluções estão aguardando
     revisão}}
-course-edit__back: Voltar ao curso
-course-edit__cancel: Voltar
 course-edit__new-module: Novo módulo
 course-edit__save: Gravar
-course-filters:
-  categories: Categorias
-  langs: Idiomas
-  tags: Assuntos
 course-grade-book:
   download-sign: "Faça o download do boletim de notas no"
   filter: "Nome, ID or e-mail do aluno"
@@ -533,7 +525,7 @@ course-new:
   header: Crie um novo curso
   help-center-link: Mais sobre como criar cursos
   note:
-    paid: "Os alunos precisam pagar por este curso. Preço base:"
+    paid: "Os alunos precisam pagar por este curso. Preço base: {price}"
     tariff: >-
       Você criará um curso básico. Você sempre pode atualizar para o plano PRO e obter recursos
       adicionais.
@@ -636,7 +628,6 @@ course-permissions-edit:
   tariff-help-link: >-
     Mais <a target='_blank' href='https://welcome.stepik.org/en/pricing'>sobre planos</a>
   tariff-info: "As configurações de acesso estão disponíveis apenas para <b>cursos {plan}</b>."
-  title-prefix: Configurações de acesso ao curso
   user-is-admin: é administrador principal
 course-promo:
   about-course: Sobre este curso
@@ -669,7 +660,6 @@ course-promo:
       normal: Nível Intermediário
   how-you-will-learn: Como você aprenderá
   meet-instructors: Conheça os instrutores
-  read-all-reviews: "{count, plural, one {Ler # comentário} other {Ler todos os # comentários}}"
   reviews: "{count, plural, one {# comentário} other {# comentários}}"
   share-course: Compartilhe este curso
   share-course-direct-link: "Endereço direto:"
@@ -698,8 +688,6 @@ course-settings:
   save: Aplicar mudanças
   save-error-woof: Falha ao gravar.
   save-success-woof: Gravou.
-  title: Configurações do curso
-course-settings__button: Editar
 course-syll__begins: Data de início
 course-syll__compact-progress: proporção de etapas passadas
 course-syll__ends: Data de encerramento
@@ -708,15 +696,10 @@ course-syllabus__closed-yet: Este módulo está fechado
 course__add-annon: Novo anúncio
 course__add-to-archived-link: Mover para arquivado
 course__add-to-favorites-link: Adicionar aos favoritos
-course__added-to-archived-fail: Não é possível mover o curso para o arquivo. Atualize esta página.
-course__added-to-archived-success: >-
-  Movido para o arquivo. Para voltar, clique em uma seta em um atalho do curso e depois - Remover do
-  arquivo.
-course__added-to-favorites-fail:
-  Não é possível adicionar o curso aos favoritos. Atualize esta página.
-course__added-to-favorites-success: >-
-  Adicionado aos favoritos. Para removê-lo, clique em uma seta em um atalho do curso e depois -
-  Remover dos favoritos.
+course__added-to-archived-fail: Não é possível mover o curso para o arquivo.
+course__added-to-archived-success: Movido para o arquivo.
+course__added-to-favorites-fail: Não é possível adicionar o curso aos favoritos.
+course__added-to-favorites-success: Adicionado aos favoritos.
 course__annon-delete: Excluir
 course__annon-delete-confirm: Excluir este comunicado?
 course__annon-delete-done: O anúncio foi excluído
@@ -764,17 +747,17 @@ course__buy-form:
   add-email: Você pode adicionar um e-mail principal
   here: aqui
   pay-button: Pagar
-  pay-button-promo: "Pague com código promocional: {promo}"
   price-label: Preço
   primary-email-notice: >-
     Você receberá uma confirmação do pagamento neste e-mail. Você pode alterá-lo nas configurações
     do perfil.
   promo-label: Código promocional
-  promo-placeholder: Inserir código promocional
+  promo-placeholder: Código promocional de desconto
   register-button: Registre-se para pagar
   support-notice: >-
-    Em caso de problemas com o pagamento, solicite suporte <a
-    href="mailto:support@stepik.org">support@stepik.org</a>.
+    Em caso de problemas com o pagamento, entre em <a
+    href="https://support.stepik.org/hc/en-us/requests/new">contato conosco</a>
+    em support@stepik.org.
   title: 'Comprar acesso ao curso "{course}"'
   user-agreement:
     'Ao clicar em <b>Pagar</b>, você concorda com nossos Termos<a href="{terms_url}"></a>'
@@ -805,39 +788,21 @@ course__empty-warn-2: Está vazio =(
 course__empty-warn-add: Adicione sua primeira lição usando o editor de plano de ensino do curso.
 course__free: Grátis
 course__info-link: Detalhes
-course__instructor-attachments-link: Anexos
 course__instructor-clone-course: Faça uma cópia
-course__instructor-clone-module: Módulo de cópia
-course__instructor-course-settings: Publicação
-course__instructor-dashboard-link: Painel do instrutor
 course__instructor-delete-course: Excluir
 course__instructor-edit-adaptiveness: Adaptabilidade
-course__instructor-edit-certificates: Certificados
-course__instructor-edit-info: Editar detalhes
-course__instructor-edit-lti: Integração LTI
-course__instructor-edit-permissions: Permissões
-course__instructor-edit-syllabus: Editar plano de ensino
-course__instructor-grade-book: Boletins
-course__instructor-reports: Relatórios
-course__instructor-statistics: Estatisticas
 course__join-button: Participe deste curso
 course__join-button_ab: Aprender
 course__join-fail:
   "Não é possível ingressar neste curso (código de erro; {status}). Tente recarregar esta página."
 course__learn-now: Você pode aprender imediatamente
-course__menu: Menu
 course__news-link: Notícia
 course__remove-from-archived-link: Remover do arquivo
 course__remove-from-favorites-link: Remover dos favoritos
-course__removed-from-archived-fail: Não é possível remover o curso do arquivo. Atualize esta página.
-course__removed-from-archived-success: >-
-  Removido do arquivo. Você pode voltar clicando em uma seta em um widget de curso e depois -
-  Mover para o arquivo.
-course__removed-from-favorites-fail:
-  Não é possível remover o curso dos favoritos. Atualize esta página.
-course__removed-from-favorites-success: >-
-  Removido dos favoritos. Você pode adicioná-lo novamente clicando em uma seta em um widget de
-  curso e depois - Adicionar aos favoritos.
+course__removed-from-archived-fail: Não é possível remover o curso do arquivo.
+course__removed-from-archived-success: Removido do arquivo.
+course__removed-from-favorites-fail: Não é possível remover o curso dos favoritos.
+course__removed-from-favorites-success: Removido dos favoritos.
 course__reviews:
   can-review: "Você passou mais de {treshold}%, escreva um comentário de avaliação"
   can-review-no: Não, obrigado
@@ -897,7 +862,7 @@ course_payment_success-msg: >-
   você será matriculado no curso. Se a inscrição não ocorrer dentro de 24 horas,
   escreva-nos support@stepik.org.
 course_payment_success-woof: Parabéns! Você está matriculado com sucesso no curso.
-deadlines-editor__advanced-settings: Configurações avançadas
+deadlines-editor__advanced-settings: Configurações avançadas de data
 deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Atualize para {planTitle}</a>, para aplicar configurações
   avançadas.
@@ -1028,11 +993,6 @@ exam:
   start-error: Não é possível iniciar a prova. Tente recarregar a página
   timer: "tempo restante:"
   too-late: Você está muito atrasado. A prova terminou
-explore:
-  course-pack__trending-courses: Tendência
-  search-aria-label: Limpar pesquisa
-  search-placeholder: Pesquisar catálogo
-  show-all: Mostrar tudo
 footer__CC_note: >-
   Contribuições de usuários públicos licenciadas sob a licença <a
   href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener
@@ -1446,7 +1406,7 @@ login:
     login por e-mail e senha.
   title: Entrar
 lti-editor:
-  intagration: >-
+  integration: >-
     <a href='https://support.stepik.org/hc/en-us/articles/360000177314' target='_blank'> Verifique
     nossos documentos</a> para saber mais sobre o processo de integração do Moodle, Canvas, edX,
     Coursera e outros.
@@ -1456,9 +1416,6 @@ lti-editor:
   private-profile-title: Crie perfis particulares para alunos
   save: Salvar configurações de acesso LTI
   secret-title: LTI Secret
-  sync: Sincronize notas LTI usando todas as conexões LTI armazenadas para este curso
-  sync-btn: "Não clique, a menos que necessário, leva um tempo"
-  title: "Configurações de integração LTI do curso"
   tool-provider: >-
     O Stepik pode ser integrado ao seu LMS via LTI como um fornecedor de ferramentas. Leia mais
     sobre a interoperabilidade das ferramentas de aprendizado (<a
@@ -1526,7 +1483,6 @@ new-lesson-form:
 notification__favorite: favorite
 notification__muted: muted
 notifications__empty-list: Nenhuma notificação
-notifications__events-link: Meus eventos
 notifications__flag-favorite: Favoritas
 notifications__flag-read: Lidas
 notifications__flag-unread: Não lidas
@@ -2338,7 +2294,6 @@ reports:
   class_download_grade_book:
     desc: ""
     name: Boletim de notas
-  course-reports-title: "Course reports: "
   course_download_activity_basic:
     desc: >-
       Participação dos alunos por módulos: taxa de tentativas (etapas) e taxa de desempenho
@@ -2398,7 +2353,6 @@ reports:
     name: Sessões de avaliação não concluídas
     sample: report-samples/ru/not-finished-review-sessions.csv
   course_download_payments:
-    desc: Pagamentos bem-sucedidos do curso e transações que falharam
     name: Pagamentos
     sample: report-samples/ru/payments.csv
   course_download_plagiarism:
@@ -2714,16 +2668,14 @@ scoreboard__score: Pontuação
 search-members:
   placeholder: "Pesquise por nome, e-mail, ID"
   search-btn: Encontrar
+search__aria-label: Limpar pesquisa
 search__button: Procurar
 search__context: "Contexto de pesquisa:"
 search__course: "Curso:"
 search__filters-warn: Tente remover os filtros de pesquisa
-search__info:
-  alter: Experimente consultas populares
-  query: Mostrando resultados para
-  query-original: Pesquise por
 search__lesson: "Lição:"
 search__no-results: Sem resultados
+search__placeholder: Pesquisar catálogo
 search__search: Procurar
 section-editor__begin-date: Data aberta
 section-editor__step-content: Lição criada
@@ -2949,7 +2901,6 @@ syllabus_edit:
         fica em branco)
       section_hard_deadline: "Prazo final: quando a nota de cada etapa será zero"
       section_soft_deadline: "Prazo flexível: quando a nota de cada etapa será reduzida"
-  page-subtitle: Editando plano de estudos
   saved_msg: Curso salvo com sucesso
   zero_sections: Não há lições. <br> Primeiramente adicione um módulo para adicionar lições
 teach:
@@ -3031,6 +2982,7 @@ toc__progress:
   title: progresso do curso
 unit_edit:
   add_existed: Adicionar sua lição existente
+  clone-module: Módulo de cópia
   import: Importar lições do arquivo
   marked_delete: >-
     A lição&nbsp;<strong>«{title}»</strong>&nbsp;será removida do curso ao salvar

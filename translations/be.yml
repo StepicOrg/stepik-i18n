@@ -84,7 +84,6 @@ breadcrumbs__course-reports: Справаздачы
 breadcrumbs__course-statistics: Статыстыка
 breadcrumbs__course-syllabus: Расклад
 breadcrumbs__home: Галоўная
-breadcrumbs__instructor-dashboard: Панэль выкладчыка
 breadcrumbs__lesson: Урок
 breadcrumbs__lesson-edit: Рэдагаванне
 breadcrumbs__lesson-reports: Справаздачы
@@ -525,7 +524,6 @@ course:
       text2: >-
         Каб вы маглі апублікаваць курс з такімі наладамі, перавядзіце яго ў {planTitle}-рэжым.<br><a
         href='https://welcome.stepik.org/ru/pricing' target='_blank'>Даведацца пра тарыфы</a>
-course-actions__button: Адміністраваць
 course-assessments:
   empty: Усе рашэнні правераныя
   pending-reviews-badge: Чакаюць рэцэнзій
@@ -538,14 +536,8 @@ course-card:
   certificate: сертыфікат
   view-more: Паглядзець усе
   workload: "{hours} г"
-course-edit__back: Вярнуцца ў курс
-course-edit__cancel: Адмена
 course-edit__new-module: Новы модуль
 course-edit__save: Захаваць
-course-filters:
-  categories: Катэгорыі
-  langs: Мова курса
-  tags: Прадметы
 course-grade-book:
   download-sign: "Вы можаце спампаваць табель паспяховасці на "
   filter: "Пошук па ID, email, імю вучня"
@@ -603,7 +595,7 @@ course-new:
   header: Стварэнне новага курса
   help-center-link: Падрабязна пра стварэнне курсаў
   note:
-    paid: "Гэты курс платы для студэнтаў. Базавая цана:"
+    paid: "Гэты курс платы для студэнтаў. Базавая цана: {price}"
     tariff: "Будзе створаны чарнавік Basic-курса. Потым можна будзе перайсці на PRO ў любы момант."
   teaching-landing:
     features:
@@ -709,7 +701,6 @@ course-permissions-edit:
   tariff-help-link: >-
     Больш падрабязна <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>пра тарыфы</a>
   tariff-info: "Кіраваць правамі доступу можна толькі ў <b>{plan}-курсах</b>."
-  title-prefix: Налады доступу курса
   transfer-ownership: Змяніць уладальніка
   transfer-ownership-description: >-
     Вы можаце <a href="{transferOwnershipURL}" data-href-to-ignore>перадаць курс</a> іншаму
@@ -753,9 +744,6 @@ course-promo:
       normal: Сярэдні ўзровень
   how-you-will-learn: Як праходзіць навучанне
   meet-instructors: Нашы выкладчыкі
-  read-all-reviews: >-
-    Чытаць {count, plural, one {# водгук} few {усе # водгукі} many {усе # водгукаў} other {усе #
-    водгукаў}}
   reviews: "{count, plural, one {# водгук} few {# водгукі} many {# водгукаў} other {# водгукаў}}"
   share-course: Распавядзіце пра курс сябрам
   share-course-direct-link: "Прамая спасылка на курс:"
@@ -846,7 +834,6 @@ course-settings:
     title: Зрабіць курс платным
   price-title: Кошт курса - {price}
   promocode-editor-title: Прамакоды
-  publication: Публікацыя
   requests:
     approved-desc: >-
       Праверка фінансавай інфармацыі прайшла паспяхова. Вам цяпер даступныя продажы {currencies,
@@ -868,8 +855,7 @@ course-settings:
   save: Ужыць змены
   save-error-woof: Не атрымалася захаваць курс.
   save-success-woof: Захавана.
-  title: Налады курса
-course-settings__button: Рэдагаваць
+  title: Налады публікацыі
 course-syll__begins: Дата пачатку
 course-syll__compact-progress: адсотак пройдзеных крокаў
 course-syll__ends: Дата сканчэння
@@ -878,12 +864,10 @@ course-syllabus__closed-yet: Гэты модуль закрыты
 course__add-annon: Дадаць навіну
 course__add-to-archived-link: Перамясціць у архіў
 course__add-to-favorites-link: Дадаць у абранае
-course__added-to-archived-fail: "Не атрымалася перамясціць у архіў, перазагрузіце старонку."
-course__added-to-archived-success: >-
-  Курс адпраўлены ў архіў. Прыбраць з архіву яго можна з дапамогай стрэлкі на віджэце курса.
-course__added-to-favorites-fail: "Не атрымалася дадаць у абранае, перазагрузіце старонку."
-course__added-to-favorites-success: >-
-  Курс дададзены ў абранае. Выдаліць яго можна з дапамогай стрэлкі на віджэце курса.
+course__added-to-archived-fail: Не атрымалася перамясціць у архіў.
+course__added-to-archived-success: Курс адпраўлены ў архіў.
+course__added-to-favorites-fail: Не атрымалася дадаць у абранае.
+course__added-to-favorites-success: Курс дададзены ў абранае.
 course__annon-delete: Выдаліць
 course__annon-delete-confirm: Выдаліць гэтую навіну?
 course__annon-delete-done: Навіна была выдалена
@@ -932,20 +916,19 @@ course__buy-button: "Купіць за {price}"
 course__buy-form:
   add-email: Дадайце асноўны email
   error:
-    not-allowed-promo: Промокод не дзейсны
+    not-allowed-promo: Промокод несапраўдны
   here: тут
-  pay-button: Купіць
-  pay-button-promo: "Купіць з прамакодам «{promo}»"
-  pay-button-without-promo: Купіць без прамакода
+  pay-button: Аплаціць
   price-label: Кошт
   primary-email-notice: >-
     На гэты адрас прыйдзе пацвярджэнне аплаты. Змяніць яго можна ў наладах профіля.
   promo-label: Прамакод
-  promo-placeholder: Увядзіце прамакод
+  promo-placeholder: Промокод на зніжку
   register-button: Зарэгіструйцеся для аплаты
   support-notice: >-
-    Калі ў вас узніклі праблемы з аплатай, пішыце на <a
-    href="mailto:support@stepik.org">support@stepik.org</a>.
+    Калі ў вас узніклі праблемы з аплатай, <a
+    href="https://support.stepik.org/hc/ru/requests/new">напішыце нам</a>
+    на support@stepik.org.
   title: 'Аплата доступу на курс "{course}"'
   user-agreement: >-
     Аплачваючы доступ да гэтага курса, вы згаджаецеся з умовамі <a
@@ -976,38 +959,22 @@ course__empty-warn-2: Ён пусты =(
 course__empty-warn-add: Дадайце свой першы ўрок у рэдактары зместу курса.
 course__free: Бясплатна
 course__info-link: Інфармацыя
-course__instructor-attachments-link: Файлы
 course__instructor-clone-course: Кланаваць курс
-course__instructor-clone-module: Кланаваць модуль
-course__instructor-course-settings: Публікацыя
-course__instructor-dashboard-link: Дашборд выкладчыка
 course__instructor-delete-course: Выдаліць курс
 course__instructor-edit-adaptiveness: Адаптыўнасць
-course__instructor-edit-certificates: Cертыфікаты
-course__instructor-edit-info: Рэдагаваць інфармацыю
-course__instructor-edit-lti: Інтэграцыя па LTI
-course__instructor-edit-permissions: Дасяг да курса
-course__instructor-edit-syllabus: Рэдагаваць змест
-course__instructor-grade-book: Табель паспяховасці
-course__instructor-reports: Справаздачы
-course__instructor-statistics: Статыстыка
 course__join-button: Паступіць на курс
 course__join-button_ab: Вучыцца
 course__join-fail: >-
   Не атрымліваецца паступіць на курс (код памылкі: {status}). Паспрабуйце перазагрузіць старонку.
 course__learn-now: Вучыцца можна адразу
-course__menu: Меню
 course__news-link: Навіны
 course__publish: Апублікаваць
 course__remove-from-archived-link: Прыбраць з архіву
 course__remove-from-favorites-link: Прыбраць з абранага
-course__removed-from-archived-fail:
-  "Не атрымалася прыбраць з архіву курсаў, перазагрузіце старонку."
-course__removed-from-archived-success: >-
-  Курс прыбраны з архіву курсаў. Змясціць яго ў архіў можна з выпадаючага меню на віджэце курса.
-course__removed-from-favorites-fail: "Не атрымалася выдаліць з абранага, перазагрузіце старонку."
-course__removed-from-favorites-success: >-
-  Курс выдалены з абранага. Вярнуць яго ў абранае можна з дапамогай стрэлкі на віджэце курса.
+course__removed-from-archived-fail: Не атрымалася прыбраць з архіву курсаў.
+course__removed-from-archived-success: Курс прыбраны з архіву курсаў.
+course__removed-from-favorites-fail: Не атрымалася выдаліць з абранага.
+course__removed-from-favorites-success: Курс выдалены з абранага.
 course__reviews:
   can-review: "Вы прайшлі больш {treshold}% курса, пакіньце водгук"
   can-review-no: "Не, дзякуй"
@@ -1120,7 +1087,7 @@ deadlines-editor:
     hardDeadlineSection: жорсткі дэдлайн модуля
     softDeadlineCourse: мяккі дэдлайн курса
     softDeadlineSection: мяккі дэдлайн модуля
-deadlines-editor__advanced-settings: Пашыраныя налады
+deadlines-editor__advanced-settings: Пашыраныя налады дат
 deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Перавядзіце курс у {planTitle}-рэжым</a>, каб выкарыстоўваць
   дадатковыя налады.
@@ -1264,11 +1231,6 @@ exam:
     minutes: х
     seconds: с
   too-late: "Спачуваем, але час экзамену прайшоў. Вы спазніліся"
-explore:
-  course-pack__trending-courses: Папулярныя курсы
-  search-aria-label: Ачысціць поле
-  search-placeholder: Пошук па каталогу
-  show-all: Глядзець усё
 footer__CC_note: >-
   Публічныя ўнёскі карыстальнікаў, ліцэнзаваныя па <a
   href="https://creativecommons.org/licenses/by-sa/4.0/">cc-wiki</a> ліцэнзіі з абавязковым
@@ -1729,7 +1691,7 @@ login:
     ўвайсці, скарыстаўшы email і пароль.
   title: Увайсці
 lti-editor:
-  intagration: >-
+  integration: >-
     Больш падрабязна пра працэс інтэграцыі для сістэм Moodle, Canvas і іншых вы можаце даведацца з
     <a href='https://support.stepik.org/hc/ru/articles/360000177314' target='_blank'>нашай
     дакументацыі</a>.
@@ -1739,10 +1701,6 @@ lti-editor:
   private-profile-title: Ствараць прыватныя профілі для студэнтаў
   save: Захаваць налады LTI
   secret-title: LTI Secret
-  sync: >-
-    Сінхранізаваць ацэнкі LTI з выкарыстаннем усіх захаваных падлучэнняў LTI для дадзенага курса
-  sync-btn: Сінхранізаваць ацэнкі. Займае доўгі час.
-  title: "Налады інтэграцыі па LTI курса"
   tool-provider: >-
     Stepik можа быць інтэграваны ў вашу LMS з дапамогай <a
     href='http://www.imsglobal.org/activity/learning-tools-interoperability' target='_blank'
@@ -1804,7 +1762,6 @@ new-lesson-form:
 notification__favorite: абранае
 notification__muted: утоена
 notifications__empty-list: Няма апавяшчэнняў
-notifications__events-link: Мае падзеі
 notifications__flag-favorite: Абраныя
 notifications__flag-read: Прачытаныя
 notifications__flag-unread: Непрачытаныя
@@ -2687,7 +2644,6 @@ reports:
     users: Карыстальнікі
   class_download_grade_book:
     name: Табель паспяховасці
-  course-reports-title: Справаздачы курса
   course_download_activity_basic:
     desc: >-
       Актыўнасць вучняў у модулях: працэнт наведвальнасці (steps) і працэнт паспяховасці (score)
@@ -2742,7 +2698,7 @@ reports:
     name: Незавершаныя сесіі рэцэнзавання
     sample: report-samples/ru/not-finished-review-sessions.csv
   course_download_payments:
-    desc: Аплаты курса і непаспяховыя плацяжы
+    desc: Пакупкі курсу і звароты
     name: Плацяжы
     sample: report-samples/ru/payments.csv
   course_download_plagiarism:
@@ -3062,16 +3018,14 @@ scoreboard__score: Балы
 search-members:
   placeholder: "Пошук па імені, email, ID"
   search-btn: Знайсці
+search__aria-label: Ачысціць поле
 search__button: Шукаць
 search__context: "Вобласць пошуку:"
 search__course: "Курс:"
 search__filters-warn: Паспрабуйце аслабіць фільтры пошуку
-search__info:
-  alter: Паспрабуйце папулярныя запыты
-  query: "Паказаны вынікі па запыце:"
-  query-original: "Шукаць замест гэтага:"
 search__lesson: "Урок:"
 search__no-results: Нічога не знойдзена
+search__placeholder: Пошук па каталогу
 search__search: Пошук
 section-editor__begin-date: Дата адкрыцця
 section-editor__step-content: Урок згенераваны робатам ;)
@@ -3366,7 +3320,6 @@ syllabus_edit:
         Пачынаючы з гэтага моманту, студэнты не будуць атрымліваць балы за рашэнне задач
       section_soft_deadline: >-
         пачынаючы з гэтага моманту, студэнты будуць атрымліваць менш балаў за рашэнне задач
-  page-subtitle: Рэдагаванне раскладу
   saved_msg: Курс паспяхова захаваны
   zero_sections: >-
     У курсе пакуль няма ніводнага ўрока.<br>Стварыце першы модуль, каб дадаць ўрокі
@@ -3576,6 +3529,7 @@ ufd-form:
       filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Дадаць ваш існуючы ўрок
+  clone-module: Кланаваць модуль
   import: Імпартаваць урокі з файла
   marked_delete: >-
     Урок&nbsp;<strong>«{title}»</strong> будзе выдалены з курса пры захаванні

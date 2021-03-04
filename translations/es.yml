@@ -14,7 +14,6 @@ breadcrumbs__course-grade-book: cuaderno de notas
 breadcrumbs__course-reports: Informes
 breadcrumbs__course-syllabus: Silaba
 breadcrumbs__home: Casa
-breadcrumbs__instructor-dashboard: Tablero de instrumentos instructor
 breadcrumbs__lesson: lección Página
 breadcrumbs__lesson-edit: Editar
 breadcrumbs__lesson-reports: Informes
@@ -164,7 +163,6 @@ common__symbols_left: >-
   {count, plural, one {# símbolo de la izquierda} other {# símbolos de la izquierda}}
 common__unauth-voting: Debe iniciar sesión para la votación.
 common__unsaved-warn: Todos los cambios no guardados se perderán!
-course-edit__cancel: Volver
 course-edit__new-module: Agregar módulo
 course-edit__save: Guardar cambios
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
@@ -215,7 +213,6 @@ course__drop-fail: No se puede quitar este curso.
 course__drop-link: Dejar el Curso
 course__drop-success: Curso cayó. Vuelve a cargar la página.
 course__info-link: Información
-course__instructor-dashboard-link: Tablero de instrumentos instructor
 course__join-button: Participar en este curso
 course__join-fail: >-
   No se puede entrar al mismo (código de error: {status}). Intenta volver a cargar esta página.
@@ -402,7 +399,6 @@ material__video-not-ready: El vídeo no se ha subido aún o procesado.
 notification__favorite: favorito
 notification__muted: apagado
 notifications__empty-list: No Notificaciones
-notifications__events-link: Mis eventos
 notifications__flag-favorite: favoritos
 notifications__flag-read: Leer
 notifications__flag-unread: No leído

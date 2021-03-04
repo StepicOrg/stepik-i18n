@@ -14,7 +14,6 @@ breadcrumbs__course-grade-book: 图书等级
 breadcrumbs__course-reports: 报告
 breadcrumbs__course-syllabus: 教学大纲
 breadcrumbs__home: 首页
-breadcrumbs__instructor-dashboard: 教师仪表板
 breadcrumbs__lesson: 第课
 breadcrumbs__lesson-edit: 编辑
 breadcrumbs__lesson-reports: 报告
@@ -144,7 +143,6 @@ common__submit_file: 提交文件
 common__symbols_left: "{count, plural, =1 {#个符号左} other {#个符号左}}"
 common__unauth-voting: 您应该登录投票。
 common__unsaved-warn: 所有未保存的更改将丢失！
-course-edit__cancel: 回報
 course-edit__new-module: 添加模块
 course-edit__save: 保存更改
 course-index__authors: "{count, plural, other {作者} =1 {作者}}"
@@ -193,7 +191,6 @@ course__drop-fail: 无法删除此课程。
 course__drop-link: 下降
 course__drop-success: 当然下降。请刷新页面。
 course__info-link: 信息
-course__instructor-dashboard-link: 教师仪表板
 course__join-button: 加入此课程
 course__join-fail: "不能参加此课程（错误代码：{status}）。请尝试刷新页面。"
 course__news-link: 新闻
@@ -339,7 +336,6 @@ material__video-not-ready: 视频还没有被上传或尚未处理。
 notification__favorite: 喜爱
 notification__muted: 静音
 notifications__empty-list: 没有通知
-notifications__events-link: 我的活动
 notifications__flag-favorite: 收藏夹
 notifications__flag-read: 读
 notifications__flag-unread: 未读
