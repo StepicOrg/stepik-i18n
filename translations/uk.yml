@@ -1492,9 +1492,7 @@ instructor-dashboard:
     plagiarized_submissions: Плагіат
     reviews_outliers: Незвичні рецензії
   no-issues:
-    default: "курс не відмічений як проблемний :)"
-    error_video: Курс не містить кроків з відео
-    no_successes: Курс не містить практичних завдань
+    default: "курс не відмічений як проблемний."
   step-stat:
     abused: скарги
     abused-tooltip: "Кількість коментарів, на які є скарга."
@@ -2135,7 +2133,7 @@ plugin__admin: Завдання на Linux
 plugin__admin-description: Налаштуйте віддалений сервер
 plugin__chemical: Завдання з хімії (застаріле)
 plugin__chemical-description: Введіть хімічну формулу.
-plugin__choice: Тест
+plugin__choice: Тест (задача)
 plugin__choice-description: "Виберіть відповід(ь, і) зі списку"
 plugin__code: Завдання з програмування
 plugin__code-description: "Напишіть програму, яку можна перевірити за допомогою stdin → stdout"
@@ -3654,7 +3652,6 @@ teach:
         other {# розв’язків на рецензію}
       }
     permissions-edit: Права доступу
-    publication: Публікація
     reports: Звіти
     search-placeholder: Назва чи ID курсу
     syllabus-edit: Зміст

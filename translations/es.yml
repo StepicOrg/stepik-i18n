@@ -320,7 +320,7 @@ instructor-dashboard:
     plagiarized_submissions: Plagio
     reviews_outliers: Los comentarios de los valores atípicos
   no-issues:
-    default: "Sin problemas :)"
+    default: "Sin problemas."
   step-stat:
     abused: abusado
     abused-tooltip: Conde de disgustos para comentarios en este paso.

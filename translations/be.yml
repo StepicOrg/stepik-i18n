@@ -1346,9 +1346,7 @@ instructor-dashboard:
     plagiarized_submissions: Плагіят
     reviews_outliers: Незвычайныя рэцэнзіі
   no-issues:
-    default: "У гэтым курсе праблем няма :)"
-    error_video: У гэтым курсе няма крокаў з відэа
-    no_successes: У гэтым курсе няма крокаў з практычнымі заданнямі
+    default: "У гэтым курсе праблем няма."
   step-stat:
     abused: скаргі
     abused-tooltip: Колькасць негатыўных ацэнак каментароў гэтага кроку.
@@ -1929,7 +1927,7 @@ plugin__admin: Заданне на Linux
 plugin__admin-description: Наладзьце выдалены сервер
 plugin__chemical: Хімічнае заданне (састарэлае)
 plugin__chemical-description: Увядзіце хімічную формулу
-plugin__choice: Тэст
+plugin__choice: Тэст (задача)
 plugin__choice-description: Абярыце адзін ці некалькі варыянтаў са спіса
 plugin__code: Праграмаванне
 plugin__code-description: Напішыце праграму. Тэстуецца праз stdin → stdout
@@ -3265,7 +3263,7 @@ syllabus:
       random: >-
         Гэта экзамен на {minutes, plural, one {# хвіліну} few {# хвіліны} many {# хвілін} other {#
         хвілін}} з {questions, plural, one {# пытаннем} other {# пытаннямі}} з <a
-        href="{courseHref}">courseTitle</a>
+        href="{courseHref}">{courseTitle}</a>
   required-module:
     message: >-
       Набярыце {count, plural, one {# бал} few {# балы} many {# балаў} other {# балаў}} у модулі
@@ -3356,7 +3354,6 @@ teach:
     pending-reviews: >-
       {count, plural, one {# рашэнне} few {# рашэнні} other {# рашэнняў}} на рэцэнзію
     permissions-edit: Правы доступу
-    publication: Публікацыя
     reports: Справаздачы
     search-placeholder: Назва ці ID курса
     syllabus-edit: Змест

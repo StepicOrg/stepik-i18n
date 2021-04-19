@@ -1109,9 +1109,7 @@ instructor-dashboard:
     plagiarized_submissions: Plágio
     reviews_outliers: Comentários atípicos
   no-issues:
-    default: "Sem problemas :)"
-    error_video: Não há etapas de vídeo
-    no_successes: Não há etapas com problemas
+    default: "Sem problemas."
   step-stat:
     abused: abusado
     abused-tooltip: Contagem de "não gostei" a comentários nesta etapa.

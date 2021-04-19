@@ -276,6 +276,11 @@ common:
 common__activity: Activity
 common__back-link: Back
 common__back-to-step-link: Back to step
+common__banner-disabled-steps: >-
+  Some of your assignments have paid features.
+  From <b>April 26, 2021</b>, they will no longer be available to learners.
+  <a href="https://support.stepik.org/hc/en-us/articles/360020457519" target="_blank">Here's what
+  you can do to prevent it.</a>
 common__banner-unverified-email: >-
   Your email is not verified.
   Please <a href="/edit-profile/email">verify</a> to continue using Stepik.
@@ -636,6 +641,7 @@ course-nav:
     information: Information
     lti: LTI integration
     news: News
+    news-beta: News β
     permissions: Access control
     pricing: Price & coupons
     publication: Publication
@@ -706,6 +712,17 @@ course-new:
         <a href='https://bioinf.me/en/contest' target='_blank'>Bioinformatics Contest</a>.
   title: Title
   title-hint: Up to 64 symbols.
+course-news:
+  help: >-
+    Read more about the course news<br>
+    <a href='https://support.stepik.org/hc/en-us/articles/360000159833' target='_blank'>
+    in our documentation</a>
+  tabs:
+    active: Active
+    all: All
+    composing: Drafts
+    scheduled: Scheduled
+    sent: Sent
 course-permissions-edit:
   access-personal:
     description: useful option during creation process
@@ -823,6 +840,9 @@ course-promo:
   what-you-will-get: What you will get
   what-you-will-learn: What you will learn
   who-is-this-course-for: Who is this course for
+course-rating:
+  count: of {count, plural, one {# review} other {# reviews}}
+  max: of {max}
 course-settings:
   about-pro-link:
     text: Learn more about PRO courses
@@ -1480,9 +1500,7 @@ instructor-dashboard:
     plagiarized_submissions: Plagiarism
     reviews_outliers: Reviews outliers
   no-issues:
-    default: "No issues :)"
-    error_video: There are no video steps
-    no_successes: There are no problem steps
+    default: "No issues."
   step-stat:
     abused: abused
     abused-tooltip: Count of dislikes for comments in this step.
@@ -1681,6 +1699,78 @@ lesson-end:
   after-exam-link-active_full: You scored maximum score in exam!
   after-exam-link-ended: "You scored {score} out of {max_score} in this exam."
   buy-course-btn: "Buy full course for {price}"
+  course:
+    button:
+      send-review: Send review
+      to-catalog: Find another course
+      to-syllabus: Go back to the assignments
+    cert-note: >-
+      Receive {need_score, plural, one {# more point} other {# more points}}
+      to get a certificate.
+    share:
+      cert: My certificate for completing the course «{course}»
+      course: >-
+        I've received
+        {score, plural, one {# point} other {# points}} out of {cost}
+        in the course «{course}»
+    text:
+      cert: >-
+        {regular, select,
+          null {
+            {distinction, select,
+              null {}
+              other {The certificate with distinction is issued for
+                {distinction, plural, one {# point} other {# points}}.
+              }
+            }
+          }
+          other {
+            {distinction, select,
+              null {The regular certificate is issued for
+                {regular, plural, one {# point} other {# points}}.
+              }
+              other {The regular certificate is issued for
+                {regular, plural, one {# point} other {# points}}, the certificate with distinction
+                for {distinction, plural, one {# point} other {# points}}.
+              }
+            }
+          }
+        }
+      cert-hint: >-
+        You will be able to put it in your CV or on social networks, or download and print.
+      cert-need-score: >-
+        To receive the certificate with distinction, you need to gain
+        {distinction, plural, one {# point} other {# points}}.
+        {need_score, plural, one {# point} other {# points}} are now left.
+      cert-not-ready: >-
+        We will notify you when your certificate is ready.
+      cert-ready: >-
+        Put your certificate in your CV or on social networks.
+        This is an excellent result and you can be proud of it!
+      continue: >-
+        Continue with this course or find another one?
+      neutral-without-cert: >-
+        There are no certificates in this course, but we don't only learn
+        for formal confirmation, do we?
+      progress: >-
+        You've received <b>{score, plural, one {# point} other {# points}}
+        out of {cost}</b>, which makes up {percent}% of the course material.
+      success-without-cert: >-
+        There are no certificates in this course,
+        but you can share your result on your social networks.
+    title:
+      neutral: >-
+        This has been the last lesson of the course «{course}».
+      success-distinction-cert: >-
+        Congratulations!<br>
+        You've completed the course «{course}» and received the certificate with distinction!
+      success-neutral: >-
+        Congratulations!<br> You've completed the course «{course}».
+      success-regular-cert: >-
+        Congratulations!<br>
+        You've completed the course «{course}» and received the certificate!
+      success-without-cert: >-
+        Congratulations!<br> You've completed the course «{course}».
   course_score: "Your score:"
   enroll: enroll in
   enroll_for_lessons: the course to view other lessons
@@ -1941,6 +2031,56 @@ paid-course-requests:
     error: Couldn't send the request
     success: The request was sent successfully
     title: Activate paid mode for the course
+paid-features:
+  course-features-not-satisfied: >-
+    To publish the course, change its type to {plan, select,
+      enterprise {<b>Enterprise</b>}
+      other {<b>PRO</b> or make it a <b>paid</b> one}
+    }. You can also just reconsider these settings.
+  course-features-title: You applied the following settings
+  course-publication-blocked: >-
+    The course has paid features.<br>To publish the course, resolve
+    <button>{conflictCount, plural, one {# issue} other {# issues}}</button>.
+  edit-feature-link: Edit
+  feature-name: >-
+    {type, select,
+      course_privacy {Open for enrollment by invitations only}
+      course_deadlines {Course deadlines}
+      course_end_date {Course closing date}
+      course_lti {LTI integration}
+      course_attachments {Course with attachments}
+      section_exam {Exam}
+      section_required_section {Conditional access to the module}
+      section_discounting_policy {Decreasing points depending on number of tries}
+      section_end_date {Closing date}
+      section_deadlines {Deadlines}
+      lesson_attachments {Lesson with attachments}
+      step_admin {Linux challenge}
+      step_attachments {Attachments in the responses}
+      step_external_grader {External grader}
+      step_instructor_reviews {Instructor review}
+      step_linux_code {Linux code challenge}
+      step_lti_consumer {LTI consumer}
+      step_manual_score {Manual score step}
+      step_submissions_restrictions {Limits for number of submissions}
+      other {{type}}
+    }
+  lesson-features-title: Lessons with paid features
+  satisfied-features-block-title: No further actions required
+  stat:
+    courses: "{count, plural, =1 {The course} one {# course} other {# courses}}"
+    lessons: "{count, plural, one {# lesson} other {# lessons}}"
+    sections: "{count, plural, one {# module} other {# modules}}"
+    use-plan: "{count, plural, =1 {uses} other {use}} {planTitle}"
+  steps-disabled: >-
+    To enable learners to view all assignments, change the settings of
+    <button>{stepCount, plural, one {# step} other {# steps}}</button>.
+  steps-features-not-satisfied: >-
+    To enable learners to view these assignments, change the course type to {plan, select,
+      enterprise {<b>Enterprise</b>}
+      other {<b>PRO</b> or make it a <b>paid</b> one}
+    }.
+  view-feature-link: View
 peer-review__first-step: >-
   <strong>Stage 1 out of 4</strong>. For points, <strong>save</strong> and <strong>send</strong>
   the best submission to <strong>other students</strong> for review
@@ -2387,6 +2527,11 @@ plugins:
       upload-date: Upload date
     manual-score: An instructor assigns points for this step.
     no-settings: There are no settings for this step.
+    restricted: >-
+      You can upload scores only in {planTitle, select,
+        PRO {paid and PRO-courses}
+        other {{planTitle}-courses}
+      }
     text: |-
       This step allows you to add arbitrary grade points to learners.<br>
        To do so, save the step and upload a csv file with grades (from learner's view).<br>
@@ -3205,22 +3350,23 @@ step:
   disabled:
     learner:
       desc: >-
-        Contact the {inCourse, select, true {course} other {lesson}} authors to suggest that they
-        change the settings <a href="{stepURL}">{lessonTitle} → Step {stepNumber}</a>.
+        We've already contacted the {inCourse, select, true {course} other {lesson}} authors
+        to suggest that they change the settings
+        <a href="{stepURL}">{lessonTitle} → Step {stepNumber}</a>.
         <br><br>
         The access might resume after a while.
       title: You can't view the assignment yet
     teacher:
       warning:
         in-course: >-
-          For enable learners to view the assignment,
+          To enable learners to view the assignment,
           <a href="{courseSettingsURL}">change the course type</a> to {plan, select,
             pro {<b>PRO</b> or <a href="{coursePricingURL}">paid</a>}
             enterprise {<b>Enterprise</b>}
             other {<b>N/A</b>}
           }.
         no-course: >-
-          For enable learners to view the assignment, add the lesson to {plan, select,
+          To enable learners to view the assignment, add the lesson to {plan, select,
             pro {a <b>PRO</b> or <b>paid</b>}
             enterprise {an <b>Enterprise</b>}
             other {<b>N/A</b>}
@@ -3442,7 +3588,7 @@ syllabus:
       random: >-
         This is a {minutes, plural, one {# minute} other {# minutes}}
         exam containing {questions, plural, one {# question} other {# questions}}
-        from <a href="{courseHref}">courseTitle</a>
+        from <a href="{courseHref}">{courseTitle}</a>
   required-module:
     message: >-
       Earn
@@ -3526,7 +3672,6 @@ teach:
     no-results-reset-link: Reset filters
     pending-reviews: "{count, plural, one {# submission} other {# submissions}} for review"
     permissions-edit: Permissions
-    publication: Publication
     reports: Reports
     search-placeholder: Course name or ID
     syllabus-edit: Syllabus

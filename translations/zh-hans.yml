@@ -271,7 +271,7 @@ instructor-dashboard:
     plagiarized_submissions: 剽窃
     reviews_outliers: 评论离群
   no-issues:
-    default: 没有问题 ：）
+    default: 没有问题
   step-stat:
     abused: 滥用
     abused-tooltip: 计数不喜欢在这一步意见。

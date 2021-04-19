@@ -217,7 +217,7 @@ certificate-widget:
   visibility__settings-success: Настройки приватности сертификата успешно сохранены.
 certificate__download: Скачать сертификат
 clipboard:
-  click-to-copy: Кликните чтобы скопировать
+  click-to-copy: Кликните, чтобы скопировать
   fail: Не удалось скопировать. Попробуйте еще раз!
   success: Скопировано!
 comments__abuse: Не нравится
@@ -299,6 +299,11 @@ common:
 common__activity: Активность
 common__back-link: Назад
 common__back-to-step-link: Назад к шагу
+common__banner-disabled-steps: >-
+  Вы используете в задачах платные функции.
+  <b>26 апреля 2021г.</b> учащиеся потеряют к ним доступ.
+  <a href="https://support.stepik.org/hc/ru/articles/360020457519" target="_blank">Что нужно
+  сделать, чтобы этого не произошло?</a>
 common__banner-unverified-email: >-
   <a href="/edit-profile/email">Подтвердите</a> свой email, чтобы продолжить использовать Stepik.
 common__cancel-button: Отменить
@@ -674,6 +679,7 @@ course-nav:
     information: Описание
     lti: Интеграция по LTI
     news: Новости
+    news-beta: Новости β
     permissions: Права доступа
     pricing: Цена и промокоды
     publication: Публикация
@@ -741,6 +747,17 @@ course-new:
         Bioinformatics Contest и Тотальный Диктант.
   title: Название
   title-hint: Не более 64 символов
+course-news:
+  help: >-
+    Подробнее про новости курса<br>
+    <a href='https://support.stepik.org/hc/ru/articles/360000159833' target='_blank'>
+    в нашей документации</a>
+  tabs:
+    active: Активные
+    all: Все
+    composing: Черновики
+    scheduled: Запланированые
+    sent: Отправленные
 course-permissions-edit:
   access-personal:
     description: режим на время создания курса
@@ -868,6 +885,9 @@ course-promo:
   what-you-will-get: Что вы получаете
   what-you-will-learn: Чему вы научитесь
   who-is-this-course-for: Для кого этот курс
+course-rating:
+  count: из {count, plural, one {# отзыва} other {# отзывов}}
+  max: из {max}
 course-settings:
   about-pro-link:
     text: Подробнее о PRO-курсах
@@ -1545,9 +1565,7 @@ instructor-dashboard:
     plagiarized_submissions: Плагиат
     reviews_outliers: Необычные рецензии
   no-issues:
-    default: "В этом курсе проблем нет :)"
-    error_video: В этом курсе нет шагов с видео
-    no_successes: В этом курсе нет шагов с практическими заданиями
+    default: "В этом курсе проблем нет."
   step-stat:
     abused: жалобы
     abused-tooltip: Количество негативных оценок комметариев этого шага.
@@ -1759,6 +1777,80 @@ lesson-end:
   after-exam-link-active_full: Вы набрали максимальный балл!
   after-exam-link-ended: "Вы набрали в экзамене {score} из {max_score} баллов."
   buy-course-btn: "Купить курс за {price}"
+  course:
+    button:
+      send-review: Оставить отзыв
+      to-catalog: Найти новый курс
+      to-syllabus: Вернуться к задачам
+    cert-note: >-
+      Наберите ещё {need_score, plural, one {# балл} few {# балла} other {# баллов}},
+      чтобы получить сертификат.
+    share:
+      cert: Мой сертификат за прохождение курса «{course}»
+      course: >-
+        Я получил(а)
+        {score, plural, one {# балл} few {# балла} other {# баллов}} из {cost}
+        в курсе «{course}»
+    text:
+      cert: >-
+        {regular, select,
+          null {
+            {distinction, select,
+              null {}
+              other {Сертификат с отличием выдаётся за
+                {distinction, plural, one {# балл} few {# балла} other {# баллов}}.
+              }
+            }
+          }
+          other {
+            {distinction, select,
+              null {Сертификат выдаётся за
+                {regular, plural, one {# балл} few {# балла} other {# баллов}}.
+              }
+              other {Сертификат выдаётся за
+                {regular, plural, one {# балл} few {# балла} other {# баллов}},
+                а сертификат с отличием — за {distinction}.
+              }
+            }
+          }
+        }
+      cert-hint: >-
+        Потом его можно будет добавить в своё резюме или на страницу в соцсетях,
+        скачать и распечатать.
+      cert-need-score: >-
+        Чтобы получить сертификат с отличием, нужно набрать
+        {distinction, plural, one {# балл} few {# балла} other {# баллов}},
+        {need_score, plural,
+          one {остался ещё <b>#</b>}
+          other {осталось ещё <b>#</b>}
+        }.
+      cert-not-ready: >-
+        Мы пришлём уведомление, когда сертификат будет готов.
+      cert-ready: >-
+        Добавьте сертификат в своё резюме или на страницу в соцсетях,
+        это отличный результат и им можно гордиться!
+      continue: >-
+        Продолжите изучать этот курс или поищете другой?
+      neutral-without-cert: >-
+        Сертификат в нём не выдаётся, но мы же учимся не только ради формальных свидетельств.
+      progress: >-
+        Вы набрали <b>{score, plural, one {# балл} few {# балла} other {# баллов}} из {cost}</b>,
+        изучив {percent}% материалов курса.
+      success-without-cert: >-
+        Сертификат в нём не выдаётся, но вы можете поделиться своим результатом в соцсетях.
+    title:
+      neutral: >-
+        Это был последний урок курса «{course}».
+      success-distinction-cert: >-
+        Поздравляем!<br>
+        Вы завершили курс «{course}» и получили сертификат с отличием!
+      success-neutral: >-
+        Поздравляем!<br> Вы завершили курс «{course}».
+      success-regular-cert: >-
+        Поздравляем!<br>
+        Вы завершили курс «{course}» и получили сертификат!
+      success-without-cert: >-
+        Поздравляем!<br> Вы завершили курс «{course}».
   course_score: "Количество баллов на этом курсе:"
   enroll: записаться
   enroll_for_lessons: на курс для доступа к остальным урокам
@@ -2043,6 +2135,60 @@ paid-course-requests:
     error: Не удалось отправить заявку
     success: Заявка успешно отправлена
     title: Подключить оплату для курса
+paid-features:
+  course-features-not-satisfied: >-
+    Чтобы опубликовать курс, поменяйте его тип на {plan, select,
+      enterprise {<b>Enterprise</b> или уберите эти настройки.}
+      other {<b>PRO</b> или сделайте его <b>платным</b>. Либо просто уберите эти настройки.}
+    }
+  course-features-title: Вы применили эти платные настройки
+  course-publication-blocked: >-
+    В курсе используются платные функции.<br>Чтобы опубликовать курс, разрешите
+    <button>{conflictCount, plural,
+      one {# конфликт}
+      few {# конфликта}
+      other {# конфликтов}
+    }</button>.
+  edit-feature-link: Редактировать
+  feature-name: >-
+    {type, select,
+      course_privacy {Ограничение доступа к курсу}
+      course_deadlines {Дедлайны курса}
+      course_end_date {Дата закрытия курса}
+      course_lti {LTI-интеграция}
+      course_attachments {Файлы в курсе}
+      section_exam {Экзамен}
+      section_required_section {Открытие модуля по условию}
+      section_discounting_policy {Снижение баллов за использованные попытки}
+      section_end_date {Дата закрытия}
+      section_deadlines {Дедлайны}
+      lesson_attachments {Файлы в уроке}
+      step_admin {Задача на Linux}
+      step_attachments {Файлы в ответах}
+      step_external_grader {External grader}
+      step_instructor_reviews {Рецензирование преподавателем}
+      step_linux_code {Задача на программирование в Linux}
+      step_lti_consumer {LTI consumer}
+      step_manual_score {Шаг с оценкой преподавателя}
+      step_submissions_restrictions {Ограничение числа попыток}
+      other {{type}}
+    }
+  lesson-features-title: Уроки с платными функциями
+  satisfied-features-block-title: Не требуют дополнительных действий
+  stat:
+    courses: "{count, plural, =1 {Курс} one {# курс} few {# курса} other {# курсов}}"
+    lessons: "{count, plural, one {# урок} few {# урока} other {# уроков}}"
+    sections: "{count, plural, one {# модуль} few {# модуля} other {# модулей}}"
+    use-plan: "{count, plural, =1 {использует} other {используют}} {planTitle}"
+  steps-disabled: >-
+    Чтобы учащиеся получили доступ ко всем задачам, измените настройки
+    <button>{stepCount, plural, one {# шага} other {# шагов}}</button>.
+  steps-features-not-satisfied: >-
+    Чтобы учащиеся увидели эти задачи, измените тип курса на {plan, select,
+      enterprise {<b>Enterprise</b>}
+      other {<b>PRO</b> или сделайте его <b>платным</b>}
+    }.
+  view-feature-link: Посмотреть
 peer-review__first-step: >-
   <strong>Этап 1 из 4</strong>. Чтобы получить баллы, <strong>сохраните</strong> и
   <strong>отправьте</strong> лучшее решение на рецензию <strong>другим ученикам</strong>
@@ -2180,7 +2326,7 @@ plugin__admin: Задача на Linux
 plugin__admin-description: Настройте удалённый сервер
 plugin__chemical: Химическая задача (устаревшее)
 plugin__chemical-description: Введите химическую формулу
-plugin__choice: Тест
+plugin__choice: Тест (задача)
 plugin__choice-description: Выберите все подходящие ответы из списка
 plugin__code: Программирование
 plugin__code-description: Напишите программу. Тестируется через stdin → stdout
@@ -2515,6 +2661,11 @@ plugins:
       upload-date: Время загрузки
     manual-score: Баллы за это задание выставляет преподаватель.
     no-settings: В этом шаге нет настроек.
+    restricted: >-
+      Загрузить оценки можно только в {planTitle, select,
+        PRO {платных и PRO-курсах}
+        other {{planTitle}-курсах}
+      }
     text: >-
       Используя этот шаг, вы можете добавить произвольное количество баллов учащимся.<br>
        Для этого сохраните шаг и загрузите CSV файл с оценками (из режима просмотра учащимся).<br>
@@ -3413,8 +3564,8 @@ step:
   disabled:
     learner:
       desc: >-
-        Напишите авторам {inCourse, select, true {курса} other {урока}}, чтобы они обратили
-        внимание на настройки <a href="{stepURL}">{lessonTitle} → Шаг {stepNumber}</a>.
+        Мы уже попросили авторов {inCourse, select, true {курса} other {урока}} обратить внимание
+        на настройки <a href="{stepURL}">{lessonTitle} → Шаг {stepNumber}</a>.
         <br><br>
         Возможно, через какое-то время доступ восстановится.
       title: Увидеть задачу пока нельзя
@@ -3434,7 +3585,7 @@ step:
             other {<b>N/A-курс</b>}
           }.
       warning-details: >-
-        В шаге использована платная функциональность.
+        В шаге используются платные функции.
         <a href="https://support.stepik.org/hc/ru/articles/360012252539" target="_blank">
         О тарифных планах</a>
 step-actions:
@@ -3652,7 +3803,7 @@ syllabus:
       random: >-
         Это экзамен на {minutes, plural, one {# минуту} few {# минуты} other {# минут}}
         c {questions, plural, one {# вопросом} other {# вопросами}}
-        из <a href="{courseHref}">courseTitle</a>
+        из <a href="{courseHref}">{courseTitle}</a>
   required-module:
     message: >-
       Наберите
@@ -3748,7 +3899,6 @@ teach:
     pending-reviews: >-
       {count, plural, one {# решение} few {# решения} other {# решений}} на рецензию
     permissions-edit: Права доступа
-    publication: Публикация
     reports: Отчеты
     search-placeholder: Название или ID курса
     syllabus-edit: Содержание
@@ -4102,7 +4252,7 @@ user__edit:
         }
       } поменяют тип: бесплатные курсы станут Базовыми, а платные — Базовыми+.
 
-      Базовые курсы с платной функциональностью перейдут в режим черновика и больше не будут
+      Базовые курсы с платными функциями перейдут в режим черновика и больше не будут
       доступны учащимся. Вы сможете изменить их тип и опубликовать позже.
       В Базовых+ курсах пропадёт возможность управлять учащимися.
     invalid-warn: >-
