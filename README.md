@@ -2,7 +2,7 @@
 
 This is [Stepik](https://stepik.org)'s UI translations.
 
-At this moment there are 6 locales:
+At this moment there are 7 locales:
 * [🇺🇸 English](translations/en.yml)  (default, falls back here if some translation is missing)
 * [🇷🇺 Russian](translations/ru.yml)
 * [🇺🇦 Ukrainian](translations/uk.yml)
