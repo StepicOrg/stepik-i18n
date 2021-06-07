@@ -797,7 +797,7 @@ course-permissions-edit:
   transfer-ownership: Transfer ownership
   transfer-ownership-description: >-
     You can <a href="{transferOwnershipURL}" data-href-to-ignore>transfer ownership</a>
-    of the course to another user. After that, it will be taken into account in the
+    of the course to another user. After that, it will be included in the
     new owner's subscription.
   user-is-admin: is primary admin
 course-promo:
@@ -1754,7 +1754,7 @@ lesson-end:
         for formal confirmation, do we?
       progress: >-
         You've received <b>{score, plural, one {# point} other {# points}}
-        out of {cost}</b>, which makes up {percent}% of the course material.
+        out of {cost}</b> after having studied {percent}% of the course material.
       success-without-cert: >-
         There are no certificates in this course,
         but you can share your result on your social networks.
