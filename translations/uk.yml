@@ -472,6 +472,8 @@ cost:
     }
 course:
   draft: Чорновик
+  drop:
+    link: Покинути
   edit-btns:
     info: Редагувати інформацію
     syllabus: Редагувати зміст
@@ -627,7 +629,7 @@ course-new:
   create: Створити
   explanation: >-
     Ліцензія на відкриті курси та уроки <a
-    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
   header: Створення курсу
   help-center-link: Детальніше про створення курсів
@@ -742,8 +744,13 @@ course-permissions-edit:
       other {}
     }
   no-edit-label: Редагування прав доступу заборонено.
-  personal-testers-note:
-    "Тестувальники не можуть проходити курс, доступний лише команді курсу."
+  personal-note: >-
+    {groupName, select,
+      assistants {Асистенти}
+      moderators {Модератори}
+      testers {Тестувальники}
+      other {Користувачі}
+    } не можуть проходити курс, доступний лише команді курсу.
   save-access: Зберегти налаштування доступу
   tariff-help-link: >-
     Детальніше <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>про тарифи</a>
@@ -837,13 +844,6 @@ course-settings:
         ті <b>{commissionBasic}%</b>, якщо ви залучаєте учнів самі.
       }
     }
-  convert-into-paid:
-    description: >-
-      Ви можете
-      <a href="{url}" class="link-primary">зробити курс платним</a>
-      та отримувати кошти від учнів безпосередньо через Stepik.
-    title: Зробити курс платним
-    title-with-price: Вартість курсу – {price}
   course-access:
     enabled: Відкритий для навчанняи усім
     not-enabled: Лише команда курсу може бачити цей курс
@@ -888,8 +888,7 @@ course-settings:
   price-change: Изменить цену
   price-editor:
     description: >-
-      Вы можете <button>сделать курс платным</button> и принимать оплату от учащихся напрямую
-      через Stepik.
+      Вы можете сделать курс платным и принимать оплату от учащихся напрямую через Stepik.
     errors:
       price-gte: Задайте цену от {price}
       price-invalid-format: Укажите корректную цену
@@ -907,8 +906,10 @@ course-settings:
       }}
     terms: Условия оказания услуги
     terms-link: https://support.stepik.org/hc/ru/articles/360018110654
-    title: Сделать курс платным
-  price-title: Вартість курсу — {price}
+  price-title:
+    default: Ціна і промокодом
+    paid: Вартість курсу — {price}
+    requested: Вартість курсу – {price}
   promocode-editor-title: Промокоди
   requests:
     approved-desc: >-
@@ -1039,14 +1040,9 @@ course__continue-exam-warning:
   "Щоб перейти до наступного уроку, почніть екзамен."
 course__continue-learn: Продовжити вчитися
 course__continue-tooltip: Продовжити навчання з останнього пройденого етапу
-course__drop-confirm: Ви справді хочете покинути цей курс?
-course__drop-fail: Не вдалося покинути курс.
-course__drop-link: Покинути
-course__drop-success: "Ви покинули курс, будь ласка, перезавантажте сторінку."
 course__empty-warn-1: "У цьому курсі нема уроків. "
 course__empty-warn-2: Він порожній =(
 course__empty-warn-add: Додайте ваш перший урок у редакторі вмісту курсу.
-course__free: Безкоштовно
 course__info-link: Інформація
 course__instructor-clone-course: Зробити копiю
 course__instructor-delete-course: Видалити
@@ -1365,7 +1361,6 @@ footer__CC_note: >-
   href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk">CC BY-SA 4.0</a>
   license with attribution required
 footer__about: Про проект
-footer__academy: Stepik Академія
 footer__active-count: >-
   {count, plural,
     one {<strong>#</strong> активний учень}
@@ -2068,9 +2063,9 @@ plan-card:
     target='_blank' class='link-primary'>Підпишіться</a>,
     щоб отримати доступ до додаткових можливостей курсу.
   text-limit: >-
-    <a href='/edit-profile/subscription' class='link-primary'>Змініть план</a>,
+    <a href='/edit-profile/subscription'>Змініть план</a>,
     щоб збільшити кількість можливих {courseType}-курсов.
-    Чи змініть тип одного з ваших {courseType}-курсів на базовий.
+    <br>Чи змініть тип одного з ваших {courseType}-курсів на базовий.
   text-want-more: >-
     <a href="/edit-profile/subscription" class="link-primary">Хочу більше</a>
   title: "Ваш поточний план"
@@ -3548,13 +3543,9 @@ submissions__submission: розв’язок
 submissions__tips-left: "У вас залишилась {tips} підказка на сьогодні."
 submissions__tips-server-error: "ПОмилка :( Не вдалося отримати підказку."
 submissions__title: "Розв’язок — етап {step_position}"
-subscriptions__reset: За замовчуванням
-subscriptions__reset-tooltip: отримувати лише повідомлення за замовчуванням
-subscriptions__subscribe: Отримувати повідомлення
 subscriptions__subscribe-lesson-comments: Отримувати коментарі уроку
 subscriptions__subscribe-step-comments: Отримувати коментарі кроку
 subscriptions__subscribe-tooltip: отримувати повідомлення
-subscriptions__unsubscribe: Не отримувати повідомлення
 subscriptions__unsubscribe-lesson-comments: Не отримувати коментарі уроку
 subscriptions__unsubscribe-step-comments: Не отримувати коментарі кроку
 subscriptions__unsubscribe-tooltip: не отримувати повідомлення
@@ -3643,8 +3634,6 @@ teach:
       public: Відкриті
     gradebook: Табель
     info-edit: Опис
-    no-results: Знайдено <b>0</b> курсів.
-    no-results-reset-link: Скинути фільтри
     pending-reviews: >-
       {count, plural,
       one {# розв’язок на рецензію}
@@ -3653,7 +3642,6 @@ teach:
       }
     permissions-edit: Права доступу
     reports: Звіти
-    search-placeholder: Назва чи ID курсу
     syllabus-edit: Зміст
     title: Курси
   lessons:
@@ -3688,10 +3676,10 @@ teach:
     title: Уроки
     used-in-courses: "В {count, number} курсах:"
   nav:
+    announcements: Розсилки
     classes: Класи
     courses: Курси
     lessons: Уроки
-    mailings: Розсилки
     new-course: Новий курс
     new-lesson: Новий урок
     notifications: Повідомлення
@@ -3702,12 +3690,17 @@ teach:
     title: Створити курс
   new-lesson:
     title: Створити урок
+teachlearn:
+  courses:
+    no-results: Знайдено <b>0</b> курсів.
+    no-results-reset-link: Скинути фільтри
+    search-placeholder: Назва чи ID курсу
 time:
   minutes__short: хв.
   seconds__short: сек.
 toc__progress:
   goal:
-    best_result: До найкращого резйльтату залишилося
+    best_result: До найкращого результату залишилося
     certificate_distinction: До сертифіката з відзнакою залишилося
     certificate_regular: До сертифіката залишилося
     end_course: До закінчення курсу залишилося
@@ -4093,21 +4086,21 @@ user__edit:
     subscribe-description:
       charge: >-
         Починаючи з <b>{chargeDate, date, medium-date}</b> платіж <b>{priceText}</b> буде знято
-        {period, select,
+        <b>{period, select,
           month {щомісяця}
           quarter {щокварталу}
           half_year {щопівроку}
           year {щороку}
           other {щомісяця}
-        } до моменту скасування підписки.
+        }</b> до моменту скасування підписки.
       will-trial: >-
         <p><b>Безкоштовний 14-ти денний випробувальний період</b> буде розпочату відразу.</p>
-        <p>Після випробувального періоду ви будете платити {priceText} {period, select,
+        <p>Після випробувального періоду ви будете платити <b>{priceText}</b> <b>{period, select,
           month {щомісяця}
           quarter {щокварталу}
           half_year {щопівроку}
           year {щороку}
-          other {щомісяця}}.</p>
+          other {щомісяця}}</b>.</p>
     subscribe-footnote: >-
       Ми використовуємо
       <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>

@@ -375,6 +375,8 @@ cost:
     tentativas}}
 course:
   draft: Rascunho
+  drop:
+    link: Abandonar
   edit-btns:
     info: Editar informações do curso
     syllabus: Editar plano de estudos
@@ -520,7 +522,7 @@ course-new:
   create: Criar
   explanation: >-
     Os cursos e as lições são distribuídos de acordo com as licença Creative Commons (CC BY-SA 4.0)
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>."
   header: Crie um novo curso
   help-center-link: Mais sobre como criar cursos
@@ -621,8 +623,13 @@ course-permissions-edit:
   members-error-delete: Erro ao remover usuário
   members-success-add: Usuário adicionado com sucesso
   no-edit-label: Não é possível acessar autorização para gerenciamento.
-  personal-testers-note: >-
-    Os testadores não terão acesso ao conteúdo quando o seu curso tiver acesso às configurações
+  personal-note: >-
+    Os {groupName, select,
+      assistants {assistentes}
+      moderators {moderadores}
+      testers {testadores}
+      other {usuários}
+    } não terão acesso ao conteúdo quando o seu curso tiver acesso às configurações
     "Somente para a equipe do curso".
   save-access: Salvar configurações de acesso
   tariff-help-link: >-
@@ -779,14 +786,9 @@ course__continue-empty-warning: >-
 course__continue-exam-warning: Você precisa iniciar a prova.
 course__continue-learn: Aprender
 course__continue-tooltip: Continue a partir da última etapa resolvida
-course__drop-confirm: Tem certeza de que deseja abandonar este curso?
-course__drop-fail: Não é possível abandonar este curso.
-course__drop-link: Abandonar
-course__drop-success: Curso abandonado. Atualize esta página.
 course__empty-warn-1: Ainda não há lições neste curso.
 course__empty-warn-2: Está vazio =(
 course__empty-warn-add: Adicione sua primeira lição usando o editor de plano de ensino do curso.
-course__free: Grátis
 course__info-link: Detalhes
 course__instructor-clone-course: Faça uma cópia
 course__instructor-delete-course: Excluir
@@ -2847,14 +2849,10 @@ submissions__prev: Anterior
 submissions__submission: submissão
 submissions__tips-left: "Você tem {tips} dicas para hoje."
 submissions__tips-server-error: "Erro :( Não é possível obter uma dica de um servidor."
-submissions__title: "Envios - Etapa {step_position}"
-subscriptions__reset: Redefinir inscrições
-subscriptions__reset-tooltip: receber notificações padrão
-subscriptions__subscribe: Se inscrever
+submissions__title: "Envios – Etapa {step_position}"
 subscriptions__subscribe-lesson-comments: Inscrever-se nos comentários da lição
 subscriptions__subscribe-step-comments: Inscrever-se nos comentários da etapa
 subscriptions__subscribe-tooltip: sempre receba notificações
-subscriptions__unsubscribe: Cancelar inscrição
 subscriptions__unsubscribe-lesson-comments: Cancelar inscrição nos comentários da lição
 subscriptions__unsubscribe-step-comments: Cancelar inscrição nos comentários da etapa
 subscriptions__unsubscribe-tooltip: nunca receba notificações
@@ -2921,12 +2919,9 @@ teach:
       public: Público
     gradebook: Boletins
     info-edit: Detalhes
-    no-results: Encontrados <b>0</b> cursos.
-    no-results-reset-link: Redefinir filtros
     pending-reviews: "{count, plural, one {# submissão} other {# submissões}} para avaliação"
     permissions-edit: Permissões
     reports: Relatórios
-    search-placeholder: Nome ou ID do curso
     syllabus-edit: Programa de Estudos
     title: Cursos
   lessons:
@@ -2947,10 +2942,10 @@ teach:
     title: Lições
     used-in-courses: "Em {count, number} cursos:"
   nav:
+    announcements: Correspondências
     classes: Turmas
     courses: Cursos
     lessons: Lições
-    mailings: Correspondências
     new-course: Novo curso
     new-lesson: Nova lição
     notifications: Notificações
@@ -2961,6 +2956,11 @@ teach:
     title: Crie um novo curso
   new-lesson:
     title: Crie uma nova lição
+teachlearn:
+  courses:
+    no-results: Encontrados <b>0</b> cursos.
+    no-results-reset-link: Redefinir filtros
+    search-placeholder: Nome ou ID do curso
 time:
   minutes__short: min
   seconds__short: seg
@@ -3082,7 +3082,7 @@ user__edit:
     subscribe-description:
       will-trial: >-
         <p><b>Avaliação gratuita por 14 dias</b> começará imediatamente.</p>
-        <p>Após o período de avaliação, você receberá um pagamento mensal de {priceText}.</p>
+        <p>Após o período de avaliação, você receberá um pagamento mensal de <b>{priceText}</b>.</p>
     subscribe-footnote: >-
       Usamos <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
       para o processamento de seus pagamentos.

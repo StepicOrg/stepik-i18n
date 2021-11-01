@@ -244,6 +244,8 @@ common__woof-wrong: >-
   Fehler - überpüfen Sie bitte Ihre Internetverbindung und versuchen Sie es nochmals.
 copy_link_to_clipboard: Link kopieren
 course:
+  drop:
+    link: Abmelden
   info:
     adaptive_info_link: Erfahren Sie hier mehr über adaptive Kurse
     adaptive_note: "Dies ist ein adaptiver Kurs: er passt sich Ihren Fähigkeiten an"
@@ -291,7 +293,7 @@ course-new:
   create: Erstellen
   explanation: >-
     Kurse und Lektionen werden zur Verfügung gestellt unter <a
-    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
   header: Neuen Kurs erstellen
   help-center-link: Mehr zur Erstellung von Kursen
@@ -370,10 +372,6 @@ course__continue-empty-warning: In diesem Kurs gibt es keine Schritte
 course__continue-exam-warning: Sie sollen die Prüfung beginnen.
 course__continue-learn: Lernen
 course__continue-tooltip: "Mit nach(?) dem letzten gelösten Schritt weiter machen "
-course__drop-confirm: "Sind Sie sicher, dass Sie sich von diesem Kurs abmelden wollen?"
-course__drop-fail: Abmelden von diesem Kurs ist nicht möglich
-course__drop-link: Abmelden
-course__drop-success: Vom Kurs abgemeldet. Bitte Seite neu laden.
 course__empty-warn-1: In diesem Kurs gibt es keine Lektionen
 course__empty-warn-2: Leer =(
 course__info-link: Information
@@ -1148,13 +1146,9 @@ submissions:
     wrong: Falsch
 submissions__submission: Einreichung
 submissions__title: "Einreichungsschritt {step_position}"
-subscriptions__reset: Subskription zurücksetzen
-subscriptions__reset-tooltip: Benachrichtigungen standardmäßig erhalten
-subscriptions__subscribe: Einschreiben
 subscriptions__subscribe-lesson-comments: Zu Lektionskommentaren einschreiben
 subscriptions__subscribe-step-comments: Zu Schrittkommentaren einschreiben
 subscriptions__subscribe-tooltip: Immer Benachrichtigungen erhalten
-subscriptions__unsubscribe: Einschreiben rückgängig machen
 subscriptions__unsubscribe-lesson-comments: Einschreibung der Lektionskommentare rückgängig machen
 subscriptions__unsubscribe-step-comments: Einschreibung der Schrittkommentare rückgängig machen
 subscriptions__unsubscribe-tooltip: Nie Benachrichtigungen erhalten
