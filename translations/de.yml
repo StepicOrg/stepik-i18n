@@ -68,7 +68,6 @@ breadcrumbs__course-permissions-edit: Genehmigungen
 breadcrumbs__course-reports: Berichte
 breadcrumbs__course-syllabus: Lehrplan
 breadcrumbs__home: Startseite
-breadcrumbs__instructor-dashboard: Instruktoren Dashboard
 breadcrumbs__lesson: Lektionen
 breadcrumbs__lesson-edit: Ändern
 breadcrumbs__lesson-reports: Berichte
@@ -245,6 +244,8 @@ common__woof-wrong: >-
   Fehler - überpüfen Sie bitte Ihre Internetverbindung und versuchen Sie es nochmals.
 copy_link_to_clipboard: Link kopieren
 course:
+  drop:
+    link: Abmelden
   info:
     adaptive_info_link: Erfahren Sie hier mehr über adaptive Kurse
     adaptive_note: "Dies ist ein adaptiver Kurs: er passt sich Ihren Fähigkeiten an"
@@ -273,15 +274,8 @@ course:
   private: Privater Kurs
   sections:
     default_title: Neues Modul
-course-actions__button: Verwalten
-course-edit__back: Zurück zum Kurs
-course-edit__cancel: Zurück
 course-edit__new-module: Neues Modul
 course-edit__save: Änderungen speichern
-course-filters:
-  categories: Kategorien
-  langs: Sprachen
-  tags: Themen
 course-index__authors: "{count, plural, other {Autoren} =1 {Autor}}"
 course-index__cert: Zertifikat
 course-index__enrolled-msg: Sie sind eingeschrieben
@@ -299,7 +293,7 @@ course-new:
   create: Erstellen
   explanation: >-
     Kurse und Lektionen werden zur Verfügung gestellt unter <a
-    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
   header: Neuen Kurs erstellen
   help-center-link: Mehr zur Erstellung von Kursen
@@ -321,25 +315,15 @@ course-permissions-edit:
   no-edit-label: Auf das Rechtemanagement kann nicht zugegriffen werden
   save-access: Zugangsdaten speichern
   user-is-admin: ist Primäradministrator
-course-settings__button: Ändern
 course-syll__begins: Datum Beginn
 course-syll__compact-progress: Verhältnis bestandene Schritte
 course-syll__ends: Datum Ende
 course-syll__scores: Ihre / maximale Punkte
 course-syllabus__closed-yet: This Modul ist geschlossen
-course-syllabus__required-module-message: >-
-  {count, plural, one {# Punkt im Modul {position} ({title})} other {# Punkte im Modul {position}
-  ({title})}}
-course-syllabus__required-module-message-percent:
-  "{percent}% der Punkte im Modul {position} ({title})"
-course-syllabus__required-module-message-title: Bedingung zum öffnen
 course__add-annon: Neue Ankündigung
 course__add-to-favorites-link: Bei den Favoriten hinzufügen
-course__added-to-favorites-fail:
-  Kann den Kurs nicht den Favoriten hinzufügen. Bitte diese Seite neu laden.
-course__added-to-favorites-success: >-
-  Den Favoriten hinzugefügt. Zum Entfernen einen Pfeil am Kurs Widget ancklicken , anschließend  —
-  Entfernen von den Favoriten.
+course__added-to-favorites-fail: Kann den Kurs nicht den Favoriten hinzufügen.
+course__added-to-favorites-success: Den Favoriten hinzugefügt.
 course__annon-delete: Löschen
 course__annon-delete-confirm: Diese Ankündigung löschen?
 course__annon-delete-done: Die Ankündigung wurde gelöscht
@@ -388,36 +372,19 @@ course__continue-empty-warning: In diesem Kurs gibt es keine Schritte
 course__continue-exam-warning: Sie sollen die Prüfung beginnen.
 course__continue-learn: Lernen
 course__continue-tooltip: "Mit nach(?) dem letzten gelösten Schritt weiter machen "
-course__drop-confirm: "Sind Sie sicher, dass Sie sich von diesem Kurs abmelden wollen?"
-course__drop-fail: Abmelden von diesem Kurs ist nicht möglich
-course__drop-link: Abmelden
-course__drop-success: Vom Kurs abgemeldet. Bitte Seite neu laden.
 course__empty-warn-1: In diesem Kurs gibt es keine Lektionen
 course__empty-warn-2: Leer =(
 course__info-link: Information
-course__instructor-attachments-link: Anhänge
 course__instructor-clone-course: Kopie erstellen
-course__instructor-clone-module: Modul kopieren
-course__instructor-dashboard-link: Instruktor Dashboard
 course__instructor-delete-course: Löschen
 course__instructor-edit-adaptiveness: Adaptivität
-course__instructor-edit-certificates: Zertifikate
-course__instructor-edit-info: Information
-course__instructor-edit-permissions: Erlaubnisse
-course__instructor-edit-syllabus: Lehrplan
-course__instructor-grade-book: Notenheft
-course__instructor-reports: Berichte
-course__instructor-statistics: Statistiken
 course__join-button: Diesem Kurs beitreten
 course__join-fail: >-
   Beitreten nicht möglich (error code{status}). Versuchen Sie, die Seite neu zu laden
 course__news-link: Neuigkeiten
 course__remove-from-favorites-link: Von Favoriten entfernen
-course__removed-from-favorites-fail:
-  Dieser Kurs kann von Favoriten nicht entfernt werden. Bitte Seite neu laden.
-course__removed-from-favorites-success: >-
-  Von Favoriten entfernt. Sie können den Kurs wieder hinzufügen, indem Sie den Pfeil am Kurs Widget
-  anklicken, anschließend zu Favoriten hinzufügen.
+course__removed-from-favorites-fail: Dieser Kurs kann von Favoriten nicht entfernt werden.
+course__removed-from-favorites-success: Von Favoriten entfernt.
 course__reviews:
   can-review: "Sie haben mehr als {treshold}% erreicht, Sie können ein Review senden"
   can-review-no: Nein danke
@@ -479,17 +446,9 @@ discussions__start-disc-button: Kommentar senden
 edit-ui__video-uploading-warn: Video wird noch hochgeladen. Wollen Sie unterbrechen?
 exam:
   close-date: Klausur endet
-  confirm: >-
-    {count, plural, other {Sie haben nur # Minuten und nur einen Versuch. Wollen Sie die Klausur
-    beginnen?} one {Sie haben nur # Minute und nur einen Versuch. Wollen Sie die Klausur beginnen?}}
   game-over: Die Klausur ist beendet.
   go-back: Zum Studienplan
   header: Der Examen Modus ist aktiv.
-  info-head: >-
-    {count, plural, other {Sie werden # Minuten für diese Klausur haben} one {Sie werden # Minute
-    für diese Klausur haben}}
-  info-latest-date: "Sie sollten nicht später als {date} beginnen um rechtzeitig fertig zu werden"
-  info-paragraph: Sie werden nur einen Versuch haben
   label: Klausur
   not-started: Die Klausur ist nocht nicht verfügbar
   open-date: Klausur beginnt
@@ -502,11 +461,6 @@ exam:
   start-error: Die Klausur kann nicht begonnen werden. Laden Sie die Seite neu
   timer: "Zeit noch zur Verfügung:"
   too-late: "Zu spät, die Klausur ist beendet"
-explore:
-  course-pack__trending-courses: Stark im Trend
-  search-aria-label: Suche löschen
-  search-placeholder: Im Katalog suchen
-  show-all: Alle zeigen
 footer__CC_note: >-
   Öffentliche Kurse sind lizenziert unter <a
   href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license with attribution
@@ -718,14 +672,10 @@ lti-editor:
   key-title: LTI Schlüsel ("Consumer")
   save: LTI Zugangsdaten speichern
   secret-title: LTI Geheimcode
-  sync: >-
-    LTI Noten synchronisieren mit allen gespeicherten LTI - Verbindungen in diesem Kurs
-  sync-btn: "Nicht klicken, es dauert eine Weile"
 material__video-not-ready: Das Video ist noch nicht hochgeladen oder verarbeitet
 notification__favorite: Favoriten
 notification__muted: stumm geschaltet
 notifications__empty-list: Keine Benachrichtigungen
-notifications__events-link: Meine Aktivitäten
 notifications__flag-favorite: Favoriten
 notifications__flag-read: Gelesen
 notifications__flag-unread: Gelesen aufheben
@@ -1114,7 +1064,8 @@ review__student-choose: Senden Sie den besten Beitrag zum Review
 review__student-no-submissions: Speichern Sie wenigstens einen Beitrag
 review__student-send: Senden Sie diesen Beitrag zum Review
 review__student-send-notice: Der Beitrag wurde zum Review gesandt
-review__submit-confirm: Sind Sie bereit diesen Review zu senden?
+review__submit-confirm:
+  text: Sind Sie bereit diesen Review zu senden?
 review__wait-peers-giving-note: >-
   Hinweis: Je mehr Reviews Sie senden, umso größer sind Ihre Chancen, dass Ihr Beitrag reviewt wird
 scoreboard__current-user-rank: "Ihr Rang:"
@@ -1123,12 +1074,14 @@ scoreboard__name: Name
 scoreboard__no-contestants: Keine Bewerber
 scoreboard__rank: Rang
 scoreboard__score: Punkte
+search__aria-label: Suche löschen
 search__button: Suche
 search__context: "Suche Kontext:"
 search__course: "Kurs:"
 search__filters-warn: Versuchen Sie die Suchfilter zu entfernen
 search__lesson: "Lektion:"
 search__no-results: Keine Resultate
+search__placeholder: Im Katalog suchen
 search__search: Suchen
 section-editor__begin-date: Startdatum
 section-editor__step-content: Generierte Lektion
@@ -1193,16 +1146,20 @@ submissions:
     wrong: Falsch
 submissions__submission: Einreichung
 submissions__title: "Einreichungsschritt {step_position}"
-subscriptions__reset: Subskription zurücksetzen
-subscriptions__reset-tooltip: Benachrichtigungen standardmäßig erhalten
-subscriptions__subscribe: Einschreiben
 subscriptions__subscribe-lesson-comments: Zu Lektionskommentaren einschreiben
 subscriptions__subscribe-step-comments: Zu Schrittkommentaren einschreiben
 subscriptions__subscribe-tooltip: Immer Benachrichtigungen erhalten
-subscriptions__unsubscribe: Einschreiben rückgängig machen
 subscriptions__unsubscribe-lesson-comments: Einschreibung der Lektionskommentare rückgängig machen
 subscriptions__unsubscribe-step-comments: Einschreibung der Schrittkommentare rückgängig machen
 subscriptions__unsubscribe-tooltip: Nie Benachrichtigungen erhalten
+syllabus:
+  exam:
+    attempts-info: Sie werden nur einen Versuch haben
+    info-latest-date: "Sie sollten nicht später als {date} beginnen um rechtzeitig fertig zu werden"
+    type:
+      basic: >-
+        {minutes, plural, other {Sie werden # Minuten für diese Klausur haben}
+        one {Sie werden # Minute für diese Klausur haben}}
 syllabus_edit:
   deadlines:
     course_begin_date: Kurs Starttermin
@@ -1228,7 +1185,6 @@ syllabus_edit:
       section_end_date: "Endtermin: wann das Modul geschlossen wird (kann frei gelassen werden)"
       section_hard_deadline: "Äußerste Frist: wenn die Kosten je Schritt Null werden"
       section_soft_deadline: Frist ab wann Punkte je Schritt reduziert werden
-  page-subtitle: Lehrplan ändern
   saved_msg: Kurs erfolgreich gespeichert
   zero_sections: Erstes Modul hinzufügen um Lektionen hinzuzufügen
 time:
@@ -1238,6 +1194,7 @@ toc__progress:
   title: Kurs Fortschrittskurve
 unit_edit:
   add_existed: Existierende Lektion hinzfügen
+  clone-module: Modul kopieren
   marked_delete: >-
     Lektion&nbsp;<strong>«{title}»</strong>&nbsp; wird beim nächsten Speichern des Kurses gelöscht
   new_lesson: Neue Lektion

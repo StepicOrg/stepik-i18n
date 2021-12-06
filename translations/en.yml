@@ -78,7 +78,6 @@ breadcrumbs__course-reports: Reports
 breadcrumbs__course-statistics: Statistics
 breadcrumbs__course-syllabus: Syllabus
 breadcrumbs__home: Home
-breadcrumbs__instructor-dashboard: Instructor dashboard
 breadcrumbs__lesson: Lesson page
 breadcrumbs__lesson-edit: Edit
 breadcrumbs__lesson-reports: Reports
@@ -89,15 +88,52 @@ breadcrumbs__review-session: Review session
 breadcrumbs__submissions: Submissions
 button__new-course: Create a course
 button__new-lesson: Create a lesson
-catalog-beta:
+catalog:
+  authors:
+    new-course: Create your own course
+  category:
+    similar-authors: Similar authors
+    similar-topics: Similar themes
   filters-dialog:
-    langs: "{lang, select, ru {Русский} en {Английский} other {Любой}}"
-  search-empty: >-
-    По запросу "<var>{query}</var>" ничего не найдено.
-    Попробуйте изменить параметры поиска{hasAnyFilters, select,
-      true { или <a href="{resetFiltersHref}">сбросить фильтры</a>}
-      other {}
-    }.
+    free-only: Only free
+    language: Course language
+    language-values: "{lang, select, ru {Russian} en {English} other {Any}}"
+    reset: Reset filters
+    submit: Show
+    title: Filters
+    with-cert-only: Only with certificate
+  recently-viewed: Recently viewed
+  search:
+    empty: >-
+      No results found for "<var>{query}</var>".
+      Try to change your search {hasAnyFilters, select,
+        true {query or <a href="{resetFiltersHref}">reset the filters</a>}
+        other {query}
+      }.
+    next-page: Next →
+    popular-queries: Popular queries
+    prev-page: ← Back
+    suggestioned: >-
+      Showing results for "<a href={suggestionHref}><var>{suggestion}</var></a>".
+      No results found for "<var>{query}</var>".
+  search-bar:
+    free-only: Free
+    input-placeholder: Course name, author or theme
+    language: "{lang, select, ru {Russian} en {English} other {Any language}}"
+    with-cert-only: With certificate
+  stepik-academy:
+    about:
+      description: >- # i18n ignore en-no-cyrillic
+        <b>Stepik Academy</b> – это программы с поддержкой преподавателя, группы и куратора от
+        команды Stepik c дедлайнами и проверкой заданий. Обучение платное, но оно того стоит!
+      learn-more: Узнать больше  # i18n ignore en-no-cyrillic
+      learn-more-url: https://academy.stepik.org/?utm_source=stepik&utm_medium=catalog
+      title: >- # i18n ignore en-no-cyrillic
+        {index, select,
+          1 {Скучаете<br>по дедлайнам?}
+          2 {Не хватает<br>обратной связи?}
+          other {Скучно<br>учиться одному?}
+        }
 certificate-editor:
   auto-issue-label: Auto issue certificates
   auto-issue-text:
@@ -178,6 +214,8 @@ comments__all: All user comments
 comments__assistant-badge: Course team
 comments__auth-warn: To join this discussion you have to
 comments__by-date-order: Last discussions
+comments__cancel-edit: Cancel
+comments__cancel-new: Cancel
 comments__default-order: Most liked
 comments__delete: Delete
 comments__delete-all: Delete all comments
@@ -214,6 +252,7 @@ comments__replies-toggle-tooltip: hide / show replies
 comments__reply: Reply
 comments__reply-link: link to this reply
 comments__reply-tooltip: reply to this comment
+comments__show-more-toggler: "{expanded, select, true {Show less} other {Show more}}"
 comments__solutions-thread-permisison-error:
   You have no permission for solutions forum. Solve step and read forum
 comments__staff-badge: Stepik Team
@@ -230,9 +269,13 @@ comments__without-submissions: You should solve the problem to leave a solution
 common:
   choose: Choose
   end: ends
+  max-text-length: >-
+    Max {count, plural, one {# character} other {# characters}}
   pin: Pin
   price-enrolled: Enrolled
   price-free: Free
+  show-less: Collapse
+  show-more: Read more
   start: starts
   unpin: Unpin
 common__activity: Activity
@@ -250,6 +293,9 @@ common__challenge: Challenge
 common__close: Close
 common__close-window: Close window
 common__collapse: Collapse
+common__cookies-auth-warn: >-
+  Unable to log in/register. Please check
+  your browser's security settings and cookie settings.
 common__cookies-warn: >-
   Oops! Your browser seems to have cookies disabled. Make sure cookies are enabled or try opening a
   new browser window.
@@ -295,7 +341,7 @@ common__my-courses: My courses
 common__notifications: Notifications
 common__number-sign: "#"
 common__off: "off"
-common__ok-button: Cancel
+common__ok-button: OK
 common__oops: Something went wrong :(
 common__out-of-points: "{count, plural, one {# point} other {# points}}"
 common__platform-news: What's new
@@ -337,6 +383,10 @@ common__unsaved-warn: All unsaved changes will be lost!
 common__update: Update
 common__userpic: User picture
 common__woof-wrong: Something went wrong. Check your internet connection and try again.
+confirm:
+  cancel: Cancel
+  checkbox: I understand that this action can't be undone
+  ok: OK
 content_advices:
   action:
     course_quizzes: 'add problem steps to the lessons from the <a href="{url}">{text}</a> page'
@@ -398,8 +448,37 @@ cost:
   submissions-left: >-
     Only {count, plural, one {<strong>#</strong> attempt} other {<strong>#</strong> attempts}}
 course:
-  access_restricted: Course is closed for revision.
+  access_restricted: >-
+    Authors have closed the course "{courseTitle}", and you are not able to pass it for now.
+  delete:
+    confirm:
+      cancel: Cancel
+      checkbox: >-
+        I understand that the course will be deleted permanently
+        and it will be impossible to restore the data
+      ok: Yes, delete forever
+      text: >-
+        <h4>Do you want to delete "{courseTitle}"?</h4>
+        <p>All lessons in it will stay and it will be possible
+        to add them in other courses.<br>But the learners of this course
+        will lose access to them, and all the related data will be lost too.</p>
+    result:
+      fail: Deleting course failed, please try again.
+      success: Course "{courseTitle}" has been deleted.
   draft: Draft
+  drop:
+    confirm:
+      cancel: Cancel
+      ok: Drop course
+      text: >-
+        <h4>Drop course "{courseTitle}"?</h4>
+        <p>You don't want to learn in the course anymore?
+        Don't be afraid, your progress will be saved,
+        and you can join the course again if you want.</p>
+    link: Drop
+    result:
+      fail: Dropping course failed, please try again
+      success: You're not enrolled in "{courseTitle}" anymore.
   edit-btns:
     info: Edit course information
     syllabus: Edit course syllabus
@@ -438,6 +517,29 @@ course:
   readiness:
     high_expl: The course meets the formal recommendations of Stepik
     low_expl: Most likely the course is under development
+  routes:
+    comments:
+      title: Comments
+    information:
+      title: Information
+    instructor-dashboard:
+      title: Instructor dashboard
+    lti:
+      title: IMS LTI integration
+    news:
+      title: News
+    permissions:
+      title: Course access
+    reports:
+      title: Reports
+    reviews:
+      title: Reviews
+    scoreboard:
+      title: Scoreboard
+    statistics:
+      title: Statistics
+    syllabus:
+      title: Course content
   sections:
     default_title: New module
   tariffs:
@@ -449,6 +551,18 @@ course:
       basic_paid: Basic+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Basic}
+          basic_paid {Basic+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
+    invalid:
+      tooltip: >-
+        There are paid features used in this course.
+        <br>To be able to publish the course, change its type to <b>{type}</b>.
     paid-features:
       deadlines: Course deadlines
       exams: Exams
@@ -479,7 +593,6 @@ course:
       text2: >-
         Upgrade your course to publish it with {planTitle} features.<br><a
         href='https://welcome.stepik.org/en/pricing' target='_blank'>Learn about plans</a>
-course-actions__button: Manage
 course-assessments:
   empty: All solutions are reviewed
   pending-reviews-badge: Pending instructor reviews
@@ -487,17 +600,17 @@ course-assessments:
   tab-caption: Instructor reviews
   title: >-
     {count, plural, one {# solution is} other {# solutions are}} waiting for review
-course-cards:
+course-badges:
+  basic: Basic
+  draft: Draft
+  paid: Paid
+  private: Private
+course-card:
   certificate: certificate
+  view-more: View More
   workload: "{hours} h"
-course-edit__back: Back to Course
-course-edit__cancel: Back
 course-edit__new-module: New module
 course-edit__save: Save
-course-filters:
-  categories: Categories
-  langs: Languages
-  tags: Subjects
 course-grade-book:
   download-sign: "Download the gradebook on the "
   filter: "Learner name, ID or email"
@@ -540,21 +653,51 @@ course-info-edit__remove-author: Remove author
 course-info-edit__remove-instructor: Remove instructor
 course-info-edit__upload-failed: >-
   Upload a valid image. The file you uploaded was either not an image or a corrupted image.
+course-list-card:
+  course-count: "{count, plural, one {# course} other {# courses}}"
 course-lti-edit__header: LTI integration settings
+course-nav:
+  menu:
+    analytics: Analytics
+    assessments: Instructor reviews
+    attachments: Attachments
+    certificates: Certificates
+    comments: Comments
+    communications: Communications
+    content: Content
+    dashboard: Dashboard
+    gradebook: Gradebook
+    information: Information
+    lti: LTI integration
+    news: News
+    news-old: "News <sup>old</sup>"
+    permissions: Access control
+    pricing: Price & coupons
+    publication: Publication
+    reports: Reports
+    revenue: "Revenue <sup>β</sup>"
+    reviews: Reviews
+    scoreboard: Scoreboard
+    settings: Settings
+    statistics: Statistics
+    syllabus: Syllabus
+  stat:
+    score-progress: "<b>{value}/{max}</b> points scored"
+    step-progress: "<b>{value}%</b> of materials learned"
 course-new:
   cancel: Cancel
   create: Create
   explanation: >-
     Courses and lessons are distributed under <a
-    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a> license.
   header: Create a new course
   help-center-link: More about creating courses
   note:
-    paid: "Learners need to pay for this course. Base price:"
+    paid: "Learners need to pay for this course. Base price: {price}"
     tariff: >-
-      You'll create a draft of the Basic course. You can always upgrade to PRO for more handy
-      features.
+      You'll create a draft of a Basic course.
+      You can always upgrade to Pro for more useful features.
   teaching-landing:
     features:
       "0": "An online course editor and a place for your course in our catalog"
@@ -599,6 +742,33 @@ course-new:
         <a href='https://bioinf.me/en/contest' target='_blank'>Bioinformatics Contest</a>.
   title: Title
   title-hint: Up to 64 symbols.
+course-news:
+  actions:
+    new: Add newsletter
+  empty:
+    text:
+      composing: No drafts found
+      for-author: >-
+        <p>If you want to inform your learners of something, you can use newsletters for this.
+        They will be displayed on the course page and sent to learners' emails as well.</p>
+        <p>Besides one-time newsletters, you can set mailouts by specific events as enrolling
+        in the course or passing it.</p>
+        <p>You can learn more about course newsletters in
+        <a href='https://support.stepik.org/hc/en-us/articles/360000159833' class='external'
+        target='_blank'>our Help Center</a></p>
+      for-user: There will be news about events, new materials, or other events in the course.
+      scheduled: No mailouts scheduled
+      sending: No active mailouts
+      sent: No mailouts
+  help: >-
+    Read more about the course news<br>
+    <a href='https://support.stepik.org/hc/en-us/articles/360000159833' target='_blank'>
+    in our documentation</a>
+  settings:
+    link-text: Letters and <br>notifications settings
+  title:
+    edit: Newsletter editor
+    new: Creating newsletter
 course-permissions-edit:
   access-personal:
     description: useful option during creation process
@@ -663,18 +833,22 @@ course-permissions-edit:
       other {}
     } rights
   no-edit-label: Can not access rights management.
-  personal-testers-note: >-
-    Testers will not have access to the content when your course has "Only for course team" access
+  personal-note: >-
+    {groupName, select,
+      assistants {Assistants}
+      moderators {Moderators}
+      testers {Testers}
+      other {Users}
+    } will not have access to the content when your course has "Only for course team" access
     setting.
   save-access: Save access settings
   tariff-help-link: >-
     More <a target='_blank' href='https://welcome.stepik.org/en/pricing'>about plans</a>
   tariff-info: "Access settings are available for <b>{plan} courses</b> only."
-  title-prefix: Course access settings
   transfer-ownership: Transfer ownership
   transfer-ownership-description: >-
     You can <a href="{transferOwnershipURL}" data-href-to-ignore>transfer ownership</a>
-    of the course to another user. After that, it will be taken into account in the
+    of the course to another user. After that, it will be included in the
     new owner's subscription.
   user-is-admin: is primary admin
 course-promo:
@@ -682,6 +856,12 @@ course-promo:
   about-page-widget:
     button: Preview
     text: There is a course landing page which learners see before enrollment
+  cant-be-bought-warn: >-
+    {forTeachers, select,
+      true {Please <a href="https://support.stepik.org/hc/en-us/requests/new"
+        target="_blank">contact support</a> in order to start selling this course.}
+      other {You cannot buy this course yet.}
+    }
   certificate-section-header: Certificate
   course-content: Course content
   course-content-aside-link: Course content
@@ -696,27 +876,94 @@ course-promo:
       {count, plural, one {<b>#</b> hour} other {<b>#</b> hours}} of video
   course-price: Price
   demo: Demo access
+  discount-expire-date: "if paid before {dateStr}"
+  faq: FAQ
   head-widgets:
     adaptive:
       caption: Adaptive course
       help: What's this?
       helpURL: "https://support.stepik.org/hc/en-us/articles/360002316314"
-    certificate: Certificate Stepik
+    certificate: Stepik certificate
     difficulty:
       easy: Beginner Level
       hard: Advanced Level
       normal: Intermediate Level
   how-you-will-learn: How you will learn
   meet-instructors: Meet the Instructors
-  read-all-reviews: "Read {count, plural, one {# review} other {all # reviews}}"
   reviews: "{count, plural, one {# review} other {# reviews}}"
   share-course: Share this course
   share-course-direct-link: "Direct link:"
+  show-more: Show more
   student-reviews: Learners' reviews
   students: "{count, plural, one {# learner} other {# learners}}"
   what-you-will-get: What you will get
   what-you-will-learn: What you will learn
   who-is-this-course-for: Who is this course for
+course-rating:
+  count: of {count, plural, one {# review} other {# reviews}}
+  max: of {max}
+course-revenue:
+  beta-version: >-
+    <b>This page is under development.</b> If you noticed any mistakes in the data, please
+    <a href="https://support.stepik.org/hc/en-us/requests/new" target="_blank"
+    >contact our support</a>.
+  empty:
+    text: Here you will find details on your revenue after the course will have been purchased once.
+  history:
+    details:
+      empty: No entries
+      tbody:
+        amount-refund: refund
+        buyer-invoice-payment-seats: >-
+          {count, plural, one {# seat} other {# seats}} in the course
+        channel: >-
+          {value, select,
+            manually {Manually}
+            refund {Refund}
+            purchase {Came via Stepik}
+            purchase-z-link {Came via z-link}
+            purchase-on-invoice {Payment on account}
+            other {}
+          }
+      thead:
+        amount: Payment
+        buyer: Customer
+        channel: Channel
+        date: Date
+        income: Earnings
+        promocode: Promo code
+    months:
+      empty: No entries
+      tbody:
+      thead:
+        month: Month
+        payments-by-channel: Channels
+        payments-total: Purchases
+        refunds: Refunds
+        total-turnover: Sales
+        total-user-income: Earnings
+    tabs: >-
+      {tab, select,
+        details {Details}
+        months {By month}
+        other {}
+      }
+  placeholder:
+    link-to-pricing: Enable payments
+  reports-link: Payments and Course referral traffic reports
+  summary:
+    beneficiary-info: "You get <b>{percent}%</b> from the course sales minus Stepik fee."
+    month-income: "Earnings in {monthName}"
+    month-turnover: "Sales in {monthName}"
+    total-income: Earnings
+    total-since-date: "Starting from {date, date, medium-date}"
+    total-turnover: Sales
+  timezone-note: "<b>Important:</b> All operations are carried out Moscow Time (MSK, UTC+3)."
+  title: Revenue
+  usd-placeholder:
+    text: >-
+      You can view your dollar sales history on <a href="https://vendors.paddle.com"
+      target="_blank">Paddle</a> or <a href="{reportsURL}" target="_blank">payment reports</a>.
 course-settings:
   about-pro-link:
     text: Learn more about PRO courses
@@ -725,7 +972,7 @@ course-settings:
     {count, plural,
       =0 {
         Please <a href="https://support.stepik.org/hc/en-us/requests/new" target="_blank"
-        >contact our support</a> to support to receive sales benefits from this course.
+        >contact our support</a> to receive sales benefits from this course.
       }
       other {The course sales benefits go to}
     }
@@ -739,16 +986,9 @@ course-settings:
         Our sales fee is <b>{commissionPromo}%</b> if
         <a href="https://support.stepik.org/hc/en-us/articles/360016290639"
         target="_blank">we promote</a> your course,
-        or <b>{commissionBasic}%</b> if you provide the promotion yourself.
+        or <b>{commissionBasic}%</b> if a learner buys the course through the link below:
       }
     }
-  convert-into-paid:
-    description: >-
-      You can
-      <a href="{url}" class="link-primary">convert
-      this course into paid</a> and accept course payments directly through Stepik.
-    title: Convert this course into a paid one
-    title-with-price: Declared course price — {price}
   course-access:
     enabled: Open for enrollment
     not-enabled: Visible for course team only
@@ -791,12 +1031,12 @@ course-settings:
   price-change: Change price
   price-editor:
     description: >-
-      You can <button>convert this course into paid</button> and accept course payments directly
-      through Stepik.
+      You can convert this course into paid and accept course payments directly through Stepik.
     errors:
       price-gte: Set the price from {price}
       price-invalid-format: Enter the correct price
       price-lte: Set the price up to {price}
+    make-paid-btn: Enable payments
     price-footnote: Price must be from {gtePrice}
     price-free-note: >-
       To make the course free, <a href="https://support.stepik.org/hc/en-us/requests/new"
@@ -810,10 +1050,13 @@ course-settings:
       }}
     terms: Terms and conditions
     terms-link: https://support.stepik.org/hc/en-us/articles/360018110654
-    title: Convert this course into a paid one
-  price-title: Course price — {price}
+  price-title:
+    default: Price & coupons
+    paid: Course price — {price}
+    requested: Declared course price — {price}
   promocode-editor-title: Promo codes
-  publication: Publication
+  referral-link:
+    tooltip: Click to copy the invitation link
   requests:
     approved-desc: >-
       We have successfully verified your financial details.
@@ -843,29 +1086,19 @@ course-settings:
   save: Apply changes
   save-error-woof: Save failed.
   save-success-woof: Saved.
-  title: Course settings
-course-settings__button: Edit
+  title: Course publishing settings
 course-syll__begins: Start date
 course-syll__compact-progress: passed steps ratio
 course-syll__ends: Close date
 course-syll__scores: your / max score
 course-syllabus__closed-yet: This module is closed
-course-syllabus__required-module-message: >-
-  score {count, plural, one {# point} other {# points}} in module {position} ({title})
-course-syllabus__required-module-message-percent:
-  "{percent}% of points in module {position} ({title})"
-course-syllabus__required-module-message-title: "Open condition:"
 course__add-annon: New announcement
 course__add-to-archived-link: Move to archived
 course__add-to-favorites-link: Add to favorites
-course__added-to-archived-fail: Can't move course to archived. Please reload this page.
-course__added-to-archived-success: >-
-  Moved to archived. To move back click an arrow on a course widget and then — Remove from
-  archived.
-course__added-to-favorites-fail: Can't add course to favorites. Please reload this page.
-course__added-to-favorites-success: >-
-  Added to favorites. To remove it click an arrow on a course widget and then — Remove from
-  favorites.
+course__added-to-archived-fail: Can't move course to archived.
+course__added-to-archived-success: Moved to archived.
+course__added-to-favorites-fail: Can't add course to favorites.
+course__added-to-favorites-success: Added to favorites.
 course__annon-delete: Delete
 course__annon-delete-confirm: Delete this announcement?
 course__annon-delete-done: The announcement has been deleted
@@ -911,24 +1144,44 @@ course__buy: Buy
 course__buy-button: "Buy for {price}"
 course__buy-form:
   add-email: You can add primary email
+  email-label: E-mail
   error:
     not-allowed-promo: The promo code is invalid
   here: here
+  how-to-installments: >-
+    <a href="https://yookassa.ru/docs/support/payments/instructions/credit?lang=en"
+    target="_blank">How to purchase the course in installments?</a>
   pay-button: Pay
-  pay-button-promo: "Pay with promo code «{promo}»"
-  pay-button-without-promo: Pay without a promo code
+  pay-from-company: >-
+    {href, select,
+      false {
+        <a href="https://support.stepik.org/hc/ru/articles/360019437759" target="_blank">
+        How to pay from the company?</a>
+      } other {
+        <a href="{href}">Pay from the company</a>
+      }
+    }
   price-label: Price
   primary-email-notice: >-
     You will receive a confirmation of the payment on this email. You can change it in the profile
     settings.
+  promo-code:
+    applied: "Minus {price} from the course's cost"
+    apply: Apply
+    clear: Clear
+    i-have: I have a promo code
   promo-label: Promo code
-  promo-placeholder: Insert promo code
+  promo-placeholder: Promo code for a discount
   register-button: Register to pay
   support-notice: >-
-    In case of any issues with the payment, please contact support <a
-    href="mailto:support@stepik.org">support@stepik.org</a>.
+    In case of any payment issues, please <a
+    href="https://support.stepik.org/hc/en-us/requests/new">contact us</a>
+    at support@stepik.org.
   title: 'Buy access to course "{course}"'
   user-agreement: 'By clicking <b>Pay</b> you agree to our <a href="{terms_url}">Terms</a>'
+course__buy-refund-policy: >-
+  You've tried this course and realized it's not for you?
+  That's fine, we will pay you back within 30 days from the purchase.
 course__certificate:
   is_auto_issued: >-
     Congratulations! You have earned enough points to receive a certificate. The certificate will
@@ -940,54 +1193,32 @@ course__certificate:
 course__certificate-distinction: Certificate with distinction
 course__certificate-link: Certificate
 course__certificate-regular: Certificate
-course__class-new: + Create class
+course__class-new: Create class
 course__comments-link: Comments
 course__continue-empty-warning: >-
   Failed to open the first lesson in the course, you can try another one from syllabus.
 course__continue-exam-warning: You need to start the exam.
 course__continue-learn: Learn
 course__continue-tooltip: Continue with the last solved step
-course__drop-confirm: Are you sure you want to drop this course?
-course__drop-fail: Can't drop this course.
-course__drop-link: Drop
-course__drop-success: Course dropped. Please reload this page.
 course__empty-warn-1: There are no lessons in this course yet.
 course__empty-warn-2: It's empty =(
 course__empty-warn-add: Add your first lesson using course syllabus editor.
-course__free: Free
 course__info-link: Information
-course__instructor-attachments-link: Attachments
 course__instructor-clone-course: Make a copy
-course__instructor-clone-module: Copy module
-course__instructor-course-settings: Publication
-course__instructor-dashboard-link: Instructor dashboard
 course__instructor-delete-course: Delete
 course__instructor-edit-adaptiveness: Adaptiveness
-course__instructor-edit-certificates: Certificates
-course__instructor-edit-info: Edit information
-course__instructor-edit-lti: LTI integration
-course__instructor-edit-permissions: Permissions
-course__instructor-edit-syllabus: Edit syllabus
-course__instructor-grade-book: Gradebook
-course__instructor-reports: Reports
-course__instructor-statistics: Statistics
 course__join-button: Join this course
 course__join-button_ab: Learn
 course__join-fail: "Can't join this course (error code: {status}). Try to reload this page."
 course__learn-now: You can learn right away
-course__menu: Menu
 course__news-link: News
 course__publish: Publish
 course__remove-from-archived-link: Remove from archived
 course__remove-from-favorites-link: Remove from favorites
-course__removed-from-archived-fail: Can't remove course from archived. Please reload this page.
-course__removed-from-archived-success: >-
-  Removed from archived. You can move it back by clicking an arrow on a course widget and then —
-  Move to archived.
-course__removed-from-favorites-fail: Can't remove course from favorites. Please reload this page.
-course__removed-from-favorites-success: >-
-  Removed from favorites. You can add it back by clicking an arrow on a course widget and then —
-  Add to favorites.
+course__removed-from-archived-fail: Can't remove course from archived.
+course__removed-from-archived-success: Removed from archived.
+course__removed-from-favorites-fail: Can't remove course from favorites.
+course__removed-from-favorites-success: Removed from favorites.
 course__reviews:
   can-review: "You passed more than {treshold}%, write a review"
   can-review-no: No thanks
@@ -1043,6 +1274,7 @@ course_payment_success-msg: >-
   we will enroll you to the course. If the enrollment has not occurred within 24 hours please write
   to us: support@stepik.org.
 course_payment_success-woof: Congratulations! You are successfully enrolled to course.
+course_payment_wait-enroll: Waiting for enrollment in the course
 deadlines-editor:
   errors:
     beginDateCourse: >-
@@ -1133,7 +1365,7 @@ deadlines-editor:
     hardDeadlineSection: module hard deadline
     softDeadlineCourse: course soft deadline
     softDeadlineSection: module soft deadline
-deadlines-editor__advanced-settings: Advanced settings
+deadlines-editor__advanced-settings: Advanced date settings
 deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Upgrade to {planTitle}</a>, to apply advanced settings.
 deadlines-editor__course-deadlines: Course default deadlines
@@ -1238,9 +1470,19 @@ errors:
   wrongLength: "{description} is the wrong length (should be {is} characters)"
 exam:
   close-date: Exam session ends
-  confirm: >-
-    You will have {count, plural, one {# minute} other {# minutes}} and only one attempt
-    to complete the exam. Are you sure you want to start the exam?
+  confirm:
+    cancel: Cancel
+    start: Start the exam
+    text: >-
+      These problems should be solved within
+      <b>{minutes, plural, one {# minute} other {# minutes}}</b>.<br>
+      You can only start the exam once. Are you ready?
+    wishes: Good luck!
+  end-exam-alert:
+    desc: Solutions that are send later will not be scored.
+    desc-proctor: The solution will be graded after additional checking.
+    ok: Got it
+    text: Your time is up, the exam is finished.
   finish-prematurely:
     btn: Finish prematurely
     confirm-no: "No, continue to solve"
@@ -1250,13 +1492,6 @@ exam:
   game-over: Exam is over
   go-back: Go to syllabus
   header: Exam is active.
-  info-head: >-
-    You will have {count, plural, one {# minute} other {# minutes}} to finish the exam
-  info-latest-date: "You should start no later than {date} to finish in time."
-  info-paragraph: You will only have 1 attempt.
-  is_exam_without_progress: You won't see the grades.
-  is_random_exam: 'Exam with a random selection of questions from the course <b>"{course}"</b>.'
-  is_random_exam_learner: Exam with a random selection of questions.
   label: Exam
   not-started: Exam isn't accessible yet
   open-date: Exam session starts
@@ -1268,18 +1503,16 @@ exam:
   start-button: Start exam
   start-error: Can not start the exam. Try to reload the page
   timer: "time left:"
+  timer-parts:
+    hours: h
+    minutes: m
+    seconds: s
   too-late: You are too late. The exam has ended
-explore:
-  course-pack__trending-courses: Trending
-  search-aria-label: Clear search
-  search-placeholder: Search catalog
-  show-all: Show all
 footer__CC_note: >-
   Public user contributions licensed under <a
   href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener
   noreferrer">CC BY-SA 4.0</a> license with attribution required
 footer__about: About Stepik
-footer__academy: Stepik Academy
 footer__active-count: >-
   {count, plural,
     one {<strong>#</strong> active learner}
@@ -1390,9 +1623,7 @@ instructor-dashboard:
     plagiarized_submissions: Plagiarism
     reviews_outliers: Reviews outliers
   no-issues:
-    default: "No issues :)"
-    error_video: There are no video steps
-    no_successes: There are no problem steps
+    default: "No issues."
   step-stat:
     abused: abused
     abused-tooltip: Count of dislikes for comments in this step.
@@ -1505,6 +1736,15 @@ klass:
   invite-students: "To invite students to the class, send them this link:"
   invite-students-copy-link: Copy link
   leave: Leave class
+  leave-class-modal:
+    cancel: Cancel
+    ok: Leave
+    text: >-
+      <h4>Do you want to leave the class "{classTitle}"?</h4>
+      <p>If you leave the class, the class instructors won't be able to see your grades and
+      solutions, but you will stay in the course.</p>
+    woof-fail: Leaving class failed, please try again.
+    woof-success: You have left the class "{classTitle}".
   students: Class learners
   students-list-empty: No one's enrolled in the class yet
   students-subpage: Learners
@@ -1517,7 +1757,7 @@ klass-edit:
     cancel: No, cancel
     confirm: Yes, delete
     text: >-
-      Are you sure you want to delete the «<b>{name}</b>» class?
+      Are you sure you want to delete the "<b>{name}</b>" class?
   deleted: Class deleted
   description: Class description
   error-on-delete: Something went wrong. Can't delete current class.
@@ -1561,6 +1801,57 @@ klasses:
     classes</a>
   klass-plan-support: Contact us at support@stepik.org for more information
   my-students: My learners
+learn:
+  classes:
+    empty: >-
+      You're not in any class right now, but you can learn in any course from
+      <a href="/catalog">our catalog</a> by yourself.
+  courses:
+    card:
+      course-not-available: Currently unavailable
+    empty: >-
+      Find your first course in <a href="/catalog">our catalog</a>.
+    filters:
+      active: Active
+      all: All courses
+      archive: Archive
+      wishlist: Wishlist
+  featured-course-card:
+    cert-notice:
+      goal-status: >-
+        {status, select,
+          next-goal-regular {
+            {regularGoal, plural, one {# point} other {# points}} left
+            <br data-media-query="desktop">for the certificate
+          }
+          next-goal-distinction {
+            {distinctionGoal, plural, one {# point} other {# points}} left
+            <br data-media-query="desktop">for the certificate with distinction
+          }
+          other {}
+        }
+      not-issued: "No certificates in this course"
+  index:
+    courses-for-review: Leave a review
+    current-courses: My current courses
+    recommended-courses: Recommended
+  last-activity:
+    days-streak-current: >-
+      <b>{days}</b> current streak
+    days-streak-max: >-
+      <b>{days}</b> longest streak
+    quizzes-solved: >-
+      <b>{count}</b> {count, plural, one {assignment} other {assignments}} solved
+    quizzes-solved-on-date-tooltip: >-
+      You solved {count, plural, one {# assignment} other {# assignments}} on {dateString}
+    title: >-
+      Activity in the last {intervalDays} days
+  nav:
+    classes: Classes
+    courses: Courses
+    index: My learning
+    notifications: Notifications
+  navbar-link: Learning
 lesson:
   draft: Draft
   expand-toc-sidebar: Syllabus
@@ -1579,6 +1870,7 @@ lesson-actions:
   delete: Delete lesson
 lesson-edit:
   cancel: Back
+  confirm: Are you sure you want to delete this unsaved step? This action cannot be undone.
   delete-step: |-
     This step is marked for deletion!<br>
      It will be deleted after you press "Save". Click here to undo.
@@ -1589,7 +1881,80 @@ lesson-end:
     You scored {score} out of {max_score} in this exam.<br> Close this window to go back.
   after-exam-link-active_full: You scored maximum score in exam!
   after-exam-link-ended: "You scored {score} out of {max_score} in this exam."
+  buy-course: Buy the course and get access to all lessons.
   buy-course-btn: "Buy full course for {price}"
+  course:
+    button:
+      send-review: Send review
+      to-catalog: Find another course
+      to-syllabus: Go back to the assignments
+    cert-note: >-
+      Receive {need_score, plural, one {# more point} other {# more points}}
+      to get a certificate.
+    share:
+      cert: My certificate for completing the course "{course}"
+      course: >-
+        I've received
+        {score, plural, one {# point} other {# points}} out of {cost}
+        in the course "{course}"
+    text:
+      cert: >-
+        {regular, select,
+          null {
+            {distinction, select,
+              null {}
+              other {The certificate with distinction is issued for
+                {distinction, plural, one {# point} other {# points}}.
+              }
+            }
+          }
+          other {
+            {distinction, select,
+              null {The regular certificate is issued for
+                {regular, plural, one {# point} other {# points}}.
+              }
+              other {The regular certificate is issued for
+                {regular, plural, one {# point} other {# points}}, the certificate with distinction
+                for {distinction, plural, one {# point} other {# points}}.
+              }
+            }
+          }
+        }
+      cert-hint: >-
+        You will be able to put it in your CV or on social networks, or download and print.
+      cert-need-score: >-
+        To receive the certificate with distinction, you need to gain
+        {distinction, plural, one {# point} other {# points}}.
+        {need_score, plural, one {# point is} other {# points are}} now left.
+      cert-not-ready: >-
+        We will notify you when your certificate is ready.
+      cert-ready: >-
+        Put your certificate in your CV or on social networks.
+        This is an excellent result and you can be proud of it!
+      continue: >-
+        Continue with this course or find another one?
+      neutral-without-cert: >-
+        There are no certificates in this course, but we don't only learn
+        for formal confirmation, do we?
+      progress: >-
+        You've received <b>{score, plural, one {# point} other {# points}}
+        out of {cost}</b> after having studied {percent}% of the course material.
+      success-without-cert: >-
+        There are no certificates in this course,
+        but you can share your result on your social networks.
+    title:
+      neutral: >-
+        This has been the last lesson of the course "{course}".
+      success-distinction-cert: >-
+        Congratulations!<br>
+        You've completed the course "{course}" and received the certificate with distinction!
+      success-neutral: >-
+        Congratulations!<br> You've completed the course "{course}".
+      success-regular-cert: >-
+        Congratulations!<br>
+        You've completed the course "{course}" and received the certificate!
+      success-without-cert: >-
+        Congratulations!<br> You've completed the course "{course}".
   course_score: "Your score:"
   enroll: enroll in
   enroll_for_lessons: the course to view other lessons
@@ -1723,7 +2088,7 @@ login:
     and password.
   title: Log in
 lti-editor:
-  intagration: >-
+  integration: >-
     <a href='https://support.stepik.org/hc/en-us/articles/360000177314' target='_blank'>Check our
     docs</a> to learn more about the integration process for Moodle, Canvas, edX, Coursera and
     others.
@@ -1733,9 +2098,6 @@ lti-editor:
   private-profile-title: Create private profiles for learners
   save: Save LTI access settings
   secret-title: LTI Secret
-  sync: Sync LTI grades using all stored LTI connections for this Course
-  sync-btn: "Don't click unless necessary, takes a while"
-  title: "LTI integration settings of the course"
   tool-provider: >-
     Stepik can be integrated into your LMS via LTI as a Tool Provider. Read more about Learning
     Tools Interoperability (<a
@@ -1792,23 +2154,428 @@ new-class-form:
 new-course-form:
   course-title:
     caption: Course title
+    empty-warn: Come up with a course name
     footnote: "{count, plural, one {Max # character} other {Max # characters}}"
   create-btn: Create course
 new-lesson-form:
   create-btn: Create lesson
   lesson-title:
     caption: Lesson title
+    empty-warn: Come up with a lesson name
     footnote: "{count, plural, one {Max # character} other {Max # characters}}"
+news:
+  action:
+    cancel-sending: Cancel mailout
+    delete: Delete
+    edit: Edit
+    schedule: Plan mailout
+    send: Start mailout
+    send-one-time: Send
+    stop: Stop mailout
+    test: Send me test letter
+  desc: >-
+    {groupName, select,
+      scheduled {Will be sent as scheduled}
+      sending {Sending in progress}
+      other {}}
+  tabs:
+    all: All
+    composing: Drafts
+    scheduled: Scheduled
+    sending: Sending
+    sent: Sent
+news-editor:
+  action:
+    cancel: Cancel
+    cancel-sending: Cancel mailout
+    delete: Delete
+    save: Save draft
+    schedule: Plan mailout
+    send: Start mailout
+    send-one-time: Send
+    stop: Stop mailout
+    test: Send me test letter
+  confirm:
+    cancel-sending:
+      for-mailings:
+        cancel: No, keep in scheduled
+        stop: Cancel
+        text: The mailout text become a draft and you will be able to sent it later.
+        title: Cancel mailout?
+      for-news:
+        cancel: Keep it scheduled
+        stop: Cancel
+        text: The newsletter will become a draft and you'll be able to send it later.
+        title: Cancel mailout?
+    delete:
+      for-mailings:
+        cancel: Keep it in drafts
+        delete: Delete
+        text: The mailout will disappear from drafts.
+        title: Delete mailout?
+      for-news:
+        cancel: Keep it in drafts
+        delete: Delete
+        text: The newsletter will disappear from drafts.
+        title: Delete newsletter?
+    on-enroll:
+      cancel: Cancel
+      send: Send
+      text: >-
+        This newsletter will be sent to any learner after they enrolled.
+      title: Send this newsletter to all new learners?
+    schedule-sending:
+      cancel-and-save: Keep it in drafts
+      send: Yes, schedule it
+      text: >-
+        The newsletter will be sent on the date you've set.
+        You can cancel the mailout up to {date, date, medium-date}.
+      title: Schedule mailout on {date, date, medium-date}?
+    schedule-sending-mailing:
+      cancel-and-save: Keep it in drafts
+      send: Yes, schedule it
+      text: >-
+        The newsletter will be sent on the date you've set.
+        You can cancel the mailout up to {date, date, medium-date}.
+      title: Schedule mailout on {date, date, medium-date}?
+    schedule-sending-scoring:
+      cancel: Cancel
+      send: Yes, schedule it
+      text: >-
+        Starting from <b>{date, date, medium-date}</b>,
+        this newsletter will be sent to any learner just after they gain
+        <b>{min}% points</b>.<br>
+        You can cancel the mailout before {date, date, medium-date}.
+      title: >-
+        Send the newsletter to learners who will have gained {min}% points
+        from {date, date, medium-date}?
+    schedule-sending-subscription:
+      cancel: Cancel
+      send: Yes, schedule it
+      text: >-
+        Starting from  <b>{date, date, medium-date}</b>,
+        this newsletter will be sent to any user just after
+        they're subscribing to you.<br>
+        You can cancel the mailout before {date, date, medium-date}.
+      title: >-
+        Send the newsletter to all new subscribers
+        from {date, date, medium-date}?
+    send:
+      cancel-and-save: Keep it in drafts
+      send: Send
+      text: Please notice that the mailing process can take up to 24 hours.
+      title: Send this newsletter to all learners?
+      title-restricted-by-score: Send the newsletter to the learners who gained {min}–{max}% points?
+    send-mailing:
+      cancel-and-save: Keep it in drafts
+      send: Send
+      text: Please notice that the mailing process can take up to 24 hours.
+      title: Start mailout for all subscribers?
+    send-scoring:
+      cancel: Cancel
+      send: Send
+      text: >-
+        The newsletter will be sent to any learner after they gain
+        <b>{min}% points</b>.
+      title: Send the newsletter to the learners who just gained {min}% points?
+    send-subscription:
+      cancel: Cancel
+      send: Send
+      text: >-
+        All users will receive this letter immediately
+        after subscribing to you.
+      title: Send this letter to all new subscribers?
+    stop-sending:
+      for-mailings:
+        cancel: Continue mailing
+        stop: Stop
+        text: You won't be able to resume it and will have to create new mailout.
+        title: Stop mailout?
+      for-news:
+        cancel: Continue mailing
+        stop: Stop
+        text: You won't be able to restart it, so you will have to send a new one.
+        title: Stop mailing process?
+    test-sending:
+      for-mailings:
+        cancel: Cancel
+        send: Send
+        text: >-
+          Have a look at what your subscribers will see. The letter will be sent to:
+        title: Send mailout to your email?
+      for-news:
+        cancel: Cancel
+        send: Send
+        text: >-
+          Have a look at what your learners will see. The newsletter will be sent to:
+        title: Send the newsletter to your email?
+    unsaved-changes:
+      for-mailings:
+        cancel: Discard changes
+        save: Save
+        text: You've made edits to the mailout but haven't saved it.
+        title: Save changes?
+      for-news:
+        cancel: Cancel
+        save: Save
+        text: You've made changes to the newsletter but didn't save it.
+        title: Save changes?
+  errors:
+    score-limit:
+      number: Set the correct score value as a percentage
+    score-percent:
+      number: Set the correct score values as a percentage
+    start-date:
+      presence: Set the mailout date
+    text:
+      presence: Enter newsletter's text
+    title:
+      presence: Enter title
+  field:
+    is-restricted-by-score: Restrict by learners' progress
+    is-scheduled: Set mailout date
+    is-scheduled-start: Set mailout starting date
+    start-date-placeholder: MM/DD/YYY
+    title:
+      caption: Title
+      footnote: Max {count, plural, one {# character} other {# characters}}
+      placeholder:
+        for-mailings: Enter announcement title
+        for-news: Enter title
+    type:
+      for-mailings: Announcement type
+      for-news: Newsletter type
+  groups:
+    event: After the event
+  result:
+    cancel:
+      failed: Mailout wasn't cancelled, try again
+      success: Mailout canceled
+    delete:
+      failed: Draft wasn't deleted, try again
+      success: Draft deleted
+    save:
+      created: Draft created
+      failed: Draft wasn't saved, try again
+      saved: Draft saved
+    schedule:
+      failed:
+        for-mailings: >-
+          Mailout wasn't scheduled and the newsletter was saved as a draft.
+          Try again later
+        for-news: >-
+          Mailout wasn't scheduled and the newsletter was saved as a draft.
+          Try again later
+      success:
+        on-enroll: >-
+          Starting from {date, date, medium-date}, this newsletter will be sent
+          to any learner after they joined the course
+        on-scoring: >-
+          Starting from {date, date, medium-date}, this newsletter will be sent
+          to any learner after they gain {percent}% points.
+        on-subscription: >-
+          Starting from {date, date, medium-date}, this newsletter will be sent
+          to any learner after they're subscribing to you.
+        one-time: Mailout is scheduled on {date, date, medium-date}
+        one-time-mailing: Mailout is scheduled on {date, date, medium-date}
+    send:
+      failed:
+        for-mailings: >-
+          The newsletter wasn't sent and was saved as a draft.
+          Try again later
+        for-news: >-
+          The newsletter wasn't sent and was saved as a draft.
+          Try again later
+      success:
+        on-enroll: Any new learner will get this newsletter after enrolling to the course
+        on-scoring: >-
+          The newsletter will be sent to any learner after they gain {percent}% points
+        on-subscription: >-
+          Any user will receive this letter right after subscribing
+        one-time: The newsletter is being sent
+        one-time-mailing: The newsletter is launched
+    stop:
+      failed: Mailout is still going, try again
+      success: Mailout stopped
+    test:
+      failed: >-
+        Test letter wasn't sent.
+        Check the email(s) you've entered and try again
+      success:
+        Test letter was sent to {email}
+  score-range:
+    from: from
+    text: Sent to learners who gained
+    text-end: of the course points
+    to: to
+  type:
+    active:
+      on-enroll: After enrolling
+      on-scoring: After certain number of points
+      on-subscription: After subscription
+      one-time: One-time letter
+    desc:
+      on-enroll: Will be sent to any learner after enrolling
+      on-scoring: To any learner, after they gain
+      on-scoring2: points.
+      on-subscription: To be sent to every newly subscribed learner
+    list:
+      on-enroll: Enrollment
+      on-scoring: Scoring
+      on-subscription: Subscription to author
+      one-time: One-time letter
+news-item:
+  desc:
+    date:
+      for-learners: "{event_date, date, medium-datetime}"
+      on-event:
+        composing: From {displayed_start_date, date, medium-date}
+        scheduled: Scheduled to start on {displayed_start_date, date, medium-date}
+        sending: From {displayed_start_date, date, medium-date}
+        sent: >-
+          {displayed_start_date, date, medium-datetime}
+          – {displayed_finish_date, date, medium-date}
+      one-time:
+        composing: "{displayed_start_date, date, medium-datetime}"
+        scheduled: Scheduled for {displayed_start_date, date, medium-datetime}
+        sending: From {displayed_start_date, date, medium-datetime}
+        sent: "{displayed_start_date, date, medium-datetime}"
+    score:
+      on-event: >-
+        {typeEvent, select,
+          on-enroll {after joining the course}
+          on-scoring {after gaining {min}% points}
+          on-subscription {to all new subscribers}
+          other {}
+        }
+      one-time: >-
+        {restricted, select,
+          true {scored {min}–{max}% points}
+          other {{isPersonal, select,
+            false {to all learners of the course}
+            other {}
+          }}
+        }
+    separator: ", "
+  statistics:
+    data:
+      click: <b>{count}</b> followed links
+      open: <b>{count}</b> opened the letter
+      queue: <b>{count}</b> see it on the page
+      sent: <b>{count}</b> got it via e-mail
+    text:
+      aborted: <b>Mailout was not sent</b>
+      on-event:
+        scheduled: >-
+          {is_past, select,
+            true {
+              {without_start_date, select,
+                true {
+                  <b>Sent out now</b>
+                }
+                other {
+                  <b>Being sent out
+                  {displayed_start_date, date, medium-date}</b>
+                }
+              }
+            }
+            other {
+              Mailout starts {human_start_date}:
+              <b>{displayed_start_date, date, medium-datetime}</b>
+            }
+          }
+        sending: >-
+          {without_start_date, select,
+            true {
+              <b>Sent out now</b>
+            }
+            other {
+              <b>Being sent out
+              {displayed_start_date, date, medium-date}</b>
+            }
+          }
+        sent: >-
+          <b>
+            {without_sent_date, select,
+              true {
+                {displayed_start_date, date, medium-date}
+              }
+              other {
+                {is_same_day, select,
+                  true {
+                    {displayed_start_date, date, medium-date}
+                  }
+                  other {
+                    {displayed_start_date, date, medium-date}
+                    – {displayed_finish_date, date, medium-date}
+                  }
+                }
+              }
+            }
+          </b>
+      one-time:
+        scheduled: >-
+          {is_past, select,
+            true {
+              <b>Mailout will start shortly</b>
+            }
+            other {
+              Mailout starts {human_start_date}:
+              <b>{displayed_start_date, date, medium-datetime}</b>
+            }
+          }
+        sending: >-
+          {without_start_date, select,
+            true {
+              <b>Sent out now</b>
+            }
+            other {
+              <b>{displayed_start_date, date, medium-datetime}
+              — sent out now</b>
+            }
+          }
+        sent: >-
+          <b>
+            {without_sent_date, select,
+              true {
+                {displayed_start_date, date, medium-datetime}
+              }
+              other {
+                {is_same_day, select,
+                  true {
+                    {displayed_start_date, date,
+                    medium-datetime}–{displayed_finish_date, time, hhmm}
+                  }
+                  other {
+                    {displayed_start_date, date, medium-datetime}
+                    – {displayed_finish_date, date, medium-datetime}
+                  }
+                }
+              }
+            }
+          </b>
+  status:
+    composing: Draft
+    scheduled: Scheduled
+    sending: Mailing in progress
+    sent: Sent
+  type:
+    on-event: By event
+    one-time: One-time
 notification__favorite: favorite
 notification__muted: muted
 notifications__empty-list: No notifications
-notifications__events-link: My events
 notifications__flag-favorite: Favorites
 notifications__flag-read: Read
 notifications__flag-unread: Unread
 notifications__items-count: "{count, plural, one {# item} other {# items}}"
 notifications__mark-all-btn: Mark all as read
 notifications__mark-all-confirm: Mark all notifications as read?
+notifications__mark-all-status: >-
+  {status_text, select,
+    delayed {You have too many notifications, it may take some time to mark them read.}
+    other {oops}
+  }
 notifications__mark-fav: To favorites
 notifications__mark-one: Mark read
 notifications__type-comments: Comments
@@ -1832,6 +2599,7 @@ org:
   mailing_tab: Mailings
   no_courses: No courses found
   no_lessons: No lessons found
+  revenue_tab: "Revenue <sup>β</sup>"
   students_tab: My learners
 paid-course-requests:
   edit:
@@ -1852,6 +2620,56 @@ paid-course-requests:
     error: Couldn't send the request
     success: The request was sent successfully
     title: Activate paid mode for the course
+paid-features:
+  course-features-not-satisfied: >-
+    To publish the course, change its type to {plan, select,
+      enterprise {<b>Enterprise</b>}
+      other {<b>PRO</b> or make it a <b>paid</b> one}
+    }. You can also just reconsider these settings.
+  course-features-title: You applied the following settings
+  course-publication-blocked: >-
+    The course has paid features.<br>To publish the course, resolve
+    <button>{conflictCount, plural, one {# issue} other {# issues}}</button>.
+  edit-feature-link: Edit
+  feature-name: >-
+    {type, select,
+      course_privacy {Open for enrollment by invitations only}
+      course_deadlines {Course deadlines}
+      course_end_date {Course closing date}
+      course_lti {LTI integration}
+      course_attachments {Course with attachments}
+      section_exam {Exam}
+      section_required_section {Conditional access to the module}
+      section_discounting_policy {Decreasing points depending on number of tries}
+      section_end_date {Closing date}
+      section_deadlines {Deadlines}
+      lesson_attachments {Lesson with attachments}
+      step_admin {Linux challenge}
+      step_attachments {Attachments in the responses}
+      step_external_grader {External grader}
+      step_instructor_reviews {Instructor review}
+      step_linux_code {Linux code challenge}
+      step_lti_consumer {LTI consumer}
+      step_manual_score {Manual score step}
+      step_submissions_restrictions {Limits for number of submissions}
+      other {{type}}
+    }
+  lesson-features-title: Lessons with paid features
+  satisfied-features-block-title: No further actions required
+  stat:
+    courses: "{count, plural, =1 {The course} one {# course} other {# courses}}"
+    lessons: "{count, plural, one {# lesson} other {# lessons}}"
+    sections: "{count, plural, one {# module} other {# modules}}"
+    use-plan: "{count, plural, =1 {uses} other {use}} {planTitle}"
+  steps-disabled: >-
+    To enable learners to view all assignments, change the settings of
+    <button>{stepCount, plural, one {# step} other {# steps}}</button>.
+  steps-features-not-satisfied: >-
+    To enable learners to view these assignments, change the course type to {plan, select,
+      enterprise {<b>Enterprise</b>}
+      other {<b>PRO</b> or make it a <b>paid</b> one}
+    }.
+  view-feature-link: View
 peer-review__first-step: >-
   <strong>Stage 1 out of 4</strong>. For points, <strong>save</strong> and <strong>send</strong>
   the best submission to <strong>other students</strong> for review
@@ -1881,7 +2699,8 @@ peer-review__to-give: >-
   {count, plural, other {<strong># reviews</strong>} one {<strong># review</strong>}} left
 personal_license__received-activate-instructions: >-
   To start using this license you should register this key at <a
-  href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>.
+  href="https://www.jetbrains.com/store/redeem/?ALL">this page</a>. <br> <b> Attention! </b>
+  Select <b>"All Products Pack"</b> when registering a license.
 personal_license__received-description: >-
   By automating routine checks and corrections, JetBrains tools speed up production, freeing
   developers to grow, discover and create. You can download any <a
@@ -1906,7 +2725,7 @@ plan-card:
     target='_blank' class='link-primary'>Get a subscription</a> to
     access advanced course features
   text-limit: >-
-    <a href='/edit-profile/subscription' class='link-primary'>Change the plan</a>
+    <a href='/edit-profile/subscription'>Change the plan</a>
     to increase the number of the available {courseType} courses
     or make one of your current {courseType} courses basic.
   text-want-more: >-
@@ -1927,12 +2746,17 @@ plans:
     href="mailto:support@stepik.org">support@stepik.org</a>.
   better_support: Higher priority support
   cancel_at_period_end: >-
-    Current subscription is active until {valid_until}. No additional payments will apply.
+    Current subscription is active until {valid_until}. Payments won't be charged anymore,
+    auto prolongation is disabled.
   card:
     change: Change
     confirm: Apply
     description: Change card
   connected_card: "Current payment method: ****{card}"
+  customer_portal:
+    description: In your customer portal you can view your billing history.
+    fail: Fail to create a customer portal session
+    gotoBtn: Go to your customer portal
   description: >-
     {type, select,
       basic {Downgrade to free Basic plan}
@@ -1948,6 +2772,7 @@ plans:
   handmade-note: >-
     To change or cancel your subscription, email us at
     <a href="mailto:support@stepik.org">support@stepik.org</a>.
+  max_paid_courses: Unlimited paid courses
   max_pro_courses: >-
     {type, select,
       basic {No PRO courses}
@@ -1956,7 +2781,7 @@ plans:
                   with 1000 students}
       other {}
     }
-  max_public_courses: Unlimited number of public Basic courses
+  max_public_courses: Unlimited free and public Basic courses
   next_payment: "Next payment of <b>{price}</b> will be charged on <b>{payment_date}</b>."
   not_found: >-
     Subscription plan not found. Please contact support@stepik.org for a correct link.
@@ -2295,6 +3120,11 @@ plugins:
       upload-date: Upload date
     manual-score: An instructor assigns points for this step.
     no-settings: There are no settings for this step.
+    restricted: >-
+      You can upload scores only in {planTitle, select,
+        PRO {paid and PRO-courses}
+        other {{planTitle}-courses}
+      }
     text: |-
       This step allows you to add arbitrary grade points to learners.<br>
        To do so, save the step and upload a csv file with grades (from learner's view).<br>
@@ -2484,6 +3314,30 @@ profile:
   no_courses_link: Course creating
   no_lessons: Create your first lesson!
   no_lessons_link: Lesson creating
+  preview:
+    leave-route-confirm:
+      cancel: No, keep it on
+      ok: Yes, turn off
+      text: >-
+        You're going to leave your profile page.
+        <br>Do you want to turn off the preview mode?
+    show-btn:
+      caption: How others see your profile
+      title: >-
+        {isOrg, select,
+          true {Check how the organization profile looks like for others.}
+          other {
+            Your profile is {isPrivate, select, true {private} other {public}}.
+            Check how it looks like for others.
+          }
+        }
+    toast-panel:
+      exit-btn: Turn off the preview mode
+      text: >-
+        {isOrg, select,
+          true {How others see the organization profile}
+          other {This is what your profile looks like to others}
+        }
   profile: Profile
   ranks:
     leaders: >-
@@ -2500,9 +3354,25 @@ profile:
                     Only steps with more than 100 submissions counts.}
         other {}
       }
+  revenue:
+    link: "Revenue <sup>β</sup>"
+    title: My revenue
   teaching: Teaching
   user_no_courses: No courses yet
   user_no_lessons: No lessons yet
+profile-teach-learn-onboarding:
+  org-popup:
+    text: >-
+      <h1>We moved some sections from Profile.</h1>
+      <p>
+        Courses, Lessons, Classes, My Learners, and Mailouts are now in
+        <a href="/teach">Teaching</a>.
+      </p>
+  user-popup:
+    text: >-
+      <h1>We moved some sections from Profile.</h1>
+      <p>My Courses and My Classes are now in <a href="/learn">Learning</a>.</p>
+      <p>Courses from Teaching, Classes and Mailouts are now in <a href="/teach">Teaching</a>.</p>
 promocode-editor:
   add: Add
   errors:
@@ -2607,6 +3477,8 @@ quiz__pending: "Sending... wait, don't leave the page."
 quiz__reset-prompt: Are you sure? This will reset the problem!
 quiz__restart: Start over (reset)
 quiz__retry: Try again
+quiz__sample-input: Sample Input
+quiz__sample-output: Sample Output
 quiz__signup-link: To save your progress please log in first
 quiz__start-button: Click to start solving
 quiz__status-service: "Service status:"
@@ -2684,7 +3556,6 @@ reports:
   class_download_grade_book:
     desc: ""
     name: Gradebook
-  course-reports-title: "Course reports: "
   course_download_activity_basic:
     desc: >-
       Learners' participation by modules: rate of attendance (steps) and rate of performance
@@ -2742,7 +3613,7 @@ reports:
     name: Not finished review sessions
     sample: report-samples/ru/not-finished-review-sessions.csv
   course_download_payments:
-    desc: Succesful course payments and failed transactions
+    desc: Course purchases and refunds
     name: Payments
     sample: report-samples/ru/payments.csv
   course_download_plagiarism:
@@ -2971,7 +3842,17 @@ review-stages:
         }
   peerGivenReviews:
     completed:
-      extraReviewNote: Write more reviews to increase your chance to receive review
+      extraReviewDisabledNote: >-
+        No solutions to review yet. But if they are submitted and you review them,
+        you will be able to increase your chances of getting a review of your work.
+      extraReviewNote: >-
+        Write more reviews to increase your chance to receive review.
+      helpfulReviewDisabledNote: >-
+        No solutions to review yet. But if they are submitted and you review them,
+        you will help other learners to receive their grade quicker.
+      helpfulReviewNote: >-
+        By submitting additional reviews, you are helping other learners
+        to receive their grade quicker.
       startReview: Start review
       title: "{count, plural, one {# review was} other {# reviews were}} sent"
     in-progress:
@@ -3043,7 +3924,10 @@ review__student-choose: Send the best submission to review
 review__student-no-submissions: Save at least one submission
 review__student-send: Send this submission to review
 review__student-send-notice: Submission has been sent to review
-review__submit-confirm: Are you ready to submit the review?
+review__submit-confirm:
+  cancel: Cancel
+  submit: Yes
+  text: Are you ready to submit the review?
 review__wait-peers-giving-note: >-
   Note: the more reviews you do, the higher the chance your submission will be reviewed!
 scoreboard__current-user-rank: "Your rank:"
@@ -3055,21 +3939,19 @@ scoreboard__score: Score
 search-members:
   placeholder: "Search by name, e-mail, ID"
   search-btn: Find
+search__aria-label: Clear search
 search__button: Search
 search__context: "Search context:"
 search__course: "Course:"
 search__filters-warn: Try to remove search filters
-search__info:
-  alter: Try popular queries
-  query: Showing results for
-  query-original: Search instead for
 search__lesson: "Lesson:"
 search__no-results: No results
+search__placeholder: Search catalog
 search__search: Search
 section-editor__begin-date: Open date
 section-editor__step-content: Generated lesson
 section_edit:
-  add_lesson_header: "Add lesson to «{title}» module"
+  add_lesson_header: "Add lesson to \"{title}\" module"
   back: Return back
   description: Additional description
   exam_duration: Exam duration
@@ -3082,7 +3964,7 @@ section_edit:
   is_exam: Exam module
   is_exam_without_progress: Hide the correctness of submissions
   is_random_exam: Exam with random selection of questions
-  marked_delete: "«{title}» module will be deleted at course save"
+  marked_delete: "\"{title}\" module will be deleted at course save"
   needs-plan: >-
     To publish a course with these settings, you need to upgrade it to {planTitle}. <a
     href='https://welcome.stepik.org/en/pricing' target='_blank'>Learn more about plans.</a>
@@ -3094,9 +3976,38 @@ section_edit:
   random_exam_select-course: (Choose a course)
   req_section: Required module
   req_section_percent: 'Required percent in <strong>"{title}"</strong> module to open this one'
-  settings: "Scoring, module dependencies, exams"
+  settings: Settings
   settings_title: 'Module settings "{name}"'
 shortened-text-show-more: More
+step:
+  disabled:
+    learner:
+      desc: >-
+        We've already contacted the {inCourse, select, true {course} other {lesson}} authors
+        to suggest that they change the settings
+        <a href="{stepURL}">{lessonTitle} → Step {stepNumber}</a>.
+        <br><br>
+        The access might resume after a while.
+      title: You can't view the assignment yet
+    teacher:
+      warning:
+        in-course: >-
+          To enable learners to view the assignment,
+          <a href="{courseSettingsURL}">change the course type</a> to {plan, select,
+            pro {<b>PRO</b> or <a href="{coursePricingURL}">paid</a>}
+            enterprise {<b>Enterprise</b>}
+            other {<b>N/A</b>}
+          }.
+        no-course: >-
+          To enable learners to view the assignment, add the lesson to {plan, select,
+            pro {a <b>PRO</b> or <b>paid</b>}
+            enterprise {an <b>Enterprise</b>}
+            other {<b>N/A</b>}
+          } course.
+      warning-details: >-
+        This step has paid features.
+        <a href="https://support.stepik.org/hc/en-us/articles/360012252539" target="_blank">
+        Learn about plans</a>
 step-actions:
   actions: Step actions
   add-new-step: Add new step
@@ -3117,6 +4028,7 @@ step-edit:
       lines: lines
       words: words
     diff-method-title: "Difference:"
+    large-block-slow-diff-note: Comparing large blocks of data can take some time.
     modal-title: >-
       Change history of step {stepPos}, lesson "{lessonTitle}"
     settings-block: Settings
@@ -3161,6 +4073,7 @@ step-edit:
   wrong-submission-feedback: This feedback will be shown to the learner on a wrong submission.
 step__add-info: Select step type
 step__next-tooltip: Next step
+step__next-tooltip-mobile: Next
 step__not-found: "Step #{position} was not found."
 step__not-ready-warn: 'Sorry this problem is not ready.<br/>Problem status is "{status}".'
 step__submissions-left: >-
@@ -3200,6 +4113,9 @@ submissions:
     has-filters: No submissions found.
     has-query: >-
       Your search <strong>"{query}"</strong> found <strong>0</strong> submissions.
+    number-query-suggestion: >-
+      Are you looking for all submissions of <a href="{userSearchHref}">user {query}</a>
+      or the specific <a href="{submissionSearchHref}">submission \#{query}</a>?
     try-change-query: Try changing your search options.
     try-change-query-filters: >-
       Try changing your search options or <a href="{filter-reset-url}">reset filters</a>.
@@ -3253,17 +4169,94 @@ submissions__prev: Previous
 submissions__submission: submission
 submissions__tips-left: "You have {tips} hint left for today."
 submissions__tips-server-error: "Error :( Can't get a hint from a server."
-submissions__title: "Submissions - Step {step_position}"
-subscriptions__reset: reset subscription
-subscriptions__reset-tooltip: receive notifications by default
-subscriptions__subscribe: Subscribe
+submissions__title: "Submissions – Step {step_position}"
 subscriptions__subscribe-lesson-comments: Subscribe to lesson comments
 subscriptions__subscribe-step-comments: Subscribe to step comments
 subscriptions__subscribe-tooltip: always receive notifications
-subscriptions__unsubscribe: Unsubscribe
 subscriptions__unsubscribe-lesson-comments: Unsubscribe from lesson comments
 subscriptions__unsubscribe-step-comments: Unsubscribe from step comments
 subscriptions__unsubscribe-tooltip: never receive notifications
+syllabus:
+  deadlines:
+    closed: Closed
+    closed-since: Closed since
+    hard:
+      part1: No points are awarded after
+      part2: ""
+    hard-soft:
+      part1: Less points are awarded after
+      part2: ", no points after"
+      part3: ""
+    open: Open
+    open-since: Open since
+    open-up: Open up to
+    soft:
+      part1: Less points are awarded after
+      part2: ""
+    will-open: Will open
+  exam:
+    attempts-info: You have one try to pass the exam.
+    continue: Continue
+    finished: Finished
+    grade:
+      after-check: Marks are available after additional check
+      after-check2: Your mark will be provided after additional check
+      after-exam: Your mark will be shown after the exam
+      not-visible: Marks are not visible to learners during the exam
+    info-latest-date: "You should start no later than {date} to finish in time."
+    is_exam_without_progress: You won't see the grades.
+    is_random_exam: 'Exam with a random selection of questions from the course <b>"{course}"</b>.'
+    is_random_exam_learner: Exam with a random selection of questions.
+    no-access: No access
+    type:
+      basic: >-
+        This is a {minutes, plural, one {# minute} other {# minutes}} exam
+      proctored: >-
+        This is a
+        {minutes, plural, one {# minute} other {# minutes}} exam with proctoring.
+      random: >-
+        This is a {minutes, plural, one {# minute} other {# minutes}}
+        exam containing {questions, plural, one {# question} other {# questions}}
+        from <a href="{courseHref}">{courseTitle}</a>
+  no-deadlines:
+    hard: >-
+      Deadline for turning solutions in is
+      <time datetime="{hardDeadline, date, long-datetime}"
+      data-tooltip="{hardDeadline, date, full-datetime}">
+      {hardDeadline, date, medium-datetime}</time>
+    hard-soft: >-
+      Turn in your solutions no later that
+      <time datetime="{softDeadline, date, long-datetime}"
+      data-tooltip="{softDeadline, date, full-datetime}">
+      {softDeadline, date, medium-datetime}</time>, the deadline is
+      <time datetime="{hardDeadline, date, long-datetime}"
+      data-tooltip="{hardDeadline, date, full-datetime}">
+      {hardDeadline, date, medium-datetime}</time>
+    soft: >-
+      Turn in your solutions no later that
+      <time datetime="{softDeadline, date, long-datetime}"
+      data-tooltip="{softDeadline, date, full-datetime}">
+      {softDeadline, date, medium-datetime}</time>
+  required-module:
+    message: >-
+      Earn
+      {count, plural, one {# point} other {# points}} in the module "{position}. {title}"
+      to get access
+    message-percent: >-
+      Earn
+      {percent}% points in the module "{position}. {title}" to get access
+    teacher-message: >-
+      To get access, learnes have to earn
+      {count, plural, one {# point} other {# points}} in the module "{position}. {title}"
+    teacher-message-percent: >-
+      To get access, learnes have to earn
+      {percent}% points in the module"{position}. {title}"
+    tooltip: >-
+      Earn
+      {count, plural, one {# point} other {# points}} in the module "{position}. {title}"
+    tooltip-percent: >-
+      Earn
+      {percent}% points in the module "{position}. {title}"
 syllabus_edit:
   course-settings: Course launch settings
   deadlines:
@@ -3292,7 +4285,6 @@ syllabus_edit:
         Close date: when the module will be disabled (close date is usually left empty)
       section_hard_deadline: "Hard deadline: when the cost of every step will be zero"
       section_soft_deadline: "Soft deadline: when the cost of every step will be reduced"
-  page-subtitle: Editing syllabus
   saved_msg: Course successfully saved
   zero_sections: There are no any lessons.<br>Add first module to add lessons
 teach:
@@ -3309,7 +4301,7 @@ teach:
         <h4>Do you want to delete the class "{title}"?</h4>
         <p>Class learners will still be enrolled to the course but you will lose access to their
         solutions and grades.</p>
-    remove-success: Class «{title}» deleted
+    remove-success: Class "{title}" was deleted
     reports: Reports
     submissions: Submissions
     title: Classes
@@ -3324,13 +4316,9 @@ teach:
       public: Public
     gradebook: Gradebook
     info-edit: Information
-    no-results: Found <b>0</b> courses.
-    no-results-reset-link: Reset filters
     pending-reviews: "{count, plural, one {# submission} other {# submissions}} for review"
     permissions-edit: Permissions
-    publication: Publication
     reports: Reports
-    search-placeholder: Course name or ID
     syllabus-edit: Syllabus
     title: Courses
   lessons:
@@ -3353,27 +4341,70 @@ teach:
         <h4>Do you want to delete the lesson "{title}"?</h4>
         <p>It will be deleted from every course it is used in and all the connected data
         will also be erased.</p>
-    remove-success: Lesson «{title}» deleted
+    remove-success: Lesson "{title}" deleted
     reports: Reports
     search-placeholder: Lesson name of ID
     steps-count: "{count, plural, =0 {Empty} one {# step} other {# steps}}"
     title: Lessons
     used-in-courses: "In {count, number} courses:"
+  mailing:
+    actions:
+      new: Add announcement
+    empty:
+      text:
+        composing: No drafts found
+        for-author: >-
+          <p>If you want to inform your subscribers of something, you can use announcements
+          for this. They will be emailed to everyone who is in any of your courses.</p>
+          <p>Besides one-time announcements, you can create a welcome
+          letter for your new subscribers.</p>
+          <p>You can learn more about announcements in
+          <a href="https://support.stepik.org/hc/en-us/articles/360000159833-Announcements"
+          class="external" target="_blank">our Help Center</a></p>
+        scheduled: No announcements scheduled
+        sending: No active announcements
+        sent: No announcements
+    help: >-
+      Read more about announcements<br>
+      <a href="https://support.stepik.org/hc/en-us/articles/360000159833-Announcements"
+      target="_blank">in our documentation</a>
+    settings:
+      link-text: Letters and <br>notifications settings
+    title:
+      edit: Edit announcement
+      main: Announcements
+      new: New announcement
   nav:
+    announcements: Announcements
     classes: Classes
     courses: Courses
     lessons: Lessons
-    mailings: Mailings
+    my-classes: My classes
+    my-students: My learners
+    new-class: New class
     new-course: New course
     new-lesson: New lesson
     notifications: Notifications
-  navbar-link: Teach
+  navbar-link: Teaching
   new-class:
     title: Create a new class
   new-course:
     title: Create a new course
   new-lesson:
     title: Create a new lesson
+  students:
+    empty: >-
+      You don't have learners yet. <a href='https://welcome.stepik.org/en/classroom'
+      target='_blank'>What's a class?</a>
+    header:
+      class: Class
+      user: User
+    title: My learners
+teachlearn:
+  courses:
+    no-results: Found <b>0</b> courses.
+    no-results-reset-link: Reset filters
+    search-placeholder: Course name or ID
 time:
   minutes__short: min
   seconds__short: sec
@@ -3408,7 +4439,7 @@ ufd-form:
       options:
         RUB: RUB — payout via financial details within Russia
         USD: >-
-          $ — world-wide payout via
+          $ — world-wide payout via
           <a target="_blank" rel="noopener noreferrer" class="link-primary"
           href="https://vendors.paddle.com">Paddle</a>
       title: Currency
@@ -3419,6 +4450,15 @@ ufd-form:
         To contact you, we use the main e-mail of your account.
         You can change it in your profile.
     terms:
+      agreement:
+        RUB: >-
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/u/1/d/e/2PACX-1vQFH0HJRW6X9qFe_LiIaS3kT6j1E9VmL1A2ipanD3BGu4paDdidfEAouXeYMKCIX3I_LvURwshcT2E-/pub"
+          >Stepik offer (agency agreement) on course sales in RUB</a>
+        USD: >-
+          <a target="_blank" rel="noopener noreferrer" class="link-primary"
+          href="https://docs.google.com/document/d/e/2PACX-1vRAVAQy1roffFBYSUVeJjL-aLqyyEwR9Ewo4ux7Qgs5I-iHLy4K-xPy4viX2xXgwtgxS82cnafjk2_h/pub"
+          >Terms and Conditions for course sales in USD</a>
       error:
         In order to be able to sell your courses at Stepik, you must accept our terms and
         conditions
@@ -3438,6 +4478,9 @@ ufd-form:
       currencies: "{value, select, RUB {RUB} USD {USD} other {{value}}}"
       default: Accept Stepik terms and conditions for paid courses
       filled: Selling courses in {currencies}
+      receiving:
+        RUB: Receiving funds in the Russian Federation
+        USD: Receiving funds anywhere in the world via Paddle
   errors:
     presence: Enter a value
     select-value: Select a value
@@ -3516,14 +4559,18 @@ ufd-form:
       href="https://vendors.paddle.com/account">Authentication page</a> in your Paddle dashboard.
     paddle:
       caption: Paddle Vendor ID
+      hint: >-
+        Your Paddle Vendor ID can be found on the Authentication page
+        in your Paddle dashboard.
     title:
       default: Fill in the financial details for money transfer via Paddle
       filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Add your existing lesson
-  import: Import lessons from file
+  clone-module: Copy module
+  import: Import problem set
   marked_delete: >-
-    Lesson&nbsp;<strong>«{title}»</strong>&nbsp;will be removed from the course on save
+    Lesson&nbsp;<strong>"{title}"</strong>&nbsp;will be removed from the course on save
   new_lesson: Create lesson
   not-saved: Not saved
   restore: Restore
@@ -3533,9 +4580,68 @@ user-card:
   followers_count: "{count} followers"
   issued_certificates_count:
     "{count, plural, one {# certificate issued} other {# certificates issued}}"
+user-certificate-widget:
+  cert-distinction-threshold: >-
+    {value, plural, one {# point} other {# points}} for certificate with distinction
+  cert-regular-threshold: >-
+    {value, plural, one {# point} other {# points}} for regular certificate
+  goal-status: >-
+    {status, select,
+      issued-distinction {Received a certificate with distinction.}
+      issued-regular {Received a certificate of completion.}
+      next-goal-regular {
+        You have to gain <mark>{regularGoal, plural, one {# point} other {# points}}</mark>
+        to get certificate.
+      }
+      next-goal-distinction {
+        You have to gain <mark>{distinctionGoal, plural, one {# point} other {# points}}</mark>
+        to get certificate with distinction.
+      }
+      other {}
+    }
+  title: "<b>Certificate</b> requires:"
 user-financial-details:
   success: Your payout settings were updated successfully
-  title: Change your payout setting
+  title: Details for the transfer of funds
+user-revenue:
+  empty-placeholder:
+    text: Here you will find details on your revenue after the course will have been purchased once.
+  history:
+    empty: No records.
+    thead:
+      amount: Earnings
+      course: Course
+      date: Date
+      transaction: Transactions
+    title: Purchases and refunds
+    transactions: >-
+      {value, select,
+        refund {Refund}
+        purchase {Purchase}
+        purchase-z-link {Purchase}
+        purchase-on-invoice {Purchase on invoice}
+        other {}
+      }
+  revenue:
+    empty: No records.
+    summary:
+      payable: to be paid
+      payout: total
+    tbody:
+      report:
+        paid: "Paid on {dateStr}"
+        paid-none: No payments.
+        report: "{dateMonthStr} report from {dateStr}"
+    thead:
+      date: Month
+      income: Income
+      payment: Payment
+      report: Report
+    title: Payments
+  usd-placeholder:
+    text: >-
+      You can view your dollar sales history on <a href="https://vendors.paddle.com"
+      target="_blank">Paddle</a> or payment reports.
 user-subscribe:
   followers: "{followers_count} followers"
   has-followers: "You have {count, plural, one {# follower} other {# followers}}"
@@ -3549,6 +4655,9 @@ user__edit:
   about: About
   add_provider: Connect
   auth_social: Social login
+  beta:
+    caption: I want to be a tester
+    title: The beta testing program
   change_password: Change password
   city: City
   city_placeholder: Start typing your city...
@@ -3617,7 +4726,15 @@ user__edit:
   social_links: Social links
   social_links_description: These links will be shown on your profile page
   subscription:
-    cancel-btn: Cancel
+    billing-caption: >-
+      {period, select,
+        month {Monthly}
+        quarter {Every 3 month}
+        half_year {Every half of year}
+        year {Annually}
+        other {Monthly}
+      }
+    cancel-btn: Stay on the current subscription plan
     caption: Subscription
     contact-form:
       contact-us-btn: Contact us
@@ -3632,16 +4749,21 @@ user__edit:
         pro {PRO courses: {used}/{total}}
         other {Enterprise courses: {used}/{total}}
       }
+    current-plan-valid-until: until {validUntil, date, medium-date}
     downgrade-warning: >-
-      If you change your subscription, {prune, select,
+      If you change the subscription, {prune, select,
         all {all your}
-        other {{prune} out of your {used}}
+        other {{prune} of {used} of your}
       } {type, select,
         pro {PRO courses}
         enterprise {Enterprise courses}
         other {courses}
-      } will become Basic, go to the Draft mode and will not be available for learners anymore.
-      You will be able to change their type and publish later.
+      } will change their type: free ones to Basic and paid ones to Basic+ starting from
+      <b>{fromDate, date, medium-date}</b>.
+
+      Basic courses with paid features will go into draft mode and won't be available to learners.
+      You can change their type and publish later.
+      Basic+ courses won't have the learner management feature.
     invalid-warn: >-
       Your <b>subscription ended</b> on {validUntil, date, medium-date}
       To continue using extended functions, <a href={contactUsHref}>contact us</a>
@@ -3650,6 +4772,12 @@ user__edit:
       Your <b>subscription ended</b> on {validUntil, date, medium-date},
       <a href={contactUsHref}>contact us</a> at support@stepik.org.
     plan-cards:
+      billing: >-
+        {value, select,
+          monthly {Monthly}
+          annual {Annually <small>12 months for the price of 10</small>}
+          other {}
+        }
       buttons:
         choose-plan: Choose plan
         contact-us: Contact us
@@ -3708,6 +4836,7 @@ user__edit:
           other {}
         }
       price: "{prefix, select, gt {from} other {}} {price}"
+      price-discount: "You save {price}"
       price-note: >-
         {type, select,
           basic {free}
@@ -3734,28 +4863,45 @@ user__edit:
         other {Subscribe}
       }
     subscribe-description:
-      cancel-trial: The money will not be charged off your card.
+      cancel-subscription: >-
+        <p>
+          Until {validUntil, date, medium-date} you will still have a {planName} plan,
+          with {proCoursesTotal, plural,
+            one {# {courseTypeCaption} course}
+            other {# {courseTypeCaption} courses}
+          } available.
+        </p>
+
+        <p>
+          {currentlyTrial, select,
+            true {The money will not be charged off your card}
+            other {Starting from <b>{validUntil, date, medium-date}</b> there will be no payments}
+          }.
+        </p>
       charge: >-
-        Starting from <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {there will be no payments}
-          other {you will be charged a payment of <b>{priceText}</b> {period, select,
+        Starting from <b>{chargeDate, date, medium-date}</b> you will be charged a payment of
+        <b>{priceText}</b> <b>{period, select,
+          month {monthly}
+          quarter {every 3 month}
+          half_year {every half of year}
+          year {yearly}
+          other {monthly}
+        }</b> until you cancel the subscription.
+      will-trial: >-
+        <p><b>Free 14-days trial</b> will start immediately.</p>
+        <p>
+          After your free trial period ends, you will be charged <b>{priceText}</b>
+          <b>{period, select,
             month {monthly}
             quarter {every 3 month}
             half_year {every half of year}
             year {yearly}
-            other {monthly}} until you cancel the subscription}
-        }.
-      will-trial: >-
-        <p><b>Free 14-Days trial</b> will start immediately.</p>
-        <p>After the trial period, you will be charged a payment of {priceText} {period, select,
-        month {monthly}
-        quarter {every 3 month}
-        half_year {every half of year}
-        year {yearly}
-        other {monthly}}.</p>
+            other {monthly}
+          }</b>.
+        </p>
     subscribe-footnote: >-
       We use <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>
-      for the processing of your payments.
+      to process your payments.
     title: My subscription
     trial: Trial period
     valid-perpetual: Permanent subscription
@@ -3768,6 +4914,8 @@ user__edit:
     3h: 3 hours
     5m: 5 min
     6h: 6 hours
+  ufd:
+    menu-item: Financial details
   upload_pic: Upload
   woof__account-disconnected: Account has been disconnected.
   woof__account-disconnected-failed: You can not disconnect this account before you set password.
@@ -3800,6 +4948,30 @@ user__profile: Profile
 user__reputation-title: Reputation
 users-list:
   me: "(me)"
+validation:
+  description: This field value
+  errors:
+    date-after: "{description} must be after {after, date, medium-datetime}"
+    date-before: "{description} must be before {before, date, medium-datetime}"
+    date-invalid: "{description} must be a valid date"
+    date-onOrAfter: "{description} must be on or after {onOrAfter, date, medium-datetime}"
+    date-onOrBefore: "{description} must be on or before {onOrBefore, date, medium-datetime}"
+    email: "{description} must be a valid email address"
+    format-regex: "{description} must match the mask {regex}"
+    inclusion: "{description} is not included in the list"
+    inline: "{description} is invalid"
+    length-is: "{description} is the wrong length (should be {is, number} characters)"
+    length-max: "{description} is too long (maximum is {max, number} characters)"
+    length-min: "{description} is too short (minimum is {min, number} characters)"
+    length-minmax:
+      "{description} is the wrong length (should be between {min, number} and {max, number})"
+    number-gt: "{description} must be greater than {gt, number}"
+    number-gte: "{description} must be greater than or equal to {gte, number}"
+    number-invalid: "{description} must be a number"
+    number-lt: "{description} must be less than {lt, number}"
+    number-lte: "{description} must be less than or equal to {lte, number}"
+    number-notInteger: "{description} must be an integer"
+    required: "{description} can't be blank"
 video-editor:
   error: >-
     There was an error while processing this video ({video_id}){filename}.Please check that it was

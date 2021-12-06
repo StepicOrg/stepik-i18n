@@ -95,7 +95,6 @@ breadcrumbs__course-reports: Звіти
 breadcrumbs__course-statistics: Статистика
 breadcrumbs__course-syllabus: Навчальний план
 breadcrumbs__home: Головна
-breadcrumbs__instructor-dashboard: Панель викладача
 breadcrumbs__lesson: Урок
 breadcrumbs__lesson-edit: Редагування
 breadcrumbs__lesson-reports: Звіти
@@ -106,15 +105,16 @@ breadcrumbs__review-session: Рецензії
 breadcrumbs__submissions: Розв’язки
 button__new-course: Створити курс
 button__new-lesson: Створити урок
-catalog-beta:
+catalog:
   filters-dialog:
-    langs: "{lang, select, ru {Російська} en {Англійська} other {Будь-яка}}"
-  search-empty: >-
-    За запитом «<var>{query}</var>» не знайдено нічого.
-    Спробуйте змінити параметри пошуку{hasAnyFilters, select,
-      true { чи <a href="{resetFiltersHref}">скинути фільтри</a>}
-      other {}
-    }.
+    language-values: "{lang, select, ru {Російська} en {Англійська} other {Будь-яка}}"
+  search:
+    empty: >-
+      За запитом «<var>{query}</var>» не знайдено нічого.
+      Спробуйте змінити параметри пошуку{hasAnyFilters, select,
+        true { чи <a href="{resetFiltersHref}">скинути фільтри</a>}
+        other {}
+      }.
 certificate-editor:
   auto-issue-label: Автоматично видавати сертифікати
   auto-issue-text:
@@ -471,8 +471,9 @@ cost:
       other {<strong>#</strong> спроб}
     }
 course:
-  access_restricted: Курс на доопрацюванні.
   draft: Чорновик
+  drop:
+    link: Покинути
   edit-btns:
     info: Редагувати інформацію
     syllabus: Редагувати зміст
@@ -523,6 +524,14 @@ course:
       basic_paid: Базовий+
       enterprise: Enterprise
       pro: PRO
+      value: >-
+        {type, select,
+          basic {Базовий}
+          basic_paid {Базовий+}
+          enterprise {Enterprise}
+          pro {PRO}
+          other {}
+        }
     paid-features:
       deadlines: Крайні терміни у курсі
       exams: Екзамени
@@ -554,7 +563,6 @@ course:
         Щоб опублікувати курс з такими налаштуваннями, увімкніть для нього
         {planTitle}-режим.<br><a href='https://welcome.stepik.org/ru/pricing'
         target='_blank'>Ознайомтеся з тарифами</a>
-course-actions__button: Адмініструвати
 course-assessments:
   empty: Усі розв’язки перевірено
   pending-reviews-badge: Очікують рецензування
@@ -566,17 +574,11 @@ course-assessments:
       few {# розв’язки очікують рецензування}
       other {# розв’язків очікують рецензування}
     }
-course-cards:
+course-card:
   certificate: сертифікат
   workload: "{hours} год"
-course-edit__back: Повернутися до курсу
-course-edit__cancel: Повернутися
 course-edit__new-module: Додати Модуль
 course-edit__save: Зберегти зміни
-course-filters:
-  categories: Категорії
-  langs: Мова курсу
-  tags: Предмети
 course-grade-book:
   download-sign: "Завантажте табель на "
   filter: "Пошук за ID, email, іменем учня"
@@ -627,12 +629,12 @@ course-new:
   create: Створити
   explanation: >-
     Ліцензія на відкриті курси та уроки <a
-    href="https://creativecommons.org/licenses/by-sa/4.0/" class="course-new__cc-link"
+    href="https://creativecommons.org/licenses/by-sa/4.0/"
     target="_blank">Creative Commons (CC BY-SA 4.0)</a>.
   header: Створення курсу
   help-center-link: Детальніше про створення курсів
   note:
-    paid: "Цей курс платний. Базова ціна:"
+    paid: "Цей курс платний. Базова ціна: {price}"
     tariff: "Буде створено чорновик Basic-курсу, згодом його тип можна змінити на PRO."
   teaching-landing:
     features:
@@ -742,13 +744,17 @@ course-permissions-edit:
       other {}
     }
   no-edit-label: Редагування прав доступу заборонено.
-  personal-testers-note:
-    "Тестувальники не можуть проходити курс, доступний лише команді курсу."
+  personal-note: >-
+    {groupName, select,
+      assistants {Асистенти}
+      moderators {Модератори}
+      testers {Тестувальники}
+      other {Користувачі}
+    } не можуть проходити курс, доступний лише команді курсу.
   save-access: Зберегти налаштування доступу
   tariff-help-link: >-
     Детальніше <a target='_blank' href='https://welcome.stepik.org/ru/pricing'>про тарифи</a>
   tariff-info: "Управлять правами доступа можно только в <b>{plan}-курсах</b>."
-  title-prefix: Налаштування доступу до курсу
   transfer-ownership: Змінити власника
   transfer-ownership-description: >-
     Ви можете <a href="{transferOwnershipURL}" data-href-to-ignore>передати курс</a>
@@ -804,13 +810,6 @@ course-promo:
       normal: Середній
   how-you-will-learn: Як відбувається навчання
   meet-instructors: Наші викладачі
-  read-all-reviews: >-
-    Читати
-    {count, plural,
-      one {# відгук}
-      few {усі # відгуки}
-      other {усі # відгуків}
-    }
   reviews: "{count, plural, one {# відгук} few {# відгуки} other {# відгуків}}"
   share-course: Розкажіть про курс друзям та знайомим
   share-course-direct-link: "Посилання на цей курс:"
@@ -845,13 +844,6 @@ course-settings:
         ті <b>{commissionBasic}%</b>, якщо ви залучаєте учнів самі.
       }
     }
-  convert-into-paid:
-    description: >-
-      Ви можете
-      <a href="{url}" class="link-primary">зробити курс платним</a>
-      та отримувати кошти від учнів безпосередньо через Stepik.
-    title: Зробити курс платним
-    title-with-price: Вартість курсу – {price}
   course-access:
     enabled: Відкритий для навчанняи усім
     not-enabled: Лише команда курсу може бачити цей курс
@@ -896,8 +888,7 @@ course-settings:
   price-change: Изменить цену
   price-editor:
     description: >-
-      Вы можете <button>сделать курс платным</button> и принимать оплату от учащихся напрямую
-      через Stepik.
+      Вы можете сделать курс платным и принимать оплату от учащихся напрямую через Stepik.
     errors:
       price-gte: Задайте цену от {price}
       price-invalid-format: Укажите корректную цену
@@ -915,10 +906,11 @@ course-settings:
       }}
     terms: Условия оказания услуги
     terms-link: https://support.stepik.org/hc/ru/articles/360018110654
-    title: Сделать курс платным
-  price-title: Вартість курсу — {price}
+  price-title:
+    default: Ціна і промокодом
+    paid: Вартість курсу — {price}
+    requested: Вартість курсу – {price}
   promocode-editor-title: Промокоди
-  publication: Публікація
   requests:
     approved-desc: >-
       Перевірка фінансової інформації успішна.
@@ -950,32 +942,19 @@ course-settings:
   save: застосувати зміни
   save-error-woof: Не вдалося зберегти курс.
   save-success-woof: Збережено.
-  title: Налаштування курсу
-course-settings__button: Редагувати
+  title: Налаштування публікації
 course-syll__begins: Час початку
 course-syll__compact-progress: відсоток пройдених кроків
 course-syll__ends: Час закінчення
 course-syll__scores: ваш / максимальний бал
 course-syllabus__closed-yet: Цей модуль закритий
-course-syllabus__required-module-message: >-
-  {count, plural,
-    one {# бал}
-    few {# бали}
-    other {# балів}
-  }
-  у модулі {position} ({title})
-course-syllabus__required-module-message-percent: "{percent} % балів у модулі {position} ({title})"
-course-syllabus__required-module-message-title: "Умови доступу:"
 course__add-annon: Додати новину
 course__add-to-archived-link: Позначити архівним
 course__add-to-favorites-link: Позначити вибраним
-course__added-to-archived-fail: "Не вдалося позначити архівним, перезавантажте сторінку."
-course__added-to-archived-success: >-
-  Ви позначили курс архівним. Прибрати цю позначку можна за допомогою стрілочки на віджеті курсу.
-course__added-to-favorites-fail: "Не вдалося позначити вибраним, перезавантажте сторінку."
-course__added-to-favorites-success: >-
-  Ви позначили курс вибраним. Прибрати позначку «вибраний» можна за допомогою стрілочки
-   на віджеті курсу.
+course__added-to-archived-fail: Не вдалося позначити архівним.
+course__added-to-archived-success: Ви позначили курс архівним.
+course__added-to-favorites-fail: Не вдалося позначити вибраним.
+course__added-to-favorites-success: Ви позначили курс вибраним.
 course__annon-delete: Видалити
 course__annon-delete-confirm: Видалити це оголошення?
 course__annon-delete-done: Оголошення видалене.
@@ -1024,21 +1003,20 @@ course__buy-button: Придбати за {price}"
 course__buy-form:
   add-email: Додайте головну адресу email
   error:
-    not-allowed-promo: Промокод не дійсний
+    not-allowed-promo: Промокод недійсний
   here: тут
-  pay-button: Придбати
-  pay-button-promo: "Придбати з промокодом: {promo}"
-  pay-button-without-promo: Придбати без промокоду
+  pay-button: Оплатити
   price-label: Вартість
   primary-email-notice: >-
     На цю адресу буде надіслано листа для підтвердження оплати. Змінити адресу можна
     в налаштуваннях профілю.
   promo-label: Промокод
-  promo-placeholder: Вкажіть промокод
+  promo-placeholder: Промокод на знижку
   register-button: Зареєструйтеся, щоб сплатити
   support-notice: >-
-    Якщо ви маєте труднощі з оплатою, напишіть на адресу <a
-    href="mailto:support@stepik.org">support@stepik.org</a>.
+    Якщо ви маєте труднощі з оплатою, <a
+    href="https://support.stepik.org/hc/ru/requests/new">напишіть нам</a>
+    на support@stepik.org.
   title: 'Оплата доступа к курсу "{course}"'
   user-agreement: >-
     Оплачуючи доступ до цього курсу ви погоджуєтеся з умовами <a
@@ -1054,7 +1032,7 @@ course__certificate:
 course__certificate-distinction: Сертифікат з відзнакою
 course__certificate-link: Сертифікат
 course__certificate-regular: Звичайний сертифікат
-course__class-new: + Створити клас
+course__class-new: Створити клас
 course__comments-link: Коментарі
 course__continue-empty-warning:
   "Не вдалося відкрити перший урок, спробуйте вибрати інший у розкладі."
@@ -1062,49 +1040,26 @@ course__continue-exam-warning:
   "Щоб перейти до наступного уроку, почніть екзамен."
 course__continue-learn: Продовжити вчитися
 course__continue-tooltip: Продовжити навчання з останнього пройденого етапу
-course__drop-confirm: Ви справді хочете покинути цей курс?
-course__drop-fail: Не вдалося покинути курс.
-course__drop-link: Покинути
-course__drop-success: "Ви покинули курс, будь ласка, перезавантажте сторінку."
 course__empty-warn-1: "У цьому курсі нема уроків. "
 course__empty-warn-2: Він порожній =(
 course__empty-warn-add: Додайте ваш перший урок у редакторі вмісту курсу.
-course__free: Безкоштовно
 course__info-link: Інформація
-course__instructor-attachments-link: Файли
 course__instructor-clone-course: Зробити копiю
-course__instructor-clone-module: Копіювати модуль
-course__instructor-course-settings: Публікація
-course__instructor-dashboard-link: Панель викладача
 course__instructor-delete-course: Видалити
 course__instructor-edit-adaptiveness: Адаптивність
-course__instructor-edit-certificates: Сертифікати
-course__instructor-edit-info: Інформація
-course__instructor-edit-lti: Інтеграція по LTI
-course__instructor-edit-permissions: Доступ до курсу
-course__instructor-edit-syllabus: Навчальний план
-course__instructor-grade-book: Оцінки
-course__instructor-reports: Звіти
-course__instructor-statistics: Статистика
 course__join-button: Записатися на курс
 course__join-button_ab: Вчитися
 course__join-fail: >-
   Не вдається записатися на курс (код помилки: {status}). Спробуйте перезавантажити сторінку.
 course__learn-now: Вчитися можна відразу
-course__menu: Меню
 course__news-link: Новини
 course__publish: Опублікувати
 course__remove-from-archived-link: Прибрати позначку архівного
 course__remove-from-favorites-link: Прибрати позначку вибраного
-course__removed-from-archived-fail: >-
-  "Не вдалося прибрати позначку «архівний», будь ласка, перезавантажте сторінку."
-course__removed-from-archived-success: >-
-  Позначку «архівний» прибрано з курсу. Повернути її можна за допомогою виринаючого меню
-  на віджеті курсу.
-course__removed-from-favorites-fail: >-
-  "Не вдалося прибрати позначку «вибраний», будь ласка, перезавантажте сторінку."
-course__removed-from-favorites-success: >-
-  Позначку «вибраний» прибрано з курсу. Повернути її можна за допомогою стрілочки на віджеті курсу.
+course__removed-from-archived-fail: Не вдалося прибрати позначку «архівний».
+course__removed-from-archived-success: Позначку «архівний» прибрано з курсу.
+course__removed-from-favorites-fail: Не вдалося прибрати позначку «вибраний».
+course__removed-from-favorites-success: Позначку «вибраний» прибрано з курсу.
 course__reviews:
   can-review: "Ви пройшли понад {treshold}% курсу, залиште, будь ласка, відгук"
   can-review-no: "Ні, дякую"
@@ -1274,7 +1229,7 @@ deadlines-editor:
     hardDeadlineSection: крайній термін закінчення модуля
     softDeadlineCourse: рекомендований термін закінчення курсу
     softDeadlineSection: рекомендований термін закінчення модуля
-deadlines-editor__advanced-settings: Додаткові налаштування
+deadlines-editor__advanced-settings: Додаткові налаштування дат
 deadlines-editor__advanced-settings-disabled: >-
   <a href="/course/{courseId}/settings">Переведіть курс у {planTitle}-режим</a>,
   щоб використовувати додаткові налаштування.
@@ -1379,15 +1334,6 @@ errors:
   wrongLength: "{description} неправильна довжина (потрібно символів: {is})"
 exam:
   close-date: Дата закінчення екзамену
-  confirm: >-
-    Ви маєте
-    {count, plural,
-      one {# хвилину}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-     та одну спробу, щоб здати екзамен. Ви справді хочете розпочати?
   finish-prematurely:
     btn: Закінчити достроково
     confirm-no: "Ні, продовжити розв’язувати"
@@ -1398,19 +1344,6 @@ exam:
   game-over: Екзамен закінчено.
   go-back: До змісту
   header: Екзамен.
-  info-head: >-
-    Екзамен тривалістю
-    {count, plural,
-      one {# хвилина}
-      few {# хвилини}
-      many {# хвилин}
-      other {# хвилини}
-    }
-  info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
-  info-paragraph: "Ви маєте одну спробу, щоб здати екзамен"
-  is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
-  is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
-  is_random_exam_learner: Екзамен з випадковими питаннями.
   label: Екзамен
   not-started: Екзамен не розпочався
   open-date: Дата початку екзамену
@@ -1423,17 +1356,11 @@ exam:
   start-error: Не вдалося розпочати екзамен. Спробуйте перезавантажити сторінку.
   timer: "до кінця:"
   too-late: Час розв’язку екзаменаційних завдань минув.
-explore:
-  course-pack__trending-courses: Популярні курси
-  search-aria-label: Очистити поле
-  search-placeholder: Пошук у каталозі
-  show-all: Переглянути усе
 footer__CC_note: >-
   Public user contributions licensed under <a target="_blank" rel="noopener noreferrer"
   href="https://creativecommons.org/licenses/by-sa/4.0/deed.uk">CC BY-SA 4.0</a>
   license with attribution required
 footer__about: Про проект
-footer__academy: Stepik Академія
 footer__active-count: >-
   {count, plural,
     one {<strong>#</strong> активний учень}
@@ -1560,9 +1487,7 @@ instructor-dashboard:
     plagiarized_submissions: Плагіат
     reviews_outliers: Незвичні рецензії
   no-issues:
-    default: "курс не відмічений як проблемний :)"
-    error_video: Курс не містить кроків з відео
-    no_successes: Курс не містить практичних завдань
+    default: "курс не відмічений як проблемний."
   step-stat:
     abused: скарги
     abused-tooltip: "Кількість коментарів, на які є скарга."
@@ -1916,7 +1841,7 @@ login:
     цієї соціальної мережі ви маєте ідентифікуватися з використанням адреси email та паролю.
   title: Ідентифікація
 lti-editor:
-  intagration: >-
+  integration: >-
     Детальніше про процес інтеграції Moodle, Canvas та інших ви можете взнати з <a
     href='https://support.stepik.org/hc/ru/articles/360000177314' target='_blank'>нашої
     документації</a>.
@@ -1926,10 +1851,6 @@ lti-editor:
   private-profile-title: Створювати приватні профілі учнів
   save: Зберегти налаштування LTI
   secret-title: LTI Secret
-  sync: >-
-    Синхронізувати оцінки LTI використовуючи усі збережені з’єднання LTI для цього курсу
-  sync-btn: Синхронізувати оцінки. Тривало.
-  title: "Налаштування інтеграції курсу по LTI"
   tool-provider: >-
     Stepik можна інтегрувати у систему LMS з допомогою <a
     href='http://www.imsglobal.org/activity/learning-tools-interoperability' target='_blank'
@@ -2006,7 +1927,6 @@ new-lesson-form:
 notification__favorite: вибране
 notification__muted: приховане
 notifications__empty-list: Повідомлення відсутні
-notifications__events-link: Мої події
 notifications__flag-favorite: Вибрані
 notifications__flag-read: Прочитані
 notifications__flag-unread: Непрочитані
@@ -2119,7 +2039,8 @@ peer-review__to-give: >-
   }
 personal_license__received-activate-instructions: >-
   Для використання ліцензії вам необхідно зареєструвати ключ на <a
-  href="https://www.jetbrains.com/store/redeem/?ALL"> цій сторінці </a>.
+  href="https://www.jetbrains.com/store/redeem/?ALL"> цій сторінці </a>. <br><b>Увага!</b>
+  При реєстрації ліцензії виберіть <b>"All Products Pack"</b>.
 personal_license__received-description: >-
   JetBrains — розробник професійних інструментів для розробки програмного забезпечення. Ви можете
   звантажити їх на <a href="https://www.jetbrains.com/products.html">цій сторінці</a> і
@@ -2142,9 +2063,9 @@ plan-card:
     target='_blank' class='link-primary'>Підпишіться</a>,
     щоб отримати доступ до додаткових можливостей курсу.
   text-limit: >-
-    <a href='/edit-profile/subscription' class='link-primary'>Змініть план</a>,
+    <a href='/edit-profile/subscription'>Змініть план</a>,
     щоб збільшити кількість можливих {courseType}-курсов.
-    Чи змініть тип одного з ваших {courseType}-курсів на базовий.
+    <br>Чи змініть тип одного з ваших {courseType}-курсів на базовий.
   text-want-more: >-
     <a href="/edit-profile/subscription" class="link-primary">Хочу більше</a>
   title: "Ваш поточний план"
@@ -2207,7 +2128,7 @@ plugin__admin: Завдання на Linux
 plugin__admin-description: Налаштуйте віддалений сервер
 plugin__chemical: Завдання з хімії (застаріле)
 plugin__chemical-description: Введіть хімічну формулу.
-plugin__choice: Тест
+plugin__choice: Тест (задача)
 plugin__choice-description: "Виберіть відповід(ь, і) зі списку"
 plugin__code: Завдання з програмування
 plugin__code-description: "Напишіть програму, яку можна перевірити за допомогою stdin → stdout"
@@ -2945,7 +2866,6 @@ reports:
   class_download_grade_book:
     desc: ""
     name: Оцінки
-  course-reports-title: Звіти курсу
   course_download_activity_basic:
     desc: >-
       Активність учнів у модулях: відсоток відвідуваності (steps) та відсоток успішності (score)
@@ -3001,7 +2921,7 @@ reports:
     name: Незакінчені сесії рецензування
     sample: report-samples/ru/not-finished-review-sessions.csv
   course_download_payments:
-    desc: Успішні та неуспішні платежі для цього курсу
+    desc: Покупки курсу і повернення
     name: Платежі
     sample: report-samples/ru/payments.csv
   course_download_plagiarism:
@@ -3413,7 +3333,8 @@ review__student-choose: Відправте розв’язок на реценз
 review__student-no-submissions: Збережіть хоча б один розв’язок
 review__student-send: Відправити цей розв’язок на рецензію
 review__student-send-notice: Відправлено на рецензію
-review__submit-confirm: Ви справді бажаєте відправити цю рецензію?
+review__submit-confirm:
+  text: Ви справді бажаєте відправити цю рецензію?
 review__wait-peers-giving-note: >-
   Пишіть більше рецензій — збільшуйте можливість отримати рецензії на ваші розв’язки
 scoreboard__current-user-rank: "Ваше місце у рейтингу:"
@@ -3425,16 +3346,14 @@ scoreboard__score: Бали
 search-members:
   placeholder: "Пошук за іменем, email, ID"
   search-btn: Знайти
+search__aria-label: Очистити поле
 search__button: Шукати
 search__context: "Область пошуку:"
 search__course: "Курс:"
 search__filters-warn: Спробуйте спростити фільтр
-search__info:
-  alter: Спробуйте регулярні вирази
-  query: "Результати запиту:"
-  query-original: "Шукати замість цього:"
 search__lesson: "Урок:"
 search__no-results: Не вдалося нічого знайти
+search__placeholder: Пошук у каталозі
 search__search: Пошук
 section-editor__begin-date: Дата відкриття
 section-editor__step-content: Урок створений системою.
@@ -3624,16 +3543,28 @@ submissions__submission: розв’язок
 submissions__tips-left: "У вас залишилась {tips} підказка на сьогодні."
 submissions__tips-server-error: "ПОмилка :( Не вдалося отримати підказку."
 submissions__title: "Розв’язок — етап {step_position}"
-subscriptions__reset: За замовчуванням
-subscriptions__reset-tooltip: отримувати лише повідомлення за замовчуванням
-subscriptions__subscribe: Отримувати повідомлення
 subscriptions__subscribe-lesson-comments: Отримувати коментарі уроку
 subscriptions__subscribe-step-comments: Отримувати коментарі кроку
 subscriptions__subscribe-tooltip: отримувати повідомлення
-subscriptions__unsubscribe: Не отримувати повідомлення
 subscriptions__unsubscribe-lesson-comments: Не отримувати коментарі уроку
 subscriptions__unsubscribe-step-comments: Не отримувати коментарі кроку
 subscriptions__unsubscribe-tooltip: не отримувати повідомлення
+syllabus:
+  exam:
+    attempts-info: "Ви маєте одну спробу, щоб здати екзамен"
+    info-latest-date: Рекомендуємо почати не пізніше {date}, щоб встигнути здати екзамен.
+    is_exam_without_progress: Оцінки надісланих розв’язків не будуть доступні.
+    is_random_exam: 'Екзамен з випадковими питаннями з курсу <b>"{course}"</b>.'
+    is_random_exam_learner: Екзамен з випадковими питаннями.
+    type:
+      basic: >-
+        Екзамен тривалістю
+        {minutes, plural,
+          one {# хвилина}
+          few {# хвилини}
+          many {# хвилин}
+          other {# хвилини}
+        }
 syllabus_edit:
   course-settings: Налаштування старту курсу
   deadlines:
@@ -3671,7 +3602,6 @@ syllabus_edit:
         З цієї дати учні ну будуть отримувати бали за розв’язки
       section_soft_deadline: >-
          З цієї дати учні будуть отримувати менше балів за розв’язки
-  page-subtitle: Редагування розкладу
   saved_msg: Курс збережено
   zero_sections: >-
     Курс не має уроків.<br>Створіть перший модуль, щоб додати уроки
@@ -3704,8 +3634,6 @@ teach:
       public: Відкриті
     gradebook: Табель
     info-edit: Опис
-    no-results: Знайдено <b>0</b> курсів.
-    no-results-reset-link: Скинути фільтри
     pending-reviews: >-
       {count, plural,
       one {# розв’язок на рецензію}
@@ -3713,9 +3641,7 @@ teach:
         other {# розв’язків на рецензію}
       }
     permissions-edit: Права доступу
-    publication: Публікація
     reports: Звіти
-    search-placeholder: Назва чи ID курсу
     syllabus-edit: Зміст
     title: Курси
   lessons:
@@ -3750,10 +3676,10 @@ teach:
     title: Уроки
     used-in-courses: "В {count, number} курсах:"
   nav:
+    announcements: Розсилки
     classes: Класи
     courses: Курси
     lessons: Уроки
-    mailings: Розсилки
     new-course: Новий курс
     new-lesson: Новий урок
     notifications: Повідомлення
@@ -3764,12 +3690,17 @@ teach:
     title: Створити курс
   new-lesson:
     title: Створити урок
+teachlearn:
+  courses:
+    no-results: Знайдено <b>0</b> курсів.
+    no-results-reset-link: Скинути фільтри
+    search-placeholder: Назва чи ID курсу
 time:
   minutes__short: хв.
   seconds__short: сек.
 toc__progress:
   goal:
-    best_result: До найкращого резйльтату залишилося
+    best_result: До найкращого результату залишилося
     certificate_distinction: До сертифіката з відзнакою залишилося
     certificate_regular: До сертифіката залишилося
     end_course: До закінчення курсу залишилося
@@ -3808,7 +3739,7 @@ ufd-form:
       options:
         RUB: ₽ — виплата коштів у РФ відповідно до реквізитів
         USD: >-
-          $ — виплата коштів у будь-якій країні за допомогою
+          $ — виплата коштів у будь-якій країні за допомогою
           <a target="_blank" rel="noopener noreferrer" class="link-primary"
           href="https://vendors.paddle.com">Paddle</a>
       title: Яку валюту ви будете використовувати для продажів курсу?
@@ -3920,6 +3851,7 @@ ufd-form:
       filled: "Paddle Vendor ID: {paddleVendorId}"
 unit_edit:
   add_existed: Додати існуючий урок
+  clone-module: Копіювати модуль
   import: Імпортувати уроки з файлу
   marked_delete: >-
     Урок&nbsp;<strong>«{title}»</strong>&nbsp;буде видалений з курсу при збереженні
@@ -4058,8 +3990,8 @@ user__edit:
           enterprise {Enterprise-курсив}
           other {курсив}}
         }
-      } стануть базовыми в режимі чорновика та не будуть видимі для учнів.
-      Ви зможете змінити їх тип та опублікувати їх згодом.
+      } з <b>{fromDate, date, medium-date}</b> стануть базовыми в режимі чорновика та не будуть
+      видимі для учнів. Ви зможете змінити їх тип та опублікувати їх згодом.
     invalid-warn: >-
       Ваша <b>підписка завершилася</b> {validUntil, date, medium-date}
       Щоб продовжити використовувати додаткові можливості
@@ -4152,26 +4084,23 @@ user__edit:
         other {Підписатися}
       } подписку
     subscribe-description:
-      cancel-trial: Кошти не буде знято з карти.
       charge: >-
-        Починаючи з <b>{chargeDate, date, medium-date}</b> {type, select,
-          basic {кошти не будуть зняті}
-          other {платіж <b>{priceText}</b> буде знято {period, select,
-            month {щомісяця}
-            quarter {щокварталу}
-            half_year {щопівроку}
-            year {щороку}
-            other {щомісяця}
-        } до моменту скасування підписки}
-        }.
-      will-trial: >-
-        <p><b>Безкоштовний 14-ти денний випробувальний період</b> буде розпочату відразу.</p>
-        <p>Після випробувального періоду ви будете платити {priceText} {period, select,
+        Починаючи з <b>{chargeDate, date, medium-date}</b> платіж <b>{priceText}</b> буде знято
+        <b>{period, select,
           month {щомісяця}
           quarter {щокварталу}
           half_year {щопівроку}
           year {щороку}
-          other {щомісяця}}.</p>
+          other {щомісяця}
+        }</b> до моменту скасування підписки.
+      will-trial: >-
+        <p><b>Безкоштовний 14-ти денний випробувальний період</b> буде розпочату відразу.</p>
+        <p>Після випробувального періоду ви будете платити <b>{priceText}</b> <b>{period, select,
+          month {щомісяця}
+          quarter {щокварталу}
+          half_year {щопівроку}
+          year {щороку}
+          other {щомісяця}}</b>.</p>
     subscribe-footnote: >-
       Ми використовуємо
       <a href="https://stripe.com" target="_blank" rel="noopener noreferrer">Stripe</a>

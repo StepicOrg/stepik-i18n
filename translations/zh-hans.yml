@@ -14,7 +14,6 @@ breadcrumbs__course-grade-book: 图书等级
 breadcrumbs__course-reports: 报告
 breadcrumbs__course-syllabus: 教学大纲
 breadcrumbs__home: 首页
-breadcrumbs__instructor-dashboard: 教师仪表板
 breadcrumbs__lesson: 第课
 breadcrumbs__lesson-edit: 编辑
 breadcrumbs__lesson-reports: 报告
@@ -144,7 +143,9 @@ common__submit_file: 提交文件
 common__symbols_left: "{count, plural, =1 {#个符号左} other {#个符号左}}"
 common__unauth-voting: 您应该登录投票。
 common__unsaved-warn: 所有未保存的更改将丢失！
-course-edit__cancel: 回報
+course:
+  drop:
+    link: 下降
 course-edit__new-module: 添加模块
 course-edit__save: 保存更改
 course-index__authors: "{count, plural, other {作者} =1 {作者}}"
@@ -188,12 +189,7 @@ course__certificate-regular: 普通证书
 course__comments-link: 注释
 course__continue-learn: 继续
 course__continue-tooltip: 从您上次停止的时间继续
-course__drop-confirm: 你确定要删除这个课程？
-course__drop-fail: 无法删除此课程。
-course__drop-link: 下降
-course__drop-success: 当然下降。请刷新页面。
 course__info-link: 信息
-course__instructor-dashboard-link: 教师仪表板
 course__join-button: 加入此课程
 course__join-fail: "不能参加此课程（错误代码：{status}）。请尝试刷新页面。"
 course__news-link: 新闻
@@ -274,7 +270,7 @@ instructor-dashboard:
     plagiarized_submissions: 剽窃
     reviews_outliers: 评论离群
   no-issues:
-    default: 没有问题 ：）
+    default: 没有问题
   step-stat:
     abused: 滥用
     abused-tooltip: 计数不喜欢在这一步意见。
@@ -339,7 +335,6 @@ material__video-not-ready: 视频还没有被上传或尚未处理。
 notification__favorite: 喜爱
 notification__muted: 静音
 notifications__empty-list: 没有通知
-notifications__events-link: 我的活动
 notifications__flag-favorite: 收藏夹
 notifications__flag-read: 读
 notifications__flag-unread: 未读
@@ -558,7 +553,8 @@ review__student-choose: 派出最好的提交审查
 review__student-no-submissions: 保存至少一个提交
 review__student-send: 发送提交审查
 review__student-send-notice: 提交已发送审查
-review__submit-confirm: 你准备好提交评论？
+review__submit-confirm:
+  text: 你准备好提交评论？
 review__wait-peers-giving-note: 注：以上的评论你的几率就越高您的提交将被审查！
 scoreboard__name: 名称
 scoreboard__score: 得分了
@@ -587,12 +583,8 @@ submissions:
     evaluation: 处理
     wrong: 错误
 submissions__submission: 服从
-submissions__title: "提交 - 步{step_position}"
-subscriptions__reset: 复位订阅
-subscriptions__reset-tooltip: 接收默认通知
-subscriptions__subscribe: 订阅
+submissions__title: "提交 – 步{step_position}"
 subscriptions__subscribe-tooltip: 总是收到通知
-subscriptions__unsubscribe: 退订
 subscriptions__unsubscribe-tooltip: 从来没有收到通知
 time:
   minutes__short: 分

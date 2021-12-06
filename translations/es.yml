@@ -14,7 +14,6 @@ breadcrumbs__course-grade-book: cuaderno de notas
 breadcrumbs__course-reports: Informes
 breadcrumbs__course-syllabus: Silaba
 breadcrumbs__home: Casa
-breadcrumbs__instructor-dashboard: Tablero de instrumentos instructor
 breadcrumbs__lesson: lección Página
 breadcrumbs__lesson-edit: Editar
 breadcrumbs__lesson-reports: Informes
@@ -164,7 +163,9 @@ common__symbols_left: >-
   {count, plural, one {# símbolo de la izquierda} other {# símbolos de la izquierda}}
 common__unauth-voting: Debe iniciar sesión para la votación.
 common__unsaved-warn: Todos los cambios no guardados se perderán!
-course-edit__cancel: Volver
+course:
+  drop:
+    link: Dejar el Curso
 course-edit__new-module: Agregar módulo
 course-edit__save: Guardar cambios
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
@@ -210,12 +211,7 @@ course__comments-link: comentarios
 course__continue-empty-warning: El curso no es un solo paso
 course__continue-learn: Continuar
 course__continue-tooltip: Continuar desde donde se detenga la última vez
-course__drop-confirm: ¿Está seguro de que quiere eliminar este curso?
-course__drop-fail: No se puede quitar este curso.
-course__drop-link: Dejar el Curso
-course__drop-success: Curso cayó. Vuelve a cargar la página.
 course__info-link: Información
-course__instructor-dashboard-link: Tablero de instrumentos instructor
 course__join-button: Participar en este curso
 course__join-fail: >-
   No se puede entrar al mismo (código de error: {status}). Intenta volver a cargar esta página.
@@ -323,7 +319,7 @@ instructor-dashboard:
     plagiarized_submissions: Plagio
     reviews_outliers: Los comentarios de los valores atípicos
   no-issues:
-    default: "Sin problemas :)"
+    default: "Sin problemas."
   step-stat:
     abused: abusado
     abused-tooltip: Conde de disgustos para comentarios en este paso.
@@ -402,7 +398,6 @@ material__video-not-ready: El vídeo no se ha subido aún o procesado.
 notification__favorite: favorito
 notification__muted: apagado
 notifications__empty-list: No Notificaciones
-notifications__events-link: Mis eventos
 notifications__flag-favorite: favoritos
 notifications__flag-read: Leer
 notifications__flag-unread: No leído
@@ -642,7 +637,8 @@ review__student-choose: Enviar la mejor presentación para revisar
 review__student-no-submissions: Guardar al menos una presentación
 review__student-send: Enviar esta presentación para revisar
 review__student-send-notice: Presentación ha sido enviada a revisar
-review__submit-confirm: ¿Estás listo para presentar el examen?
+review__submit-confirm:
+  text: ¿Estás listo para presentar el examen?
 review__wait-peers-giving-note: >-
   Nota: los comentarios más haga, mayor será la posibilidad de que su presentación será revisado!
 scoreboard__name: Nombre
@@ -673,12 +669,8 @@ submissions:
     evaluation: Tratamiento
     wrong: Incorrecto
 submissions__submission: sumisión
-submissions__title: "Presentaciones - Paso {step_position}"
-subscriptions__reset: suscripción de reposición
-subscriptions__reset-tooltip: recibir notificaciones por defecto
-subscriptions__subscribe: Suscribir
+submissions__title: "Presentaciones – Paso {step_position}"
 subscriptions__subscribe-tooltip: Siempre recibir notificaciones
-subscriptions__unsubscribe: Darse de baja
 subscriptions__unsubscribe-tooltip: Nunca recibir notificaciones
 time:
   minutes__short: min
