@@ -27,38 +27,6 @@ adaptive:
     "1": Looking for next assignment
     "2": Robots still working
     "3": Making some math
-announcement-show:
-  statistic-label:
-    click_count: Clicked
-    open_count: Opened
-    publish_count: Published
-    queue_count: Queued
-    sent_count: Sent
-  statistic-tooltip:
-    click_count: Number of emails in which a recipient clicked on a link
-    open_count: Number of opened emails
-    publish_count: Number of announcements made (for recurring announcements)
-    queue_count: Number of emails in the sending queue
-    sent_count: Number of sent email
-  status-label:
-    aborted: Aborted
-    composing: Composing
-    queued: Waiting for queue
-    queueing: Queueing
-    scheduled: Scheduled
-    sending: Sending
-    sent: Sent
-  status-tooltip:
-    aborted: Announcement canceled.
-    composing: You can edit this announcement.
-    queued: "Emails are in the queue, waiting to send."
-    queueing: Emails are adding into the sending queue.
-    scheduled: Announcement will be sent by timer. You can cancel delivery.
-    sending: Emails are sending.
-    sent: This announcement has been sent to relevant learners.
-    will_end: " Sending will end at: "
-    will_start: " Sending will start at: "
-announcement__default-template: Default template
 attachments__list-attach-file: "{size, select, 0 {Attach file} other {Attach file (max {size})}}"
 attachments__list-delete-attachment-tooltip: Delete
 attachments__list-download-attachment-tooltip: "Open {name}"
@@ -87,7 +55,6 @@ breadcrumbs__review: Review
 breadcrumbs__review-session: Review session
 breadcrumbs__submissions: Submissions
 button__new-course: Create a course
-button__new-lesson: Create a lesson
 catalog:
   authors:
     new-course: Create your own course
@@ -102,6 +69,8 @@ catalog:
     submit: Show
     title: Filters
     with-cert-only: Only with certificate
+  promo-courses:
+    learn-more: Learn more
   recently-viewed: Recently viewed
   search:
     empty: >-
@@ -337,7 +306,6 @@ common__login: Log in
 common__logout: Logout
 common__logout-confirm: Are you sure you want to log out?
 common__min: min
-common__my-courses: My courses
 common__notifications: Notifications
 common__number-sign: "#"
 common__off: "off"
@@ -347,7 +315,6 @@ common__out-of-points: "{count, plural, one {# point} other {# points}}"
 common__platform-news: What's new
 common__points: "{count, plural, one {# point} other {# points}}"
 common__points-received: "{count, plural, other {received}}"
-common__pricing: My subscription plan
 common__print: Print
 common__problem: Problem
 common__profile: Profile
@@ -450,6 +417,12 @@ cost:
 course:
   access_restricted: >-
     Authors have closed the course "{courseTitle}", and you are not able to pass it for now.
+  add-to-wishlist:
+    result:
+      fail: Adding course to Wishlist failed, please try again.
+      success: "Course \"{courseTitle}\" is added to Wishlist."
+    static-text: Add to Wishlist
+    tooltip: Add to Wishlist
   delete:
     confirm:
       cancel: Cancel
@@ -482,6 +455,8 @@ course:
   edit-btns:
     info: Edit course information
     syllabus: Edit course syllabus
+  favorites:
+    in: In Favorites
   info:
     adaptive_info_link: Learn more about adaptive courses
     adaptive_note: "This course is adaptive: it will adjust according to your skill"
@@ -517,6 +492,20 @@ course:
   readiness:
     high_expl: The course meets the formal recommendations of Stepik
     low_expl: Most likely the course is under development
+  remove-from-wishlist:
+    confirm:
+      cancel: Cancel
+      ok: Remove
+      text: >-
+        <h4>Remove course "{courseTitle}" from Wishlist?</h4>
+        <p>You will lose quick access to this course but will be able to find it in Catalog
+        later.</p>
+    menu-item: Remove from Wishlist
+    result:
+      fail: Removing course from Wishlist failed, please try again.
+      success: "Course \"{courseTitle}\" is removed from Wishlist."
+    static-text: In Wishlist
+    tooltip: Remove from Wishlist
   routes:
     comments:
       title: Comments
@@ -639,7 +628,7 @@ course-grade-book-cell:
   wrong: Wrong submissions only
 course-index__authors: "{count, plural, =1 {Author} other {Authors}}"
 course-index__cert: Certificate
-course-index__enrolled-msg: You are enrolled!
+course-index__enrolled-msg: You are enrolled
 course-index__instructors: Show as instructors
 course-index__lang: Language
 course-index__workload: Workload
@@ -670,7 +659,6 @@ course-nav:
     information: Information
     lti: LTI integration
     news: News
-    news-old: "News <sup>old</sup>"
     permissions: Access control
     pricing: Price & coupons
     publication: Publication
@@ -1092,54 +1080,15 @@ course-syll__compact-progress: passed steps ratio
 course-syll__ends: Close date
 course-syll__scores: your / max score
 course-syllabus__closed-yet: This module is closed
-course__add-annon: New announcement
 course__add-to-archived-link: Move to archived
 course__add-to-favorites-link: Add to favorites
 course__added-to-archived-fail: Can't move course to archived.
-course__added-to-archived-success: Moved to archived.
+course__added-to-archived-success: "Course \"{courseTitle}\" is moved to archived."
 course__added-to-favorites-fail: Can't add course to favorites.
-course__added-to-favorites-success: Added to favorites.
-course__annon-delete: Delete
-course__annon-delete-confirm: Delete this announcement?
+course__added-to-favorites-success: "Course \"{courseTitle}\" is added to favorites."
 course__annon-delete-done: The announcement has been deleted
 course__annon-delete-error: Can't delete the announcement
-course__annon-empty: This course has no announcements yet.
-course__annon-is-infinite-label: Send this announcement forever.
-course__annon-is-scheduled-label: Set delivery date.
-course__annon-max-score: Max percent
-course__annon-min-score: Min percent
-course__annon-on-enroll-label: Send this announcement after enrollment.
-course__annon-restrict-description: >-
-  Only learners who achieve points between min and max percent will receive message. Learners who
-  achieve exactly min or max percent will also receive email.
-course__annon-restrict-score-label: Restrict by score percent
-course__annon-save: Save as draft
-course__annon-send: Send
-course__annon-send-done: Announcement sending started
-course__annon-send-done-is-scheduled:
-  "Announcement sending scheduled. First delivery will be at {date}."
-course__annon-send-done-on-enroll: All new learners will receive email after enrollment.
-course__annon-send-error: Can't send the announcement
-course__annon-send-is-scheduled: Schedule sending
-course__annon-send-on-enroll: Start sending on enrollment
-course__annon-sent-confirm: >-
-  Please note that delivery to learners may take up to 24 hours. Are you going to start sending
-  this announcement?
-course__annon-sent-confirm-is-scheduled: Are you sure you want to schedule sending?
-course__annon-sent-confirm-on-enroll:
-  Are you sure you want to send this message to every learners after enrollment?
-course__annon-start-date: Delivery date
-course__annon-stop: Stop delivery
-course__annon-stop-done: Delivery canceled.
-course__annon-stop-error: Something went wrong.
-course__annon-template-label: Email template
-course__annon-test: Send example to myself
-course__annon-test-done: Test mail sent successfully
-course__annon-test-error: Can't send test mail
-course__annon-test-tooltip: Sent this announcement to your email address only
-course__annon-tmpl-subj: New announcement
 course__annon-tmpl-text: "Hi \\{\\{user_name\\}\\}!"
-course__anon-stop-warn: This action can not be reverted. Stop delivery?
 course__buy: Buy
 course__buy-button: "Buy for {price}"
 course__buy-form:
@@ -1216,9 +1165,9 @@ course__publish: Publish
 course__remove-from-archived-link: Remove from archived
 course__remove-from-favorites-link: Remove from favorites
 course__removed-from-archived-fail: Can't remove course from archived.
-course__removed-from-archived-success: Removed from archived.
+course__removed-from-archived-success: "Course \"{courseTitle}\" is removed from archived."
 course__removed-from-favorites-fail: Can't remove course from favorites.
-course__removed-from-favorites-success: Removed from favorites.
+course__removed-from-favorites-success: "Course \"{courseTitle}\" is removed from favorites."
 course__reviews:
   can-review: "You passed more than {treshold}%, write a review"
   can-review-no: No thanks
@@ -1384,6 +1333,40 @@ deadlines-editor__section_end_date_tooltip: >-
   Close date: when the module will be disabled (close date is usually left empty).
 deadlines-editor__soft_deadline_tooltip:
   "Soft deadline: when the cost of every step will be reduced."
+discussions:
+  community-rules:
+    comments: >-
+      Don't post solutions or obvious hints in comments; for that, use
+      {solutionsUrl, select,
+        null {solution forum}
+        other {<a href='{solutionsUrl}'>solutions forum</a>}
+      }.
+    main: >-
+      Please be polite and follow our
+      <a href='https://support.stepik.org/hc/en-us/articles/4407228615058' target='_blank'>
+      Community Rules</a>.
+    solutions: >-
+      Share your solution and discuss the assignment with others
+  solutions:
+    locked:
+      info:
+        need-attempts: >-
+          Solutions forum will be available after you solve the assignment
+          or fail {attemptsCount, plural, one {# time} other {# times}}.<br>
+          Here you will be able to post your solutions, look into solutions from other
+          learners or ask for advice.
+        need-authorize: >-
+          <a href='{loginUrl}'>Log in</a> to open solutions forum.
+        need-correct-submission: >-
+          Solutions forum will be available after you solve the assignment.<br>
+          Here you will be able to post your solutions, look into solutions from other
+          learners or ask for advice.
+      tooltip:
+        need-attempts: >-
+          Solutions forum will be available after you solve the assignment
+          or fail {attemptsCount, plural, one {# time} other {# times}}.
+        need-authorize: Solution forum is available only for registered users.
+        need-correct-submission: Forum will be available after you solve the assignment.
 discussions__delete-prompt: Delete this comment?
 discussions__edit-disc-button: Edit comment
 discussions__none: No discussions. Feel free to start one.
@@ -1723,8 +1706,6 @@ klass:
       scores in the class.</p>
   dismiss-student-error: "Could not dismiss learner {name}"
   dismiss-student-success: "{name} has been dismissed from the class"
-  edit: Edit
-  error-leave: Could not leave class
   gradebook:
     download: "Download gradebook of <b>{readyDate, date, medium-datetime}</b>"
     link: Gradebook
@@ -1753,11 +1734,6 @@ klass-edit:
   cancel: Cancel
   delete: Delete class
   delete-confirm: Are you sure you want to delete current class?
-  delete-confirm-modal:
-    cancel: No, cancel
-    confirm: Yes, delete
-    text: >-
-      Are you sure you want to delete the "<b>{name}</b>" class?
   deleted: Class deleted
   description: Class description
   error-on-delete: Something went wrong. Can't delete current class.
@@ -1787,8 +1763,6 @@ klass-new:
   title: Title
   title-hint: Class title
 klasses:
-  empty-list: You do not have classes.
-  header: Classes
   iown: Created classes
   is-access-restricted_other: Access is restricted. Please contact the class owner.
   is-access-restricted_owner: >-
@@ -1808,14 +1782,41 @@ learn:
       <a href="/catalog">our catalog</a> by yourself.
   courses:
     card:
-      course-not-available: Currently unavailable
+      course-not-available: >-
+        {reason, select,
+          is-draft {Closed by the authors}
+          not-started {
+            {startDate, select,
+              null {Currently unavailable}
+              other {Starts on {startDate, date, medium-date}}
+            }
+          }
+          ended {
+            {endDate, select,
+              null {Currently unavailable}
+              other {Ended on {endDate, date, medium-date}}
+            }
+          }
+          other {Currently unavailable}
+        }
     empty: >-
-      Find your first course in <a href="/catalog">our catalog</a>.
-    filters:
-      active: Active
-      all: All courses
-      archive: Archive
-      wishlist: Wishlist
+      {filter, select,
+        active {Find your first course in <a href="/catalog">our catalog</a>.}
+        favorites {Add courses to Favorites so you can find them easily any time.}
+        archive {Your Archive is empty at the moment. But you can always restore courses if they
+                 turn up here.}
+        wishlist {Add interesting courses to your Wishlist to come back to them later.}
+        other {}
+      }
+  courses-active:
+    title: Courses
+  courses-archive:
+    title: Archive
+  courses-favorites:
+    title: Favorite courses
+  courses-wishlist:
+    enroll-card-action: "{isNeedPurchase, select, true {Buy} other {Join}}"
+    title: Wishlist
   featured-course-card:
     cert-notice:
       goal-status: >-
@@ -1834,6 +1835,8 @@ learn:
   index:
     courses-for-review: Leave a review
     current-courses: My current courses
+    empty: >-
+      Find your first course in <a href="/catalog">our catalog</a>.
     recommended-courses: Recommended
   last-activity:
     days-streak-current: >-
@@ -1849,6 +1852,10 @@ learn:
   nav:
     classes: Classes
     courses: Courses
+    courses-active: Active
+    courses-archive: Archive
+    courses-favorites: Favorites
+    courses-wishlist: Wishlist
     index: My learning
     notifications: Notifications
   navbar-link: Learning
@@ -2140,9 +2147,6 @@ modal-dialog-confirm:
   text: You have made changes. Do you want to save or discard them?
 new-class-form:
   choose-course-btn: Choose a course
-  choose-course-how-to-img:
-    alt: How to create a class from the course page
-    src: /static/frontend/new-class-how-to-en.png
   choose-course-text: >-
     Create a classroom for <b>any public</b> course and gain access to your students' scores and
     submissions.
@@ -2564,6 +2568,42 @@ news-item:
     one-time: One-time
 notification__favorite: favorite
 notification__muted: muted
+notifications:
+  favorites:
+    page-title: Favorites
+    title: Favorite notifications
+  filters:
+    course:
+      all: All courses
+    flag: >-
+      {value, select,
+        all {Any status}
+        unread {Unread}
+        read {Read}
+        favorites {Favorites}
+        other {}
+      }
+    type: >-
+      {value, select,
+        all {All categories}
+        learn {Learning}
+        review {Reviews}
+        comments {Comments}
+        teach {Teaching}
+        default {Other}
+        other {}
+      }
+    type-description: >-
+      {value, select,
+        all {}
+        learn {Course news, deadlines, newly opened modules, certificates, JetBrains license}
+        review {Received reviews}
+        comments {New discussions and replies, liked comments, forum solution posts}
+        teach {Submissions for review, reports, learners' reviews for courses and liked lessons}
+        default {Invitations to courses or classes, month reports and payments, paid course
+                 applications}
+        other {}
+      }
 notifications__empty-list: No notifications
 notifications__flag-favorite: Favorites
 notifications__flag-read: Read
@@ -2594,13 +2634,8 @@ org:
   edit_profile: Edit profile
   issued_certificates_count:
     "{count, plural, one {# certificate issued} other {# certificates issued}}"
-  klasses_tab: Classes
-  lessons_tab: Lessons
-  mailing_tab: Mailings
   no_courses: No courses found
-  no_lessons: No lessons found
   revenue_tab: "Revenue <sup>β</sup>"
-  students_tab: My learners
 paid-course-requests:
   edit:
     desc: >-
@@ -3293,7 +3328,6 @@ plugins__show_more: >-
   + {count, plural, one {# additional step type} other {# additional step types}}
 profile:
   activity: Activity last year
-  add_annon: New announcement
   all_courses: All courses
   all_lessons: All lessons
   best_courses: Popular courses
@@ -3301,15 +3335,8 @@ profile:
   certificate-empty-list: You don't have any certificates yet.
   certificates: Certificates
   city: City
-  courses-empty-list: No courses found
-  courses-empty-list-call-to-action: Check out our courses
-  courses_archived: Archive
-  courses_favorites: Favorites
   details: Details
   joined-date: Joined
-  mailing: Mailings
-  my-courses: My courses
-  no_annons: No announcements yet
   no_courses: Create your first course!
   no_courses_link: Course creating
   no_lessons: Create your first lesson!
@@ -3419,7 +3446,12 @@ quiz:
     }
   score: You got
   score-max: out of
-  submit-failed: Can not send your submission. Check internet connection and try again
+  submit-failed: >-
+    Can not send your submission.
+    <br>{innerError, select,
+      null {Check internet connection and try again.}
+      other {{innerError}}
+    }
 quiz__again: Solve again
 quiz__answer-received: Your answer was saved.
 quiz__attempt-allow-solutions: Now you have access to the
@@ -4624,14 +4656,39 @@ user-revenue:
       }
   revenue:
     empty: No records.
+    signing-modal:
+      help: >-
+        If you have any questions, please
+        <a href="https://support.stepik.org/hc/en-us/requests/new"
+        target="_blank">contact us</a> at support@stepik.org.
+      report: "{dateMonthStr} payout report of {dateStr}"
+      result:
+        fail: >-
+          Uploading failed. Make sure that it's a valid pdf file
+          with maximum size of 15 MB, and try again
+        success: Signed report was uploaded successfully
+      step1: Check the report data
+      step2: Print the report, sign and set your seal (if you have one)
+      step3: Scan the signed report and upload it here
+      title: Check and sign the {dateMonthStr} payout report.
+      upload:
+        caption: Upload the signed report
+        note: pdf (15 MB max)
     summary:
       payable: to be paid
       payout: total
     tbody:
       report:
-        paid: "Paid on {dateStr}"
-        paid-none: No payments.
-        report: "{dateMonthStr} report from {dateStr}"
+        desc:
+          paid: "Paid on {dateStr}"
+          paid-none: No payments.
+        not-ready: Report will be created after the financial month is closed.
+        original: Download original report
+        paid: "{dateStr}"
+        paid-none: —
+        report: "Report from {dateStr}"
+        sign: Check and sign report
+        signed: Signed
     thead:
       date: Month
       income: Income
@@ -4701,7 +4758,7 @@ user__edit:
         Receive notifications about the opening of new modules in the course and the upcoming
         deadlines
       solutions: Solutions
-      solutions-hint: Receive notifications about new solutions in the solution forum
+      solutions-hint: Receive notifications about new solutions in the solutions forum
     delay: Delay
     header: Notifications settings
     language_en: Subscribe to English Stepik newsletters

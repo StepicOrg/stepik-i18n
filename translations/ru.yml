@@ -41,40 +41,6 @@ adaptive:
     "1": Ищем следующую задачу
     "2": Роботы ищут задачи
     "3": Считаем что-то
-announcement-show:
-  statistic-label:
-    click_count: Кликнули по ссылкам
-    open_count: Открыли письмо
-    publish_count: Рассылок сделано
-    queue_count: Видят на странице
-    sent_count: Получили на почту
-  statistic-tooltip:
-    click_count: "Количество писем, в которых кликнули по ссылке"
-    open_count: Количество открытых писем
-    publish_count: Количество запусков анонса
-    queue_count: Количество писем в очереди отправки
-    sent_count: Количество отправленных писем
-  status-label:
-    aborted: Прервано
-    composing: Черновик
-    queued: Ожидание очереди
-    queueing: Добавление в очередь
-    scheduled: Отложено
-    sending: Рассылается
-    sent: Отправлено
-  status-tooltip:
-    aborted: Отправка писем остановлена.
-    composing: >-
-      Черновик. Эту новость можно редактировать. Новость ещё не отправлена. Ни один учащийся не
-      пострадал.
-    queued: Письма ждут в очереди отправки.
-    queueing: Письма добавляются в очередь отправки.
-    scheduled: Письма будут отправлены по таймеру. Вы можете отменить отправку новости.
-    sending: Письма отправляются.
-    sent: Эта новость была отправлена выбранным категориям учащихся.
-    will_end: " Рассылка закончится: "
-    will_start: " Рассылка начнется: "
-announcement__default-template: Стандартный шаблон
 attachments__list-attach-file:
   "{size, select, 0 {Прикрепить файл} other {Прикрепить файл (макс. {size})}}"
 attachments__list-delete-attachment-tooltip: Удалить
@@ -104,7 +70,6 @@ breadcrumbs__review: Рецензирование
 breadcrumbs__review-session: Рецензии
 breadcrumbs__submissions: Решения
 button__new-course: Создать курс
-button__new-lesson: Создать урок
 catalog:
   authors:
     new-course: Создать свой курс
@@ -119,6 +84,8 @@ catalog:
     submit: Показать
     title: Фильтры
     with-cert-only: Только с сертификатом
+  promo-courses:
+    learn-more: Узнать больше
   recently-viewed: Недавно просмотренные
   search:
     empty: >-
@@ -361,7 +328,6 @@ common__login: Войти
 common__logout: Выход
 common__logout-confirm: "Вы уверены, что хотите выйти?"
 common__min: мин
-common__my-courses: Мои курсы
 common__notifications: Уведомления
 common__number-sign: №
 common__off: выкл.
@@ -371,7 +337,6 @@ common__out-of-points: "{count, plural, one {# баллa} other {# баллов}
 common__platform-news: Что нового
 common__points: "{count, plural, one {# балл} few {# балла} other {# баллов}}"
 common__points-received: "{count, plural, one {получен} other {получено}}"
-common__pricing: Мой тарифный план
 common__print: Печать
 common__problem: Задача
 common__profile: Профиль
@@ -481,6 +446,12 @@ cost:
 course:
   access_restricted: >-
     Авторы закрыли курс «{courseTitle}» и пока проходить его нельзя.
+  add-to-wishlist:
+    result:
+      fail: Курс не добавлен в список желаний, попробуйте ещё раз.
+      success: "Курс «{courseTitle}» добавлен в список желаний."
+    static-text: Хочу пройти
+    tooltip: Хочу пройти
   delete:
     confirm:
       cancel: Нет, отменить
@@ -511,6 +482,8 @@ course:
   edit-btns:
     info: Редактировать информацию
     syllabus: Редактировать содержание
+  favorites:
+    in: В избранных
   info:
     adaptive_info_link: Подробнее об адаптивных курсах
     adaptive_note: Этот курс адаптивный и будет подстраиваться под ваш уровень знаний
@@ -546,6 +519,19 @@ course:
   readiness:
     high_expl: Курс соответствует формальным рекомендациям Stepik
     low_expl: "Скорее всего, курс находится в разработке"
+  remove-from-wishlist:
+    confirm:
+      cancel: Нет, оставить
+      ok: Да, убрать
+      text: >-
+        <h4>Убрать курс «{courseTitle}» из списка желаний?</h4>
+        <p>Вы потеряете быстрый доступ к курсу, но сможете потом снова найти его в Каталоге.</p>
+    menu-item: Убрать из списка желаний
+    result:
+      fail: Курс не удалён из списка желаний, попробуйте ещё раз.
+      success: "Курс «{courseTitle}» удалён из списка желаний."
+    static-text: В списке желаний
+    tooltip: Убрать из списка желаний
   routes:
     comments:
       title: Комментарии
@@ -674,7 +660,7 @@ course-grade-book-cell:
   wrong: Есть только неверные решения
 course-index__authors: "{count, plural, =1 {Создатель} other {Создатели}}"
 course-index__cert: Сертификат
-course-index__enrolled-msg: Вы записаны!
+course-index__enrolled-msg: Вы записаны
 course-index__instructors: Показать в качестве преподавателей
 course-index__lang: Язык
 course-index__workload: Нагрузка
@@ -706,7 +692,6 @@ course-nav:
     information: Описание
     lti: Интеграция по LTI
     news: Новости
-    news-old: "Новости <sup>old</sup>"
     permissions: Права доступа
     pricing: Цена и промокоды
     publication: Публикация
@@ -1170,56 +1155,15 @@ course-syll__compact-progress: процент пройденных шагов
 course-syll__ends: Дата закрытия
 course-syll__scores: ваш / макс балл
 course-syllabus__closed-yet: Этот модуль закрыт
-course__add-annon: Добавить новость
 course__add-to-archived-link: Переместить в архив
-course__add-to-favorites-link: Добавить в избранное
-course__added-to-archived-fail: Не удалось переместить в архив.
-course__added-to-archived-success: Курс отправлен в архив.
-course__added-to-favorites-fail: Не удалось добавить в избранное.
-course__added-to-favorites-success: Курс добавлен в избранное.
-course__annon-delete: Удалить
-course__annon-delete-confirm: Удалить эту новость?
+course__add-to-favorites-link: Добавить в избранные
+course__added-to-archived-fail: Курс не отправлен в архив, попробуйте ещё раз.
+course__added-to-archived-success: "Курс «{courseTitle}» отправлен в архив."
+course__added-to-favorites-fail: Курс не добавлен в избранные, попробуйте ещё раз.
+course__added-to-favorites-success: "Курс «{courseTitle}» добавлен в избранные."
 course__annon-delete-done: Новость была удалена
 course__annon-delete-error: Не могу удалить эту новость
-course__annon-empty: В этом курсе пока что нет новостей
-course__annon-is-infinite-label: Рассылать эту новость вечно
-course__annon-is-scheduled-label: Установить дату отправки
-course__annon-max-score: Максимальный процент
-course__annon-min-score: Минимальный процент
-course__annon-on-enroll-label: Отправлять эту новость сразу после записи на курс
-course__annon-restrict-description: >-
-  Новость будет отправлена только учащимся с успеваемостью не меньше минимального процента и не
-  больше максимального. Учащиеся, набравшие в точности минимальный или максимальный процент, также
-  получат письмо.
-course__annon-restrict-score-label: Ограничить рассылку этой новости по успеваемости
-course__annon-save: Сохранить как черновик
-course__annon-send: Отправить
-course__annon-send-done: Отправка новости началась
-course__annon-send-done-is-scheduled:
-  "Рассылка новости запланирована. Первая рассылка произойдет {date}."
-course__annon-send-done-on-enroll: >-
-  Изменения сохранены. Все новые учащиеся получат письмо сразу после записи на курс.
-course__annon-send-error: Не могу отправить новость
-course__annon-send-is-scheduled: Запланировать отправку новости
-course__annon-send-on-enroll: Отправлять при записи
-course__annon-sent-confirm: >-
-  Пожалуйста, обратите внимание, что доставка учащимся может занять до 24 часов. Начать отправку
-  этой новости выбранным категориям учащихся?
-course__annon-sent-confirm-is-scheduled: "Вы уверены, что хотите запланировать отправку новости?"
-course__annon-sent-confirm-on-enroll:
-  "Вы уверены, что хотите отправлять это письмо всем новым учащимся?"
-course__annon-start-date: Дата отправки
-course__annon-stop: Перестать рассылать эту новость
-course__annon-stop-done: Рассылка остановлена.
-course__annon-stop-error: Что-то пошло не так. Рассылка не остановлена.
-course__annon-template-label: Шаблон письма
-course__annon-test: Отправить пример самому себе
-course__annon-test-done: Проверочное письмо успешно отправлено
-course__annon-test-error: Не могу отправить проверочное письмо
-course__annon-test-tooltip: Отправить эту новость только на ваш адрес
-course__annon-tmpl-subj: Новость
 course__annon-tmpl-text: "Здравствуйте, \\{\\{user_name\\}\\}!"
-course__anon-stop-warn: Остановить рассылку? Возобновление рассылки будет невозможно.
 course__buy: Купить
 course__buy-button: "Купить за {price}"
 course__buy-form:
@@ -1297,12 +1241,12 @@ course__join-fail: >-
 course__learn-now: Учиться можно сразу
 course__news-link: Новости
 course__publish: Опубликовать
-course__remove-from-archived-link: Убрать из архива
-course__remove-from-favorites-link: Убрать из избранного
-course__removed-from-archived-fail: Не удалось убрать из архива курсов.
-course__removed-from-archived-success: Курс убран из архива курсов.
-course__removed-from-favorites-fail: Не удалось удалить из избранного.
-course__removed-from-favorites-success: Курс удален из избранного.
+course__remove-from-archived-link: Вернуть из архива
+course__remove-from-favorites-link: Убрать из избранных
+course__removed-from-archived-fail: Курс не убран из архива, попробуйте ещё раз.
+course__removed-from-archived-success: "Курс «{courseTitle}» убран из архива."
+course__removed-from-favorites-fail: Курс не убран из избранных, попробуйте ещё раз.
+course__removed-from-favorites-success: "Курс «{courseTitle}» убран из избранных."
 course__reviews:
   can-review: "Вы прошли больше {treshold}% курса, оставьте отзыв"
   can-review-no: "Нет, спасибо"
@@ -1471,6 +1415,48 @@ deadlines-editor__section_end_date_tooltip: >-
   планируете скрывать уроки
 deadlines-editor__soft_deadline_tooltip: >-
   Начиная с этого момента, учащиеся будут получать меньше баллов за решение задач
+discussions:
+  community-rules:
+    comments: >-
+      Пожалуйста, не оставляйте решения и подсказки в комментариях, для этого есть
+      {solutionsUrl, select,
+        null {отдельный форум}
+        other {<a href='{solutionsUrl}'>отдельный форум</a>}
+      }.
+    main: >-
+      Будьте вежливы и соблюдайте наши
+      <a href='https://support.stepik.org/hc/ru/articles/4407228615058' target='_blank'>
+      принципы сообщества</a>.
+    solutions: >-
+      Поделитесь своим решением и посмотрите, как задачу решали другие.
+  solutions:
+    locked:
+      info:
+        need-attempts: >-
+          Форум откроется после того, как вы решите задачу или сделаете
+          {attemptsCount, plural,
+            one {# неверную попытку}
+            few {# неверные попытки}
+            other {# неверных попыток}
+          }.<br>
+          Здесь можно будет опубликовать своё решение и посмотреть, как задачу решали другие,
+          или спросить совета.
+        need-authorize: >-
+          <a href='{loginUrl}'>Войдите</a>, чтобы открыть форум решений.
+        need-correct-submission: >-
+          Форум откроется после того, как вы решите задачу.<br>
+          Здесь можно будет опубликовать своё решение и посмотреть, как задачу
+          решали другие, или спросить совета.
+      tooltip:
+        need-attempts: >-
+          Форум решений откроется после того, как вы решите задачу или
+          сделаете {attemptsCount, plural,
+            one {# неверную попытку}
+            few {# неверные попытки}
+            other {# неверных попыток}
+          }.
+        need-authorize: Форум решений доступен только зарегистрированным пользователям.
+        need-correct-submission: Форум решений откроется после того, как вы решите задачу.
 discussions__delete-prompt: Удалить этот комментарий?
 discussions__edit-disc-button: Изменить комментарий
 discussions__none: Нет обсуждений. Начните первое.
@@ -1826,8 +1812,6 @@ klass:
       и оценкам в классе.</p>
   dismiss-student-error: "Не удалось отчислить учащегося {name}"
   dismiss-student-success: "{name} отчислен из класса"
-  edit: Редактировать
-  error-leave: Не удалось покинуть класс
   gradebook:
     download: "Скачать табель успеваемости от <b>{readyDate, date, medium-datetime}</b>"
     link: Табель успеваемости
@@ -1856,11 +1840,6 @@ klass-edit:
   cancel: Отмена
   delete: Удалить класс
   delete-confirm: "Вы уверены, что хотите удалить этот класс?"
-  delete-confirm-modal:
-    cancel: Нет, оставить
-    confirm: Да, удалить
-    text: >-
-      Вы уверены, что хотите удалить класс «<b>{name}</b>»?
   deleted: Класс удален
   description: Описание класса
   error-on-delete: Что-то пошло не так. Не удалось удалить класс.
@@ -1890,8 +1869,6 @@ klass-new:
   title: Название
   title-hint: Название класса
 klasses:
-  empty-list: У вас нет ни одного класса.
-  header: Классы
   iown: Cозданные классы
   is-access-restricted_other: Доступ ограничен. Обратитесь с создателю класса.
   is-access-restricted_owner: >-
@@ -1912,14 +1889,41 @@ learn:
       <a href="/catalog">нашего каталога</a>.
   courses:
     card:
-      course-not-available: Сейчас недоступен
+      course-not-available: >-
+        {reason, select,
+          is-draft {Закрыт авторами}
+          not-started {
+            {startDate, select,
+              null {Сейчас недоступен}
+              other {Начнётся {startDate, date, medium-date}}
+            }
+          }
+          ended {
+            {endDate, select,
+              null {Сейчас недоступен}
+              other {Закончился {endDate, date, medium-date}}
+            }
+          }
+          other {Сейчас недоступен}
+        }
     empty: >-
-      Найдите себе первый курс в <a href="/catalog">нашем каталоге</a>.
-    filters:
-      active: Прохожу
-      all: Все курсы
-      archive: Архив
-      wishlist: Хочу пройти
+      {filter, select,
+        active {Найдите себе первый курс в <a href="/catalog">нашем каталоге</a>.}
+        favorites {Добавьте курсы в избранные, чтобы они всегда были под рукой.}
+        archive {Сейчас в архиве ничего нет. Но если появится, вы всегда сможете восстановить курсы
+                 обратно.}
+        wishlist {Добавьте интересные вам курсы в список желаний, чтобы вернуться к ним позже.}
+        other {}
+      }
+  courses-active:
+    title: Курсы
+  courses-archive:
+    title: Архив
+  courses-favorites:
+    title: Избранные курсы
+  courses-wishlist:
+    enroll-card-action: "{isNeedPurchase, select, true {Купить} other {Поступить}}"
+    title: Хочу пройти
   featured-course-card:
     cert-notice:
       goal-status: >-
@@ -1946,6 +1950,8 @@ learn:
   index:
     courses-for-review: Оставьте отзыв
     current-courses: Прохожу сейчас
+    empty: >-
+      Найдите себе первый курс в <a href="/catalog">нашем каталоге</a>.
     recommended-courses: Рекомендуем вам
   last-activity:
     days-streak-current: >-
@@ -1961,6 +1967,10 @@ learn:
   nav:
     classes: Классы
     courses: Курсы
+    courses-active: Прохожу
+    courses-archive: Архив
+    courses-favorites: Избранные
+    courses-wishlist: Хочу пройти
     index: Моё обучение
     notifications: Уведомления
   navbar-link: Моё обучение
@@ -2268,9 +2278,6 @@ modal-dialog-confirm:
   text: У вас есть несохраненные изменения. Сохранить или отменить их?
 new-class-form:
   choose-course-btn: Выбрать курс
-  choose-course-how-to-img:
-    alt: Как создать класс со страницы курса
-    src: /static/frontend/new-class-how-to-ru.png
   choose-course-text: >-
     Создайте класс для <b>любого открытого</b> курса и получите доступ к оценкам и решениям ваших
     учащихся.
@@ -2700,6 +2707,43 @@ news-item:
     one-time: Разовая
 notification__favorite: избранное
 notification__muted: скрыто
+notifications:
+  favorites:
+    page-title: Избранные
+    title: Избранные уведомления
+  filters:
+    course:
+      all: Все курсы
+    flag: >-
+      {value, select,
+        all {Любой статус}
+        unread {Непрочитанные}
+        read {Прочитанные}
+        favorites {Избранные}
+        other {}
+      }
+    type: >-
+      {value, select,
+        all {Все категории}
+        learn {Обучение}
+        review {Рецензии}
+        comments {Комментарии}
+        teach {Преподавание}
+        default {Другое}
+        other {}
+      }
+    type-description: >-
+      {value, select,
+        all {}
+        learn {Новости курсов, дедлайны, открытие модулей, сертификаты, получение лицензии
+               JetBrains}
+        review {Проверка решений}
+        comments {Новые дискуссии и ответы, оценки комментариев, публикация решений на форуме}
+        teach {Решения на проверку, отчёты, оценки курса и уроков}
+        default {Приглашения в курс или класс, месячные отчёты и выплаты, заявка на подключение
+                 оплаты}
+        other {}
+      }
 notifications__empty-list: Нет уведомлений
 notifications__flag-favorite: Избранные
 notifications__flag-read: Прочитанные
@@ -2741,13 +2785,8 @@ org:
       few {# сертификатa выпущено}
       other {# сертификатов выпущено}
     }
-  klasses_tab: Классы
-  lessons_tab: Уроки
-  mailing_tab: Рассылки
   no_courses: Курсы не найдены
-  no_lessons: Уроки не найдены
   revenue_tab: "Доходы <sup>β</sup>"
-  students_tab: Мои учащиеся
 paid-course-requests:
   edit:
     desc: >-
@@ -3477,7 +3516,6 @@ plugins__show_more: >-
   + ещё {count, plural, one {# тип} few {# типа} other {# типов}} шага
 profile:
   activity: Активность за последний год
-  add_annon: Добавить новость
   all_courses: Все курсы
   all_lessons: Все уроки
   best_courses: Лучшие курсы
@@ -3485,15 +3523,8 @@ profile:
   certificate-empty-list: Пока вы не получили ни одного сертификата.
   certificates: Сертификаты
   city: Город
-  courses-empty-list: Курсы не найдены
-  courses-empty-list-call-to-action: Вы можете найти подходящий курс в каталоге
-  courses_archived: Архив
-  courses_favorites: Избранные
   details: О себе
   joined-date: Присоединился
-  mailing: Рассылки
-  my-courses: Мои курсы
-  no_annons: Пока нет новостей
   no_courses: Вы не создали ни одного курса
   no_courses_link: Создать курс
   no_lessons: Вы не создали ни одного урока
@@ -3606,7 +3637,11 @@ quiz:
   score: Вы получили
   score-max: из
   submit-failed: >-
-    Не получилось отправить ваше решение. Проверьте интернет соединение и попробуйте еще раз
+    Не получилось отправить ваше решение.
+    <br>{innerError, select,
+      null {Проверьте интернет соединение и попробуйте еще раз.}
+      other {{innerError}}
+    }
 quiz__again: Решить снова
 quiz__answer-received: Ваше решение сохранено.
 quiz__attempt-allow-solutions: Теперь вам доступен
@@ -4912,14 +4947,39 @@ user-revenue:
       }
   revenue:
     empty: Нет записей.
+    signing-modal:
+      help: >-
+        Если у вас возникли вопросы,
+        <a href="https://support.stepik.org/hc/ru/requests/new" target="_blank">
+        напишите</a> в нашу поддержку на support@stepik.org.
+      report: "Отчёт за {dateMonthStr} от {dateStr}"
+      result:
+        fail: >-
+          Загрузить подписанный отчёт не удалось. Проверьте, что это корректный
+          pdf-файл размером до 15 MB, и попробуйте ещё раз.
+        success: Подписанный отчёт загружен
+      step1: Проверьте данные в отчёте
+      step2: Распечатайте отчёт, подпишите и поставьте печать, если она есть
+      step3: Отсканируйте подписанный отчёт и загрузите его сюда
+      title: Проверьте и подпишите отчёт о продажах за {dateMonthStr}
+      upload:
+        caption: Загрузить подписанный отчёт
+        note: pdf-файл до 15 МB
     summary:
       payable: к выплате
       payout: всего выплачено
     tbody:
       report:
-        paid: "Выплатили {dateStr}"
-        paid-none: Выплат не было.
-        report: "Отчёт за {dateMonthStr} от {dateStr}"
+        desc:
+          paid: "Выплатили {dateStr}"
+          paid-none: Выплат не было.
+        not-ready: Отчёт будет после закрытия месяца.
+        original: Открыть оригинальный отчёт
+        paid: "{dateStr}"
+        paid-none: —
+        report: "Отчёт от {dateStr}"
+        sign: Проверить и подписать отчёт
+        signed: Подписан
     thead:
       date: Месяц
       income: Доход

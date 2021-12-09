@@ -26,37 +26,6 @@ adaptive:
     "1": Die nächste Aufgabe wird gesucht
     "2": In Arbeit ..
     "3": Berechnungen werden ausgeführt
-announcement-show:
-  statistic-label:
-    click_count: Clicks
-    open_count: Geöffnet
-    publish_count: Veröffentlichen
-    queue_count: Zu Veröffentlichung gereiht
-    sent_count: Gesendet
-  statistic-tooltip:
-    click_count: Anzahl Sendungen mit Empfangsbestätigung
-    open_count: Anzahl geöffnete eMails
-    publish_count: Anzahl Sendungen
-    queue_count: Anzahl Sendungen ohne Abmeldungen
-    sent_count: Anzahl gesendete eMails
-  status-label:
-    aborted: Abgebrochen
-    composing: In Arbeit
-    queued: Warten auf Reihung
-    queueing: In Reihung
-    scheduled: Reihung geplant
-    sending: Senden
-    sent: Gesendet
-  status-tooltip:
-    aborted: Veröffentlichung wurde abgebrochen
-    composing: Sie können diese Veröffentlichung ändern
-    queued: Emails sind zum Senden gereiht und warten auf Sendung
-    queueing: Emails werden zum Senden gereith
-    scheduled: Veröffentlichung wird gereiht. Sie können die Sendung noch abbrechen
-    sending: Emails werden gesendet
-    will_end: "Senden endet um:"
-    will_start: "Senden beginnt um:"
-announcement__default-template: Standardvorlage
 attachments__list-delete-attachment-tooltip: Löschen
 attachments__list-download-attachment-tooltip: "Öffnen {name}"
 attachments__list-title: Anhänge
@@ -77,7 +46,6 @@ breadcrumbs__review: Review
 breadcrumbs__review-session: Review Abschnitt
 breadcrumbs__submissions: Einreichungen
 button__new-course: Kurs erstellen
-button__new-lesson: Lektion erstellen
 certificate-editor:
   auto-issue-label: Auto issue certificates
   auto-issue-text:
@@ -206,13 +174,11 @@ common__login: Einloggen
 common__logout: Ausloggen
 common__logout-confirm: Wollen Sie wirklich ausloggen?
 common__min: min
-common__my-courses: Meine Kurse
 common__notifications: Benachrichtungen
 common__number-sign: Nr.
 common__off: aus
 common__platform-news: Neuigkeiten
 common__points: "{count, plural, one {# Punkt} other {# Punkte}}"
-common__pricing: Meine Bestellung
 common__print: Drucken
 common__problem: Problem
 common__profile: Profil
@@ -320,50 +286,12 @@ course-syll__compact-progress: Verhältnis bestandene Schritte
 course-syll__ends: Datum Ende
 course-syll__scores: Ihre / maximale Punkte
 course-syllabus__closed-yet: This Modul ist geschlossen
-course__add-annon: Neue Ankündigung
 course__add-to-favorites-link: Bei den Favoriten hinzufügen
 course__added-to-favorites-fail: Kann den Kurs nicht den Favoriten hinzufügen.
 course__added-to-favorites-success: Den Favoriten hinzugefügt.
-course__annon-delete: Löschen
-course__annon-delete-confirm: Diese Ankündigung löschen?
 course__annon-delete-done: Die Ankündigung wurde gelöscht
 course__annon-delete-error: Diese Ankündigung kann nicht gelöscht werden
-course__annon-empty: Dieser Kurs hat noch keine Ankündigungen
-course__annon-is-infinite-label: Diese Ankündigung immer senden
-course__annon-is-scheduled-label: Sendedatum setzen
-course__annon-max-score: "Sendungen an Lernende bis höchstens %:"
-course__annon-min-score: "Sendungen an Lernende mit mindestens %:"
-course__annon-on-enroll-label: Diese Ankündigung nach dem Registrieren senden
-course__annon-restrict-description: >-
-  Nur Lernende, die zwischen Mindest- und Höchstwerte erreichen, erhalten die Nachricht.
-course__annon-restrict-score-label: Restriktiert durch Anzahl der Punkte
-course__annon-save: Als Entwurf speichern
-course__annon-send: Senden
-course__annon-send-done: Senden der Ankündigung begonnen
-course__annon-send-done-is-scheduled: "Senden der Ankündigungen geplant. Erste Sendung am {date}."
-course__annon-send-done-on-enroll: Alle neuen Lernenden erhalten eine eMail nach Anmeldung
-course__annon-send-error: Ankündigung kann nicht gesendet werden
-course__annon-send-is-scheduled: Zeitplan wird gesendet
-course__annon-send-on-enroll: Bei der Anmeldung mit dem Senden beginnen
-course__annon-sent-confirm: >-
-  Bitte beachten: Zustellung an Studenten kann bis zu 24 Stunden dauern. Mit dem dem Senden dieser
-  Ankündigung beginnen?
-course__annon-sent-confirm-is-scheduled: "Sind Sie sicher, mit dem Senden beginnen zu wollen?"
-course__annon-sent-confirm-on-enroll: >-
-  Sind Sie sicher, dass Sie diese Nachricht an alle Lernenden senden wollen, nachdem sie sich
-  angemeldet haben
-course__annon-start-date: Zustellungsdatum
-course__annon-stop: Zustellung unterbrechen
-course__annon-stop-done: Zustellung wurde unterbrochen
-course__annon-stop-error: Es ist ein Fehler aufgetreten
-course__annon-template-label: Email Vorlage
-course__annon-test: Beispiel an mich selber senden
-course__annon-test-done: Test Mail erfolgreich gesendet
-course__annon-test-error: Test Mail kann nicht gesendet werden
-course__annon-test-tooltip: Diese Ankündigung wurde nur an Ihre eMail gesendet
-course__annon-tmpl-subj: Neue Ankündigung
 course__annon-tmpl-text: "Hallo \\{\\{user_name\\}\\}!"
-course__anon-stop-warn: Diese Aktion kann nicht rückgängig gemacht werden. Zustellung unterbrechen?
 course__certificate-distinction: Zertifikate mit Auszeichnung
 course__certificate-link: Zertifikate
 course__certificate-regular: Standardzertifikate
@@ -701,9 +629,7 @@ org:
   edit_profile: Profil ändern
   issued_certificates_count: >-
     {count, plural, other {# Zertifikate ausgestellt} one {# Zertifikat ausgestellt}}
-  lessons_tab: Lektionen
   no_courses: Keine Kurse gefunden
-  no_lessons: Keinen Lektionen gefunden
 peer-review__first-step: >-
   <strong>Stufe 1 von 4</strong>. Um Punkte zu erhalten <strong>speichern</strong> und die besten
   Beiträge an andere Studenten zum Review<strong>senden</strong> students</strong> for review
@@ -850,12 +776,8 @@ profile:
   best_lessons: Häufig nachgefragte Lektionen
   certificate-empty-list: Sie haben noch keine Zertifikate
   certificates: Zertifikate
-  courses-empty-list: Keine Kurse vorhanden
-  courses-empty-list-call-to-action: Suchen Sie bei unseren Kursen
-  courses_favorites: Favoriten
   details: Details
   joined-date: Beigetreten
-  my-courses: Meine Kurse
   no_courses: Erstellen Sie Ihren ersten Kurs
   no_courses_link: Kurs erstellen
   no_lessons: Erstellen Sie Ihre erste Lektion
@@ -881,8 +803,11 @@ quiz:
   score: Sie haben
   score-max: von
   submit-failed: >-
-    Ihr Beitrag kann nicht gesendet werden. Überprüfen Sie Ihre Internetverbindung and versuchen
-    Sie es nochmals
+    Ihr Beitrag kann nicht gesendet werden.
+    <br>{innerError, select,
+      null {Überprüfen Sie Ihre Internetverbindung and versuchen Sie es nochmals.}
+      other {{innerError}}
+    }
 quiz__again: Nochmals bearbeiten
 quiz__answer-received: Ihre Antwort wurde gespeichert
 quiz__attempt-loading-error: >-

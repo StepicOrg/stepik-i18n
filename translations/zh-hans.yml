@@ -23,7 +23,6 @@ breadcrumbs__review: 评论
 breadcrumbs__review-session: 审查会议
 breadcrumbs__submissions: 提交
 button__new-course: 创建课程
-button__new-lesson: 创建一个教训
 certificate-editor:
   auto-issue-label: 自动发放证书
   download-distinction: 以优异的成绩证书下载
@@ -117,7 +116,6 @@ common__login: 登录
 common__logout: 登出
 common__logout-confirm: 你确定要注销？
 common__min: 分
-common__my-courses: 我的课程
 common__notifications: 通知
 common__number-sign: ＃
 common__points: "{count, plural, =1 {# point} other {# points}}"
@@ -150,7 +148,7 @@ course-edit__new-module: 添加模块
 course-edit__save: 保存更改
 course-index__authors: "{count, plural, other {作者} =1 {作者}}"
 course-index__cert: 证书
-course-index__enrolled-msg: 你现在注册！
+course-index__enrolled-msg: 你现在注册
 course-index__lang: 语言
 course-index__workload: 工作负载
 course-info-edit__add: 笔者添加
@@ -167,21 +165,8 @@ course-new:
   title: 标题
 course-syll__begins: 开始日期
 course-syll__scores: 你的/最高分
-course__add-annon: 新公告
-course__annon-delete: 删除
-course__annon-delete-confirm: 删除此公告？
 course__annon-delete-done: 该公告已被删除
 course__annon-delete-error: 无法删除公告
-course__annon-empty: 本课程还没有公布呢。
-course__annon-save: 保存为草稿
-course__annon-send: 发送
-course__annon-send-done: 公告开始发送
-course__annon-send-error: 不能发送公告
-course__annon-test: 测试
-course__annon-test-done: 测试邮件发送成功
-course__annon-test-error: 无法发送测试邮件
-course__annon-test-tooltip: 本公告发送到您的电子邮件地址只有
-course__annon-tmpl-subj: 新公告
 course__annon-tmpl-text: "嗨\\{\\{user_name\\}\\}！"
 course__certificate-distinction: 证书与区别
 course__certificate-link: 证书
@@ -413,10 +398,7 @@ plugin__trik-download-dataset: 下载TRIK Studio中保存
 profile:
   certificate-empty-list: 您没有任何证书呢。
   certificates: 证书
-  courses-empty-list: 没有找到课程
-  courses-empty-list-call-to-action: 看看我们的课程
   joined-date: 加盟
-  my-courses: 我的课程
   profile: 轮廓
   ranks:
     title: "{term, select, knowledge {知识} reputation {声誉} other {}}"

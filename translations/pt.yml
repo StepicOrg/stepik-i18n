@@ -27,38 +27,6 @@ adaptive:
     "1": Procurando a próxima tarefa
     "2": Os Robôs ainda estão trabalhando
     "3": Fazendo um pouco de matemática
-announcement-show:
-  statistic-label:
-    click_count: Clicadas
-    open_count: Abertas
-    publish_count: Publicadas
-    queue_count: Em espera
-    sent_count: Enviadas
-  statistic-tooltip:
-    click_count: Número de e-mails nos quais um destinatário clicou em um link
-    open_count: Número de e-mails abertos
-    publish_count: Número de publicações feitas (para publicações recorrentes)
-    queue_count: Número de e-mails na fila para serem enviados
-    sent_count: Número de e-mails enviados
-  status-label:
-    aborted: Cancelados
-    composing: Em edição
-    queued: Aguardando na Fila
-    queueing: Entrando na Fila
-    scheduled: Agendados
-    sending: Enviando
-    sent: Enviados
-  status-tooltip:
-    aborted: Anúncio cancelado.
-    composing: Você pode editar este comunicado.
-    queued: "E-mails que estão na fila, aguardando o envio."
-    queueing: E-mails que estão sendo adicionados à fila de envio.
-    scheduled: O anúncio será enviado por agendamento. Você pode cancelar a entrega.
-    sending: Os e-mails estão sendo enviados.
-    sent: Este anúncio foi enviado aos alunos.
-    will_end: " O envio terminará às: "
-    will_start: " O envio começará às: "
-announcement__default-template: Modelo padrão
 attachments__list-attach-file:
   "{size, select, 0 {Arquivo anexado} other {Arquivo anexado (max {size})}}"
 attachments__list-delete-attachment-tooltip: Excluir
@@ -86,7 +54,6 @@ breadcrumbs__review: Revisar
 breadcrumbs__review-session: Sessão de revisão
 breadcrumbs__submissions: Submissões
 button__new-course: Criar um Curso
-button__new-lesson: Criar uma Lição
 certificate-editor:
   auto-issue-label: Emitir certificados automaticamente
   auto-issue-text:
@@ -266,7 +233,6 @@ common__login: Entrar
 common__logout: Sair
 common__logout-confirm: Tem certeza que deseja sair?
 common__min: min
-common__my-courses: Meus cursos
 common__notifications: Notificações
 common__number-sign: "#"
 common__off: "desligar"
@@ -274,7 +240,6 @@ common__out-of-points: "{count, plural, one {# ponto} other {# pontos}}"
 common__platform-news: O que há de novo
 common__points: "{count, plural, one {# ponto} other {# pontos}}"
 common__points-received: "{count, plural, one {recebido} other {recebidos}}"
-common__pricing: Meu plano de assinatura
 common__print: Imprimir
 common__problem: Problema
 common__profile: Perfil
@@ -502,7 +467,7 @@ course-grade-book-cell:
   wrong: Apenas envios incorretos
 course-index__authors: "{count, plural, other {Autores} =1 {Autor}}"
 course-index__cert: Certificado
-course-index__enrolled-msg: Você esta matriculado!
+course-index__enrolled-msg: Você esta matriculado
 course-index__lang: Idioma
 course-index__workload: Carga de trabalho
 course-info-edit__add: Adicionar
@@ -700,54 +665,15 @@ course-syll__compact-progress: proporção de etapas passadas
 course-syll__ends: Data de encerramento
 course-syll__scores: sua pontuação / max
 course-syllabus__closed-yet: Este módulo está fechado
-course__add-annon: Novo anúncio
 course__add-to-archived-link: Mover para arquivado
 course__add-to-favorites-link: Adicionar aos favoritos
 course__added-to-archived-fail: Não é possível mover o curso para o arquivo.
 course__added-to-archived-success: Movido para o arquivo.
 course__added-to-favorites-fail: Não é possível adicionar o curso aos favoritos.
 course__added-to-favorites-success: Adicionado aos favoritos.
-course__annon-delete: Excluir
-course__annon-delete-confirm: Excluir este comunicado?
 course__annon-delete-done: O anúncio foi excluído
 course__annon-delete-error: Não é possível excluir o anúncio
-course__annon-empty: Este curso ainda não possui anúncios.
-course__annon-is-infinite-label: Envie este anúncio para sempre.
-course__annon-is-scheduled-label: Definir data de entrega.
-course__annon-max-score: Porcentagem máxima
-course__annon-min-score: Por cento mínimo
-course__annon-on-enroll-label: Envie este anúncio após a inscrição.
-course__annon-restrict-description: >-
-  Somente os alunos que alcançarem pontos entre porcentagem mínima e máxima receberão uma mensagem.
-  Os alunos que atingirem exatamente a porcentagem mínima ou máxima também receberão e-mail.
-course__annon-restrict-score-label: Restringir por porcentagem de pontuação
-course__annon-save: Salvar como rascunho
-course__annon-send: Enviar
-course__annon-send-done: Envio de anúncio iniciado
-course__annon-send-done-is-scheduled:
-  "Envio de anúncio agendado. A primeira entrega será em {date}."
-course__annon-send-done-on-enroll: Todos os novos alunos receberão um e-mail após a inscrição.
-course__annon-send-error: Não é possível enviar o anúncio
-course__annon-send-is-scheduled: Agendar envio
-course__annon-send-on-enroll: Comece a enviar na inscrição
-course__annon-sent-confirm: >-
-  Observe que a entrega aos alunos pode levar até 24 horas. Você começará a enviar
-  este anúncio?
-course__annon-sent-confirm-is-scheduled: Tem certeza de que deseja agendar o envio?
-course__annon-sent-confirm-on-enroll:
-  Tem certeza de que deseja enviar esta mensagem a todos os alunos após a inscrição?
-course__annon-start-date: Data de entrega
-course__annon-stop: Interromper a entrega
-course__annon-stop-done: Entrega cancelada.
-course__annon-stop-error: Algo deu errado.
-course__annon-template-label: Modelo de e-mail
-course__annon-test: Enviar exemplo para mim mesmo
-course__annon-test-done: E-mail de teste enviado com sucesso
-course__annon-test-error: Não é possível enviar e-mail de teste
-course__annon-test-tooltip: Enviou este comunicado apenas para o seu endereço de e-mail
-course__annon-tmpl-subj: Novo anúncio
 course__annon-tmpl-text: "Olá \\{\\{user_name\\}\\}!"
-course__anon-stop-warn: Esta ação não pode ser revertida. Parar a entrega?
 course__buy: Comprar
 course__buy-button: "Compre por {price}"
 course__buy-form:
@@ -1196,8 +1122,6 @@ klass:
   course: Curso
   dismiss-assistant-error: "Não foi possível remover o assistente {name}"
   dismiss-student-error: "Não foi possível dispensar o aluno {name}"
-  edit: Editar
-  error-leave: Não foi possível sair da turma
   header: Turma
   leave: Sair da turma
   students: Alunos da turma
@@ -1236,8 +1160,6 @@ klass-new:
   title: Título
   title-hint: Título da turma
 klasses:
-  empty-list: Você não tem salas.
-  header: Salas
   iown: Salas Criadas
   is-access-restricted_other: O acesso é restrito. Entre em contato com o proprietário da turma.
   is-access-restricted_owner: >-
@@ -1459,9 +1381,6 @@ modal-dialog-confirm:
   text: Você fez alterações. Deseja salvar ou descartá-los?
 new-class-form:
   choose-course-btn: Escolha um curso
-  choose-course-how-to-img:
-    alt: Como criar uma turma a partir da página do curso
-    src: /static/frontend/new-class-how-to-en.png
   choose-course-text: >-
     Crie uma sala de aula para <b>qualquer curso</b> público e obtenha acesso às pontuações e
     submissões dos seus alunos.
@@ -1507,12 +1426,7 @@ org:
   edit_profile: Editar Perfil
   issued_certificates_count:
     "{count, plural, other {# certificados emitidos} one {# certificado emitido}}"
-  klasses_tab: Aulas
-  lessons_tab: Lições
-  mailing_tab: Correspondências
   no_courses: Nenhum curso encontrado
-  no_lessons: Nenhuma lição encontrada
-  students_tab: Meus alunos
 peer-review__first-step: >-
   <strong>Etapa 1 de 4</strong>. Para obter pontos,<strong>salve</strong> e <strong>envie</strong>
   a melhor submissão para <strong>outros alunos</strong> para avaliação
@@ -2116,7 +2030,6 @@ plugins__show_more: >-
   {count, plural, one {+ # tipo de etapa adicional} other {+ # tipos de etapa adicionais}}
 profile:
   activity: Atividade no último ano
-  add_annon: Novo anúncio
   all_courses: Todos os cursos
   all_lessons: Todas as lições
   best_courses: Cursos populares
@@ -2124,15 +2037,8 @@ profile:
   certificate-empty-list: Você ainda não possui nenhum certificado.
   certificates: Certificados
   city: Cidade
-  courses-empty-list: Nenhum curso encontrado
-  courses-empty-list-call-to-action: Confira nossos cursos
-  courses_archived: Arquivo
-  courses_favorites: Favoritos
   details: Detalhes
   joined-date: Ingressou
-  mailing: Correspondências
-  my-courses: Meus cursos
-  no_annons: Ainda não há anúncios
   no_courses: Crie seu primeiro curso!
   no_courses_link: Criação de curso
   no_lessons: Crie sua primeira lição!
@@ -2156,8 +2062,12 @@ profile:
 quiz:
   score: Você obteve
   score-max: em cada
-  submit-failed:
-    Não é possível enviar sua submissão. Verifique a conexão à Internet e tente novamente
+  submit-failed: >-
+    Não é possível enviar sua submissão.
+    <br>{innerError, select,
+      null {Verifique a conexão à Internet e tente novamente.}
+      other {{innerError}}
+    }
 quiz__again: Resolver novamente
 quiz__answer-received: Sua resposta foi salva.
 quiz__attempt-allow-solutions: Agora você tem acesso ao

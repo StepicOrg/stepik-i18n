@@ -30,40 +30,6 @@ adaptive:
     "1": Шукаем наступную задачу
     "2": Робаты шукаюць задачы
     "3": Лічым штосьці
-announcement-show:
-  statistic-label:
-    click_count: Націснулі на спасылкі
-    open_count: Адкрылі ліст
-    publish_count: Рассылак зроблена
-    queue_count: Бачаць на старонцы
-    sent_count: Атрымалі на пошту
-  statistic-tooltip:
-    click_count: "Колькасць лістоў, у якіх прайшлі па спасылцы"
-    open_count: Колькасць адкрытых лістоў
-    publish_count: Колькасць запускаў анонсу
-    queue_count: Колькасць лістоў у чарзе адпраўкі
-    sent_count: Колькасць адпраўленых лістоў
-  status-label:
-    aborted: Перарвана
-    composing: Чарнавік
-    queued: Чаканне чаргі
-    queueing: Даданне ў чаргу
-    scheduled: Адкладзена
-    sending: Рассылаецца
-    sent: Адпраўлена
-  status-tooltip:
-    aborted: Адпраўка лістоў спыненая.
-    composing: >-
-      Чарнавік. Гэтую навіну можна рэдагаваць. Навіна яшчэ не адпраўленая. Ніводзін студэнт не
-      пацярпеў.
-    queued: Лісты чакаюць у чарзе адпраўкі.
-    queueing: Лісты дадаюцца ў чаргу адпраўкі.
-    scheduled: Лісты будуць адпраўленыя па таймеру. Вы можаце адмяніць адпраўку навіны.
-    sending: Лісты адпраўляюцца.
-    sent: Гэтая навіна была адпраўлена ўсім студэнтам.
-    will_end: "Рассылка скончыцца: "
-    will_start: "Рассылка пачнецца: "
-announcement__default-template: Стандартны шаблон
 attachments__list-attach-file:
   "{size, select, 0 {Прымацаваць файл} other {Прымацаваць файл (макс. {size})}}"
 attachments__list-delete-attachment-tooltip: Выдаліць
@@ -93,7 +59,6 @@ breadcrumbs__review: Рэцэнзаванне
 breadcrumbs__review-session: Рэцэнзіі
 breadcrumbs__submissions: Рашэнні
 button__new-course: Стварыць курс
-button__new-lesson: Стварыць ўрок
 catalog:
   authors:
     new-course: Стварыць свой курс
@@ -324,7 +289,6 @@ common__login: Увайсці
 common__logout: Выхад
 common__logout-confirm: "Вы ўпэўненыя, што хочаце выйсці?"
 common__min: хвіл
-common__my-courses: Мае курсы
 common__notifications: Апавяшчэнні
 common__number-sign: " №"
 common__off: выкл.
@@ -334,7 +298,6 @@ common__out-of-points: "{count, plural, one {# балa} other {# балаў}}"
 common__platform-news: Што новага
 common__points: "{count, plural, one {# бал} few {# балы} other {# балаў}}"
 common__points-received: "{count, plural, one {атрыманы} other {атрымана}}"
-common__pricing: Мае падпіскі
 common__print: Друк
 common__problem: Задача
 common__profile: Профіль
@@ -569,7 +532,7 @@ course-grade-book-cell:
   wrong: Ёсць толькі няслушныя рашэнні
 course-index__authors: "{count, plural, =1 {Стваральнік} other {Стваральнікі}}"
 course-index__cert: Сертыфікат
-course-index__enrolled-msg: Вы запісаныя!
+course-index__enrolled-msg: Вы запісаныя
 course-index__instructors: Паказаць у якасці выкладчыкаў
 course-index__lang: Мова
 course-index__workload: Нагрузка
@@ -863,56 +826,15 @@ course-syll__compact-progress: адсотак пройдзеных крокаў
 course-syll__ends: Дата сканчэння
 course-syll__scores: ваш / макс бал
 course-syllabus__closed-yet: Гэты модуль закрыты
-course__add-annon: Дадаць навіну
 course__add-to-archived-link: Перамясціць у архіў
 course__add-to-favorites-link: Дадаць у абранае
 course__added-to-archived-fail: Не атрымалася перамясціць у архіў.
 course__added-to-archived-success: Курс адпраўлены ў архіў.
 course__added-to-favorites-fail: Не атрымалася дадаць у абранае.
 course__added-to-favorites-success: Курс дададзены ў абранае.
-course__annon-delete: Выдаліць
-course__annon-delete-confirm: Выдаліць гэтую навіну?
 course__annon-delete-done: Навіна была выдалена
 course__annon-delete-error: Не магу выдаліць гэтую навіну
-course__annon-empty: У гэтым курсе пакуль што няма навінаў
-course__annon-is-infinite-label: Рассылаць гэтую навіну вечна
-course__annon-is-scheduled-label: Усталяваць дату адпраўкі
-course__annon-max-score: Максімальны адсотак
-course__annon-min-score: Мінімальны адсотак
-course__annon-on-enroll-label: Дасылаць гэтую навіну адразу пасля запісу на курс
-course__annon-restrict-description: >-
-  Навіна будзе дасланая толькі студэнтам з паспяховасцю не менш мінімальнага адсотка і не больш за
-  максімальны. Студэнты, якія набралі роўна мінімальны ці максімальны адсотак, таксама атрымаюць
-  ліст.
-course__annon-restrict-score-label: Абмежаваць рассылку гэтай навіны па паспяховасці
-course__annon-save: Захаваць як чарнавік
-course__annon-send: Адправіць
-course__annon-send-done: Адпраўка навіны пачалася
-course__annon-send-done-is-scheduled:
-  "Рассылка навіны запланавана. Першая рассылка адбудзецца {date}."
-course__annon-send-done-on-enroll: >-
-  Змены захаваныя. Усе новыя студэнты атрымаюць ліст адразу пасля запісу на курс.
-course__annon-send-error: Не магу даслаць навіну
-course__annon-send-is-scheduled: Запланаваць адпраўку навіны
-course__annon-send-on-enroll: Адпраўляць пры запісе
-course__annon-sent-confirm: >-
-  Калі ласка, звярніце ўвагу, што дастаўка ўсім студэнтам можа заняць да 24 гадзін. Пачаць адпраўку
-  гэтай навіны ўсім студэнтам?
-course__annon-sent-confirm-is-scheduled: "Вы ўпэўнены, што хочаце запланаваць адпраўку навіны?"
-course__annon-sent-confirm-on-enroll:
-  "Вы ўпэўнены, што хочаце адпраўляць гэта ліст усім новым студэнтам?"
-course__annon-start-date: Дата адпраўкі
-course__annon-stop: Перастаць рассылаць гэту навіну
-course__annon-stop-done: Рассылка спыненая.
-course__annon-stop-error: Нешта пайшло ня так. Рассылка не спынена.
-course__annon-template-label: Шаблон ліста
-course__annon-test: Даслаць прыклад самому сабе
-course__annon-test-done: Праверачны ліст паспяхова дасланы
-course__annon-test-error: Не магу даслаць праверачны ліст
-course__annon-test-tooltip: Даслаць гэтую навіну толькі на ваш адрас
-course__annon-tmpl-subj: Навіна
 course__annon-tmpl-text: "Добры дзень, \\{\\{user_name \\}\\}!"
-course__anon-stop-warn: Спыніць рассылку? Аднавіць рассылку будзе немагчыма.
 course__buy: Купіць
 course__buy-button: "Купіць за {price}"
 course__buy-form:
@@ -1446,8 +1368,6 @@ klass:
       доступ да яго/яе рашэнняў і ацэнак у класе.</p>
   dismiss-student-error: "Не атрымалася адлічыць студэнта {name}"
   dismiss-student-success: "{name} адлічаны з класа"
-  edit: Рэдагаваць
-  error-leave: Не атрымалася пакінуць клас
   gradebook:
     download: "Спампаваць табель паспяховасці ад <b>{readyDate, date, medium-datetime}</b>"
     link: Ацэнкі
@@ -1467,11 +1387,6 @@ klass-edit:
   cancel: Скасаваць
   delete: Выдаліць клас
   delete-confirm: "Вы ўпэўнены, што хочаце выдаліць гэты клас?"
-  delete-confirm-modal:
-    cancel: Не, пакінуць
-    confirm: Так, выдаліць
-    text: >-
-      Вы ўпэўненыя, што хочаце выдаліць клас «<b>{name}</b>»?
   deleted: Клас выдалены
   description: Апісанне класа
   error-on-delete: Нешта пайшло ня так. Не атрымалася выдаліць клас.
@@ -1501,8 +1416,6 @@ klass-new:
   title: Назва
   title-hint: Назва класа
 klasses:
-  empty-list: У вас няма аніводнага класа.
-  header: Класы
   iown: Cозданные класы
   is-access-restricted_other: Доступ абмежаваны. Звернецеся са стваральніка класа.
   is-access-restricted_owner: >-
@@ -1730,9 +1643,6 @@ modal-dialog-confirm:
   text: У вас ёсць незахаваныя змены. Захаваць ці адмяніць іх?
 new-class-form:
   choose-course-btn: Выбраць курс
-  choose-course-how-to-img:
-    alt: Як стварыць клас са старонкі курса
-    src: /static/frontend/new-class-how-to-ru.png
   choose-course-text: >-
     Стварыце клас для <b>любога адкрытага</b> курса і атрымаеце доступ да адзнак і рашэнняў вашых
     студэнтаў.
@@ -1787,12 +1697,7 @@ org:
   issued_certificates_count: >-
     {count, plural, other {# сертыфіката выпушчана} many {# сертыфікатаў выпушчана} few {#
     сертыфікаты выпушчана} one {# сертыфікат выпушчаны}}
-  klasses_tab: Класы
-  lessons_tab: Урокі
-  mailing_tab: Рассылкі
   no_courses: Курсы не знойдзены
-  no_lessons: Урокі не знойдзены
-  students_tab: Мае студэнты
 paid-course-requests:
   edit:
     desc: >-
@@ -2424,7 +2329,6 @@ plugins__show_more: >-
   other {+ яшчэ # тыпаў кроку}}
 profile:
   activity: Актыўнасць за апошні год
-  add_annon: Дадаць навіну
   all_courses: Усе курсы
   all_lessons: усе ўрокі
   best_courses: Лепшыя курсы
@@ -2432,15 +2336,8 @@ profile:
   certificate-empty-list: Пакуль вы не атрымалі ні аднаго сертыфіката.
   certificates: Сертыфікаты
   city: Горад
-  courses-empty-list: Курсы не знойдзеныя
-  courses-empty-list-call-to-action: Вы можаце знайсці падыходзячы курс у каталогу
-  courses_archived: Архіў
-  courses_favorites: Выбраныя
   details: Пра сябе
   joined-date: Далучыўся
-  mailing: Рассылкі
-  my-courses: Мае курсы
-  no_annons: Пакуль няма навін
   no_courses: Вы не стварылі ніводнага курса
   no_courses_link: Форма стварэння курса
   no_lessons: Вы не стварылі ні аднаго ўрока
@@ -2509,7 +2406,11 @@ quiz:
   score: Вы атрымалі
   score-max: з
   submit-failed: >-
-    Не атрымалася адправіць ваша рашэнне. Праверце інтэрнэт злучэнне і паспрабуйце яшчэ раз
+    Не атрымалася адправіць ваша рашэнне.
+    <br>{innerError, select,
+      null {Праверце інтэрнэт злучэнне і паспрабуйце яшчэ раз.}
+      other {{innerError}}
+    }
 quiz__again: Рашыць зноў
 quiz__answer-received: Ваша рашэнне захавана.
 quiz__attempt-allow-solutions: Зараз вам даступны
