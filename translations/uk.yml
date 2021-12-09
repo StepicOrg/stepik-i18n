@@ -5418,7 +5418,7 @@ video-editor:
 video-player__error-support: >-
   Детальніше про проблеми з відео дивіться за <a
   href="https://support.stepik.org/hc/articles/360000250673" target="_blank">посиланням</a>.
-video-player__next-step-cancel: Залишитbся на цьому кроці
+video-player__next-step-cancel: Залишиться на цьому кроці
 video-player__next-step-warn_p1: Наступний крок
 video-player__next-step-warn_p2: буде відкритий автоматично
 video-player__no-flash: >-
