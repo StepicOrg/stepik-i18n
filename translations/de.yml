@@ -840,7 +840,7 @@ quiz__download-dataset: Laden Sie Ihre Datenreihe herunter
 quiz__download-dataset-last: Laden Sie ihre letzte Datenreihe herunter
 quiz__download-submission-last: Laden Sie ihren letzten Beitrag herunter
 quiz__empty-reply-warn: Wir benötigen eine Antwort. Leere Beiträge sind nicht erlaubt.
-quiz__eval: Wird evaluaiert… Sie können trotzdem diesen Schritt verlassen.
+quiz__eval: Wird evaluiert… Sie können trotzdem diesen Schritt verlassen.
 quiz__eval-eta: "Geschätzte Zeit für die Evaluierung:"
 quiz__next-button: Nächster Schritt
 quiz__p2p: Diese Aufgabe beinhaltet Reviews
